@@ -1,0 +1,67 @@
+/* Mentor.css */
+.mentors {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #ffffff;
+    height: 50vh; /* Full height to center the content */
+}
+
+.mentor-image {
+    flex: 1;
+    max-width: 50%; /* Limit the width of the image */
+}
+
+.mentor-image img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners for the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mentor-display {
+    flex: 1;
+    margin-top: 0px;
+    position: relative;
+    height: 200px; /* Fixed height to ensure only 3 mentors are visible */
+}
+
+.mentor-card {
+    background-color: #4caf50; /* Green background for cards */
+    color: white; /* White text color */
+    padding: 20px;
+    margin: 100px 0; /* Vertical spacing between cards */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: absolute; /* Position absolutely within the display */
+    width: calc(100% - 50px); /* Full width minus margins */
+    opacity: 0; /* Start hidden */
+    transform: translateY(1800px); /* Start slightly lower */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Show cards with appropriate animations */
+.mentor-card:nth-child(1) {
+    opacity: 1; /* First card fully visible */
+    transform: translateY(10px); /* Move to original position */
+}
+
+.mentor-card:nth-child(2) {
+    opacity: 1; /* Second card fully visible */
+    transform: translateY(30px); /* Move to original position */
+    transition-delay: 0.5s; /* Delay for second card */
+}
+
+.mentor-card:nth-child(3) {
+    opacity: 1; /* Third card fully visible */
+    transform: translateY(120px); /* Move to original position */
+    transition-delay: 1s; /* Delay for third card */
+}
+
+/* Exit animation for the first card */
+.mentor-card.exit {
+    opacity: 0; /* Fade out */
+    transform: translateY(-70px); /* Move up */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}

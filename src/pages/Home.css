@@ -518,3 +518,142 @@
 
 
 
+
+
+/* Reviews Section */
+.reviews {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.reviews h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.review-carousel {
+  position: relative;
+  width: 80%; /* Adjust the width to suit your layout */
+  margin: 0 auto;
+
+}
+
+.review-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smoother transition for sliding */
+}
+
+.review-item {
+  background-color: #f9f9f9;
+  border: 2px solid #f3a4b5; /* Pink border */
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%; /* Each card takes up the full carousel width */
+  text-align: left;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.review-item::before {
+  content: '“';
+  font-size: 4rem;
+  position: absolute;
+  top: -30px;
+  left: -10px;
+  color: #f3a4b5; /* Pink color for quotation mark */
+}
+
+.review-author {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.review-stars {
+  color: #f1c40f; /* Gold color for stars */
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.review-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Carousel buttons */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #f3a4b5; /* Pink button background */
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.carousel-button.left {
+  left: -40px;
+}
+
+.carousel-button.right {
+  right: -40px;
+}
+
+.carousel-button:hover {
+  background-color: #e84393;
+}
+
+
+
+/* Mentors Section */
+.mentors-container {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  background-color: #f9f9f9;
+}
+
+.mentor-left {
+  flex: 1;
+  text-align: center;
+}
+
+.mentor-image {
+  width: 80%;
+  height: auto;
+}
+
+.mentor-right {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.animated-mentor-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mentor-name {
+  font-size: 1.5rem;
+  color: #4CAF50;
+  animation: slide-in 2s infinite alternate;
+}
+
+/* Animation for mentor names */
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+

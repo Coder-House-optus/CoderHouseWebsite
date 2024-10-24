@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import './Home.css';
 import Footer from '../components/Footer';
+import ReviewSection from '../components/Review'; 
+import Mentor from '../components/Mentor';
+
 
 // Sample review data
 const reviewsData = [
@@ -169,33 +172,10 @@ export default function Home() {
 
 
 
-
-      {/* Reviews Section */}
-      <section className="reviews">
-        <h2>Our Reviews</h2>
-        <div className="review-carousel">
-          <div className="review-container" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-            {reviewsData.map((review, index) => (
-              <div className="review-item" key={index}>
-                <p>"{review.text}"</p>
-                <p>{review.author}</p>
-              </div>
-            ))}
-            {/* Duplicate the first review for circular effect */}
-            {reviewsData.slice(0, 1).map((review, index) => (
-              <div className="review-item" key={index + reviewsData.length}>
-                <p>"{review.text}"</p>
-                <p>{review.author}</p>
-              </div>
-            ))}
-          </div>
-          <button className="carousel-button left" onClick={handlePrev}>&lt;</button>
-          <button className="carousel-button right" onClick={handleNext}>&gt;</button>
-        </div>
-      </section>
+      <ReviewSection />
 
       {/* Mentors Section */}
-      <section className="mentors">
+      {/* <section className="mentors">
         <h2>Our Mentors</h2>
         <div className="mentor-grid">
           <div className="mentor-card">
@@ -208,9 +188,10 @@ export default function Home() {
             <h4>Mentor Name 2</h4>
             <p>Specialization 2</p>
           </div>
-          {/* Add more mentors as needed */}
+
         </div>
-      </section>
+      </section> */}
+      <Mentor/>
 
       <Footer/>
 
