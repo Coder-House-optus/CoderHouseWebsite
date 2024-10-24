@@ -1,0 +1,293 @@
+/* CollegeProgram.css */
+
+/* Cards Section - Wide Green Cards with Hover Effect */
+.cards-section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.greeting-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.greeting-card {
+  background-color: #5a9e2b; /* Green background */
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slight shadow for a 3D effect */
+  padding: 40px;
+  width: 300px; /* Wide card */
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.greeting-card span {
+  font-size: 2rem;
+  display: block;
+}
+
+.program-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Card Hover Effect */
+.greeting-card:hover {
+  background-color: #cccccc; /* Grey background on hover */
+  transform: translateY(-10px); /* Slight lift effect on hover */
+}
+
+/* Button with Rounded Corners and White Background */
+.card-footer {
+  margin-top: 20px;
+}
+
+.view-btn {
+  background-color: white; /* White background */
+  color: black; /* Black text */
+  border: 2px solid black; /* Optional border */
+  padding: 10px 25px;
+  border-radius: 30px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.view-btn:hover {
+  background-color: black; /* Invert background and text on hover */
+  color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .greeting-container {
+    flex-direction: column;
+  }
+
+  .greeting-card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Moments Section */
+.moments-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.moments-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.moments-content .description {
+  flex: 1;
+}
+
+.moments-content .text-content p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.moments-content .images {
+  flex: 1;
+}
+
+.moment-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navigation-arrows {
+  margin-top: 20px;
+}
+
+.navigation-arrows button {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #8bc34a;
+}
+
+.navigation-arrows button:hover {
+  color: #5a9e2b;
+}
+
+/* Associations Section */
+.associations-section {
+  padding: 50px 0;
+  text-align: center;
+  background-color: #ffffff00;
+}
+
+.logos-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.logos-grid img {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.8;
+}
+
+.logos-grid img:hover {
+  opacity: 1;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+  padding: 50px 0;
+  text-align: center;
+  background-color: #ffffff00;
+}
+
+.testimonial-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.testimonial-section .highlight {
+  color: #92D627; /* Green color for highlight */
+}
+
+.testimonial-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px 30px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden; /* Ensures vertical line gets clipped */
+}
+
+.testimonial-content {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  position: relative;
+  width: 100%;
+}
+
+.circle-image {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 120px;
+  height: 120px;
+  margin-right: 20px;
+  background-color: #5a9e2b;
+}
+
+.circle-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.testimonial p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.testimonial p strong {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 1px;
+  color: #000;
+}
+
+.quote-sign {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 80px;
+  color: #8bc34a;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  margin-right: 10px;
+}
+
+.vertical-line {
+  position: absolute;
+  background-color: #92D627;
+  width: 5px;
+  height: 150%;
+  top: -25%;
+  left: 0;
+  z-index: 1;
+}
+
+/* Navigation Arrows */
+.testimonial-navigation-arrows {
+  margin-top: 20px;
+}
+
+.testimonial-navigation-arrows button {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #8bc34a;
+}
+
+.testimonial-navigation-arrows button:hover {
+  color: #5a9e2b;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .greeting-container {
+    flex-direction: column;
+  }
+
+  .moments-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-card {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .testimonial-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .circle-image {
+    margin-bottom: 15px;
+  }
+
+  .quote-sign {
+    font-size: 60px;
+    right: auto;
+    top: -20px;
+  }
+
+  .vertical-line {
+    height: 60px;
+  }
+}

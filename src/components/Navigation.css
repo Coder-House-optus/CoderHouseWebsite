@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* src/components/Navigation.css */
+body {
+  margin: 0; /* Remove default margin from body to prevent extra whitespace */
+}
+
+.navigation {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  background-color: #0E2031; /* Background color for navigation */
+  padding: 4px; /* Remove padding for navigation */
+  height: 80px; /* Set a fixed height for the nav bar */
+}
+
+.logo img {
+  height: 80px; /* Adjust height of logo as needed */
+  margin-right: 70px; /* Space between logo and nav items */
+}
+
+.nav-links {
+  margin-left: 600px;
+  list-style-type: none; /* Remove default list styles */
+  display: flex; /* Flexbox for horizontal layout */
+  flex-grow: 1; /* Allow links to take available space */
+}
+
+.nav-links li {
+  position: relative;
+
+}
+
+.nav-links a,
+.dropdown-toggle {
+  text-decoration: none; /* Remove underline */
+  color: rgb(255, 255, 255); /* Text color */
+  font-family: 'Poppins', sans-serif; /* Poppins font */
+  padding: 10px 65px; /* Padding for links */
+  line-height: 57px; /* Align text vertically in the nav */
+}
+
+.dropdown-toggle {
+  background: none; /* No background for button */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer cursor for button */
+}
+
+.dropdown-content {
+  display: block; /* Show dropdown */
+  position: absolute; /* Position it below the toggle */
+  left: 0; /* Align with parent */
+  background-color: #0E2031; /* Dropdown background color */
+  z-index: 1000; /* Ensure dropdown is above other content */
+  padding: 10px; /* Padding for dropdown */
+  list-style: none; /* Remove default list styles */
+}
+
+.dropdown-content li {
+  margin: 0px 0; /* Space between dropdown items */
+}
+
+.dropdown-content a {
+  color: white; /* Text color for dropdown items */
+  padding: 0px 10px; /* Padding for dropdown links */
+  display: block; /* Make the entire area clickable */
+}

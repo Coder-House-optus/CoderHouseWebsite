@@ -1,0 +1,520 @@
+/* Home.css */
+
+.home {
+  font-family: poppin, sans-serif;
+}
+
+.hero {
+  background-image: url('/public/images/Home.png');
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center the content horizontally */
+  background-size: 1500px 820px;
+
+  padding-bottom: 80px; /* Padding for the section */
+  height: auto; /* Adjust height to fit the content */
+}
+
+
+.hero-left {
+  flex: 1; /* Take up one part of the space */
+}
+
+.hero-right {
+  flex: 1; /* Take up one part of the space */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center form vertically */
+  background-color: #3C5C7B; /* Grey background */
+  color: #ffffff;
+  border-radius: 18px;
+  padding: 10px; /* Adjust padding to reduce the grey area */
+  max-width: 500px; /* Optional: limit width to match the form */
+  margin: 0 auto ; /* Center the grey area */
+  margin-right: 90px;
+}
+
+
+.hero-heading {
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+.form {
+  display: flex;
+  flex-direction: column; /* Stack form fields vertically */
+  background-color: rgba(255, 255, 255, 0.8); /* Grey background with transparency */
+  padding: 20px 40px; /* Reduced padding for smaller form */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #3C5C7B;
+  margin: 0 auto; /* Center the form */
+  width: 80%; /* Set a maximum width for the form, adjust as needed */
+  max-width: 400px; /* Set a max-width for the form to keep it compact */
+}
+
+.input-field {
+  margin-bottom: 10px; /* Reduced space between input fields */
+  padding: 17px; /* Padding inside the input fields */
+  border: 0px solid #ccc; /* Border color */
+  border-radius: 5px; /* Rounded corners */
+  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* Gradient from white to transparent */
+  color: #000; /* Text color */
+  box-shadow: 0px 0 5px rgba(255, 255, 255, 0.5); /* Slight white shadow on the right */
+}
+
+.callback-btn {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* Pointer on hover */
+  width:30%;
+}
+
+.callback-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* FEATURS CARD  */
+
+
+
+
+/* Plans Section
+.home-plans {
+  background-color: #f9f9f9;
+  padding: 50px;
+  text-align: center;
+}
+
+.home-plans-grid {
+  display: flex;
+  justify-content: space-around;
+}
+
+.home-plan-card {
+  background-color: #dcedc8;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-plan-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.home-plan-card:hover .details {
+  opacity: 1;
+}
+
+.details {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  text-align: left;
+  transition: opacity 0.3s ease;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Reviews Section */
+.reviews {
+  padding: 50px;
+  background-color: #ffffff;
+}
+
+.review-card {
+  background-color: #fff9c4;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Mentors Section */
+.mentors {
+  padding: 50px;
+  text-align: center;
+}
+
+.mentor-list {
+  list-style: none;
+  padding: 0;
+}
+
+.mentor-list li {
+  background-color: #fce4ec;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+
+
+
+/* Pricing Table CSS */
+.pricingTable {
+  margin-top: 500px;
+ 
+}
+
+.pricingTable-title {
+  text-align: center;
+  color: #192d68;
+  font-size: 3em;
+  margin-bottom: 20px;
+  letter-spacing: 0.04em;
+
+}
+.programs {
+  color:#C6E894; /* Set the color to green */
+  font-weight: bold;
+}
+.pricingTable-subtitle {
+  text-align: center;
+  color: #b4bdc6;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+
+}
+
+.pricingTable-firstTable {
+  list-style: none;
+  padding-left: 2em;
+  padding-right: 2em;
+  text-align: center;
+  background-image: url('/public/images/CoursesBg.png'); /* Path to your background image */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  padding: 40px; /* Add padding around the content */
+  color: white; /* Ensure text is visible against the background */
+}
+
+/* Glassmorphism effect for the pricing table card */
+.pricingTable-firstTable_table {
+  width: 21%;
+  background: rgb(255, 255, 255); /* White with some transparency */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  display: inline-block;
+  padding: 0px 30px 40px 30px;
+  text-align: center;
+  max-width: 320px;
+  transition: all 0.3s ease;
+  border-radius: 30px; /* Increased border-radius for smoother edges */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for a floating effect */
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Optional: border for more definition */
+}
+
+.pricingTable-firstTable_table:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+}
+
+/* Other styles remain unchanged */
+
+
+.pricingTable-firstTable_table__header {
+  font-size: 1.6em;
+  padding: 40px 0px;
+  border-bottom: 2px solid #ebedec;
+  letter-spacing: 0.03em;
+  color: #1c1c1d; /* Subtle color update for improved readability */
+}
+
+.pricingTable-firstTable_table__pricing {
+  font-size: 3em;
+  padding: 20px 0px;
+  border-bottom: 2px solid #ebedec;
+  color: #32383a; /* Highlighted pricing with accent color */
+}
+
+.pricingTable-firstTable_table__pricing span:first-of-type {
+  font-size: 0.35em;
+  vertical-align: top;
+}
+
+.pricingTable-firstTable_table__pricing span:last-of-type {
+  vertical-align: bottom;
+  font-size: 0.30em;
+  padding-left: 0.2em;
+}
+
+.pricingTable-firstTable_table__options {
+  list-style: none;
+  padding: 15px;
+  font-size: 0.9em;
+  border-bottom: 2px solid #ebedec;
+  margin-bottom: 20px; /* Added spacing below the options for better layout */
+}
+
+.pricingTable-firstTable_table__options li {
+  padding: 8px 0px;
+  color: #000000;
+  position: relative;
+}
+
+.pricingTable-firstTable_table__options li:before {
+  content: '✓';
+  color: white;
+  background-color: #C6E894;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  font-size: 0.8em;
+  margin-right: 10px;
+}
+
+.pricingTable-firstTable_table:nth-of-type(2):before {
+  content: 'Most Popular';
+  position: absolute;
+  color: white;
+  font-size: 1.2em;
+  font-family:Arial, Helvetica, sans-serif;
+  background-color: #3C5C7B;
+  right: 15px;
+  top: -25px;
+  height: 65px;
+  width: 85px;
+  border-radius: 50%;
+  padding-top: 22px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Added shadow to the badge */
+  transition: transform 0.5s ease; /* Smooth animation */
+}
+
+.pricingTable-firstTable_table:nth-of-type(2):hover:before {
+  transform: rotate(360deg); /* Rotates the 'Most Popular' badge on hover */
+}
+
+
+.pricingTable-firstTable_table__buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.pricingTable-firstTable_table__button {
+  color: white;
+  border: 0;
+  background-color: #C6E894;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 12px 20px;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0px 3px 0px 0px #C6E894;
+  transition: all 0.3s ease;
+  letter-spacing: 0.03em;
+  font-size: 0.9em;
+}
+
+.pricingTable-firstTable_table__button:hover {
+  background-color: #C6E894;
+  transform: translateY(-5px);
+  box-shadow: 0px 20px 15px -10px rgba(102, 172, 100, 0.8);
+}
+
+.pricingTable-firstTable_table__button i {
+  margin-right: 8px;
+  font-size: 1em;
+}
+
+.pricingTable-firstTable_table__viewProgram {
+  background-color: #3C5C7B; /* Different color for the 'View Program' button */
+}
+
+.pricingTable-firstTable_table__viewProgram:hover {
+  background-color: #2e4660;
+}
+
+/* Icon Styling */
+.pricingTable-firstTable_table__button .fa-eye,
+.pricingTable-firstTable_table__button .fa-download {
+  font-size: 1em;
+}
+
+
+
+
+
+.reviews {
+  width:1400px;
+  height: 500px;
+  background-image: url('/public/images/Review.png'); /* Path to your background image */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  padding: 40px; /* Add padding around the content */
+  color: white; /* Ensure text is visible against the background */
+  margin: 50px 0;
+  text-align: center;
+
+}
+
+.review-carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border: #ff00bb;
+  max-width: 800px; /* Adjust based on your design */
+  margin: auto;
+}
+
+.review-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.review-item {
+  min-width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: rgb(104, 92, 92); /* White background for the reviews box */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  margin: 0 10px; /* Space between reviews */
+}
+
+.review-item p {
+  font-style: italic; /* Italicize review text for style */
+  font-size: 1.1rem; /* Slightly larger font */
+  color: #333; /* Darker text color */
+}
+
+.review-item p:last-child {
+  font-weight: bold; /* Bold author text */
+  margin-top: 10px; /* Space above author name */
+  color: #555; /* Slightly lighter color for author name */
+}
+
+/* Quote Sign Style */
+.review-carousel::before {
+  content: '“'; /* Quote sign */
+  font-size: 3rem; /* Large size for emphasis */
+  color: #ccc; /* Light gray color */
+  position: absolute;
+  top: -30px; /* Adjust position above the reviews */
+  left: 20px; /* Space from the left */
+  opacity: 0.5; /* Faded appearance */
+  z-index: 0;
+}
+
+/* Arrow Styles */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent; /* No background for buttons */
+  border: none; /* No border */
+  color: #007BFF; /* Stylish blue color */
+  font-size: 2rem; /* Larger arrow size */
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+
+/* Hover Effect for Arrows */
+.carousel-button:hover {
+  color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-50%) scale(1.1); /* Slight scale on hover */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.review-carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px; /* Adjust based on your design */
+  margin: auto;
+}
+
+.review-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.review-item {
+  min-width: 100%; /* Each review takes full width */
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: white; /* White background for the reviews box */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  margin: 0 10px; /* Space between reviews */
+}
+
+/* Rest of your CSS styles remain unchanged... */
+
+
+.social-media button {
+  background: none;
+  border: none;
+  color: #007bff; /* Link color */
+  text-decoration: underline; /* Optional: underline for link effect */
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 20px 0; /* Padding for top and bottom */
+  text-align: center; /* Center the text */
+}
+
+.footer-content {
+  max-width: 1200px; /* Limit max width for content */
+  margin: 0 auto; /* Center align the content */
+}
+
+.footer-content p {
+  margin: 10px 0; /* Margin for spacing */
+  color: #333; /* Dark text color */
+}
+
+.social-media {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+  display: flex; /* Flexbox for alignment */
+  justify-content: center; /* Center items */
+}
+
+.social-media li {
+  margin: 0 15px; /* Space between items */
+}
+
+.social-media a {
+  text-decoration: none; /* Remove underline */
+  color: #007bff; /* Link color */
+}
+
+.social-media a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+
+
+
