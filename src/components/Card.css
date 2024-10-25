@@ -1,0 +1,108 @@
+
+
+.textGreen {
+
+    color: #A8D85D; /* Green color for the highlighted text */
+    font-weight: bold; /* Bold for emphasis */
+}
+
+
+.cardsContainer {
+    display: flex; /* Align cards in a row */
+    justify-content: center; /* Center cards horizontally */
+    gap: 20px; /* Space between cards */
+    margin-top: 40px;
+}
+
+.card {
+    width: 300px; /* Fixed width */
+    height: 350px; /* Fixed height */
+    border-radius: 10px; /* Rounded corners */
+    color: rgb(255, 255, 255); /* Text color */
+    padding: 60px; /* Padding for content */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Space out the content */
+    background-size: cover; /* Ensure background image covers the card */
+    background-position: center; /* Center the background image */
+    transition: transform 0.3s, background-image 0.3s; /* Smooth transition for hover effect */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly scale the card on hover */
+}
+
+/* Specific styles for title */
+.title {
+    margin-top: 170px; /* Remove default margin */
+    font-size: 1.3rem; /* Title font size */
+    color: rgb(67, 67, 67); /* Default color when not hovered */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.card:hover .title {
+    color: rgb(255, 255, 255); /* Change color on hover */
+}
+
+/* Specific styles for subtitle */
+.subtitle {
+    font-size: 1.4rem; /* Subtitle font size */
+    color: rgb(53, 52, 52); /* Subtitle color when not hovered */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.card:hover .subtitle {
+    color: #fff; /* Change color on hover */
+}
+
+/* Styling for features list */
+.features {
+    list-style: none; /* Remove default list style */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.features li {
+    margin: 8px 0; /* Space between list items */
+    position: relative; /* Position relative for the pseudo-element */
+    padding-left: 20px; /* Add padding to make space for the tick mark */
+    color: rgb(58, 58, 58); /* Default color for features text */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.card:hover .features li {
+    color: #fff; /* Change color on hover */
+}
+
+/* Add tick mark before each feature */
+.features li::before {
+    content: '✔'; /* Unicode for check mark */
+    color: #A8D85D; /* Green color for the check mark */
+    position: absolute; /* Position absolute to place it correctly */
+    left: 0; /* Align to the left */
+}
+
+/* Specific background images for each card */
+.card1 {
+    background-image: url('/public/images/features_cards/green_growth_card.png'); /* Background image for Card 1 */
+}
+
+.card1:hover {
+    background-image: url('/public/images/features_cards/hover_growth_card.png'); /* Background image on hover for Card 1 */
+}
+
+.card2 {
+    background-image: url('/public/images/features_cards/green_growth_card.png'); /* Background image for Card 2 */
+}
+
+.card2:hover {
+    background-image: url('/public/images/features_cards/hover_growth_card.png'); /* Background image on hover for Card 2 */
+}
+
+.card3 {
+    background-image: url('/public/images/features_cards/green_growth_card.png'); /* Background image for Card 3 */
+}
+
+.card3:hover {
+    background-image: url('/public/images/features_cards/hover_growth_card.png'); /* Background image on hover for Card 3 */
+}

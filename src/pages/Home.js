@@ -4,6 +4,7 @@ import './Home.css';
 import Footer from '../components/Footer';
 import ReviewSection from '../components/Review'; 
 import Mentor from '../components/Mentor';
+import Card from '../components/Card'
 
 
 // Sample review data
@@ -63,41 +64,12 @@ export default function Home() {
     </form>
   </div>
 </section>
+<div className='White'>
+
+</div>
 
 {/* Features Section */}
-<section className="features">
-  <h4 className="features-subtitle">What We Offer</h4>
-  <h2 className="features-title">
-    <span className="text-black">Key Features of</span>
-    <span className="text-green"> CODER HOUSE</span>
-  </h2>
-  <div className="features-grid">
-    <div className="feature-card card1">
-      <h4>Excellent Infrastructure</h4>
-      <ul>
-        <li>✔ Modern, tech-enabled classrooms and labs.</li>
-        <li>✔ High-speed internet for uninterrupted learning.</li>
-        <li>✔ Collaborative spaces to foster creativity.</li>
-      </ul>
-    </div>
-    <div className="feature-card card2">
-      <h4>Growth-Centered Space</h4>
-      <ul>
-        <li>✔ Curriculum focused on rapid skill development.</li>
-        <li>✔ Regular workshops and hackathons.</li>
-        <li>✔ Supportive, collaborative learning atmosphere.</li>
-      </ul>
-    </div>
-    <div className="feature-card card3">
-      <h4>EXPERT MENTOR TEAM</h4>
-      <ul>
-        <li>✔ Learn from top industry professionals.</li>
-        <li>✔ Personalized mentorship and real-world insights.</li>
-        <li>✔ Guidance from IIT, NIT, and MNS Experts.</li>
-      </ul>
-    </div>
-  </div>
-</section>
+<Card/>
 
 
 
@@ -169,6 +141,7 @@ export default function Home() {
           </li>
         </ul>
       </section>
+
 
 
 

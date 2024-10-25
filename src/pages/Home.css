@@ -1,23 +1,23 @@
 /* Home.css */
 
 .home {
-  font-family: poppin, sans-serif;
+  font-family: poppins, sans-serif;
 }
 
+/* Hero Section */
 .hero {
   background-image: url('/public/images/Home.png');
   display: flex;
   align-items: center; /* Center vertically */
   justify-content: center; /* Center the content horizontally */
   background-size: 1500px 820px;
-
-  padding-bottom: 80px; /* Padding for the section */
+  padding-bottom: 150px; /* Padding for the section */
   height: auto; /* Adjust height to fit the content */
 }
 
-
 .hero-left {
-  flex: 1; /* Take up one part of the space */
+  width: 200px;
+  height: auto;
 }
 
 .hero-right {
@@ -27,13 +27,12 @@
   justify-content: center; /* Center form vertically */
   background-color: #3C5C7B; /* Grey background */
   color: #ffffff;
-  border-radius: 18px;
+  border-radius: 30px;
   padding: 10px; /* Adjust padding to reduce the grey area */
   max-width: 500px; /* Optional: limit width to match the form */
-  margin: 0 auto ; /* Center the grey area */
+  margin: 0 auto; /* Center the grey area */
   margin-right: 90px;
 }
-
 
 .hero-heading {
   margin-bottom: 20px; /* Space below the heading */
@@ -56,7 +55,7 @@
   padding: 17px; /* Padding inside the input fields */
   border: 0px solid #ccc; /* Border color */
   border-radius: 5px; /* Rounded corners */
-  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* Gradient from white to transparent */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.806), rgba(255, 255, 255, 0)); /* Gradient from white to transparent */
   color: #000; /* Text color */
   box-shadow: 0px 0 5px rgba(255, 255, 255, 0.5); /* Slight white shadow on the right */
 }
@@ -68,19 +67,27 @@
   border: none;
   border-radius: 5px;
   cursor: pointer; /* Pointer on hover */
-  width:30%;
+  width: 40%;
 }
 
 .callback-btn:hover {
   background-color: #45a049; /* Darker green on hover */
 }
 
-/* FEATURS CARD  */
+.White {
+  width: 1150px;
+  height: 150px;
+  margin-left: 180px;
+  box-shadow: 0px 0 5px rgba(14, 3, 3, 0.5); /* Slight white shadow on the right */
+  z-index: 100;
+  background-color: rgb(255, 255, 255);
+  border-radius: 14px;
+  margin-top: -70px;
+}
 
+/* Features Card Section */
 
-
-
-/* Plans Section
+/* Plans Section */
 .home-plans {
   background-color: #f9f9f9;
   padding: 50px;
@@ -161,13 +168,9 @@
   border-radius: 5px;
 }
 
-
-
-
 /* Pricing Table CSS */
 .pricingTable {
-  margin-top: 500px;
- 
+  /* Additional styling can be added here */
 }
 
 .pricingTable-title {
@@ -176,18 +179,18 @@
   font-size: 3em;
   margin-bottom: 20px;
   letter-spacing: 0.04em;
-
 }
+
 .programs {
-  color:#C6E894; /* Set the color to green */
+  color: #C6E894; /* Set the color to green */
   font-weight: bold;
 }
+
 .pricingTable-subtitle {
   text-align: center;
   color: #b4bdc6;
   font-size: 1.8em;
   margin-bottom: 20px;
-
 }
 
 .pricingTable-firstTable {
@@ -206,7 +209,7 @@
 /* Glassmorphism effect for the pricing table card */
 .pricingTable-firstTable_table {
   width: 21%;
-  background: rgb(255, 255, 255); /* White with some transparency */
+  background: rgba(255, 255, 255, 0.8); /* White with some transparency */
   backdrop-filter: blur(10px); /* Apply blur effect */
   display: inline-block;
   padding: 0px 30px 40px 30px;
@@ -223,9 +226,6 @@
   transform: scale(1.08);
   box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
 }
-
-/* Other styles remain unchanged */
-
 
 .pricingTable-firstTable_table__header {
   font-size: 1.6em;
@@ -275,385 +275,27 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 15px;
-  height: 15px;
-  font-size: 0.8em;
-  margin-right: 10px;
-}
-
-.pricingTable-firstTable_table:nth-of-type(2):before {
-  content: 'Most Popular';
+  width: 1.5em; /* Set a specific size for the checkmark */
+  height: 1.5em; /* Set a specific height for the checkmark */
   position: absolute;
-  color: white;
-  font-size: 1.2em;
-  font-family:Arial, Helvetica, sans-serif;
-  background-color: #3C5C7B;
-  right: 15px;
-  top: -25px;
-  height: 65px;
-  width: 85px;
-  border-radius: 50%;
-  padding-top: 22px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Added shadow to the badge */
-  transition: transform 0.5s ease; /* Smooth animation */
+  left: -30px; /* Adjust the position of the checkmark */
 }
 
-.pricingTable-firstTable_table:nth-of-type(2):hover:before {
-  transform: rotate(360deg); /* Rotates the 'Most Popular' badge on hover */
-}
-
-
-.pricingTable-firstTable_table__buttons {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
+.pricingTable-firstTable_table__options li:last-child {
+  border-bottom: none; /* Remove bottom border from the last item */
 }
 
 .pricingTable-firstTable_table__button {
-  color: white;
-  border: 0;
-  background-color: #C6E894;
+  padding: 20px;
+  background-color: #3C5C7B;
   border-radius: 5px;
+  color: white;
+  border: none;
+  font-size: 1.3em;
   cursor: pointer;
-  padding: 12px 20px;
-  display: inline-flex;
-  align-items: center;
-  box-shadow: 0px 3px 0px 0px #C6E894;
-  transition: all 0.3s ease;
-  letter-spacing: 0.03em;
-  font-size: 0.9em;
+  transition: all 0.3s ease; /* Smooth transition on hover */
 }
 
 .pricingTable-firstTable_table__button:hover {
-  background-color: #C6E894;
-  transform: translateY(-5px);
-  box-shadow: 0px 20px 15px -10px rgba(102, 172, 100, 0.8);
+  background-color: #45a049; /* Darker shade on hover for button */
 }
-
-.pricingTable-firstTable_table__button i {
-  margin-right: 8px;
-  font-size: 1em;
-}
-
-.pricingTable-firstTable_table__viewProgram {
-  background-color: #3C5C7B; /* Different color for the 'View Program' button */
-}
-
-.pricingTable-firstTable_table__viewProgram:hover {
-  background-color: #2e4660;
-}
-
-/* Icon Styling */
-.pricingTable-firstTable_table__button .fa-eye,
-.pricingTable-firstTable_table__button .fa-download {
-  font-size: 1em;
-}
-
-
-
-
-
-.reviews {
-  width:1400px;
-  height: 500px;
-  background-image: url('/public/images/Review.png'); /* Path to your background image */
-  background-size: cover; /* Cover the entire section */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  padding: 40px; /* Add padding around the content */
-  color: white; /* Ensure text is visible against the background */
-  margin: 50px 0;
-  text-align: center;
-
-}
-
-.review-carousel {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  border: #ff00bb;
-  max-width: 800px; /* Adjust based on your design */
-  margin: auto;
-}
-
-.review-container {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.review-item {
-  min-width: 100%;
-  padding: 40px;
-  box-sizing: border-box;
-  text-align: center;
-  background-color: rgb(104, 92, 92); /* White background for the reviews box */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-  margin: 0 10px; /* Space between reviews */
-}
-
-.review-item p {
-  font-style: italic; /* Italicize review text for style */
-  font-size: 1.1rem; /* Slightly larger font */
-  color: #333; /* Darker text color */
-}
-
-.review-item p:last-child {
-  font-weight: bold; /* Bold author text */
-  margin-top: 10px; /* Space above author name */
-  color: #555; /* Slightly lighter color for author name */
-}
-
-/* Quote Sign Style */
-.review-carousel::before {
-  content: '“'; /* Quote sign */
-  font-size: 3rem; /* Large size for emphasis */
-  color: #ccc; /* Light gray color */
-  position: absolute;
-  top: -30px; /* Adjust position above the reviews */
-  left: 20px; /* Space from the left */
-  opacity: 0.5; /* Faded appearance */
-  z-index: 0;
-}
-
-/* Arrow Styles */
-.carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: transparent; /* No background for buttons */
-  border: none; /* No border */
-  color: #007BFF; /* Stylish blue color */
-  font-size: 2rem; /* Larger arrow size */
-  cursor: pointer;
-  z-index: 10;
-}
-
-.carousel-button.left {
-  left: 10px;
-}
-
-.carousel-button.right {
-  right: 10px;
-}
-
-/* Hover Effect for Arrows */
-.carousel-button:hover {
-  color: #0056b3; /* Darker blue on hover */
-  transform: translateY(-50%) scale(1.1); /* Slight scale on hover */
-  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
-}
-
-.review-carousel {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  max-width: 800px; /* Adjust based on your design */
-  margin: auto;
-}
-
-.review-container {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.review-item {
-  min-width: 100%; /* Each review takes full width */
-  padding: 20px;
-  box-sizing: border-box;
-  text-align: center;
-  background-color: white; /* White background for the reviews box */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-  margin: 0 10px; /* Space between reviews */
-}
-
-/* Rest of your CSS styles remain unchanged... */
-
-
-.social-media button {
-  background: none;
-  border: none;
-  color: #007bff; /* Link color */
-  text-decoration: underline; /* Optional: underline for link effect */
-  cursor: pointer;
-}
-
-.footer {
-  background-color: #f8f9fa; /* Light background color */
-  padding: 20px 0; /* Padding for top and bottom */
-  text-align: center; /* Center the text */
-}
-
-.footer-content {
-  max-width: 1200px; /* Limit max width for content */
-  margin: 0 auto; /* Center align the content */
-}
-
-.footer-content p {
-  margin: 10px 0; /* Margin for spacing */
-  color: #333; /* Dark text color */
-}
-
-.social-media {
-  list-style: none; /* Remove bullet points */
-  padding: 0; /* Remove padding */
-  display: flex; /* Flexbox for alignment */
-  justify-content: center; /* Center items */
-}
-
-.social-media li {
-  margin: 0 15px; /* Space between items */
-}
-
-.social-media a {
-  text-decoration: none; /* Remove underline */
-  color: #007bff; /* Link color */
-}
-
-.social-media a:hover {
-  text-decoration: underline; /* Underline on hover */
-}
-
-
-
-
-
-
-/* Reviews Section */
-.reviews {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.reviews h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.review-carousel {
-  position: relative;
-  width: 80%; /* Adjust the width to suit your layout */
-  margin: 0 auto;
-
-}
-
-.review-container {
-  display: flex;
-  transition: transform 0.5s ease-in-out; /* Smoother transition for sliding */
-}
-
-.review-item {
-  background-color: #f9f9f9;
-  border: 2px solid #f3a4b5; /* Pink border */
-  border-radius: 10px;
-  padding: 20px;
-  width: 100%; /* Each card takes up the full carousel width */
-  text-align: left;
-  position: relative;
-  box-sizing: border-box;
-}
-
-.review-item::before {
-  content: '“';
-  font-size: 4rem;
-  position: absolute;
-  top: -30px;
-  left: -10px;
-  color: #f3a4b5; /* Pink color for quotation mark */
-}
-
-.review-author {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.review-stars {
-  color: #f1c40f; /* Gold color for stars */
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.review-text {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #333;
-}
-
-/* Carousel buttons */
-.carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #f3a4b5; /* Pink button background */
-  border: none;
-  color: white;
-  font-size: 1.5rem;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 50%;
-  transition: background-color 0.3s;
-}
-
-.carousel-button.left {
-  left: -40px;
-}
-
-.carousel-button.right {
-  right: -40px;
-}
-
-.carousel-button:hover {
-  background-color: #e84393;
-}
-
-
-
-/* Mentors Section */
-.mentors-container {
-  display: flex;
-  align-items: center;
-  padding: 50px;
-  background-color: #f9f9f9;
-}
-
-.mentor-left {
-  flex: 1;
-  text-align: center;
-}
-
-.mentor-image {
-  width: 80%;
-  height: auto;
-}
-
-.mentor-right {
-  flex: 1;
-  padding: 20px;
-  text-align: center;
-}
-
-.animated-mentor-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.mentor-name {
-  font-size: 1.5rem;
-  color: #4CAF50;
-  animation: slide-in 2s infinite alternate;
-}
-
-/* Animation for mentor names */
-@keyframes slide-in {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
