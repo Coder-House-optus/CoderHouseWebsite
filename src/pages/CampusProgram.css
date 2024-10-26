@@ -2,7 +2,8 @@
 .program-cards {
   display: grid;
   margin-top: 30px;
-  grid-template-columns: repeat(6, 1fr); /* 6 cards per row */
+  grid-template-columns: repeat(6, 1fr);
+  /* 6 cards per row */
   gap: 15px;
   margin-top: 20px;
   padding: 0 30px;
@@ -25,7 +26,8 @@
   color: white;
 }
 
-.program-card h4, .program-card p {
+.program-card h4,
+.program-card p {
   margin: 10px 0;
   font-size: 0.9rem;
 }
@@ -40,7 +42,8 @@
 }
 
 .program-image {
-  width: 40%; /* Left side for the image */
+  width: 40%;
+  /* Left side for the image */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,7 +55,8 @@
 }
 
 .program-details {
-  width: 60%; /* Right side for the text */
+  width: 60%;
+  /* Right side for the text */
   color: #333;
   padding-left: 20px;
   display: flex;
@@ -72,15 +76,19 @@
 /* Responsiveness */
 @media (max-width: 1200px) {
   .program-cards {
-    grid-template-columns: repeat(4, 1fr); /* 4 columns on medium screens */
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columns on medium screens */
   }
 
   .program-details-container {
-    flex-direction: column; /* Stack image and text on smaller screens */
+    flex-direction: column;
+    /* Stack image and text on smaller screens */
   }
 
-  .program-image, .program-details {
-    width: 100%; /* Full width for both sections */
+  .program-image,
+  .program-details {
+    width: 100%;
+    /* Full width for both sections */
   }
 
   .program-image img {
@@ -90,13 +98,15 @@
 
 @media (max-width: 768px) {
   .program-cards {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns on smaller screens */
   }
 }
 
 @media (max-width: 480px) {
   .program-cards {
-    grid-template-columns: 1fr; /* 1 column on mobile devices */
+    grid-template-columns: 1fr;
+    /* 1 column on mobile devices */
   }
 }
 
@@ -104,10 +114,12 @@
 
 /* Right Section (Program Details) */
 .program-details {
-  background-color: #d9d9d9; /* Grey background */
+  background-color: #d9d9d9;
+  /* Grey background */
   padding: 20px;
   margin-top: 20px;
-  width: 300px;  /* Adjust the width as needed */
+  width: 300px;
+  /* Adjust the width as needed */
   text-align: left;
   position: relative;
   border-radius: 20px;
@@ -135,7 +147,8 @@
 }
 
 .view-more {
-  background-color: #5d615d; /* Dark green stripe */
+  background-color: #5d615d;
+  /* Dark green stripe */
   padding: 10px;
   position: absolute;
   bottom: 0;
@@ -155,7 +168,8 @@
 }
 
 .view-more-button:hover {
-  background-color: #ffffff; /* Slightly darker on hover */
+  background-color: #ffffff;
+  /* Slightly darker on hover */
   color: rgb(9, 6, 6);
 }
 
@@ -165,68 +179,82 @@
 
 .gallery {
   position: relative;
-  width: 300px; /* Keep the width of the gallery */
-  height: 200px; /* Keep the height of the gallery */
-  margin: 20px auto; /* Center the gallery */
-  transform-style: preserve-3d; /* Preserve 3D transformations */
-  animation: rotate 35s linear infinite; /* Continuous rotation */
+  width: 300px;
+  /* Keep the width of the gallery */
+  height: 200px;
+  /* Keep the height of the gallery */
+  margin: 20px auto;
+  /* Center the gallery */
+  transform-style: preserve-3d;
+  /* Preserve 3D transformations */
+  animation: rotate 35s linear infinite;
+  /* Continuous rotation */
 }
 
 @keyframes rotate {
   from {
-    transform: perspective(1200px) rotateY(0deg); /* Start rotation */
+    transform: perspective(1200px) rotateY(0deg);
+    /* Start rotation */
   }
-  
+
   to {
-    transform: perspective(1200px) rotateY(360deg); /* End rotation */
+    transform: perspective(1200px) rotateY(360deg);
+    /* End rotation */
   }
 }
 
 .gallery span {
   position: absolute;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  transform-origin: center; /* Set rotation center */
-  opacity: 0; /* Start invisible */
-  transition: opacity 0.5s ease-in-out; /* Smooth transition */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  transform-origin: center;
+  /* Set rotation center */
+  opacity: 0;
+  /* Start invisible */
+  transition: opacity 0.5s ease-in-out;
+  /* Smooth transition */
 }
 
 .gallery span:nth-child(1) {
-  transform: rotateY(0deg) translateZ(100px); /* First image position, closer to center */
-  opacity: 1; /* Make visible */
+  transform: rotateY(0deg) translateZ(100px);
+  /* First image position, closer to center */
+  opacity: 1;
+  /* Make visible */
 }
 
 .gallery span:nth-child(2) {
-  transform: rotateY(45deg) translateZ(100px); /* Second image position */
+  transform: rotateY(45deg) translateZ(100px);
+  /* Second image position */
 }
 
 .gallery span:nth-child(3) {
-  transform: rotateY(90deg) translateZ(100px); /* Third image position */
+  transform: rotateY(90deg) translateZ(100px);
+  /* Third image position */
 }
 
 .gallery span:nth-child(4) {
-  transform: rotateY(135deg) translateZ(100px); /* Fourth image position */
+  transform: rotateY(135deg) translateZ(100px);
+  /* Fourth image position */
 }
 
 .gallery span:nth-child(5) {
-  transform: rotateY(180deg) translateZ(100px); /* Fifth image position */
+  transform: rotateY(180deg) translateZ(100px);
+  /* Fifth image position */
 }
 
 .gallery span:nth-child(6) {
-  transform: rotateY(225deg) translateZ(100px); /* Sixth image position */
+  transform: rotateY(225deg) translateZ(100px);
+  /* Sixth image position */
 }
 
 .gallery span:nth-child(7) {
-  transform: rotateY(270deg) translateZ(100px); /* Seventh image position */
+  transform: rotateY(270deg) translateZ(100px);
+  /* Seventh image position */
 }
 
 .gallery span:nth-child(8) {
-  transform: rotateY(315deg) translateZ(100px); /* Eighth image position */
+  transform: rotateY(315deg) translateZ(100px);
+  /* Eighth image position */
 }
-
-
-
-
-
-
-

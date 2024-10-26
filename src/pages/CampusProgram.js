@@ -61,19 +61,19 @@ const CampusProgram = () => {
 
           {/* Details Section */}
           <div className="program-details">
-          <h3 className="program-name-details">{programsData[currentProgramIndex].name}</h3>
-          <p className="program-description">{programsData[currentProgramIndex].description}</p>
-          <p className="program-startDate-details">Start Date: {programsData[currentProgramIndex].startDate}</p>
-          <p><strong>Duration:</strong> {programsData[currentProgramIndex].duration}</p>
-          <p><strong>Cost:</strong> {programsData[currentProgramIndex].cost}</p>
+            <h3 className="program-name-details">{programsData[currentProgramIndex].name}</h3>
+            <p className="program-description">{programsData[currentProgramIndex].description}</p>
+            <p className="program-startDate-details">Start Date: {programsData[currentProgramIndex].startDate}</p>
+            <p><strong>Duration:</strong> {programsData[currentProgramIndex].duration}</p>
+            <p><strong>Cost:</strong> {programsData[currentProgramIndex].cost}</p>
 
-          <div className="view-more">
-            <button className="view-more-button">View More</button>
+            <div className="view-more">
+              <button className="view-more-button">View More</button>
+            </div>
           </div>
         </div>
-        </div>
       )}
-      <Footer/>
+      <Footer />
     </section>
   );
 };

@@ -1,40 +1,32 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Navigation from '../components/Navigation';
+import './SwayamBatch.css';
 import Footer from '../components/Footer';
-import './Features.css';
 
 export default function Features() {
   const [expandedCard, setExpandedCard] = useState(null);
-  const navigate = useNavigate();
 
   const toggleCard = (cardName) => {
     setExpandedCard(expandedCard === cardName ? null : cardName);
   };
 
   const handleCardClick = (cardName) => {
-    if (cardName === 'Swayam Batch') {
-      navigate('/swayam-batch');
-    } else if (cardName === 'CRT Offline Batch') {
-      navigate('/crt-offline-batch');
-    } else if (cardName === 'Coders Sheet') {
-      navigate('/coders-sheet');
-    } else if (cardName === 'Mentorship Module | Coding Library') {
-      navigate('/mentorship-module');
-    } else {
-      const expandableCard = document.getElementById(cardName.replace(/\s+/g, '-').toLowerCase());
-      if (expandableCard) {
-        expandableCard.scrollIntoView({ behavior: 'smooth' });
-      }
-      toggleCard(cardName);
+    // Scroll to the expandable card section
+    const expandableCard = document.getElementById(cardName.replace(/\s+/g, '-').toLowerCase());
+    if (expandableCard) {
+      expandableCard.scrollIntoView({ behavior: "smooth" });
     }
+    toggleCard(cardName);
   };
 
   return (
     <div className="features-page">
+      {/* Navigation Bar */}
       <Navigation />
-
+      <hi1> Hello Swamp batch</hi1>
+      {/* Background Section */}
       <div className="background-section">
+        {/* Header Section */}
         <div className="features-header">
           <h2>On- <span className="highlight">Campus Programs</span></h2>
         </div>
@@ -46,6 +38,7 @@ export default function Features() {
             className="character-image"
           />
 
+          {/* Cards in a diagonal layout around the character */}
           <div className="cards-container">
             <div className="feature-card card-left" onClick={() => handleCardClick('Swayam Batch')}>
               <h4>Swayam Batch</h4>
@@ -63,6 +56,7 @@ export default function Features() {
         </div>
       </div>
 
+      {/* Expandable Cards Section */}
       <div className="expandable-cards">
         <div
           id="swayam-batch"
@@ -126,8 +120,8 @@ export default function Features() {
           </div>
         </div>
       </div>
-
       <Footer />
+
     </div>
   );
 }

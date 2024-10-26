@@ -79,24 +79,24 @@ const CollegeProgram = () => {
       </section>
 
       {/* Our Moments Section */}
-<section className="moments-section">
-  <h2 className="section-title">
-    Our <span className="highlight">Moments</span>
-  </h2>
-  <div className="moments-content">
-    <div className="description">
-      <p>{moments[activeIndex].description}</p>
-    </div>
-    <div className="images">
-      <img src={moments[activeIndex].img1} alt={`Moment ${activeIndex + 1} part 1`} className="moment-image" />
-      <img src={moments[activeIndex].img2} alt={`Moment ${activeIndex + 1} part 2`} className="moment-image" />
-    </div>
-  </div>
-  <div className="navigation-arrows">
-    <button onClick={handlePrev} aria-label="Previous Moment">❮</button>
-    <button onClick={handleNext} aria-label="Next Moment">❯</button>
-  </div>
-</section>
+      <section className="moments-section">
+        <h2 className="section-title">
+          Our <span className="highlight">Moments</span>
+        </h2>
+        <div className="moments-content">
+          <div className="description">
+            <p>{moments[activeIndex].description}</p>
+          </div>
+          <div className="images">
+            <img src={moments[activeIndex].img1} alt={`Moment ${activeIndex + 1} part 1`} className="moment-image" />
+            <img src={moments[activeIndex].img2} alt={`Moment ${activeIndex + 1} part 2`} className="moment-image" />
+          </div>
+        </div>
+        <div className="navigation-arrows">
+          <button onClick={handlePrev} aria-label="Previous Moment">❮</button>
+          <button onClick={handleNext} aria-label="Next Moment">❯</button>
+        </div>
+      </section>
 
 
       {/* Associations Section */}
@@ -114,7 +114,7 @@ const CollegeProgram = () => {
 
         <h2>Words of <span className="highlight">HOD</span></h2>
         <div className="testimonial-card">
-        <div className="vertical-line"></div>
+          <div className="vertical-line"></div>
           <div className="testimonial-content">
             <div className="circle-image">
               <img
@@ -136,7 +136,7 @@ const CollegeProgram = () => {
           <button onClick={handleTestimonialNext} aria-label="Next Testimonial">❯</button>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

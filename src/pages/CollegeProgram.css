@@ -13,12 +13,15 @@
 }
 
 .greeting-card {
-  background-color: #5a9e2b; /* Green background */
+  background-color: #5a9e2b;
+  /* Green background */
   color: white;
   border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slight shadow for a 3D effect */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  /* Slight shadow for a 3D effect */
   padding: 40px;
-  width: 300px; /* Wide card */
+  width: 300px;
+  /* Wide card */
   text-align: center;
   transition: background-color 0.3s ease, transform 0.3s ease;
   cursor: pointer;
@@ -38,8 +41,10 @@
 
 /* Card Hover Effect */
 .greeting-card:hover {
-  background-color: #cccccc; /* Grey background on hover */
-  transform: translateY(-10px); /* Slight lift effect on hover */
+  background-color: #cccccc;
+  /* Grey background on hover */
+  transform: translateY(-10px);
+  /* Slight lift effect on hover */
 }
 
 /* Button with Rounded Corners and White Background */
@@ -48,17 +53,22 @@
 }
 
 .view-btn {
-  background-color: white; /* White background */
-  color: black; /* Black text */
-  border: 2px solid black; /* Optional border */
+  background-color: white;
+  /* White background */
+  color: black;
+  /* Black text */
+  border: 2px solid black;
+  /* Optional border */
   padding: 10px 25px;
-  border-radius: 30px; /* Rounded corners */
+  border-radius: 30px;
+  /* Rounded corners */
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .view-btn:hover {
-  background-color: black; /* Invert background and text on hover */
+  background-color: black;
+  /* Invert background and text on hover */
   color: white;
 }
 
@@ -164,7 +174,8 @@
 }
 
 .testimonial-section .highlight {
-  color: #92D627; /* Green color for highlight */
+  color: #92D627;
+  /* Green color for highlight */
 }
 
 .testimonial-card {
@@ -180,7 +191,8 @@
   padding: 20px 30px;
   height: 250px;
   border-radius: 20px;
-  overflow: hidden; /* Ensures vertical line gets clipped */
+  overflow: hidden;
+  /* Ensures vertical line gets clipped */
 }
 
 .testimonial-content {

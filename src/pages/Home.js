@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import './Home.css';
 import Footer from '../components/Footer';
-import ReviewSection from '../components/Review'; 
+import ReviewSection from '../components/Review';
 import Mentor from '../components/Mentor';
 import Card from '../components/Card'
 
@@ -35,50 +35,50 @@ export default function Home() {
       <Navigation />
 
       {/* Hero Section */}
-<section className="hero">
-  <div className="hero-left">
-    <img 
-      src="/images/Coder.png" // Replace with the correct path to your image
-      alt="Student on laptop"
-      className="hero-image"
-    />
-  </div>
-  <div className="hero-right">
-    <h2 className="hero-heading">
-      <span className="text-white">BE A PART OF THE</span><br />
-      <span className="text-green">CODER HOUSE</span><br />
-      <span className="text-white">FAMILY!</span>
-    </h2>
-    <form className="form">
-      <input type="text" placeholder="Name" className="input-field" />
-      <input type="email" placeholder="Email" className="input-field" />
-      <input type="tel" placeholder="Phone" className="input-field" />
-      <select className="input-field">
-        <option>Select A Program</option>
-        <option value="web-dev">Web Development</option>
-        <option value="ml">Machine Learning</option>
-        <option value="ai">Artificial Intelligence</option>
-      </select>
-      <input type="url" placeholder="LinkedIn Profile URL" className="input-field" />
-      <button type="submit" className="callback-btn">Request Callback</button>
-    </form>
-  </div>
-</section>
-<div className='White'>
+      <section className="hero">
+        <div className="hero-left">
+          <img
+            src="/images/Coder.png" // Replace with the correct path to your image
+            alt="Student on laptop"
+            className="hero-image"
+          />
+        </div>
+        <div className="hero-right">
+          <h2 className="hero-heading">
+            <span className="text-white">BE A PART OF THE</span><br />
+            <span className="text-green">CODER HOUSE</span><br />
+            <span className="text-white">FAMILY!</span>
+          </h2>
+          <form className="form">
+            <input type="text" placeholder="Name" className="input-field" />
+            <input type="email" placeholder="Email" className="input-field" />
+            <input type="tel" placeholder="Phone" className="input-field" />
+            <select className="input-field">
+              <option>Select A Program</option>
+              <option value="web-dev">Web Development</option>
+              <option value="ml">Machine Learning</option>
+              <option value="ai">Artificial Intelligence</option>
+            </select>
+            <input type="url" placeholder="LinkedIn Profile URL" className="input-field" />
+            <button type="submit" className="callback-btn">Request Callback</button>
+          </form>
+        </div>
+      </section>
+      <div className='White'>
 
-</div>
+      </div>
 
-{/* Features Section */}
-<Card/>
+      {/* Features Section */}
+      <Card />
 
 
 
       <section className="pricingTable">
-      <div className="pricingTable-title">
-  Our <span className="programs">PROGRAMS</span>
-</div>
+        <div className="pricingTable-title">
+          Our <span className="programs">PROGRAMS</span>
+        </div>
 
-        
+
         <ul className="pricingTable-firstTable">
           <li className="pricingTable-firstTable_table">
             <div className="pricingTable-firstTable_table__header">Basic</div>
@@ -99,7 +99,7 @@ export default function Home() {
               </button>
             </div>
           </li>
-          
+
           <li className="pricingTable-firstTable_table">
             <div className="pricingTable-firstTable_table__header">Premium</div>
             <div className="pricingTable-firstTable_table__pricing">
@@ -119,7 +119,7 @@ export default function Home() {
               </button>
             </div>
           </li>
-          
+
           <li className="pricingTable-firstTable_table">
             <div className="pricingTable-firstTable_table__header">Pro</div>
             <div className="pricingTable-firstTable_table__pricing">
@@ -164,9 +164,9 @@ export default function Home() {
 
         </div>
       </section> */}
-      <Mentor/>
+      <Mentor />
 
-      <Footer/>
+      <Footer />
 
     </div>
   );
