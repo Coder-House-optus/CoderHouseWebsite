@@ -13,14 +13,20 @@ export default function Features() {
   };
 
   const handleCardClick = (cardName) => {
-    if (cardName === 'Swayam Batch') {
-      navigate('/swayam-batch');
-    } else if (cardName === 'CRT Offline Batch') {
-      navigate('/crt-offline-batch');
-    } else if (cardName === 'Coders Sheet') {
-      navigate('/coders-sheet');
-    } else if (cardName === 'Mentorship Module | Coding Library') {
-      navigate('/mentorship-module');
+    const paths = {
+      'Swayam Batch': '/swayam-batch',
+      'CRT Offline Batch': '/crt-offline-batch',
+      'Coders Sheet': '/coders-sheet',
+      'Mentorship Module | Coding Library': '/mentorship-module',
+      'Coding Library': '/coding-library',
+      'Marathon Classes': '/marathon-classes',
+      'Internship': '/internship',
+      'Contest': '/contest',
+      'Moon Coder': '/moon-coder'
+    };
+    
+    if (paths[cardName]) {
+      navigate(paths[cardName]);
     } else {
       const expandableCard = document.getElementById(cardName.replace(/\s+/g, '-').toLowerCase());
       if (expandableCard) {
@@ -29,6 +35,9 @@ export default function Features() {
       toggleCard(cardName);
     }
   };
+
+  const leftCards = ['Swayam Batch', 'CRT Offline Batch', 'Marathon Classes', 'Internship'];
+  const rightCards = ['Coders Sheet','Mentorship Module | Coding Library', 'Moon Coder',  'Contest'];
 
   return (
     <div className="features-page">
@@ -41,90 +50,56 @@ export default function Features() {
 
         <div className="middle-section">
           <img
-            src="images/Feature.png" // Dummy image for now
+            src="images/Feature.png"
             alt="Character"
             className="character-image"
           />
 
           <div className="cards-container">
-            <div className="feature-card card-left" onClick={() => handleCardClick('Swayam Batch')}>
-              <h4>Swayam Batch</h4>
+            <div className="left-cards">
+              {leftCards.map((cardName) => (
+                <div
+                  key={cardName}
+                  className="feature-card card-left"
+                  onClick={() => handleCardClick(cardName)}
+                >
+                  <h4>{cardName}</h4>
+                </div>
+              ))}
             </div>
-            <div className="feature-card card-left-overlap" onClick={() => handleCardClick('CRT Offline Batch')}>
-              <h4>CRT Offline Batch</h4>
-            </div>
-            <div className="feature-card card-right" onClick={() => handleCardClick('Coders Sheet')}>
-              <h4>Coders Sheet</h4>
-            </div>
-            <div className="feature-card card-right-overlap" onClick={() => handleCardClick('Mentorship Module | Coding Library')}>
-              <h4>Mentorship Module | Coding Library</h4>
+
+            <div className="right-cards">
+              {rightCards.map((cardName) => (
+                <div
+                  key={cardName}
+                  className="feature-card card-right"
+                  onClick={() => handleCardClick(cardName)}
+                >
+                  <h4>{cardName}</h4>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
 
       <div className="expandable-cards">
-        <div
-          id="swayam-batch"
-          className={`expandable-card ${expandedCard === 'Swayam Batch' ? 'expanded' : ''}`}
-          onClick={() => handleCardClick('Swayam Batch')}
-        >
-          <h4>Swayam Batch</h4>
-          <div className="card-content">
-            <ul>
-              <li>Details about the Swayam Batch go here.</li>
-              <li>This is the expanded content.</li>
-            </ul>
+        {[...leftCards, ...rightCards].map((cardName) => (
+          <div
+            key={cardName}
+            id={cardName.replace(/\s+/g, '-').toLowerCase()}
+            className={`expandable-card ${expandedCard === cardName ? 'expanded' : ''}`}
+            onClick={() => handleCardClick(cardName)}
+          >
+            <h4>{cardName}</h4>
+            <div className="card-content">
+              <ul>
+                <li>Details about {cardName} go here.</li>
+                <li>This is the expanded content.</li>
+              </ul>
+            </div>
           </div>
-        </div>
-
-        <div
-          id="crt-offline-batch"
-          className={`expandable-card ${expandedCard === 'CRT Offline Batch' ? 'expanded' : ''}`}
-          onClick={() => handleCardClick('CRT Offline Batch')}
-        >
-          <h4>CRT Offline Batch</h4>
-          <div className="card-content">
-            <ul>
-              <li>Details about the CRT Offline Batch go here.</li>
-              <li>This is the expanded content.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div
-          id="coders-sheet"
-          className={`expandable-card ${expandedCard === 'Coders Sheet' ? 'expanded' : ''}`}
-          onClick={() => handleCardClick('Coders Sheet')}
-        >
-          <h4>Coders Sheet</h4>
-          <div className="card-content">
-            <ul>
-              <li>Practice Questions Galore</li>
-              <li>Crafted by IIT’ians and NIT’ians.</li>
-              <li>Ideal for self-learning coding enthusiasts.</li>
-              <li>Contains 1000+ questions of different levels and variety.</li>
-              <li>Unlock exclusive notes for enhanced learning.</li>
-              <li>Engage in daily scheduled practice questions.</li>
-              <li>Experience a dynamic set of practice questions tailored to your current coding proficiency level.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div
-          id="mentorship-module"
-          className={`expandable-card ${expandedCard === 'Mentorship Module | Coding Library' ? 'expanded' : ''}`}
-          onClick={() => handleCardClick('Mentorship Module | Coding Library')}
-        >
-          <h4>Mentorship Module | Coding Library</h4>
-          <div className="card-content">
-            <ul>
-              <li>2-hour sessions with expert mentors addressing all your 'Career As Coder' queries.</li>
-              <li>Coding Library: Your Perfect Coding Heaven.</li>
-              <li>Monthly subscription model for a conducive coding environment.</li>
-            </ul>
-          </div>
-        </div>
+        ))}
       </div>
 
       <Footer />
