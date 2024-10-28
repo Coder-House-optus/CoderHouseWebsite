@@ -10,6 +10,8 @@
   font-family: poppins;
 }
 
+
+
 .program-card {
   background-color: #526E8A;
   border-radius: 8px;
@@ -257,4 +259,137 @@
 .gallery span:nth-child(8) {
   transform: rotateY(315deg) translateZ(100px);
   /* Eighth image position */
+}
+
+
+.slideshow-container {
+  position: relative; /* Allow positioning of child elements */
+  text-align: center; /* Center image and button */
+}
+
+.slideshow-image {
+  width: 100%; /* Adjust the image width as needed */
+  max-width: 600px; /* Set a max width for responsiveness */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center the image */
+}
+
+.slideshow-button {
+  margin-top: 20px; /* Adjust negative margin to pull the button closer */
+  padding: 10px 20px; /* Button padding */
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.slideshow-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+
+.arrow-button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.arrow-button:nth-child(1) {
+  left: 10px; /* Positioning for the left arrow */
+}
+
+.arrow-button:nth-child(3) {
+  right: 10px; /* Positioning for the right arrow */
+}
+
+
+.slideshow-container {
+  display: flex;
+  align-items: center; /* Center align the buttons and image vertically */
+  justify-content: center; /* Center align the items horizontally */
+  position: relative; /* Relative positioning for absolute button positioning */
+}
+
+.slideshow-image {
+  max-width: 30%; /* Adjust image width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin: 20px 10px; /* Add some margin for spacing */
+}
+
+.arrow-button {
+  background-color: green; /* Change button background to green */
+  color: white; /* Change text color to white for better contrast */
+  border: none; /* Remove default border */
+  padding: 10px; /* Add padding for better size */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  font-size: 24px; /* Adjust font size for visibility */
+  border-radius: 5px; /* Add some rounding to the corners */
+  margin: 0 5px; /* Reduce margin to bring buttons closer */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.arrow-button:hover {
+  background-color: darkgreen; /* Darker shade on hover */
+}
+
+
+
+
+
+
+
+.enquiry-container {
+  text-align: center;
+  margin: 2rem 0; /* Adjust margin as necessary */
+}
+
+.enquiry-heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333; /* Heading color */
+}
+
+.enquiry-form-container {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border-radius: 10px;
+  padding: 2rem;
+  backdrop-filter: blur(10px); /* Glass morph effect */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+  color: white; /* Text color inside form */
+}
+
+.form-group {
+  margin-bottom: 1rem; /* Space between form fields */
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #ccc; /* Label color */
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2); /* Input background */
+  color: #333; /* Input text color */
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #76b0f9; /* Border color on focus */
+}
+
+.submit-button {
+  background: #76b0f9;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background: #6a9edb; /* Darker shade on hover */
 }
