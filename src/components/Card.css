@@ -1,7 +1,6 @@
 
 
 .textGreen {
-
     color: #A8D85D; /* Green color for the highlighted text */
     font-weight: bold; /* Bold for emphasis */
 }
@@ -14,6 +13,29 @@
     margin-top: 40px;
 }
 
+.titleContainer {
+
+  display: flex;               /* Use flexbox layout */
+  flex-direction: column;      /* Stack items vertically */
+  align-items: center;         /* Center items horizontally */
+  text-align: center;          /* Center text within each item */
+  margin: 0 auto;              /* Center the container itself if needed */
+  padding: 10px;               /* Optional: Add padding for spacing */
+  margin-top: 60px;
+}
+
+.subtitle {
+  margin: 0;                  /* Remove default margin */
+  font-size: 2.2em;           /* Adjust font size as needed */
+  color: #000000;             /* Set text color */
+}
+
+.mainTitle {
+  margin: 10px 0;            /* Space above and below the main title */
+  font-size: 2.8em;           /* Adjust font size as needed */
+  color: #000000;             /* Set text color */
+}
+
 .card {
     width: 300px; /* Fixed width */
     height: 350px; /* Fixed height */
@@ -22,33 +44,26 @@
     padding: 60px; /* Padding for content */
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Stack content vertically */
-    justify-content: space-between; /* Space out the content */
+    font-size: 1.2em;
     background-size: cover; /* Ensure background image covers the card */
     background-position: center; /* Center the background image */
     transition: transform 0.3s, background-image 0.3s; /* Smooth transition for hover effect */
 }
 
 .card:hover {
-    transform: scale(1.05); /* Slightly scale the card on hover */
+    transform: scale(1.10); /* Slightly scale the card on hover */
 }
 
 /* Specific styles for title */
 .title {
-    margin-top: 170px; /* Remove default margin */
-    font-size: 1.3rem; /* Title font size */
+    margin-top: 120px; /* Remove default margin */
+    font-size: 1.2rem; /* Title font size */
     color: rgb(67, 67, 67); /* Default color when not hovered */
     transition: color 0.3s; /* Smooth transition for color change */
 }
 
 .card:hover .title {
     color: rgb(255, 255, 255); /* Change color on hover */
-}
-
-/* Specific styles for subtitle */
-.subtitle {
-    font-size: 1.4rem; /* Subtitle font size */
-    color: rgb(53, 52, 52); /* Subtitle color when not hovered */
-    transition: color 0.3s; /* Smooth transition for color change */
 }
 
 .card:hover .subtitle {
@@ -63,7 +78,7 @@
 }
 
 .features li {
-    margin: 8px 0; /* Space between list items */
+    margin: 0px 0; /* Space between list items */
     position: relative; /* Position relative for the pseudo-element */
     padding-left: 20px; /* Add padding to make space for the tick mark */
     color: rgb(58, 58, 58); /* Default color for features text */
@@ -84,19 +99,19 @@
 
 /* Specific background images for each card */
 .card1 {
-    background-image: url('/public/images/features_cards/green_growth_card.png'); /* Background image for Card 1 */
+    background-image: url('/public/images/features_cards/green_infrastructure_card.png'); /* Background image for Card 1 */
 }
 
 .card1:hover {
-    background-image: url('/public/images/features_cards/hover_growth_card.png'); /* Background image on hover for Card 1 */
+    background-image: url('/public/images/features_cards/hover_infrastructure_card.png'); /* Background image on hover for Card 1 */
 }
 
 .card2 {
-    background-image: url('/public/images/features_cards/green_growth_card.png'); /* Background image for Card 2 */
+    background-image: url('/public/images/features_cards/green_mentor_card.png'); /* Background image for Card 2 */
 }
 
 .card2:hover {
-    background-image: url('/public/images/features_cards/hover_growth_card.png'); /* Background image on hover for Card 2 */
+    background-image: url('/public/images/features_cards/hover_mentor_card.png'); /* Background image on hover for Card 2 */
 }
 
 .card3 {
