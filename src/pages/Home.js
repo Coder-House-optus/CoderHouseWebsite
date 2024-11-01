@@ -46,13 +46,12 @@ export default function Home() {
         <div className="hero-right">
           <h2 className="hero-heading">
             <span className="text-white">BE A PART OF THE</span><br />
-            <span className="text-green">CODER HOUSE</span><br />
-            <span className="text-white">FAMILY!</span>
+            <span className="text-green">CODER HOUSE </span><span className="text-white2">FAMILY!</span><br />
           </h2>
           <form className="form">
             <input type="text" placeholder="Name" className="input-field" />
             <input type="email" placeholder="Email" className="input-field" />
-            <input type="tel" placeholder="Phone" className="input-field" />
+            <input type="phone" placeholder="Phone" className="input-field" />
             <select className="input-field">
               <option>Select A Program</option>
               <option value="web-dev">Web Development</option>

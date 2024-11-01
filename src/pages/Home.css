@@ -1,8 +1,27 @@
 /* Home.css */
 
 .home {
-  font-family: poppins, sans-serif;
+  font-family: poppins;
 }
+
+.hero-heading {
+  text-align: center;
+  font-family: 'Poppins';
+}
+
+.text-white {
+  color: white;
+}
+.text-white2 {
+  font-size: 1.3em;
+  color: white;
+}
+
+.text-green {
+  font-size: 1.3em;
+  color: #C5F678;
+}
+
 
 /* Hero Section */
 .hero {
@@ -13,14 +32,19 @@
   background-size: 1500px 820px;
   padding-bottom: 150px; /* Padding for the section */
   height: auto; /* Adjust height to fit the content */
+  
 }
 
 .hero-left {
-  width: 200px;
+  margin-left: 100px;
+  margin-top: 30px;
+  width: 0px;
   height: auto;
 }
 
+
 .hero-right {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
   flex: 1; /* Take up one part of the space */
   display: flex;
   flex-direction: column; /* Stack items vertically */
@@ -32,6 +56,69 @@
   max-width: 500px; /* Optional: limit width to match the form */
   margin: 0 auto; /* Center the grey area */
   margin-right: 90px;
+
+  /* Add shadow to the container box */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25); /* Adjust shadow values as desired */
+}
+
+/* Style for all input fields, select, and textarea */
+.hero-right input[type="text"],
+.hero-right input[type="email"],
+.hero-right input[type="phone"],
+.hero-right input[type="url"],
+.hero-right textarea {
+  border-radius: 8px;
+  padding: 14px;
+  margin: 5px 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Shadow for input and textarea */
+  border: none; /* Remove default border */
+  width: 100%; /* Full width */
+  font-size: 16px;
+  outline: none;
+}
+
+/* Additional styling specifically for the select dropdown */
+.hero-right select {
+  border-radius: 8px;
+  padding: 14px;
+  margin: 2px 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Shadow for select dropdown */
+  border: none;
+  width: 107%;
+  font-size: 16px;
+  outline: none;
+  background-color: #C6E894; /* White background for visibility */
+  color: #3C5C7B; /* Text color for contrast */
+  appearance: none; /* Remove default dropdown arrow for custom styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+}
+
+/* Optional: add custom arrow for the dropdown */
+.hero-right select::after {
+  content: "▼"; /* Custom dropdown arrow */
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #3C5C7B; /* Arrow color to match the form styling */
+  appearance: none; /* Remove default dropdown arrow for custom styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+}
+.hero-right select::after {
+  content: "▼"; /* Custom dropdown arrow */
+  position: absolute;
+  right: 15px;
+  top: 20%;
+  transform: translateY(-50%); /* Center vertically */
+  pointer-events: none;
+  color: #3C5C7B; /* Arrow color to match the form styling */
+  font-size: 1.2em; /* Increase font size for better visibility */
+  line-height: 1; /* Ensure no additional spacing around the arrow */
 }
 
 .hero-heading {
@@ -42,17 +129,19 @@
   display: flex;
   flex-direction: column; /* Stack form fields vertically */
   background-color: rgba(255, 255, 255, 0.8); /* Grey background with transparency */
-  padding: 20px 40px; /* Reduced padding for smaller form */
+  padding: 0px 30px; /* Reduced padding for smaller form */
   border-radius: 8px; /* Rounded corners */
   background-color: #3C5C7B;
   margin: 0 auto; /* Center the form */
   width: 80%; /* Set a maximum width for the form, adjust as needed */
   max-width: 400px; /* Set a max-width for the form to keep it compact */
+  padding-bottom: 60px;
+  margin-right: 60px;
 }
 
 .input-field {
   margin-bottom: 10px; /* Reduced space between input fields */
-  padding: 17px; /* Padding inside the input fields */
+
   border: 0px solid #ccc; /* Border color */
   border-radius: 5px; /* Rounded corners */
   background: linear-gradient(to right, rgba(255, 255, 255, 0.806), rgba(255, 255, 255, 0)); /* Gradient from white to transparent */
