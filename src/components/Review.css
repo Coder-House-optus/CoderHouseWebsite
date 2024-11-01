@@ -1,6 +1,6 @@
 .review-section {
     text-align: center;
-    padding: 70px 0;
+    padding: 10px 0;
     background-image: url('/public/images/Review.png'); /* Replace with the correct path to your image */
     background-size: cover; /* Ensures the background covers the entire section */
     background-position: center; /* Centers the background image */
@@ -8,6 +8,7 @@
     position: relative; /* Allows for overlaying of content on the background */
     z-index: 1;
     font-family: poppins;
+    margin-top:90px;
 }
 
 .review-section::before {
@@ -19,7 +20,6 @@
     height: 100%;
     z-index: -1; /* Puts the overlay behind the content */
 }
-
 
 .review-title {
     font-size: 2.7rem;
@@ -35,45 +35,49 @@
     background-color: #fff;
     border: 2px solid #FF7895; /* Pink border */
     border-radius: 10px;
-    padding: 50px;
-    width: 50%; /* Adjust the width to fit the design */
-    margin: 0 auto;
-    position: relative;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    
-}
-
-.review-card {
-    background-color: #fff;
-    border: 2px solid #FF7895; /* Pink border */
-    border-radius: 10px;
     padding: 40px;
-    width: 50%; /* Adjust the width to fit the design */
+    width: 500px; /* Fixed width */
+    height: 300px; /* Fixed height */
     margin: 0 auto;
     position: relative;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures that overflowing content is hidden */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between elements */
+    transition: box-shadow 0.3s ease; /* Smooth transition for the glow effect */
 }
 
-/* Styling for the quote icon container */
+/* Add hover effect for glowing */
+.review-card:hover {
+    box-shadow: 0 0 20px rgba(255, 120, 149, 0.7), /* Outer pink glow */
+                0 0 30px rgba(255, 120, 149, 0.5); /* More intense glow */
+}
+
 .quote-icon {
     position: absolute;
-    top: -40px; /* Adjust this value as needed */
-    left: -40px;
-    width: 80px;
-    height: 80px;
+    top: 20px; /* Adjust this value as needed */
+    left: 20px;
+    width: 100px;
+    height: 100px;
     background-color: #FF7895; /* Circle background color */
     border-radius: 50%; /* Makes the container circular */
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    font-family:open sans;
+    font-family: 'Playfair Display', serif; /* Apply the elegant font */
+    z-index: 2; /* Ensures the quote icon is above the review card */
 }
 
-/* Styling for the double quote inside the circle */
 .double-quote {
-    font-size: 5rem; /* Adjust size of the quote */
-    color: #fff; /* Inverted comma color */
+    font-size: 6rem; /* Adjust the size for a more prominent appearance */
+    color: #fff; /* Color of the quote */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), /* Subtle shadow for depth */
+                 0 0 5px rgba(255, 255, 255, 0.7); /* Soft glow effect */
+    line-height: 1; /* Ensures tight spacing for the quote */
+    margin-top: 5px; /* Adjust as needed for vertical centering */
+    margin-left: 2px; /* Adjust as needed for horizontal centering */
 }
 
 
@@ -101,13 +105,15 @@
     line-height: 1.5;
     color: #555;
     margin-top: 10px;
+    overflow: auto; /* Allows for scroll if text is too long */
 }
 
 .review-dots {
     margin-top: 20px;
 }
 
-.dot, .active-dot {
+.dot,
+.active-dot {
     display: inline-block;
     width: 10px;
     height: 10px;

@@ -1,4 +1,3 @@
-// Mentor.js
 import React, { useEffect, useState } from 'react';
 import './Mentor.css';
 
@@ -35,21 +34,29 @@ const Mentor = () => {
   }, [totalMentors]);
 
   return (
+    <section>
+      <div className="our-mentors">
+        <span>Our </span><span className="highlight">Mentors</span>
+      </div>
+
     <section className="mentors">
+      
       <div className="mentor-image">
-      <img 
-      src="/images/Mentor.png" // Replace with the correct path to your image
-      alt="Student on laptop"
-      className="hero-image"
-    />
+        <img 
+          src="/images/Mentor.png" // Replace with the correct path to your image
+          alt="Student on laptop"
+          className="hero-image"
+        />
       </div>
       <div className="mentor-display">
         {visibleMentors.map((index, position) => (
           <div key={index} className={`mentor-card ${position === 0 ? 'exit' : ''}`}>
-            {mentors[index]}
+            <div className="mentor-name-box">{mentors[index]}</div> {/* Name box */}
+            <div className="mentor-circle">M</div> {/* Circular element */}
           </div>
         ))}
       </div>
+    </section>
     </section>
   );
 };

@@ -1,66 +1,101 @@
 /* Mentor.css */
 .mentors {
+    margin-top: 100px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     padding: 40px;
     background-color: #ffffff;
     height: 50vh; /* Full height to center the content */
-    margin-bottom: 200px;
+    margin-bottom: 400px;
+
 }
 
 .mentor-image {
-    flex: 1;
-    max-width: 50%; /* Limit the width of the image */
+    margin-top: 0px;
+    max-width: 60%; /* Limit the width of the image */
+    z-index: 200px;
 }
 
 .mentor-image img {
     width: 50%;
     height: auto;
+    margin-left: -10px;
 }
 
 .mentor-display {
     flex: 1;
-    margin-top: 0px;
+    margin-top: 5px;
     position: relative;
-    height: 200px; /* Fixed height to ensure only 3 mentors are visible */
+    height: 100px; /* Fixed height to ensure only 3 mentors are visible */
+    margin-right: 200px;
 }
 
+.our-mentors {
+    margin-top: 100px;
+    font-size: 3em;
+    margin-left: 600px;
+}
+
+/* Mentor Card Styles */
 .mentor-card {
-    background-color: #4caf50; /* Green background for cards */
-    color: white; /* White text color */
-    padding: 20px;
-    margin: 100px 0; /* Vertical spacing between cards */
+    background-color: transparent; /* Transparent background */
+    color: #4caf50; /* Green text color */
+    padding: 10px;
+    margin: 0px 0; /* Reduced vertical spacing between cards */
     border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    position: absolute; /* Position absolutely within the display */
-    width: calc(100% - 50px); /* Full width minus margins */
+    box-shadow: none; /* Remove shadow */
+    display: flex; /* Use flex to align items */
+    justify-content: space-between; /* Space between name and circle */
+    align-items: center; /* Center items vertically */
+    position: relative;
+    width: fit-content; /* Adjust width to content */
     opacity: 0; /* Start hidden */
-    transform: translateY(1800px); /* Start slightly lower */
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(100px); /* Start slightly lower */
+    transition: opacity 1s ease, transform 7s ease; /* Smoother transition */
+}
+
+/* Name box styles */
+.mentor-name-box {
+    background-color: white; /* White background for the name box */
+    border: 2px solid #b4e197; /* Light green border */
+    border-radius: 20px 10px 20px 10px; /* Rounded corners with one side curved */
+    padding: 15px 45px; /* Adjust padding for space around text */
+    color: #4caf50; /* Green text color */
+    font-weight: bold; /* Bold text */
+    width: 200px;
+}
+
+/* Circular element styles */
+.mentor-circle {
+    width: 100px; /* Width of the circle */
+    height: 100px; /* Height of the circle */
+    background-color: #d3d3d3; /* Light grey background for the circle */
+    border-radius: 50%; /* Make it circular */
+    margin-left: -30px; /* Space between name box and circle */
 }
 
 /* Show cards with appropriate animations */
 .mentor-card:nth-child(1) {
     opacity: 1; /* First card fully visible */
-    transform: translateY(10px); /* Move to original position */
+    transform: translateY(0); /* Move to original position */
 }
 
 .mentor-card:nth-child(2) {
     opacity: 1; /* Second card fully visible */
-    transform: translateY(30px); /* Move to original position */
-    transition-delay: 0.5s; /* Delay for second card */
+    transform: translateY(0); /* Move to original position */
+    transition-delay: 1s; /* Delay for second card */
 }
 
 .mentor-card:nth-child(3) {
     opacity: 1; /* Third card fully visible */
-    transform: translateY(120px); /* Move to original position */
-    transition-delay: 1s; /* Delay for third card */
+    transform: translateY(0); /* Move to original position */
+    transition-delay: 2s; /* Delay for third card */
 }
 
 /* Exit animation for the first card */
 .mentor-card.exit {
     opacity: 0; /* Fade out */
-    transform: translateY(-70px); /* Move up */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+    transform: translateY(-30px); /* Move up slightly */
+    transition: opacity 3s ease, transform 1s ease; /* Smooth transition */
 }
