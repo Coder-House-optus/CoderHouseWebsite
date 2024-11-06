@@ -1,17 +1,28 @@
+
+
 .footer {
-  background: linear-gradient(135deg, #2c3e50 50%, #3d5569 50%);
+  background-image: url('/public/images/Footerbg.png');
   color: #fff;
-  padding: 40px 20px;
+  padding: 40px 0px;
   text-align: center;
   position: relative;
+  
+  /* Set the desired height and width */
+  height: 440px; /* Adjust as needed */
+  width: 100%;   /* 100% width to span across the page */
+  
+  /* Optional: If you want to ensure the background image covers the whole area */
+  background-size: cover;
+  background-position: center;
 }
 
-
 .footer-container {
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
+  height: 350px;
 }
 
 
@@ -20,19 +31,21 @@
   font-size: 20px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 30px;
   color: #333;
   
 }
 
 .footer-links ul {
+  
   list-style: none;
-  padding: 0;
+  padding: 30px;
 }
 
 .footer-links li {
+  
   display: inline;
-  margin: 0 10px;
+  margin: 0 30px;
 }
 
 .footer-links a {
@@ -90,4 +103,50 @@
   right: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+}
+
+
+.footer-social {
+  margin-top: 20px;
+}
+
+.footer-social h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between icons */
+}
+
+.social-icons a {
+  color: #526E8A; /* Default icon color */
+  font-size: 1.5em; /* Icon size */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%; /* Makes icons circular */
+  background-color: #ffffff; /* Background color of icons */
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #fff !important; /* Ensure icon color on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.social-icons a.facebook:hover {
+  background-color: #3b5998 !important; /* Facebook blue */
+}
+
+.social-icons a.instagram:hover {
+  background-color: #E1306C !important; /* Instagram pink */
+}
+
+.social-icons a.linkedin:hover {
+  background-color: #0077b5 !important; /* LinkedIn blue */
 }

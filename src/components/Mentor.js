@@ -39,24 +39,28 @@ const Mentor = () => {
         <span>Our </span><span className="highlight">Mentors</span>
       </div>
 
-    <section className="mentors">
-      
-      <div className="mentor-image">
-        <img 
-          src="/images/Mentor.png" // Replace with the correct path to your image
-          alt="Student on laptop"
-          className="hero-image"
-        />
+      <section className="mentors">
+        <div className="mentor-image">
+          <img 
+            src="/images/Mentor.png" // Replace with the correct path to your image
+            alt="Student on laptop"
+            className="hero-image"
+          />
+        </div>
+        
+        <div className="mentor-display">
+  {visibleMentors.map((index, position) => (
+    <div key={index} className={`mentor-card ${position === 0 ? 'exit' : ''}`}>
+      <div className="mentor-details">
+        <div className="mentor-name-box">{mentors[index]}</div> {/* Name box */}
+        <div className="mentor-hello-box">Hello</div> {/* Hello box directly below the name */}
       </div>
-      <div className="mentor-display">
-        {visibleMentors.map((index, position) => (
-          <div key={index} className={`mentor-card ${position === 0 ? 'exit' : ''}`}>
-            <div className="mentor-name-box">{mentors[index]}</div> {/* Name box */}
-            <div className="mentor-circle">M</div> {/* Circular element */}
-          </div>
-        ))}
-      </div>
-    </section>
+      <div className="mentor-circle">M</div> {/* Circular element */}
+    </div>
+  ))}
+</div>
+
+      </section>
     </section>
   );
 };

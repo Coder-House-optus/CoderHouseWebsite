@@ -406,17 +406,94 @@
   border-bottom: none; /* Remove bottom border from the last item */
 }
 
-.pricingTable-firstTable_table__button {
-  padding: 20px;
-  background-color: #3C5C7B;
-  border-radius: 5px;
-  color: white;
-  border: none;
-  font-size: 1.3em;
-  cursor: pointer;
-  transition: all 0.3s ease; /* Smooth transition on hover */
+
+
+.White {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px;
+  background-color: #ffffff;
+
 }
 
-.pricingTable-firstTable_table__button:hover {
-  background-color: #45a049; /* Darker shade on hover for button */
+.item {
+  display: flex;
+  align-items: center; /* Aligns image and text vertically */
+  text-align: left;
+  margin-right: 90px;
 }
+
+.item img {
+  width: 60px; /* Adjust as needed */
+  height: auto;
+  margin-right: 10px; /* Adds space between image and text */
+}
+
+.text {
+  width: 10px;
+  font-size: 20px;
+  color: #333;
+  font-weight:bold;
+}
+
+
+
+/* Home.css */
+
+/* Updated Glass Effect for Program Cards */
+
+.programs-container {
+  text-align: center;
+  padding: 50px 20px;
+  background-image: url('/public/images/planCard.png'); /* Background image for the section */
+  background-size: cover;
+  background-position: center;
+}
+
+.programs-heading {
+  font-size: 3em;
+  color: rgb(250, 244, 244);
+  margin-bottom: 20px;
+}
+
+.program-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .program-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.program-card {
+  background: rgba(255, 255, 255, 0.15); /* Transparent white background */
+  backdrop-filter: blur(10px); /* Adds the frosted glass blur */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Soft white border */
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  color: rgb(250, 244, 244); /* Text color matches the glass style */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.program-card h3 {
+  font-size: 1.2em;
+  color: rgb(250, 244, 244); /* Soft, light color to resemble writing on glass */
+}
+
+.program-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+}
+
+
+

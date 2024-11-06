@@ -4,8 +4,8 @@ import './Home.css';
 import Footer from '../components/Footer';
 import ReviewSection from '../components/Review';
 import Mentor from '../components/Mentor';
-import Card from '../components/Card'
-
+import Card from '../components/Card';
+import Plan from '../components/Plan';
 
 // Sample review data
 const reviewsData = [
@@ -48,125 +48,52 @@ export default function Home() {
             <span className="text-white">BE A PART OF THE</span><br />
             <span className="text-green">CODER HOUSE </span><span className="text-white2">FAMILY!</span><br />
           </h2>
-          <form className="form">
-            <input type="text" placeholder="Name" className="input-field" />
-            <input type="email" placeholder="Email" className="input-field" />
-            <input type="phone" placeholder="Phone" className="input-field" />
-            <select className="input-field">
-              <option>Select A Program</option>
+          <form className="form" action="YOUR_DEPLOYED_WEB_APP_URL" method="post">
+            <input type="text" name="Name" placeholder="Name" className="input-field" required />
+            <input type="email" name="Email" placeholder="Email" className="input-field" required />
+            <input type="text" name="Phone" placeholder="Phone" className="input-field" required />
+            <select name="Program" className="input-field" required>
+              <option value="">Select A Program</option>
               <option value="web-dev">Web Development</option>
               <option value="ml">Machine Learning</option>
               <option value="ai">Artificial Intelligence</option>
             </select>
-            <input type="url" placeholder="LinkedIn Profile URL" className="input-field" />
+            <input type="url" name="LinkedIn" placeholder="LinkedIn Profile URL" className="input-field" />
             <button type="submit" className="callback-btn">Request Callback</button>
           </form>
         </div>
       </section>
-      <div className='White'>
+      
+      <div className="White">
+  <div className="item">
+    <img src="/images/arrow.png" alt="Arrow Image" />
+    <div className="text">147% Avgerage Hike</div>
+  </div>
+  <div className="item">
+    <img src="/images/Career.png" alt="Career Image" />
+    <div className="text">1000+ Career Transformed </div>
+  </div>
+  <div className="item">
+    <img src="/images/teacher.png" alt="Teacher Image" />
+    <div className="text">50+ Experienced Mentor</div>
+  </div>
+</div>
 
-      </div>
 
       {/* Features Section */}
       <Card />
 
+      {/* Plan Section - Positioned Above Review Section */}
+      <Plan />
 
-
-      <section className="pricingTable">
-        <div className="pricingTable-title">
-          Our <span className="programs">PROGRAMS</span>
-        </div>
-
-
-        <ul className="pricingTable-firstTable">
-          <li className="pricingTable-firstTable_table">
-            <div className="pricingTable-firstTable_table__header">Basic</div>
-            <div className="pricingTable-firstTable_table__pricing">
-              <span>$</span>9<span>/mo</span>
-            </div>
-            <ul className="pricingTable-firstTable_table__options">
-              <li>Feature 1</li>
-              <li>Feature 2</li>
-              <li>Feature 3</li>
-            </ul>
-            <div className="pricingTable-firstTable_table__buttons">
-              <button className="pricingTable-firstTable_table__button pricingTable-firstTable_table__viewProgram">
-                <i className="fa fa-eye"></i> View Program
-              </button>
-              <button className="pricingTable-firstTable_table__button">
-                <i className="fa fa-download"></i> Brochure
-              </button>
-            </div>
-          </li>
-
-          <li className="pricingTable-firstTable_table">
-            <div className="pricingTable-firstTable_table__header">Premium</div>
-            <div className="pricingTable-firstTable_table__pricing">
-              <span>$</span>29<span>/mo</span>
-            </div>
-            <ul className="pricingTable-firstTable_table__options">
-              <li>Feature 1</li>
-              <li>Feature 2</li>
-              <li>Feature 3</li>
-            </ul>
-            <div className="pricingTable-firstTable_table__buttons">
-              <button className="pricingTable-firstTable_table__button pricingTable-firstTable_table__viewProgram">
-                <i className="fa fa-eye"></i> View Program
-              </button>
-              <button className="pricingTable-firstTable_table__button">
-                <i className="fa fa-download"></i> Brochure
-              </button>
-            </div>
-          </li>
-
-          <li className="pricingTable-firstTable_table">
-            <div className="pricingTable-firstTable_table__header">Pro</div>
-            <div className="pricingTable-firstTable_table__pricing">
-              <span>$</span>49<span>/mo</span>
-            </div>
-            <ul className="pricingTable-firstTable_table__options">
-              <li>Feature 1</li>
-              <li>Feature 2</li>
-              <li>Feature 3</li>
-            </ul>
-            <div className="pricingTable-firstTable_table__buttons">
-              <button className="pricingTable-firstTable_table__button pricingTable-firstTable_table__viewProgram">
-                <i className="fa fa-eye"></i> View Program
-              </button>
-              <button className="pricingTable-firstTable_table__button">
-                <i className="fa fa-download"></i> Brochure
-              </button>
-            </div>
-          </li>
-        </ul>
-      </section>
-
-
-
-
+      {/* Review Section */}
       <ReviewSection />
 
       {/* Mentors Section */}
-      {/* <section className="mentors">
-        <h2>Our Mentors</h2>
-        <div className="mentor-grid">
-          <div className="mentor-card">
-            <img src="/public/images/mentor1.png" alt="Mentor 1" />
-            <h4>Mentor Name 1</h4>
-            <p>Specialization 1</p>
-          </div>
-          <div className="mentor-card">
-            <img src="/public/images/mentor2.png" alt="Mentor 2" />
-            <h4>Mentor Name 2</h4>
-            <p>Specialization 2</p>
-          </div>
-
-        </div>
-      </section> */}
       <Mentor />
 
+      {/* Footer */}
       <Footer />
-
     </div>
   );
 }
