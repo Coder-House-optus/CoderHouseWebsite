@@ -6,22 +6,107 @@ import Footer from '../components/Footer';
 const CampusProgram = () => {
   // State for programs and image index
   const technicalPrograms = [
-    { name: "C Programming", symbol: "💻", description: "Get hands-on with the fundamentals of C programming.", duration: "4 months", cost: "$600" },
-    { name: "C++ Programming", symbol: "💻", description: "Master C++ programming with object-oriented design, data structures, and algorithms.", duration: "6 months", cost: "$700" },
-    { name: "Java Programming", symbol: "☕", description: "Learn Java for software development, covering OOP concepts and data structures.", duration: "5 months", cost: "$750" },
-    { name: "Python Programming", symbol: "🐍", description: "Get started with Python for versatile applications in data science and web development.", duration: "3 months", cost: "$600" },
-    { name: "Full Stack Development", symbol: "🌐", description: "Learn front-end and back-end technologies for building web applications.", duration: "6 months", cost: "$850" },
-    { name: "Cybersecurity", symbol: "🔐", description: "Understand the principles of security and protect systems from cyber threats.", duration: "5 months", cost: "$950" },
-    { name: "Machine Learning", symbol: "🤖", description: "Explore machine learning concepts with hands-on projects using Python.", duration: "4 months", cost: "$900" }
+    { 
+      name: "C Programming", 
+      symbol: "💻", 
+      description: "Get hands-on with the fundamentals of C programming.", 
+      duration: "4 months", 
+      cost: "$600", 
+      image: "/images/c.png"  // Local image path
+    },
+    { 
+      name: "C++ Programming", 
+      symbol: "💻", 
+      description: "Master C++ programming with object-oriented design, data structures, and algorithms.", 
+      duration: "6 months", 
+      cost: "$700", 
+      image: "/images/c.png"  // Local image path
+    },
+    { 
+      name: "Java Programming", 
+      symbol: "☕", 
+      description: "Learn Java for software development, covering OOP concepts and data structures.", 
+      duration: "5 months", 
+      cost: "$750", 
+      image: "/images/java.png"  // External image URL
+    },
+    { 
+      name: "Python Programming", 
+      symbol: "🐍", 
+      description: "Get started with Python for versatile applications in data science and web development.", 
+      duration: "3 months", 
+      cost: "$600", 
+      image: "/images/Pythoncard.png"  // Local image path
+    },
+    { 
+      name: "Full Stack Development", 
+      symbol: "🌐", 
+      description: "Learn front-end and back-end technologies for building web applications.", 
+      duration: "6 months", 
+      cost: "$850", 
+      image: "/images/Fullstackcard.png"  // Local image path
+    },
+    { 
+      name: "Cybersecurity", 
+      symbol: "🔐", 
+      description: "Understand the principles of security and protect systems from cyber threats.", 
+      duration: "5 months", 
+      cost: "$950", 
+      image: "/images/Cybersecuritycard.png"  // External image URL
+    },
+    { 
+      name: "Machine Learning", 
+      symbol: "🤖", 
+      description: "Explore machine learning concepts with hands-on projects using Python.", 
+      duration: "4 months", 
+      cost: "$900", 
+      image: "/images/MLcard.png"  // Local image path
+    }
   ];
-
+  
   const cognitivePrograms = [
-    { name: "Aptitude", symbol: "📊", description: "Enhance your logical reasoning and mathematical skills.", duration: "2 months", cost: "$300" },
-    { name: "Reasoning", symbol: "🧠", description: "Build strong reasoning skills for analytical and critical thinking.", duration: "2 months", cost: "$300" },
-    { name: "Engineering Basics", symbol: "📐", description: "Get a solid foundation in engineering principles and problem-solving.", duration: "3 months", cost: "$500" },
-    { name: "Personality Development", symbol: "💼", description: "Improve your communication, leadership, and soft skills.", duration: "2 months", cost: "$400" },
-    { name: "GDPI (Group Discussion & Personal Interview)", symbol: "🗣️", description: "Develop essential skills for group discussions and interviews.", duration: "1 month", cost: "$250" }
+    { 
+      name: "Aptitude", 
+      symbol: "📊", 
+      description: "Enhance your logical reasoning and mathematical skills.", 
+      duration: "2 months", 
+      cost: "$300", 
+      image: "/images/cognitive/aptitude.jpg"  // Local image path
+    },
+    { 
+      name: "Reasoning", 
+      symbol: "🧠", 
+      description: "Build strong reasoning skills for analytical and critical thinking.", 
+      duration: "2 months", 
+      cost: "$300", 
+      image: "https://example.com/images/reasoning.jpg"  // External image URL
+    },
+    { 
+      name: "Engineering Basics", 
+      symbol: "📐", 
+      description: "Get a solid foundation in engineering principles and problem-solving.", 
+      duration: "3 months", 
+      cost: "$500", 
+      image: "/images/cognitive/engineering_basics.jpg"  // Local image path
+    },
+    { 
+      name: "Personality Development", 
+      symbol: "💼", 
+      description: "Improve your communication, leadership, and soft skills.", 
+      duration: "2 months", 
+      cost: "$400", 
+      image: "https://cdn.example.com/images/personality_development.jpg"  // External image URL
+    },
+    { 
+      name: "GDPI (Group Discussion & Personal Interview)", 
+      symbol: "🗣️", 
+      description: "Develop essential skills for group discussions and interviews.", 
+      duration: "1 month", 
+      cost: "$250", 
+      image: "/images/cognitive/gdpi.jpg"  // Local image path
+    }
   ];
+  
 
   const [currentProgramIndex, setCurrentProgramIndex] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -71,6 +156,10 @@ const CampusProgram = () => {
     setQuery('');
   };
 
+  const selectedProgram = currentProgramIndex < technicalPrograms.length
+    ? technicalPrograms[currentProgramIndex]
+    : cognitivePrograms[currentProgramIndex - technicalPrograms.length];
+
   return (
     <section className="programs">
       <Navigation />
@@ -117,29 +206,18 @@ const CampusProgram = () => {
       {/* Program Details Section */}
       {currentProgramIndex < technicalPrograms.length + cognitivePrograms.length && (
         <div className="program-details-container">
+          <div className="program-image">
+            <img
+              src={selectedProgram.image}
+              alt={selectedProgram.name}
+              className="program-image-left"
+            />
+          </div>
           <div className="program-details">
-            <h3 className="program-name-details">
-              {currentProgramIndex < technicalPrograms.length
-                ? technicalPrograms[currentProgramIndex].name
-                : cognitivePrograms[currentProgramIndex - technicalPrograms.length].name}
-            </h3>
-            <p className="program-description">
-              {currentProgramIndex < technicalPrograms.length
-                ? technicalPrograms[currentProgramIndex].description
-                : cognitivePrograms[currentProgramIndex - technicalPrograms.length].description}
-            </p>
-            <p>
-              <strong>Duration:</strong>{" "}
-              {currentProgramIndex < technicalPrograms.length
-                ? technicalPrograms[currentProgramIndex].duration
-                : cognitivePrograms[currentProgramIndex - technicalPrograms.length].duration}
-            </p>
-            <p>
-              <strong>Cost:</strong>{" "}
-              {currentProgramIndex < technicalPrograms.length
-                ? technicalPrograms[currentProgramIndex].cost
-                : cognitivePrograms[currentProgramIndex - technicalPrograms.length].cost}
-            </p>
+            <h3 className="program-name-details">{selectedProgram.name}</h3>
+            <p className="program-description">{selectedProgram.description}</p>
+            <p><strong>Duration:</strong> {selectedProgram.duration}</p>
+            <p><strong>Cost:</strong> {selectedProgram.cost}</p>
           </div>
         </div>
       )}
@@ -152,59 +230,57 @@ const CampusProgram = () => {
       </div>
 
       {/* Enquiry Form Section */}
-                {/* Enquiry Form Section */}
-<div className="enquiry-container">
-  <h3 className="enquiry-heading">Get in Touch</h3>
-  <div className="enquiry-form-container glass-morph">
-    <form onSubmit={handleFormSubmit}>
-      <div className="form-group">
-        <label>Name:</label>
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
+      <div className="enquiry-container">
+        <h3 className="enquiry-heading">Get in Touch</h3>
+        <div className="enquiry-form-container glass-morph">
+          <form onSubmit={handleFormSubmit}>
+            <div className="form-group">
+              <label>Name:</label>
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label>Phone:</label>
+              <input
+                type="tel"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label>Course:</label>
+              <input
+                type="text"
+                value={course}
+                onChange={(e) => setCourse(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label>Mode:</label>
+              <input
+                type="text"
+                value={mode}
+                onChange={(e) => setMode(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label>Query:</label>
+              <textarea
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+              ></textarea>
+            </div>
+            <button type="submit" className="submit-button">Submit</button>
+          </form>
+        </div>
       </div>
-      <div className="form-group">
-        <label>Phone:</label>
-        <input
-          type="tel"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          required
-        />
-      </div>
-      <div className="form-group">
-        <label>Course:</label>
-        <input
-          type="text"
-          value={course}
-          onChange={(e) => setCourse(e.target.value)}
-          required
-        />
-      </div>
-      <div className="form-group">
-        <label>Mode:</label>
-        <select value={mode} onChange={(e) => setMode(e.target.value)} required>
-          <option value="">Select Mode</option>
-          <option value="Online">Online</option>
-          <option value="Offline">Offline</option>
-        </select>
-      </div>
-      <div className="form-group">
-        <label>Query:</label>
-        <textarea
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          required
-        />
-      </div>
-      <button type="submit" className="submit-button">Submit</button>
-    </form>
-  </div>
-</div>
-
 
       <Footer />
     </section>

@@ -67,8 +67,10 @@ const CollegeProgram = () => {
         <div className="greeting-container">
           {[120, 90, 60].map((hours) => (
             <div key={hours} className="greeting-card">
-              {hours} HOURS <span role="img" aria-label="clock">🕒</span>
-              <br />
+              <div className="hours-line">
+                <span className="hours-text">{hours} HOURS</span>
+                <span role="img" aria-label="clock" className="clock-emoji">🕒</span>
+              </div>
               <span className="program-text">PROGRAM</span>
               <div className="card-footer">
                 <button className="view-btn">View Program</button>
@@ -79,28 +81,25 @@ const CollegeProgram = () => {
       </section>
 
       {/* Our Moments Section */}
-
-<section className="moments-section">
-  <h2 className="section-title">
-    Our <span className="highlight">Moments</span>
-  </h2>
-  <div className="moments-content">
-    <div className="description">
-      <h3>Interview Session</h3>
-      <p>{moments[activeIndex].description}</p>
-    </div>
-    <div className="images">
-      <img src={moments[activeIndex].img1} alt={`Moment ${activeIndex + 1} part 1`} className="moment-image" />
-      <img src={moments[activeIndex].img2} alt={`Moment ${activeIndex + 1} part 2`} className="moment-image" />
-    </div>
-  </div>
-  <div className="navigation-arrows">
-    <button onClick={handlePrev} className="nav-button" aria-label="Previous Moment">❮</button>
-    <button onClick={handleNext} className="nav-button" aria-label="Next Moment">❯</button>
-  </div>
-</section>
-
-
+      <section className="moments-section">
+        <h2 className="section-title">
+          Our <span className="highlight">Moments</span>
+        </h2>
+        <div className="moments-content">
+          <div className="description">
+            <h3>Interview Session</h3>
+            <p>{moments[activeIndex].description}</p>
+          </div>
+          <div className="images">
+            <img src={moments[activeIndex].img1} alt={`Moment ${activeIndex + 1} part 1`} className="moment-image" />
+            <img src={moments[activeIndex].img2} alt={`Moment ${activeIndex + 1} part 2`} className="moment-image" />
+          </div>
+        </div>
+        <div className="navigation-arrows">
+          <button onClick={handlePrev} className="nav-button" aria-label="Previous Moment">❮</button>
+          <button onClick={handleNext} className="nav-button" aria-label="Next Moment">❯</button>
+        </div>
+      </section>
 
       {/* Associations Section */}
       <section className="associations-section">
@@ -114,8 +113,7 @@ const CollegeProgram = () => {
 
       {/* Testimonial Section */}
       <section className="testimonial-section">
-
-        <h2>Words of <span className="highlight">HOD</span></h2>
+        <div className="headname">Words of <span className="highlight">HOD</span></div>
         <div className="testimonial-card">
           <div className="vertical-line"></div>
           <div className="testimonial-content">
@@ -134,11 +132,12 @@ const CollegeProgram = () => {
           </div>
           <div className="quote-sign">“</div>
         </div>
-        <div className="testimonial-navigation-arrows">
+        <div className="testimonial-navigation">
           <button onClick={handleTestimonialPrev} aria-label="Previous Testimonial">❮</button>
           <button onClick={handleTestimonialNext} aria-label="Next Testimonial">❯</button>
         </div>
       </section>
+
       <Footer />
     </div>
   );
