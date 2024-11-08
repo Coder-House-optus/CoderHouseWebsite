@@ -1,17 +1,4 @@
-/* Program Cards Styling */
-.program-cards {
-  display: grid;
-  margin-top: 30px;
-  grid-template-columns: repeat(6, 1fr);
-  /* 6 cards per row */
-  gap: 15px;
-  margin-top: 20px;
-  padding: 0 0px;
-  font-family: poppins;
-}
-
-
-
+/* Program Card */
 .program-card {
   background-color: #526E8A;
   border-radius: 8px;
@@ -34,11 +21,40 @@
   font-size: 0.9rem;
 }
 
+/* Program Card Container */
+.program-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
 
+.program-card {
+  flex: 1 1 calc(5% - 1rem); /* Four cards per row */
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #82A2C1;
+  transition: transform 0.3s;
+}
 
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .program-card {
+    flex: 1 1 calc(50% - 1rem); /* Two cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .program-card {
+    flex: 1 1 100%; /* One card per row on small screens */
+  }
+}
+
+/* Program Image */
 .program-image {
   width: 40%;
-  /* Left side for the image */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,9 +65,9 @@
   border-radius: 8px;
 }
 
+/* Program Details */
 .program-details {
   width: 60%;
-  /* Right side for the text */
   color: #333;
   padding-left: 20px;
   display: flex;
@@ -71,19 +87,16 @@
 /* Responsiveness */
 @media (max-width: 1000px) {
   .program-cards {
-    grid-template-columns: repeat(4, 1fr);
-    /* 4 columns on medium screens */
+    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
   }
 
   .program-details-container {
     flex-direction: column;
-    /* Stack image and text on smaller screens */
   }
 
   .program-image,
   .program-details {
     width: 100%;
-    /* Full width for both sections */
   }
 
   .program-image img {
@@ -91,287 +104,114 @@
   }
 }
 
-@media (max-width: 768px) {
-  .program-cards {
-    grid-template-columns: repeat(2, 1fr);
-    /* 2 columns on smaller screens */
-  }
-}
-
 @media (max-width: 480px) {
   .program-cards {
-    grid-template-columns: 1fr;
-    /* 1 column on mobile devices */
+    grid-template-columns: 1fr; /* One column on mobile */
   }
 }
 
-
-
-/* Right Section (Program Details) */
-.program-details {
-  background-color: #d9d9d9;
-  /* Grey background */
-  padding: 20px;
-  margin-top: 20px;
-  width: 300px;
-  /* Adjust the width as needed */
-  text-align: left;
-  position: relative;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 700px;
-}
-
-.program-name-details {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.program-startDate-details {
-  font-size: 14px;
-  margin-bottom: 10px;
-  color: #666;
-}
-
-.program-description {
-  font-size: 16px;
-  color: #777;
-  margin-bottom: 15px;
-}
-
-.view-more {
-  background-color: #5d615d;
-  /* Dark green stripe */
-  padding: 10px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-
-.view-more-button {
-  background-color: #fff;
-  color: #000000;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.view-more-button:hover {
-  background-color: #ffffff;
-  /* Slightly darker on hover */
-  color: rgb(9, 6, 6);
-}
-
-
-
-/* Existing styles here... */
-
-.gallery {
-  position: relative;
-  width: 300px;
-  /* Keep the width of the gallery */
-  height: 200px;
-  /* Keep the height of the gallery */
-  margin: 20px auto;
-  /* Center the gallery */
-  transform-style: preserve-3d;
-  /* Preserve 3D transformations */
-  animation: rotate 35s linear infinite;
-  /* Continuous rotation */
-}
 
 @keyframes rotate {
   from {
     transform: perspective(1200px) rotateY(0deg);
-    /* Start rotation */
   }
-
   to {
     transform: perspective(1200px) rotateY(360deg);
-    /* End rotation */
   }
 }
 
 .gallery span {
   position: absolute;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   transform-origin: center;
-  /* Set rotation center */
   opacity: 0;
-  /* Start invisible */
   transition: opacity 0.5s ease-in-out;
-  /* Smooth transition */
 }
 
 .gallery span:nth-child(1) {
   transform: rotateY(0deg) translateZ(100px);
-  /* First image position, closer to center */
   opacity: 1;
-  /* Make visible */
 }
 
-.gallery span:nth-child(2) {
-  transform: rotateY(45deg) translateZ(100px);
-  /* Second image position */
-}
-
-.gallery span:nth-child(3) {
-  transform: rotateY(90deg) translateZ(100px);
-  /* Third image position */
-}
-
-.gallery span:nth-child(4) {
-  transform: rotateY(135deg) translateZ(100px);
-  /* Fourth image position */
-}
-
-.gallery span:nth-child(5) {
-  transform: rotateY(180deg) translateZ(100px);
-  /* Fifth image position */
-}
-
-.gallery span:nth-child(6) {
-  transform: rotateY(225deg) translateZ(100px);
-  /* Sixth image position */
-}
-
-.gallery span:nth-child(7) {
-  transform: rotateY(270deg) translateZ(100px);
-  /* Seventh image position */
-}
-
-.gallery span:nth-child(8) {
-  transform: rotateY(315deg) translateZ(100px);
-  /* Eighth image position */
-}
-
-
-.slideshow-container {
-  position: relative; /* Allow positioning of child elements */
-  text-align: center; /* Center image and button */
-}
-
-.slideshow-image {
-  width: 100%; /* Adjust the image width as needed */
-  max-width: 600px; /* Set a max width for responsiveness */
-  height: auto; /* Maintain aspect ratio */
-  margin: 0 auto; /* Center the image */
-}
-
-.slideshow-button {
-  margin-top: 20px; /* Adjust negative margin to pull the button closer */
-  padding: 10px 20px; /* Button padding */
-  background-color: #4CAF50; /* Green background */
-  color: white; /* White text color */
-  border: none; /* No border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s; /* Smooth background transition */
-}
-
-.slideshow-button:hover {
-  background-color: #45a049; /* Darker green on hover */
-}
-
-
-.arrow-button:hover {
-  background-color: rgba(255, 255, 255, 1);
-}
-
-.arrow-button:nth-child(1) {
-  left: 10px; /* Positioning for the left arrow */
-}
-
-.arrow-button:nth-child(3) {
-  right: 10px; /* Positioning for the right arrow */
-}
-
-
+/* Slideshow Container */
 .slideshow-container {
   display: flex;
-  align-items: center; /* Center align the buttons and image vertically */
-  justify-content: center; /* Center align the items horizontally */
-  position: relative; /* Relative positioning for absolute button positioning */
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .slideshow-image {
-  max-width: 30%; /* Adjust image width as needed */
-  height: auto; /* Maintain aspect ratio */
-  margin: 20px 10px; /* Add some margin for spacing */
+  max-width: 50%;
+  height: auto;
+  margin: 100px 10px;
 }
 
 .arrow-button {
-  background-color: green; /* Change button background to green */
-  color: white; /* Change text color to white for better contrast */
-  border: none; /* Remove default border */
-  padding: 10px; /* Add padding for better size */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  font-size: 24px; /* Adjust font size for visibility */
-  border-radius: 5px; /* Add some rounding to the corners */
-  margin: 0 5px; /* Reduce margin to bring buttons closer */
-  transition: background-color 0.3s; /* Smooth background color transition */
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 5px;
+  margin: 0 5px;
+  transition: background-color 0.3s;
 }
 
 .arrow-button:hover {
-  background-color: darkgreen; /* Darker shade on hover */
+  background-color: darkgreen;
 }
 
-
-
-
-
-
-
+/* Enquiry Section */
 .enquiry-container {
   text-align: center;
-  margin: 2rem 0; /* Adjust margin as necessary */
+  margin: 2rem 0;
 }
 
 .enquiry-heading {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #333; /* Heading color */
+  color: #333;
 }
 
 .enquiry-form-container {
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  max-width: 500px; /* Limit form width */
+  margin: 40px auto; /* Center the form */
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  padding: 2rem;
-  backdrop-filter: blur(10px); /* Glass morph effect */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
-  color: white; /* Text color inside form */
+  padding: 1.5rem; /* Reduce padding for compactness */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  color: white;
+  margin-bottom: 400px;
 }
 
 .form-group {
-  margin-bottom: 1rem; /* Space between form fields */
+  margin-bottom: 1rem;
 }
 
 label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #ccc; /* Label color */
+  font-size: 0.9rem;
+  color: #ccc;
 }
 
 input, select, textarea {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.6rem;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.2); /* Input background */
-  color: #333; /* Input text color */
+  background: rgba(255, 255, 255, 0.15);
+  color: #333;
+  font-size: 0.9rem;
 }
 
 input:focus, select:focus, textarea:focus {
-  border-color: #76b0f9; /* Border color on focus */
+  border-color: #76b0f9;
+  outline: none;
 }
 
 .submit-button {
@@ -381,21 +221,21 @@ input:focus, select:focus, textarea:focus {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
 }
 
 .submit-button:hover {
-  background: #6a9edb; /* Darker shade on hover */
+  background: #6a9edb;
+}
+
+.enquiry-heading{
+  font-family: poppins;
+  color: #c3e47d;
 }
 
 
-.programs-subtitle {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #666;
-  text-align: center;
-  margin-bottom: 5px;
-}
-
+/* Programs Title */
 .programs-title {
   font-size: 2rem;
   font-weight: 700;
@@ -405,8 +245,7 @@ input:focus, select:focus, textarea:focus {
   gap: 0.5rem;
   color: #333;
   letter-spacing: 1px;
-  margin-bottom: 20px;
-  position: relative;
+  margin-bottom: 0px;
 }
 
 .text-black {
@@ -416,32 +255,27 @@ input:focus, select:focus, textarea:focus {
 }
 
 .text-green {
-  color: #c3e47d;; /* Green color */
-  position: relative;
+  color: #c3e47d;
 }
 
-
-
-
+/* Program Details Container */
 .program-details-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 50px;
   padding: 20px;
   border-radius: 8px;
   background-color: #ffffff;
-  width: 1200px;
-  margin-left: 200px;
-}
-
-.program-details-image {
-  flex: 1;
-  max-width: 20%;
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
 }
 
 .program-image {
-  width: 30%;
+  width: 40%;
   height: auto;
   border-radius: 8px;
 }
@@ -467,42 +301,81 @@ input:focus, select:focus, textarea:focus {
 
 
 
-.program-section {
-  margin-bottom: 2rem;
-
-}
-
-.program-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  width:1300px;
-}
-
-.program-card {
-  flex: 1 1 calc(15% - 1rem); /* Four cards per row */
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+/* Enquiry Section */
+.enquiry-container {
   text-align: center;
-  background-color: #f9f9f9;
+  margin: 2rem 0;
+
+}
+
+.enquiry-heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+
+}
+
+.enquiry-form-container {
+  max-width: 900px;
+  margin: 0 auto;
+  height:500px;
+  background: #547698; /* Grey background */
+  border-radius: 0px; /* Sharp corners */
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Subtle shadow for elevation */
+  color: black;
+  margin-bottom: 400px;
+  margin-top:100px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+input, select, textarea {
+  width: 50%; /* Center and keep fields away from container edges */
+  padding: 1rem;
+  border: none;
+  border-radius: 10px; /* Rounded corners for inputs */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.59), rgba(255, 255, 255, 0)); /* Gradient from white to transparent */
+  color: white; /* White text color */
+  font-size: 1rem;
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.2); /* Inner shadow for depth */
+  margin: 12px auto; /* Center the input fields within the container */
+  display: block; /* Ensures inputs take full width and stay centered */
+}
+select{
+  width: 54%; 
+}
+input::placeholder, select::placeholder, textarea::placeholder {
+  color: white; /* White placeholder text */
+  opacity: 0.7; /* Slightly transparent for placeholder */
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid #CFFB8D; /* Green outline on focus */
+}
+
+.submit-btn {
+  background: #76b0f9;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: transform 0.3s;
+  font-size: 1rem;
+  transition: background 0.3s;
+  width: 55%; /* Keep button centered and aligned with fields */
+  margin: 70px auto;
+  display: block;
+
 }
 
-.program-card:hover {
-  transform: scale(1.05);
+.submit-button:hover {
+  background: #6a9edb;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .program-card {
-    flex: 1 1 calc(50% - 1rem); /* Two cards per row on medium screens */
-  }
-}
 
-@media (max-width: 768px) {
-  .program-card {
-    flex: 1 1 100%; /* One card per row on small screens */
-  }
-}
+
+
+

@@ -71,7 +71,7 @@ const CampusProgram = () => {
       description: "Enhance your logical reasoning and mathematical skills.", 
       duration: "2 months", 
       cost: "$300", 
-      image: "/images/cognitive/aptitude.jpg"  // Local image path
+      image: "/images/Aptitude card.png"  // Local image path
     },
     { 
       name: "Reasoning", 
@@ -79,15 +79,15 @@ const CampusProgram = () => {
       description: "Build strong reasoning skills for analytical and critical thinking.", 
       duration: "2 months", 
       cost: "$300", 
-      image: "https://example.com/images/reasoning.jpg"  // External image URL
+      image: "/images/Reasoning card.png"  // External image URL
     },
     { 
-      name: "Engineering Basics", 
+      name: "English", 
       symbol: "📐", 
-      description: "Get a solid foundation in engineering principles and problem-solving.", 
+      description: "Get a solid foundation in English and problem-solving.", 
       duration: "3 months", 
       cost: "$500", 
-      image: "/images/cognitive/engineering_basics.jpg"  // Local image path
+      image: "/images/english card.png"  // Local image path
     },
     { 
       name: "Personality Development", 
@@ -95,7 +95,7 @@ const CampusProgram = () => {
       description: "Improve your communication, leadership, and soft skills.", 
       duration: "2 months", 
       cost: "$400", 
-      image: "https://cdn.example.com/images/personality_development.jpg"  // External image URL
+      image: "/images/PD Card.png"  // External image URL
     },
     { 
       name: "GDPI (Group Discussion & Personal Interview)", 
@@ -103,7 +103,7 @@ const CampusProgram = () => {
       description: "Develop essential skills for group discussions and interviews.", 
       duration: "1 month", 
       cost: "$250", 
-      image: "/images/cognitive/gdpi.jpg"  // Local image path
+      image: "/images/GDPI Card.png"  // Local image path
     }
   ];
   
@@ -160,10 +160,15 @@ const CampusProgram = () => {
     ? technicalPrograms[currentProgramIndex]
     : cognitivePrograms[currentProgramIndex - technicalPrograms.length];
 
+  // Define handleViewMore here
+  const handleViewMore = () => {
+    // Logic for handling view more action (e.g., display more details or open a modal)
+    console.log("View More clicked for program:", selectedProgram.name);
+  };
+
   return (
     <section className="programs">
       <Navigation />
-      <h4 className="programs-subtitle">Available Programs</h4>
       <h2 className="programs-title">
         <span className="text-black">Our</span>
         <span className="text-green"> Campus Programs</span>
@@ -217,7 +222,8 @@ const CampusProgram = () => {
             <h3 className="program-name-details">{selectedProgram.name}</h3>
             <p className="program-description">{selectedProgram.description}</p>
             <p><strong>Duration:</strong> {selectedProgram.duration}</p>
-            <p><strong>Cost:</strong> {selectedProgram.cost}</p>
+            {/* View More Button */}
+            <button onClick={handleViewMore} className="view-more-button">View More</button>
           </div>
         </div>
       )}
@@ -230,58 +236,53 @@ const CampusProgram = () => {
       </div>
 
       {/* Enquiry Form Section */}
-      <div className="enquiry-container">
-        <h3 className="enquiry-heading">Get in Touch</h3>
-        <div className="enquiry-form-container glass-morph">
-          <form onSubmit={handleFormSubmit}>
-            <div className="form-group">
-              <label>Name:</label>
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label>Phone:</label>
-              <input
-                type="tel"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label>Course:</label>
-              <input
-                type="text"
-                value={course}
-                onChange={(e) => setCourse(e.target.value)}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label>Mode:</label>
-              <input
-                type="text"
-                value={mode}
-                onChange={(e) => setMode(e.target.value)}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label>Query:</label>
-              <textarea
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-              ></textarea>
-            </div>
-            <button type="submit" className="submit-button">Submit</button>
-          </form>
-        </div>
+      <h2 className="programs-title">
+        <span className="text-black">Enquiry</span>
+        <span className="text-green"> Form</span>
+      </h2>
+      <div className="enquiry-form-container">
+      
+        <form onSubmit={handleFormSubmit} className="enquiry-form">
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Name"
+            required
+          />
+          <input
+            type="text"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            placeholder="Phone Number"
+            required
+          />
+          <select
+            value={course}
+            onChange={(e) => setCourse(e.target.value)}
+            required
+          >
+            <option value="">Select Course</option>
+            <option value="Technical">Technical</option>
+            <option value="Cognitive">Cognitive</option>
+          </select>
+          <select
+            value={mode}
+            onChange={(e) => setMode(e.target.value)}
+            required
+          >
+            <option value="">Select Mode</option>
+            <option value="Offline">Offline</option>
+            <option value="Online">Online</option>
+          </select>
+          <textarea
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Your Query"
+          />
+          <button type="submit" className="submit-btn">Submit</button>
+        </form>
       </div>
-
       <Footer />
     </section>
   );
