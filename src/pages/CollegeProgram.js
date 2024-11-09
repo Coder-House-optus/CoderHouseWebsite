@@ -25,17 +25,17 @@ const CollegeProgram = () => {
   const testimonials = [
     {
       name: "Shailesh Gupta",
-      message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel efficitur libero.",
+      message: "Lorem ibero.",
       image: "/path/to/image1.jpg",
     },
     {
       name: "Shailesa",
-      message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel efficitur libero.",
+      message: "Lorem ipsuiscing elit. Sed vel efficitur libero.",
       image: "/path/to/image2.jpg",
     },
     {
       name: "Sha",
-      message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel efficitur libero.",
+      message: "Lorem ificitur libero.",
       image: "/path/to/image3.jpg",
     },
   ];
@@ -131,11 +131,13 @@ const CollegeProgram = () => {
             </div>
           </div>
           <div className="quote-sign">“</div>
-        </div>
-        <div className="testimonial-navigation">
+          <div className="testimonial-navigation">
           <button onClick={handleTestimonialPrev} aria-label="Previous Testimonial">❮</button>
           <button onClick={handleTestimonialNext} aria-label="Next Testimonial">❯</button>
         </div>
+        
+        </div>
+        
       </section>
 
       <Footer />
