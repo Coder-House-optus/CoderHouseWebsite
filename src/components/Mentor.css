@@ -1,127 +1,87 @@
-/* Mentor.css */
-.mentors {
-    margin-top: 100px;
+/* Mentor Section */
+.mentor-section {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 40px;
-    background-color: #ffffff;
-    height: 50vh; /* Full height to center the content */
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 100px;
     margin-bottom: 400px;
 }
 
-.mentor-image {
-    margin-top: 0px;
-    max-width: 60%; /* Limit the width of the image */
-    z-index: 200;
+/* Title Styling */
+.mentor-title h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .section-title{
+    font-size: 3em;
+  }
+  .mentor-title .our {
+    color: black;  /* "Our" in black */
+  }
+  
+  .mentor-title .mentors {
+    color: #4caf50;  /* "Mentors" in green */
+  }
+  
+
+/* Container for static image and animated mentor images */
+.mentor-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    width: 1200px;
 }
 
-.mentor-card:nth-child(2) {
-    margin-left: 100px; /* Move the middle card to the right */
+/* Static Left-Side Mentor Image */
+.mentor-image {
+    max-width: 400px;
+    margin-right: 90px;
 }
 
 .mentor-image img {
-    width: 50%;
+    width: 100%;
     height: auto;
-    margin-left: -10px;
+    border-radius: 8px;
 }
 
-.mentor-display {
-    flex: 1;
-    margin-top: 5px;
-    position: relative;
-    height: 100px; /* Fixed height to ensure only 3 mentors are visible */
-    margin-right: 200px;
-}
-
-.our-mentors {
-    margin-top: 100px;
-    font-size: 3em;
-    margin-left: 600px;
+/* Right Side - Animated Mentor Images */
+.right-mentor {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Space between each animated image */
+    max-width: 1000px;
+    overflow: hidden;
 }
 
 /* Mentor Card Styles */
 .mentor-card {
-    background-color: transparent;
-    color: #4caf50;
-    padding: 10px;
-    margin: 0px 0;
-    border-radius: 10px;
-    box-shadow: none;
-    display: flex;
-    align-items: center; /* Center items horizontally */
-    width: fit-content;
     opacity: 0;
-    transform: translateY(100px);
-    transition: opacity 1s ease, transform 7s ease;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease-in-out, transform 2s ease-in-out; /* Smooth the animation */
 }
 
-/* Stack name and hello box vertically */
-.mentor-details {
-    display: flex;
-    flex-direction: column; /* Stack name and hello box vertically */
-    align-items: flex-start; /* Align to the left */
-}
-
-/* Name box styles */
-.mentor-name-box {
-    background-color: white;
-    border: 2px solid #b4e197;
-    border-radius: 20px 0px 20px 0px;
-    padding: 15px 45px;
-    color: #4caf50;
-    font-weight: bold;
-    width: 200px;
-}
-
-/* Hello box styles */
-.mentor-hello-box {
-
-    padding: 8px;
-    background-color: #A8D85D;
-    margin-left: 30px;
-    text-align: center;
-    font-size: 14px;
-    color: #333;
-    width: 280px;
-    height: 30px;
-}
-
-/* Circular element styles */
-.mentor-circle {
-    width: 100px;
-    height: 100px;
-    background-color:#ffffff;
-    border-radius: 50%;
-    margin-left: -60px; /* Space between name/hello box and circle */
-    display: flex;
-    margin-bottom: 30px;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Show cards with appropriate animations */
-.mentor-card:nth-child(1) {
+.mentor-card.enter {
     opacity: 1;
     transform: translateY(0);
 }
 
-.mentor-card:nth-child(2) {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 1s;
-
-}
-
-.mentor-card:nth-child(3) {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 2s;
-}
-
-/* Exit animation for the first card */
 .mentor-card.exit {
     opacity: 0;
-    transform: translateY(-30px);
-    transition: opacity 3s ease, transform 1s ease;
+    transform: translateY(-20px);
+}
+
+/* Animated Mentor Image Styles */
+.mentor-image-animated {
+    width: 70%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Right-Side Mentor Card Custom Offset for Middle Card */
+.mentor-card.middle {
+    margin-left: 150px; /* Adjust the offset */
+    width: 100%;
 }

@@ -1,22 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import './Mentor.css';
 
-const mentors = [
-  "Mentor Name 1",
-  "Mentor Name 2",
-  "Mentor Name 3",
-  "Mentor Name 4",
-  "Mentor Name 5",
-  "Mentor Name 6",
-  "Mentor Name 7",
-  "Mentor Name 8",
-  "Mentor Name 9",
-  "Mentor Name 10",
+const mentorImages = [
+  "/images/Our Mentors/Abhay singh.png",
+  "/images/Our Mentors/Akash tiwari.png",
+  "/images/Our Mentors/Avinash JHA.png",
+  "/images/Our Mentors/Divyanshi singh.png",
+  "/images/Our Mentors/Enoch S SAM.png",
+  "/images/Our Mentors/Piyush.png",
+  "/images/Our Mentors/Prateek.png",
+  "/images/Our Mentors/Prince yadav.png",
+  "/images/Our Mentors/Sai Bargav N.png",
+  "/images/Our Mentors/Samarth yadav.png",
+  "/images/Our Mentors/Vishal choubey.png"
 ];
 
 const Mentor = () => {
   const [visibleMentors, setVisibleMentors] = useState([0, 1, 2]);
-  const totalMentors = mentors.length;
+  const totalMentors = mentorImages.length;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -34,12 +35,16 @@ const Mentor = () => {
   }, [totalMentors]);
 
   return (
-    <section>
-      <div className="our-mentors">
-        <span>Our </span><span className="highlight">Mentors</span>
-      </div>
+    <section className="mentor-section">
+      {/* Title */}
+      <h2 className="section-title">
+          Our <span className="highlight">Mentors</span>
+        </h2>
 
-      <section className="mentors">
+
+      {/* Container for Image and Animated Cards */}
+      <div className="mentor-container">
+        {/* Static Left-Side Mentor Image */}
         <div className="mentor-image">
           <img 
             src="/images/Mentor.png" // Replace with the correct path to your image
@@ -47,20 +52,23 @@ const Mentor = () => {
             className="hero-image"
           />
         </div>
-        
-        <div className="mentor-display">
+
+        {/* Right Side - Rotating Mentor Images */}
+        <div className="right-mentor">
   {visibleMentors.map((index, position) => (
-    <div key={index} className={`mentor-card ${position === 0 ? 'exit' : ''}`}>
-      <div className="mentor-details">
-        <div className="mentor-name-box">{mentors[index]}</div> {/* Name box */}
-        <div className="mentor-hello-box">Hello</div> {/* Hello box directly below the name */}
-      </div>
-      <div className="mentor-circle">M</div> {/* Circular element */}
+    <div 
+      key={index} 
+      className={`mentor-card ${position === 1 ? 'middle' : ''} ${position === 0 ? 'exit' : 'enter'}`}
+    >
+      <img
+        src={mentorImages[index]}
+        alt={`Mentor ${index + 1}`}
+        className="mentor-image-animated"
+      />
     </div>
   ))}
 </div>
-
-      </section>
+      </div>
     </section>
   );
 };
