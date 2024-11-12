@@ -169,9 +169,9 @@ const CampusProgram = () => {
   return (
     <section className="programs">
       <Navigation />
-      <h2 className="programs-title">
-        <span className="text-black">Our</span>
-        <span className="text-green"> Campus Programs</span>
+      <h2 className="programs-title2">
+        <span className="text-black1">Our</span>
+        <span className="text-green1"> Campus Programs</span>
       </h2>
 
       {/* Technical Programs Section */}

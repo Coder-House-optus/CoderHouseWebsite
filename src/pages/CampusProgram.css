@@ -1,3 +1,5 @@
+
+
 /* Program Card */
 .program-card {
   background-color: #526E8A;
@@ -258,21 +260,74 @@ input:focus, select:focus, textarea:focus {
   color: #c3e47d;
 }
 
+/* Program Details with Glass Gaze Effect */
+.program-details {
+  width: 60%;
+  color: #fff;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15); /* Transparent white background */
+  backdrop-filter: blur(8px); /* Blurred background to simulate frosted glass */
+  border-radius: 15px; /* Rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border with opacity */
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow to add depth */
+  height: 300px;
+}
+
+.program-details h3,
+.program-details p {
+  color: rgb(89, 89, 89); /* White text for better contrast */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Soft glow effect on text */
+}
+
+
 /* Program Details Container */
 .program-details-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 80px;
   padding: 20px;
   border-radius: 8px;
-  background-color: #ffffff;
+  background-color: #251e1e;
   width: 100%;
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
   background-color: #ffffff;
 }
+
+
+
+.view-more-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-more-button:hover {
+  background-color: #45a049;
+}
+
+.submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
 
 .program-image {
   width: 40%;
@@ -376,6 +431,41 @@ input:focus, select:focus, textarea:focus {
 }
 
 
+.location-box .white-square{
+  margin-top: -11px;
+}
 
 
+
+
+
+
+
+
+.text-green1{
+  color: rgb(255, 255, 255);
+  font-size: 2em;
+}
+.text-black1{
+  color: rgb(255, 255, 255);
+  font-size: 2em;
+}
+
+/* Animated Gradient Background */
+.programs-title2 {
+  margin-top: -3px;
+  font-weight: 700;
+  text-align: center;
+  padding: 20px 0;
+  color: rgb(6, 6, 6);
+  background: linear-gradient(90deg, #768f74, #a0b5a2, #d7dfcf, #e8efd2);
+
+  background-size: 300% 300%;
+  animation: gradientAnimation 6s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
 
