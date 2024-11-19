@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import './CollegeProgram.css';
 import Footer from '../components/Footer';
+import HODReview from '../components/HODreview'; // Importing the HODReview component
 
 const CollegeProgram = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -73,7 +74,9 @@ const CollegeProgram = () => {
               </div>
               <span className="program-text">PROGRAM</span>
               <div className="card-footer">
-                <button className="view-btn">View Program</button>
+                <div className="button-container">
+                  <button className="view-btn">View Program</button>
+                </div>
               </div>
             </div>
           ))}
@@ -114,29 +117,10 @@ const CollegeProgram = () => {
       {/* Testimonial Section */}
       <section className="testimonial-section">
         <div className="headname">Words of <span className="highlight">HOD</span></div>
-        <div className="testimonial-card">
-          <div className="vertical-line"></div>
-          <div className="testimonial-content">
-            <div className="circle-image">
-              <img
-                src={testimonials[activeTestimonialIndex].image}
-                alt={testimonials[activeTestimonialIndex].name}
-              />
-            </div>
-            <div className="testimonial">
-              <p>
-                <strong>{testimonials[activeTestimonialIndex].name}</strong> <br />
-                "{testimonials[activeTestimonialIndex].message}"
-              </p>
-            </div>
-          </div>
-          <div className="quote-sign">“</div>
-          <div className="testimonial-navigation">
-          <button onClick={handleTestimonialPrev} aria-label="Previous Testimonial">❮</button>
-          <button onClick={handleTestimonialNext} aria-label="Next Testimonial">❯</button>
-        </div>
         
-        </div>
+        {/* Inserted HODReview Component */}
+        <HODReview />
+
         
       </section>
 

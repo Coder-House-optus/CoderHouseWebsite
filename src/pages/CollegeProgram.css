@@ -330,6 +330,7 @@
   display: flex;
   justify-content: center;
   padding: 20px;
+
 }
 
 .greeting-container {
@@ -378,7 +379,7 @@
 }
 
 .view-btn {
-  margin-top: 150px;
+  margin-top: 8px;
   padding: 12px 24px; /* Larger padding for a more prominent button */
   background: #ffffff; /* Green background */
   color: rgb(18, 18, 18);
@@ -387,7 +388,8 @@
   cursor: pointer;
   font-weight: 600;
   font-family: poppins;
-  transition: background-color 2s ease, color 1s ease, transform 1s ease; /* Smooth color change and subtle bounce */
+  margin-bottom: 7px;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease; /* Smooth color change and subtle bounce */
 }
 
 .view-btn:hover {
@@ -483,122 +485,33 @@
   margin-bottom: 100px;
 }
 
-/* Green vertical lines */
-.testimonial-section::before,
-.testimonial-section::after {
-  content: "";
-  position: absolute;
-  width: 300px;
-  height: 70%;
-  margin-top: 200px;
-  background-color: #F7FFE9; /* Green color for lines */
-}
-
-.testimonial-section::before {
-  left: 20%;
-  top: 0;
-}
-
-.testimonial-section::after {
-  right: 20%;
-  top: 0;
-}
 
 /* Headname Styling */
 .headname {
-  font-size:  2rem;
-  margin-bottom:8rem;
+  font-size:  3rem;
+  margin-bottom:2rem;
 }
 
 .highlight {
   color: #c3e47d; /* Green color for highlight */
 }
 
-/* Testimonial Card Styling */
-/* Testimonial Card Styling with Fixed Dimensions */
-.testimonial-card {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-  width: 700px; /* Fixed width */
-  height: 400px; /* Fixed height */
-  overflow: hidden; /* Prevents overflow from variable content */
+
+
+.card-footer {
+  
+  margin-top: 15px;
 }
 
-/* Vertical Line Styling (Fixed) */
-.vertical-line {
-  width: 5px;
-  height: 100px;
-  background-color: #c3e47d; /* Green color for line inside card */
-  margin: 0 auto;
+.button-container {
+  background-color: #b9d88a;
+  margin-top: 30px;
+  transition: background-color 0.3s ease;
+  width: 390px;
+  margin-left: -20px;
 }
 
-/* Circle Image Styling with Fixed Size */
-.circle-image {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 1rem auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.button-container:hover {
+  background-color:#82A2C1;
 }
 
-.circle-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures image covers the circle without distortion */
-}
-
-/* Testimonial Text Styling */
-.testimonial {
-  font-size: 1rem;
-  color: #333;
-  margin-top: 1rem;
-  max-height: 150px; /* Fixed height to control content overflow */
-  overflow: hidden;
-  text-overflow: ellipsis; /* Adds ellipsis if content overflows */
-  display: -webkit-box;
-  -webkit-line-clamp: 5; /* Limits lines to keep text within bounds */
-  -webkit-box-orient: vertical;
-}
-
-/* Quote Sign Styling (Fixed Position) */
-.quote-sign {
-  font-size: 3rem;
-  color: #c3e47d; /* Green color for quotes */
-  position: absolute;
-  top: -20px;
-  left: 20px;
-  z-index: 0;
-  opacity: 0.2;
-  pointer-events: none;
-}
-
-/* Testimonial Navigation Styling */
-.testimonial-navigation {
-  margin-top: 1.5rem;
-}
-
-.testimonial-navigation button {
-  background: transparent;
-  border: 2px solid #c3e47d; /* Green border for visibility */
-  border-radius: 50%;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #c3e47d; /* Green color for navigation arrows */
-  padding: 0.5rem 0.7rem;
-  margin: 0 0.5rem;
-  transition: background-color 0.3s, color 0.3s;
-  margin-bottom: 900px;
-}
-
-.testimonial-navigation button:hover {
-  background-color: #c3e47d;
-  color: #fff; /* White color on hover */
-}
