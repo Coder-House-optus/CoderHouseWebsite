@@ -1,4 +1,3 @@
-// src/components/Navigation.js
 import React, { useState } from 'react';
 import './Navigation.css'; // Make sure to import your CSS for styling
 
@@ -16,7 +15,7 @@ const Navigation = () => {
       </a>
       <ul className="nav-links">
         <li><a href="/">Home</a></li>
-        <li>
+        <li className="dropdown">
           <button className="dropdown-toggle" onClick={toggleDropdown}>
             Programs
           </button>
@@ -27,7 +26,6 @@ const Navigation = () => {
             </ul>
           )}
         </li>
-        {/* Update the link for the "Features" section */}
         <li><a href="/features">Features</a></li>
       </ul>
     </nav>
