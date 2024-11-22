@@ -87,7 +87,6 @@
 //   );
 // }
 
-
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Navigation from "../components/Navigation";
@@ -114,54 +113,88 @@ export default function ExtraFeatures() {
     }
   };
 
-  const leftCards = [
-    "Swayam",
-    "Marathon Classes (Company-Specific)",
-    "Technical Mock Interview & Resume Building",
-    "Internship",
-  ];
-
-  const rightCards = [
-    "Coder Sheet & Library",
-    "Mentorship",
-    "Moon Coder",
-    "Contest",
+  const cards = [
+    {
+      title: "Swayam",
+    },
+    {
+      title: "Marathon Classes (Company-Specific)",
+    },
+    {
+      title: "Coder Sheet & Library",
+    },
+    {
+      title: "Mentorship",
+    },
+    {
+      title: "Moon Coder",
+    },
+    {
+      title: "Contest",
+    },
+    {
+      title: "Technical Mock Interview & Resume Building",
+    },
+    {
+      title: "Internship",
+    },
   ];
 
   return (
-    <div className="extraFeatures-page-container">
-      <Navigation />
+    <div className="area">
+      <ul className="circles">
+        {Array.from({ length: 10 }, (_, i) => (
+          <li key={i}></li>
+        ))}
+      </ul>
+      <div className="extraFeatures-page-container">
+        <Navigation />
+        <div className="extraFeatures-content">
+        <span className="text-greenf">Explour Our </span><span className="text-white2f">FEATURES!</span><br />
+          <div className="extraFeatures-cards">
+            <div className="extraFeatures-column">
+              {cards.slice(0, 4).map((card) => (
+                <div
+                  key={card.title}
+                  className="extraFeatures-card"
+                  onClick={() => handleCardClick(card.title)}
+                  style={{ backgroundImage: `url(${card.image})` }}
+                >
+                  <div className="extraFeatures-card-content">
+                    <h2>{card.title}</h2>
+                    <p>{card.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
 
-      <div className="extraFeatures-content">
-        <h1 className="extraFeatures-title">Explore Extra Features</h1>
+            {/* Center Image */}
+            <div className="extraFeatures-center-image">
+              <img
+                src="images/Feature.png"
+                alt="Center img"
+              />
+            </div>
 
-        <div className="extraFeatures-cards">
-          <div className="extraFeatures-column">
-            {leftCards.map((card) => (
-              <div
-                key={card}
-                className="extraFeatures-card"
-                onClick={() => handleCardClick(card)}
-              >
-                <h2>{card}</h2>
-              </div>
-            ))}
-          </div>
-          <div className="extraFeatures-column">
-            {rightCards.map((card) => (
-              <div
-                key={card}
-                className="extraFeatures-card"
-                onClick={() => handleCardClick(card)}
-              >
-                <h2>{card}</h2>
-              </div>
-            ))}
+            <div className="extraFeatures-column">
+              {cards.slice(4).map((card) => (
+                <div
+                  key={card.title}
+                  className="extraFeatures-card"
+                  onClick={() => handleCardClick(card.title)}
+                  style={{ backgroundImage: `url(${card.image})` }}
+                >
+                  <div className="extraFeatures-card-content">
+                    <h2>{card.title}</h2>
+                    <p>{card.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+        <Footer />
       </div>
-
-      <Footer />
     </div>
   );
 }
