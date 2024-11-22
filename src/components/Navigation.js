@@ -27,6 +27,7 @@ const Navigation = () => {
             </ul>
           )}
         </li>
+        {/* Update the link for the "Features" section */}
         <li><a href="/features">Features</a></li>
       </ul>
     </nav>

@@ -1,65 +1,88 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import './SwayamBatch.css';
 import Footer from '../components/Footer';
+import './Features.css';
 
 export default function Features() {
   const [expandedCard, setExpandedCard] = useState(null);
+  const navigate = useNavigate();
 
   const toggleCard = (cardName) => {
     setExpandedCard(expandedCard === cardName ? null : cardName);
   };
 
   const handleCardClick = (cardName) => {
-    // Scroll to the expandable card section
-    const expandableCard = document.getElementById(cardName.replace(/\s+/g, '-').toLowerCase());
-    if (expandableCard) {
-      expandableCard.scrollIntoView({ behavior: "smooth" });
+    const paths = {
+      'Swayam Batch': '/swayam-batch',
+      'CRT Offline Batch': '/crt-offline-batch',
+      'Coders Sheet': '/coders-sheet',
+      'Mentorship Module | Coding Library': '/mentorship-module',
+      'Coding Library': '/coding-library',
+      'Marathon Classes': '/marathon-classes',
+      'Internship': '/internship',
+      'Contest': '/contest',
+      'Moon Coder': '/moon-coder'
+    };
+    
+    if (paths[cardName]) {
+      navigate(paths[cardName]);
+    } else {
+      const expandableCard = document.getElementById(cardName.replace(/\s+/g, '-').toLowerCase());
+      if (expandableCard) {
+        expandableCard.scrollIntoView({ behavior: 'smooth' });
+      }
+      toggleCard(cardName);
     }
-    toggleCard(cardName);
   };
+
+  const leftCards = ['Swayam Batch', 'CRT Offline Batch', 'Marathon Classes', 'Internship'];
+  const rightCards = ['Coders Sheet','Mentorship Module | Coding Library', 'Moon Coder',  'Contest'];
 
   return (
     <div className="features-page">
-      {/* Navigation Bar */}
       <Navigation />
-        <hi1> Hello Swamp batch</hi1>
-      {/* Background Section */}
+
       <div className="background-section">
-        {/* Header Section */}
         <div className="features-header">
           <h2>On- <span className="highlight">Campus Programs</span></h2>
         </div>
 
         <div className="middle-section">
           <img
-            src="images/Feature.png" // Dummy image for now
+            src="images/Feature.png"
             alt="Character"
             className="character-image"
           />
 
-          {/* Cards in a diagonal layout around the character */}
           <div className="cards-container">
-            <div className="feature-card card-left" onClick={() => handleCardClick('Swayam Batch')}>
-              <h4>Swayam Batch</h4>
+            <div className="left-cards">
+              {leftCards.map((cardName) => (
+                <div
+                  key={cardName}
+                  className="feature-card card-left"
+                  onClick={() => handleCardClick(cardName)}
+                >
+                  <h4>{cardName}</h4>
+                </div>
+              ))}
             </div>
-            <div className="feature-card card-left-overlap" onClick={() => handleCardClick('CRT Offline Batch')}>
-              <h4>CRT Offline Batch</h4>
-            </div>
-            <div className="feature-card card-right" onClick={() => handleCardClick('Coders Sheet')}>
-              <h4>Coders Sheet</h4>
-            </div>
-            <div className="feature-card card-right-overlap" onClick={() => handleCardClick('Mentorship Module | Coding Library')}>
-              <h4>Mentorship Module | Coding Library</h4>
+
+            <div className="right-cards">
+              {rightCards.map((cardName) => (
+                <div
+                  key={cardName}
+                  className="feature-card card-right"
+                  onClick={() => handleCardClick(cardName)}
+                >
+                  <h4>{cardName}</h4>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
-
-      {/* Expandable Cards Section */}
-
-<Footer/>
-
+      <Footer />
     </div>
   );
 }

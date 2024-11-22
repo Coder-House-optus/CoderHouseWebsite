@@ -7,6 +7,10 @@ import SwayamBatch from './pages/SwayamBatch';
 import CrtOfflineBatch from './pages/CrtOfflineBatch';
 import CodersSheet from './pages/CodersSheet';
 import MentorshipModule from './pages/MentorshipModule';
+import MarathonClasses from './pages/MarathonClasses'; // New Component
+import Internship from './pages/Internship'; // New Component
+import Contest from './pages/Contest'; // New Component
+import MoonCoder from './pages/MoonCoder'; // New Component
 
 import './App.css';
 
@@ -15,6 +19,7 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
+          {/* Existing Routes */}
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/features" element={<Features />} />
@@ -24,6 +29,12 @@ function App() {
           <Route path="/crt-offline-batch" element={<CrtOfflineBatch />} />
           <Route path="/coders-sheet" element={<CodersSheet />} />
           <Route path="/mentorship-module" element={<MentorshipModule />} />
+
+          {/* Newly Added Routes */}
+          <Route path="/marathon-classes" element={<MarathonClasses />} />
+          <Route path="/internship" element={<Internship />} />
+          <Route path="/contest" element={<Contest />} />
+          <Route path="/moon-coder" element={<MoonCoder />} />
         </Routes>
       </Router>
     </div>

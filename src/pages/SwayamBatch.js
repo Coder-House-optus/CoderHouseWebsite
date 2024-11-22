@@ -1,29 +1,48 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import './SwayamBatch.css'; // Assuming this file contains your custom styles
+import './Features.css';
 
-export default function SwayamBatch() {
+export default function Features() {
   const [expandedCard, setExpandedCard] = useState(null);
+  const navigate = useNavigate();
 
   const toggleCard = (cardName) => {
     setExpandedCard(expandedCard === cardName ? null : cardName);
   };
 
   const handleCardClick = (cardName) => {
-    const expandableCard = document.getElementById(cardName.replace(/\s+/g, '-').toLowerCase());
-    if (expandableCard) {
-      expandableCard.scrollIntoView({ behavior: "smooth" });
+    const paths = {
+      'Swayam Batch': '/swayam-batch',
+      'CRT Offline Batch': '/crt-offline-batch',
+      'Coders Sheet': '/coders-sheet',
+      'Mentorship Module | Coding Library': '/mentorship-module',
+      'Coding Library': '/coding-library',
+      'Marathon Classes': '/marathon-classes',
+      'Internship': '/internship',
+      'Contest': '/contest',
+      'Moon Coder': '/moon-coder'
+    };
+    
+    if (paths[cardName]) {
+      navigate(paths[cardName]);
+    } else {
+      const expandableCard = document.getElementById(cardName.replace(/\s+/g, '-').toLowerCase());
+      if (expandableCard) {
+        expandableCard.scrollIntoView({ behavior: 'smooth' });
+      }
+      toggleCard(cardName);
     }
-    toggleCard(cardName);
   };
+
+  const leftCards = ['Swayam Batch', 'CRT Offline Batch', 'Marathon Classes', 'Internship'];
+  const rightCards = ['Coders Sheet','Mentorship Module | Coding Library', 'Moon Coder',  'Contest'];
 
   return (
     <div className="features-page">
-      {/* Navigation Bar */}
       <Navigation />
-
-      {/* Background Section */}
+      <h1>HELLO SWAYAM BATCH </h1>
       <div className="background-section">
         <div className="features-header">
           <h2>On- <span className="highlight">Campus Programs</span></h2>
@@ -31,29 +50,38 @@ export default function SwayamBatch() {
 
         <div className="middle-section">
           <img
-            src="images/Feature.png" // Placeholder for your feature image
+            src="images/Feature.png"
             alt="Character"
             className="character-image"
           />
 
-          {/* Feature Cards around Character */}
           <div className="cards-container">
-            <div className="feature-card card-left" onClick={() => handleCardClick('Swayam Batch')}>
-              <h4>Swayam Batch</h4>
+            <div className="left-cards">
+              {leftCards.map((cardName) => (
+                <div
+                  key={cardName}
+                  className="feature-card card-left"
+                  onClick={() => handleCardClick(cardName)}
+                >
+                  <h4>{cardName}</h4>
+                </div>
+              ))}
             </div>
-            <div className="feature-card card-left-overlap" onClick={() => handleCardClick('CRT Offline Batch')}>
-              <h4>CRT Offline Batch</h4>
-            </div>
-            <div className="feature-card card-right" onClick={() => handleCardClick('Coders Sheet')}>
-              <h4>Coders Sheet</h4>
-            </div>
-            <div className="feature-card card-right-overlap" onClick={() => handleCardClick('Mentorship Module | Coding Library')}>
-              <h4>Mentorship Module | Coding Library</h4>
+
+            <div className="right-cards">
+              {rightCards.map((cardName) => (
+                <div
+                  key={cardName}
+                  className="feature-card card-right"
+                  onClick={() => handleCardClick(cardName)}
+                >
+                  <h4>{cardName}</h4>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
-
       {/* Additional Section: Swayam Batch Self-Paced Mastery Batch */}
       <div className="swayam-batch-section">
         <h2 className="swayam-heading">Swayam Batch: Self-Paced Mastery Batch</h2>
