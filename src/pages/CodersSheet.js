@@ -1,61 +1,50 @@
-import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import './SwayamBatch.css';
-import Footer from '../components/Footer';
+import React from 'react';
+import './CoderSheet.css';
+import { useNavigate } from 'react-router-dom'; // Assuming you're using React Router
 
-export default function Features() {
-  const [expandedCard, setExpandedCard] = useState(null);
-
-  const toggleCard = (cardName) => {
-    setExpandedCard(expandedCard === cardName ? null : cardName);
-  };
-
-  const handleCardClick = (cardName) => {
-    // Scroll to the expandable card section
-    const expandableCard = document.getElementById(cardName.replace(/\s+/g, '-').toLowerCase());
-    if (expandableCard) {
-      expandableCard.scrollIntoView({ behavior: "smooth" });
-    }
-    toggleCard(cardName);
-  };
+const CoderSheet = () => {
+  const navigate = useNavigate();
 
   return (
-    <div className="features-page">
-      {/* Navigation Bar */}
-      <Navigation />
-      <hi1> Hello Swamp batch</hi1>
-      {/* Background Section */}
-      <div className="background-section">
-        {/* Header Section */}
-        <div className="features-header">
-          <h2>On- <span className="highlight">Campus Programs</span></h2>
-        </div>
+    <div className="coder-sheet">
+      {/* Back Button */}
+      <button className="back-button1" onClick={() => navigate('/Features')}>
+        &#8592; Back to Features
+      </button>
 
-        <div className="middle-section">
-          <img
-            src="images/Feature.png" // Dummy image for now
-            alt="Character"
-            className="character-image"
-          />
-
-          {/* Cards in a diagonal layout around the character */}
-          <div className="cards-container">
-            <div className="feature-card card-left" onClick={() => handleCardClick('Swayam Batch')}>
-              <h4>Swayam Batch</h4>
-            </div>
-            <div className="feature-card card-left-overlap" onClick={() => handleCardClick('CRT Offline Batch')}>
-              <h4>CRT Offline Batch</h4>
-            </div>
-            <div className="feature-card card-right" onClick={() => handleCardClick('Coders Sheet')}>
-              <h4>Coders Sheet</h4>
-            </div>
-            <div className="feature-card card-right-overlap" onClick={() => handleCardClick('Mentorship Module | Coding Library')}>
-              <h4>Mentorship Module | Coding Library</h4>
-            </div>
-          </div>
-        </div>
+      <div className="header">
+      <h1 className="mainTitle">
+      <span className="textGreen">Coders Sheet: </span> Practice Questions Galore
+        </h1>
       </div>
-      <Footer />
+
+      <div className="box2 shadow2">
+  <span className="circle"></span>
+  <p className="content1">Crafted by IIT’ians and NIT’ians.</p>
+</div>
+<div className="box2 shadow2">
+  <span className="circle"></span>
+  <p className="content1">Ideal for Self-learning coding enthusiasts.</p>
+</div>
+<div className="box2 shadow2">
+  <span className="circle"></span>
+  <p className="content1">Contains 1000+ questions of different levels and variety.</p>
+</div>
+<div className="box2 shadow2">
+  <span className="circle"></span>
+  <p className="content1">Unlock exclusive notes for enhanced learning.</p>
+</div>
+<div className="box2 shadow2">
+  <span className="circle"></span>
+  <p className="content1">Engage in daily scheduled practice questions.</p>
+</div>
+<div className="box2 shadow2">
+  <span className="circle"></span>
+  <p className="content1">Experience a dynamic set of practice questions tailored to your current coding proficiency level.</p>
+</div>
+
     </div>
   );
-}
+};
+
+export default CoderSheet;

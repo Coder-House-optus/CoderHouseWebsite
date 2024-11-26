@@ -1,88 +1,39 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import './Features.css';
+import React from 'react';
+import "./MentorshipModule.css";
+import { useNavigate } from 'react-router-dom'; // Assuming you're using React Router
 
-export default function Features() {
-  const [expandedCard, setExpandedCard] = useState(null);
+const  MentorshipModule = () => {
   const navigate = useNavigate();
 
-  const toggleCard = (cardName) => {
-    setExpandedCard(expandedCard === cardName ? null : cardName);
-  };
-
-  const handleCardClick = (cardName) => {
-    const paths = {
-      'Swayam Batch': '/swayam-batch',
-      'CRT Offline Batch': '/crt-offline-batch',
-      'Coders Sheet': '/coders-sheet',
-      'Mentorship Module | Coding Library': '/mentorship-module',
-      'Coding Library': '/coding-library',
-      'Marathon Classes': '/marathon-classes',
-      'Internship': '/internship',
-      'Contest': '/contest',
-      'Moon Coder': '/moon-coder'
-    };
-    
-    if (paths[cardName]) {
-      navigate(paths[cardName]);
-    } else {
-      const expandableCard = document.getElementById(cardName.replace(/\s+/g, '-').toLowerCase());
-      if (expandableCard) {
-        expandableCard.scrollIntoView({ behavior: 'smooth' });
-      }
-      toggleCard(cardName);
-    }
-  };
-
-  const leftCards = ['Swayam Batch', 'CRT Offline Batch', 'Marathon Classes', 'Internship'];
-  const rightCards = ['Coders Sheet','Mentorship Module | Coding Library', 'Moon Coder',  'Contest'];
-
   return (
-    <div className="features-page">
-      <Navigation />
+    <div className="container1">
+      {/* Back Button */}
+      <button className="back-button1" onClick={() => navigate('/Features')}>
+        &#8592; Back to home
+      </button>
 
-      <div className="background-section">
-        <div className="features-header">
-          <h2>On- <span className="highlight">Campus Programs</span></h2>
-        </div>
-
-        <div className="middle-section">
-          <img
-            src="images/Feature.png"
-            alt="Character"
-            className="character-image"
-          />
-
-          <div className="cards-container">
-            <div className="left-cards">
-              {leftCards.map((cardName) => (
-                <div
-                  key={cardName}
-                  className="feature-card card-left"
-                  onClick={() => handleCardClick(cardName)}
-                >
-                  <h4>{cardName}</h4>
-                </div>
-              ))}
-            </div>
-
-            <div className="right-cards">
-              {rightCards.map((cardName) => (
-                <div
-                  key={cardName}
-                  className="feature-card card-right"
-                  onClick={() => handleCardClick(cardName)}
-                >
-                  <h4>{cardName}</h4>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+      {/* Heading */}
+      <h1 className="heading1">Mentorship Module: Guiding Your Journey</h1>
+      
+      {/* Stripes */}
+      <div className="box shadow">
+        <span className="circle"></span>
+        <p className="content1">2-hour sessions with expert mentors addressing all your 'Career As Coder' queries.</p>
       </div>
-      <Footer />
+
+      <h1 className="heading2">Coding Library: Your Perfect Coding Heaven</h1>
+      
+      <div className="box shadow">
+        <span className="circle"></span>
+        <p className="content1">Monthly subscription model for a conducive coding environment At - </p>
+      </div>
+      
+      <h2>
+        <i className="fas fa-map-marker-alt" style={{ marginRight: '10px', color: 'black' }}></i>
+        Coder House, Vijay Nagar, Jabalpur
+      </h2>
     </div>
   );
-}
+};
+
+export default MentorshipModule;

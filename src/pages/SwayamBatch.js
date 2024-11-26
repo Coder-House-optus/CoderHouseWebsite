@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import './Features.css';
+import './SwayamBatch.css';
 
 export default function Features() {
   const [expandedCard, setExpandedCard] = useState(null);

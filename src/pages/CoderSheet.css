@@ -1,0 +1,138 @@
+
+
+  /* Main coder sheet container */
+  .coder-sheet {
+    width: 800%;
+    max-width: 1200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+
+  .header h1 {
+    margin-top: 100px;
+    color: rgb(0, 0, 0);
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-left: 300px;
+  }
+  
+  /* IDE Container */
+  .ide-container {
+    width: 170%;
+    height: calc(100vh - 80px); /* Adjust height to fit with header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  
+  }
+  
+  /* IDE sections */
+  .ide {
+    width: 40%;
+    background-color: #1e1e1e; /* Black background for IDE-like design */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    position: absolute;
+  }
+  
+  #section-one {
+    top: 10%;
+    left: 10%;
+    transform: rotate(-10deg); /* Rotate section one for diagonal effect */
+  }
+  
+  #section-two {
+    bottom: 10%;
+    right: 10%;
+    transform: rotate(10deg); /* Rotate section two for diagonal effect */
+  }
+
+
+  
+  
+  /* Window control buttons (colored circles) */
+  .window-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70px;
+  }
+  
+  .circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+
+  
+
+.box2 {
+  width: 50%;
+  min-width: 900px;
+  height: 50px;
+  position: relative;
+  border-radius: 5px;
+  background: linear-gradient(to right, #abbd73 35%, #d6e2ad 100%);
+  margin-bottom: 20px; /* Adjusted for spacing */
+  padding: 15px 25px 0 40px;
+  color: rgb(9, 18, 18);
+  box-shadow: 1px 2px 1px -1px #777;
+  transition: background 200ms ease-in-out;
+  display: flex;
+  align-items: center;
+  margin-left: 250px;
+}
+
+.shadow2 {
+  position: relative;
+}
+
+.shadow2::before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 13px;
+  right: 27px;
+  width: 25%;
+  top: 0;
+  box-shadow: 0 15px 10px #777;
+  transform: rotate(4deg);
+  transition: all 150ms ease-in-out;
+}
+
+.box1:hover {
+  background: linear-gradient(to right, #abbd73 0%, #abbd73 100%);
+}
+
+.shadow2:hover::before {
+  transform: rotate(0deg);
+  bottom: 20px;
+  z-index: -10;
+}
+
+.circle {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 0 0 0 25px rgb(255, 255, 255);
+}
+
+.content1 {
+  margin-left: 40px; /* Adjust for better spacing */
+  font-size: 26px;
+}
+
