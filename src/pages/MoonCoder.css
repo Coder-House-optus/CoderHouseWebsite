@@ -2,11 +2,11 @@
 .moon-coder-container {
   max-width: 1500px;
   margin: 0 auto;
-  background-color: #1a2836; /* Green background */
+  /* background-color: #C6E894;  */
   background-image: url('/public/images/bluedotedlines.png');
   background-position: right bottom; /* Position the background image at the bottom-right corner */
   background-repeat: no-repeat;
-  background-size: 1500px 300px; /* Adjust the size of the background image */
+  background-size: 1500px 600px; /* Adjust the size of the background image */
   display: flex;
   flex-direction: column; /* Stack elements vertically */
   align-items: center; /* Center horizontally */
@@ -16,6 +16,8 @@
   overflow: hidden;
   padding-top: 30px; /* Give some space at the top */
   z-index: 1;
+  background-blend-mode: overlay;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .moon-coder-content{
@@ -77,27 +79,28 @@
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  background: #ffffff;
-  color: rgb(16, 6, 6);
+  background: #E1FFB4;
+  color: #313030;
   cursor: pointer;
   margin-bottom: 60px;
-  font-size: 10px;
+  font-size: 12px;
   display: flex;
   justify-content: left;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); */
 
 }
 
 /* Moon Border */
-.moon-border {
+/* .moon-border {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 104%;
+  height: 104%;
   padding: 6px;
-  border: 1px solid #fff;
+  border: 8px solid #C6E894;
   opacity: 0.5;
-  left: -6px;
-  top: -6px;
-}
+  left: -20px;
+  top: -20px;
+} */
 
 /* Moon Card Heading */
 .moon-card h1 {
@@ -183,7 +186,7 @@
 .head{
   margin-top: -20px;
   margin-bottom: 0px;
-  color: #C6E894;
+  color: #000000;
   padding: 0px;
   font-size: 3em;
 }

@@ -43,6 +43,21 @@ const CoderSheet = () => {
   <p className="content1">Experience a dynamic set of practice questions tailored to your current coding proficiency level.</p>
 </div>
 
+
+
+<div className="image-section">
+        <img
+          className="rectangle-image"
+          src="/images/code2.png"
+          alt="Rectangle 1"
+        />
+        <img
+          className="rectangle-image"
+          src="/images/code4.png"
+          alt="Rectangle 2"
+        />
+      </div>
+
     </div>
   );
 };

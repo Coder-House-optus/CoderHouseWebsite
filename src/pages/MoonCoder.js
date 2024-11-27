@@ -55,7 +55,7 @@ export default function MoonCoder() {
             onClick={(e) => handleCardClick(e, e.currentTarget)}>
             <div className="moon-border"></div>
             <img
-              src="/images/mooncoder1.png"
+              src="/images/contest1.png"
               alt="Card 2"
             />
             <h1>Nightly Key Question Solutions</h1>
@@ -78,7 +78,7 @@ export default function MoonCoder() {
           >
             <div className="moon-border"></div>
             <img
-              src="/images/mooncoder2.png"
+              src="/images/contest2.png"
               alt="Card 4"
             />
             <h1>Saturday Analytical Discussions* with real-time feedback</h1>

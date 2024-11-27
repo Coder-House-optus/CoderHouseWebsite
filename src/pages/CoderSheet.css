@@ -3,12 +3,24 @@
   /* Main coder sheet container */
   .coder-sheet {
     width: 800%;
-    max-width: 1200px;
+    max-width: 1500px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+
+    background-image: url('/public/images/bluedotedlines.png');
+    background-position: right bottom; /* Position the background image at the bottom-right corner */
+    background-repeat: no-repeat;
+    background-size: 1500px 600px; /* Adjust the size of the background image */
+
+    padding-bottom: 450px; /* Padding for the section */
+
+    z-index: 1;
+    background-blend-mode: overlay;
+    background-color: rgba(255, 255, 255, 0.5);
   }
   
 
@@ -17,63 +29,12 @@
     color: rgb(0, 0, 0);
     font-size: 2.5em;
     font-weight: bold;
-    margin-left: 300px;
+    margin-left: 40px;
   }
   
-  /* IDE Container */
-  .ide-container {
-    width: 170%;
-    height: calc(100vh - 80px); /* Adjust height to fit with header */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-  
-  }
-  
-  /* IDE sections */
-  .ide {
-    width: 40%;
-    background-color: #1e1e1e; /* Black background for IDE-like design */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    position: absolute;
-  }
-  
-  #section-one {
-    top: 10%;
-    left: 10%;
-    transform: rotate(-10deg); /* Rotate section one for diagonal effect */
-  }
-  
-  #section-two {
-    bottom: 10%;
-    right: 10%;
-    transform: rotate(10deg); /* Rotate section two for diagonal effect */
-  }
 
 
-  
-  
-  /* Window control buttons (colored circles) */
-  .window-controls {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 70px;
-  }
-  
-  .circle {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    margin-right: 5px;
-    cursor: pointer;
-  }
+ 
 
   
 
@@ -91,7 +52,7 @@
   transition: background 200ms ease-in-out;
   display: flex;
   align-items: center;
-  margin-left: 250px;
+  margin-left: 20px;
 }
 
 .shadow2 {
@@ -136,3 +97,19 @@
   font-size: 26px;
 }
 
+
+.image-section {
+  margin-left: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.rectangle-image {
+  width: 400px;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
