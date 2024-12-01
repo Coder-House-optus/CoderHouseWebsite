@@ -16,14 +16,14 @@ const  MentorshipModule = () => {
       <h1 className="heading1">Mentorship Module: Guiding Your Journey</h1>
       
       {/* Stripes */}
-      <div className="box shadow">
+      <div className="box10 shadow">
         {/* <span className="circle"></span> */}
         <p className="content1">2-hour sessions with expert mentors addressing all your 'Career As Coder' queries.</p>
       </div>
 
       <h1 className="heading2">Coding Library: Your Perfect Coding Heaven</h1>
       
-      <div className="box shadow">
+      <div className="box10 shadow">
         {/* <span className="circle"></span> */}
         <p className="content1">Monthly subscription model for a conducive coding environment At - </p>
       </div>

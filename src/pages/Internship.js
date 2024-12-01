@@ -1,88 +1,57 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import './Features.css';
+import React from "react";
+import "./Internship.css";
 
-export default function Features() {
-  const [expandedCard, setExpandedCard] = useState(null);
-  const navigate = useNavigate();
-
-  const toggleCard = (cardName) => {
-    setExpandedCard(expandedCard === cardName ? null : cardName);
-  };
-
-  const handleCardClick = (cardName) => {
-    const paths = {
-      'Swayam Batch': '/swayam-batch',
-      'CRT Offline Batch': '/crt-offline-batch',
-      'Coders Sheet': '/coders-sheet',
-      'Mentorship Module | Coding Library': '/mentorship-module',
-      'Coding Library': '/coding-library',
-      'Marathon Classes': '/marathon-classes',
-      'Internship': '/internship',
-      'Contest': '/contest',
-      'Moon Coder': '/moon-coder'
-    };
-    
-    if (paths[cardName]) {
-      navigate(paths[cardName]);
-    } else {
-      const expandableCard = document.getElementById(cardName.replace(/\s+/g, '-').toLowerCase());
-      if (expandableCard) {
-        expandableCard.scrollIntoView({ behavior: 'smooth' });
-      }
-      toggleCard(cardName);
-    }
-  };
-
-  const leftCards = ['Swayam Batch', 'CRT Offline Batch', 'Marathon Classes', 'Internship'];
-  const rightCards = ['Coders Sheet','Mentorship Module | Coding Library', 'Moon Coder',  'Contest'];
-
+const Internship = () => {
   return (
-    <div className="features-page">
-      <Navigation />
+    <div className="internship-container">
+      {/* Internship Title */}
+      <h1 className="internship-title">Internship</h1>
 
-      <div className="background-section">
-        <div className="features-header">
-          <h2>On- <span className="highlight">Campus Programs</span></h2>
-        </div>
+      {/* Who Can Apply Section */}
+      <div className="eligibility-section">
+        <h2 className="section-title">Who Can Apply</h2>
+        <p className="eligibility-item">
+          ✔️ Students from{" "}
+          <span className="highlight">[Relevant Streams: Engineering and Coding Lovers]</span>
+        </p>
+        <p className="eligibility-item">✔️ Passionate learners eager to gain real-world experience.</p>
+      </div>
 
-        <div className="middle-section">
-          <img
-            src="images/Feature.png"
-            alt="Character"
-            className="character-image"
-          />
+      {/* Internship Highlights Section */}
+      <div className="highlights-section">
+        <h2 className="section-title">Internship Highlights</h2>
+        <div className="plus-design">
+          {/* Top Row */}
+          <div className="circle-box top">
+            <div className="circle"></div>
+            <h3 className="highlight-title">Practical Learning</h3>
+            <p className="highlight-text">Work on live projects and enhance your skills.</p>
+          </div>
 
-          <div className="cards-container">
-            <div className="left-cards">
-              {leftCards.map((cardName) => (
-                <div
-                  key={cardName}
-                  className="feature-card card-left"
-                  onClick={() => handleCardClick(cardName)}
-                >
-                  <h4>{cardName}</h4>
-                </div>
-              ))}
+          {/* Middle Row */}
+          <div className="middle-row">
+            <div className="circle-box left">
+              <div className="circle"></div>
+              <h3 className="highlight-title">Networking Opportunities</h3>
+              <p className="highlight-text">Connect with Peers and Mentors.</p>
             </div>
-
-            <div className="right-cards">
-              {rightCards.map((cardName) => (
-                <div
-                  key={cardName}
-                  className="feature-card card-right"
-                  onClick={() => handleCardClick(cardName)}
-                >
-                  <h4>{cardName}</h4>
-                </div>
-              ))}
+            <div className="circle-box right">
+              <div className="circle"></div>
+              <h3 className="highlight-title">Certificate of Completion</h3>
+              <p className="highlight-text">Add a valuable credential to your resume!</p>
             </div>
+          </div>
+
+          {/* Bottom Row */}
+          <div className="circle-box bottom">
+            <div className="circle"></div>
+            <h3 className="highlight-title">Guidance from Experts</h3>
+            <p className="highlight-text">Learn from Industry Professionals.</p>
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
-}
+};
+
+export default Internship;
