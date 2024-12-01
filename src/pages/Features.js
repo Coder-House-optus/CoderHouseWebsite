@@ -104,7 +104,7 @@ export default function ExtraFeatures() {
       Mentorship: "/mentorship-module",
       "Moon Coder": "/moon-coder",
       Contest: "/contest",
-      "Technical Mock Interview & Resume Building": "/technical-mock-interview",
+      "Technical Mock Interview & Resume Building": "/ResumeBuilding",
       Internship: "/internship",
     };
 

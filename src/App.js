@@ -13,6 +13,7 @@ import Contest from './pages/Contest'; // New Component
 import MoonCoder from './pages/MoonCoder'; // New Component
 
 import './App.css';
+import ResumeBuilding from './pages/ResumeBuilding';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path="/internship" element={<Internship />} />
           <Route path="/contest" element={<Contest />} />
           <Route path="/moon-coder" element={<MoonCoder />} />
+          <Route path="/ResumeBuilding" element={<ResumeBuilding />} />
         </Routes>
       </Router>
     </div>
