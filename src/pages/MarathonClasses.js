@@ -1,6 +1,8 @@
 // Marathon.js
 import React from 'react';
 import './MarathonClasses.css';
+import Cocubes from './Cocubes';
+
 
 const MarathonClasses = () => {
   const navigateTo = (url) => {
@@ -17,10 +19,10 @@ const MarathonClasses = () => {
                 <button className="marathon-button" onClick={() => navigateTo('/Amcat')}>
                     <span className="tick-icon1">✔</span> AMCAT
                 </button>
-                <button className="marathon-button" onClick={() => navigateTo('/cocubes')}>
+                <button className="marathon-button" onClick={() => navigateTo('/Cocubes')}>
                     <span className="tick-icon1">✔</span> CoCubes
                 </button>
-                <button className="marathon-button" onClick={() => navigateTo('/elitmus')}>
+                <button className="marathon-button" onClick={() => navigateTo('/Elitmus')}>
                     <span className="tick-icon1">✔</span> eLitmus
                 </button>
             </div>

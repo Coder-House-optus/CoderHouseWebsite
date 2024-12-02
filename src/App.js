@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Features from './pages/Features';
 import CampusProgram from './pages/CampusProgram';
 import SwayamBatch from './pages/SwayamBatch';
-import CrtOfflineBatch from './pages/CrtOfflineBatch';
+// import CrtOfflineBatch from './pages/CrtOfflineBatch';
 import CodersSheet from './pages/CodersSheet';
 import MentorshipModule from './pages/MentorshipModule';
 import MarathonClasses from './pages/MarathonClasses'; // New Component
@@ -13,7 +13,9 @@ import Contest from './pages/Contest'; // New Component
 import MoonCoder from './pages/MoonCoder'; // New Component
 
 
+import Cocubes from './pages/Cocubes'; // Adjust the path if needed
 import Amcat from './pages/Amcat';
+import Elitmus from './pages/Elitmus'
 
 import './App.css';
 import ResumeBuilding from './pages/ResumeBuilding';
@@ -30,7 +32,7 @@ function App() {
           <Route path="/collegePrograms" element={<CollegeProgram />} />
           <Route path="/CampusPrograms" element={<CampusProgram />} />
           <Route path="/swayam-batch" element={<SwayamBatch />} />
-          <Route path="/crt-offline-batch" element={<CrtOfflineBatch />} />
+          {/* <Route path="/crt-offline-batch" element={<CrtOfflineBatch />} /> */}
           <Route path="/coders-sheet" element={<CodersSheet />} />
           <Route path="/mentorship-module" element={<MentorshipModule />} />
 
@@ -43,6 +45,8 @@ function App() {
 
 
           <Route path="/Amcat" element={<Amcat />} />
+          <Route path="/Cocubes" element={<Cocubes/>} />
+          <Route path="/Elitmus" element={<Elitmus/>} />
         </Routes>
       </Router>
     </div>
