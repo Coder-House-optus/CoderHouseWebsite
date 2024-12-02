@@ -68,7 +68,7 @@
 }
 
 .column-0 {
-  margin-left: 70px;
+  margin-left: 90px;
   padding-top: 100px;
 }
 
@@ -83,7 +83,7 @@
   color: #313030;
   cursor: pointer;
   margin-bottom: 60px;
-  font-size: 12px;
+  font-size: 10px;
   display: flex;
   justify-content: left;
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); */
@@ -107,9 +107,10 @@
   font-family: poppins;
   position: relative;
   margin-top: 30px;
-  padding: 130px 0px 100px 30px;
+  padding: 90px 0px 90px 30px;
   width: 90%;
   text-align: left;
+  font-size: 20px;
 }
 
 /* Moon Card Image */
@@ -131,37 +132,6 @@
 
 
 
-/* Moon Content Text */
-.moon-content-text {
-  background: #fff;
-  margin-top: -56%;
-  padding: 60% 5% 5% 5%;
-  width: 80%;
-  margin-left: 5%;
-  margin-bottom: 5%;
-}
-
-.moon-content-text h1,
-.moon-content-text p {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Media Queries */
-@media screen and (max-width: 600px) {
-  .moon-coder-card-column {
-      width: 90%;
-  }
-
-  .column-1 {
-      padding-top: 0px;
-  }
-
-  .moon-content img {
-      margin-top: 40px;
-  }
-}
 
 /* Back Button Style */
 .back-button1 {
@@ -188,7 +158,8 @@
   margin-bottom: 0px;
   color: #000000;
   padding: 0px;
-  font-size: 3em;
+  margin-top: 30px;
+  font-size: 2em;
 }
 
 
