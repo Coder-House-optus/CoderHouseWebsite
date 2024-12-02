@@ -1,10 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Resumebuilding.css';
 import { FaCheckCircle } from 'react-icons/fa'; // Using FontAwesome icons
 import { useNavigate } from 'react-router-dom'; // React Router hook for navigation
 
 const ResumeBuilding = () => {
   const navigate = useNavigate(); // Initialize navigate
+
+  // Images array for the slideshow
+  const images = [
+    '/images/resume-workshop.jpg', // Replace with your actual image paths
+    '/images/mock-interviews.jpg',
+    '/images/soft-skills.jpg',
+    '/images/job-preparation.jpg',
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0); // State to track current image index
+
+  // Handler for moving to the previous image
+  const handlePrevImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  // Handler for moving to the next image
+  const handleNextImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   const handleBackClick = () => {
     navigate('/Features'); // Specify the route of the feature page
@@ -59,6 +83,21 @@ const ResumeBuilding = () => {
             Comprehensive training to tackle recruitment challenges.
           </p>
         </div>
+      </div>
+
+      {/* Sliding Image Section */}
+      <div className="slideshow-container">
+        <button className="arrow-button" onClick={handlePrevImage}>
+          &#10094; {/* Left Arrow */}
+        </button>
+        <img
+          src={images[currentImageIndex]}
+          alt="Slideshow"
+          className="slideshow-image"
+        />
+        <button className="arrow-button" onClick={handleNextImage}>
+          &#10095; {/* Right Arrow */}
+        </button>
       </div>
     </div>
   );

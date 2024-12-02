@@ -3,10 +3,27 @@
     font-family: poppins;
     background-color: #fff;
     max-width: 100vw;
+
     margin: 50px auto;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
+
+
+    font-family: poppins;
+    background-color: #fff;
+    max-width: 100vw;
+    margin: 50px auto;
+    border-radius: 10px;
+    position: relative;
+    background-image: url('/public/images/bluedotedlines.png');
+    background-blend-mode: overlay;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+    
+    background-repeat: no-repeat;
+    background-position:  right; /* Position in both top-right and bottom-right corners */
+    background-size: 1550px 550px; /* Adjust size as needed */
+    padding: 20px;
     
   }
   
@@ -94,5 +111,39 @@
     .resume-description {
       font-size: 13px;
     }
+  }
+  
+
+  .slideshow-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px 0;
+  }
+  
+  .slideshow-image {
+    width: 60%;
+    max-width: 800px;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .arrow-button {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .arrow-button:hover {
+    color: #ffffff;
+  }
+  
+  .arrow-button:focus {
+    outline: none;
   }
   

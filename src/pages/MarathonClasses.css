@@ -1,0 +1,93 @@
+/* marathon.css */
+.marathon-container {
+    text-align: center;
+    font-family: poppins;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 90px;
+    color: #000;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 30px 0 20px;
+    color: #000;
+}
+
+.marathon-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 350px;
+    flex-wrap: wrap;
+}
+
+.marathon-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #8bc34a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.marathon-buttons1 {
+    display: flex;
+    justify-content: center;
+    gap: 370px;
+    flex-wrap: wrap;
+}
+
+.marathon-button1 {
+    display: flex;
+    align-items: center;
+    padding: 10px 40px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #8bc34a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+.tick-icon {
+    font-size: 1.2rem;
+    color: white;
+}
+
+
+.marathon-button:hover {
+    background-color: #7cb342;
+}
+
+.marathon-button:active {
+    background-color: #689f38;
+}
+
+.back-button1 {
+    position: fixed; /* Fixed positioning */
+    top: 20px; /* Position it 20px from the top */
+    left: 20px; /* Position it 20px from the left */
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Poppins;
+    z-index: 200; /* Ensure it stays on top of other content */
+  }
+  
+  .back-button1:hover {
+    background-color: #ecf4d0;
+  }

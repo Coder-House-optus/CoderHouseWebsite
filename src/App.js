@@ -12,6 +12,9 @@ import Internship from './pages/Internship'; // New Component
 import Contest from './pages/Contest'; // New Component
 import MoonCoder from './pages/MoonCoder'; // New Component
 
+
+import Amcat from './pages/Amcat';
+
 import './App.css';
 import ResumeBuilding from './pages/ResumeBuilding';
 
@@ -37,6 +40,9 @@ function App() {
           <Route path="/contest" element={<Contest />} />
           <Route path="/moon-coder" element={<MoonCoder />} />
           <Route path="/ResumeBuilding" element={<ResumeBuilding />} />
+
+
+          <Route path="/Amcat" element={<Amcat />} />
         </Routes>
       </Router>
     </div>

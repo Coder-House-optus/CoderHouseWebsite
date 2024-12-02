@@ -1,4 +1,4 @@
-/* Container styling */
+Container styling
 .internship-container {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
@@ -54,23 +54,8 @@
     align-items: center;
   }
   
-  /* Circle Box Styling */
-  .circle-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 10px;
-  }
-  
-  .circle {
-    width: 60px;
-    height: 60px;
-    background-color: #4caf50;
-    border-radius: 50%;
-    margin-bottom: 10px;
-  }
-  
+
+
   .highlight-title {
     font-size: 1.2rem;
     font-weight: bold;
