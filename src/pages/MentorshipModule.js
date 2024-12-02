@@ -9,7 +9,7 @@ const  MentorshipModule = () => {
     <div className="container1">
       {/* Back Button */}
       <button className="back-button1" onClick={() => navigate('/Features')}>
-        &#8592; Back to home
+      Back to home
       </button>
 
       {/* Heading */}
