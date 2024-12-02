@@ -9,7 +9,7 @@ const CoderSheet = () => {
     <div className="coder-sheet">
       {/* Back Button */}
       <button className="back-button1" onClick={() => navigate('/Features')}>
-        &#8592; Back to Features
+        Back to Features
       </button>
 
       <div className="header">
