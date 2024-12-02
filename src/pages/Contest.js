@@ -15,8 +15,8 @@ const Contest = () => {
       </video> */}
 
       {/* Back Button */}
-      <button className="back-button" onClick={() => navigate('/Features')}>
-        &#8592; Back
+      <button className="back-button1" onClick={() => navigate('/Features')}>
+        Back to Features
       </button>
 
       {/* Heading */}
