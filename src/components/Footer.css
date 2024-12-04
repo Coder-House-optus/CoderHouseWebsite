@@ -82,7 +82,7 @@
 
 .location-box {
   background-color: #E1FFB4; /* Light green box for location */
-  padding: 20px;
+  padding: 10px 20px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   width: 700px;
@@ -99,7 +99,7 @@
   width: 450px;
   height: 170px;
   position: absolute;
-  top: 15px;
+  top: 28px;
   right: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;

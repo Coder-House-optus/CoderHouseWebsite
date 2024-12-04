@@ -117,6 +117,7 @@
 .extraFeatures-page-container {
   position: relative;
   z-index: 2;
+  background-color: #EEFFD5;
 }
 
 .text-greenf{
@@ -159,6 +160,7 @@
   transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .extraFeatures-card:hover {
@@ -168,7 +170,7 @@
 
 .extraFeatures-card-content {
 
-  color: rgb(2, 2, 2);
+  color: rgb(255, 255, 255);
   padding: 10px;
   text-align: center;
   border-radius: 10px;
@@ -191,7 +193,7 @@
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 20px;
-  color: rgb(26, 15, 15); /* Adjust the color as needed */
+  color: rgb(255, 255, 255); /* Adjust the color as needed */
   position: relative;
   z-index: 3; /* Ensure it stays above the background animation */
 }
@@ -254,8 +256,7 @@
   transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
   overflow: hidden;
-  color: #3C5C7B;
-  
+  color: #ffffff;
 
 }
 
@@ -282,26 +283,19 @@
   transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
   overflow: hidden;
-  
-  /* Green gradient background */
-  background: linear-gradient(195deg, #e5ee871a, #c6e894); /* Green gradient */
-  
-  /* Glass effect */
-  backdrop-filter: blur(10px); /* Blurs the background behind the card */
-  background-color: rgb(255, 255, 255); /* Slight transparency */
-  
+
 }
 
 .extraFeatures-card h2 {
   font-size: 1rem;
   margin: 0 0 10px;
-  color: #3C5C7B;
+  color: #ffffff;
 }
 
 .extraFeatures-card p {
   font-size: 0.8rem;
   margin: 0;
-  color: #3C5C7B;
+  color: #ffffff;
 }
 
 
@@ -355,7 +349,7 @@
   padding: 12px;
   text-align: center;
   border-radius: 10px;
-  color: #3C5C7B;
+  color: #ffffff;
 }
 
 .extraFeatures-card h2 {
@@ -369,3 +363,36 @@
   margin: 0;
   color: #3C5C7B;
 }
+
+
+/* .extraFeatures-column.left .extraFeatures-card {
+  transform-origin: right center;
+}
+
+.extraFeatures-column.right .extraFeatures-card {
+  transform-origin: left center;
+} */
+
+
+
+.extraFeatures-card:nth-child(1) {
+  background-color: #E1FFB4; /* Soft red */
+}
+
+.extraFeatures-card:nth-child(2) {
+  background-color: #d5fc9a; /* Purple */
+}
+
+.extraFeatures-card:nth-child(3) {
+  background-color: #c8fb7b; /* Green */
+}
+
+.extraFeatures-card:nth-child(4) {
+  background-color: #c2fb6c; /* Pink */
+}
+
+.extraFeatures-card:nth-child(5) {
+  background-color: #d0fc71; /* Blue */
+}
+
+/* Add more for additional cards */

@@ -87,6 +87,9 @@
 //   );
 // }
 
+
+
+
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Navigation from "../components/Navigation";
@@ -112,33 +115,18 @@ export default function ExtraFeatures() {
       navigate(paths[cardName]);
     }
   };
-
   const cards = [
-    {
-      title: "Swayam",
-    },
-    {
-      title: "Marathon Classes (Company-Specific)",
-    },
-    {
-      title: "Coder Sheet & Library",
-    },
-    {
-      title: "Mentorship",
-    },
-    {
-      title: "Moon Coder",
-    },
-    {
-      title: "Contest",
-    },
-    {
-      title: "Technical Mock Interview & Resume Building",
-    },
-    {
-      title: "Internship",
-    },
+    { title: "Swayam", rotation: 15, translateX: 50, translateY: -20, color: "#E1FFB4" },
+    { title: "Marathon Classes (Company-Specific)", rotation: 5, translateX: 40, translateY: -20, color: "#6b5b95" },
+    { title: "Coder Sheet & Library", rotation: -10, translateX: 50, translateY: -10, color: "#88b04b" },
+    { title: "Mentorship", rotation: -25, translateX: 80, translateY: 20, color: "#C7E97E" },
+  
+    { title: "Moon Coder", rotation: -19, translateX: -60, translateY: 30, color: "#ffcc5c" },
+    { title: "Contest", rotation: -5, translateX: -40, translateY: 30, color: "#92a8d1" },
+    { title: "Technical Mock Interview & Resume Building", rotation: 10, translateX: -30, translateY: 40, color: "#955251" },
+    { title: "Internship", rotation: 22, translateX: -40, translateY: 40, color: "#b565a7" },
   ];
+  
 
   return (
     <div className="area">
@@ -150,19 +138,23 @@ export default function ExtraFeatures() {
       <div className="extraFeatures-page-container">
         <Navigation />
         <div className="extraFeatures-content">
-        <span className="text-greenf">Explour Our </span><span className="text-white2f">FEATURES!</span><br />
+          <span className="text-greenf">Explore Our</span>
+          <span className="text-white2f">FEATURES!</span>
+          
           <div className="extraFeatures-cards">
-            <div className="extraFeatures-column">
+            {/* Left Column */}
+            <div className="extraFeatures-column left">
               {cards.slice(0, 4).map((card) => (
                 <div
                   key={card.title}
                   className="extraFeatures-card"
                   onClick={() => handleCardClick(card.title)}
-                  style={{ backgroundImage: `url(${card.image})` }}
+                  style={{
+                    transform: `rotate(${card.rotation}deg) translate(${card.translateX}px, ${card.translateY}px)`,
+                  }}
                 >
                   <div className="extraFeatures-card-content">
                     <h2>{card.title}</h2>
-                    <p>{card.description}</p>
                   </div>
                 </div>
               ))}
@@ -170,23 +162,22 @@ export default function ExtraFeatures() {
 
             {/* Center Image */}
             <div className="extraFeatures-center-image">
-              <img
-                src="images/Feature.png"
-                alt="Center img"
-              />
+              <img src="images/Feature.png" alt="Center img" />
             </div>
 
-            <div className="extraFeatures-column">
+            {/* Right Column */}
+            <div className="extraFeatures-column right">
               {cards.slice(4).map((card) => (
                 <div
                   key={card.title}
                   className="extraFeatures-card"
                   onClick={() => handleCardClick(card.title)}
-                  style={{ backgroundImage: `url(${card.image})` }}
+                  style={{
+                    transform: `rotate(${card.rotation}deg) translate(${card.translateX}px, ${card.translateY}px)`,
+                  }}
                 >
                   <div className="extraFeatures-card-content">
                     <h2>{card.title}</h2>
-                    <p>{card.description}</p>
                   </div>
                 </div>
               ))}
