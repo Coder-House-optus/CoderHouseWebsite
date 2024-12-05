@@ -57,7 +57,7 @@
     font-family: poppins; /* Optional font styling */
     font-size: 16px; /* Adjust text size */
     width: 700px;
-    margin-left: 100px;
+    margin-left: -200px;
   }
   
   .features5 li::before {
@@ -125,3 +125,11 @@
     cursor: pointer;
     box-shadow: 0
   }
+
+
+  .tech-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjust to fit 3-4 icons per row */
+    gap: 30px; /* Spacing between grid items */
+}

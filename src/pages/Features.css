@@ -395,4 +395,8 @@
   background-color: #d0fc71; /* Blue */
 }
 
-/* Add more for additional cards */
+
+.highlight-feature {
+  color: #ffffff; /* White color for the word Feature */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+}

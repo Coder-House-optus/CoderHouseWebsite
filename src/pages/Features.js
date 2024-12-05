@@ -138,8 +138,9 @@ export default function ExtraFeatures() {
       <div className="extraFeatures-page-container">
         <Navigation />
         <div className="extraFeatures-content">
-          <span className="text-greenf">Explore Our</span>
-          <span className="text-white2f">FEATURES!</span>
+        <h1 class="extraFeatures-title">
+          Explore our <span class="highlight-feature">Features</span>
+        </h1>
           
           <div className="extraFeatures-cards">
             {/* Left Column */}
