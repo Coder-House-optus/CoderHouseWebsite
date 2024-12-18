@@ -1,0 +1,149 @@
+/* Navbar styles */
+.navbar1 {
+    background-color: #C6E894;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(68, 15, 15, 0.1);
+}
+  
+.title-container {
+    margin-bottom: 15px;
+}
+  
+.title-container h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Bangers', sans-serif;
+    color: #3C5C7B;
+}
+  
+.title-container .tagline {
+    font-size: 26px;
+    font-weight: 300;
+    margin: 5px 0 0;
+    color: #3C5C7B;
+    font-family: 'Poppins', sans-serif;
+}
+  
+.search-container {
+    display: flex;
+    justify-content: center;
+}
+  
+.search-bar {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    outline: none;
+    width: 350px;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+    color: #3C5C7B;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.search-bar::placeholder {
+    color: #3C5C7B;
+}
+  
+.search-bar:focus {
+    border: 2px solid #b7d688;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* No results message */
+.no-results {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 10px; /* Ensure some spacing below the message */
+}
+
+/* Notes list container */
+.notes-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 4fr)); /* Ensures multiple cards fit in a row */
+    gap: 20px;
+    padding: 20px;
+    margin: 0 10%;
+    justify-items: center;
+}
+  
+/* Individual note item */
+.note-item {
+    background-color: #ffffff;
+    color: #E5FEC0;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, border 0.3s, background-color 0.3s;
+    text-align: center;
+    border: 2px solid transparent;
+    width: 200px; /* Fixed width */
+    height: 150px; /* Fixed height to ensure all cards are the same size */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* To position the ripple inside the card */
+    overflow: hidden; /* To ensure the ripple stays within the card */
+}
+  
+/* Ripple effect on hover */
+.note-item::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 1px;
+    height: 1px;
+    background-color: #E5FEC0;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease;
+    z-index: 0; /* Ensure the ripple is behind the text */
+}
+  
+.note-item:hover::before {
+    transform: translate(-50%, -50%) scale(1); /* Expand the circle */
+    width: 200%; /* Increase the size of the circle */
+    height: 200%; /* Increase the size of the circle */
+}
+  
+.note-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 2px solid #E5FEC0;
+    box-shadow: 0 0 15px 5px #E5FEC0;
+}
+
+/* Ensure text remains above the ripple */
+.note-item .category-title, 
+.note-item .category-description {
+    z-index: 1; /* Keep text above the ripple */
+    position: relative; /* Ensure text is in the correct stacking context */
+}
+
+/* Category Title - Bold and Large */
+.category-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #3C5C7B;
+    margin-bottom: 10px; /* Space between title and description */
+}
+
+/* Category Description - Thin font */
+.category-description {
+    font-size: 14px;
+    font-weight: 300; /* Lighter font weight */
+    color: #3C5C7B;
+    margin-top: 0;
+}

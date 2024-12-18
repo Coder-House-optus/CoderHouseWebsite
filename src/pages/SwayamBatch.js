@@ -1,12 +1,14 @@
 import React from 'react';
 import './SwayamBatch.css';
 import { useNavigate } from 'react-router-dom';
+import Navigation from '../components/Navigation';
 
 const SwayamBatch = () => {
   const navigate = useNavigate(); // For navigation
 
   return (
     <div className="swayam-batch">
+      
       {/* Back Button */}
       <button
         className="back-button1"
@@ -14,7 +16,7 @@ const SwayamBatch = () => {
       >
         Back to features
       </button>
-
+      
       <div className="header">
         <h2>Swayam Batch</h2>
         <ul className="features5">

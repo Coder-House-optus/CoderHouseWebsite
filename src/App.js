@@ -11,11 +11,15 @@ import MarathonClasses from './pages/MarathonClasses'; // New Component
 import Internship from './pages/Internship'; // New Component
 import Contest from './pages/Contest'; // New Component
 import MoonCoder from './pages/MoonCoder'; // New Component
-
-
+import Notes from './pages/Notes';
+import Achievers from './pages/Achievers';
 import Cocubes from './pages/Cocubes'; // Adjust the path if needed
 import Amcat from './pages/Amcat';
-import Elitmus from './pages/Elitmus'
+import Elitmus from './pages/Elitmus';
+import AboutUs from './pages/AboutUs';
+
+import Gform from './pages/Gform'; // Import the Gform component
+
 
 import './App.css';
 import ResumeBuilding from './pages/ResumeBuilding';
@@ -29,6 +33,12 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/features" element={<Features />} />
+          <Route path="/Notes" element={<Notes/>} />
+          <Route path="/Achievers" element={<Achievers/>} />
+          <Route path="/AboutUs" element={<AboutUs />} />
+          <Route path="/Gform" element={<Gform />} /> {/* Route to Gform */}
+
+          
           <Route path="/collegePrograms" element={<CollegeProgram />} />
           <Route path="/CampusPrograms" element={<CampusProgram />} />
           <Route path="/swayam-batch" element={<SwayamBatch />} />
