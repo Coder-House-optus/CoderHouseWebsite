@@ -17,15 +17,7 @@
   text-decoration: underline;
 }
 
-/* Heading */
-.heading1 {
-  text-align: center;
-  font-size: 1em;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  color: rgb(17, 44, 44);
-  
-}
+
 
 /* Stripes */
 .container1 {
@@ -38,26 +30,19 @@
   background-color: rgba(255, 255, 255, 0.8);
   background-position: right bottom; /* Position the background image at the bottom-right corner */
   background-repeat: no-repeat;
-  
   background-size: 1800px 780px; /* Adjust the size of the background image */
-  display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  align-items: center; /* Center horizontally */
-  justify-content: flex-start; /* Align items from the top */
-
-  height: 770px; /* Adjust height to fit the content */
+  height: 770px;
   overflow: hidden;
-
 }
 
 .box10 {
   width: 60%;
   min-width: 200px;
-  height: 50px;
+  height: 40px;
   position: relative;
   border-radius: 5px;
   background: linear-gradient(to right, #A8D85D 35%, #99C05F 100%);
-  margin-bottom: 20px; /* Adjusted for spacing */
+  margin-bottom: 20px;
   padding: 10px 10px 0 0px;
   color: rgb(0, 0, 0);
   box-shadow: 1px 2px 1px -1px rgb(154, 153, 153);
@@ -94,23 +79,19 @@
   z-index: -10;
 }
 
-
 .content1 {
-  margin-left: 40px; /* Adjust for better spacing */
+  margin-left: 40px;
 }
 
-
-/* Styling for the container */
 .container1 {
   text-align: center;
   padding: 20px;
 }
 
-/* Back Button Styling */
-.back-button1{
-  position: fixed; /* Fixed positioning */
-  top: 20px; /* Position it 20px from the top */
-  left: 20px; /* Position it 20px from the left */
+.back-button1 {
+  position: fixed;
+  top: 20px;
+  left: 20px;
   background-color: #E1FFB4;
   color: #000000;
   padding: 10px 20px;
@@ -118,16 +99,14 @@
   border-radius: 5px;
   cursor: pointer;
   font-family: Poppins;
-  z-index: 200; /* Ensure it stays on top of other content */
+  z-index: 200;
 }
 
 .back-button1:hover {
   background-color: #c0c7a8;
   font-family: poppins;
-  
 }
 
-/* Heading 1 Styling */
 .heading1 {
   font-family: 'poppins';
   color: #333;
@@ -135,10 +114,8 @@
   font-weight: bold;
   margin-bottom: -10px;
   text-align: center;
-
 }
 
-/* Heading 2 Styling */
 .heading2 {
   font-family: 'poppins';
   color: #333;
@@ -148,7 +125,6 @@
   text-align: center;
 }
 
-/* Box Shadow for Content */
 .box {
   background-color: #f4f4f4;
   padding: 20px;
@@ -160,23 +136,12 @@
   align-items: center;
 }
 
-/* Circle Styling */
-/* .circle {
-  width: 30px;
-  height: 30px;
-  background-color: #a1b7a2;
-  border-radius: 50%;
-  margin-right: 10px;
-} */
-
-/* Content Styling */
 .content1 {
-  font:'poppins';
+  font: 'poppins';
   font-size: 1em;
   color: rgb(255, 255, 255);
   text-align: left;
 }
-
 
 .image-section2 {
   margin-top: 100px;
@@ -193,4 +158,62 @@
   height: 300px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* Mobile View Adjustments */
+@media screen and (max-width: 768px) {
+  /* Box */
+  .box10 {
+    width: 60%; /* Reduce the width for mobile view */
+    height: 30px; /* Adjust the height for mobile */
+    font-size: 14px; /* Adjust the font size for mobile */
+    margin-top: 10px;
+   
+  }
+
+  /* Container */
+  .container1 {
+    margin-top: 30px;
+    padding: 15px; /* Reduced padding */
+    height: auto; /* Allow height to adjust according to content */
+    
+  }
+
+  /* Image section */
+  .image-section2 {
+    flex-direction: column; /* Stack images vertically */
+    margin-left: 0; /* Remove left margin */
+    gap: 10px; /* Reduce space between images */
+  }
+
+  .rectangle-image2 {
+    width: 90%; /* Make images smaller */
+    height: 250px; /* Reduce image height */
+  }
+
+  /* Back Button */
+  .back-button1 {
+    font-size: 16px; /* Reduce font size for mobile */
+    padding: 8px 15px; /* Reduce button padding */
+  }
+
+  /* Headings */
+  .heading1 {
+    font-size: 1.2em; /* Adjust heading font size */
+    margin-top: 20px; /* Adjust margin */
+  }
+
+  .heading2 {
+    font-size: 1.2em;
+  }
+
+  /* Adjust text content */
+  .content1 {
+    font-size: 14px; /* Smaller font size for mobile */
+    margin-left: 20px; /* Adjust margin */
+    
+  }
 }

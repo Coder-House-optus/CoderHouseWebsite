@@ -156,7 +156,7 @@
   /* Mobile View for features list */
   .features5 li {
     width: auto; /* Let the list items take the full width */
-    margin-left: 0; /* Remove left margin */
+    margin-left: 3px; /* Remove left margin */
     font-size: 14px; /* Adjust text size */
     padding: 8px 15px; /* Adjust padding for smaller screens */
   }
@@ -168,7 +168,7 @@
   }
 
   .technologies1 h3 {
-    font-size: 1.5em; /* Smaller font size for header */
+    font-size: 1.2em; /* Smaller font size for header */
     margin-bottom: 30px;
   }
 
