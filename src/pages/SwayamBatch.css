@@ -133,3 +133,64 @@
     grid-template-columns: repeat(4, 1fr); /* Adjust to fit 3-4 icons per row */
     gap: 30px; /* Spacing between grid items */
 }
+
+
+
+
+@media screen and (max-width: 768px) {
+  /* Mobile View for .swayam-batch */
+  .swayam-batch {
+    max-width: 100%; /* Allow the container to take up full width */
+    background-size: cover; /* Make sure the background image scales properly */
+    background-position: center; /* Center the background image */
+    padding: 20px; /* Add some padding for better spacing */
+  }
+
+  /* Mobile View for header */
+  .header h2 {
+    margin-top: 70px;
+    font-size: 1.5em; /* Smaller font size for header */
+    margin-bottom: 30px;
+  }
+
+  /* Mobile View for features list */
+  .features5 li {
+    width: auto; /* Let the list items take the full width */
+    margin-left: 0; /* Remove left margin */
+    font-size: 14px; /* Adjust text size */
+    padding: 8px 15px; /* Adjust padding for smaller screens */
+  }
+
+  /* Mobile View for technologies section */
+  .technologies1 {
+    margin-left: 0;
+    max-width: 100%; /* Allow the container to take up full width */
+  }
+
+  .technologies1 h3 {
+    font-size: 1.5em; /* Smaller font size for header */
+    margin-bottom: 30px;
+  }
+
+  /* Mobile View for tech grid */
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr); /* Display 2 items per row on small screens */
+  }
+
+  /* Mobile View for tech items */
+  .tech-item img {
+    max-width: 40px; /* Smaller images */
+  }
+
+  .tech-item p {
+    font-size: 14px; /* Adjust font size for mobile */
+  }
+
+  /* Mobile View for back button */
+  .back-button1 {
+    top: 10px;
+    left: 10px;
+    padding: 8px 15px; /* Adjust padding for smaller buttons */
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+}

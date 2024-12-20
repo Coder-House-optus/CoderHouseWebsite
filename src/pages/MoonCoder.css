@@ -195,3 +195,121 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+/* Mobile View - Mentorship Module Responsive Design */
+
+/* General styling */
+@media screen and (max-width: 768px) {
+
+  /* Back Button */
+  .back-button {
+    font-size: 1px; /* Slightly smaller font */
+    top: 15px; /* Adjust position */
+    left: 15px;
+  }
+
+  /* Back Button Styling for fixed position */
+  .back-button1 {
+    top: 15px;
+    left: 15px;
+    padding: 8px 15px;
+    font-size: 16px; /* Slightly smaller font */
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* Heading 1 */
+  .heading1 {
+    font-size: 1.2em; /* Adjust font size */
+    margin-top: 60px; /* Adjust margin */
+    color: rgb(17, 44, 44);
+    text-align: center; /* Center the heading */
+    padding-left: 10px; /* Add left padding for mobile */
+  }
+
+  .heading2 {
+    font-size: 1.2em; /* Adjust font size */
+    margin-top: 20px; /* Adjust margin */
+    color: rgb(17, 44, 44);
+    text-align: center; /* Center the heading */
+    padding-left: 10px; /* Add left padding for mobile */
+  }
+
+  /* Container for content and stripes */
+  .container1 {
+    height: auto; /* Adjust container height for mobile */
+    background-size: cover; /* Make the background image cover the container */
+    background-position: center; /* Center the background image */
+    padding: 10px; /* Add padding */
+    text-align: center;
+    overflow: visible; /* Allow content to be visible */
+  }
+
+  /* Box styles for the mentorship */
+  .box10 {
+    width: 80%; /* Adjust width for mobile */
+    min-width: 200px;
+    height: auto; /* Adjust height */
+    margin-bottom: 15px;
+    padding: 12px;
+    font-size: 14px; /* Smaller font size */
+  }
+
+  /* Box Shadow for hover effect */
+  .box:hover {
+    background: linear-gradient(to right, #abbd73 0%, #abbd73 100%);
+  }
+
+  /* Styling for content */
+  .content1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    padding-left: 5px; /* Padding for text */
+  }
+
+  /* Styling for Image Section */
+  .image-section2 {
+    margin-top: 20px; /* Reduced top margin */
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .rectangle-image2 {
+    width: 50%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Content Box Styling */
+  .box {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  
+  /* Adjust shadow box */
+  .shadow {
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lighter shadow on mobile */
+  }
+
+  .shadow::before {
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(0deg); /* Reset shadow position on mobile */
+  }
+
+  /* Add general margin for sections to make it mobile-friendly */
+  .container1, .image-section2 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

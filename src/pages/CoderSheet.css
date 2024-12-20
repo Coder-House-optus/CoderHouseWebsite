@@ -93,3 +93,164 @@
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+
+/* Main coder sheet container */
+.coder-sheet {
+  width: 100%;
+  max-width: 1500px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* Optional background properties can be added if needed */
+  /* background-image: url('/public/images/bluedotedlines.png');
+  background-position: right bottom; 
+  background-repeat: no-repeat;
+  background-size: 1500px 600px;
+  padding-bottom: 450px;
+  z-index: 1;
+  background-blend-mode: overlay;
+  background-color: rgba(255, 255, 255, 0.5); */
+}
+
+/* Header styling */
+.header h1 {
+  margin-top: 140px;
+  color: rgb(0, 0, 0);
+  font-size: 2em;
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+/* Box2 styling */
+.box2 {
+  width: 50%;
+  min-width: 600px;
+  height: 50px;
+  position: relative;
+  border-radius: 5px;
+  background: linear-gradient(to right, #9bc655 35%, #8caf57 100%);
+  margin-bottom: 20px;
+  padding: 10px 2px 0 00px;
+  color: rgb(9, 18, 18);
+  box-shadow: 1px 2px 1px -1px #777;
+  transition: background 200ms ease-in-out;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+/* Shadow effect for box2 */
+.shadow2 {
+  position: relative;
+}
+
+.shadow2::before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 13px;
+  right: 27px;
+  width: 25%;
+  top: 0;
+  box-shadow: 0 15px 10px #777;
+  transform: rotate(4deg);
+  transition: all 150ms ease-in-out;
+}
+
+/* Hover effect for box2 */
+.box1:hover {
+  background: linear-gradient(to right, #abbd73 0%, #abbd73 100%);
+}
+
+.shadow2:hover::before {
+  transform: rotate(0deg);
+  bottom: 20px;
+  z-index: -10;
+}
+
+/* Image section styling */
+.image-section {
+  margin-left: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.rectangle-image {
+  width: 300px;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile View - Adjustments for smaller screen sizes */
+@media screen and (max-width: 768px) {
+  .coder-sheet {
+    width: 100%;
+    padding: 20px; /* Add padding for mobile devices */
+  }
+
+  .header h1 {
+    margin-top: 50px; /* Adjusted margin for smaller screens */
+    font-size: 1.5em; /* Smaller font size for mobile */
+    margin-left: 0;
+    text-align: center; /* Center the header on mobile */
+  }
+
+  .box2 {
+    width: 90%; /* Make box take 90% width on mobile */
+    min-width: 300px; /* Minimum width for smaller screens */
+    margin-left: 0; /* Remove margin-left for better alignment */
+  }
+
+  .image-section {
+    margin-left: 0; /* Remove margin for better alignment */
+    flex-direction: column; /* Stack images vertically */
+    gap: 10px; /* Reduce gap between images */
+  }
+
+  .rectangle-image {
+    width: 100%; /* Make image take full width on mobile */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+
+/* Mobile View - Adjustments for smaller screen sizes */
+@media screen and (max-width: 768px) {
+  /* Adjust the header text */
+  .header h1 {
+    margin-top: 90px;
+    font-size: 1.2em; /* Smaller font size for mobile */
+    margin-left: 0;
+    text-align: center; /* Center the header on mobile */
+    line-height: 1.4; /* Ensure line breaks between the lines */
+  }
+
+  /* Make the text split into 2 lines */
+  .header h1::after {
+    content: " "; /* Ensure line break in the header */
+    white-space: pre-line; /* Allows the header to break into two lines */
+  }
+
+  /* Adjust the image section */
+  .image-section {
+    margin-left: 0; /* Remove margin for better alignment */
+    flex-direction: row; /* Make images align in a row */
+    gap: 1px; /* Reduce gap between images */
+    justify-content: space-between; /* Ensure images are evenly spaced */
+  }
+
+  /* Adjust the images for mobile view */
+  .rectangle-image {
+    width: 200%; /* Make images smaller and in a row */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
