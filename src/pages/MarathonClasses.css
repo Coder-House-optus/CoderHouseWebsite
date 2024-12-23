@@ -36,7 +36,7 @@ h2 {
 .marathon-buttons {
     display: flex;
     justify-content: center;
-    gap: 350px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
@@ -253,3 +253,59 @@ h2 {
     }
   }
   
+
+
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Tablet View for .marathon-classes-container */
+    .marathon-classes-container {
+        padding: 40px;
+        background-size: cover; /* Ensure background image covers the area */
+        background-position: center;
+        background-color: rgba(255, 255, 255, 0.6); /* Adjust opacity */
+        flex-direction: column;
+    }
+
+    h1 {
+        margin-top: 60px;
+        font-size: 1.8rem; /* Adjusted font size for tablet */
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 1.3rem; /* Slightly smaller for tablet */
+        margin: 40px 0 20px;
+    }
+
+    .marathon-classes-buttons {
+        gap: 20px; /* Reduced gap for tablet */
+    }
+
+    .marathon-classes-buttons1 {
+        gap: 1px;
+    }
+
+    .marathon-classes-button, .marathon-classes-button1 {
+        padding: 14px 30px;
+        font-size: 1rem;
+        width: 80%; /* Allow buttons to take 80% width */
+        text-align: center;
+    }
+
+    /* Tablet View for marathon buttons grid */
+    .marathon-classes-buttons-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+        gap: 20px;
+        padding: 0px;
+    }
+
+    .marathon-classes-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+    }
+
+    .marathon-classes-doc-button {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+}

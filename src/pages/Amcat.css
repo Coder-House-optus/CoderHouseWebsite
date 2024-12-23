@@ -10,17 +10,16 @@
     margin-bottom: 20px;
   }
   
-  .amcat-tabs {
+  /* .amcat-tabs {
     margin-top: 100px;
     display: flex;
     justify-content: center;
-    gap: 200px;
+    gap: 10px;
     margin-bottom: 70px;
-  }
+  } */
   
   .tab {
-
-    padding: 10px 40px;
+    padding: 10px 20px;
     border: 1px solid #A8D85D;
     border-radius: 0px;
     background-color: #A8D85D;
@@ -115,3 +114,149 @@
     background-color: #e0e0e0;
   }
   
+
+
+  /* Mobile View Adjustments */
+@media screen and (max-width: 768px) {
+
+  .amcat-container {
+    padding: 10px; /* Reduced padding on smaller screens */
+  }
+
+  .amcat-title {
+    font-size: 1.5rem; /* Reduced font size */
+  }
+
+  .amcat-tabs {
+    margin-top: 30px; /* Adjusted margin */
+    gap: 0px; /* Reduced gap */
+    flex-direction: column; /* Stack tabs vertically */
+  }
+
+  .tab {
+    font-size: 1.1em; /* Adjusted font size */
+    padding: 10px 20px;
+  }
+
+  .amcat-table th,
+  .amcat-table td {
+    font-size: 1em; /* Adjusted font size for readability */
+    padding: 8px; /* Adjusted padding */
+  }
+
+  .amcat-table th {
+    font-size: 1.3em; /* Adjusted font size for table headers */
+  }
+
+  .amcat-important-details h3 {
+    font-size: 1.3rem; /* Adjusted font size */
+  }
+
+  .amcat-important-details li {
+    font-size: 1em; /* Adjusted font size for list items */
+  }
+
+  .back-button1 {
+    font-size: 14px; /* Adjusted font size for the back button */
+    padding: 4px 8px; /* Adjusted padding */
+  }
+  .amcat-tabs {
+    margin-top: 0px; /* Adjusted margin for better spacing */
+    gap: 1px; /* Reduced gap between tabs */
+    flex-direction: column; /* Align the tabs in a row */
+    justify-content: center; /* Center align the tabs */
+  }
+
+  .tab {
+    font-size: 0.4em; /* Adjusted font size */
+    padding: 1px 2px;
+    margin: 0 5px; /* Reduced margin between each tab */
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+  /* Container adjustments */
+  .amcat-container {
+    padding: 30px; /* Increased padding for spacing */
+    max-width: 1200px; /* Ensure content is not too wide */
+    margin: 0 auto; /* Center content */
+  }
+
+  /* Title styling */
+  .amcat-title {
+    font-size: 2rem; /* Larger font size for better visibility */
+    text-align: center; /* Center title */
+    margin-bottom: 20px; /* Space below the title */
+  }
+
+  /* Tab container adjustments */
+  .amcat-tabs {
+    margin-top: 40px; /* Adjusted margin for proper spacing */
+    gap: 0px; /* Increased gap between tabs */
+    flex-direction: row; /* Align tabs horizontally */
+    justify-content: center; /* Center tabs horizontally */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+  }
+
+  /* Tab adjustments */
+  .tab {
+    font-size: 1.1em; /* Adjusted font size */
+    padding: 12px 25px; /* Increased padding for better touch targets */
+    margin: 5px; /* Added margin for spacing between tabs */
+    background-color: #f4f4f4; /* Light background color for contrast */
+    border: 1px solid #ccc; /* Light border for definition */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+  }
+
+  .tab:hover {
+    background-color: #e0e0e0; /* Slightly darker background on hover */
+  }
+
+  /* Table adjustments */
+  .amcat-table th, .amcat-table td {
+    font-size: 1.1em; /* Adjusted font size for readability */
+    padding: 12px; /* Increased padding for better readability */
+    text-align: left; /* Ensure text aligns properly */
+  }
+
+  .amcat-table th {
+    font-size: 1.3em; /* Slightly larger font for header */
+    background-color: #f8f8f8; /* Light background for table header */
+    font-weight: bold; /* Bold header */
+  }
+
+  /* Important details adjustments */
+  .amcat-important-details h3 {
+    font-size: 1.5rem; /* Larger font size for important details headings */
+    margin-bottom: 15px; /* Space below the heading */
+  }
+
+  .amcat-important-details li {
+    font-size: 1.1em; /* Slightly larger font size for list items */
+    margin-bottom: 10px; /* Space between list items */
+  }
+
+  /* Back button adjustments */
+  .back-button1 {
+    font-size: 16px; /* Increased font size */
+    padding: 8px 20px; /* Increased padding for better interaction */
+    background-color: #007bff; /* Background color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+
+  .back-button1:hover {
+    background-color: #0056b3; /* Darker background on hover */
+  }
+
+  /* Adjusting layout for better responsiveness */
+  .amcat-container, .amcat-tabs, .amcat-table {
+    width: 100%; /* Ensure they take full width available */
+    box-sizing: border-box; /* Prevent overflow */
+  }
+}

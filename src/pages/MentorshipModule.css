@@ -217,3 +217,55 @@
     
   }
 }
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Box */
+  .box10 {
+    width: 90%; /* Increase width for laptop view */
+    height: 54px; /* Adjust the height for laptop */
+    font-size: 16px; /* Slightly larger font size for laptop */
+    margin-top: 20px;
+  }
+
+  /* Container */
+  .container1 {
+    margin-top: 40px;
+    padding: 20px; /* Increased padding for better spacing */
+    height: auto; /* Allow height to adjust according to content */
+  }
+
+  /* Image section */
+  .image-section2 {
+    flex-direction: row; /* Keep images in a row */
+    margin-left: 1px; /* Add some margin to the left */
+    gap: 10px; /* Slightly larger gap between images */
+  }
+
+  .rectangle-image2 {
+    width: 60%; /* Make images slightly smaller */
+    height: 200px; /* Adjust image height for better display on laptop */
+  }
+
+  /* Back Button */
+  .back-button1 {
+    font-size: 18px; /* Adjust font size */
+    padding: 10px 20px; /* Increase button padding for better touch targets */
+  }
+
+  /* Headings */
+  .heading1 {
+    font-size: 1.4em; /* Slightly larger font size for headings */
+    margin-top: 25px; /* Adjust margin to make it more spacious */
+  }
+
+  .heading2 {
+    font-size: 1.4em;
+  }
+
+  /* Adjust text content */
+  .content1 {
+    font-size: 16px; /* Increase font size for better readability */
+    margin-left: 30px; /* Adjust left margin */
+  }
+}
