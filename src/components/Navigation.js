@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import './Navigation.css'; // Make sure to import your CSS for styling
+import './Navigation.css'; // Importing the corresponding CSS
 
 const Navigation = () => {
   const [isProgramsDropdownOpen, setProgramsDropdownOpen] = useState(false);
   const [isInfoDropdownOpen, setInfoDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleProgramsDropdown = () => {
     setProgramsDropdownOpen(!isProgramsDropdownOpen);
@@ -13,15 +14,21 @@ const Navigation = () => {
     setInfoDropdownOpen(!isInfoDropdownOpen);
   };
 
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <nav className="navigation">
       <a href="/" className="logo">
-        <img src="/images/logo1.png" alt="Logo" /> {/* Accessing logo from public folder */}
+        <img src="/images/logo1.png" alt="Logo" />
       </a>
-      <ul className="nav-links">
+      <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
+        ☰
+      </button>
+      <ul className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`}>
         <li><a href="/">Home</a></li>
 
-        {/* Programs Dropdown */}
         <li className="dropdown">
           <button className="dropdown-toggle" onClick={toggleProgramsDropdown}>
             Programs
@@ -33,7 +40,7 @@ const Navigation = () => {
             </ul>
           )}
         </li>
-        {/* Info Dropdown */}
+
         <li className="dropdown">
           <button className="dropdown-toggle" onClick={toggleInfoDropdown}>
             Information
@@ -49,8 +56,6 @@ const Navigation = () => {
         <li><a href="/features">Features</a></li>
         <li><a href="/Notes">Notes</a></li>
         <li><a href="/Achievers">Achievers</a></li>
-
-        
       </ul>
     </nav>
   );

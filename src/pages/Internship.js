@@ -26,6 +26,7 @@ const Internship = () => {
           Students from{" "}
           <span>[Relevant Streams: Engineering and Coding Lovers]</span>
         </p>
+        <br/>
         <p className="resume-heading1">Passionate learners eager to gain real-world experience.</p>
       </div>
 
@@ -64,10 +65,7 @@ const Internship = () => {
         </div>
 
         {/* Connecting Lines */}
-        <div className="lines-container">
-          <div className="line vertical-line"></div>
-          <div className="line horizontal-line"></div>
-        </div>
+        
       </div>
     </div>
   );

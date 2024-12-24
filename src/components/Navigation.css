@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 body {
-  font-family: 'Poppins', sans-serif; /* Apply Poppins font globally */
+  font-family: 'Poppins', sans-serif;
 }
 
 .navigation {
@@ -16,8 +16,8 @@ body {
 }
 
 .logo img {
-  height: 100px; /* Adjust logo size */
-  margin-right: 40px; /* Space between logo and nav items */
+  height: 100px;
+  margin-right: 40px;
 }
 
 .nav-links {
@@ -80,7 +80,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   min-width: 250px;
   margin-left: -100px;
-  list-style-type: none; /* Remove the bullet points from the dropdown */
+  list-style-type: none;
 }
 
 .dropdown-content li {
@@ -92,41 +92,45 @@ body {
   color: #ffffff;
 }
 
-/* Display dropdown on click */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* For smaller screens */
-@media screen and (max-width: 768px) {
-  .navigation {
-    flex-direction: column; /* Stack navigation items vertically */
-    padding: 10px;
-  }
+.mobile-menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
-  .logo img {
-    height: 50px;
+/* For small screens up to 768px */
+@media screen and (max-width: 1200px) {
+  .mobile-menu-toggle {
+    display: block;
   }
 
   .nav-links {
+    display: none;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    background-color: #0E2031;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  .nav-links.open {
+    display: flex;
   }
 
   .nav-links li {
-    margin-left: 0;
-    margin-bottom: 15px;
-  }
-
-  .nav-links a,
-  .dropdown-toggle {
-    padding: 1px 20px;
-    font-size: 18px;
-  }
-
-  .dropdown-content {
-    position: static; /* Stack dropdown items vertically on small screens */
-    width: 100%;
+    margin: 10px 0;
   }
 }
+
+/* For medium screens between 769px and 1025px */
+

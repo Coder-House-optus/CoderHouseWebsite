@@ -1,5 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Mono');
-
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Mono', monospace;
+}
 
 /* Back Button */
 .back-button {
@@ -11,8 +15,7 @@
   color: darkslategray;
   font-size: 18px;
   cursor: pointer;
-  font-family: 'PT Mono', monospace;
-  z-index: 1; /* Ensure button is above the video */
+  z-index: 1;
 }
 
 .back-button:hover {
@@ -23,37 +26,25 @@
 .heading5 {
   margin-top: 60px;
   text-align: center;
-  font-size: 40px;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
   color: darkslategray;
-  z-index: 1; /* Ensure heading is above the video */
 }
 
-/* Container for stripes and image */
+/* Content Container */
 .content-container {
   display: flex;
-  flex-direction: row; /* Layout for stripes and image side-by-side */
-  align-items: flex-start; /* Align items at the top */
-  justify-content: space-around; /* Space between sections */
-  width: 100%;
-  margin-top: 30px;
-  gap: 20px; /* Adds space between stripes and image */
-  z-index: 1; /* Ensure content is above the video */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
 
-
-
-  background-image: url('/public/images/bluedotedlines.png');
-  background-size: cover;
-  background-position: bottom right;
-  background-repeat: no-repeat;
- 
-  z-index: 0;  /* Position the image behind the text */
-  transform-origin: center center;  /* Rotate around the center */
-  height: 600px;
-  margin-top: 260px;
-  background-blend-mode: overlay;
-  background-color: rgba(255, 255, 255, 0.5);
-
+@media (min-width: 768px) {
+  .content-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
 /* Stripes Section */
@@ -61,129 +52,124 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%; /* Occupies half of the container */
-}
-
-.container2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex: 1;
 }
 
 .box3 {
-  width: 70%; /* Adjusted to fill the container's width */
-  min-width: 200px;
-  height: 100px;
-  position: relative;
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  padding: 20px;
+  margin-bottom: 20px;
   border-radius: 5px;
   background: linear-gradient(to right, #A8D85D 35%, #99C05F 100%);
-  margin-bottom: -20px; /* Adjusted for spacing */
-  padding: 10px 5px 0 10px;
-  color: darkslategray;
   box-shadow: 1px 2px 1px -1px #777;
-  transition: background 200ms ease-in-out;
   display: flex;
   align-items: center;
-  margin-top: 60px;
-
+  transition: background 200ms ease-in-out;
 }
 
-.shadow {
-  position: relative;
-}
-
-.shadow::before {
-  z-index: -1;
-  position: absolute;
-  content: "";
-  bottom: 13px;
-  right: 7px;
-  width: 25%;
-  top: 0;
-  box-shadow: 0 15px 10px #777;
-  transform: rotate(4deg);
-  transition: all 150ms ease-in-out;
-}
-
-.box:hover {
+.box3:hover {
   background: linear-gradient(to right, #abbd73 0%, #abbd73 100%);
 }
 
-.shadow:hover::before {
-  transform: rotate(0deg);
-  bottom: 20px;
-  z-index: -10;
-}
-
-
-.content1 {
-  margin-left: 40px; /* Adjust for better spacing */
-  font-size: 16px;
-}
-
-/* Image Section */
-.image-section {
-  width: 20%; /* Adjust width of the image section */
-  display: flex;
-  justify-content: center; /* Center the image */
-  align-items: flex-start; /* Align at the top */
-}
-
-.long-image {
-  max-width: 70%; /* Ensures the image scales within its container */
-  height: auto; /* Maintains the aspect ratio */
-  border-radius: 10px; /* Optional: Add rounded corners to the image */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
-}
-
-.text-content {
-  display: flex;
-  flex-direction: column; /* Stack h3 and p vertically */
-  margin-left: 40px; /* Matches the existing spacing */
-}
-
 .text-content h3 {
-  margin: 0; /* Removes default margin for better spacing */
-  font-size: 18px;
+  font-size: 1.2rem;
   color: #ffffff;
 }
 
 .text-content p {
-  margin: 5px 0 0; /* Adds a small gap below h3 */
-  font-size: 14px; /* Adjust font size for better readability */
-  color: #555; /* Slightly lighter text color for distinction */
-}
-
-/* Content Container */
-.content-container {
-  display: flex; /* Align the cards and image side by side */
-  align-items: flex-start; /* Align items to the top */
-  justify-content: space-between; /* Add space between cards and image */
-  gap: 20px; /* Add spacing between the two sections */
-  flex-wrap: wrap; /* Ensure responsiveness */
-  margin: 20px 0;
-}
-
-/* Stripes Section (Cards) */
-.stripes-section {
-  display: flex;
-  flex-direction: column; /* Stack cards vertically */
-  flex: 1; /* Allow cards to take available space */
+  font-size: 1rem;
+  color: #555;
 }
 
 /* Image Section */
 .image-section {
-  flex: 0.5; /* Make the image take half the space compared to cards */
+  flex: 1;
   display: flex;
-  justify-content: center; /* Center the image horizontally */
-  align-items: center; /* Center the image vertically */
+  justify-content: center;
 }
 
 .long-image {
-  max-width: 100%; /* Ensure the image scales responsively */
-  max-height: 400px; /* Limit the height to maintain design consistency */
-  object-fit: cover; /* Adjust the image scaling */
-  border-radius: 8px; /* Optional: Add rounded corners */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visuals */
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries */
+@media (max-width: 480px) {
+  .heading5 {
+    font-size: 1.8rem;
+  }
+
+  .box3 {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  .text-content h3 {
+    font-size: 0.9rem;
+  }
+
+  .text-content p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 600px) {
+  .heading5 {
+    font-size: 2rem;
+  }
+
+  .box3 {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  .text-content h3 {
+    font-size: 1rem;
+  }
+
+  .text-content p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .heading5 {
+    font-size: 2.2rem;
+  }
+
+  .box3 {
+    padding: 18px;
+    font-size: 1rem;
+  }
+
+  .text-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .text-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .heading5 {
+    font-size: 2.5rem;
+  }
+
+  .box3 {
+    padding: 20px;
+    font-size: 1.1rem;
+  }
+
+  .text-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+  }
 }
