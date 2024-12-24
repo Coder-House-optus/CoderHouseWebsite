@@ -8,7 +8,7 @@
     position: relative; /* Allows for overlaying of content on the background */
     z-index: 1;
     font-family: poppins;
-    margin-top:90px;
+    margin-top: 90px;
 }
 
 .review-section::before {
@@ -80,7 +80,6 @@
     margin-left: 2px; /* Adjust as needed for horizontal centering */
 }
 
-
 .stars {
     color: #f1c40f; /* Star color */
     margin-bottom: 10px;
@@ -101,7 +100,7 @@
 }
 
 .review-text {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     color: #555;
     margin-top: 10px;
@@ -129,4 +128,60 @@
 
 .dot:hover {
     background-color: #FF7895;
+}
+
+/* Responsive adjustments for screens with max-width 480px */
+@media screen and (max-width: 480px) {
+    .review-section {
+        margin-top: 50px; /* Reduced margin for smaller screens */
+        padding: 10px;
+    }
+
+    .review-title {
+        font-size: 2rem; /* Adjusted for better fit */
+        margin-bottom: 50px; /* Reduced spacing */
+    }
+
+    .review-card {
+        width: 90%; /* Adjusted width for smaller screens */
+        height: auto; /* Allow dynamic height */
+        padding: 20px; /* Reduced padding */
+        margin: 20px auto; /* Add spacing between cards */
+    }
+
+    .quote-icon {
+        top: 10px;
+        left: 10px;
+        width: 80px; /* Scaled for smaller screens */
+        height: 80px;
+    }
+
+    .double-quote {
+        font-size: 5rem; /* Adjusted size for smaller screens */
+    }
+
+    .stars {
+        font-size: 0.9rem; /* Adjusted for smaller visibility */
+        margin-bottom: 5px;
+    }
+
+    .review-author {
+        font-size: 1.2rem; /* Adjusted for smaller screens */
+    }
+
+    .review-text {
+        font-size: 1rem; /* Adjusted for readability */
+        margin-top: 5px;
+    }
+
+    .review-dots {
+        margin-top: 15px;
+    }
+
+    .dot,
+    .active-dot {
+        width: 8px;
+        height: 8px; /* Adjusted for smaller screens */
+        margin: 0 4px;
+    }
 }

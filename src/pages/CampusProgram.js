@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';  // Import useNavigate hook
 import './CampusProgram.css';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const CampusProgram = () => {
+  const navigate = useNavigate();  // Use navigate hook
+
   // State for programs and image index
   const technicalPrograms = [
     { 
@@ -12,7 +15,8 @@ const CampusProgram = () => {
       description: "Get hands-on with the fundamentals of C programming.", 
       duration: "4 months", 
       cost: "$600", 
-      image: "/images/c.png"  // Local image path
+      image: "/images/c.png",
+      link: "/programs/c-programming"  // Add unique link for each program
     },
     { 
       name: "C++ Programming", 
@@ -20,7 +24,8 @@ const CampusProgram = () => {
       description: "Master C++ programming with object-oriented design, data structures, and algorithms.", 
       duration: "6 months", 
       cost: "$700", 
-      image: "/images/c.png"  // Local image path
+      image: "/images/c.png",
+      link: "/programs/cpp-programming"  // Add unique link for each program
     },
     { 
       name: "Java Programming", 
@@ -28,7 +33,8 @@ const CampusProgram = () => {
       description: "Learn Java for software development, covering OOP concepts and data structures.", 
       duration: "5 months", 
       cost: "$750", 
-      image: "/images/java.png"  // External image URL
+      image: "/images/java.png",
+      link: "/programs/java-programming"  // Add unique link for each program
     },
     { 
       name: "Python Programming", 
@@ -36,7 +42,8 @@ const CampusProgram = () => {
       description: "Get started with Python for versatile applications in data science and web development.", 
       duration: "3 months", 
       cost: "$600", 
-      image: "/images/Pythoncard.png"  // Local image path
+      image: "/images/Pythoncard.png",
+      link: "/programs/python-programming"  // Add unique link for each program
     },
     { 
       name: "Full Stack Development", 
@@ -44,7 +51,8 @@ const CampusProgram = () => {
       description: "Learn front-end and back-end technologies for building web applications.", 
       duration: "6 months", 
       cost: "$850", 
-      image: "/images/Fullstackcard.png"  // Local image path
+      image: "/images/Fullstackcard.png",
+      link: "/programs/full-stack-development"  // Add unique link for each program
     },
     { 
       name: "Cybersecurity", 
@@ -52,7 +60,8 @@ const CampusProgram = () => {
       description: "Understand the principles of security and protect systems from cyber threats.", 
       duration: "5 months", 
       cost: "$950", 
-      image: "/images/Cybersecuritycard.png"  // External image URL
+      image: "/images/Cybersecuritycard.png",
+      link: "/programs/cybersecurity"  // Add unique link for each program
     },
     { 
       name: "Machine Learning", 
@@ -60,7 +69,8 @@ const CampusProgram = () => {
       description: "Explore machine learning concepts with hands-on projects using Python.", 
       duration: "4 months", 
       cost: "$900", 
-      image: "/images/MLcard.png"  // Local image path
+      image: "/images/MLcard.png",
+      link: "/programs/machine-learning"  // Add unique link for each program
     }
   ];
   
@@ -71,7 +81,8 @@ const CampusProgram = () => {
       description: "Enhance your logical reasoning and mathematical skills.", 
       duration: "2 months", 
       cost: "$300", 
-      image: "/images/Aptitude card.png"  // Local image path
+      image: "/images/Aptitude card.png",
+      link: "/programs/aptitude"  // Add unique link for each program
     },
     { 
       name: "Reasoning", 
@@ -79,7 +90,8 @@ const CampusProgram = () => {
       description: "Build strong reasoning skills for analytical and critical thinking.", 
       duration: "2 months", 
       cost: "$300", 
-      image: "/images/Reasoning card.png"  // External image URL
+      image: "/images/Reasoning card.png",
+      link: "/programs/reasoning"  // Add unique link for each program
     },
     { 
       name: "English", 
@@ -87,7 +99,8 @@ const CampusProgram = () => {
       description: "Get a solid foundation in English and problem-solving.", 
       duration: "3 months", 
       cost: "$500", 
-      image: "/images/english card.png"  // Local image path
+      image: "/images/english card.png",
+      link: "/programs/english"  // Add unique link for each program
     },
     { 
       name: "Personality Development", 
@@ -95,15 +108,17 @@ const CampusProgram = () => {
       description: "Improve your communication, leadership, and soft skills.", 
       duration: "2 months", 
       cost: "$400", 
-      image: "/images/PD Card.png"  // External image URL
+      image: "/images/PD Card.png",
+      link: "/programs/personality-development"  // Add unique link for each program
     },
     { 
-      name: "GDPI (Group Discussion & Personal Interview)", 
+      name: "GD & Personal Interview", 
       symbol: "🗣️", 
       description: "Develop essential skills for group discussions and interviews.", 
       duration: "1 month", 
       cost: "$250", 
-      image: "/images/GDPI Card.png"  // Local image path
+      image: "/images/GDPI Card.png",
+      link: "/programs/gd-pi"  // Add unique link for each program
     }
   ];
   
@@ -162,8 +177,8 @@ const CampusProgram = () => {
 
   // Define handleViewMore here
   const handleViewMore = () => {
-    // Logic for handling view more action (e.g., display more details or open a modal)
-    console.log("View More clicked for program:", selectedProgram.name);
+    // Use navigate to go to the corresponding program page
+    navigate(selectedProgram.link);  
   };
 
   return (
@@ -220,7 +235,6 @@ const CampusProgram = () => {
           </div>
           <div className="program-details">
             <h3 className="program-name-details">{selectedProgram.name}</h3>
-            <p className="program-description">{selectedProgram.description}</p>
             <p><strong>Duration:</strong> {selectedProgram.duration}</p>
             {/* View More Button */}
             <button onClick={handleViewMore} className="view-more-button">View More</button>
@@ -241,7 +255,6 @@ const CampusProgram = () => {
         <span className="text-green"> Form</span>
       </h2>
       <div className="enquiry-form-container">
-      
         <form onSubmit={handleFormSubmit} className="enquiry-form">
           <input
             type="text"

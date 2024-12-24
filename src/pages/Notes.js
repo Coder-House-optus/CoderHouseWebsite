@@ -25,8 +25,9 @@ const Notes = () => {
       <header className="navbar1">
         <div className="title-container">
           <div>
-            <h1> Notes </h1>
-            <p className="tagline">Explore notes for 20+ topics and enhance your learning journey</p>
+            <h1> Code & Beyond </h1>
+            <h1>"Explore, Master, and Innovate"</h1>
+            <p className="tagline">Discover, Learn, and Master 20+ Topics</p>
           </div>
         </div>
         <div className="search-container">
@@ -46,7 +47,7 @@ const Notes = () => {
           filteredCategories.map((category, index) => (
             <div key={index} className="note-item">
               <h2 className="category-title">{category}</h2>
-              <p className="category-description">Explore notes on {category} to master the topic!</p>
+              <p className="category-description">Explore more on {category}!</p>
             </div>
           ))
         ) : null}

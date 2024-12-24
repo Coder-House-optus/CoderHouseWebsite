@@ -8,6 +8,8 @@
   color: white;
 }
 
+
+
 .program-card:hover {
   background-color: #C6E894;
   transform: scale(1.05);
@@ -38,18 +40,7 @@
   transition: transform 0.3s;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .program-card {
-    flex: 1 1 calc(50% - 1rem); /* Two cards per row on medium screens */
-  }
-}
 
-@media (max-width: 768px) {
-  .program-card {
-    flex: 1 1 100%; /* One card per row on small screens */
-  }
-}
 
 /* Program Image */
 .program-image {
@@ -83,31 +74,7 @@
   font-size: 1.1rem;
 }
 
-/* Responsiveness */
-@media (max-width: 1000px) {
-  .program-cards {
-    grid-template-columns: repeat(5, 1fr); /* Two columns on medium screens */
-  }
 
-  .program-details-container {
-    flex-direction: column;
-  }
-
-  .program-image,
-  .program-details {
-    width: 100%;
-  }
-
-  .program-image img {
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 480px) {
-  .program-cards {
-    grid-template-columns: 1fr; /* One column on mobile */
-  }
-}
 
 
 @keyframes rotate {
@@ -291,8 +258,8 @@ input:focus, select:focus, textarea:focus {
   padding: 20px;
   border-radius: 8px;
   background-color: #251e1e;
-  width: 100%;
-  max-width: 1100px;
+  width: 80%;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   background-color: #ffffff;
@@ -463,9 +430,477 @@ input:focus, select:focus, textarea:focus {
 }
 
 
+.section-title{
+  text-align: center; /* Center the title */
+  font-size: 1.5rem; /* Adjust font size */
+  margin: 50px 300px; /* Automatically adjust the margin for centering */
+  padding: 0.5rem 0; 
+}
 
-@keyframes gradientAnimation {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
+
+.program-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45%; /* Adjust width for tablet */
+  max-width: 400px; /* Set a larger maximum width */
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  margin: 0 auto;
+  height: 200px;
+}
+
+
+
+
+/* For mobile view (768px or smaller) */
+@media (max-width: 768px) {
+  /* Hide horizontal overflow */
+  body, html {
+    overflow-x: hidden;
+  }
+
+  /* Adjust Program Cards Layout */
+  .program-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 1rem; /* Space between cards */
+    padding: 1rem; /* Padding around the grid */
+  }
+
+  /* Adjust the card size and font for mobile */
+  .program-card {
+    padding: 0.75rem; /* Reduce padding inside each card */
+    font-size: 0.475rem; /* Smaller font size */
+    width: 100%; /* Ensure cards are responsive */
+    box-sizing: border-box; /* Include padding in the width calculation */
+  }
+
+  /* Adjust Program Image */
+  .program-image {
+    display: none; /* Hide image on mobile */
+  }
+
+  /* Adjust Program Details */
+  .program-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center the content horizontally */
+    width: 30%; /* Smaller width */
+    max-width: 200px; /* Set a maximum width */
+    background: rgba(255, 255, 255, 0.15); /* Transparent background */
+    backdrop-filter: blur(8px); /* Frosted glass effect */
+    border-radius: 15px;
+    padding: 10px; /* Reduced padding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add depth */
+    height: auto;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 0 auto; /* Center horizontally */
+  }
+
+  .program-details h4,
+  .program-details p {
+    color: rgb(89, 89, 89);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+
+  /* Adjust Program Name and Description */
+  .program-name-details {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #c3e47d;
+  }
+
+  .program-description {
+    font-size: 1.0rem;
+    margin-top: 10px;
+    color: #fff;
+  }
+
+  /* Center the enquiry form container */
+.enquiry-form-container {
+  max-width: 400px; /* Smaller form size */
+  width: 80%;
+  margin: 40px auto; /* Center the form horizontally and add top/bottom margin */
+  background: #547698;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  color: black;
+  text-align: center; /* Align text in the form center */
+}
+
+/* Styling for the form groups (inputs and textareas) */
+.form-group {
+  margin-bottom: 1.3rem;
+}
+
+/* Make the input fields and textarea larger */
+input[type="text"], 
+select, 
+textarea {
+  width: 90%;
+  padding: 15px; /* Increase padding to make the fields larger */
+  font-size: 16px; /* Increase font size */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 5px 0;
+}
+
+/* Adjust textarea to match the input fields */
+textarea {
+  min-height: 100px; /* Increase the height of the textarea */
+}
+
+/* Placeholder styling to make it larger */
+input[type="text"]::placeholder,
+textarea::placeholder {
+  font-size: 18px; /* Increase placeholder font size */
+  color: #888;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+  padding: 12px 80px;
+  font-size: 18px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Submit button hover effect */
+button[type="submit"]:hover {
+  background-color: #5a6369;
+}
+
+
+  .submit-button {
+    width: 80%; /* Wider submit button */
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Adjust Heading Styles for Program Section */
+  .programs-title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-align: center;
+    gap: 0.5rem;
+    color: #333;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+
+
+  .program-details {
+    flex-direction: column;
+    align-items: center; /* Center the content */
+    width: 90%; /* Smaller width */
+    max-width: 300px; /* Set a maximum width */
+    padding: 10px; /* Reduced padding */
+    margin: 0 auto; /* Center horizontally */
+  }
+
+  .program-column {
+    width: 100%;
+    margin-bottom: 20px; /* Space between columns */
+  }
+
+  .program-column h3 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .program-column ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .program-column li {
+    font-size: 16px;
+    color: #fff;
+    margin: 5px 0;
+  }
+
+
+  /* Make select dropdowns bigger (Course and Mode) */
+select {
+  height: 50px; /* Increase the height of the select dropdown */
+  padding: 15px; /* Increase padding inside the select dropdown */
+  font-size: 16px; /* Increase font size */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 5px 0;
+  width:393px;
+}
+
+
+}
+
+
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Hide horizontal overflow */
+  body, html {
+    overflow-x: hidden;
+  }
+
+  /* Adjust Program Cards Layout */
+  .program-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 2 cards per row for tablet view */
+    gap: 1.5rem; /* Adjust space between cards */
+    padding: 1.5rem; /* Padding around the grid */
+  }
+
+  /* Adjust the card size and font for tablet */
+  .program-card {
+    padding: 1rem; /* Moderate padding */
+    font-size: 0.6rem; /* Slightly larger font size than mobile */
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Show program images for tablet */
+  .program-image {
+    display: block; /* Show images for larger screens */
+    max-width: 100%;
+    height: auto; /* Ensure images scale proportionally */
+  }
+
+  /* Adjust Program Details */
+  .program-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%; /* Adjust width for tablet */
+    max-width: 400px; /* Set a larger maximum width */
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    margin: 0 auto;
+    height: 170px;
+  }
+
+  .program-details h4,
+  .program-details p {
+    color: rgb(69, 69, 69);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+  }
+
+  /* Adjust Program Name and Description */
+  .program-name-details {
+    font-size: 1.2rem; /* Slightly larger font size */
+    font-weight: bold;
+    color: #b4df6b;
+
+  }
+
+  .program-description {
+    font-size: 1.2rem; /* Increase description font size */
+    margin-top: 12px;
+    color: #fff;
+  }
+
+  /* Center the enquiry form container */
+  .enquiry-form-container {
+    max-width: 500px;
+    width: 90%;
+    margin: 50px auto;
+    background: #456789;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    color: black;
+    text-align: center;
+  }
+
+  /* Styling for the form groups */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Adjust input fields and textarea */
+  input[type="text"], 
+  select, 
+  textarea {
+    width: 95%;
+    padding: 12px; /* Slightly smaller padding */
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  textarea {
+    min-height: 120px;
+  }
+
+  input[type="text"]::placeholder,
+  textarea::placeholder {
+    font-size: 16px;
+    color: #888;
+  }
+
+  /* Submit button styling */
+  button[type="submit"] {
+    padding: 12px 60px;
+    font-size: 16px;
+    background-color: #70757a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #5a6369;
+  }
+
+  .submit-button {
+    width: 70%;
+    padding: 0.8rem 0;
+    font-size: 1rem;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Adjust Heading Styles for Program Section */
+  .programs-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #444;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+  }
+
+  .program-column {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .program-column h3 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .program-column ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .program-column li {
+    font-size: 18px;
+    color: #fff;
+    margin: 7px 0;
+  }
+
+  /* Select dropdown styling */
+  select {
+    height: 45px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+    width: 90%;
+  }
+}
+
+
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Adjust Program Details Container */
+  .program-details-container {
+    width: 100%; /* Smaller width for tablet view */
+    margin: 20px auto; /* Center the container and add top margin */
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 1.2rem; /* Slightly reduced padding */
+    /* box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);  */
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    height: 300px;
+  }
+
+  /* Adjust Program Name and Description */
+  .program-details-container .program-name-details {
+    font-size: 1.2rem; /* Slightly smaller font size */
+    font-weight: bold;
+    color: #b4df6b;
+    height: 200px;
+  }
+
+  .program-details-container .program-description {
+    font-size: 1.1rem; /* Reduced font size for description */
+    margin-top: 10px;
+    color: #fff;
+  }
+}
+
+
+
+
+/* For tablet view (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Adjust Program Cards Layout */
+  .program-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  /* Adjust Program Details Container */
+  .program-details-container {
+    max-width: 90%; /* Set max-width to 90% for better scaling */
+    margin-top: 20px; /* Adjusted top margin for spacing */
+    padding: 10px; /* Reduce padding for compactness */
+  }
+
+  /* Adjust Program Card */
+  .program-card {
+    flex: 1 1 45%; /* Increase the width of the card for tablet */
+    font-size: 0.8rem; /* Slightly bigger text for readability */
+  }
+
+  /* Program Details Layout */
+  .program-details {
+    width: 100%; /* Ensure it takes full width */
+    padding-left: 0; /* Remove left padding for more space */
+  }
+
+  .program-image {
+    width: 100%; /* Make the image take full width */
+    margin-bottom: 10px; /* Space below image */
+  }
+
+  .program-details h4,
+  .program-details p {
+    font-size: 1rem; /* Slightly increase font size */
+  }
 }
 

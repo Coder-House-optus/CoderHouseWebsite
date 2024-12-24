@@ -194,3 +194,66 @@
     font-size: 14px; /* Smaller font size for mobile */
   }
 }
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Tablet View for .swayam-batch */
+  .swayam-batch {
+    max-width: 90%; /* Adjust container width for tablets */
+    background-size: cover; /* Ensure the background image scales properly */
+    background-position: center; /* Center the background image */
+    padding: 20px; /* Padding for better spacing */
+  }
+
+  /* Tablet View for header */
+  .header h2 {
+    margin-top: 60px;
+    font-size: 1.6em; /* Adjust font size for tablets */
+    margin-bottom: 40px;
+  }
+
+  /* Tablet View for features list */
+  .features5 li {
+    width: auto; /* Let the list items take full width */
+    margin-left: 0; /* Reset left margin */
+    font-size: 15px; /* Adjust text size for tablets */
+    padding: 10px 18px; /* Adjust padding for tablets */
+  }
+
+  /* Tablet View for technologies section */
+  .technologies1 {
+    margin-left: 0;
+    max-width: 100%; /* Allow the container to take up full width */
+  }
+
+  .technologies1 h3 {
+    font-size: 1.5em; /* Slightly smaller font size for tablet headers */
+    margin-bottom: 40px;
+  }
+
+  /* Tablet View for tech grid */
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr); /* Display 3 items per row on tablets */
+    gap: 20px; /* Adjust spacing between grid items */
+  }
+
+  /* Tablet View for tech items */
+  .tech-item img {
+    max-width: 45px; /* Adjust image size */
+  }
+
+  .tech-item p {
+    font-size: 15px; /* Adjust font size for tablet view */
+  }
+
+  /* Tablet View for back button */
+  .back-button1 {
+    top: 15px;
+    left: 15px;
+    padding: 10px 18px; /* Adjust padding for tablet buttons */
+    font-size: 15px; /* Adjust font size */
+  }
+}
+
+
