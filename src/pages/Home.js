@@ -67,7 +67,7 @@ export default function Home() {
       <div className="White">
   <div className="item">
     <img src="/images/arrow.png" alt="Arrow Image" />
-    <div className="text">147% Avgerage Hike</div>
+    <div className="text">147% Average Hike</div>
   </div>
   <div className="item">
     <img src="/images/Career.png" alt="Career Image" />
