@@ -21,6 +21,19 @@ import AboutUs from './pages/AboutUs';
 import Gform from './pages/Gform'; // Import the Gform component
 
 
+import CProgramming from './Programs/c-programming';
+import CPlusPlusProgramming from './Programs/CPlusPlusProgramming';
+import JavaProgramming from './Programs/JavaProgramming';
+import PythonProgramming from './Programs/PythonProgramming';
+import FullStackDevelopment from './Programs/FullStackDevelopment';
+import Cybersecurity from './Programs/Cybersecurity';
+import MachineLearning from './Programs/MachineLearning';
+import Aptitude from './Programs/aptitude';
+import Reasoning from './Programs/reasoning';
+import English from './Programs/english';
+import PersonalityDevelopment from './Programs/personality-development';
+import GDPersonalInterview from './Programs/gd-personal-interview';
+
 import './App.css';
 import ResumeBuilding from './pages/ResumeBuilding';
 
@@ -57,6 +70,20 @@ function App() {
           <Route path="/Amcat" element={<Amcat />} />
           <Route path="/Cocubes" element={<Cocubes/>} />
           <Route path="/Elitmus" element={<Elitmus/>} />
+
+          <Route path="/programs/c-programming" element={<CProgramming />} />
+          <Route path="/programs/c-plus-plus-programming" element={<CPlusPlusProgramming />} />
+          <Route path="/programs/java-programming" element={<JavaProgramming />} />
+          <Route path="/programs/python-programming" element={<PythonProgramming />} />
+          <Route path="/programs/full-stack-development" element={<FullStackDevelopment />} />
+          <Route path="/programs/cybersecurity" element={<Cybersecurity />} />
+          <Route path="/programs/machine-learning" element={<MachineLearning />} />
+          <Route path="/programs/aptitude" element={<Aptitude />} />
+          <Route path="/programs/reasoning" element={<Reasoning />} />
+          <Route path="/programs/english" element={<English />} />
+          <Route path="/programs/personality-development" element={<PersonalityDevelopment />} />
+          <Route path="/programs/gd-personal-interview" element={<GDPersonalInterview />} />
+
         </Routes>
       </Router>
     </div>
