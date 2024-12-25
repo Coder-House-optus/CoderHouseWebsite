@@ -17,7 +17,7 @@ const achievers = [
   },
   {
     company: "TCS",
-    logo: "../images/tcs-logo.png",
+    logo: "../images/image 3.png",
     people: [
       { name: "Samiksha Mehta", photo: "../images/TCS/Samiksha Mehta.jpg" },
       { name: "Saurabh tiwari", photo: "../images/TCS/Saurabh tiwari.jpg" },

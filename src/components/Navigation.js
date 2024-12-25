@@ -30,7 +30,7 @@ const Navigation = () => {
         <li><a href="/">Home</a></li>
 
         <li className="dropdown">
-          <button className="dropdown-toggle" onClick={toggleProgramsDropdown}>
+          <button className="dropdown-toggle set-font" onClick={toggleProgramsDropdown}>
             Programs
           </button>
           {isProgramsDropdownOpen && (
@@ -42,7 +42,7 @@ const Navigation = () => {
         </li>
 
         <li className="dropdown">
-          <button className="dropdown-toggle" onClick={toggleInfoDropdown}>
+          <button className="dropdown-toggle set-font" onClick={toggleInfoDropdown}>
             Information
           </button>
           {isInfoDropdownOpen && (

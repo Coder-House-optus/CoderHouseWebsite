@@ -1,516 +1,3 @@
-/* Home.css */
-
-.home {
-  font-family: poppins;
-}
-
-.hero-heading {
-  text-align: center;
-  font-family: 'Poppins';
-}
-
-.text-white {
-  color: white;
-}
-.text-white2 {
-  font-size: 1.3rem;
-  color: white;
-}
-
-.text-green {
-  font-size: 1.3rem;
-  color: #C5F678;
-}
-
-
-/* Hero Section */
-.hero {
-  background-image: url('/public/images/Home.png');
-  display: flex;
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center the content horizontally */
-  background-size: 150rem 82rem;
-  padding-bottom: 15rem; /* Padding for the section */
-  height: auto; /* Adjust height to fit the content */
-  
-}
-
-.hero-left {
-  margin-left: 10rem;
-  margin-top: 3rem;
-  width: 0rem;
-  height: auto;
-}
-
-
-.hero-right {
-  box-shadow: 0rem .4rem .8rem rgba(0, 0, 0, 0.15);
-  flex: 1; /* Take up one part of the space */
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
-  justify-content: center; /* Center form vertically */
-  background-color: #3C5C7B; /* Grey background */
-  color: #ffffff;
-  border-radius: 3rem;
-  padding: 1rem; /* Adjust padding to reduce the grey area */
-  max-width: 50rem; /* Optional: limit width to match the form */
-  margin: 0 auto; /* Center the grey area */
-  margin-right: 9rem;
-
-  /* Add shadow to the container box */
-  box-shadow: 0rem .8rem 1.6rem rgba(0, 0, 0, 0.25); /* Adjust shadow values as desired */
-}
-
-/* Style for all input fields, select, and textarea */
-.hero-right input[type="text"],
-.hero-right input[type="email"],
-.hero-right input[type="phone"],
-.hero-right input[type="url"],
-.hero-right textarea {
-  border-radius: .8rem;
-  padding: 1.4rem;
-  margin: .5rem 0;
-  box-shadow: 0rem .4rem .8rem rgba(0, 0, 0, 0.15); /* Shadow for input and textarea */
-  border: none; /* Remove default border */
-  width: 100%; /* Full width */
-  font-size: 1.6rem;
-  outline: none;
-}
-
-/* Additional styling specifically for the select dropdown */
-.hero-right select {
-  border-radius: .8rem;
-  padding: 1.4rem;
-  margin: .2rem 0;
-  box-shadow: 0rem .4rem .8rem rgba(0, 0, 0, 0.15); /* Shadow for select dropdown */
-  border: none;
-  width: 107%;
-  font-size: 1.6rem;
-  outline: none;
-  background-color: #C6E894; /* White background for visibility */
-  color: #3C5C7B; /* Text color for contrast */
-  appearance: none; /* Remove default dropdown arrow for custom styling */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  position: relative;
-}
-
-/* Optional: add custom arrow for the dropdown */
-.hero-right select::after {
-  content: "▼"; /* Custom dropdown arrow */
-  position: absolute;
-  right: .5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  color: #3C5C7B; /* Arrow color to match the form styling */
-  appearance: none; /* Remove default dropdown arrow for custom styling */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  position: relative;
-}
-.hero-right select::after {
-  content: "▼"; /* Custom dropdown arrow */
-  position: absolute;
-  right: 1.5rem;
-  top: 20%;
-  transform: translateY(-50%); /* Center vertically */
-  pointer-events: none;
-  color: #3C5C7B; /* Arrow color to match the form styling */
-  font-size: 1.2rem; /* Increase font size for better visibility */
-  line-height: 1; /* Ensure no additional spacing around the arrow */
-}
-
-.hero-heading {
-  margin-bottom: 2.0rem; /* Space below the heading */
-}
-
-.form {
-  display: flex;
-  flex-direction: column; /* Stack form fields vertically */
-  background-color: rgba(255, 255, 255, 0.8); /* Grey background with transparency */
-  padding: 0rem 3.0rem; /* Reduced padding for smaller form */
-  border-radius: .8rem; /* Rounded corners */
-  background-color: #3C5C7B;
-  margin: 0 auto; /* Center the form */
-  width: 80%; /* Set a maximum width for the form, adjust as needed */
-  max-width: 40rem; /* Set a max-width for the form to keep it compact */
-  padding-bottom: 6rem;
-  margin-right: 6rem;
-}
-
-.input-field {
-  margin-bottom: 1rem; /* Reduced space between input fields */
-  border: .1rem solid #ccc; /* Light grey border */
-  border-radius: .5rem; /* Rounded corners */
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.806), rgba(255, 255, 255, 0)); /* Gradient from white to transparent */
-  color: #000; /* Text color */
-  box-shadow: 0rem 0 .5rem rgba(255, 255, 255, 0.5); /* Slight white shadow on the right */
-  padding: 1rem; /* Add padding for better text spacing */
-  outline: none; /* Remove default outline on focus */
-  transition: border-color 0.3s ease; /* Smooth transition for border color */
-}
-
-/* Optional: Change border color on focus */
-.input-field:focus {
-  border-color: #A8D85D; /* Change to a green color on focus */
-  box-shadow: 0 0 5rem rgba(168, 216, 93, 0.5); /* Optional: add a glow effect */
-}
-
-
-/* Button styling */
-/* Button styling */
-.callback-btn {
-  background-color: #A8D85D; /* Green background */
-  color: white; /* White text */
-  padding: 1.3rem;
-  border: none;
-  font-size: 1.2rem;
-  border-radius: 2.5rem; /* Increased radius for more rounded corners */
-  cursor: pointer; /* Pointer on hover */
-  width: 50%; /* Set width */
-  margin: 1rem auto; /* Center the button */
-  display: block; /* Make the button a block element for margin to take effect */
-  text-align: center; /* Center text inside the button */
-  transition: box-shadow 0.3s ease; /* Smooth transition for box shadow */
-  transform: translateX(.5rem); /* Shift the button to the right normally */
-}
-
-/* Optional: To center the button in its container */
-.hero-right {
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
-}
-
-.callback-btn:hover {
-  background-color: #45a049; /* Darker green on hover */
-  box-shadow: 0 0 2rem rgba(168, 216, 93, 0.8); /* Glowing effect */
-}
-
-/* Optional: Add focus styles for accessibility */
-.callback-btn:focus {
-  outline: none; /* Remove default outline */
-  box-shadow: 0 0 .5rem #45a049; /* Add focus glow */
-}
-
-
-.White {
-  width: 117rem;
-  height: 15rem;
-  margin-left: 17rem;
-  box-shadow: 0rem 0 .5rem rgba(14, 3, 3, 0.5); /* Slight white shadow on the right */
-  z-index: 100;
-  background-color: rgb(255, 255, 255);
-  border-radius: 1.4rem;
-  margin-top: -11rem;
-}
-
-/* Features Card Section */
-
-/* Plans Section */
-.home-plans {
-  background-color: #f9f9f9;
-  padding: 5rem;
-  text-align: center;
-}
-
-.home-plans-grid {
-  display: flex;
-  justify-content: space-around;
-}
-
-.home-plan-card {
-  background-color: #dcedc8;
-  padding: 2rem;
-  border-radius: 1rem;
-  width: 30%;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.home-plan-card:hover {
-  transform: scale(1.1);
-  box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.3);
-}
-
-.home-plan-card:hover .details {
-  opacity: 1;
-}
-
-.details {
-  opacity: 0;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 2rem;
-  text-align: left;
-  transition: opacity 0.3s ease;
-}
-
-.price {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
-/* Reviews Section */
-.reviews {
-  padding: 5rem;
-  background-color: #ffffff;
-}
-
-.review-card {
-  background-color: #fff9c4;
-  padding: 2rem;
-  border-radius: 1rem;
-  max-width: 60rem;
-  margin: 0 auto;
-}
-
-/* Mentors Section */
-.mentors {
-  padding: 5rem;
-  text-align: center;
-}
-
-.mentor-list {
-  list-style: none;
-  padding: 0;
-}
-
-.mentor-list li {
-  background-color: #fce4ec;
-  padding: 1rem;
-  margin: 1rem 0;
-  border-radius: .5rem;
-}
-
-/* Pricing Table CSS */
-html{
-  font-size:62.5%;
-}
-
-.pricingTable-title {
-  text-align: center;
-  color: #192d68;
-  font-size: 3rem;
-  margin-bottom: 2rem;
-  letter-spacing: 0.04rem;
-}
-
-.programs {
-  color: #C6E894; /* Set the color to green */
-  font-weight: bold;
-}
-
-.pricingTable-subtitle {
-  text-align: center;
-  color: #b4bdc6;
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-}
-
-.pricingTable-firstTable {
-  list-style: none;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  text-align: center;
-  background-image: url('/public/images/CoursesBg.png'); /* Path to your background image */
-  background-size: cover; /* Cover the entire section */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  padding: 4rem; /* Add padding around the content */
-  color: white; /* Ensure text is visible against the background */
-}
-
-/* Glassmorphism effect for the pricing table card */
-.pricingTable-firstTable_table {
-  width: 21%;
-  background: rgba(255, 255, 255, 0.8); /* White with some transparency */
-  backdrop-filter: blur(1rem); /* Apply blur effect */
-  display: inline-block;
-  padding: 0rem 3rem 4rem 3rem;
-  text-align: center;
-  max-width: 32rem;
-  transition: all 0.3s ease;
-  border-radius: 3rem; /* Increased border-radius for smoother edges */
-  box-shadow: 0rem .8rem 1.5rem rgba(0, 0, 0, 0.1); /* Soft shadow for a floating effect */
-  position: relative;
-  border: .1rem solid rgba(255, 255, 255, 0.5); /* Optional: border for more definition */
-}
-
-.pricingTable-firstTable_table:hover {
-  transform: scale(1.08);
-  box-shadow: 0rem 1.6rem 2.4rem rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
-}
-
-.pricingTable-firstTable_table__header {
-  font-size: 1.6rem;
-  padding: 4rem 0rem;
-  border-bottom: .2rem solid #ebedec;
-  letter-spacing: 0.03rem;
-  color: #1c1c1d; /* Subtle color update for improved readability */
-}
-
-.pricingTable-firstTable_table__pricing {
-  font-size: 3rem;
-  padding: 2rem 0rem;
-  border-bottom: .2rem solid #ebedec;
-  color: #32383a; /* Highlighted pricing with accent color */
-}
-
-.pricingTable-firstTable_table__pricing span:first-of-type {
-  font-size: 0.35rem;
-  vertical-align: top;
-}
-
-.pricingTable-firstTable_table__pricing span:last-of-type {
-  vertical-align: bottom;
-  font-size: 0.30rem;
-  padding-left: 0.2rem;
-}
-
-.pricingTable-firstTable_table__options {
-  list-style: none;
-  padding: 1.5rem;
-  font-size: 0.9em;
-  border-bottom: .2rem solid #ebedec;
-  margin-bottom: 2.0rem; /* Added spacing below the options for better layout */
-}
-
-.pricingTable-firstTable_table__options li {
-  padding: .8rem 0rem;
-  color: #000000;
-  position: relative;
-}
-
-.pricingTable-firstTable_table__options li:before {
-  content: '✓';
-  color: white;
-  background-color: #C6E894;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.5rem; /* Set a specific size for the checkmark */
-  height: 1.5rem; /* Set a specific height for the checkmark */
-  position: absolute;
-  left: -3rem; /* Adjust the position of the checkmark */
-}
-
-.pricingTable-firstTable_table__options li:last-child {
-  border-bottom: none; /* Remove bottom border from the last item */
-}
-
-
-
-.White {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0rem;
-  background-color: #ffffff;
-
-}
-
-.item {
-  display: flex;
-  align-items: center; /* Aligns image and text vertically */
-  text-align: left;
-  margin-right: 9rem;
-}
-
-.item img {
-  width: 6rem; /* Adjust as needed */
-  height: auto;
-  margin-right: 1rem; /* Adds space between image and text */
-}
-
-.text {
-  width: 1rem;
-  font-size: 2rem;
-  color: #333;
-  font-weight:bold;
-}
-
-
-
-
-/* Home.css */
-
-/* Updated Glass Effect for Program Cards */
-
-.programs-container {
-  text-align: center;
-  padding: 5rem 2rem;
-  background-image: url('/public/images/planCard.png'); /* Background image for the section */
-  background-size: cover;
-  background-position: center;
-}
-
-.programs-heading {
-  font-size: 3rem;
-  color: rgb(250, 244, 244);
-  margin-bottom: 2rem;
-}
-
-.program-section {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-}
-
-@media (min-width: 768rem) {
-  .program-section {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-@media(max-width:998px){
-  html{
-    font-size:55%;
-  }
-}
-@media(max-width:768px){
-  html{
-    font-size:45%;
-  }
-}
-
-.program-card {
-  background: rgba(255, 255, 255, 0.15); /* Transparent white background */
-  backdrop-filter: blur(1rem); /* Adds the frosted glass blur */
-  border: .1rem solid rgba(255, 255, 255, 0.3); /* Soft white border */
-  border-radius: 1rem;
-  padding: 2rem;
-  width: 20rem;
-  text-align: center;
-  color: rgb(250, 244, 244); /* Text color matches the glass style */
-  box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.program-card h3 {
-  font-size: 1.2rem;
-  color: rgb(250, 244, 244); /* Soft, light color to resemble writing on glass */
-}
-
-.program-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 .6rem 1.2rem rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
-}
-
-
-
-
-
-
 /* Base styles */
 html {
   font-size: 62.5%;
@@ -542,11 +29,30 @@ html {
   }
 }
 
+/* Home and Text Styles */
 .home {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
   width: 100%;
 }
+
+.text-white {
+  color: white;
+  font-size: 2.5rem;
+  
+}
+
+.text-white2, .text-green {
+  font-size: clamp(3.0rem, 2vw, 1.6rem);
+}
+
+/* .text-white2 {
+  color: white;
+} */
+
+/* .text-green {
+  color: #C5F678;
+} */
 
 /* Hero Section */
 .hero {
@@ -563,25 +69,14 @@ html {
   gap: 3rem;
 }
 
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    padding: 3rem 1.5rem 10rem;
-  }
-}
-
 .hero-left {
-  flex: 1;
-  margin: 3rem 2rem;
-  min-width: 28rem;
-}
-
-@media (max-width: 768px) {
-  .hero-left {
-    margin: 2rem 1rem;
-    text-align: center;
-    width: 100%;
-  }
+  margin-left: 10rem;
+  margin-top: 3rem;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-right {
@@ -596,20 +91,26 @@ html {
   box-shadow: 0 .8rem 1.6rem rgba(0, 0, 0, 0.25);
 }
 
-@media (max-width: 768px) {
-  .hero-right {
-    margin: 1rem;
-    width: 90%;
-    min-width: 28rem;
-  }
+.hero-heading {
+  text-align: center;
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin-bottom: 2rem;
 }
 
-/* Form Elements */
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Form Styles - Updated */
 .form {
   width: 100%;
   max-width: 40rem;
   padding: 0 2rem 6rem;
   margin: 0 auto;
+  background-color: #3C5C7B;
 }
 
 .hero-right input[type="text"],
@@ -617,249 +118,53 @@ html {
 .hero-right input[type="phone"],
 .hero-right input[type="url"],
 .hero-right textarea {
-  width: 100%;
-  padding: 1.2rem;
-  margin: 0.5rem 0;
-  font-size: 1.6rem;
-  border-radius: 0.8rem;
+  border-radius: .8rem;
+  padding: 1.4rem;
+  margin: .5rem 0;
+  box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.15);
   border: none;
+  width: 100%;
+  font-size: 1.6rem;
   outline: none;
+  background-color: #ffffff;
 }
 
 .hero-right select {
-  width: 100%;
-  padding: 1.2rem;
-  margin: 0.5rem 0;
+  border-radius: .8rem;
+  padding: 1.4rem;
+  margin: .2rem 0;
+  box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.15);
+  border: none;
+  width: 107%;
   font-size: 1.6rem;
-  border-radius: 0.8rem;
+  outline: none;
   background-color: #C6E894;
   color: #3C5C7B;
-  border: none;
-  outline: none;
   appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+}
+
+.hero-right select::after {
+  content: "▼";
+  position: absolute;
+  right: 1.5rem;
+  top: 20%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #3C5C7B;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.hero-right input:focus,
+.hero-right textarea:focus,
+.hero-right select:focus {
+  box-shadow: 0 0 .8rem rgba(168, 216, 93, 0.5);
 }
 
 /* White Section */
-.White {
-  width: 90%;
-  max-width: 117rem;
-  margin: -11rem auto 0;
-  padding: 2rem;
-  background-color: white;
-  border-radius: 1.4rem;
-  box-shadow: 0 0 .5rem rgba(14, 3, 3, 0.5);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 2rem;
-}
-
-@media (max-width: 768px) {
-  .White {
-    width: 95%;
-    margin: -8rem auto 0;
-    flex-direction: column;
-    align-items: center;
-    padding: 1.5rem;
-  }
-}
-
-.item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin: 1rem;
-}
-
-@media (max-width: 768px) {
-  .item {
-    margin: 1rem 0;
-    justify-content: center;
-  }
-}
-
-/* Pricing Table */
-.pricingTable-firstTable {
-  padding: 4rem 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  background-size: cover;
-  background-position: center;
-}
-
-.pricingTable-firstTable_table {
-  flex: 1;
-  min-width: 28rem;
-  max-width: 32rem;
-  margin: 1rem;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(1rem);
-  border-radius: 3rem;
-  padding: 2rem;
-}
-
-@media (max-width: 768px) {
-  .pricingTable-firstTable_table {
-    width: 90%;
-    margin: 1rem auto;
-  }
-}
-
-/* Programs Section */
-.programs-container {
-  padding: 5rem 2rem;
-  background-size: cover;
-  background-position: center;
-}
-
-.program-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-}
-
-@media (max-width: 768px) {
-  .program-section {
-    grid-template-columns: 1fr;
-    padding: 1rem;
-  }
-}
-
-.program-card {
-  width: 100%;
-  max-width: 30rem;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-/* Text Styles */
-.text-white2, .text-green {
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
-}
-
-.hero-heading {
-  font-size: clamp(2rem, 3vw, 3rem);
-  margin-bottom: 2rem;
-}
-
-.programs-heading {
-  font-size: clamp(2.4rem, 4vw, 3rem);
-}
-
-/* Button */
-.callback-btn {
-  width: 80%;
-  max-width: 25rem;
-  padding: 1.2rem;
-  font-size: 1.6rem;
-  border-radius: 2.5rem;
-  margin: 2rem auto;
-  transform: none;
-}
-
-@media (max-width: 480px) {
-  .callback-btn {
-    width: 90%;
-    font-size: 1.4rem;
-  }
-}
-
-/* Additional Responsive Adjustments */
-@media (max-width: 480px) {
-  .text {
-    font-size: 1.6rem;
-  }
-  
-  .pricingTable-firstTable_table__options {
-    padding: 1rem;
-  }
-  
-  .pricingTable-title {
-    font-size: 2.4rem;
-  }
-  
-  .pricingTable-subtitle {
-    font-size: 1.6rem;
-  }
-}
-
-/* Reviews and Mentors Sections */
-.reviews, .mentors {
-  padding: 5rem 2rem;
-}
-
-@media (max-width: 768px) {
-  .reviews, .mentors {
-    padding: 3rem 1.5rem;
-  }
-  
-  .review-card {
-    width: 90%;
-    margin: 0 auto;
-  }
-  
-  .mentor-list li {
-    margin: 1rem;
-  }
-}
-
-/* Plans Section */
-.home-plans {
-  padding: 5rem 2rem;
-}
-
-.home-plans-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
-
-.home-plan-card {
-  flex: 1;
-  min-width: 28rem;
-  max-width: 35rem;
-  margin: 1rem;
-}
-
-@media (max-width: 768px) {
-  .home-plans {
-    padding: 3rem 1.5rem;
-  }
-  
-  .home-plan-card {
-    width: 90%;
-    margin: 1rem auto;
-  }
-}
-
-
-/* Base styles */
-.item { 
-  display: flex; 
-  align-items: center;
-  text-align: left;
-  margin-right: 9rem;
-  gap: 1rem;
-  margin: 1rem;
-}
-
-.item img {
-  width: 6rem;
-  height: auto; 
-  margin-right: 1rem;
-}
-
-.text {
-  width: auto; /* Changed from 1rem */
-  font-size: 2rem;
-  color: #333;
-  font-weight: bold;
-}
-
 .White {
   width: 90%;
   max-width: 117rem;
@@ -875,110 +180,49 @@ html {
   z-index: 100;
 }
 
-/* Desktop (large screens) */
-@media screen and (min-width: 1200px) {
-  .White {
-      margin-left: 17rem;
-      height: 15rem;
-  }
-}
-
-/* Tablet (medium screens) */
-@media screen and (max-width: 1199px) and (min-width: 769px) {
-  .White {
-      width: 95%;
-      height: auto;
-      min-height: 15rem;
-      margin: -11rem auto 0;
-  }
-
-  .item {
-      margin-right: 4rem;
-  }
-
-  .text {
-      font-size: 1.8rem;
-  }
-}
-
-/* Mobile (small screens) */
-@media screen and (max-width: 768px) {
-  .White {
-      width: 90%;
-      margin: -8rem auto 0;
-      height: auto;
-      padding: 1.5rem;
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .item {
-      margin: 1rem 0;
-      width: 100%;
-      justify-content: center;
-      gap: 1rem;
-  }
-
-  .item img {
-      width: 4.5rem;
-  }
-
-  .text {
-      font-size: 1.5rem;
-      text-align: left;
-  }
-}
-
-/* Extra small screens */
-@media screen and (max-width: 480px) {
-  .White {
-      width: 95%;
-      padding: 1rem;
-      margin: -6rem auto 0;
-  }
-
-  .item img {
-      width: 4rem;
-  }
-
-  .text {
-      font-size: 1.3rem;
-  }
-}
-
-
-/* Hero Section Base Styles */
-.hero {
-  background-image: url('/public/images/Home.png');
+.item {
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-size: 150rem 82rem;
-  padding-bottom: 15rem;
-  height: auto;
-  width: 100%;
+  gap: 1rem;
+  margin: 1rem;
 }
 
-/* Hero Left Section with Image */
-.hero-left {
-  margin-left: 10rem;
-  margin-top: 3rem;
+.item img {
+  width: 6rem;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.text {
   width: auto;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
 }
 
-/* Hero Image Responsive Styles */
-.hero-image {
-  max-width: 100%;
-  height: auto;
-  width: auto;
-  object-fit: contain;
+/* Button Styles */
+.callback-btn {
+  background-color: #A8D85D;
+  color: white;
+  padding: 1.2rem;
+  border: none;
+  font-size: 1.6rem;
+  border-radius: 2.5rem;
+  cursor: pointer;
+  width: 80%;
+  max-width: 25rem;
+  margin: 2rem auto;
+  display: block;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
-/* Media Queries for Responsiveness */
+.callback-btn:hover {
+  background-color: #45a049;
+  box-shadow: 0 0 2rem rgba(168, 216, 93, 0.8);
+}
+
+/* Responsive Styles */
 @media screen and (max-width: 1200px) {
   .hero-left {
     margin-left: 5rem;
@@ -1000,81 +244,39 @@ html {
     width: 100%;
     max-width: 50rem;
   }
-  
-  .hero-image {
-    width: 80%;
-    margin: 0 auto;
-    display: block;
-  }
 }
 
 @media screen and (max-width: 768px) {
+  .hero {
+    padding: 3rem 1.5rem 10rem;
+  }
+
   .hero-left {
     margin: 1rem auto;
     max-width: 40rem;
   }
-  
-  .hero-image {
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .hero {
-    padding: 1rem 1rem 12rem;
-  }
-  
-  .hero-left {
-    margin: 1rem auto;
-    max-width: 30rem;
-  }
-  
-  .hero-image {
-    width: 85%;
-  }
-}
-
-/* For very small devices */
-@media screen and (max-width: 320px) {
-  .hero-left {
-    max-width: 25rem;
-  }
-  
-  .hero-image {
-    width: 90%;
-  }
-}
-
-/* Extra Small Device Responsive Styles */
-@media screen and (max-width: 320px) {
-  /* Base font size adjustment */
-  html {
-    font-size: 35%;
-  }
-
-  /* Hero section adjustments */
-  .hero {
-    padding: 1rem 0.5rem 8rem;
-    background-size: cover;
-  }
-
-  .hero-left {
-    margin: 0.5rem;
-    padding: 0.5rem;
-    max-width: 100%;
-  }
 
   .hero-right {
-    margin: 0.5rem;
-    padding: 1rem;
-    min-width: auto;
-    width: 95%;
-    border-radius: 2rem;
+    margin: 1rem;
+    width: 90%;
+    min-width: 28rem;
   }
 
-  /* Form elements */
-  .form {
-    padding: 0 1rem 4rem;
+  .White {
+    width: 95%;
+    margin: -8rem auto 0;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .item {
+    margin: 1rem 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .text {
+    font-size: 1.5rem;
   }
 
   .hero-right input[type="text"],
@@ -1083,293 +285,58 @@ html {
   .hero-right input[type="url"],
   .hero-right textarea,
   .hero-right select {
-    padding: 0.8rem;
     font-size: 1.4rem;
-    margin: 0.3rem 0;
+    padding: 1.2rem;
   }
-
-  /* White section adjustments */
-  .White {
-    margin: -5rem auto 0;
-    padding: 0.8rem;
-    height: auto;
-    min-height: 12rem;
-  }
-
-  .item {
-    margin: 0.5rem 0;
-    gap: 0.5rem;
-  }
-
-  .item img {
-    width: 3rem;
-  }
-
-  .text {
-    font-size: 1.2rem;
-  }
-
-  /* Pricing table adjustments */
-  .pricingTable-firstTable_table {
-    min-width: auto;
-    width: 95%;
-    padding: 1.5rem;
-    margin: 0.5rem auto;
-  }
-
-  .pricingTable-firstTable_table__header {
-    padding: 2rem 0;
-    font-size: 1.4rem;
-  }
-
-  .pricingTable-firstTable_table__pricing {
-    font-size: 2.4rem;
-    padding: 1.5rem 0;
-  }
-
-  .pricingTable-firstTable_table__options {
-    padding: 0.8rem;
-    font-size: 1.2rem;
-  }
-
-  /* Program cards */
-  .program-card {
-    max-width: 95%;
-    padding: 1.5rem;
-    margin: 0.5rem auto;
-  }
-
-  .program-card h3 {
-    font-size: 1.4rem;
-  }
-
-  /* Button adjustments */
-  .callback-btn {
-    width: 95%;
-    padding: 1rem;
-    font-size: 1.3rem;
-    margin: 1.5rem auto;
-  }
-
-  /* Heading adjustments */
-  .hero-heading {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .programs-heading {
-    font-size: 2rem;
-  }
-
-  .pricingTable-title {
-    font-size: 2rem;
-  }
-
-  .pricingTable-subtitle {
-    font-size: 1.4rem;
-  }
-
-  /* Text size adjustments */
-  .text-white2, .text-green {
-    font-size: 1.2rem;
-  }
-}
-
-/* Additional fixes for very small screens */
-@media screen and (max-width: 280px) {
-  html {
-    font-size: 30%;
-  }
-
-  .White {
-    margin: -4rem auto 0;
-    min-height: 10rem;
-  }
-
-  .item img {
-    width: 2.5rem;
-  }
-
-  .text {
-    font-size: 1.1rem;
-  }
-
-  .callback-btn {
-    font-size: 1.2rem;
-    padding: 0.8rem;
+  
+  .hero-right select {
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 480px) {
-  html {
-    font-size: 50%;
-  }
-
   .hero {
     padding: 2rem 1rem 10rem;
-    background-size: cover;
-    background-position: center;
-    min-height: auto;
-  }
-
-  .hero-left {
-    margin: 1rem;
-    padding: 0;
-    width: 95%;
   }
 
   .hero-right {
     width: 92%;
-    margin: 1rem auto;
     padding: 1.5rem;
-    border-radius: 2rem;
-    min-width: auto;
   }
 
-  .form {
-    width: 95%;
-    padding: 0 1rem 3rem;
-    margin: 0 auto;
+  .White {
+    margin: -6rem auto 0;
+    min-height: 20rem;
+  }
+
+  .item img {
+    width: 3.5rem;
+  }
+
+  .text {
+    font-size: 1.3rem;
+  }
+
+  .callback-btn {
+    width: 85%;
+    font-size: 1.3rem;
+    padding: 1rem;
   }
 
   .hero-right input[type="text"],
   .hero-right input[type="email"],
   .hero-right input[type="phone"],
   .hero-right input[type="url"],
-  .hero-right textarea {
-    padding: 1rem;
-    font-size: 1.4rem;
-    margin: 0.5rem 0;
-  }
-
+  .hero-right textarea,
   .hero-right select {
-    width: 100%;
     padding: 1rem;
-    font-size: 1.4rem;
-  }
-
-  .White {
-    width: 90%;
-    margin: -6rem auto 0;
-    height: auto;
-    min-height: 20rem;
-    padding: 1rem;
-    flex-direction: column;
-  }
-
-  .item {
-    margin: 0.5rem 0;
-    width: 100%;
-    justify-content: flex-start;
-    padding: 0.5rem;
-  }
-
-  .item img {
-    width: 3.5rem;
-    margin-right: 0.8rem;
-  }
-
-  .text {
     font-size: 1.3rem;
-    width: auto;
-    text-align: left;
-  }
-
-  .pricingTable-firstTable {
-    padding: 2rem 1rem;
-  }
-
-  .pricingTable-firstTable_table {
-    width: 90%;
-    min-width: auto;
-    margin: 1rem auto;
-    padding: 1.5rem;
-  }
-
-  .pricingTable-firstTable_table__header {
-    padding: 2rem 0;
-    font-size: 1.6rem;
-  }
-
-  .pricingTable-firstTable_table__options {
-    padding: 1rem;
-  }
-
-  .pricingTable-firstTable_table__options li {
-    font-size: 1.3rem;
-    padding: 0.6rem 0;
-  }
-
-  .programs-container {
-    padding: 3rem 1rem;
-  }
-
-  .program-section {
-    gap: 1.5rem;
-  }
-
-  .program-card {
-    width: 85%;
-    margin: 0.5rem auto;
-    padding: 1.5rem;
-  }
-
-  .callback-btn {
-    width: 85%;
-    font-size: 1.3rem;
-    padding: 1rem;
-    margin: 1.5rem auto;
-  }
-
-  .hero-heading {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .text-white2, 
-  .text-green {
-    font-size: 1.2rem;
-  }
-
-  .programs-heading {
-    font-size: 2rem;
-  }
-
-  .pricingTable-title {
-    font-size: 2rem;
-  }
-
-  .pricingTable-subtitle {
-    font-size: 1.3rem;
-  }
-}
-
-@media screen and (max-width: 380px) {
-  html {
-    font-size: 45%;
-  }
-
-  .White {
-    margin: -5rem auto 0;
-    min-height: 22rem;
-  }
-
-  .item img {
-    width: 3rem;
-  }
-
-  .text {
-    font-size: 1.2rem;
-  }
-
-  .callback-btn {
-    width: 90%;
   }
 }
 
 @media screen and (max-width: 320px) {
   html {
-    font-size: 40%;
+    font-size: 35%;
   }
 
   .White {
@@ -1388,7 +355,274 @@ html {
   .text {
     font-size: 1.1rem;
   }
+
+  .hero-right input[type="text"],
+  .hero-right input[type="email"],
+  .hero-right input[type="phone"],
+  .hero-right input[type="url"],
+  .hero-right textarea,
+  .hero-right select {
+    padding: 0.8rem;
+    font-size: 1.2rem;
+  }
+}
+/* Previous CSS remains the same until form styles */
+
+/* Form Styles - Updated */
+.form {
+  width: 100%;
+  max-width: 40rem;
+  padding: 0 2rem 6rem;
+  margin: 0 auto;
+  background-color: #3C5C7B;
 }
 
+.hero-right input[type="text"],
+.hero-right input[type="email"],
+.hero-right input[type="phone"],
+.hero-right input[type="url"],
+.hero-right textarea {
+  border-radius: .8rem;
+  padding: 1.4rem;
+  margin: .5rem 0;
+  box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.15);
+  border: none;
+  width: 100%;
+  font-size: 1.6rem;
+  outline: none;
+  background-color: #ffffff;
+  color: #333; /* Added for better text visibility */
+}
 
+/* Added placeholder styles */
+.hero-right input::placeholder,
+.hero-right textarea::placeholder {
+  color: #666;
+  opacity: 1;
+}
 
+/* Added for webkit browsers */
+.hero-right input::-webkit-input-placeholder,
+.hero-right textarea::-webkit-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+/* Added for Firefox */
+.hero-right input::-moz-placeholder,
+.hero-right textarea::-moz-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+.hero-right select {
+  border-radius: .8rem;
+  padding: 1.4rem;
+  margin: .2rem 0;
+  box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.15);
+  border: none;
+  width: 100%; /* Changed from 107% for better responsiveness */
+  font-size: 1.6rem;
+  outline: none;
+  background-color: #C6E894;
+  color: #3C5C7B;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Added custom dropdown arrow container */
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Updated dropdown arrow styling */
+.select-wrapper::after {
+  content: "▼";
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #3C5C7B;
+  font-size: 1.2rem;
+}
+
+.hero-right input:focus,
+.hero-right textarea:focus,
+.hero-right select:focus {
+  box-shadow: 0 0 .8rem rgba(168, 216, 93, 0.5);
+}
+
+/* Previous CSS remains the same until media queries */
+
+/* Updated media queries for better form responsiveness */
+@media screen and (max-width: 480px) {
+  .hero-right {
+    width: 95%;
+    padding: 1.5rem;
+    margin: 1rem auto;
+  }
+
+  .form {
+    padding: 0 1rem 4rem;
+  }
+
+  .hero-right input[type="text"],
+  .hero-right input[type="email"],
+  .hero-right input[type="phone"],
+  .hero-right input[type="url"],
+  .hero-right textarea,
+  .hero-right select {
+    padding: 1.2rem;
+    font-size: 1.4rem;
+    margin: .8rem 0;
+  }
+
+  .select-wrapper::after {
+    right: 1.2rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .hero-right {
+    width: 100%;
+    padding: 1.2rem;
+  }
+
+  .form {
+    padding: 0 .8rem 3rem;
+  }
+
+  .hero-right input[type="text"],
+  .hero-right input[type="email"],
+  .hero-right input[type="phone"],
+  .hero-right input[type="url"],
+  .hero-right textarea,
+  .hero-right select {
+    padding: 1rem;
+    font-size: 1.3rem;
+    margin: .6rem 0;
+  }
+}
+
+/* Rest of the CSS remains the same // Form styles updated to match design */
+.hero-right {
+  background: #3C5C7B;
+  border-radius: 3rem;
+  padding: 4rem 3rem;
+  box-shadow: 0 .8rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.hero-heading {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  line-height: 1.3;
+}
+
+.hero-heading span {
+  color: #C5F678;
+}
+
+.form {
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.hero-right input[type="text"],
+.hero-right input[type="email"],
+.hero-right input[type="phone"],
+.hero-right input[type="url"] {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  margin: 1rem 0;
+  border-radius: 1.2rem;
+  border: none;
+  font-size: 1.6rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.hero-right select {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  border-radius: 1.2rem;
+  border: none;
+  font-size: 1.6rem;
+  background: linear-gradient(to right, rgba(197, 246, 120, 0.8), rgba(197, 246, 120, 0.6));
+  color: #3C5C7B;
+  appearance: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.select-wrapper::after {
+  content: "▼";
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #3C5C7B;
+  pointer-events: none;
+}
+
+/* Placeholder styles */
+.hero-right input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.callback-btn {
+  background: linear-gradient(to right, #C5F678, #A8D85D);
+  color: #3C5C7B;
+  padding: 1.5rem 3rem;
+  border-radius: 3rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  width: auto;
+  min-width: 20rem;
+  margin: 3rem auto 1rem;
+  box-shadow: 0 4px 15px rgba(197, 246, 120, 0.3);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 480px) {
+  .hero-right {
+    padding: 3rem 2rem;
+    width: 90%;
+    margin: 1rem auto;
+  }
+  
+  .hero-heading {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-right input[type="text"],
+  .hero-right input[type="email"],
+  .hero-right input[type="phone"],
+  .hero-right input[type="url"],
+  .hero-right select {
+    padding: 1.2rem 1.5rem;
+    font-size: 1.4rem;
+  }
+  
+  .callback-btn {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.6rem;
+    min-width: 18rem;
+  }
+}
