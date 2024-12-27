@@ -1,0 +1,175 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Mono', monospace;
+}
+
+/* Back Button */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  color: darkslategray;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.back-button:hover {
+  text-decoration: underline;
+}
+
+/* Heading */
+.heading5 {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 2.5rem;
+  color: darkslategray;
+}
+
+/* Content Container */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .content-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+/* Stripes Section */
+.stripes-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.box3 {
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #A8D85D 35%, #99C05F 100%);
+  box-shadow: 1px 2px 1px -1px #777;
+  display: flex;
+  align-items: center;
+  transition: background 200ms ease-in-out;
+}
+
+.box3:hover {
+  background: linear-gradient(to right, #abbd73 0%, #abbd73 100%);
+}
+
+.text-content h3 {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.text-content p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Image Section */
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.long-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries */
+@media (max-width: 480px) {
+  .heading5 {
+    font-size: 1.8rem;
+  }
+
+  .box3 {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  .text-content h3 {
+    font-size: 0.9rem;
+  }
+
+  .text-content p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 600px) {
+  .heading5 {
+    font-size: 2rem;
+  }
+
+  .box3 {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  .text-content h3 {
+    font-size: 1rem;
+  }
+
+  .text-content p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .heading5 {
+    font-size: 2.2rem;
+  }
+
+  .box3 {
+    padding: 18px;
+    font-size: 1rem;
+  }
+
+  .text-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .text-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .heading5 {
+    font-size: 2.5rem;
+  }
+
+  .box3 {
+    padding: 20px;
+    font-size: 1.1rem;
+  }
+
+  .text-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,153 @@
+/* General Styles for Achievers Section */
+.achiever-section {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.achiever-header .our-achievers-img {
+  max-width: 300px; /* Set an appropriate size for the achiever image */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.company-logo {
+  max-width: 120px;
+  height: auto;
+  margin: 10px;
+  display: inline-block;
+}
+
+.achiever-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.achiever-content {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px;
+}
+
+.achiever-card {
+  flex: 0 0 auto;
+  width: 220px; /* Set a balanced size for other images */
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+.achiever-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 30%;
+  margin: 0 auto 10px;
+}
+
+.achiever-name {
+  font-size: 1rem;
+  color: #333;
+}
+
+.slider-nav {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.nav-arrow {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #005bb5;
+}
+
+/* Responsive Styles */
+
+/* For screens up to 1024px */
+@media screen and (max-width: 1024px) {
+  .achiever-header .our-achievers-img {
+    max-width: 250px;
+  }
+
+  .company-logo {
+    max-width: 100px;
+  }
+
+  .achiever-card {
+    width: 200px;
+  }
+
+  .achiever-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .achiever-name {
+    font-size: 0.9rem;
+  }
+}
+
+/* For screens up to 768px */
+@media screen and (max-width: 768px) {
+  .achiever-header .our-achievers-img {
+    max-width: 200px;
+  }
+
+  .company-logo {
+    max-width: 80px;
+  }
+
+  .achiever-card {
+    width: 180px;
+  }
+
+  .achiever-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .achiever-name {
+    font-size: 0.85rem;
+  }
+
+  .nav-arrow {
+    font-size: 1.25rem;
+  }
+}
+
+/* For screens up to 480px */
+@media screen and (max-width: 480px) {
+  .achiever-header .our-achievers-img {
+    max-width: 150px; /* Reduce the achiever.png size for smaller screens */
+  }
+
+  .company-logo {
+    max-width: 60px;
+  }
+
+  .achiever-card {
+    width: 140px;
+  }
+
+  .achiever-photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .achiever-name {
+    font-size: 0.8rem;
+  }
+
+  .slider-nav {
+    gap: 5px;
+  }
+
+  .nav-arrow {
+    font-size: 1rem;
+  }
+}

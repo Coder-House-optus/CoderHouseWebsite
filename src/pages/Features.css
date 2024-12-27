@@ -1,336 +1,402 @@
-.background-section {
-    background-color: #EEFFD5; /* Change this to your desired green color */
-    height: 700px;
-    position: relative; /* Needed for absolute positioning of pseudo-element */
-    overflow: hidden; /* Ensure that overflow is hidden */
+/* Animated Background */
+.area {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
-.background-section::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 160%;
-    background-color: rgb(255, 255, 255); /* Match the background color */
-    clip-path: polygon(0 100%, 0 80%, 100% 100%);
-    z-index: 1; /* Place behind the content */
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  z-index: 1;
 }
 
-/* General styles for the page */
-.features-page {
-    font-family: 'Poppins', sans-serif;
-    background-color: #ffffff;
-    text-align: center;
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: #C6E894;
+  animation: animate 25s linear infinite;
+  bottom: -150px;
 }
 
-/* Header section styles */
-.features-header {
-    margin-top: 20px;
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
 }
 
-.features-header h2 {
-    font-size: 36px;
-    font-weight: bold;
-    color: #333;
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
 }
 
-.features-header h2 .highlight {
-    color: #002147; /* Darker color for 'Campus Programs' */
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
 }
 
-/* Middle section styles (character image in the center) */
-.middle-section {
-    position: relative;
-    width: 100%;
-    height: 350px;
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
 }
 
-/* Character image centered */
-.character-image {
-    margin-top: 200px;
-    max-width: 390px;
-    z-index: 1;
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
 }
 
-/* Card container for diagonal positioning */
-.cards-container {
-    position: absolute;
-    width: 100%;
-    height: 250px;
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
 }
 
-/* Floating cards styled with diagonal placement */
-.feature-card {
-    background-color: #CFFB8D;
-    font-family: 'Poppins', sans-serif;
-    padding: 20px;
-    width: 400px; /* Adjust card size */
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    font-size: 18px; /* Adjust text size */
-    color: #000;
-    position: absolute;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 0; /* Cards will overlap */
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
 }
 
-/* Card hover effect (add rotation, and bring card to front on hover) */
-.feature-card:hover {
-    z-index: 10; /* Bring card to the front on hover */
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05); /* Slightly enlarge card */
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
 }
 
-/* Positioning for Swayam Batch and CRT Offline Batch (left side) */
-.card-left {
-    top: 50px;
-    left: calc(50% - 600px); /* Move both far to the left */
-    transform: rotate(10deg); /* Add rotation */
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
 }
 
-.card-left-overlap {
-    top: 150px;
-    left: calc(50% - 600px); /* Slight overlap with top left card */
-    transform: rotate(-10deg); /* Slight tilt to ensure text visibility */
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
 }
 
-/* Positioning for Coders Sheet and Mentorship Module (right side) */
-.card-right {
-    top: 140px;
-    right: calc(50% - 600px); /* Move both to the right side */
-    transform: rotate(-10deg); /* Add rotation */
-}
-
-.card-right-overlap {
-    top: 250px;
-    right: calc(50% - 600px); /* Slight overlap with top right card */
-    transform: rotate(10deg); /* Slight tilt to ensure text visibility */
-}
-
-/* Expandable cards section */
-.expandable-cards {
-    margin-top: 190px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.expandable-card {
-    width: 80%;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    cursor: pointer;
-    text-align: center;
-    transition: transform 0.3s ease; /* Smooth transform on hover */
-}
-
-.expandable-card:hover {
-    transform: translateY(-5px); /* Slight lift effect */
-}
-
-.expandable-card .card-content {
-    display: none;
-    padding-top: 10px;
-    font-size: 16px; /* Font size for content */
-    line-height: 1.6; /* Line height for readability */
-    color: #555; /* Subtle text color */
-}
-
-.expandable-card.expanded .card-content {
-    display: block;
-}
-
-.expandable-card h4 {
-    font-size: 22px;
-    color: #333;
-    margin-bottom: 10px; /* Space between title and content */
-}
-
-/* Styles for expandable card hover */
-.small-card:hover {
-    background-color: #b0e57c;
-    transform: scale(1.05);
-}
-
-.expanded-section {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    margin-top: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-
-
-body {
-    font-family: 'Open Sans', arial, sans-serif;
-    color: #333;
-    font-size: 14px;
-}
-
-.projcard-container {
-    margin: 50px 0;
-}
-
-/* Expandable Card Styles */
-.projcard-container,
-.projcard-container * {
-    box-sizing: border-box;
-}
-
-.projcard-container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1000px;
-}
-
-.expandable-card {
-    position: relative;
-    width: 100%;
-    margin-bottom: 40px;
-    border-radius: 10px;
-    background-color: #fff;
-    border: 2px solid #ddd;
-    font-size: 18px;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, .66);
-    transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.expandable-card:hover {
-    box-shadow: 0 34px 32px -33px rgba(0, 0, 0, .18);
-    transform: translate(0px, -3px);
-}
-
-.expandable-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(-70deg, #424242, transparent 50%);
-    opacity: 0.07;
-}
-
-.expandable-card:nth-child(2n)::before {
-    background-image: linear-gradient(-250deg, #424242, transparent 50%);
-}
-
-
-/* Optional: Add color bars if needed */
-.projcard-bar {
-    left: -2px;
-    width: 50px;
-    height: 5px;
-    margin: 10px 0;
-    border-radius: 5px;
-    background-color: #424242;
-    transition: width 0.2s ease;
-}
-
-/* Add any additional color styles here */
-.projcard-blue .projcard-bar { background-color: #0088FF; }
-.projcard-red .projcard-bar { background-color: #D62F1F; }
-.projcard-green .projcard-bar { background-color: #40BD00; }
-.projcard-yellow .projcard-bar { background-color: #F5AF41; }
-.projcard-orange .projcard-bar { background-color: #FF5722; }
-
-/* Description and Tags */
-.projcard-description {
-    z-index: 10;
-    font-size: 15px;
-    color: #424242;
-    height: 125px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.projcard-tagbox {
-    position: absolute;
-    bottom: 3%;
-    font-size: 14px;
-    cursor: default;
-    user-select: none;
-    pointer-events: none;
-}
-
-.projcard-tag {
-    display: inline-block;
-    background: #E0E0E0;
-    color: #777;
-    border-radius: 3px 0 0 3px;
-    line-height: 26px;
-    padding: 0 10px 0 23px;
-    position: relative;
-    margin-right: 20px;
-    cursor: default;
-    user-select: none;
-    transition: color 0.2s;
-}
-
-
-
-/* Expandable Cards Section */
-.expandable-cards {
-    margin-top: 40px; /* Add some space above the expandable cards */
-    display: flex;
-    flex-direction: column; /* Stack the cards vertically */
-    align-items: center; /* Center the cards horizontally */
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
   }
-  
-  .expandable-card {
-    background-color: #fff; /* Card background color */
-    border: 2px solid #ddd; /* Border for the card */
-    border-radius: 10px; /* Rounded corners */
-    width: 80%; /* Width of the cards */
-    max-width: 600px; /* Max width for larger screens */
-    margin-bottom: 20px; /* Space between cards */
-    padding: 20px; /* Padding inside the cards */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: all 0.3s ease; /* Smooth transition */
-    cursor: pointer; /* Pointer cursor on hover */
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
   }
-  
-  .expandable-card.expanded {
-    max-height: 500px; /* Expandable card max height when expanded */
-    overflow: hidden; /* Hide overflow content */
-  }
-  
-  .expandable-card h4 {
-    margin: 0; /* Remove default margin from headings */
-    font-size: 20px; /* Font size for the title */
-  }
-  
-  .card-content {
-    display: none; /* Hide content by default */
-    margin-top: 10px; /* Space between title and content */
-  }
-  
-  .expandable-card.expanded .card-content {
-    display: block; /* Show content when expanded */
-  }
-  
-  /* Optional: Add hover effect */
-  .expandable-card:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
-  }
-  
+}
+
+/* Overlay to keep content above the animation */
+.extraFeatures-page-container {
+  position: relative;
+  z-index: 2;
+  background-color: #EEFFD5;
+}
+
+.text-greenf{
+  font-size: 2.5em;
+  font-weight: 400;
+  color: #3C5C7B;
+  font: poppins;
+}
+
+.text-white2f{
+  font-size: 3em;
+  font-weight: 600;
+  color: #C6E894;
+  font: poppins;
+}
+/* Card Styling */
+.extraFeatures-cards {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.extraFeatures-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 15px;
+}
+
+.extraFeatures-card {
+  height: 90px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.extraFeatures-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.extraFeatures-card-content {
+
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.extraFeatures-card h2 {
+  font-size: 1.5rem;
+  margin: 0 0 10px;
+}
+
+.extraFeatures-card p {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+
+/* Centering the Title */
+.extraFeatures-title {
+  text-align: center; /* Centers the text horizontally */
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: rgb(255, 255, 255); /* Adjust the color as needed */
+  position: relative;
+  z-index: 3; /* Ensure it stays above the background animation */
+}
+
+/* Additional container adjustments for centering */
+.extraFeatures-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Centers text horizontally within content */
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.extraFeatures-center-image {
+  display: flex;
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically if the container has a height */
+  width: 40%; /* Ensures it takes up the full width of its container */
+}
+
+.extraFeatures-center-image img {
+  max-width: 50%; /* Adjust the percentage to make the image smaller or larger */
+  height: auto; /* Maintains the aspect ratio */
+}
+
+
+
+
+
+
+/* Card Styling */
+.extraFeatures-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between cards */
+  margin: 10px 0;
+}
+
+.extraFeatures-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 15px;
+
+}
+
+.extraFeatures-card {
+  height: 60px; /* Smaller card size */
+  width: 400px; /* Adjust width to make cards smaller */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+
+}
+
+
+.extraFeatures-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.extraFeatures-card-content {
+  padding: 12px;
+  text-align: center;
+  border-radius: 10px;
+  color: #ffffff;
+
+
+  height: 60px; /* Smaller card size */
+  width: 400px; /* Adjust width to make cards smaller */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.extraFeatures-card h2 {
+  font-size: 1rem;
+  margin: 0 0 10px;
+  color: #ffffff;
+}
+
+.extraFeatures-card p {
+  font-size: 0.8rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+
+/* Centering the Title */
+.extraFeatures-title {
+  text-align: center; /* Centers the text horizontally */
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 3; /* Ensure it stays above the background animation */
+  color: #3C5C7B;
+}
+
+/* Additional container adjustments for centering */
+.extraFeatures-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Centers text horizontally within content */
+  padding: 70px;
+  margin-bottom: 100px;
+}
+
+.extraFeatures-center-image {
+  display: flex;
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically if the container has a height */
+  width: 100%; /* Ensures it takes up the full width of its container */
+}
+
+.extraFeatures-center-image img {
+  max-width: 80%; /* Adjust the percentage to make the image smaller or larger */
+  height: auto; /* Maintains the aspect ratio */
+}
+
+
+
+.extraFeatures-card {
+
+}
+
+.extraFeatures-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.extraFeatures-card-content {
+  color: #fff;
+  padding: 12px;
+  text-align: center;
+  border-radius: 10px;
+  color: #ffffff;
+}
+
+.extraFeatures-card h2 {
+  font-size: 1rem;
+  margin: 0 0 10px;
+  color: #3C5C7B;
+}
+
+.extraFeatures-card p {
+  font-size: 0.8rem;
+  margin: 0;
+  color: #3C5C7B;
+}
+
+
+/* .extraFeatures-column.left .extraFeatures-card {
+  transform-origin: right center;
+}
+
+.extraFeatures-column.right .extraFeatures-card {
+  transform-origin: left center;
+} */
+
+
+
+.extraFeatures-card:nth-child(1) {
+  background-color: #E1FFB4; /* Soft red */
+}
+
+.extraFeatures-card:nth-child(2) {
+  background-color: #d5fc9a; /* Purple */
+}
+
+.extraFeatures-card:nth-child(3) {
+  background-color: #c8fb7b; /* Green */
+}
+
+.extraFeatures-card:nth-child(4) {
+  background-color: #c2fb6c; /* Pink */
+}
+
+.extraFeatures-card:nth-child(5) {
+  background-color: #d0fc71; /* Blue */
+}
+
+
+.highlight-feature {
+  color: #ffffff; /* White color for the word Feature */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+}

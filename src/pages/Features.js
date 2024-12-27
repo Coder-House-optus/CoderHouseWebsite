@@ -1,127 +1,192 @@
-import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import './Features.css';
-import Footer from '../components/Footer';
+// import React, { useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
+// import Navigation from '../components/Navigation';
+// import Footer from '../components/Footer';
+// import './Features.css';
 
-export default function Features() {
-  const [expandedCard, setExpandedCard] = useState(null);
+// export default function Features() {
+//   const [expandedCard, setExpandedCard] = useState(null);
+//   const navigate = useNavigate();
 
-  const toggleCard = (cardName) => {
-    setExpandedCard(expandedCard === cardName ? null : cardName);
-  };
+//   const toggleCard = (cardName) => {
+//     setExpandedCard(expandedCard === cardName ? null : cardName);
+//   };
+
+//   const handleCardClick = (cardName) => {
+//     const paths = {
+//       'Swayam Batch': '/coders-sheet',
+//       'CRT Offline Batch': '/crt-offline-batch',
+//       'Coders Sheet': '/coders-sheet',
+//       'Mentorship Module | Coding Library': '/mentorship-module',
+//       'Coding Library': '/coding-library',
+//       'Marathon Classes': '/marathon-classes',
+//       'Internship': '/internship',
+//       'Contest': '/contest',
+//       'Moon Coder': '/MoonCoder'
+//     };
+    
+//     if (paths[cardName]) {
+//       navigate(paths[cardName]);
+//     } else {
+//       const expandableCard = document.getElementById(cardName.replace(/\s+/g, '-').toLowerCase());
+//       if (expandableCard) {
+//         expandableCard.scrollIntoView({ behavior: 'smooth' });
+//       }
+//       toggleCard(cardName);
+//     }
+//   };
+
+//   const leftCards = ['Swayam Batch', 'CRT Offline Batch', 'Marathon Classes', 'Internship'];
+//   const rightCards = ['Coders Sheet', 'Mentorship Module | Coding Library', 'Moon Coder', 'Contest'];
+
+//   return (
+//     <div className="features-page">
+//       <Navigation />
+
+//       <div className="background-section">
+//         <div className="features-header">
+//           <h2>On- <span className="highlight">Campus Programs</span></h2>
+//         </div>
+
+//         <div className="middle-section">
+//           <img
+//             src="images/Feature.png"
+//             alt="Character"
+//             className="character-image"
+//           />
+
+//           <div className="cards-container">
+//             <div className="left-cards">
+//               {leftCards.map((cardName) => (
+//                 <div
+//                   key={cardName}
+//                   className="feature-card"
+//                   onClick={() => handleCardClick(cardName)}
+//                 >
+//                   <h4>{cardName}</h4>
+//                 </div>
+//               ))}
+//             </div>
+
+//             <div className="right-cards">
+//               {rightCards.map((cardName) => (
+//                 <div
+//                   key={cardName}
+//                   className="feature-card"
+//                   onClick={() => handleCardClick(cardName)}
+//                 >
+//                   <h4>{cardName}</h4>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//       {/* <Footer /> */}
+//     </div>
+//   );
+// }
+
+
+
+
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+import "./Features.css";
+
+export default function ExtraFeatures() {
+  const navigate = useNavigate();
 
   const handleCardClick = (cardName) => {
-    // Scroll to the expandable card section
-    const expandableCard = document.getElementById(cardName.replace(/\s+/g, '-').toLowerCase());
-    if (expandableCard) {
-      expandableCard.scrollIntoView({ behavior: "smooth" });
+    const paths = {
+      Swayam: "/swayam-batch",
+      "Marathon Classes (Company-Specific)": "/marathon-classes",
+      "Coder Sheet & Library": "/coders-sheet",
+      Mentorship: "/mentorship-module",
+      "Moon Coder": "/moon-coder",
+      Contest: "/contest",
+      "Technical Mock Interview & Resume Building": "/ResumeBuilding",
+      Internship: "/internship",
+    };
+
+    if (paths[cardName]) {
+      navigate(paths[cardName]);
     }
-    toggleCard(cardName);
   };
+  const cards = [
+    { title: "Swayam", rotation: 15, translateX: 50, translateY: -20, color: "#E1FFB4" },
+    { title: "Marathon Classes (Company-Specific)", rotation: 5, translateX: 40, translateY: -20, color: "#6b5b95" },
+    { title: "Coder Sheet & Library", rotation: -10, translateX: 50, translateY: -10, color: "#88b04b" },
+    { title: "Mentorship", rotation: -25, translateX: 80, translateY: 20, color: "#C7E97E" },
+  
+    { title: "Moon Coder", rotation: -19, translateX: -60, translateY: 30, color: "#ffcc5c" },
+    { title: "Contest", rotation: -5, translateX: -40, translateY: 30, color: "#92a8d1" },
+    { title: "Technical Mock Interview & Resume Building", rotation: 10, translateX: -30, translateY: 40, color: "#955251" },
+    { title: "Internship", rotation: 22, translateX: -40, translateY: 40, color: "#b565a7" },
+  ];
+  
 
   return (
-    <div className="features-page">
-      {/* Navigation Bar */}
-      <Navigation />
-
-      {/* Background Section */}
-      <div className="background-section">
-        {/* Header Section */}
-        <div className="features-header">
-          <h2>On- <span className="highlight">Campus Programs</span></h2>
-        </div>
-
-        <div className="middle-section">
-          <img
-            src="images/Feature.png" // Dummy image for now
-            alt="Character"
-            className="character-image"
-          />
-
-          {/* Cards in a diagonal layout around the character */}
-          <div className="cards-container">
-            <div className="feature-card card-left" onClick={() => handleCardClick('Swayam Batch')}>
-              <h4>Swayam Batch</h4>
+    <div className="area">
+      <ul className="circles">
+        {Array.from({ length: 10 }, (_, i) => (
+          <li key={i}></li>
+        ))}
+      </ul>
+      <div className="extraFeatures-page-container">
+        <Navigation />
+        <div className="extraFeatures-content">
+        <h1 class="extraFeatures-title">
+          Explore our <span class="highlight-feature">Features</span>
+        </h1>
+          
+          <div className="extraFeatures-cards">
+            {/* Left Column */}
+            <div className="extraFeatures-column left">
+              {cards.slice(0, 4).map((card) => (
+                <div
+                  key={card.title}
+                  className="extraFeatures-card"
+                  onClick={() => handleCardClick(card.title)}
+                  style={{
+                    transform: `rotate(${card.rotation}deg) translate(${card.translateX}px, ${card.translateY}px)`,
+                  }}
+                >
+                  <div className="extraFeatures-card-content">
+                    <h2>{card.title}</h2>
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className="feature-card card-left-overlap" onClick={() => handleCardClick('CRT Offline Batch')}>
-              <h4>CRT Offline Batch</h4>
+
+            {/* Center Image */}
+            <div className="extraFeatures-center-image">
+              <img src="images/Feature.png" alt="Center img" />
             </div>
-            <div className="feature-card card-right" onClick={() => handleCardClick('Coders Sheet')}>
-              <h4>Coders Sheet</h4>
-            </div>
-            <div className="feature-card card-right-overlap" onClick={() => handleCardClick('Mentorship Module | Coding Library')}>
-              <h4>Mentorship Module | Coding Library</h4>
+
+            {/* Right Column */}
+            <div className="extraFeatures-column right">
+              {cards.slice(4).map((card) => (
+                <div
+                  key={card.title}
+                  className="extraFeatures-card"
+                  onClick={() => handleCardClick(card.title)}
+                  style={{
+                    transform: `rotate(${card.rotation}deg) translate(${card.translateX}px, ${card.translateY}px)`,
+                  }}
+                >
+                  <div className="extraFeatures-card-content">
+                    <h2>{card.title}</h2>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
+        <Footer />
       </div>
-
-      {/* Expandable Cards Section */}
-<div className="expandable-cards">
-  <div
-    id="swayam-batch"
-    className={`expandable-card ${expandedCard === 'Swayam Batch' ? 'expanded' : ''}`}
-    onClick={() => handleCardClick('Swayam Batch')}
-  >
-    <h4>Swayam Batch</h4>
-    <div className="card-content">
-      <ul>
-        <li>Details about the Swayam Batch go here.</li>
-        <li>This is the expanded content.</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div
-    id="crt-offline-batch"
-    className={`expandable-card ${expandedCard === 'CRT Offline Batch' ? 'expanded' : ''}`}
-    onClick={() => handleCardClick('CRT Offline Batch')}
-  >
-    <h4>CRT Offline Batch</h4>
-    <div className="card-content">
-      <ul>
-        <li>Details about the CRT Offline Batch go here.</li>
-        <li>This is the expanded content.</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div
-    id="coders-sheet"
-    className={`expandable-card ${expandedCard === 'Coders Sheet' ? 'expanded' : ''}`}
-    onClick={() => handleCardClick('Coders Sheet')}
-  >
-    <h4>Coders Sheet</h4>
-    <div className="card-content">
-      <ul>
-        <li>Practice Questions Galore</li>
-        <li>Crafted by IIT’ians and NIT’ians.</li>
-        <li>Ideal for self-learning coding enthusiasts.</li>
-        <li>Contains 1000+ questions of different levels and variety.</li>
-        <li>Unlock exclusive notes for enhanced learning.</li>
-        <li>Engage in daily scheduled practice questions.</li>
-        <li>Experience a dynamic set of practice questions tailored to your current coding proficiency level.</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div
-    id="mentorship-module"
-    className={`expandable-card ${expandedCard === 'Mentorship Module | Coding Library' ? 'expanded' : ''}`}
-    onClick={() => handleCardClick('Mentorship Module | Coding Library')}
-  >
-    <h4>Mentorship Module | Coding Library</h4>
-    <div className="card-content">
-      <ul>
-        <li>2-hour sessions with expert mentors addressing all your 'Career As Coder' queries.</li>
-        <li>Coding Library: Your Perfect Coding Heaven.</li>
-        <li>Monthly subscription model for a conducive coding environment.</li>
-      </ul>
-    </div>
-  </div>
-</div>
-<Footer/>
-
     </div>
   );
 }

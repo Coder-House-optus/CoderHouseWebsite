@@ -1,0 +1,117 @@
+.amcat-container {
+    font-family: 'Poppins', sans-serif;
+    padding: 80px;
+    background-color: #f9f9f9;
+  }
+  
+  .amcat-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .amcat-tabs {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    margin-bottom: 70px;
+  }
+  
+  .tab {
+
+    padding: 10px 40px;
+    border: 1px solid #A8D85D;
+    border-radius: 0px;
+    background-color: #A8D85D;
+    cursor: pointer;
+    font-weight: 1000;
+    font-size: 1.5em;
+    color: #ffffff;
+  }
+  
+  .tab.active {
+    background-color: #3C5C7B;
+    border-color: #3C5C7B;
+    color: #ffffff;
+  }
+  
+  .amcat-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .amcat-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    color: #3C5C7B;
+  }
+  
+  .amcat-table th,
+  .amcat-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    font-size: 1.2em;
+  }
+  
+  .amcat-table th {
+    background-color: #ffffff;
+    color: #3C5C7B;
+    font-weight: bolder;
+    font-weight: 5em;
+    font-size: 1.6em;
+  }
+  
+  .amcat-table tr:nth-child(even) {
+    background-color: #F1F1F1;
+  }
+  
+  .amcat-important-details {
+    margin-top: 20px;
+  }
+  
+  .amcat-important-details h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  
+  .amcat-important-details ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .amcat-important-details li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+  }
+  
+  .amcat-important-details li::before {
+    /* content: "✔️"; */
+    color: green;
+    margin-right: 10px;
+    
+  }
+  
+
+
+  .back-button1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .back-button1:hover {
+    background-color: #e0e0e0;
+  }
+  

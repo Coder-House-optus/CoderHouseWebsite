@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import './CollegeProgram.css';
 import Footer from '../components/Footer';
+import HODReview from '../components/HODreview'; // Importing the HODReview component
 
 const CollegeProgram = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -25,17 +26,17 @@ const CollegeProgram = () => {
   const testimonials = [
     {
       name: "Shailesh Gupta",
-      message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel efficitur libero.",
+      message: "Lorem ibero.",
       image: "/path/to/image1.jpg",
     },
     {
       name: "Shailesa",
-      message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel efficitur libero.",
+      message: "Lorem ipsuiscing elit. Sed vel efficitur libero.",
       image: "/path/to/image2.jpg",
     },
     {
       name: "Sha",
-      message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel efficitur libero.",
+      message: "Lorem ificitur libero.",
       image: "/path/to/image3.jpg",
     },
   ];
@@ -67,11 +68,15 @@ const CollegeProgram = () => {
         <div className="greeting-container">
           {[120, 90, 60].map((hours) => (
             <div key={hours} className="greeting-card">
-              {hours} HOURS <span role="img" aria-label="clock">🕒</span>
-              <br />
+              <div className="hours-line">
+                <span className="hours-text">{hours} HOURS</span>
+                <span role="img" aria-label="clock" className="clock-emoji">🕒</span>
+              </div>
               <span className="program-text">PROGRAM</span>
               <div className="card-footer">
-                <button className="view-btn">View Program</button>
+                <div className="button-container">
+                  <button className="view-btn">View Program</button>
+                </div>
               </div>
             </div>
           ))}
@@ -85,16 +90,17 @@ const CollegeProgram = () => {
         </h2>
         <div className="moments-content">
           <div className="description">
+            <h3>Interview Session</h3>
             <p>{moments[activeIndex].description}</p>
           </div>
           <div className="images">
-            <img src={moments[activeIndex].img1} alt="Moment Image 1" className="moment-image" />
-            <img src={moments[activeIndex].img2} alt="Moment Image 2" className="moment-image" />
+            <img src={moments[activeIndex].img1} alt={`Moment ${activeIndex + 1} part 1`} className="moment-image" />
+            <img src={moments[activeIndex].img2} alt={`Moment ${activeIndex + 1} part 2`} className="moment-image" />
           </div>
         </div>
         <div className="navigation-arrows">
-          <button onClick={handlePrev} aria-label="Previous Moment">❮</button>
-          <button onClick={handleNext} aria-label="Next Moment">❯</button>
+          <button onClick={handlePrev} className="nav-button" aria-label="Previous Moment">❮</button>
+          <button onClick={handleNext} className="nav-button" aria-label="Next Moment">❯</button>
         </div>
       </section>
 
@@ -110,32 +116,15 @@ const CollegeProgram = () => {
 
       {/* Testimonial Section */}
       <section className="testimonial-section">
+        <div className="headname">Words of <span className="highlight">HOD</span></div>
+        
+        {/* Inserted HODReview Component */}
+        <HODReview />
 
-        <h2>Words of <span className="highlight">HOD</span></h2>
-        <div className="testimonial-card">
-        <div className="vertical-line"></div>
-          <div className="testimonial-content">
-            <div className="circle-image">
-              <img
-                src={testimonials[activeTestimonialIndex].image}
-                alt={testimonials[activeTestimonialIndex].name}
-              />
-            </div>
-            <div className="testimonial">
-              <p>
-                <strong>{testimonials[activeTestimonialIndex].name}</strong> <br />
-                "{testimonials[activeTestimonialIndex].message}"
-              </p>
-            </div>
-          </div>
-          <div className="quote-sign">“</div>
-        </div>
-        <div className="testimonial-navigation-arrows">
-          <button onClick={handleTestimonialPrev} aria-label="Previous Testimonial">❮</button>
-          <button onClick={handleTestimonialNext} aria-label="Next Testimonial">❯</button>
-        </div>
+        
       </section>
-      <Footer/>
+
+      <Footer />
     </div>
   );
 };

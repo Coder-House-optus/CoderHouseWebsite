@@ -1,68 +1,136 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-/* src/components/Navigation.css */
 body {
-  margin: 0; /* Remove default margin from body to prevent extra whitespace */
+  font-family: 'Poppins', sans-serif;
 }
 
 .navigation {
+  font-size: 20px;
   display: flex;
-  align-items: center; /* Align items vertically in the center */
-  background-color: #0E2031; /* Background color for navigation */
-  padding: 4px; /* Remove padding for navigation */
-  height: 80px; /* Set a fixed height for the nav bar */
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0E2031;
+  padding: 10px 20px;
+  height: 80px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .logo img {
-  height: 80px; /* Adjust height of logo as needed */
-  margin-right: 70px; /* Space between logo and nav items */
+  height: 100px;
+  margin-right: 40px;
 }
 
 .nav-links {
-  margin-left: 600px;
-  list-style-type: none; /* Remove default list styles */
-  display: flex; /* Flexbox for horizontal layout */
-  flex-grow: 1; /* Allow links to take available space */
+  list-style-type: none;
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
 }
 
 .nav-links li {
   position: relative;
-
+  margin-left: 50px;
 }
 
-.nav-links a,
-.dropdown-toggle {
-  text-decoration: none; /* Remove underline */
-  color: rgb(255, 255, 255); /* Text color */
-  font-family: 'Poppins', sans-serif; /* Poppins font */
-  padding: 10px 65px; /* Padding for links */
-  line-height: 57px; /* Align text vertically in the nav */
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 12px 20px;
+  line-height: 68px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #CFFB8D;
+  color: #a092bc;
+}
+
+.dropdown {
+  position: relative;
 }
 
 .dropdown-toggle {
-  background: none; /* No background for button */
-  border: none; /* Remove border */
-  cursor: pointer; /* Pointer cursor for button */
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 1px 10px;
+  line-height: 68px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1em;
+}
+
+.dropdown-toggle:hover {
+  background-color: #CFFB8D;
+  color: #150f21;
 }
 
 .dropdown-content {
-  display: block; /* Show dropdown */
-  position: absolute; /* Position it below the toggle */
-  left: 0; /* Align with parent */
-  background-color: #0E2031; /* Dropdown background color */
-  z-index: 1000; /* Ensure dropdown is above other content */
-  padding: 10px; /* Padding for dropdown */
-  list-style: none; /* Remove default list styles */
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #0E2031;
+  z-index: 1000;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  min-width: 250px;
+  margin-left: -100px;
+  list-style-type: none;
 }
 
 .dropdown-content li {
-  margin: 0px 0; /* Space between dropdown items */
+  margin: 0;
 }
 
-.dropdown-content a {
-  color: white; /* Text color for dropdown items */
-  padding: 0px 10px; /* Padding for dropdown links */
-  display: block; /* Make the entire area clickable */
+.dropdown-content a:hover {
+  background-color: #CFFB8D;
+  color: #ffffff;
 }
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* For small screens up to 768px */
+@media screen and (max-width: 1200px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0E2031;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+/* For medium screens between 769px and 1025px */
+

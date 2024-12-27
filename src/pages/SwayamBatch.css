@@ -1,0 +1,259 @@
+.swayam-batch {
+    font-family: poppins;
+    background-color: #ffffff;
+    max-width: 1500px;
+    margin: auto;
+    background-image: url('/public/images/bluedotedlines.png');
+    background-position: right bottom; /* Position the background image at the bottom-right corner */
+    background-repeat: no-repeat;
+    background-size: 1500px 600px; /* Adjust the size of the background image */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: flex-start; /* Align items from the top */
+    overflow: hidden;
+    z-index: 1;
+    background-blend-mode: overlay;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .header h2 {
+    margin-top: 40px;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1.8em;
+  }
+  
+  .features5 {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  .features5 li {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #555;
+  }
+
+
+  .header {
+    text-align: center;
+  }
+  
+  .features5 {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+  }
+  
+  .features5 li {
+    position: relative; /* To position the tick icon */
+    padding: 10px 20px;
+    background-color: #A8D85D;
+    color: white; /* White text */
+    margin: 10px 0; /* Add spacing between list items */
+    border-radius: 5px; /* Rounded corners for better aesthetics */
+    font-family: poppins; /* Optional font styling */
+    font-size: 16px; /* Adjust text size */
+    width: 700px;
+    margin-left: -200px;
+  }
+  
+  .features5 li::before {
+    content: "✔"; /* Unicode for tick mark */
+    position: absolute; /* Position relative to the list item */
+    left: 10px; /* Adjust spacing from the left */
+    color: white; /* Tick mark color */
+    font-size: 18px; /* Tick mark size */
+    font-weight: bold;
+  }
+  
+  
+  .technologies1 {
+    margin-top: 50px;
+    max-width: 1052px;
+    margin-left: 100px;
+  }
+  
+  .technologies1 h3 {
+    margin-top: 60px;
+    text-align: center;
+
+    margin-bottom: 60px;
+    background-color: #A8D85D;
+    color: white; /* White text */
+    margin: 10px 0; /* Add spacing between list items */
+    border-radius: 5px; /* Rounded corners for better aesthetics */
+    font-family: poppins; 
+    font-size: 1.7em;
+  }
+  
+  .tech-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+  }
+  
+  .tech-item {
+    text-align: center;
+  }
+  
+  .tech-item img {
+    max-width: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .tech-item p {
+    font-size: 15px;
+    color: #555;
+  }
+  
+
+
+  .back-button1 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0
+  }
+
+
+  .tech-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjust to fit 3-4 icons per row */
+    gap: 30px; /* Spacing between grid items */
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  /* Mobile View for .swayam-batch */
+  .swayam-batch {
+    max-width: 100%; /* Allow the container to take up full width */
+    background-size: cover; /* Make sure the background image scales properly */
+    background-position: center; /* Center the background image */
+    padding: 20px; /* Add some padding for better spacing */
+  }
+
+  /* Mobile View for header */
+  .header h2 {
+    margin-top: 70px;
+    font-size: 1.5em; /* Smaller font size for header */
+    margin-bottom: 30px;
+  }
+
+  /* Mobile View for features list */
+  .features5 li {
+    width: auto; /* Let the list items take the full width */
+    margin-left: 3px; /* Remove left margin */
+    font-size: 14px; /* Adjust text size */
+    padding: 8px 15px; /* Adjust padding for smaller screens */
+  }
+
+  /* Mobile View for technologies section */
+  .technologies1 {
+    margin-left: 0;
+    max-width: 100%; /* Allow the container to take up full width */
+  }
+
+  .technologies1 h3 {
+    font-size: 1.2em; /* Smaller font size for header */
+    margin-bottom: 30px;
+  }
+
+  /* Mobile View for tech grid */
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr); /* Display 2 items per row on small screens */
+  }
+
+  /* Mobile View for tech items */
+  .tech-item img {
+    max-width: 40px; /* Smaller images */
+  }
+
+  .tech-item p {
+    font-size: 14px; /* Adjust font size for mobile */
+  }
+
+  /* Mobile View for back button */
+  .back-button1 {
+    top: 10px;
+    left: 10px;
+    padding: 8px 15px; /* Adjust padding for smaller buttons */
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Tablet View for .swayam-batch */
+  .swayam-batch {
+    max-width: 90%; /* Adjust container width for tablets */
+    background-size: cover; /* Ensure the background image scales properly */
+    background-position: center; /* Center the background image */
+    padding: 20px; /* Padding for better spacing */
+  }
+
+  /* Tablet View for header */
+  .header h2 {
+    margin-top: 60px;
+    font-size: 1.6em; /* Adjust font size for tablets */
+    margin-bottom: 40px;
+  }
+
+  /* Tablet View for features list */
+  .features5 li {
+    width: auto; /* Let the list items take full width */
+    margin-left: 0; /* Reset left margin */
+    font-size: 15px; /* Adjust text size for tablets */
+    padding: 10px 18px; /* Adjust padding for tablets */
+  }
+
+  /* Tablet View for technologies section */
+  .technologies1 {
+    margin-left: 0;
+    max-width: 100%; /* Allow the container to take up full width */
+  }
+
+  .technologies1 h3 {
+    font-size: 1.5em; /* Slightly smaller font size for tablet headers */
+    margin-bottom: 40px;
+  }
+
+  /* Tablet View for tech grid */
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr); /* Display 3 items per row on tablets */
+    gap: 20px; /* Adjust spacing between grid items */
+  }
+
+  /* Tablet View for tech items */
+  .tech-item img {
+    max-width: 45px; /* Adjust image size */
+  }
+
+  .tech-item p {
+    font-size: 15px; /* Adjust font size for tablet view */
+  }
+
+  /* Tablet View for back button */
+  .back-button1 {
+    top: 15px;
+    left: 15px;
+    padding: 10px 18px; /* Adjust padding for tablet buttons */
+    font-size: 15px; /* Adjust font size */
+  }
+}
+
+
