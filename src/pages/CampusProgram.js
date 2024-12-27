@@ -18,15 +18,15 @@ const CampusProgram = () => {
       image: "/images/c.png",
       link: "/programs/c-programming"  // Add unique link for each program
     },
-    { 
-      name: "C++ Programming", 
-      symbol: "💻", 
-      description: "Master C++ programming with object-oriented design, data structures, and algorithms.", 
-      duration: "6 months", 
-      cost: "$700", 
-      image: "/images/c.png",
-      link: "/programs/cpp-programming"  // Add unique link for each program
-    },
+    // { 
+    //   name: "C++ Programming", 
+    //   symbol: "💻", 
+    //   description: "Master C++ programming with object-oriented design, data structures, and algorithms.", 
+    //   duration: "6 months", 
+    //   cost: "$700", 
+    //   image: "/images/c.png",
+    //   link: "/programs/cpp-programming"  // Add unique link for each program
+    // },
     { 
       name: "Java Programming", 
       symbol: "☕", 
@@ -188,10 +188,10 @@ const CampusProgram = () => {
         <span className="text-black1">Our</span>
         <span className="text-green1"> Campus Programs</span>
       </h2>
-
+  
       {/* Technical Programs Section */}
       <div className="program-section">
-        <h3 className="section-title">Technical Programs</h3>
+        <h3 className="section-title5">Technical Programs</h3>
         <div className="program-cards">
           {technicalPrograms.map((program, index) => (
             <div
@@ -205,10 +205,38 @@ const CampusProgram = () => {
           ))}
         </div>
       </div>
-
+  
+      {/* Technical Program Details Section */}
+      {currentProgramIndex < technicalPrograms.length && (
+        <div className="program-details-container">
+          <div className="program-image">
+            <img
+              src={technicalPrograms[currentProgramIndex].image}
+              alt={technicalPrograms[currentProgramIndex].name}
+              className="program-image-left"
+            />
+          </div>
+          <div className="program-details">
+            <h3 className="program-name-details">
+              {technicalPrograms[currentProgramIndex].name}
+            </h3>
+            <p>
+              <strong>Duration:</strong> {technicalPrograms[currentProgramIndex].duration}
+            </p>
+            {/* View More Button */}
+            <button
+              onClick={() => handleViewMore(technicalPrograms[currentProgramIndex])}
+              className="view-more-button"
+            >
+              View More
+            </button>
+          </div>
+        </div>
+      )}
+  
       {/* Cognitive Programs Section */}
       <div className="program-section">
-        <h3 className="section-title">Cognitive Programs</h3>
+        <h3 className="section-title5">Cognitive Programs</h3>
         <div className="program-cards">
           {cognitivePrograms.map((program, index) => (
             <div
@@ -222,40 +250,66 @@ const CampusProgram = () => {
           ))}
         </div>
       </div>
-
-      {/* Program Details Section */}
-      {currentProgramIndex < technicalPrograms.length + cognitivePrograms.length && (
+  
+      {/* Cognitive Program Details Section */}
+      {currentProgramIndex >= technicalPrograms.length && currentProgramIndex < technicalPrograms.length + cognitivePrograms.length && (
         <div className="program-details-container">
           <div className="program-image">
             <img
-              src={selectedProgram.image}
-              alt={selectedProgram.name}
+              src={
+                cognitivePrograms[currentProgramIndex - technicalPrograms.length].image
+              }
+              alt={
+                cognitivePrograms[currentProgramIndex - technicalPrograms.length].name
+              }
               className="program-image-left"
             />
           </div>
           <div className="program-details">
-            <h3 className="program-name-details">{selectedProgram.name}</h3>
-            <p><strong>Duration:</strong> {selectedProgram.duration}</p>
+            <h3 className="program-name-details">
+              {cognitivePrograms[currentProgramIndex - technicalPrograms.length].name}
+            </h3>
+            <p>
+              <strong>Duration:</strong>{" "}
+              {cognitivePrograms[currentProgramIndex - technicalPrograms.length].duration}
+            </p>
             {/* View More Button */}
-            <button onClick={handleViewMore} className="view-more-button">View More</button>
+            <button
+              onClick={() =>
+                handleViewMore(
+                  cognitivePrograms[currentProgramIndex - technicalPrograms.length]
+                )
+              }
+              className="view-more-button"
+            >
+              View More
+            </button>
           </div>
         </div>
       )}
-
+  
       {/* Image Slideshow Section */}
-      <div className="slideshow-container">
-        <button className="arrow-button" onClick={handlePrevImage}>&#10094;</button>
-        <img src={images[currentImageIndex]} alt="Campus Program" className="slideshow-image" />
-        <button className="arrow-button" onClick={handleNextImage}>&#10095;</button>
+      <div className="slideshow-container5">
+        <button className="arrow-button" onClick={handlePrevImage}>
+          &#10094;
+        </button>
+        <img
+          src={images[currentImageIndex]}
+          alt="Campus Program"
+          className="slideshow-image5"
+        />
+        <button className="arrow-button" onClick={handleNextImage}>
+          &#10095;
+        </button>
       </div>
-
+  
       {/* Enquiry Form Section */}
       <h2 className="programs-title">
         <span className="text-black">Enquiry</span>
         <span className="text-green"> Form</span>
       </h2>
-      <div className="enquiry-form-container">
-        <form onSubmit={handleFormSubmit} className="enquiry-form">
+      <div className="enquiry-form-container5">
+        <form onSubmit={handleFormSubmit} className="enquiry-form5">
           <input
             type="text"
             value={name}
@@ -293,12 +347,13 @@ const CampusProgram = () => {
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Your Query"
           />
-          <button type="submit" className="submit-btn">Submit</button>
+          <button type="submit" className="submit-btn5">
+            Submit
+          </button>
         </form>
       </div>
       <Footer />
     </section>
   );
-};
-
+};  
 export default CampusProgram;

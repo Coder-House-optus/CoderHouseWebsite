@@ -40,7 +40,7 @@
 .section-title {
   font-size: 1.5rem;
   color: #333; /* Increased contrast */
-  margin-bottom: 20px;
+  margin: auto 20px;
   text-align: left;
   opacity: 1;
 }
@@ -147,6 +147,7 @@
 
   .section-title {
     font-size: 1.3rem;
+    text-align: center;
   }
 
   .highlights-grid {
