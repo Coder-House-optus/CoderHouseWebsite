@@ -1,118 +1,118 @@
 .review-section {
     text-align: center;
     padding: 10px 0;
-    background-image: url('/public/images/Review.png'); /* Replace with the correct path to your image */
-    background-size: cover; /* Ensures the background covers the entire section */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents repeating of the background image */
-    position: relative; /* Allows for overlaying of content on the background */
+    background-image: url('/public/images/Review.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
     z-index: 1;
     font-family: poppins;
-    margin-top: 90px;
-}
-
-.review-section::before {
+    margin-top: 56.25px; /* 90px * 0.625 */
+   }
+   
+   .review-section::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Puts the overlay behind the content */
-}
-
-.review-title {
-    font-size: 2.7rem;
-    margin-bottom: 90px;
-}
-
-.highlight {
-    color: #A8D85D; /* You can adjust the color for the highlight */
+    z-index: -1;
+   }
+   
+   .review-title {
+    font-size: 2.8125rem; /* 4.5rem * 0.625 */
+    margin-bottom: 56.25px; /* 90px * 0.625 */
+   }
+   
+   .highlight {
+    color: #A8D85D;
     font-weight: bold;
-}
-
-.review-card {
+   }
+   
+   .review-card {
     background-color: #fff;
-    border: 2px solid #FF7895; /* Pink border */
+    border: 2px solid #FF7895;
     border-radius: 10px;
     padding: 40px;
-    width: 500px; /* Fixed width */
-    height: 300px; /* Fixed height */
+    width: 500px;
+    height: 300px;
     margin: 0 auto;
     position: relative;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Ensures that overflowing content is hidden */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Space between elements */
-    transition: box-shadow 0.3s ease; /* Smooth transition for the glow effect */
-}
-
-/* Add hover effect for glowing */
-.review-card:hover {
-    box-shadow: 0 0 20px rgba(255, 120, 149, 0.7), /* Outer pink glow */
-                0 0 30px rgba(255, 120, 149, 0.5); /* More intense glow */
-}
-
-.quote-icon {
+    justify-content: space-between;
+    transition: box-shadow 0.3s ease;
+   }
+   
+   .review-card:hover {
+    box-shadow: 0 0 20px rgba(255, 120, 149, 0.7),
+                0 0 30px rgba(255, 120, 149, 0.5);
+   }
+   
+   .quote-icon {
     position: absolute;
-    top: 20px; /* Adjust this value as needed */
+    top: 20px;
     left: 20px;
     width: 100px;
     height: 100px;
-    background-color: #FF7895; /* Circle background color */
-    border-radius: 50%; /* Makes the container circular */
+    background-color: #FF7895;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    font-family: 'Playfair Display', serif; /* Apply the elegant font */
-    z-index: 2; /* Ensures the quote icon is above the review card */
-}
-
-.double-quote {
-    font-size: 6rem; /* Adjust the size for a more prominent appearance */
-    color: #fff; /* Color of the quote */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), /* Subtle shadow for depth */
-                 0 0 5px rgba(255, 255, 255, 0.7); /* Soft glow effect */
-    line-height: 1; /* Ensures tight spacing for the quote */
-    margin-top: 5px; /* Adjust as needed for vertical centering */
-    margin-left: 2px; /* Adjust as needed for horizontal centering */
-}
-
-.stars {
-    color: #f1c40f; /* Star color */
+    font-family: 'Playfair Display', serif;
+    z-index: 2;
+   }
+   
+   .double-quote {
+    font-size: 3.75rem; /* 6rem * 0.625 */
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2),
+                 0 0 5px rgba(255, 255, 255, 0.7);
+    line-height: 1;
+    margin-top: 5px;
+    margin-left: 2px;
+   }
+   
+   .stars {
+    color: #f1c40f;
     margin-bottom: 10px;
-}
-
-.filled-star {
-    color: #f1c40f; /* Filled stars */
-}
-
-.empty-star {
-    color: #ccc; /* Empty stars */
-}
-
-.review-author {
+    transform: scale(1.5);
+   }
+   
+   .filled-star {
+    color: #f1c40f;
+   }
+   
+   .empty-star {
+    color: #ccc;
+   }
+   
+   .review-author {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.1875rem; /* 1.9rem * 0.625 */
     margin-bottom: 10px;
-}
-
-.review-text {
-    font-size: 1.2rem;
+   }
+   
+   .review-text {
+    font-size: 0.9375rem; /* 1.5rem * 0.625 */
     line-height: 1.5;
     color: #555;
     margin-top: 10px;
-    overflow: auto; /* Allows for scroll if text is too long */
-}
-
-.review-dots {
+    overflow: auto;
+   }
+   
+   .review-dots {
     margin-top: 20px;
-}
-
-.dot,
-.active-dot {
+   }
+   
+   .dot,
+   .active-dot {
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -120,68 +120,68 @@
     background-color: #ccc;
     border-radius: 50%;
     transition: background-color 0.3s;
-}
-
-.active-dot {
-    background-color: #FF7895; /* Active dot color */
-}
-
-.dot:hover {
+   }
+   
+   .active-dot {
     background-color: #FF7895;
-}
-
-/* Responsive adjustments for screens with max-width 480px */
-@media screen and (max-width: 480px) {
+   }
+   
+   .dot:hover {
+    background-color: #FF7895;
+   }
+   
+   @media screen and (max-width: 480px) {
     .review-section {
-        margin-top: 50px; /* Reduced margin for smaller screens */
-        padding: 10px;
+      margin-top: 31.25px; /* 50px * 0.625 */
+      padding: 10px;
     }
-
+    
     .review-title {
-        font-size: 2rem; /* Adjusted for better fit */
-        margin-bottom: 50px; /* Reduced spacing */
+      font-size: 1.5625rem; /* 2.5rem * 0.625 */
+      margin-bottom: 31.25px; /* 50px * 0.625 */
     }
-
+    
     .review-card {
-        width: 90%; /* Adjusted width for smaller screens */
-        height: auto; /* Allow dynamic height */
-        padding: 20px; /* Reduced padding */
-        margin: 20px auto; /* Add spacing between cards */
+      width: 90%;
+      height: auto;
+      padding: 20px;
+      margin: 20px auto;
     }
-
+    
     .quote-icon {
-        top: 10px;
-        left: 10px;
-        width: 80px; /* Scaled for smaller screens */
-        height: 80px;
+      top: 10px;
+      left: 10px;
+      width: 80px;
+      height: 80px;
     }
-
+    
     .double-quote {
-        font-size: 5rem; /* Adjusted size for smaller screens */
+      font-size: 3.125rem; /* 5rem * 0.625 */
     }
-
+    
     .stars {
-        font-size: 0.9rem; /* Adjusted for smaller visibility */
-        margin-bottom: 5px;
+      font-size: 0.6875rem; /* 1.1rem * 0.625 */
+      margin-bottom: 5px;
+      transform: scale(1.1);
     }
-
+    
     .review-author {
-        font-size: 1.2rem; /* Adjusted for smaller screens */
+      font-size: 0.9375rem; /* 1.5rem * 0.625 */
     }
-
+    
     .review-text {
-        font-size: 1rem; /* Adjusted for readability */
-        margin-top: 5px;
+      font-size: 0.875rem; /* 1.4rem * 0.625 */
+      margin-top: 5px;
     }
-
+    
     .review-dots {
-        margin-top: 15px;
+      margin-top: 15px;
     }
-
+    
     .dot,
     .active-dot {
-        width: 8px;
-        height: 8px; /* Adjusted for smaller screens */
-        margin: 0 4px;
+      width: 8px;
+      height: 8px;
+      margin: 0 4px;
     }
-}
+   }

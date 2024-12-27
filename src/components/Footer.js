@@ -15,7 +15,7 @@ const Footer = () => {
             3rd Floor, <br />
             Above Indian Bank, <br />
             MR-4 Road, Vijay Nagar, <br />
-            Jabalpur
+            Jabalpur, Madhya Pradesh.
           </p>
           {/* White Square Overlay */}
           <div className="white-square"></div>

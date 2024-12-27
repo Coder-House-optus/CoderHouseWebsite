@@ -1,63 +1,56 @@
 html {
-  font-size: 62.5%;
+  font-size: 100%;
 }
 
 .review-title1 {
-  text-align: center; /* Center the text */
-  font-size: clamp(2rem, 5vw, 3rem); /* Responsive font size */
-  padding: 4rem 2rem; /* Reduced padding that works on all screens */
-  margin: 0 auto; /* Center the element */
-  max-width: 120rem; /* Maximum width for larger screens */
+  text-align: center;
+  font-size: clamp(2.5rem, 5vw, 2.5rem); /* Converted from 4rem */
+  padding: 2.5rem 1.25rem; /* Converted from 4rem 2rem */
+  margin: 0 auto;
+  max-width: 75rem; /* Converted from 120rem */
 }
 
-/* Add media queries for better control */
 @media screen and (max-width: 768px) {
   .review-title1 {
-    padding: 3rem 1.5rem; /* Smaller padding on mobile */
+    padding: 1.875rem 0.9375rem; /* Converted from 3rem 1.5rem */
   }
 }
 
 @media screen and (max-width: 480px) {
   html {
-    font-size: 50%; /* Reduce base font size for smaller screens */
+    font-size: 50%;
   }
 
   .review-title1 {
-    font-size: clamp(1.5rem, 4vw, 2.5rem); /* Adjust responsive font size */
-    padding: 2rem 1rem; /* Smaller padding for compact screens */
+    font-size: clamp(0.9375rem, 4vw, 1.875rem); /* Converted from 1.5rem, 3rem */
+    padding: 1.5625rem 0.75rem; /* Converted from 2.5rem 1.2rem */
   }
 
   .container {
-    padding: 5rem 1rem; /* Adjust padding to fit small screens */
-    background-size: cover; /* Maintain background image responsiveness */
-    background-position: center; /* Center the background image */
+    padding: 3.125rem 0.625rem; /* Converted from 5rem 1rem */
+    background-size: cover;
+    background-position: center;
   }
 
   .container > .btn {
-    width: 8rem; /* Adjust button width */
-    height: 8rem; /* Adjust button height */
-    margin: 1rem; /* Reduce button margins */
+    width: 5rem; /* Converted from 8rem */
+    height: 5rem; /* Converted from 8rem */
+    margin: 0.625rem; /* Converted from 1rem */
   }
 
   .container > .btn > a {
-    font-size: 1.2rem; /* Smaller font size for buttons */
-    letter-spacing: 0.05rem; /* Adjust letter spacing */
+    font-size: 0.75rem; /* Converted from 1.2rem */
+    letter-spacing: 0.03125rem; /* Converted from 0.05rem */
   }
 
   .container > .btn:hover > a {
-    letter-spacing: 0.1rem; /* Subtle hover effect */
+    letter-spacing: 0.0625rem; /* Converted from 0.1rem */
   }
 
   .container > .btn::before,
   .container > .btn::after {
-    height: 0.8rem; /* Adjust pseudo-element height */
-    width: 0rem; /* Reset pseudo-element width initially */
-  }
-
-  .container > .btn:hover::before,
-  .container > .btn:hover::after {
-    height: 35%; /* Reduce hover effect height */
-    width: 70%; /* Reduce hover effect width */
+    height: 0.5rem; /* Converted from 0.8rem */
+    width: 0rem;
   }
 }
 
@@ -66,22 +59,22 @@ html {
   display: flex;
   justify-content: center;
   text-align: center;
-  padding: 10rem 0; /* Adjust padding as needed */
-  background-size: cover; /* Ensures the image covers the entire container */
-  background-position: center; /* Center the image */
-  width: 100%; /* Full width */
-  max-width: 180rem; /* Optional: limit max width for larger screens */
-  margin: 0 auto; /* Centers the container on larger screens */
-  overflow: hidden; /* Prevents overflow */
+  padding: 6.25rem 0; /* Converted from 10rem */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  max-width: 112.5rem; /* Converted from 180rem */
+  margin: 0 auto;
+  overflow: hidden;
   background-color: #3C5C7B;
 }
 
 .container > .btn {
   position: relative;
-  width: 10rem;
-  height: 10rem;
-  margin: 2rem;
-  padding: 0rem 6rem;
+  width: 6.25rem; /* Converted from 10rem */
+  height: 6.25rem; /* Converted from 10rem */
+  margin: 1.25rem; /* Converted from 2rem */
+  padding: 0rem 3.75rem; /* Converted from 0rem 6rem */
 }
 
 .container > .btn > a {
@@ -96,22 +89,23 @@ html {
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 1.5rem 3.5rem rgba(0, 0, 0, 0.2);
-  border-top: .1rem solid rgba(255, 255, 255, 0.1);
-  border-bottom: .1rem solid rgba(255, 255, 255, 0.1);
-  border-radius: 3rem;
+  box-shadow: 0 0.9375rem 2.1875rem rgba(0, 0, 0, 0.2); /* Converted from 1.5rem 3.5rem */
+  border-top: 0.0625rem solid rgba(255, 255, 255, 0.1); /* Converted from 0.1rem */
+  border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.875rem; /* Converted from 3rem */
   color: #fff;
   z-index: 1;
   font-weight: 600;
-  letter-spacing: .1rem;
+  font-size: 1.125rem; /* Converted from 1.8rem */
+  letter-spacing: 0.0625rem; /* Converted from 0.1rem */
   text-decoration: none;
   overflow: hidden;
   transition: 0.75s;
-  backdrop-filter: blur(1.5rem);
+  backdrop-filter: blur(0.9375rem); /* Converted from 1.5rem */
 }
 
 .container > .btn:hover > a {
-  letter-spacing: .2rem;
+  letter-spacing: 0.125rem; /* Converted from 0.2rem */
 }
 
 .container > .btn > a::before {
@@ -135,11 +129,11 @@ html {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -.5rem;
+  bottom: -0.3125rem; /* Converted from -0.5rem */
   width: 0rem;
-  height: 1rem;
+  height: 0.625rem; /* Converted from 1rem */
   background: rgb(80, 12, 12);
-  border-radius: 1rem;
+  border-radius: 0.625rem; /* Converted from 1rem */
   transition: 0.75s;
 }
 
@@ -147,7 +141,7 @@ html {
   bottom: 0;
   height: 40%;
   width: 80%;
-  border-radius: 3rem;
+  border-radius: 1.875rem; /* Converted from 3rem */
   transition-delay: 0.25s;
 }
 
@@ -156,11 +150,11 @@ html {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: -.5rem;
+  top: -0.3125rem; /* Converted from -0.5rem */
   width: 0rem;
-  height: 1rem;
+  height: 0.625rem; /* Converted from 1rem */
   background: #f00;
-  border-radius: 1rem;
+  border-radius: 0.625rem; /* Converted from 1rem */
   transition: 0.75s;
 }
 
@@ -168,11 +162,10 @@ html {
   top: 0;
   height: 50%;
   width: 80%;
-  border-radius: 3rem;
+  border-radius: 1.875rem; /* Converted from 3rem */
   transition-delay: 0.25s;
 }
 
-/* Specific child buttons styles */
 .container > .btn:nth-child(1)::before,
 .container > .btn:nth-child(1)::after,
 .container > .btn:nth-child(2)::before,
@@ -184,9 +177,11 @@ html {
 .container > .btn:nth-child(5)::before,
 .container > .btn:nth-child(5)::after {
   background: #C6E894;
-  box-shadow: 0 0 .5rem #C6E894, 0 0 1.5rem #C6E894, 0 0 3rem #C6E894, 0 0 6rem #C6E894;
+  box-shadow: 0 0 0.3125rem #d7e8bd, /* Converted from 0.5rem */
+              0 0 0.9375rem #cfe8ab, /* Converted from 1.5rem */
+              0 0 1.875rem #d4ecb0, /* Converted from 3rem */
+              0 0 3.75rem #d2eda8; /* Converted from 6rem */
 }
-
 
 @media screen and (max-width: 480px) {
   html {
@@ -194,40 +189,62 @@ html {
   }
 
   .review-title1 {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    padding: 2rem 1rem;
+    font-size: clamp(0.9375rem, 4vw, 1.5625rem); /* Converted from 1.5rem, 2.5rem */
+    padding: 1.25rem 0.625rem; /* Converted from 2rem 1rem */
   }
 
   .container {
-    padding: 5rem 1rem;
+    padding: 3.125rem 0.625rem; /* Converted from 5rem 1rem */
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.625rem; /* Converted from 1rem */
   }
 
   .container > .btn {
-    width: 9rem;
-    height: 9rem;
-    margin: 1rem;
-    padding: 0 4rem;
+    width: 5.625rem; /* Converted from 9rem */
+    height: 5.625rem; /* Converted from 9rem */
+    margin: 0.625rem; /* Converted from 1rem */
+    padding: 0 2.5rem; /* Converted from 0 4rem */
   }
 
   .container > .btn > a {
-    font-size: 1.4rem;
-    border-radius: 2rem;
+    font-size: 1rem; /* Converted from 1.6rem */
+    border-radius: 1.25rem; /* Converted from 2rem */
   }
 
   .container > .btn::before,
   .container > .btn::after {
-    height: 0.8rem;
+    height: 0.5rem; /* Converted from 0.8rem */
+  }
+}
+
+/* Tablets (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .container {
+    padding: 4.375rem 1.25rem; /* Converted from 7rem 2rem */
+    flex-wrap: wrap;
+    gap: 0.9375rem; /* Converted from 1.5rem */
+    justify-content: center;
   }
 
-  .container > .btn:hover::before,
-  .container > .btn:hover::after {
-    height: 40%;
-    width: 80%;
+  .container > .btn {
+    width: 5.9375rem; /* Converted from 9.5rem */
+    height: 5.9375rem; /* Converted from 9.5rem */
+    margin: 0.9375rem; /* Converted from 1.5rem */
+    padding: 0 3.125rem; /* Converted from 0 5rem */
   }
 
-  .container > .btn > a::before {
-    width: 40%;
+  .container > .btn > a {
+    font-size: 1.0625rem; /* Converted from 1.7rem */
+    border-radius: 1.5625rem; /* Converted from 2.5rem */
+  }
+
+  .review-title1 {
+    font-size: clamp(1.25rem, 4.5vw, 1.875rem); /* Converted from 2rem, 3rem */
+    padding: 1.5625rem 0.9375rem; /* Converted from 2.5rem 1.5rem */
+  }
+
+  .container > .btn::before,
+  .container > .btn::after {
+    height: 0.5625rem; /* Converted from 0.9rem */
   }
 }

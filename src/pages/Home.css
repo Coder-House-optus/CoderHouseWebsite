@@ -1,33 +1,15 @@
 /* Base styles */
 html {
-  font-size: 62.5%;
+  font-size: 100%;
   box-sizing: border-box;
 }
 
 /* Responsive font sizing */
-@media (max-width: 1200px) {
-  html {
-    font-size: 56.25%;
-  }
-}
-
-@media (max-width: 998px) {
-  html {
-    font-size: 55%;
-  }
-}
-
-@media (max-width: 768px) {
-  html {
-    font-size: 45%;
-  }
-}
-
-@media (max-width: 480px) {
-  html {
-    font-size: 40%;
-  }
-}
+@media (max-width: 1200px) { html { font-size: 56.25%; } }
+@media (max-width: 998px) { html { font-size: 55%; } }
+@media (max-width: 768px) { html { font-size: 45%; } }
+@media (max-width: 480px) { html { font-size: 40%; } }
+@media screen and (max-width: 320px) { html { font-size: 35%; } }
 
 /* Home and Text Styles */
 .home {
@@ -38,21 +20,12 @@ html {
 
 .text-white {
   color: white;
-  font-size: 2.5rem;
-  
+  font-size: 1.5625rem;  /* 2.5 * 0.625 */
 }
 
 .text-white2, .text-green {
-  font-size: clamp(3.0rem, 2vw, 1.6rem);
+  font-size: clamp(1.875rem, 2vw, 1rem);  /* 3.0, 1.6 * 0.625 */
 }
-
-/* .text-white2 {
-  color: white;
-} */
-
-/* .text-green {
-  color: #C5F678;
-} */
 
 /* Hero Section */
 .hero {
@@ -62,16 +35,16 @@ html {
   justify-content: center;
   background-size: cover;
   background-position: center;
-  padding: 5rem 2rem 15rem;
+  padding: 3.125rem 1.25rem 9.375rem;  /* 5, 2, 15 * 0.625 */
   min-height: 60vh;
   width: 100%;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 1.875rem;  /* 3 * 0.625 */
 }
 
 .hero-left {
-  margin-left: 10rem;
-  margin-top: 3rem;
+  margin-left: 6.25rem;  /* 10 * 0.625 */
+  margin-top: 1.875rem;  /* 3 * 0.625 */
   width: auto;
   height: auto;
   display: flex;
@@ -81,20 +54,25 @@ html {
 
 .hero-right {
   flex: 1;
-  min-width: 30rem;
-  max-width: 50rem;
-  margin: 2rem;
-  padding: 2rem;
+  min-width: 18.75rem;  /* 30 * 0.625 */
+  max-width: 31.25rem;  /* 50 * 0.625 */
+  margin: 2.5rem;  /* 4 * 0.625 */
+  padding: 2.5rem 1.875rem;  /* 4, 3 * 0.625 */
   background-color: #3C5C7B;
   color: #ffffff;
-  border-radius: 3rem;
-  box-shadow: 0 .8rem 1.6rem rgba(0, 0, 0, 0.25);
+  border-radius: 1.875rem;  /* 3 * 0.625 */
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.2);  /* 0.8, 2 * 0.625 */
 }
 
 .hero-heading {
+  font-size: 1.75rem;  /* 2.8 * 0.625 */
   text-align: center;
-  font-size: clamp(2rem, 3vw, 3rem);
-  margin-bottom: 2rem;
+  margin-bottom: 1.875rem;  /* 3 * 0.625 */
+  line-height: 1.3;
+}
+
+.hero-heading span {
+  color: #C5F678;
 }
 
 .hero-image {
@@ -104,76 +82,18 @@ html {
   object-fit: contain;
 }
 
-/* Form Styles - Updated */
-.form {
-  width: 100%;
-  max-width: 40rem;
-  padding: 0 2rem 6rem;
-  margin: 0 auto;
-  background-color: #3C5C7B;
-}
-
-.hero-right input[type="text"],
-.hero-right input[type="email"],
-.hero-right input[type="phone"],
-.hero-right input[type="url"],
-.hero-right textarea {
-  border-radius: .8rem;
-  padding: 1.4rem;
-  margin: .5rem 0;
-  box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.15);
-  border: none;
-  width: 100%;
-  font-size: 1.6rem;
-  outline: none;
-  background-color: #ffffff;
-}
-
-.hero-right select {
-  border-radius: .8rem;
-  padding: 1.4rem;
-  margin: .2rem 0;
-  box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.15);
-  border: none;
-  width: 107%;
-  font-size: 1.6rem;
-  outline: none;
-  background-color: #C6E894;
-  color: #3C5C7B;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  position: relative;
-}
-
-.hero-right select::after {
-  content: "▼";
-  position: absolute;
-  right: 1.5rem;
-  top: 20%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  color: #3C5C7B;
-  font-size: 1.2rem;
-  line-height: 1;
-}
-
-.hero-right input:focus,
-.hero-right textarea:focus,
-.hero-right select:focus {
-  box-shadow: 0 0 .8rem rgba(168, 216, 93, 0.5);
-}
 
 /* White Section */
 .White {
   width: 90%;
-  max-width: 117rem;
-  height: 15rem;
-  margin: -11rem auto 0;
-  padding: 2rem;
+  max-width: 68.75rem;  /* 110 * 0.625 */
+  height: 7.5rem;  /* 12 * 0.625 */
+  margin: -2.5rem auto 0;  /* -5 * 0.625 */
+  margin-right: 8.125rem;  /* 13 * 0.625 */
+  padding: 0.9375rem;  /* 1.5 * 0.625 */
   background-color: white;
-  border-radius: 1.4rem;
-  box-shadow: 0 0 0.5rem rgba(14, 3, 3, 0.5);
+  border-radius: 0.875rem;  /* 1.4 * 0.625 */
+  box-shadow: 0 0 0.625rem rgba(14, 3, 3, 0.5);  /* 1 * 0.625 */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -183,35 +103,36 @@ html {
 .item {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin: 1rem;
+  gap: 0.625rem;  /* 1 * 0.625 */
+  margin: 0.625rem;  /* 1 * 0.625 */
 }
 
 .item img {
-  width: 6rem;
+  width: 3.75rem;  /* 6 * 0.625 */
   height: auto;
-  margin-right: 1rem;
+  margin-right: 0.625rem;  /* 1 * 0.625 */
 }
 
 .text {
   width: auto;
-  font-size: 2rem;
+  font-size: 1.25rem;  /* 2 * 0.625 */
   color: #333;
   font-weight: bold;
 }
 
 /* Button Styles */
 .callback-btn {
-  background-color: #A8D85D;
-  color: white;
-  padding: 1.2rem;
-  border: none;
-  font-size: 1.6rem;
-  border-radius: 2.5rem;
+  background: linear-gradient(to right, #C5F678, #A8D85D);
+  color: #3C5C7B;
+  padding: 0.9375rem 1.875rem;  /* 1.5, 3 * 0.625 */
+  border-radius: 1.875rem;  /* 3 * 0.625 */
+  font-size: 1.125rem;  /* 1.8 * 0.625 */
+  font-weight: 500;
+  width: auto;
+  min-width: 12.5rem;  /* 20 * 0.625 */
+  margin: 1.875rem auto 0.625rem;  /* 3, 1 * 0.625 */
+  box-shadow: 0 2.5px 9.375px rgba(197, 246, 120, 0.3);  /* 4px, 15px * 0.625 */
   cursor: pointer;
-  width: 80%;
-  max-width: 25rem;
-  margin: 2rem auto;
   display: block;
   text-align: center;
   transition: all 0.3s ease;
@@ -219,13 +140,13 @@ html {
 
 .callback-btn:hover {
   background-color: #45a049;
-  box-shadow: 0 0 2rem rgba(168, 216, 93, 0.8);
+  box-shadow: 0 0 1.25rem rgba(168, 216, 93, 0.8);  /* 2 * 0.625 */
 }
 
 /* Responsive Styles */
 @media screen and (max-width: 1200px) {
   .hero-left {
-    margin-left: 5rem;
+    margin-left: 3.125rem;  /* 5 * 0.625 */
   }
   
   .hero-image {
@@ -236,112 +157,99 @@ html {
 @media screen and (max-width: 992px) {
   .hero {
     flex-direction: column;
-    padding: 2rem 1rem 15rem;
+    padding: 1.25rem 0.625rem 9.375rem;  /* 2, 1, 15 * 0.625 */
   }
   
   .hero-left {
-    margin: 2rem auto;
+    margin: 1.25rem auto;  /* 2 * 0.625 */
     width: 100%;
-    max-width: 50rem;
+    max-width: 31.25rem;  /* 50 * 0.625 */
   }
 }
 
 @media screen and (max-width: 768px) {
   .hero {
-    padding: 3rem 1.5rem 10rem;
+    padding: 1.875rem 0.9375rem 6.25rem;  /* 3, 1.5, 10 * 0.625 */
   }
 
   .hero-left {
-    margin: 1rem auto;
-    max-width: 40rem;
+    margin: 0.625rem auto;  /* 1 * 0.625 */
+    max-width: 25rem;  /* 40 * 0.625 */
   }
 
   .hero-right {
-    margin: 1rem;
+    margin: 0.625rem;  /* 1 * 0.625 */
     width: 90%;
-    min-width: 28rem;
+    min-width: 17.5rem;  /* 28 * 0.625 */
   }
 
   .White {
     width: 95%;
-    margin: -8rem auto 0;
+    margin: -5rem auto 0;  /* -8 * 0.625 */
     height: auto;
     flex-direction: column;
   }
 
   .item {
-    margin: 1rem 0;
+    margin: 0.625rem 0;  /* 1 * 0.625 */
     width: 100%;
     justify-content: center;
   }
 
   .text {
-    font-size: 1.5rem;
-  }
-
-  .hero-right input[type="text"],
-  .hero-right input[type="email"],
-  .hero-right input[type="phone"],
-  .hero-right input[type="url"],
-  .hero-right textarea,
-  .hero-right select {
-    font-size: 1.4rem;
-    padding: 1.2rem;
-  }
-  
-  .hero-right select {
-    width: 100%;
+    font-size: 0.9375rem;  /* 1.5 * 0.625 */
   }
 }
 
 @media screen and (max-width: 480px) {
   .hero {
-    padding: 2rem 1rem 10rem;
+    padding: 1.25rem 0.625rem 6.25rem;  /* 2, 1, 10 * 0.625 */
   }
 
   .hero-right {
-    width: 92%;
-    padding: 1.5rem;
+    padding: 1.875rem 1.25rem;  /* 3, 2 * 0.625 */
+    width: 90%;
+    margin: 0.625rem auto;  /* 1 * 0.625 */
   }
 
   .White {
-    margin: -6rem auto 0;
-    min-height: 20rem;
+    margin: -3.75rem auto 0;  /* -6 * 0.625 */
+    min-height: 12.5rem;  /* 20 * 0.625 */
   }
 
   .item img {
-    width: 3.5rem;
+    width: 2.1875rem;  /* 3.5 * 0.625 */
   }
 
   .text {
-    font-size: 1.3rem;
+    font-size: 0.8125rem;  /* 1.3 * 0.625 */
+  }
+
+  .hero-heading {
+    font-size: 1.5rem;  /* 2.4 * 0.625 */
+    margin-bottom: 1.25rem;  /* 2 * 0.625 */
+  }
+
+  .hero-right input[type="text"],
+  .hero-right input[type="email"],
+  .hero-right input[type="phone"],
+  .hero-right input[type="url"],
+  .hero-right select {
+    padding: 0.75rem 0.9375rem;  /* 1.2, 1.5 * 0.625 */
+    font-size: 0.875rem;  /* 1.4 * 0.625 */
   }
 
   .callback-btn {
-    width: 85%;
-    font-size: 1.3rem;
-    padding: 1rem;
-  }
-
-  .hero-right input[type="text"],
-  .hero-right input[type="email"],
-  .hero-right input[type="phone"],
-  .hero-right input[type="url"],
-  .hero-right textarea,
-  .hero-right select {
-    padding: 1rem;
-    font-size: 1.3rem;
+    padding: 0.75rem 1.5625rem;  /* 1.2, 2.5 * 0.625 */
+    font-size: 1rem;  /* 1.6 * 0.625 */
+    min-width: 11.25rem;  /* 18 * 0.625 */
   }
 }
 
 @media screen and (max-width: 320px) {
-  html {
-    font-size: 35%;
-  }
-
   .White {
-    margin: -4rem auto 0;
-    min-height: 24rem;
+    margin: -2.5rem auto 0;  /* -4 * 0.625 */
+    min-height: 15rem;  /* 24 * 0.625 */
   }
 
   .hero-right {
@@ -349,280 +257,137 @@ html {
   }
 
   .item img {
-    width: 2.8rem;
+    width: 1.75rem;  /* 2.8 * 0.625 */
   }
 
   .text {
-    font-size: 1.1rem;
-  }
-
-  .hero-right input[type="text"],
-  .hero-right input[type="email"],
-  .hero-right input[type="phone"],
-  .hero-right input[type="url"],
-  .hero-right textarea,
-  .hero-right select {
-    padding: 0.8rem;
-    font-size: 1.2rem;
+    font-size: 0.6875rem;  /* 1.1 * 0.625 */
   }
 }
-/* Previous CSS remains the same until form styles */
 
-/* Form Styles - Updated */
-.form {
-  width: 100%;
-  max-width: 40rem;
-  padding: 0 2rem 6rem;
-  margin: 0 auto;
-  background-color: #3C5C7B;
-}
-
-.hero-right input[type="text"],
-.hero-right input[type="email"],
-.hero-right input[type="phone"],
-.hero-right input[type="url"],
-.hero-right textarea {
-  border-radius: .8rem;
-  padding: 1.4rem;
-  margin: .5rem 0;
-  box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.15);
-  border: none;
-  width: 100%;
-  font-size: 1.6rem;
-  outline: none;
-  background-color: #ffffff;
-  color: #333; /* Added for better text visibility */
-}
-
-/* Added placeholder styles */
-.hero-right input::placeholder,
-.hero-right textarea::placeholder {
-  color: #666;
-  opacity: 1;
-}
-
-/* Added for webkit browsers */
-.hero-right input::-webkit-input-placeholder,
-.hero-right textarea::-webkit-input-placeholder {
-  color: #666;
-  opacity: 1;
-}
-
-/* Added for Firefox */
-.hero-right input::-moz-placeholder,
-.hero-right textarea::-moz-placeholder {
-  color: #666;
-  opacity: 1;
-}
-
-.hero-right select {
-  border-radius: .8rem;
-  padding: 1.4rem;
-  margin: .2rem 0;
-  box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.15);
-  border: none;
-  width: 100%; /* Changed from 107% for better responsiveness */
-  font-size: 1.6rem;
-  outline: none;
-  background-color: #C6E894;
-  color: #3C5C7B;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  position: relative;
-  cursor: pointer;
-}
-
-/* Added custom dropdown arrow container */
-.select-wrapper {
-  position: relative;
-  width: 100%;
-}
-
-/* Updated dropdown arrow styling */
-.select-wrapper::after {
-  content: "▼";
-  position: absolute;
-  right: 1.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  color: #3C5C7B;
-  font-size: 1.2rem;
-}
-
-.hero-right input:focus,
-.hero-right textarea:focus,
-.hero-right select:focus {
-  box-shadow: 0 0 .8rem rgba(168, 216, 93, 0.5);
-}
-
-/* Previous CSS remains the same until media queries */
-
-/* Updated media queries for better form responsiveness */
-@media screen and (max-width: 480px) {
-  .hero-right {
+/* Add this media query for screens between 769px and 910px */
+@media screen and (min-width: 769px) and (max-width: 910px) {
+  .White {
     width: 95%;
-    padding: 1.5rem;
-    margin: 1rem auto;
+    margin: -3.125rem auto 0;  /* -5 * 0.625 */
+    padding: 0.625rem;  /* 1 * 0.625 */
+    height: auto;
+    min-height: 7.5rem;  /* 12 * 0.625 */
+    margin-right: auto;
   }
 
-  .form {
-    padding: 0 1rem 4rem;
+  .item {
+    gap: 0.5rem;  /* 0.8 * 0.625 */
+    margin: 0.5rem;  /* 0.8 * 0.625 */
   }
 
-  .hero-right input[type="text"],
-  .hero-right input[type="email"],
-  .hero-right input[type="phone"],
-  .hero-right input[type="url"],
-  .hero-right textarea,
-  .hero-right select {
-    padding: 1.2rem;
-    font-size: 1.4rem;
-    margin: .8rem 0;
+  .item img {
+    width: 2.8125rem;  /* 4.5 * 0.625 */
+    height: auto;
+    margin-right: 0.5rem;  /* 0.8 * 0.625 */
   }
 
-  .select-wrapper::after {
-    right: 1.2rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .hero-right {
-    width: 100%;
-    padding: 1.2rem;
-  }
-
-  .form {
-    padding: 0 .8rem 3rem;
-  }
-
-  .hero-right input[type="text"],
-  .hero-right input[type="email"],
-  .hero-right input[type="phone"],
-  .hero-right input[type="url"],
-  .hero-right textarea,
-  .hero-right select {
-    padding: 1rem;
-    font-size: 1.3rem;
-    margin: .6rem 0;
+  .text {
+    font-size: 1rem;  /* 1.6 * 0.625 */
+    width: auto;
+    white-space: nowrap;
   }
 }
 
-/* Rest of the CSS remains the same // Form styles updated to match design */
 .hero-right {
-  background: #3C5C7B;
-  border-radius: 3rem;
-  padding: 4rem 3rem;
-  box-shadow: 0 .8rem 2rem rgba(0, 0, 0, 0.2);
+  background: rgba(60, 92, 123, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  padding: 1rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  width: 80%;
+  max-width: 400px;
+  height: auto;
+  min-height: 380px;
 }
 
 .hero-heading {
-  font-size: 2.8rem;
   text-align: center;
-  margin-bottom: 3rem;
-  line-height: 1.3;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
 }
 
-.hero-heading span {
+.text-white, .text-white2 {
+  color: #ffffff;
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+.text-green {
   color: #C5F678;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .form {
   width: 100%;
-  max-width: 40rem;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;  /* Reduced gap between form elements */
 }
 
 .hero-right input[type="text"],
 .hero-right input[type="email"],
 .hero-right input[type="phone"],
 .hero-right input[type="url"] {
-  width: 100%;
-  padding: 1.5rem 2rem;
-  margin: 1rem 0;
-  border-radius: 1.2rem;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
   border: none;
-  font-size: 1.6rem;
   background: rgba(255, 255, 255, 0.15);
   color: white;
+  font-size: 1rem;
   backdrop-filter: blur(4px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 2.25rem;
 }
 
 .select-wrapper {
   position: relative;
-  width: 100%;
-  margin: 1rem 0;
+  width: 60%;  /* Reduced from 85% to 75% */
+  margin: 0 auto;
 }
 
 .hero-right select {
   width: 100%;
-  padding: 1.5rem 2rem;
-  border-radius: 1.2rem;
+  padding: 0 1rem;
+  height: 3rem;
+  border-radius: 15px;
   border: none;
-  font-size: 1.6rem;
   background: linear-gradient(to right, rgba(197, 246, 120, 0.8), rgba(197, 246, 120, 0.6));
   color: #3C5C7B;
+  font-size: 1rem;
   appearance: none;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Custom select arrow */
 .select-wrapper::after {
   content: "▼";
   position: absolute;
-  right: 2rem;
+  right: 1rem;
   top: 50%;
   transform: translateY(-50%);
   color: #3C5C7B;
   pointer-events: none;
-}
-
-/* Placeholder styles */
-.hero-right input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
 }
 
 .callback-btn {
   background: linear-gradient(to right, #C5F678, #A8D85D);
   color: #3C5C7B;
-  padding: 1.5rem 3rem;
-  border-radius: 3rem;
-  font-size: 1.8rem;
+  padding: 0.75rem;
+  border-radius: 50px;
+  font-size: 1rem;
   font-weight: 500;
-  width: auto;
-  min-width: 20rem;
-  margin: 3rem auto 1rem;
-  box-shadow: 0 4px 15px rgba(197, 246, 120, 0.3);
-}
-
-/* Responsive adjustments */
-@media screen and (max-width: 480px) {
-  .hero-right {
-    padding: 3rem 2rem;
-    width: 90%;
-    margin: 1rem auto;
-  }
-  
-  .hero-heading {
-    font-size: 2.4rem;
-    margin-bottom: 2rem;
-  }
-  
-  .hero-right input[type="text"],
-  .hero-right input[type="email"],
-  .hero-right input[type="phone"],
-  .hero-right input[type="url"],
-  .hero-right select {
-    padding: 1.2rem 1.5rem;
-    font-size: 1.4rem;
-  }
-  
-  .callback-btn {
-    padding: 1.2rem 2.5rem;
-    font-size: 1.6rem;
-    min-width: 18rem;
-  }
+  border: none;
+  cursor: pointer;
+  width: 60%;
+  margin: 0.5rem auto 0;
+  transition: all 0.3s ease;
 }

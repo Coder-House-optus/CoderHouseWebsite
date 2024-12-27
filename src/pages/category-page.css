@@ -1,0 +1,11 @@
+/* src/pages/category-page.css */
+.category-page {
+  text-align: center;
+  padding: 20px;
+}
+
+.category-image, .category-detail-image {
+  width: 80%;
+  height: auto;
+  margin: 20px 0;
+}
