@@ -37,10 +37,9 @@ const Mentor = () => {
   return (
     <section className="mentor-section">
       {/* Title */}
-      <h2 className="section-title">
+      <h2 className="section-title" style={{ fontSize: 'clamp(1.7rem, 3.3vw, 5rem)' }}>
           Our <span className="highlight">Mentors</span>
-        </h2>
-
+      </h2>
 
       {/* Container for Image and Animated Cards */}
       <div className="mentor-container">
@@ -55,20 +54,23 @@ const Mentor = () => {
 
         {/* Right Side - Rotating Mentor Images */}
         <div className="right-mentor">
-  {visibleMentors.map((index, position) => (
-    <div 
-      key={index} 
-      className={`mentor-card ${position === 1 ? 'middle' : ''} ${position === 0 ? 'exit' : 'enter'}`}
-    >
-      <img
-        src={mentorImages[index]}
-        alt={`Mentor ${index + 1}`}
-        className="mentor-image-animated"
-      />
-    </div>
-  ))}
-</div>
+          {visibleMentors.map((index, position) => (
+            <div 
+              key={index} 
+              className={`mentor-card ${position === 1 ? 'middle' : ''} ${position === 0 ? 'exit' : 'enter'}`}
+            >
+              <img
+                src={mentorImages[index]}
+                alt={`Mentor ${index + 1}`}
+                className="mentor-image-animated"
+              />
+            </div>
+          ))}
+        </div>
       </div>
+
+     
+ 
     </section>
   );
 };
