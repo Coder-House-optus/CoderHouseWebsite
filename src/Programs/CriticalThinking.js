@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from '../components/Footer';
 
-const Cybersecurity = () => {
+const CriticalThinking  = () => {
   // Inline styles for the header
   const headerStyles = {
     display: 'flex',
@@ -25,8 +25,8 @@ const Cybersecurity = () => {
   const flowchart = {
     display: 'block',  // Makes the image a block-level element
     margin: '0 auto',  // Centers the image horizontally
-    width: '80%',      // Adjust width to make it bigger (you can adjust the percentage as needed)
-    maxWidth: '1000px', // Limit the maximum width for responsiveness
+    width: '100%',      // Adjust width to make it bigger (you can adjust the percentage as needed)
+    maxWidth: '1500px', // Limit the maximum width for responsiveness
     marginBottom: '200px',
   };
 
@@ -47,7 +47,7 @@ const Cybersecurity = () => {
     margin: '0',
     color: 'black',
   };
-  
+
   // Adding keyframes animation using a style tag
   const animationStyles = `
     @keyframes gradientAnimation {
@@ -69,17 +69,18 @@ const Cybersecurity = () => {
           alt="Logo"
           style={logoStyles}
         />
-        <h1 style={titleStyles}>Cybersecurity Course</h1>
+        <h1 style={titleStyles}>Critical Thinking and Decision-Making</h1>
       </header>
 
       {/* Main Content */}
       <div style={titleStyles1}>
-        <h3>Explore the world of cybersecurity and ethical hacking.</h3>
+        <h3>Develop your Critical Thinking and Decision-Making</h3>
       </div>
 
+      {/* Image section if you want to add a flowchart or image */}
       <img
-        src="/images/Roadmaps/Cybersecurity_ From Beginner to Expert-roadmap.jpg" // Replace with your Cybersecurity roadmap image URL
-        alt="Cybersecurity Roadmap"
+        src="/images/Roadmaps/Critical Thinking and Decision-Making-roadmap.jpg" // Replace with your roadmap image URL
+        alt="Personality Development Roadmap"
         style={flowchart}
       />
 
@@ -88,4 +89,4 @@ const Cybersecurity = () => {
   );
 };
 
-export default Cybersecurity;
+export default CriticalThinking;
