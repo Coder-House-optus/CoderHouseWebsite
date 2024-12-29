@@ -13,20 +13,50 @@ const  MentorshipModule = () => {
       </button>
 
       {/* Heading */}
-      <h1 className="heading1">Mentorship Module: Guiding Your Journey</h1>
-      
+      <h1 class="heading10">
+        <span class="green-text">Mentorship Module:</span>
+        <span class="black-text">Personalized Guidance for Student Growth</span>
+      </h1>
+
+      <p1 class="mentorpara">Welcome to the Mentorship Program, an initiative designed to provide one-on-one (1:1) guidance to students, fostering their personal, academic, and professional growth. This program connects students with experienced mentors who offer tailored support, ensuring that every individual achieves their fullest potential.</p1>
       {/* Stripes */}
-      <div className="box10 shadow">
-        {/* <span className="circle"></span> */}
-        <p className="content1">2-hour sessions with expert mentors addressing all your 'Career As Coder' queries.</p>
+
+      <h1 className="heading-mentor">Why Choose the Mentorship Program?</h1>
+
+      <div class="mentorship-program">
+        <p><strong>Gain direct access to industry professionals and domain experts.</strong>  
+          By joining the mentorship program, you will have the opportunity to connect with experienced professionals who can provide valuable insights, guidance, and practical advice.
+        </p>
+        <p><strong>Receive personalized advice and feedback to address specific challenges.</strong>  
+          Mentorship provides tailored support, ensuring that your individual career needs are addressed. You will receive feedback that helps you overcome obstacles and take the next step in your career.
+        </p>
+        <p><strong>Enhance your skills, confidence, and career prospects through guided learning.</strong>  
+          With the help of your mentor, you will refine your skills, build your confidence, and improve your professional profile, increasing your chances of career growth and success.
+        </p>
       </div>
 
-      <h1 className="heading2">Coding Library: Your Perfect Coding Heaven</h1>
-      
-      <div className="box10 shadow">
-        {/* <span className="circle"></span> */}
-        <p className="content1">Monthly subscription model for a conducive coding environment At - </p>
+      <h1 className="key-mentor">Key Features</h1>
+            <div className="container10">
+        <div className="box10 shadow">
+          <p className="content1">2-hour sessions with expert mentors addressing all your 'Career As Coder' queries.</p>
+        </div>
+        <div className="box10 shadow">
+          <p className="content1">Personalized 1:1 Sessions</p>
+        </div>
+        <div className="box10 shadow">
+          <p className="content1">Goal-Oriented Guidance</p>
+        </div>
+        <div className="box10 shadow">
+          <p className="content1">Expert Insights</p>
+        </div>
+        <div className="box10 shadow">
+          <p className="content1">Flexible Scheduling</p>
+        </div>
+        <div className="box10 shadow">
+          <p className="content1">Holistic Development</p>
+        </div>
       </div>
+
       
       <h2>
         <i className="fas fa-map-marker-alt" style={{ marginRight: '10px', color: 'black' }}></i>

@@ -20,20 +20,7 @@
 
 
 /* Stripes */
-.container1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url('/public/images/bluedotedlines.png');
-  background-blend-mode: overlay;
-  background-color: rgba(255, 255, 255, 0.8);
-  background-position: right bottom; /* Position the background image at the bottom-right corner */
-  background-repeat: no-repeat;
-  background-size: 1800px 780px; /* Adjust the size of the background image */
-  height: 770px;
-  overflow: hidden;
-}
+
 
 .box10 {
   width: 60%;
@@ -42,14 +29,15 @@
   position: relative;
   border-radius: 5px;
   background: linear-gradient(to right, #A8D85D 35%, #99C05F 100%);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding: 10px 10px 0 0px;
   color: rgb(0, 0, 0);
   box-shadow: 1px 2px 1px -1px rgb(154, 153, 153);
   transition: background 200ms ease-in-out;
   display: flex;
   align-items: center;
-  margin-top: 17px;
+  margin-top: 1px;
+  font-size: 1.7em;
 }
 
 .shadow {
@@ -107,22 +95,24 @@
   font-family: poppins;
 }
 
-.heading1 {
+.heading10 {
+  margin-top: 100px;
   font-family: 'poppins';
   color: #333;
-  font-size: 1.5em;
+  font-size: 2.5em;
   font-weight: bold;
-  margin-bottom: -10px;
   text-align: center;
+
 }
 
-.heading2 {
+.heading-mentor {
   font-family: 'poppins';
   color: #333;
-  font-size: 1.5em;
+  font-size: 2.5em;
   font-weight: bold;
   margin-bottom: -10px;
   text-align: center;
+  color: #99C05F;
 }
 
 .box {
@@ -160,64 +150,104 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.mentorpara{
+  font-size: 1.7em;
+}
+
+.container10 {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  width: 100%; /* Full width */
+  padding: 10px;
+  box-sizing: border-box; /* Include padding in the height/width */
+  font-size: 1em;
+}
+
+.box10 {
+  width: 60%; /* Set a consistent width for the boxes */
+  min-width: 200px;
+  height: auto; /* Adjust height based on content */
+  border-radius: 5px;
+  background: linear-gradient(to right, #A8D85D 35%, #99C05F 100%);
+  padding: 5px 10px;
+  color: rgb(0, 0, 0);
+  box-shadow: 1px 2px 1px -1px rgb(154, 153, 153);
+  transition: background 200ms ease-in-out;
+  display: flex;
+  align-items: center;
+  font-size: 1.8em; /* Adjust font size for readability */
+  text-align: center; /* Center the text within the box */
+}
+
+
+.mentorship-program {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.mentorship-program p {
+  width: 80%; /* Set equal width for all paragraphs */
+  margin: 10px 0;
+  font-size: 16px; /* Adjust the font size of the paragraph */
+}
+
+.mentorship-program p strong {
+  font-size: 18px; /* Larger size for bold words */
+  color: #3C5C7B;
+}
 
 
 
-/* Mobile View Adjustments */
-@media screen and (max-width: 768px) {
-  /* Box */
-  .box10 {
-    width: 60%; /* Reduce the width for mobile view */
-    height: 30px; /* Adjust the height for mobile */
-    font-size: 14px; /* Adjust the font size for mobile */
-    margin-top: 10px;
+
+
+@media (max-width: 768px) {
+
+
+  .image-section2 {
+    flex-direction: column; /* Stack images vertically */
+    gap: 5px;
    
   }
 
-  /* Container */
-  .container1 {
-    margin-top: 30px;
-    padding: 15px; /* Reduced padding */
-    height: auto; /* Allow height to adjust according to content */
-    
-  }
-
-  /* Image section */
-  .image-section2 {
-    flex-direction: column; /* Stack images vertically */
-    margin-left: 0; /* Remove left margin */
-    gap: 10px; /* Reduce space between images */
-  }
-
   .rectangle-image2 {
-    width: 90%; /* Make images smaller */
-    height: 250px; /* Reduce image height */
+    width: 100%; /* Full width for images on mobile */
+    height: auto; /* Maintain aspect ratio */
+    width: 50%;
   }
 
-  /* Back Button */
-  .back-button1 {
-    font-size: 16px; /* Reduce font size for mobile */
-    padding: 8px 15px; /* Reduce button padding */
+  .box10, .box {
+    width: 80%; /* Adjust box size for mobile */
+    font-size: 1.2em; /* Adjust font size for smaller screens */
   }
 
-  /* Headings */
-  .heading1 {
-    font-size: 1.2em; /* Adjust heading font size */
-    margin-top: 20px; /* Adjust margin */
+  .heading10, .heading-mentor {
+    font-size: 3em; /* Reduce heading size for mobile */
   }
 
-  .heading2 {
+  .mentorpara {
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+  .mentorship-program{
+    font-size: 1.1em;
+  }
+  .green-text {
+    color: #99C05F; /* Green color for "Mentorship Module" */
     font-size: 1.2em;
   }
-
-  /* Adjust text content */
-  .content1 {
-    font-size: 14px; /* Smaller font size for mobile */
-    margin-left: 20px; /* Adjust margin */
-    
+  
+  .black-text {
+    color: #333; /* Black color for the rest of the text */
+    display: block; /* Forces the text to move to the next line */
+    font-size: 1em; /* Optional: Adjust size of the secondary text */
   }
 }
-
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   /* Box */
@@ -243,20 +273,14 @@
   }
 
   .rectangle-image2 {
-    width: 60%; /* Make images slightly smaller */
-    height: 200px; /* Adjust image height for better display on laptop */
+    width: 30%; /* Make images slightly smaller */
+    height: auto; /* Adjust image height for better display on laptop */
   }
 
   /* Back Button */
   .back-button1 {
     font-size: 18px; /* Adjust font size */
     padding: 10px 20px; /* Increase button padding for better touch targets */
-  }
-
-  /* Headings */
-  .heading1 {
-    font-size: 1.4em; /* Slightly larger font size for headings */
-    margin-top: 25px; /* Adjust margin to make it more spacious */
   }
 
   .heading2 {
@@ -268,4 +292,32 @@
     font-size: 16px; /* Increase font size for better readability */
     margin-left: 30px; /* Adjust left margin */
   }
+  .key-mentor{
+    color: #333;
+  }
+  .heading10 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+
+  }
+  
+  .green-text {
+    color: #99C05F; /* Green color for "Mentorship Module" */
+    font-size: 1.6em;
+  }
+  
+  .black-text {
+    color: #333; /* Black color for the rest of the text */
+    display: block; /* Forces the text to move to the next line */
+    font-size: 1.3em; /* Optional: Adjust size of the secondary text */
+  }
+  .box10 {
+    width: 90%;
+    height: 54px;
+    font-size: 16px;
+    /* margin-top: 20px; */
+  }
+  
 }
