@@ -16,14 +16,7 @@
     background-blend-mode: overlay;
     background-color: rgba(255, 255, 255, 0.9);
   }
-  
-  .header h2 {
-    margin-top: 40px;
-    color: #000000;
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 1.8em;
-  }
+
   
   .features5 {
     list-style: none;
@@ -37,10 +30,6 @@
     color: #555;
   }
 
-
-  .header {
-    text-align: center;
-  }
   
   .features5 {
     list-style: none; /* Remove default bullet points */
@@ -112,7 +101,7 @@
   
 
 
-  .back-button1 {
+  /* .back-button1 {
     position: absolute;
     top: 20px;
     left: 20px;
@@ -124,7 +113,7 @@
     font-size: 16px;
     cursor: pointer;
     box-shadow: 0
-  }
+  } */
 
 
   .tech-grid {
@@ -133,6 +122,80 @@
     grid-template-columns: repeat(4, 1fr); /* Adjust to fit 3-4 icons per row */
     gap: 30px; /* Spacing between grid items */
 }
+
+
+.header h2 {
+  margin-top: 80px;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 3em;
+}
+
+.features5 {
+  list-style: none;
+  padding: 0;
+  margin: 10px auto; /* Center horizontally */
+  text-align: center; /* Align content in the center */
+}
+
+.features5 li {
+  position: relative; /* To position the tick icon */
+  padding: 10px 20px;
+  background-color: #A8D85D;
+  color: white;
+  margin: 10px auto; /* Center the list items */
+  border-radius: 5px;
+  font-family: poppins;
+  font-size: 16px;
+  width: 80%; /* Set width percentage for responsive centering */
+}
+
+.features5 li::before {
+  content: "✔";
+  position: absolute;
+  left: 15px; /* Adjust spacing from the left */
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.technologies1 {
+  margin: 50px auto; /* Center horizontally */
+  max-width: 1052px;
+  text-align: center; /* Center text content */
+}
+
+.technologies1 h3 {
+  margin: 0 auto 60px; /* Center horizontally */
+  background-color: #A8D85D;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: poppins;
+  font-size: 1.7em;
+}
+
+.description {
+  padding: 5px 120px;
+  font-size: 1.5em;
+  justify-content: center;
+}
+
+.tech-item {
+  text-align: center;
+}
+
+.tech-item img {
+  max-width: 50px;
+  margin-bottom: 10px;
+}
+
+.tech-item p {
+  font-size: 15px;
+  color: #555;
+}
+
 
 
 
@@ -148,8 +211,8 @@
 
   /* Mobile View for header */
   .header h2 {
-    margin-top: 70px;
-    font-size: 1.5em; /* Smaller font size for header */
+    margin-top: 100px;
+    font-size: 2.5em; /* Smaller font size for header */
     margin-bottom: 30px;
   }
 
@@ -192,6 +255,9 @@
     left: 10px;
     padding: 8px 15px; /* Adjust padding for smaller buttons */
     font-size: 14px; /* Smaller font size for mobile */
+  }
+  .description{
+    padding:  4px 10px;
   }
 }
 

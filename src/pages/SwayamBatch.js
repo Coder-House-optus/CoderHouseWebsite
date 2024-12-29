@@ -19,11 +19,25 @@ const SwayamBatch = () => {
       
       <div className="header">
         <h2>Swayam Batch</h2>
+        <p className="description">
+          Swayam is a comprehensive self-paced learning program designed to empower students with access to recorded lectures and study materials for a variety of in-demand courses. 
+          This program is exclusively available to members of Coder House or those who are part of the Coder House community.
+        </p>
+        <p className="description">
+          With over 1250+ hours of content spanning 15+ courses, Swayam is designed to provide flexibility and convenience, allowing students to learn at their own pace while acquiring valuable skills in technology and development.
+        </p>
         <ul className="features5">
-          <li>Curated Content Available in the form of Recorded Videos.</li>
-          <li>Subscription to Coding Library.</li>
-          <li>2000+ Practice Questions.</li>
+          <li>
+            <strong>Self-Paced Learning </strong>: Access pre-recorded lectures anytime, anywhere, enabling a personalized learning experience.
+          </li>
+          <li>
+            <strong>Expert-Led Content</strong>: Courses taught by industry experts to ensure high-quality education.
+          </li>
+          <li>
+            <strong>Wide Course Selection</strong>: Covers diverse domains, including cloud computing, software development, data analysis, and more.
+          </li>
         </ul>
+
       </div>
       <div className="technologies1">
         <h3>Learn Wide Range of Technologies like</h3>
