@@ -228,7 +228,10 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
+.mentorpara1{
+  font-size: 2em;
+  padding: 50px;
+}
 
 /* Image Section */
 .image-section {
@@ -268,6 +271,37 @@
 }
 
 
+.image-section5 {
+  display: flex; /* Enable Flexbox for parent container */
+  flex-wrap: wrap; /* Allow wrapping if needed */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  padding: 20px; /* Optional: Add padding */
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column; /* Stack the image and button vertically inside the container */
+  justify-content: center; /* Center the content vertically */
+  align-items: center; /* Center the content horizontally */
+  width: 100%;
+  max-width: 300px; /* Set a max width for the individual containers */
+  margin: 10px; /* Add space between the items */
+}
+
+.rectangle-image {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.image-buttons {
+  margin-top: 10px; /* Add space between image and button */
+}
+
+
+
+
 /* Mobile View - Adjustments for smaller screen sizes */
 @media screen and (max-width: 768px) {
   /* General adjustments for the body or container */
@@ -304,6 +338,9 @@
     align-items: center; /* Center the images horizontally */
     gap: 10px; /* Add some space between images */
     justify-content: center;
+  }
+  .image-buttons{
+    width: 300px;
   }
 
   .rectangle-image {
@@ -406,11 +443,53 @@
     padding: 20px;
     text-align: left; /* Align text to the left */
   }
-  .image-section{
-    margin-left: -10px;
+  .image-section10 {
+    margin: 0 auto; /* Center horizontally */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally within the flex container */
+    align-items: center; /* Center vertically within the flex container */
+    height: 100%; /* Ensure it takes the full height of its parent */
+  }  
+  .image-section1 {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-direction: column; /* Stack elements vertically if needed */
+    height: 100vh; /* Full viewport height for vertical centering */
+    text-align: center; /* Center text */
+    margin: 0 auto; /* Ensure the container is centered within its parent */
+    padding: 20px; /* Optional: Add padding */
+  }
+  
+  .image-container {
+    display: flex;
+    flex-direction: column; /* Stack image and button vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center;
+    text-align: center; /* Center the text inside the container */
+    width: 100%;
+    max-width: 300px; /* Optional: Set a max width for image containers */
+  }
+  
+  .rectangle-image {
+    width: 100%; /* Make the image responsive */
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+  }
+  
+  .image-buttons {
+    margin-top: 10px; /* Add space between image and button */
+    flex-direction: column; /* Stack image and button vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center;
+    text-align: center; /* Center the text inside the container */
   }
 
+
 }
+
+
 
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -451,5 +530,44 @@
       border-radius: 5px;
       color: #25394d;
   }
-
+  .image-section1 {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-direction: column; /* Stack elements vertically if needed */
+    height: 100vh; /* Full viewport height for vertical centering */
+    text-align: center; /* Center text */
+    margin: 0 auto; /* Ensure the container is centered within its parent */
+    padding: 20px; /* Optional: Add padding */
+  }
+  
+  .image-container {
+    display: flex;
+    flex-direction: column; /* Stack image and button vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center;
+    text-align: center; /* Center the text inside the container */
+    width: 100%;
+    max-width: 300px; /* Optional: Set a max width for image containers */
+  }
+  
+  .rectangle-image {
+    width: 100%; /* Make the image responsive */
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+  }
+  
+  .image-buttons {
+    margin-top: 10px; /* Add space between image and button */
+    flex-direction: column; /* Stack image and button vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center;
+    text-align: center; /* Center the text inside the container */
+  }
+  
+  .mentorpara1{
+    font-size: 2em;
+    padding: 50px;
+  }
 }

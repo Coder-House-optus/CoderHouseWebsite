@@ -26,7 +26,7 @@ const CoderSheet = () => {
         <h1 className="mainTitle1">
           <span className="textGreen">Coders Sheet: </span> Practice Questions Galore
         </h1>
-        <p1 class="mentorpara">Welcome to the Mentorship Program, an initiative designed to provide one-on-one (1:1) guidance to students, fostering their personal, academic, and professional growth. This program connects students with experienced mentors who offer tailored support, ensuring that every individual achieves their fullest potential.</p1>
+        <p1 class="mentorpara1">Welcome to the Mentorship Program, an initiative designed to provide one-on-one (1:1) guidance to students, fostering their personal, academic, and professional growth. This program connects students with experienced mentors who offer tailored support, ensuring that every individual achieves their fullest potential.</p1>
       {/* Stripes */}
         
         {/* Join Us Button */}
@@ -55,7 +55,6 @@ const CoderSheet = () => {
   </p>
 </div>
 
-      
       <div className="box2 shadow2">
         <span className="circle"></span>
         <p className="content2">Real-Time Doubt Resolutio</p>
@@ -78,11 +77,11 @@ const CoderSheet = () => {
       </div>
       <div className="box2 shadow2">
         <span className="circle"></span>
-        <p className="content2">Practical Focus</p>
+        <p className="content2">Experien</p>
       </div>
 
       {/* Image Section */}
-      <div className="image-section">
+      <div className="image-section5">
         <div className="image-container">
           <img
             className="rectangle-image"
