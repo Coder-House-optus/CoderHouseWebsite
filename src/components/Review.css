@@ -8,7 +8,7 @@
     position: relative; /* Allows for overlaying of content on the background */
     z-index: 1;
     font-family: poppins;
-    margin-top: 90px;
+    margin-top: 40px;
 }
 
 .review-section::before {
@@ -22,8 +22,8 @@
 }
 
 .review-title {
-    font-size: 2.7rem;
-    margin-bottom: 90px;
+    font-size: 3.2rem;
+    margin-bottom: 50px;
 }
 
 .highlight {
@@ -40,7 +40,7 @@
     height: 300px; /* Fixed height */
     margin: 0 auto;
     position: relative;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 1);
     overflow: hidden; /* Ensures that overflowing content is hidden */
     display: flex;
     flex-direction: column;
@@ -133,17 +133,17 @@
 /* Responsive adjustments for screens with max-width 480px */
 @media screen and (max-width: 480px) {
     .review-section {
-        margin-top: 50px; /* Reduced margin for smaller screens */
-        padding: 10px;
+        margin-top: 30px; /* Reduced margin for smaller screens */
+        padding:.1px;
     }
 
     .review-title {
-        font-size: 2rem; /* Adjusted for better fit */
-        margin-bottom: 50px; /* Reduced spacing */
+        font-size: 2.5rem; /* Adjusted for better fit */
+        margin-bottom: 30px; /* Reduced spacing */
     }
 
     .review-card {
-        width: 90%; /* Adjusted width for smaller screens */
+        width: 80%; /* Adjusted width for smaller screens */
         height: auto; /* Allow dynamic height */
         padding: 20px; /* Reduced padding */
         margin: 20px auto; /* Add spacing between cards */

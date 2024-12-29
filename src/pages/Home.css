@@ -4,32 +4,6 @@ html {
   box-sizing: border-box;
 }
 
-/* Responsive font sizing */
-@media (max-width: 1200px) {
-  html {
-    font-size: 56.25%;
-  }
-}
-
-@media (max-width: 998px) {
-  html {
-    font-size: 55%;
-  }
-}
-
-@media (max-width: 768px) {
-  html {
-    font-size: 45%;
-  }
-}
-
-@media (max-width: 480px) {
-  html {
-    font-size: 40%;
-  }
-}
-
-/* Home and Text Styles */
 .home {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
@@ -86,13 +60,13 @@ html {
 .hero-heading {
   text-align: center;
   font-size: clamp(1.25rem, 3vw, 1.875rem);
-  margin-bottom: 1.4rem;  /* Increased from 1.25rem to move heading up */
-  margin-top: -0.1rem;  /* Added negative margin to move heading up */
+  margin-bottom: 1.4rem;  
+  margin-top: -0.1rem;  
 }
 
 /* Form Styles */
 .form {
-  width: 100%;
+  width: 95%;
   max-width: 25rem;
   padding: 0 1.25rem 3.75rem;
   margin: 0 auto;
@@ -185,367 +159,209 @@ html {
   margin: 3rem auto 0; /* Increased top margin to move button down */
   display: block; /* Added to help with centering */
 }
-/* Responsive adjustments for the updated form styles */
-@media screen and (max-width: 480px) {
-  .hero-right {
-    padding: 1.875rem 1.25rem;
-    width: 90%;
-    margin: 0.625rem auto;
-  }
-  
-  .hero-heading {
-    font-size: 1.5rem;
-    margin-bottom: 1.25rem;
-  }
-  
-  .hero-right input[type="text"],
-  .hero-right input[type="email"],
-  .hero-right input[type="phone"],
-  .hero-right input[type="url"],
-  .hero-right select {
-    padding: 1rem 0.9375rem; /* Adjusted for mobile while maintaining increased height */
-    font-size: 0.9rem;
-    width: 95%;
-  }
-  
-  .callback-btn {
-    padding: 0.75rem 1.5625rem;
-    font-size: 1rem;
-    min-width: 11.25rem;
-    margin: 1.5rem auto 0; /* Maintaining increased top margin on mobile */
-  }
-}
-.hero-left {
-  margin-left: clamp(1rem, 4vw, 6.25rem);
-  margin-top: clamp(1rem, 2vw, 1.875rem);
-  width: 100%;
-  max-width: 31.25rem;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.hero-image {
-  max-width: 100%;
-  height: auto;
-  width: clamp(250px, 80vw, 500px);
-  object-fit: contain;
-}
 
-  .White {
-    width: 95%;
-    margin-top: -1rem;
-    padding: 1rem;
+/* Medium screens (481px-768px) */
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 2rem 1rem 7rem;
+    justify-content: center;
   }
 
-  .item {
-    min-width: 100%;
-    justify-content: flex-start;
-    padding: 0.5rem;
-  }
-
-.White {
-  width: min(90%, 67rem);
-  min-height: 6rem;
-  margin: -2rem auto 0;
-  padding: clamp(1.5rem, 2vw, 2rem);
-  background-color: white;
-  border-radius: 0.875rem;
-  box-shadow: 0 0 0.3125rem rgba(14, 3, 3, 1);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: clamp(0.8rem, 1.5vw, 1rem);
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.item {
-  display: flex;
-  align-items: center;
-  gap: clamp(0.4rem, 1vw, 0.625rem);
-  padding: clamp(0.3rem, 0.8vw, 0.5rem);
-  flex: 1 1 auto;
-  min-width: clamp(250px, 30%, 300px);
-  max-width: 100%;
-}
-
-@media screen and (min-width: 481px) and (max-width: 768px) {
   .hero-left {
-    margin: 1.5rem auto;
-    padding: 0 1.5rem;
+    margin-left: 0;
+    margin-top: 1rem;
+    width: 90%;
+    justify-content: center;
+    text-align: center;
   }
 
-  .hero-image {
-    width: clamp(300px, 70vw, 400px);
+  .hero-right {
+    min-width: 16rem;
+    max-width: 90%;
+    margin: 1rem auto;
   }
 
   .White {
-    width: 92%;
+    width: 95%;
+    transform: translateX(-1rem);
+    padding: 1.5rem;
     margin-top: -1.5rem;
   }
 
   .item {
-    min-width: calc(50% - 1rem);
-    max-width: calc(50% - 1rem);
-  }
-}
-
-
-@media screen and (min-width: 769px) {
-  .hero-left {
-    margin: 2rem auto;
-  }
-
-  .hero-image {
-    width: clamp(350px, 60vw, 500px);
-  }
-
-  .White {
-    width: min(90%, 67rem);
-    margin-top: -2rem;
-  }
-
-  .item {
-    min-width: calc(33.333% - 1rem);
-    max-width: calc(33.333% - 1rem);
-  }
-}
-
-/* Add smooth transitions for better user experience */
-.White, .hero-image, .item {
-  transition: all 0.3s ease-in-out;
-}
-/* Form Section Responsive Styles */
-.hero-right {
-  flex: 1;
-  width: clamp(280px, 90%, 31.25rem);
-  margin: clamp(0.5rem, 1vw, 1.25rem);
-  padding: clamp(1rem, 1.5vw, 1.5rem);
-  background-color: #3C5C7B;
-  color: #ffffff;
-  border-radius: clamp(1rem, 2vw, 1.875rem);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 1);
-}
-
-.form {
-  width: 100%;
-  max-width: clamp(280px, 90%, 25rem);
-  padding: 0 clamp(0.8rem, 1.5vw, 1.25rem) clamp(2rem, 2.5vw, 3.75rem);
-  margin: 0 auto;
-  background-color: #3C5C7B;
-}
-
-/* Form inputs base styles */
-.hero-right input[type="text"],
-.hero-right input[type="email"],
-.hero-right input[type="phone"],
-.hero-right input[type="url"],
-.hero-right textarea {
-  border-radius: 0.5rem;
-  padding: clamp(0.8rem, 1.5vw, 1.125rem);
-  margin: clamp(0.6rem, 1vw, 0.8rem) auto;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 1);
-  border: none;
-  width: clamp(85%, 90%, 95%);
-  font-size: clamp(0.875rem, 1.2vw, 1rem);
-  outline: none;
-  background-color: #4f7085;
-  display: block;
-}
-
-.hero-right select {
-  border-radius: 0.5rem;
-  padding: clamp(0.8rem, 1.5vw, 1.125rem);
-  margin: clamp(0.6rem, 1vw, 1rem) auto;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 1);
-  border: none;
-  width: clamp(90%, 95%, 98%);
-  font-size: clamp(0.875rem, 1.2vw, 1rem);
-  outline: none;
-  background-color: #a1e739;
-  color: #3C5C7B;
-  display: block;
-}
-
-
-/* White Section Responsive Styles */
-.White {
-  width: min(95%, 67rem);
-  min-height: 6rem;
-  margin: -2rem auto 0;
-  padding: clamp(1rem, 2vw, 2rem);
-  background-color: white;
-  border-radius: 0.875rem;
-  box-shadow: 0 0 0.3125rem rgba(14, 3, 3, 1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem;
-  flex: 1 1 300px;
-  max-width: 100%;
-}
-
-.item img {
-  width: clamp(2.5rem, 4vw, 3.75rem);
-  height: auto;
-  margin-right: 0.5rem;
-  flex-shrink: 0;
-}
-
-.text {
-  font-size: clamp(1rem, 1.5vw, 1.25rem);
-  color: #333;
-  font-weight: bold;
-  line-height: 1.2;
-}
-
-/* Breakpoints for smaller screens */
-@media screen and (max-width: 300px) {
-  .hero-right {
-    margin: 0.5rem;
-    padding: 1rem;
-    width: 95%;
-    min-width: auto;
-  }
-
-  .form {
-    padding: 0 0.5rem 1.5rem;
-  }
-
-  .hero-right input[type="text"],
-  .hero-right input[type="email"],
-  .hero-right input[type="phone"],
-  .hero-right input[type="url"],
-  .hero-right textarea,
-  .hero-right select {
-    width: 90%;
-    padding: 0.7rem;
-    font-size: 0.875rem;
-  }
-
-  .White {
-    width: 98%;
-    padding: 0.8rem;
-    margin-top: -1rem;
-  }
-
-  .item {
-    min-width: 100%;
-    padding: 0.3rem;
+    min-width: 200px;
+    padding: 0.4rem;
   }
 
   .text {
-    font-size: 0.875rem;
+    font-size: 1.1rem;
   }
 }
 
-/* Mobile breakpoint */
-@media screen and (min-width: 301px) and (max-width: 480px) {
-  .hero-right {
-    margin: 0.8rem;
-    padding: 1.2rem;
-    width: 92%;
+/* Small screens (400px-480px) */
+@media screen and (max-width: 480px) {
+  .hero {
+    padding: 1.5rem 0.8rem 6rem;
   }
 
-  .form {
-    padding: 0 0.8rem 2rem;
+  .hero-left {
+    width: 65%;
+    margin: 0.1rem auto;
+  }
+
+  .hero-right {
+    min-width: 15rem; 
+     width: 85%; 
+    margin: 0.5rem auto; 
+    transform: translateX(-0.6rem);
+    padding: 1rem;
   }
 
   .hero-right input[type="text"],
   .hero-right input[type="email"],
   .hero-right input[type="phone"],
   .hero-right input[type="url"],
-  .hero-right textarea,
+  .hero-right textarea {
+    width: 96%;
+    margin: 0.6rem auto;
+  }
+
   .hero-right select {
-    width: 92%;
-    padding: 0.8rem;
+    width: 105%;
+    margin: 0.6rem auto;
   }
 
   .White {
-    width: 95%;
-    padding: 1rem;
-    margin-top: -1.2rem;
+    width: 90%;
+    transform: translateX(-0.5rem);
+    padding: 2rem;
+    margin-top: -1rem;
   }
 
   .item {
-    min-width: 100%;
-    padding: 0.4rem;
+    min-width: 160px;
+    gap: 0.4rem;
+  }
+
+  .item img {
+    width: 3rem;
+  }
+
+  .text {
+    font-size: 1rem;
   }
 }
 
-/* Tablet breakpoint */
-@media screen and (min-width: 481px) and (max-width: 768px) {
+/* Very small screens (below 400px) */
+@media screen and (max-width: 400px) {
   .hero-right {
-    margin: 1rem;
-    padding: 1.4rem;
+    width: 90%;
+    padding: 0.8rem;
+    transform: translateX(-0.6rem);
+  }
+
+  .hero-right input[type="text"],
+  .hero-right input[type="email"],
+  .hero-right input[type="phone"],
+  .hero-right input[type="url"],
+  .hero-right textarea {
     width: 90%;
   }
 
-  .form {
-    padding: 0 1rem 2.5rem;
+  .hero-right select {
+    width: 98%;
+  }
+
+  .White {
+    width: 90%;
+    transform: translateX(-0.4rem);
+    border-radius: 0.5rem;
+  }
+
+  .item {
+    min-width: 140px;
+  }
+}
+
+
+
+/* Large tablet/small desktop (768px-992px) */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .hero {
+    padding: 2.5rem 1.5rem 2rem;
+    justify-content: space-between;
+  }
+
+  .hero-left {
+    margin-left: 3rem;
+    margin-top: 1.5rem;
+    width: 45%;
+  }
+
+  .hero-right {
+    min-width: 17rem;
+    max-width: 25rem;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    transform: translateX(-0.7rem);
+   
   }
 
   .hero-right input[type="text"],
   .hero-right input[type="email"],
   .hero-right input[type="phone"],
   .hero-right input[type="url"],
-  .hero-right textarea,
-  .hero-right select {
-    width: 94%;
+  .hero-right textarea {
+    width: 80%;
     padding: 1rem;
+    margin: 0.9rem;
+  }
+
+  .hero-right select {
+    width: 89%;
+    padding: 1rem;
+    margin: 0.9rem;
+  }
+
+  .callback-btn {
+    margin: 2.5rem auto 0;
+    font-size: 1.2rem;
+    width: 60%;
   }
 
   .White {
     width: 92%;
-    padding: 1.5rem;
-    margin-top: -1.5rem;
+    transform: translateX(-.5rem);
+    padding: 1.75rem;
+    margin-top: -1.75rem;
+    gap: 1.25rem;
   }
 
   .item {
-    min-width: calc(50% - 1rem);
-    max-width: calc(50% - 1rem);
-    padding: 0.5rem;
-  }
-}
-
-/* Desktop styles */
-@media screen and (min-width: 769px) {
-  .hero-right {
-    margin: 1.25rem;
-    padding: 1.5rem;
+    min-width: 220px;
+    padding: 0.45rem;
   }
 
-  .White {
-    width: min(90%, 67rem);
-    margin-top: -2rem;
+  .item img {
+    width: 3.5rem;
   }
 
-  .item {
-    min-width: calc(33.333% - 1rem);
-    max-width: calc(33.333% - 1rem);
+  .text {
+    font-size: 1.15rem;
   }
-}
 
-/* Smooth transitions */
-.White,
-.hero-right,
-.item,
-input,
-select,
-textarea {
-  transition: all 0.3s ease-in-out;
+  .text-white {
+    font-size: 1.6rem;
+  }
+
+  .text-white2, .text-green {
+    font-size: clamp(2rem, 1.8vw, 0.9rem);
+  }
+
+  .hero-heading {
+    font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+    margin-bottom: 1.3rem;
+    margin-top: -0.05rem;
+  }
 }

@@ -82,7 +82,6 @@
     left: 0;
 }
 
-/* Background images remain unchanged */
 .card1 {
     background-image: url('/public/images/features_cards/green_infrastructure_card.png');
 }
@@ -107,54 +106,112 @@
     background-image: url('/public/images/features_cards/hover_growth_card.png');
 }
 
-/* Responsive styles adjusted */
+/* Mobile devices (300px - 480px) */
 @media screen and (max-width: 480px) {
     .cardsContainer {
         flex-direction: column;
         align-items: center;
-        gap: 1.875rem;
-        margin-top: 1.25rem;
+        gap: 1rem;
+        margin-top: 1.5rem;
     }
-    
+
     .card {
         width: 90%;
         max-width: 18.75rem;
-        height: 25rem;
-        padding: 1.25rem;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .title {
-        margin-top: 12.5rem;
-        margin-bottom: 0.625rem;
-        font-size: 0.875rem;
-        position: relative;
-        z-index: 1;
-    }
-
-    .features {
-        position: relative;
-        z-index: 1;
-        margin-top: 0.3125rem;
-    }
-
-    .features li {
-        margin-bottom: 0.3125rem;
-        line-height: 1.3;
+        height: 18rem;
+        padding: 2rem;
     }
 
     .titleContainer {
-        margin-top: 1.875rem;
-        padding: 0.3125rem;
+        margin-top: 2rem;
+        padding: 0.5rem;
     }
 
+    .subtitle,
     .mainTitle {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 
-    .subtitle {
-        font-size: 1.125rem;
+    .title {
+        margin-top: 5rem;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
     }
 }
+
+/* Tablet devices (481px - 679px) */
+@media screen and (min-width: 481px) and (max-width: 679px) {
+    .cardsContainer {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .card {
+        width: 45%;
+        min-width: 15rem;
+        height: 20rem;
+        padding: 2.5rem;
+    }
+
+    .subtitle,
+    .mainTitle {
+        font-size: 2rem;
+    }
+
+    .title {
+        margin-top: 6rem;
+    }
+}
+
+/* Special handling for 680px - 800px */
+@media screen and (min-width: 680px) and (max-width: 800px) {
+    .cardsContainer {
+        flex-wrap: wrap;
+        gap: .2rem;
+        justify-content: center;
+    }
+
+    .card {
+        width: 16rem;
+        height: 20rem;
+        padding: 2rem;
+    }
+
+    .title {
+        margin-top: 6rem;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+    .cardsContainer {
+        gap: .2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 16rem;
+        height: 20rem;
+        padding: 2.5rem;
+    }
+
+    .title {
+        margin-top: 6rem;
+    }
+}
+/* Additional optimization for very large screens */
+/* @media screen and (min-width: 1440px) {
+    .card {
+        width: 21.875rem;
+        height: 25rem;
+    }
+
+    .subtitle,
+    .mainTitle {
+        font-size: 3rem;
+    }
+} */
