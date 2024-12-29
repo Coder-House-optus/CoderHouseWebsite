@@ -3,7 +3,7 @@ import './Review.css';  // Assuming you're putting CSS in this file for the revi
 const reviews = [
     {
         name: "Diksha Pandey",
-        text: "I have a very positive experience in Data Structure classes with Aditya Sir at Optus. His teaching methods are clear and detailed, making it easy to understand even complex topics.",
+        text: "Coder House exceeded my expectations in every way. The real-world insights shared by industry professionals are invaluable, and the regular coding competitions helped me improve my skills significantly. The mentors are approachable and dedicated, making learning both effective and enjoyable. I’m grateful for their support throughout my placement journey.",
         rating: 5
     },
     {
@@ -23,12 +23,12 @@ const reviews = [
     },
     {
         name: "Muzzamil Khan",
-        text: "Best place for campus selection in Jabalpur. Requirements for the placement are fulfilled. Mentors and way of teaching are excellent.",
+        text:  "Coder House is a great place to begin. The offline classes are highly engaging, and the mentors are always available to clarify your doubts. I loved workshops and hackathons in particular; they provided hands-on experience and gave a boost to my confidence regarding problem-solving. Guidance received from experienced mentors helped me crack my first job interview with ease!",
         rating: 5
     },
     {
         name: "Shivang Tiwari",
-        text: "Best institute for campus placement, DSA, CAT and many more. Good faculties also available.",
+        text: "Initially, I was skeptical about the whole offline training idea, but Coder House totally flipped the script for me. Topics that were thought to be super tough became almost easy due to the expertise of our mentors from IITs and NITs. The collaborative learning environment always kept me motivated and focused. Today, I am more than ever prepared to face real-world challenges in the tech industry.",
         rating: 5
     },
     {
@@ -38,9 +38,15 @@ const reviews = [
     },
     {
         name: "Seema Sahu",
-        text: "I have joined the CMAT batch here, infrastructure is awesome. Teachers are highly trained and I'm fully satisfied.",
+        text: "Joining Coder House was probably the best decision I ever made in college. All of this, along with mentors who care and an environment that fosters growth, makes one confident about taking that leap to pursue the dream role. Their emphasis on real-world applications, plus excellent infrastructure, makes everything quite seamless. Thanks, Coder House team!",
         rating: 5
     },
+    {
+            name: "Vikram Joshi",
+            text: "Joining Coder House was probably the best decision I ever made in college. All of this, along with mentors who care and an environment that fosters growth, makes one confident about taking that leap to pursue the dream role. Their emphasis on real-world applications, plus excellent infrastructure, makes everything quite seamless. Thanks, Coder House team!",
+            rating: 5
+    },
+
     // Add more reviews here if needed
 ];
 

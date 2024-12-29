@@ -130,11 +130,6 @@ export default function ExtraFeatures() {
 
   return (
     <div className="area">
-      <ul className="circles">
-        {Array.from({ length: 10 }, (_, i) => (
-          <li key={i}></li>
-        ))}
-      </ul>
       <div className="extraFeatures-page-container">
         <Navigation />
         <div className="extraFeatures-content">

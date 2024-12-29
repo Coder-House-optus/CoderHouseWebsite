@@ -8,7 +8,7 @@
     position: relative; /* Allows for overlaying of content on the background */
     z-index: 1;
     font-family: poppins;
-    margin-top: 90px;
+    margin-top: 40px;
 }
 
 .review-section::before {
@@ -22,8 +22,8 @@
 }
 
 .review-title {
-    font-size: 2.7rem;
-    margin-bottom: 90px;
+    font-size: 3.2rem;
+    margin-bottom: 50px;
 }
 
 .highlight {
@@ -40,7 +40,7 @@
     height: 300px; /* Fixed height */
     margin: 0 auto;
     position: relative;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 1);
     overflow: hidden; /* Ensures that overflowing content is hidden */
     display: flex;
     flex-direction: column;
@@ -100,7 +100,7 @@
 }
 
 .review-text {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.5;
     color: #555;
     margin-top: 10px;
@@ -133,17 +133,17 @@
 /* Responsive adjustments for screens with max-width 480px */
 @media screen and (max-width: 480px) {
     .review-section {
-        margin-top: 50px; /* Reduced margin for smaller screens */
-        padding: 10px;
+        margin-top: 30px; /* Reduced margin for smaller screens */
+        padding:.1px;
     }
 
     .review-title {
-        font-size: 2rem; /* Adjusted for better fit */
-        margin-bottom: 50px; /* Reduced spacing */
+        font-size: 2.5rem; /* Adjusted for better fit */
+        margin-bottom: 30px; /* Reduced spacing */
     }
 
     .review-card {
-        width: 90%; /* Adjusted width for smaller screens */
+        width: 80%; /* Adjusted width for smaller screens */
         height: auto; /* Allow dynamic height */
         padding: 20px; /* Reduced padding */
         margin: 20px auto; /* Add spacing between cards */
@@ -170,7 +170,7 @@
     }
 
     .review-text {
-        font-size: 1rem; /* Adjusted for readability */
+        font-size: .875rem; /* Adjusted for readability */
         margin-top: 5px;
     }
 
@@ -183,5 +183,60 @@
         width: 8px;
         height: 8px; /* Adjusted for smaller screens */
         margin: 0 4px;
+    }
+}
+/* Responsive adjustments for screens between 481px and 768px */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .review-section {
+        margin-top: 70px; /* Slightly reduced margin */
+        padding: 10px 20px; /* Added side padding */
+    }
+
+    .review-title {
+        font-size: 2.5rem; /* Adjusted size to fit the screen */
+        margin-bottom: 70px; /* Slightly reduced spacing */
+    }
+
+    .review-card {
+        width: 80%; /* Make the card width relative for better fit */
+        height: auto; /* Allow dynamic height */
+        padding: 30px; /* Adjusted padding */
+        margin: 20px auto; /* Add spacing between cards */
+    }
+
+    .quote-icon {
+        top: 15px;
+        left: 15px;
+        width: 90px; /* Scaled appropriately for medium screens */
+        height: 90px;
+    }
+
+    .double-quote {
+        font-size: 5.5rem; /* Adjusted size */
+    }
+
+    .stars {
+        font-size: 1rem; /* Slightly smaller font size */
+        margin-bottom: 8px;
+    }
+
+    .review-author {
+        font-size: 1.4rem; /* Adjusted for medium screens */
+    }
+
+    .review-text {
+        font-size: 0.95rem; /* Slightly reduced font size */
+        margin-top: 8px;
+    }
+
+    .review-dots {
+        margin-top: 18px;
+    }
+
+    .dot,
+    .active-dot {
+        width: 9px;
+        height: 9px; /* Adjusted for medium screens */
+        margin: 0 4.5px;
     }
 }

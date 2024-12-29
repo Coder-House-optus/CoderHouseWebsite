@@ -1,35 +1,9 @@
 /* Base styles */
 html {
-  font-size: 62.5%;
+  font-size: 100%;
   box-sizing: border-box;
 }
 
-/* Responsive font sizing */
-@media (max-width: 1200px) {
-  html {
-    font-size: 56.25%;
-  }
-}
-
-@media (max-width: 998px) {
-  html {
-    font-size: 55%;
-  }
-}
-
-@media (max-width: 768px) {
-  html {
-    font-size: 45%;
-  }
-}
-
-@media (max-width: 480px) {
-  html {
-    font-size: 40%;
-  }
-}
-
-/* Home and Text Styles */
 .home {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
@@ -38,21 +12,13 @@ html {
 
 .text-white {
   color: white;
-  font-size: 2.5rem;
-  
+  font-size: 1.8rem;
 }
 
 .text-white2, .text-green {
-  font-size: clamp(3.0rem, 2vw, 1.6rem);
-}
-
-/* .text-white2 {
+  font-size: clamp(2.3rem, 2vw, 1rem);
   color: white;
-} */
-
-/* .text-green {
-  color: #C5F678;
-} */
+}
 
 /* Hero Section */
 .hero {
@@ -62,16 +28,16 @@ html {
   justify-content: center;
   background-size: cover;
   background-position: center;
-  padding: 5rem 2rem 15rem;
+  padding: 3.125rem 1.25rem 9.375rem;
   min-height: 60vh;
   width: 100%;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 1.875rem;
 }
 
 .hero-left {
-  margin-left: 10rem;
-  margin-top: 3rem;
+  margin-left: 6.25rem;
+  margin-top: 1.875rem;
   width: auto;
   height: auto;
   display: flex;
@@ -81,34 +47,28 @@ html {
 
 .hero-right {
   flex: 1;
-  min-width: 30rem;
-  max-width: 50rem;
-  margin: 2rem;
-  padding: 2rem;
+  min-width: 18.75rem;
+  max-width: 31.25rem;
+  margin: 1.25rem;
+  padding: 1.2rem;
   background-color: #3C5C7B;
   color: #ffffff;
-  border-radius: 3rem;
-  box-shadow: 0 .8rem 1.6rem rgba(0, 0, 0, 0.25);
+  border-radius: 1.875rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 1);
 }
 
 .hero-heading {
   text-align: center;
-  font-size: clamp(2rem, 3vw, 3rem);
-  margin-bottom: 2rem;
+  font-size: clamp(1.25rem, 3vw, 1.875rem);
+  margin-bottom: 1.4rem;  
+  margin-top: -0.1rem;  
 }
 
-.hero-image {
-  max-width: 100%;
-  height: auto;
-  width: auto;
-  object-fit: contain;
-}
-
-/* Form Styles - Updated */
+/* Form Styles */
 .form {
-  width: 100%;
-  max-width: 40rem;
-  padding: 0 2rem 6rem;
+  width: 95%;
+  max-width: 25rem;
+  padding: 0 1.25rem 3.75rem;
   margin: 0 auto;
   background-color: #3C5C7B;
 }
@@ -118,195 +78,269 @@ html {
 .hero-right input[type="phone"],
 .hero-right input[type="url"],
 .hero-right textarea {
-  border-radius: .8rem;
-  padding: 1.4rem;
-  margin: .5rem 0;
-  box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.5rem;
+  padding: 1.125rem; /* Increased height via padding */
+  margin: 0.8rem auto; /* Changed from 0 to auto for horizontal centering */
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 1);
   border: none;
-  width: 100%;
-  font-size: 1.6rem;
+  width: 95%; /* Slightly reduced width */
+  font-size: 1rem;
   outline: none;
-  background-color: #ffffff;
+  background-color: #4f7085;
 }
 
 .hero-right select {
-  border-radius: .8rem;
-  padding: 1.4rem;
-  margin: .2rem 0;
-  box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.5rem;
+  padding: 1.125rem; /* Increased height via padding */
+  margin: 1rem auto; /* Changed from 0 to auto for horizontal centering */
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 1);
   border: none;
-  width: 107%;
-  font-size: 1.6rem;
+  width: 104%; /* Slightly reduced width */
+  font-size: 1rem;
   outline: none;
-  background-color: #C6E894;
+  background-color: #a1e739;
   color: #3C5C7B;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  position: relative;
 }
 
-.hero-right select::after {
-  content: "▼";
-  position: absolute;
-  right: 1.5rem;
-  top: 20%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  color: #3C5C7B;
-  font-size: 1.2rem;
-  line-height: 1;
-}
 
-.hero-right input:focus,
-.hero-right textarea:focus,
-.hero-right select:focus {
-  box-shadow: 0 0 .8rem rgba(168, 216, 93, 0.5);
-}
 
 /* White Section */
 .White {
   width: 90%;
-  max-width: 117rem;
-  height: 15rem;
-  margin: -11rem auto 0;
+  max-width: 67rem;
+  min-height: 6rem; /* Changed from fixed height to min-height */
+  margin: -2rem 0 0 auto;
   padding: 2rem;
   background-color: white;
-  border-radius: 1.4rem;
-  box-shadow: 0 0 0.5rem rgba(14, 3, 3, 0.5);
+  border-radius: 0.875rem;
+  box-shadow: 0 0 0.3125rem rgba(14, 3, 3, 1);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  z-index: 100;
+  flex-wrap: wrap;
+  gap: 1rem;
+  transform: translateX(-8rem);
 }
 
 .item {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin: 1rem;
+  gap: 0.625rem;
+  padding: 0.5rem;
+  flex: 1;
+  min-width: 250px; /* Added minimum width for better responsive behavior */
 }
 
 .item img {
-  width: 6rem;
+  width: 3.75rem;
   height: auto;
-  margin-right: 1rem;
+  margin-right: 0.625rem;
+  flex-shrink: 0; /* Prevent image from shrinking */
 }
 
 .text {
   width: auto;
-  font-size: 2rem;
+  font-size: 1.25rem;
   color: #333;
   font-weight: bold;
+  line-height: 1.2; /* Added line height for better text spacing */
 }
 
 /* Button Styles */
 .callback-btn {
   background-color: #A8D85D;
-  color: white;
-  padding: 1.2rem;
+  color: rgb(19, 0, 0);
+  padding: 0.75rem;
   border: none;
-  font-size: 1.6rem;
-  border-radius: 2.5rem;
-  cursor: pointer;
+  font-size: 1.3rem;
+  border-radius: 1.5625rem;
   width: 80%;
-  max-width: 25rem;
-  margin: 2rem auto;
-  display: block;
-  text-align: center;
-  transition: all 0.3s ease;
+  max-width: 15.625rem;
+  margin: 3rem auto 0; /* Increased top margin to move button down */
+  display: block; /* Added to help with centering */
 }
 
-.callback-btn:hover {
-  background-color: #45a049;
-  box-shadow: 0 0 2rem rgba(168, 216, 93, 0.8);
-}
 
-/* Responsive Styles */
-@media screen and (max-width: 1200px) {
-  .hero-left {
-    margin-left: 5rem;
-  }
-  
-  .hero-image {
-    max-width: 90%;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .hero {
-    flex-direction: column;
-    padding: 2rem 1rem 15rem;
-  }
-  
-  .hero-left {
-    margin: 2rem auto;
-    width: 100%;
-    max-width: 50rem;
-  }
-}
-
+/* Medium screens (481px-768px) */
 @media screen and (max-width: 768px) {
   .hero {
-    padding: 3rem 1.5rem 10rem;
+    padding: 2rem 1rem 7rem;
+    justify-content: center;
   }
 
   .hero-left {
-    margin: 1rem auto;
-    max-width: 40rem;
+    margin-left: 0;
+    margin-top: 1rem;
+    width: 90%;
+    justify-content: center;
+    text-align: center;
   }
 
   .hero-right {
-    margin: 1rem;
-    width: 90%;
-    min-width: 28rem;
+    min-width: 16rem;
+    max-width: 90%;
+    margin: 1rem auto;
   }
 
   .White {
     width: 95%;
-    margin: -8rem auto 0;
-    height: auto;
-    flex-direction: column;
+    transform: translateX(-1rem);
+    padding: 1.5rem;
+    margin-top: -1.5rem;
   }
 
   .item {
-    margin: 1rem 0;
-    width: 100%;
-    justify-content: center;
+    min-width: 200px;
+    padding: 0.4rem;
   }
 
   .text {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* Small screens (400px-480px) */
+@media screen and (max-width: 480px) {
+  .hero {
+    padding: 1.5rem 0.8rem 6rem;
+  }
+
+  .hero-left {
+    width: 65%;
+    margin: 0.1rem auto;
+  }
+
+  .hero-right {
+    min-width: 15rem; 
+     width: 85%; 
+    margin: 0.5rem auto; 
+    transform: translateX(-0.6rem);
+    padding: 1rem;
   }
 
   .hero-right input[type="text"],
   .hero-right input[type="email"],
   .hero-right input[type="phone"],
   .hero-right input[type="url"],
-  .hero-right textarea,
-  .hero-right select {
-    font-size: 1.4rem;
-    padding: 1.2rem;
-  }
-  
-  .hero-right select {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .hero {
-    padding: 2rem 1rem 10rem;
+  .hero-right textarea {
+    width: 96%;
+    margin: 0.6rem auto;
   }
 
-  .hero-right {
-    width: 92%;
-    padding: 1.5rem;
+  .hero-right select {
+    width: 105%;
+    margin: 0.6rem auto;
   }
 
   .White {
-    margin: -6rem auto 0;
-    min-height: 20rem;
+    width: 90%;
+    transform: translateX(-0.5rem);
+    padding: 2rem;
+    margin-top: -1rem;
+  }
+
+  .item {
+    min-width: 160px;
+    gap: 0.4rem;
+  }
+
+  .item img {
+    width: 3rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+}
+
+/* Very small screens (below 400px) */
+@media screen and (max-width: 400px) {
+  .hero-right {
+    width: 90%;
+    padding: 0.8rem;
+    transform: translateX(-0.6rem);
+  }
+
+  .hero-right input[type="text"],
+  .hero-right input[type="email"],
+  .hero-right input[type="phone"],
+  .hero-right input[type="url"],
+  .hero-right textarea {
+    width: 90%;
+  }
+
+  .hero-right select {
+    width: 98%;
+  }
+
+  .White {
+    width: 90%;
+    transform: translateX(-0.4rem);
+    border-radius: 0.5rem;
+  }
+
+  .item {
+    min-width: 140px;
+  }
+}
+
+
+
+/* Large tablet/small desktop (768px-992px) */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .hero {
+    padding: 2.5rem 1.5rem 2rem;
+    justify-content: space-between;
+  }
+
+  .hero-left {
+    margin-left: 3rem;
+    margin-top: 1.5rem;
+    width: 45%;
+  }
+
+  .hero-right {
+    min-width: 17rem;
+    max-width: 25rem;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    transform: translateX(-0.7rem);
+   
+  }
+
+  .hero-right input[type="text"],
+  .hero-right input[type="email"],
+  .hero-right input[type="phone"],
+  .hero-right input[type="url"],
+  .hero-right textarea {
+    width: 80%;
+    padding: 1rem;
+    margin: 0.9rem;
+  }
+
+  .hero-right select {
+    width: 89%;
+    padding: 1rem;
+    margin: 0.9rem;
+  }
+
+  .callback-btn {
+    margin: 2.5rem auto 0;
+    font-size: 1.2rem;
+    width: 60%;
+  }
+
+  .White {
+    width: 92%;
+    transform: translateX(-.5rem);
+    padding: 1.75rem;
+    margin-top: -1.75rem;
+    gap: 1.25rem;
+  }
+
+  .item {
+    min-width: 220px;
+    padding: 0.45rem;
   }
 
   .item img {
@@ -314,315 +348,20 @@ html {
   }
 
   .text {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
   }
 
-  .callback-btn {
-    width: 85%;
-    font-size: 1.3rem;
-    padding: 1rem;
-  }
-
-  .hero-right input[type="text"],
-  .hero-right input[type="email"],
-  .hero-right input[type="phone"],
-  .hero-right input[type="url"],
-  .hero-right textarea,
-  .hero-right select {
-    padding: 1rem;
-    font-size: 1.3rem;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  html {
-    font-size: 35%;
-  }
-
-  .White {
-    margin: -4rem auto 0;
-    min-height: 24rem;
-  }
-
-  .hero-right {
-    width: 95%;
-  }
-
-  .item img {
-    width: 2.8rem;
-  }
-
-  .text {
-    font-size: 1.1rem;
-  }
-
-  .hero-right input[type="text"],
-  .hero-right input[type="email"],
-  .hero-right input[type="phone"],
-  .hero-right input[type="url"],
-  .hero-right textarea,
-  .hero-right select {
-    padding: 0.8rem;
-    font-size: 1.2rem;
-  }
-}
-/* Previous CSS remains the same until form styles */
-
-/* Form Styles - Updated */
-.form {
-  width: 100%;
-  max-width: 40rem;
-  padding: 0 2rem 6rem;
-  margin: 0 auto;
-  background-color: #3C5C7B;
-}
-
-.hero-right input[type="text"],
-.hero-right input[type="email"],
-.hero-right input[type="phone"],
-.hero-right input[type="url"],
-.hero-right textarea {
-  border-radius: .8rem;
-  padding: 1.4rem;
-  margin: .5rem 0;
-  box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.15);
-  border: none;
-  width: 100%;
-  font-size: 1.6rem;
-  outline: none;
-  background-color: #ffffff;
-  color: #333; /* Added for better text visibility */
-}
-
-/* Added placeholder styles */
-.hero-right input::placeholder,
-.hero-right textarea::placeholder {
-  color: #666;
-  opacity: 1;
-}
-
-/* Added for webkit browsers */
-.hero-right input::-webkit-input-placeholder,
-.hero-right textarea::-webkit-input-placeholder {
-  color: #666;
-  opacity: 1;
-}
-
-/* Added for Firefox */
-.hero-right input::-moz-placeholder,
-.hero-right textarea::-moz-placeholder {
-  color: #666;
-  opacity: 1;
-}
-
-.hero-right select {
-  border-radius: .8rem;
-  padding: 1.4rem;
-  margin: .2rem 0;
-  box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.15);
-  border: none;
-  width: 100%; /* Changed from 107% for better responsiveness */
-  font-size: 1.6rem;
-  outline: none;
-  background-color: #C6E894;
-  color: #3C5C7B;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  position: relative;
-  cursor: pointer;
-}
-
-/* Added custom dropdown arrow container */
-.select-wrapper {
-  position: relative;
-  width: 100%;
-}
-
-/* Updated dropdown arrow styling */
-.select-wrapper::after {
-  content: "▼";
-  position: absolute;
-  right: 1.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  color: #3C5C7B;
-  font-size: 1.2rem;
-}
-
-.hero-right input:focus,
-.hero-right textarea:focus,
-.hero-right select:focus {
-  box-shadow: 0 0 .8rem rgba(168, 216, 93, 0.5);
-}
-
-/* Previous CSS remains the same until media queries */
-
-/* Updated media queries for better form responsiveness */
-@media screen and (max-width: 480px) {
-  .hero-right {
-    width: 95%;
-    padding: 1.5rem;
-    margin: 1rem auto;
-  }
-
-  .form {
-    padding: 0 1rem 4rem;
-  }
-
-  .hero-right input[type="text"],
-  .hero-right input[type="email"],
-  .hero-right input[type="phone"],
-  .hero-right input[type="url"],
-  .hero-right textarea,
-  .hero-right select {
-    padding: 1.2rem;
-    font-size: 1.4rem;
-    margin: .8rem 0;
-  }
-
-  .select-wrapper::after {
-    right: 1.2rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .hero-right {
-    width: 100%;
-    padding: 1.2rem;
-  }
-
-  .form {
-    padding: 0 .8rem 3rem;
-  }
-
-  .hero-right input[type="text"],
-  .hero-right input[type="email"],
-  .hero-right input[type="phone"],
-  .hero-right input[type="url"],
-  .hero-right textarea,
-  .hero-right select {
-    padding: 1rem;
-    font-size: 1.3rem;
-    margin: .6rem 0;
-  }
-}
-
-/* Rest of the CSS remains the same // Form styles updated to match design */
-.hero-right {
-  background: #3C5C7B;
-  border-radius: 3rem;
-  padding: 4rem 3rem;
-  box-shadow: 0 .8rem 2rem rgba(0, 0, 0, 0.2);
-}
-
-.hero-heading {
-  font-size: 2.8rem;
-  text-align: center;
-  margin-bottom: 3rem;
-  line-height: 1.3;
-}
-
-.hero-heading span {
-  color: #C5F678;
-}
-
-.form {
-  width: 100%;
-  max-width: 40rem;
-  margin: 0 auto;
-}
-
-.hero-right input[type="text"],
-.hero-right input[type="email"],
-.hero-right input[type="phone"],
-.hero-right input[type="url"] {
-  width: 100%;
-  padding: 1.5rem 2rem;
-  margin: 1rem 0;
-  border-radius: 1.2rem;
-  border: none;
-  font-size: 1.6rem;
-  background: rgba(255, 255, 255, 0.15);
-  color: white;
-  backdrop-filter: blur(4px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.select-wrapper {
-  position: relative;
-  width: 100%;
-  margin: 1rem 0;
-}
-
-.hero-right select {
-  width: 100%;
-  padding: 1.5rem 2rem;
-  border-radius: 1.2rem;
-  border: none;
-  font-size: 1.6rem;
-  background: linear-gradient(to right, rgba(197, 246, 120, 0.8), rgba(197, 246, 120, 0.6));
-  color: #3C5C7B;
-  appearance: none;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.select-wrapper::after {
-  content: "▼";
-  position: absolute;
-  right: 2rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #3C5C7B;
-  pointer-events: none;
-}
-
-/* Placeholder styles */
-.hero-right input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.callback-btn {
-  background: linear-gradient(to right, #C5F678, #A8D85D);
-  color: #3C5C7B;
-  padding: 1.5rem 3rem;
-  border-radius: 3rem;
-  font-size: 1.8rem;
-  font-weight: 500;
-  width: auto;
-  min-width: 20rem;
-  margin: 3rem auto 1rem;
-  box-shadow: 0 4px 15px rgba(197, 246, 120, 0.3);
-}
-
-/* Responsive adjustments */
-@media screen and (max-width: 480px) {
-  .hero-right {
-    padding: 3rem 2rem;
-    width: 90%;
-    margin: 1rem auto;
-  }
-  
-  .hero-heading {
-    font-size: 2.4rem;
-    margin-bottom: 2rem;
-  }
-  
-  .hero-right input[type="text"],
-  .hero-right input[type="email"],
-  .hero-right input[type="phone"],
-  .hero-right input[type="url"],
-  .hero-right select {
-    padding: 1.2rem 1.5rem;
-    font-size: 1.4rem;
-  }
-  
-  .callback-btn {
-    padding: 1.2rem 2.5rem;
+  .text-white {
     font-size: 1.6rem;
-    min-width: 18rem;
+  }
+
+  .text-white2, .text-green {
+    font-size: clamp(2rem, 1.8vw, 0.9rem);
+  }
+
+  .hero-heading {
+    font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+    margin-bottom: 1.3rem;
+    margin-top: -0.05rem;
   }
 }

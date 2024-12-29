@@ -8,8 +8,6 @@
   color: white;
 }
 
-
-
 .program-card:hover {
   background-color: #C6E894;
   transform: scale(1.05);
@@ -19,7 +17,7 @@
 .program-card h4,
 .program-card p {
   margin: 10px 0;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
 }
 
 /* Program Card Container */
@@ -27,7 +25,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  max-width: 1300px;
+  padding: 0 200px;
   margin: 0 auto;
 }
 
@@ -39,8 +37,6 @@
   background-color: #82A2C1;
   transition: transform 0.3s;
 }
-
-
 
 /* Program Image */
 .program-image {
@@ -75,17 +71,6 @@
 }
 
 
-
-
-@keyframes rotate {
-  from {
-    transform: perspective(1200px) rotateY(0deg);
-  }
-  to {
-    transform: perspective(1200px) rotateY(360deg);
-  }
-}
-
 .gallery span {
   position: absolute;
   width: 100%;
@@ -101,16 +86,15 @@
 }
 
 /* Slideshow Container */
-.slideshow-container {
+.slideshow-container5 {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
 
-.slideshow-image {
-  max-width: 50%;
-  height: auto;
+.slideshow-image5 {
+  max-width: 30%;
   margin: 100px 10px;
 }
 
@@ -131,30 +115,18 @@
 }
 
 /* Enquiry Section */
-.enquiry-container {
+.enquiry-container5 {
   text-align: center;
   margin: 2rem 0;
 }
 
-.enquiry-heading {
+.enquiry-heading5 {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #333;
 }
 
-.enquiry-form-container {
-  max-width: 500px; /* Limit form width */
-  margin: 40px auto; /* Center the form */
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 1.5rem; /* Reduce padding for compactness */
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  color: white;
-  margin-bottom: 400px;
-}
-
-.form-group {
+.form-group5 {
   margin-bottom: 1rem;
 }
 
@@ -180,7 +152,7 @@ input:focus, select:focus, textarea:focus {
   outline: none;
 }
 
-.submit-button {
+.submit-button5 {
   background: #76b0f9;
   color: white;
   padding: 0.7rem 1.5rem;
@@ -188,10 +160,9 @@ input:focus, select:focus, textarea:focus {
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
-  transition: background 0.3s;
 }
 
-.submit-button:hover {
+.submit-button5:hover {
   background: #6a9edb;
 }
 
@@ -201,9 +172,113 @@ input:focus, select:focus, textarea:focus {
 }
 
 
+.enquiry-form-container5 {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 750px; /* Limit form width */
+  margin: 00px auto; /* Center the form */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  color: white;
+  margin-bottom: 300px;
+}
+
+.enquiry-form5 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #547698;
+  padding: 40px;
+  height: 400px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  outline: none;
+  border-color: #28a745;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+.form-textarea {
+  min-height: 100px;
+}
+
+.submit-btn5 {
+  background-color: #C5F678;
+  color: rgb(15, 2, 2);
+  font-size: 1.4rem;
+  padding: 1.8rem;
+  border: none;
+  border-radius: 35px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  width: 40%;
+  text-align: center;
+  margin: 0 auto; /* Centers the button */
+  display: block; /* Ensures proper centering as a block element */
+  box-shadow: 0 0 15px rgba(197, 246, 120, 0.5); /* Initial glow */
+}
+
+.submit-btn5:hover {
+  background-color: #C5F678;
+  color: white; /* Changes text color for better contrast */
+  box-shadow: 0 0 20px #C5F678; /* Enhanced glow on hover */
+}
+
+
+input, select, textarea {
+  width: 60%; /* Center and keep fields away from container edges */
+  padding: 1.4rem;
+  border: none;
+  border-radius: 10px; /* Rounded corners for inputs */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.59), rgba(255, 255, 255, 0)); /* Gradient from white to transparent */
+  color: white; /* White text color */
+  font-size: 1.7rem;
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.2); /* Inner shadow for depth */
+  margin: 1px auto; /* Center the input fields within the container */
+  display: block; /* Ensures inputs take full width and stay centered */
+}
+
+select{
+  width: 65%; 
+}
+input::placeholder, select::placeholder, textarea::placeholder {
+  color: white; /* White placeholder text */
+  opacity: 0.7; /* Slightly transparent for placeholder */
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid #CFFB8D; /* Green outline on focus */
+}
+
+.submit-button:hover {
+  background: #6a9edb;
+}
+
+
+.location-box .white-square{
+  margin-top: -11px;
+}
+
+
+
 /* Programs Title */
 .programs-title {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
   text-align: center;
   display: flex;
@@ -212,6 +287,7 @@ input:focus, select:focus, textarea:focus {
   color: #333;
   letter-spacing: 1px;
   margin-bottom: 0px;
+  font: poppins;
 }
 
 .text-black {
@@ -222,7 +298,9 @@ input:focus, select:focus, textarea:focus {
 
 .text-green {
   color: #c3e47d;
+  font-size: 1.4em;
 }
+
 
 /* Program Details with Glass Gaze Effect */
 .program-details {
@@ -252,22 +330,19 @@ input:focus, select:focus, textarea:focus {
 /* Program Details Container */
 .program-details-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   margin-top: 80px;
   padding: 20px;
   border-radius: 8px;
-  background-color: #251e1e;
   width: 80%;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
 }
 
-
-
-.view-more-button {
+.view-more-button,
+.submit-btn {
   background-color: #4CAF50;
   color: white;
   border: none;
@@ -275,138 +350,50 @@ input:focus, select:focus, textarea:focus {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
+  border-radius: 5px; /* Add border radius for better button styling */
 }
 
-.view-more-button:hover {
-  background-color: #45a049;
-}
-
-.submit-btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
-
+.view-more-button:hover,
 .submit-btn:hover {
   background-color: #45a049;
 }
 
-
 .program-image {
-  width: 40%;
-  height: auto;
+  margin-top: -60px;
+  width: 45%;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
   border-radius: 8px;
 }
 
 .program-details {
   flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure space between elements */
   padding-left: 20px;
 }
 
 .program-name-details {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
+  color: #fff; /* Make text color more readable on dark background */
 }
 
 .program-description {
   font-size: 1.1rem;
   margin-top: 10px;
+  color: #ddd; /* Lighter color for description */
 }
 
 .program-details p {
   margin: 10px 0;
-}
-
-
-
-/* Enquiry Section */
-.enquiry-container {
-  text-align: center;
-  margin: 2rem 0;
-
-}
-
-.enquiry-heading {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #333;
-  
-}
-
-.enquiry-form-container {
-  max-width: 900px;
-  margin: 0 auto;
-  height:500px;
-  background: #547698; /* Grey background */
-  border-radius: 0px; /* Sharp corners */
-  padding: 2rem;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Subtle shadow for elevation */
-  color: black;
-  margin-bottom: 400px;
-  margin-top:100px;
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-input, select, textarea {
-  width: 50%; /* Center and keep fields away from container edges */
-  padding: 1rem;
-  border: none;
-  border-radius: 10px; /* Rounded corners for inputs */
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.59), rgba(255, 255, 255, 0)); /* Gradient from white to transparent */
-  color: white; /* White text color */
-  font-size: 1rem;
-  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.2); /* Inner shadow for depth */
-  margin: 12px auto; /* Center the input fields within the container */
-  display: block; /* Ensures inputs take full width and stay centered */
-}
-select{
-  width: 54%; 
-}
-input::placeholder, select::placeholder, textarea::placeholder {
-  color: white; /* White placeholder text */
-  opacity: 0.7; /* Slightly transparent for placeholder */
-}
-
-input:focus, select:focus, textarea:focus {
-  outline: 2px solid #CFFB8D; /* Green outline on focus */
-}
-
-.submit-btn {
-  background: #76b0f9;
-  color: white;
-  padding: 0.7rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.3s;
-  width: 55%; /* Keep button centered and aligned with fields */
-  margin: 70px auto;
-  display: block;
-
-}
-
-.submit-button:hover {
-  background: #6a9edb;
-}
-
-
-.location-box .white-square{
-  margin-top: -11px;
+  color: #bbb; /* Subtle text color for readability */
 }
 
 
 
 
-
-
-
-
+/* TOP HEADING CSS  */
 .text-green1{
   color: #99C05F;
   font-size: 1.5em;
@@ -416,27 +403,25 @@ input:focus, select:focus, textarea:focus {
   font-size: 1.5em;
 }
 
-/* Animated Gradient Background */
 .programs-title2 {
   margin-top: -3px;
-  font-weight: 700;
+  font-weight: 900;
   text-align: center;
   padding: 20px 0;
   color: rgb(6, 6, 6);
-  /* background: linear-gradient(90deg, #768f74, #a0b5a2, #d7dfcf, #e8efd2); */
-
+  background: linear-gradient(0deg, #ABDE75, #2C4756);
+  font-size: 2em;
   background-size: 300% 300%;
   animation: gradientAnimation 6s ease infinite;
 }
 
-
-.section-title{
+.section-title5{
   text-align: center; /* Center the title */
-  font-size: 1.5rem; /* Adjust font size */
-  margin: 50px 300px; /* Automatically adjust the margin for centering */
-  padding: 0.5rem 0; 
+  margin: 50px 200px; /* Automatically adjust the margin for centering */
+  padding: 0.2rem 0; 
+  font-size: 2.5em;
+  color: #A3A3A3;
 }
-
 
 .program-details {
   display: flex;
@@ -454,453 +439,62 @@ input:focus, select:focus, textarea:focus {
   height: 200px;
 }
 
-
-
-
-/* For mobile view (768px or smaller) */
-@media (max-width: 768px) {
-  /* Hide horizontal overflow */
-  body, html {
-    overflow-x: hidden;
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .program-section{
+    padding: 30px;
   }
-
-  /* Adjust Program Cards Layout */
-  .program-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-    gap: 1rem; /* Space between cards */
-    padding: 1rem; /* Padding around the grid */
+  .section-title5 {
+    text-align: center; /* Centers the text horizontally */
+    text-align: center; /* Center the title */
+    padding: 0.2rem auto; 
+    font-size: 2.5em;
+    color: #A3A3A3;
   }
-
-  /* Adjust the card size and font for mobile */
-  .program-card {
-    padding: 0.75rem; /* Reduce padding inside each card */
-    font-size: 0.475rem; /* Smaller font size */
-    width: 100%; /* Ensure cards are responsive */
-    box-sizing: border-box; /* Include padding in the width calculation */
-  }
-
-  /* Adjust Program Image */
-  .program-image {
-    display: none; /* Hide image on mobile */
-  }
-
-  /* Adjust Program Details */
-  .program-details {
+  .program-cards{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Center the content horizontally */
-    width: 30%; /* Smaller width */
-    max-width: 200px; /* Set a maximum width */
-    background: rgba(255, 255, 255, 0.15); /* Transparent background */
-    backdrop-filter: blur(8px); /* Frosted glass effect */
-    border-radius: 15px;
-    padding: 10px; /* Reduced padding */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add depth */
-    height: auto;
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    margin: 0 auto; /* Center horizontally */
-  }
-
-  .program-details h4,
-  .program-details p {
-    color: rgb(89, 89, 89);
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  }
-
-  /* Adjust Program Name and Description */
-  .program-name-details {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #c3e47d;
-  }
-
-  .program-description {
-    font-size: 1.0rem;
-    margin-top: 10px;
-    color: #fff;
-  }
-
-  /* Center the enquiry form container */
-.enquiry-form-container {
-  max-width: 400px; /* Smaller form size */
-  width: 80%;
-  margin: 40px auto; /* Center the form horizontally and add top/bottom margin */
-  background: #547698;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  color: black;
-  text-align: center; /* Align text in the form center */
-}
-
-/* Styling for the form groups (inputs and textareas) */
-.form-group {
-  margin-bottom: 1.3rem;
-}
-
-/* Make the input fields and textarea larger */
-input[type="text"], 
-select, 
-textarea {
-  width: 90%;
-  padding: 15px; /* Increase padding to make the fields larger */
-  font-size: 16px; /* Increase font size */
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin: 5px 0;
-}
-
-/* Adjust textarea to match the input fields */
-textarea {
-  min-height: 100px; /* Increase the height of the textarea */
-}
-
-/* Placeholder styling to make it larger */
-input[type="text"]::placeholder,
-textarea::placeholder {
-  font-size: 18px; /* Increase placeholder font size */
-  color: #888;
-}
-
-/* Submit button styling */
-button[type="submit"] {
-  padding: 12px 80px;
-  font-size: 18px;
-  background-color: #6c757d;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-/* Submit button hover effect */
-button[type="submit"]:hover {
-  background-color: #5a6369;
-}
-
-
-  .submit-button {
-    width: 80%; /* Wider submit button */
-    padding: 1rem 0;
-    font-size: 1.1rem;
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* Adjust Heading Styles for Program Section */
-  .programs-title {
-    font-size: 1.7rem;
-    font-weight: 700;
-    text-align: center;
-    gap: 0.5rem;
-    color: #333;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-  }
-
-
-  .program-details {
-    flex-direction: column;
-    align-items: center; /* Center the content */
-    width: 90%; /* Smaller width */
-    max-width: 300px; /* Set a maximum width */
-    padding: 10px; /* Reduced padding */
-    margin: 0 auto; /* Center horizontally */
-  }
-
-  .program-column {
-    width: 100%;
-    margin-bottom: 20px; /* Space between columns */
-  }
-
-  .program-column h3 {
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-
-  .program-column ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .program-column li {
-    font-size: 16px;
-    color: #fff;
-    margin: 5px 0;
-  }
-
-
-  /* Make select dropdowns bigger (Course and Mode) */
-select {
-  height: 50px; /* Increase the height of the select dropdown */
-  padding: 15px; /* Increase padding inside the select dropdown */
-  font-size: 16px; /* Increase font size */
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin: 5px 0;
-  width:393px;
-}
-
-
-}
-
-
-
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  /* Hide horizontal overflow */
-  body, html {
-    overflow-x: hidden;
-  }
-
-  /* Adjust Program Cards Layout */
-  .program-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 2 cards per row for tablet view */
-    gap: 1.5rem; /* Adjust space between cards */
-    padding: 1.5rem; /* Padding around the grid */
-  }
-
-  /* Adjust the card size and font for tablet */
-  .program-card {
-    padding: 1rem; /* Moderate padding */
-    font-size: 0.6rem; /* Slightly larger font size than mobile */
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  /* Show program images for tablet */
-  .program-image {
-    display: block; /* Show images for larger screens */
-    max-width: 100%;
-    height: auto; /* Ensure images scale proportionally */
-  }
-
-  /* Adjust Program Details */
-  .program-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 45%; /* Adjust width for tablet */
-    max-width: 400px; /* Set a larger maximum width */
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 15px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    color: #fff;
-    margin: 0 auto;
-    height: 170px;
-  }
-
-  .program-details h4,
-  .program-details p {
-    color: rgb(69, 69, 69);
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
-  }
-
-  /* Adjust Program Name and Description */
-  .program-name-details {
-    font-size: 1.2rem; /* Slightly larger font size */
-    font-weight: bold;
-    color: #b4df6b;
-
-  }
-
-  .program-description {
-    font-size: 1.2rem; /* Increase description font size */
-    margin-top: 12px;
-    color: #fff;
-  }
-
-  /* Center the enquiry form container */
-  .enquiry-form-container {
-    max-width: 500px;
-    width: 90%;
-    margin: 50px auto;
-    background: #456789;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    color: black;
-    text-align: center;
-  }
-
-  /* Styling for the form groups */
-  .form-group {
-    margin-bottom: 1.5rem;
-  }
-
-  /* Adjust input fields and textarea */
-  input[type="text"], 
-  select, 
-  textarea {
-    width: 95%;
-    padding: 12px; /* Slightly smaller padding */
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-
-  textarea {
-    min-height: 120px;
-  }
-
-  input[type="text"]::placeholder,
-  textarea::placeholder {
-    font-size: 16px;
-    color: #888;
-  }
-
-  /* Submit button styling */
-  button[type="submit"] {
-    padding: 12px 60px;
-    font-size: 16px;
-    background-color: #70757a;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  button[type="submit"]:hover {
-    background-color: #5a6369;
-  }
-
-  .submit-button {
-    width: 70%;
-    padding: 0.8rem 0;
-    font-size: 1rem;
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* Adjust Heading Styles for Program Section */
-  .programs-title {
-    font-size: 2rem;
-    font-weight: 700;
-    text-align: center;
-    color: #444;
-    letter-spacing: 1px;
-    margin-bottom: 1.5rem;
-  }
-
-  .program-column {
-    width: 100%;
-    margin-bottom: 25px;
-  }
-
-  .program-column h3 {
-    text-align: center;
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  .program-column ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .program-column li {
-    font-size: 18px;
-    color: #fff;
-    margin: 7px 0;
-  }
-
-  /* Select dropdown styling */
-  select {
-    height: 45px;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin: 5px 0;
-    width: 90%;
-  }
-}
-
-
-
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  /* Adjust Program Details Container */
-  .program-details-container {
-    width: 100%; /* Smaller width for tablet view */
-    margin: 20px auto; /* Center the container and add top margin */
-    backdrop-filter: blur(8px);
-    border-radius: 12px;
-    padding: 1.2rem; /* Slightly reduced padding */
-    /* box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);  */
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    height: 300px;
-  }
-
-  /* Adjust Program Name and Description */
-  .program-details-container .program-name-details {
-    font-size: 1.2rem; /* Slightly smaller font size */
-    font-weight: bold;
-    color: #b4df6b;
-    height: 200px;
-  }
-
-  .program-details-container .program-description {
-    font-size: 1.1rem; /* Reduced font size for description */
-    margin-top: 10px;
-    color: #fff;
-  }
-}
-
-
-
-
-/* For tablet view (max-width: 768px) */
-@media (max-width: 768px) {
-  /* Adjust Program Cards Layout */
-  .program-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
     gap: 1rem;
-    padding: 1rem;
-  }
-
-  /* Adjust Program Details Container */
-  .program-details-container {
-    max-width: 90%; /* Set max-width to 90% for better scaling */
-    margin-top: 20px; /* Adjusted top margin for spacing */
-    padding: 10px; /* Reduce padding for compactness */
-  }
-
-  /* Adjust Program Card */
-  .program-card {
-    flex: 1 1 45%; /* Increase the width of the card for tablet */
-    font-size: 0.8rem; /* Slightly bigger text for readability */
-  }
-
-  /* Program Details Layout */
-  .program-details {
-    width: 100%; /* Ensure it takes full width */
-    padding-left: 0; /* Remove left padding for more space */
-  }
-
-  .program-image {
-    width: 100%; /* Make the image take full width */
-    margin-bottom: 10px; /* Space below image */
-  }
-
-  .program-details h4,
-  .program-details p {
-    font-size: 1rem; /* Slightly increase font size */
+    padding: 0 0px;
+    margin: 0 auto;
   }
 }
 
+@media screen and (max-width: 768px) {
+  .program-section{
+    padding: 30px;
+  }
+  .program-cards{
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 1rem; */
+    /* padding: 0 200px; */
+    margin: 0 auto;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .section-title5 {
+    text-align: center; /* Keep text centered */
+    font-size: 1.8em; /* Smaller font size for mobile */
+    color: #A3A3A3;
+  }
+  .program-cards {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 1rem;
+    margin: 0 auto;
+  }
+
+  .section-title5 {
+    text-align: center; /* Keep text centered */
+    font-size: 1.8em; /* Smaller font size for mobile */
+    color: #A3A3A3;
+  }
+  .program-cards {
+    display: grid; /* Use a grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
+    gap: 1rem; /* Space between cards */
+    margin: 0 auto;
+  }
+}
