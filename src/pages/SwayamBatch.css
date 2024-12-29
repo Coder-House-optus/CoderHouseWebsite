@@ -124,13 +124,6 @@
 }
 
 
-.header h2 {
-  margin-top: 80px;
-  color: #000000;
-  text-align: center;
-  margin-bottom: 50px;
-  font-size: 3em;
-}
 
 .features5 {
   list-style: none;
@@ -195,8 +188,52 @@
   font-size: 15px;
   color: #555;
 }
+/* New section styles */
+.what-we-offer {
+  margin-top: 40px;
+}
 
+.what-we-offer h3 {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
+.offer-section {
+  margin-bottom: 20px;
+}
+
+.offer-section h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color:#A8D85D;
+  margin-bottom: 10px;
+}
+
+.offer-section p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.offer-section ul {
+  padding-left: 20px;
+}
+
+.offer-section ul li {
+  font-size: 16px;
+  color: #555;
+  list-style-type: disc;
+  margin-bottom: 8px;
+}
+
+.header h1 {
+  font-size: 3em;
+  text-align: center; /* Center the text horizontally */
+  margin: 100px auto 10px auto ; /* This centers the element itself, if it has a defined width */
+}
 
 
 
@@ -320,6 +357,14 @@
     padding: 10px 18px; /* Adjust padding for tablet buttons */
     font-size: 15px; /* Adjust font size */
   }
+  .swayam-batch-title {
+    font-size: 3em;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
 }
 
 

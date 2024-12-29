@@ -18,7 +18,7 @@ const SwayamBatch = () => {
       </button>
       
       <div className="header">
-        <h2>Swayam Batch</h2>
+      <h1 className="swayam-batch-title">Swayam Batch</h1>
         <p className="description">
           Swayam is a comprehensive self-paced learning program designed to empower students with access to recorded lectures and study materials for a variety of in-demand courses. 
           This program is exclusively available to members of Coder House or those who are part of the Coder House community.
@@ -37,8 +37,40 @@ const SwayamBatch = () => {
             <strong>Wide Course Selection</strong>: Covers diverse domains, including cloud computing, software development, data analysis, and more.
           </li>
         </ul>
-
       </div>
+
+      {/* What We Offer Section */}
+      <div className="what-we-offer">
+        <h3>What We Offer:</h3>
+        <div className="offer-section">
+          <h4>1. Extensive Learning Resources</h4>
+          <p>Over 1250+ hours of content across various courses.</p>
+          <p>Access to high-quality recorded lectures and downloadable study materials.</p>
+        </div>
+        <div className="offer-section">
+          <h4>2. Expert-Led Content</h4>
+          <p>Courses designed and delivered by industry leaders and experts.</p>
+          <p>Practical insights and strategies to help you excel in the real world.</p>
+        </div>
+        <div className="offer-section">
+          <h4>3. Diverse Course Selection</h4>
+          <p>Explore courses across multiple domains, including:</p>
+          <ul>
+            <li>Cloud Computing</li>
+            <li>Software Development</li>
+            <li>Data Analysis</li>
+            <li>Artificial Intelligence</li>
+            <li>Web Development</li>
+          </ul>
+        </div>
+        <div className="offer-section">
+          <h4>4. Exclusive Access</h4>
+          <p>Available only to Coder House members, ensuring a focused and committed learning environment.</p>
+          <p>Regular updates with new courses and materials to stay relevant in the ever-evolving tech landscape.</p>
+        </div>
+      </div>
+
+      {/* Technologies Section */}
       <div className="technologies1">
         <h3>Learn Wide Range of Technologies like</h3>
         <div className="tech-grid">
