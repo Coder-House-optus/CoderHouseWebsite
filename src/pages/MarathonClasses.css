@@ -6,24 +6,25 @@
 
 
     background-image: url('/public/images/bluedotedlines.png');
-  background-position: right bottom; /* Position the background image at the bottom-right corner */
-  background-repeat: no-repeat;
-  background-size: 1500px 600px; /* Adjust the size of the background image */
+    background-position: right bottom; /* Position the background image at the bottom-right corner */
+    background-repeat: no-repeat;
+    background-size: 1500px 600px; /* Adjust the size of the background image */
 
-  flex-direction: column; /* Stack elements vertically */
-  align-items: center; /* Center horizontally */
-  justify-content: flex-start; /* Align items from the top */
-  padding-bottom: 150px; /* Padding for the section */
-  
-  z-index: 1;
-  background-blend-mode: overlay;
-  background-color: rgba(255, 255, 255, 0.5);
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: flex-start; /* Align items from the top */
+    padding-bottom: 150px; /* Padding for the section */
+    
+    z-index: 1;
+    background-blend-mode: overlay;
+    background-color: rgba(255, 255, 255, 0.5);
 
 }
 
 h1 {
-    font-size: 2rem;
-    margin-bottom: 90px;
+    margin-top: 100px;
+    font-size: 3rem;
+    margin-bottom: 20px;
     color: #000;
 }
 
@@ -58,15 +59,39 @@ h2 {
 .marathon-buttons1 {
     display: flex;
     justify-content: center;
-    gap: 370px;
+    gap: 30px;
     flex-wrap: wrap;
 }
+
+.marathon-buttons1 button:hover {
+  transform: scale(1.1); /* Slightly grow when hovered */
+  background-color: #3C5C7B; /* Darker shade for hover effect */
+}
+
+.marathon-buttons1 button:active {
+  background-color: #3C5C7B; /* Even darker shade for click effect */
+  transform: scale(1.2); /* Grow further when clicked */
+}
+
+.company-specific{
+  margin-top: 50px;
+  font-size: 2.6em;
+}
+
+.marathon-doc-title {
+  font-size: 1.8em; /* Adjust font size */
+  font-weight: bold; /* Make the title bold */
+  color: #333; /* Set a color for the text */
+  margin-bottom: 10px; /* Add space below the title */
+}
+
+
 
 .marathon-button1 {
     display: flex;
     align-items: center;
     padding: 10px 40px;
-    font-size: 1rem;
+    font-size: 2rem;
     color: #fff;
     background-color: #8bc34a;
     border: none;
@@ -129,6 +154,14 @@ h2 {
     color: white;
    
   }
+
+  .marathon-buttons-container {
+    display: flex; /* Arrange buttons in a row */
+    gap: 10px; /* Space between buttons */
+    justify-content: center; /* Center the buttons horizontally */
+    margin-top: 10px; /* Space between the heading and buttons */
+  }
+  
   
   .marathon-card h3 {
     margin-bottom: 40px;
@@ -186,32 +219,42 @@ h2 {
   
     h1 {
       margin-top: 70px;
-      font-size: 1.5rem; /* Smaller font size for header */
+      font-size: 2.7rem; /* Smaller font size for header */
       margin-bottom: 10px; /* Reduced margin for header */
     }
   
     h2 {
       font-size: 1.2rem; /* Smaller font size for subheading */
-      margin: 30px 0 15px;
+      margin: 20px 0 15px;
     }
   
     /* Mobile View for buttons */
-    .marathon-buttons, .marathon-buttons1 {
+    .marathon-doc-button1 {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px; /* Reduce gap between buttons */
+      width: 100%; /* Make buttons take up the full width of their container */
+      padding: 10px 20px; /* Padding for better spacing inside buttons */
+      font-size: 1.5em; /* Uniform font size for buttons */
+      background-color: #A8D85D; /* Adjust background color */
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease; /* Smooth hover effect */
     }
-  
-    .marathon-button, .marathon-button1 {
-      padding: 12px 25px;
-      font-size: 1rem;
-      width: 100%; /* Make buttons take full width */
-      text-align: center;
+    
+    .marathon-doc-button1:hover {
+      background-color: #99C05F; /* Darker shade for hover effect */
     }
-  
+    
+    
     .marathon-button:hover, .marathon-button:active {
       background-color: #7cb342; /* Hover/active state for button */
+    }
+    .marathon-doc-title {
+      font-size: 2em; /* Adjust font size */
+      font-weight: bold; /* Make the title bold */
+      color: #333; /* Set a color for the text */
+      margin-bottom: 10px; /* Add space below the title */
     }
   
     /* Adjust back button */
@@ -233,12 +276,12 @@ h2 {
     /* Mobile View for marathon cards */
     .marathon-card {
       padding: 6px;
-      margin: 10px;
+      margin: 1px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Slightly lighter shadow */
     }
   
     .marathon-card h3 {
-      font-size: 1.1rem; /* Smaller title font size */
+      font-size: 2.1rem; /* Smaller title font size */
       margin-bottom: 20px; /* Reduced margin */
     }
   
@@ -265,9 +308,16 @@ h2 {
         flex-direction: column;
     }
 
+    .marathon-doc-title {
+      font-size: 2em; /* Adjust font size */
+      font-weight: bold; /* Make the title bold */
+      color: #333; /* Set a color for the text */
+      margin-bottom: 10px; /* Add space below the title */
+    }
+
     h1 {
-        margin-top: 60px;
-        font-size: 1.8rem; /* Adjusted font size for tablet */
+        margin-top: 120px;
+        font-size: 3rem; /* Adjusted font size for tablet */
         margin-bottom: 20px;
     }
 
@@ -276,19 +326,16 @@ h2 {
         margin: 40px 0 20px;
     }
 
-    .marathon-classes-buttons {
-        gap: 20px; /* Reduced gap for tablet */
-    }
-
-    .marathon-classes-buttons1 {
-        gap: 1px;
-    }
-
     .marathon-classes-button, .marathon-classes-button1 {
         padding: 14px 30px;
         font-size: 1rem;
         width: 80%; /* Allow buttons to take 80% width */
         text-align: center;
+    }
+
+    .marathon-card h3 {
+      font-size: 2.4rem; /* Smaller title font size */
+      margin-bottom: 20px; /* Reduced margin */
     }
 
     /* Tablet View for marathon buttons grid */

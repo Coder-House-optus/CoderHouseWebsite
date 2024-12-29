@@ -68,8 +68,9 @@ const Amcat = () => {
       </table>
 
       <div className="amcat-important-details">
-        <h3>Important Details:</h3>
+      {/* <h3 className="important-details-title">Important Details:</h3> */}
         <ul>
+        <li className="important-details">Important Details:</li>
           <li>✔️ There will be no negative marking.</li>
           <li>✔️ AMCAT Exam is Adaptive.</li>
           <li>✔️ A test report will be generated based on your performance in the exam.</li>
