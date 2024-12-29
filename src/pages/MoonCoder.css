@@ -29,7 +29,7 @@
   font-family: 'Poppins', sans-serif; /* Stylish font */
   font-size: 3em;
   margin-left: 300px;
-  background: linear-gradient(90deg, #C6E894, #ffffff, #C6E894); /* Gradient for sparkle */
+  background: linear-gradient(90deg, #C6E894, #ffffff, #99C05F); /* Gradient for sparkle */
   background-size: 200% 200%; /* Larger gradient size for shimmer effect */
   -webkit-background-clip: text; /* Clip background to text */
   -webkit-text-fill-color: transparent; /* Transparent text for gradient */
@@ -37,6 +37,7 @@
   text-shadow: 0px 0px 5px rgba(198, 232, 148, 0.6), 0px 0px 10px rgba(198, 232, 148, 0.4); /* Glow effect */
   text-align: center; /* Center the heading */
   margin: 0 auto; /* Center horizontally */
+  box-shadow: 10px 5px 5px black;
 }
 
 /* Shimmer Animation */
@@ -63,8 +64,8 @@
 
 /* Column 1 Adjustments */
 .column-1 {
-  margin-left: 10px;
-  padding-top: 200px;
+  margin-left: 5%;
+  padding-top: 165px;
 }
 
 .column-0 {
@@ -86,6 +87,7 @@
   font-size: 10px;
   display: flex;
   justify-content: left;
+  border-radius: 5%;
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); */
 
 }

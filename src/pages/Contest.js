@@ -31,6 +31,7 @@ const Contest = () => {
               <h3>In-house Coding Challenges</h3>
               <p>Structured programs for skill enhancement.</p>
             </div>
+            <img src="../images/contest1.png" alt="target icon"/>
           </div>
           <div className="box3 shadow">
             {/* <span className="circle"></span> */}
@@ -38,6 +39,7 @@ const Contest = () => {
               <h3>National & International Competitions</h3>
               <p>Visual guides and flowcharts for contest prep.</p>
             </div>
+            <img src="../images/contest2.png" alt="target icon"/>
           </div>
         </div>
 

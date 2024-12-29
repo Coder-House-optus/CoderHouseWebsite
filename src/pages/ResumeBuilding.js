@@ -1,37 +1,45 @@
 import React, { useState } from 'react';
 import './Resumebuilding.css';
-import { FaCheckCircle } from 'react-icons/fa'; // Using FontAwesome icons
-import { useNavigate } from 'react-router-dom'; // React Router hook for navigation
+import { FaCheckCircle } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const ResumeBuilding = () => {
-  const navigate = useNavigate(); // Initialize navigate
+  const navigate = useNavigate();
 
   // Images array for the slideshow
   const images = [
-    '/images/resume-workshop.jpg', // Replace with your actual image paths
-    '/images/mock-interviews.jpg',
-    '/images/soft-skills.jpg',
-    '/images/job-preparation.jpg',
+    '../images/Association/resume1.jpg',
+    '../images/Association/resume2.jpg',
+    '../images/Association/resume3.jpg',
+      '../images/Association/resume4.jpg'
   ];
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0); // State to track current image index
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Handler for moving to the previous image
   const handlePrevImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
+    setCurrentImageIndex((prevIndex) => {
+      // For desktop/tablet, move two images at a time
+      if (window.innerWidth > 480) {
+        return prevIndex === 0 ? images.length - 2 : prevIndex - 2;
+      }
+      // For mobile, move one image at a time
+      return prevIndex === 0 ? images.length - 1 : prevIndex - 1;
+    });
   };
 
-  // Handler for moving to the next image
   const handleNextImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
+    setCurrentImageIndex((prevIndex) => {
+      // For desktop/tablet, move two images at a time
+      if (window.innerWidth > 480) {
+        return prevIndex >= images.length - 2 ? 0 : prevIndex + 2;
+      }
+      // For mobile, move one image at a time
+      return prevIndex === images.length - 1 ? 0 : prevIndex + 1;
+    });
   };
 
   const handleBackClick = () => {
-    navigate('/Features'); // Specify the route of the feature page
+    navigate('/Features');
   };
 
   return (
@@ -88,15 +96,25 @@ const ResumeBuilding = () => {
       {/* Sliding Image Section */}
       <div className="slideshow-container">
         <button className="arrow-button" onClick={handlePrevImage}>
-          &#10094; {/* Left Arrow */}
+          &#10094;
         </button>
-        <img
-          src={images[currentImageIndex]}
-          alt="Slideshow"
-          className="slideshow-image"
-        />
+        <div className="slideshow-images">
+          <img
+            src={images[currentImageIndex]}
+            alt={`Slideshow ${currentImageIndex + 1}`}
+            className="slideshow-image"
+          />
+          {/* Second image only shows on desktop/tablet */}
+          {window.innerWidth > 480 && currentImageIndex + 1 < images.length && (
+            <img
+              src={images[currentImageIndex + 1]}
+              alt={`Slideshow ${currentImageIndex + 2}`}
+              className="slideshow-image"
+            />
+          )}
+        </div>
         <button className="arrow-button" onClick={handleNextImage}>
-          &#10095; {/* Right Arrow */}
+          &#10095;
         </button>
       </div>
     </div>
