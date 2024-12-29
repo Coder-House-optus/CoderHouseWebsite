@@ -6,7 +6,7 @@ const  MentorshipModule = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="container1">
+    <div className="container2">
       {/* Back Button */}
       <button className="back-button1" onClick={() => navigate('/Features')}>
       Back to home

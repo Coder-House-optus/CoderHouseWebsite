@@ -69,11 +69,7 @@
 
 .content1 {
   margin-left: 40px;
-}
-
-.container1 {
-  text-align: center;
-  padding: 20px;
+  color: #000000;
 }
 
 .back-button1 {
@@ -131,6 +127,7 @@
   font-size: 1em;
   color: rgb(255, 255, 255);
   text-align: left;
+  color: #000000;
 }
 
 .image-section2 {
@@ -152,6 +149,7 @@
 
 .mentorpara{
   font-size: 1.7em;
+  padding: 0px 100px;
 }
 
 .container10 {
@@ -202,12 +200,38 @@
   color: #3C5C7B;
 }
 
+.container2 {
+  display: flex; /* Enables Flexbox */
+  flex-direction: column; /* Stacks elements vertically */
+  align-items: center; /* Centers elements horizontally */
+  justify-content: center; /* Centers elements vertically */
+  text-align: center; /* Ensures text is centered */
+  box-sizing: border-box; /* Includes padding in dimensions */
+}
 
 
 
+.green-text {
+  color: #99C05F; /* Green color for "Mentorship Module" */
+  font-size: 1.5em;
+}
+
+.black-text {
+  color: #333; /* Black color for the rest of the text */
+  display: block; /* Forces the text to move to the next line */
+  font-size: 1em; /* Optional: Adjust size of the secondary text */
+}
 
 @media (max-width: 768px) {
 
+  .container2 {
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Stacks elements vertically */
+    align-items: center; /* Centers elements horizontally */
+    justify-content: center; /* Centers elements vertically */
+    text-align: center; /* Ensures text is centered */
+    box-sizing: border-box; /* Includes padding in dimensions */
+  }
 
   .image-section2 {
     flex-direction: column; /* Stack images vertically */
@@ -258,13 +282,6 @@
     margin-top: 20px;
   }
 
-  /* Container */
-  .container1 {
-    margin-top: 40px;
-    padding: 20px; /* Increased padding for better spacing */
-    height: auto; /* Allow height to adjust according to content */
-  }
-
   /* Image section */
   .image-section2 {
     flex-direction: row; /* Keep images in a row */
@@ -291,6 +308,7 @@
   .content1 {
     font-size: 16px; /* Increase font size for better readability */
     margin-left: 30px; /* Adjust left margin */
+    color: #000000;
   }
   .key-mentor{
     color: #333;
