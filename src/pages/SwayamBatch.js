@@ -17,8 +17,8 @@ const SwayamBatch = () => {
         Back to features
       </button>
       
-      <div className="header">
-      <h1 className="swayam-batch-title">Swayam Batch</h1>
+      <div className="header1">
+      <h1 className="swayam1">Swayam Batch</h1>
         <p className="description">
           Swayam is a comprehensive self-paced learning program designed to empower students with access to recorded lectures and study materials for a variety of in-demand courses. 
           This program is exclusively available to members of Coder House or those who are part of the Coder House community.
