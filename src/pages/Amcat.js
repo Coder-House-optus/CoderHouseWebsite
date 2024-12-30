@@ -67,7 +67,7 @@ const Amcat = () => {
         </tbody>
       </table>
 
-      <div className="amcat-important-details">
+      <div className="amcat-important-details1">
       {/* <h3 className="important-details-title">Important Details:</h3> */}
         <ul>
         <li className="important-details">Important Details:</li>

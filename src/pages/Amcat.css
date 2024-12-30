@@ -1,6 +1,6 @@
 .amcat-container {
     font-family: 'Poppins', sans-serif;
-    padding: 80px;
+    padding: 30px;
     background-color: #f9f9f9;
   }
   
@@ -82,10 +82,10 @@
     margin: 10px 0;
     display: flex;
     align-items: center;
-    font-size: 1.7em;
+    font-size: 1em;
   }
   .important-details-title{
-    font-size: 2em;
+    font-size: 1em;
   }
   .amcat-important-details li::before {
     /* content: "✔️"; */
@@ -94,7 +94,7 @@
     
   }
   .important-details-title{
-    font-size: 2em;
+    font-size: 1em;
   }
 
   .important-details {
@@ -123,6 +123,9 @@
   }
   .important-details-title{
     font-size: 2em;
+  }
+  .amcat-important-details1{
+    font-size: 1.2em;
   }
 
 
@@ -193,6 +196,7 @@
   }
 }
 
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
 
   /* Container adjustments */
@@ -253,7 +257,7 @@
   }
 
   .amcat-important-details li {
-    font-size: 2.1em; /* Slightly larger font size for list items */
+    font-size: 1em; /* Slightly larger font size for list items */
     margin-bottom: 10px; /* Space between list items */
   }
 

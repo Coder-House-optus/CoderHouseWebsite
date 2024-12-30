@@ -40,35 +40,36 @@ const SwayamBatch = () => {
       </div>
 
       {/* What We Offer Section */}
-      <div className="what-we-offer">
-        <h3>What We Offer:</h3>
-        <div className="offer-section">
-          <h4>1. Extensive Learning Resources</h4>
-          <p>Over 1250+ hours of content across various courses.</p>
-          <p>Access to high-quality recorded lectures and downloadable study materials.</p>
-        </div>
-        <div className="offer-section">
-          <h4>2. Expert-Led Content</h4>
-          <p>Courses designed and delivered by industry leaders and experts.</p>
-          <p>Practical insights and strategies to help you excel in the real world.</p>
-        </div>
-        <div className="offer-section">
-          <h4>3. Diverse Course Selection</h4>
-          <p>Explore courses across multiple domains, including:</p>
-          <ul>
-            <li>Cloud Computing</li>
-            <li>Software Development</li>
-            <li>Data Analysis</li>
-            <li>Artificial Intelligence</li>
-            <li>Web Development</li>
-          </ul>
-        </div>
-        <div className="offer-section">
-          <h4>4. Exclusive Access</h4>
-          <p>Available only to Coder House members, ensuring a focused and committed learning environment.</p>
-          <p>Regular updates with new courses and materials to stay relevant in the ever-evolving tech landscape.</p>
-        </div>
-      </div>
+<div className="what-we-offer">
+  <h3>What We Offer:</h3>
+  <div className="offer-section">
+    <h4>1. Extensive Learning Resources</h4>
+    <p className="offer-text">Over 1250+ hours of content across various courses.</p>
+    <p className="offer-text">Access to high-quality recorded lectures and downloadable study materials.</p>
+  </div>
+  <div className="offer-section">
+    <h4>2. Expert-Led Content</h4>
+    <p className="offer-text">Courses designed and delivered by industry leaders and experts.</p>
+    <p className="offer-text">Practical insights and strategies to help you excel in the real world.</p>
+  </div>
+  <div className="offer-section">
+    <h4>3. Diverse Course Selection</h4>
+    <p className="offer-text">Explore courses across multiple domains, including:</p>
+    <ul>
+      <li>Cloud Computing</li>
+      <li>Software Development</li>
+      <li>Data Analysis</li>
+      <li>Artificial Intelligence</li>
+      <li>Web Development</li>
+    </ul>
+  </div>
+  <div className="offer-section">
+    <h4>4. Exclusive Access</h4>
+    <p className="offer-text">Available only to Coder House members, ensuring a focused and committed learning environment.</p>
+    <p className="offer-text">Regular updates with new courses and materials to stay relevant in the ever-evolving tech landscape.</p>
+  </div>
+</div>
+
 
       {/* Technologies Section */}
       <div className="technologies1">

@@ -150,7 +150,7 @@ export default function ExtraFeatures() {
                   }}
                 >
                   <div className="extraFeatures-card-content">
-                    <h2>{card.title}</h2>
+                  <h2 class="card-title1">{card.title}</h2>
                   </div>
                 </div>
               ))}
@@ -173,7 +173,7 @@ export default function ExtraFeatures() {
                   }}
                 >
                   <div className="extraFeatures-card-content">
-                    <h2>{card.title}</h2>
+                  <h2 class="card-title1">{card.title}</h2>
                   </div>
                 </div>
               ))}

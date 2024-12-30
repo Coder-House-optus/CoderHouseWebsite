@@ -171,8 +171,11 @@
 
 .description {
   padding: 5px 120px;
-  font-size: 1.5em;
   justify-content: center;
+}
+
+.offer-text {
+  font-size: 20px; /* Increase or adjust the size as needed */
 }
 
 .tech-item {
@@ -194,7 +197,7 @@
 }
 
 .what-we-offer h3 {
-  font-size: 24px;
+  font-size: 30px;
   color: #333;
   font-weight: bold;
   text-align: center;
@@ -206,14 +209,14 @@
 }
 
 .offer-section h4 {
-  font-size: 20px;
+  font-size: 2em;
   font-weight: bold;
   color:#A8D85D;
   margin-bottom: 10px;
 }
 
 .offer-section p {
-  font-size: 16px;
+  font-size: 20px;
   color: #555;
   line-height: 1.6;
 }
@@ -223,7 +226,7 @@
 }
 
 .offer-section ul li {
-  font-size: 16px;
+  font-size: 20px;
   color: #555;
   list-style-type: disc;
   margin-bottom: 8px;
@@ -236,7 +239,8 @@
 }
 
 .swayam1{
-  font-size: 4em;
+  margin-top:100px;
+  font-size: 2em;
 }
 
 

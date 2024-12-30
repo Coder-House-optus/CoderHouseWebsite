@@ -22,13 +22,14 @@
 }
 
 h1 {
+  margin-top: 100px;
     font-size: 2rem;
     margin-bottom: 5%;
     color: #000;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.3rem;
     margin: 60px 0 20px;
     color: #000;
 }
@@ -74,11 +75,11 @@ h2 {
 
 .company-specific{
   margin-top: 50px;
-  font-size: 2.6em;
+  font-size: 1.5em;
 }
 
 .marathon-doc-title {
-  font-size: 1.8em; /* Adjust font size */
+  font-size: 1.3em; /* Adjust font size */
   font-weight: bold; /* Make the title bold */
   color: #333; /* Set a color for the text */
   margin-bottom: 10px; /* Add space below the title */
@@ -90,7 +91,7 @@ h2 {
     display: flex;
     align-items: center;
     padding: 10px 40px;
-    font-size: 2rem;
+    font-size: 1rem;
     color: #fff;
     background-color: #8bc34a;
     border: none;
@@ -218,15 +219,20 @@ h2 {
   
     h1 {
       margin-top: 70px;
-      font-size: 2.7rem; /* Smaller font size for header */
+      font-size: 2.5rem; /* Smaller font size for header */
       margin-bottom: 10px; /* Reduced margin for header */
     }
   
     h2 {
-      font-size: 2rem; /* Smaller font size for subheading */
+      font-size: 1.9rem; /* Smaller font size for subheading */
       margin: 30px 0 15px;
     }
-  
+    
+    .company-specific{
+      margin-top: 50px;
+      font-size: 1.9em;
+    }
+
     /* Mobile View for buttons */
     .marathon-doc-button1 {
       display: flex;
@@ -316,24 +322,24 @@ h2 {
 
     h1 {
         margin-top: 120px;
-        font-size: 3rem; /* Adjusted font size for tablet */
+        font-size: 2rem; /* Adjusted font size for tablet */
         margin-bottom: 20px;
     }
 
     h2 {
-        font-size: 1.3rem; /* Slightly smaller for tablet */
+        font-size: 1.6rem; /* Slightly smaller for tablet */
         margin: 40px 0 20px;
     }
 
     .marathon-classes-button, .marathon-classes-button1 {
         padding: 14px 30px;
-        font-size: 1rem;
+        font-size: 1.5rem;
         width: 80%; /* Allow buttons to take 80% width */
         text-align: center;
     }
 
     .marathon-card h3 {
-      font-size: 2.4rem; /* Smaller title font size */
+      font-size: 2rem; /* Smaller title font size */
       margin-bottom: 20px; /* Reduced margin */
     }
 
@@ -346,12 +352,12 @@ h2 {
     }
 
     .marathon-classes-card h3 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         margin-bottom: 25px;
     }
 
     .marathon-classes-doc-button {
         padding: 10px 15px;
-        font-size: 13px;
+        font-size: 23px;
     }
 }
