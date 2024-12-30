@@ -1,6 +1,6 @@
 .amcat-container {
     font-family: 'Poppins', sans-serif;
-    padding: 80px;
+    padding: 30px;
     background-color: #f9f9f9;
   }
   
@@ -70,11 +70,7 @@
   
   .amcat-important-details {
     margin-top: 20px;
-  }
-  
-  .amcat-important-details h3 {
-    font-size: 1.6rem;
-    margin-bottom: 10px;
+    font-size: 1.8em;
   }
   
   .amcat-important-details ul {
@@ -86,17 +82,25 @@
     margin: 10px 0;
     display: flex;
     align-items: center;
-    font-size: 1.2em;
+    font-size: 1em;
   }
-  
+  .important-details-title{
+    font-size: 1em;
+  }
   .amcat-important-details li::before {
     /* content: "✔️"; */
     color: green;
     margin-right: 10px;
     
   }
-  
+  .important-details-title{
+    font-size: 1em;
+  }
 
+  .important-details {
+    font-weight: bold; /* Make the text bold */
+  }
+  
 
   .back-button1 {
     position: absolute;
@@ -113,7 +117,16 @@
   .back-button1:hover {
     background-color: #e0e0e0;
   }
-  
+
+  .amcat-important-details h3{
+    font-size: 3em;
+  }
+  .important-details-title{
+    font-size: 2em;
+  }
+  .amcat-important-details1{
+    font-size: 1.2em;
+  }
 
 
   /* Mobile View Adjustments */
@@ -149,7 +162,7 @@
   }
 
   .amcat-important-details h3 {
-    font-size: 1.3rem; /* Adjusted font size */
+    font-size: 2.3rem; /* Adjusted font size */
   }
 
   .amcat-important-details li {
@@ -172,7 +185,17 @@
     padding: 1px 2px;
     margin: 0 5px; /* Reduced margin between each tab */
   }
+
+  .important-details-title{
+    font-size: em;
+  }
+
+  .amcat-important-details h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
 }
+
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
 
@@ -216,25 +239,25 @@
 
   /* Table adjustments */
   .amcat-table th, .amcat-table td {
-    font-size: 1.1em; /* Adjusted font size for readability */
+    font-size: 2.1em; /* Adjusted font size for readability */
     padding: 12px; /* Increased padding for better readability */
     text-align: left; /* Ensure text aligns properly */
   }
 
   .amcat-table th {
-    font-size: 1.3em; /* Slightly larger font for header */
+    font-size: 1.6em; /* Slightly larger font for header */
     background-color: #f8f8f8; /* Light background for table header */
     font-weight: bold; /* Bold header */
   }
 
   /* Important details adjustments */
   .amcat-important-details h3 {
-    font-size: 1.5rem; /* Larger font size for important details headings */
+    font-size: 2rem; /* Larger font size for important details headings */
     margin-bottom: 15px; /* Space below the heading */
   }
 
   .amcat-important-details li {
-    font-size: 1.1em; /* Slightly larger font size for list items */
+    font-size: 1em; /* Slightly larger font size for list items */
     margin-bottom: 10px; /* Space between list items */
   }
 
@@ -258,5 +281,10 @@
   .amcat-container, .amcat-tabs, .amcat-table {
     width: 100%; /* Ensure they take full width available */
     box-sizing: border-box; /* Prevent overflow */
+  }
+
+  .amcat-important-details{
+    font-size: 1.3em;
+    margin-bottom: 15px;
   }
 }

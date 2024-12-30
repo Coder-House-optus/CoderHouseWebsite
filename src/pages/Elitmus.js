@@ -6,7 +6,7 @@ const Elitmus = () => {
   const navigate = useNavigate(); // Hook for navigation
 
   return (
-    <div className="amcat-container">
+    <div className="amcat-container1">
       {/* Back Button */}
       <button 
         className="back-button1" 

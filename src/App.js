@@ -31,7 +31,7 @@ import MachineLearning from './Programs/MachineLearning';
 import Aptitude from './Programs/aptitude';
 import Reasoning from './Programs/reasoning';
 import English from './Programs/english';
-import PersonalityDevelopment from './Programs/personality-development';
+import CriticalThinking from './Programs/CriticalThinking';
 import GDPersonalInterview from './Programs/gd-personal-interview';
 
 import './App.css';
@@ -81,7 +81,7 @@ function App() {
           <Route path="/programs/aptitude" element={<Aptitude />} />
           <Route path="/programs/reasoning" element={<Reasoning />} />
           <Route path="/programs/english" element={<English />} />
-          <Route path="/programs/personality-development" element={<PersonalityDevelopment />} />
+          <Route path="/programs/CriticalThinking" element={<CriticalThinking />} />
           <Route path="/programs/gd-personal-interview" element={<GDPersonalInterview />} />
 
         </Routes>

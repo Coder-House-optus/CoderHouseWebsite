@@ -28,29 +28,37 @@ const MarathonClasses = () => {
         Back to Feature
       </button>
       <h1>Marathon Classes</h1>
-      <div className="marathon-buttons">
-        <button className="marathon-button" onClick={() => navigateTo('/Amcat')}>
+      <div className="marathon-buttons1">
+        <button className="marathon-button1" onClick={() => navigateTo('/Amcat')}>
           <span className="tick-icon1">✔</span> AMCAT
         </button>
-        <button className="marathon-button" onClick={() => navigateTo('/Cocubes')}>
+        <button className="marathon-button1" onClick={() => navigateTo('/Cocubes')}>
           <span className="tick-icon1">✔</span> CoCubes
         </button>
-        <button className="marathon-button" onClick={() => navigateTo('/Elitmus')}>
+        <button className="marathon-button1" onClick={() => navigateTo('/Elitmus')}>
           <span className="tick-icon1">✔</span> eLitmus
         </button>
       </div>
-      <h2>Company Specific</h2>
+      <h2 className="company-specific">Company Specific</h2>
       <div className="marathon-buttons-grid">
         {companyDocs.map((doc, index) => (
           <div key={index} className="marathon-card">
-            <h3>{doc.name}</h3>
+          <h3 className="marathon-doc-title">{doc.name}</h3>
+          <div className="marathon-buttons-container">
             <button
               className="marathon-doc-button"
               onClick={() => openDoc(doc.link)}
             >
               Open Document
             </button>
+            <button
+              className="marathon-doc-button"
+              onClick={() => openDoc(doc.link)}
+            >
+              Join Us!
+            </button>
           </div>
+        </div>        
         ))}
       </div>
     </div>
