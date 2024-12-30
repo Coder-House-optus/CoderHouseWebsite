@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import './CollegeProgram.css';
 import Footer from '../components/Footer';
-import HODReview from '../components/HODreview'; // Importing the HODReview component
+import HODReview from '../components/HODreview';
 
 const CollegeProgram = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -40,6 +40,24 @@ const CollegeProgram = () => {
       image: "/path/to/image3.jpg",
     },
   ];
+
+  // Auto-timer for moments carousel
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex === moments.length - 1 ? 0 : prevIndex + 1));
+    }, 5000); // 10 seconds
+
+    return () => clearInterval(timer);
+  }, [moments.length]);
+
+  // Auto-timer for testimonials carousel
+  useEffect(() => {
+    const testimonialTimer = setInterval(() => {
+      setActiveTestimonialIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
+    }, 5000); // 10 seconds
+
+    return () => clearInterval(testimonialTimer);
+  }, [testimonials.length]);
 
   // Handlers for moments navigation
   const handlePrev = () => {
@@ -120,8 +138,6 @@ const CollegeProgram = () => {
         
         {/* Inserted HODReview Component */}
         <HODReview />
-
-        
       </section>
 
       <Footer />

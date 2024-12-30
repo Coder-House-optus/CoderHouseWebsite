@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Resumebuilding.css';
 import { FaCheckCircle } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
@@ -11,10 +11,26 @@ const ResumeBuilding = () => {
     '../images/Association/resume1.jpg',
     '../images/Association/resume2.jpg',
     '../images/Association/resume3.jpg',
-      '../images/Association/resume4.jpg'
+    '../images/Association/resume4.jpg'
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Auto-timer for image slideshow
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => {
+        // For desktop/tablet, move two images at a time
+        if (window.innerWidth > 480) {
+          return prevIndex >= images.length - 2 ? 0 : prevIndex + 2;
+        }
+        // For mobile, move one image at a time
+        return prevIndex === images.length - 1 ? 0 : prevIndex + 1;
+      });
+    }, 5000); // 10 seconds
+
+    return () => clearInterval(timer);
+  }, [images.length]);
 
   const handlePrevImage = () => {
     setCurrentImageIndex((prevIndex) => {
