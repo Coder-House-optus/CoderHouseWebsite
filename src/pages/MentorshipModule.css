@@ -17,11 +17,6 @@
   text-decoration: underline;
 }
 
-
-
-/* Stripes */
-
-
 .box10 {
   width: 60%;
   min-width: 200px;
@@ -95,7 +90,7 @@
   margin-top: 100px;
   font-family: 'poppins';
   color: #333;
-  font-size: 2.5em;
+  font-size: 1.8em;
   font-weight: bold;
   text-align: center;
 
@@ -104,7 +99,7 @@
 .heading-mentor {
   font-family: 'poppins';
   color: #333;
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: bold;
   margin-bottom: -10px;
   text-align: center;
@@ -148,8 +143,8 @@
 }
 
 .mentorpara{
-  font-size: 1.7em;
-  padding: 0px 20px;
+  font-size: 1.3em;
+  padding: 0px 80px;
 }
 
 .container10 {
@@ -175,7 +170,7 @@
   transition: background 200ms ease-in-out;
   display: flex;
   align-items: center;
-  font-size: 1.8em; /* Adjust font size for readability */
+  font-size: 1em; /* Adjust font size for readability */
   text-align: center; /* Center the text within the box */
 }
 
@@ -213,7 +208,7 @@
 
 .green-text {
   color: #99C05F; /* Green color for "Mentorship Module" */
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 .black-text {
@@ -224,6 +219,13 @@
 
 @media (max-width: 768px) {
 
+  .mentorpara{
+    font-size: 1.3em;
+    padding: 0px 20px;
+  }
+  .heading-mentor{
+    padding: 0px 30px;
+  }
   .container2 {
     display: flex; /* Enables Flexbox */
     flex-direction: column; /* Stacks elements vertically */
@@ -251,11 +253,11 @@
   }
 
   .heading10, .heading-mentor {
-    font-size: 3em; /* Reduce heading size for mobile */
+    font-size: 2em; /* Reduce heading size for mobile */
   }
 
   .mentorpara {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-top: 20px;
   }
   .mentorship-program{

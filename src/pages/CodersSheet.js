@@ -36,7 +36,8 @@ const CoderSheet = () => {
       </div>
 
       <div class="mentorship-program">
-  <p><strong>1. Topic-Wise Daily Coding Practice</strong>  
+  <p class="mentorship-description">
+    <strong>1. Topic-Wise Daily Coding Practice</strong>  
     Our structured practice sheets cover topics ranging from data structures (Arrays, Linked Lists, Trees, Graphs) to algorithms (Sorting, Searching, Dynamic Programming) and programming languages (C++, Python, Java).  
     The practice problems are curated to:
     <ul>
@@ -45,7 +46,8 @@ const CoderSheet = () => {
       <li>Prepare students for coding rounds in job placements.</li>
     </ul>
   </p>
-  <p><strong>2. Hybrid Mode Analysis Sessions</strong>  
+  <p class="mentorship-description">
+    <strong class="mentorship-description">2. Hybrid Mode Analysis Sessions</strong>  
     We conduct analysis sessions two days a week, where expert mentors guide you through solutions—available online or offline.  
     Here, you’ll:
     <ul>
