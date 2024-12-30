@@ -12,13 +12,13 @@ const CollegeProgram = () => {
   const moments = [
     {
       description: 'Our first batch of graduates in 2020 marked a milestone for Coder House, showcasing immense talent and dedication.',
-      img1: '/images/moments/moment1.jpg',
-      img2: '/images/moments/moment2.jpg',
+      img1: '../images/moments/moment1.jpg',
+      img2: '../images/moments/moment2.jpg',
     },
     {
       description: 'The 2022 hackathon saw incredible teamwork and creativity as students tackled real-world challenges with innovative solutions.',
-      img1: '/images/moments/moment3.jpg',
-      img2: '/images/moments/moment4.jpg',
+      img1: '../images/moments/moment5.jpg',
+      img2: '../images/moments/moment4.jpg',
     },
   ];
 
@@ -108,8 +108,8 @@ const CollegeProgram = () => {
       <section className="associations-section">
         <h2>Our <span className="highlight">Associations</span></h2>
         <div className="logos-grid">
-          {['partner1.png', 'partner2.png', 'partner3.png', 'partner4.png'].map((logo, index) => (
-            <img key={index} src={`/images/logos/${logo}`} alt={`Partner ${index + 1}`} />
+          {['partner1.webp', 'partner2.png', 'partner3.png', 'partner4.jpg'].map((logo, index) => (
+            <img key={index} src={`../images/Association/${logo}`} alt={`Partner ${index + 1}`} />
           ))}
         </div>
       </section>

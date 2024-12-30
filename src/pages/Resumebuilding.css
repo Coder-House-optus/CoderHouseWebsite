@@ -1,4 +1,4 @@
-/* Updated Resumebuilding.css with responsive styles */
+/* Complete Resumebuilding.css with responsive styles */
 
 .resume-container {
   font-family: Poppins, sans-serif;
@@ -9,7 +9,7 @@
   position: relative;
   background-image: url('/public/images/bluedotedlines.png');
   background-blend-mode: overlay;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: WHITE;
   z-index: 1;
   background-repeat: no-repeat;
   background-position: right;
@@ -21,7 +21,7 @@
   position: fixed;
   top: 20px;
   left: 20px;
-  background-color: #ffffff;
+  background-color: #88C057;
   color: #000000;
   padding: 10px 20px;
   border: none;
@@ -32,7 +32,7 @@
 }
 
 .back-button1:hover {
-  background-color: #ecf4d0;
+  background-color: #9bdc63;
 }
 
 .resume-title {
@@ -83,20 +83,29 @@
   font-weight: bold;
 }
 
+/* Updated Slideshow Styles */
 .slideshow-container {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   margin: 20px 0;
+  gap: 20px;
+}
+
+.slideshow-images {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: 80%;
 }
 
 .slideshow-image {
-  width: 60%;
-  max-width: 800px;
+  width: calc(50% - 10px);
   height: 300px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
 }
 
 .arrow-button {
@@ -109,7 +118,7 @@
 }
 
 .arrow-button:hover {
-  color: #ffffff;
+  color: #88C057;
 }
 
 .arrow-button:focus {
@@ -119,96 +128,106 @@
 /* Responsive styles for 1024px */
 @media screen and (max-width: 1024px) {
   .resume-container {
-      padding: 20px;
+    padding: 20px;
   }
 
   .resume-item {
-      margin-left: 200px;
+    margin-left: 200px;
   }
 
   .resume-title {
-      font-size: 22px;
+    font-size: 22px;
   }
 
   .resume-heading {
-      font-size: 17px;
+    font-size: 17px;
   }
 
   .resume-description {
-      font-size: 15px;
+    font-size: 15px;
+  }
+
+  .slideshow-images {
+    width: 90%;
   }
 
   .slideshow-image {
-      width: 70%;
-      height: auto;
+    height: 250px;
   }
 }
 
 /* Responsive styles for 768px */
 @media screen and (max-width: 768px) {
   .resume-container {
-      padding: 15px;
+    padding: 15px;
   }
 
   .resume-item {
-      flex-direction: column;
-      align-items: flex-start;
-      margin-left: 50px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 50px;
   }
 
   .resume-title {
-      font-size: 20px;
+    font-size: 20px;
   }
 
   .resume-heading {
-      font-size: 16px;
+    font-size: 16px;
   }
 
   .resume-description {
-      font-size: 14px;
+    font-size: 14px;
+  }
+
+  .slideshow-images {
+    width: 95%;
   }
 
   .slideshow-image {
-      width: 80%;
-      height: auto;
+    height: 200px;
   }
 }
 
 /* Responsive styles for 480px */
 @media screen and (max-width: 480px) {
   .resume-container {
-      padding: 10px;
+    padding: 10px;
   }
 
   .resume-item {
-      margin-left: 0;
-      flex-direction: column;
-      align-items: flex-start;
+    margin-left: 0;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .icon {
-      font-size: 20px;
-      margin-top: 10px;
+    font-size: 20px;
+    margin-top: 10px;
   }
 
   .resume-title {
-      font-size: 18px;
+    font-size: 18px;
   }
 
   .resume-heading {
-      font-size: 14px;
+    font-size: 14px;
   }
 
   .resume-description {
-      font-size: 12px;
+    font-size: 12px;
+  }
+
+  .slideshow-images {
+    width: 100%;
   }
 
   .slideshow-image {
-      width: 100%;
-      height: auto;
+    width: 100%;
+    height: 200px;
   }
 
   .arrow-button {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 }
