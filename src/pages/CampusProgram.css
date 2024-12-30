@@ -560,4 +560,15 @@ input:focus, select:focus, textarea:focus {
     .programs-title2{
       font-size: 1.4em;
     }
+    .program-details h3{
+      position: center;
+    }
+    .program-name-details {
+      display: flex;
+      justify-content: center; /* Centers horizontally */
+      align-items: center;    /* Centers vertically */
+      height: 100%;           /* Set the height if needed */
+      text-align: center;     /* Ensures text alignment inside */
+    }
+    
 }
