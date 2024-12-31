@@ -33,6 +33,7 @@ import Reasoning from './Programs/reasoning';
 import English from './Programs/english';
 import CriticalThinking from './Programs/CriticalThinking';
 import GDPersonalInterview from './Programs/gd-personal-interview';
+import TermsAndConditions from './pages/TermsAndConditions.js';
 
 import './App.css';
 import ResumeBuilding from './pages/ResumeBuilding';
@@ -50,7 +51,7 @@ function App() {
           <Route path="/Achievers" element={<Achievers/>} />
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/Gform" element={<Gform />} /> {/* Route to Gform */}
-
+          <Route path="/Terms&Conditions" element={<TermsAndConditions/>} />
           
           <Route path="/collegePrograms" element={<CollegeProgram />} />
           <Route path="/CampusPrograms" element={<CampusProgram />} />

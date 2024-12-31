@@ -26,7 +26,7 @@ const Footer = () => {
           <ul>
             <li><a href="#contact">Contact Us</a></li>
             <li><a href="#privacy">Privacy Policy</a></li>
-            <li><a href="#terms">Terms & Condition</a></li>
+            <li><a href="/Terms&Conditions">Terms & Condition</a></li>
           </ul>
         </div>
 
@@ -34,7 +34,7 @@ const Footer = () => {
         <div className="footer-social">
           <h3>Connect With Us</h3>
           <div className="social-icons">
-  <a href="https://facebook.com" className="facebook" target="_blank" rel="noreferrer">
+  <a href="https://www.facebook.com/p/Optus-edtech-100083838727322/" className="facebook" target="_blank" rel="noreferrer">
     <i className="fab fa-facebook-f"></i>
   </a>
   <a href="https://instagram.com" className="instagram" target="_blank" rel="noreferrer">

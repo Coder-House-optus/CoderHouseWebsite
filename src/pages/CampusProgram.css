@@ -247,7 +247,7 @@ input, select, textarea {
   border: none;
   border-radius: 10px; /* Rounded corners for inputs */
   background: linear-gradient(to right, rgba(255, 255, 255, 0.59), rgba(255, 255, 255, 0)); /* Gradient from white to transparent */
-  color: white; /* White text color */
+  color: black; /* White text color */
   font-size: 1rem;
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.2); /* Inner shadow for depth */
   margin: 1px auto; /* Center the input fields within the container */

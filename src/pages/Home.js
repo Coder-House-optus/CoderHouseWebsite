@@ -14,12 +14,20 @@ const reviewsData = [
   { text: "I gained practical experience through projects, which was invaluable!", author: "- Rajesh Kumar" },
   { text: "Excellent infrastructure and resources make learning enjoyable!", author: "- Priya Mehta" },
   { text: "The mentorship I received at Coder House was life-changing!", author: "- Suresh Bansal" },
-  // Add more reviews if needed
 ];
+
+// Define the options for different user types
+const programOptions = {
+  Student: ["Web Development", "Artificial Intelligence"],
+  Developer: [],
+  Trainee: []
+};
 
 // Home component
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedUserType, setSelectedUserType] = useState("");
+  const [selectedProgram, setSelectedProgram] = useState("");
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % reviewsData.length);
@@ -29,16 +37,19 @@ export default function Home() {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + reviewsData.length) % reviewsData.length);
   };
 
+  const handleUserTypeChange = (e) => {
+    setSelectedUserType(e.target.value);
+    setSelectedProgram(""); // Reset program selection when user type changes
+  };
+
   return (
     <div className="home">
-      {/* Navigation Component */}
       <Navigation />
 
-      {/* Hero Section */}
       <section className="hero">
         <div className="hero-left">
           <img
-            src="/images/Coder.png" // Replace with the correct path to your image
+            src="/images/Coder.png"
             alt="Student on laptop"
             className="hero-image"
           />
@@ -52,47 +63,64 @@ export default function Home() {
             <input type="text" name="Name" placeholder="Name" className="input-field" required />
             <input type="email" name="Email" placeholder="Email" className="input-field" required />
             <input type="text" name="Phone" placeholder="Phone" className="input-field" required />
-            <select name="Program" className="input-field" required>
-              <option value="">Select A Program</option>
-              <option value="web-dev">Web Development</option>
-              <option value="ml">Machine Learning</option>
-              <option value="ai">Artificial Intelligence</option>
+            
+            {/* First dropdown for user type */}
+            <select 
+              name="UserType" 
+              className="input-field"
+              value={selectedUserType}
+              onChange={handleUserTypeChange}
+              required
+            >
+              <option value="">Select For</option>
+              <option value="Student">Student</option>
+              <option value="Developer">Developer</option>
+              <option value="Trainee">Trainee</option>
             </select>
+
+            {/* Conditional second dropdown for programs */}
+            {selectedUserType === "Student" && (
+              <select 
+                name="Program" 
+                className="input-field nested-select"
+                value={selectedProgram}
+                onChange={(e) => setSelectedProgram(e.target.value)}
+                required
+              >
+                <option value="">Select Program</option>
+                {programOptions[selectedUserType].map((program, index) => (
+                  <option key={index} value={program.toLowerCase().replace(" ", "-")}>
+                    {program}
+                  </option>
+                ))}
+              </select>
+            )}
+
             <input type="url" name="LinkedIn" placeholder="LinkedIn Profile URL" className="input-field" />
-            <button type="submit" className="callback-btn">Request Callback</button>
+            <button type="submit" className="callback-btn">Get in Touch</button>
           </form>
         </div>
       </section>
-      
+
       <div className="White">
-  <div className="item">
-    <img src="/images/arrow.png" alt="Arrow Image" />
-    <div className="text">147% Average Hike</div>
-  </div>
-  <div className="item">
-    <img src="/images/Career.png" alt="Career Image" />
-    <div className="text">1000+ Career Transformed </div>
-  </div>
-  <div className="item">
-    <img src="/images/teacher.png" alt="Teacher Image" />
-    <div className="text">50+ Experienced Mentor</div>
-  </div>
-</div>
+        <div className="item">
+          <img src="/images/arrow.png" alt="Arrow Image" />
+          <div className="text">147% Average Hike</div>
+        </div>
+        <div className="item">
+          <img src="/images/Career.png" alt="Career Image" />
+          <div className="text">1000+ Career Transformed </div>
+        </div>
+        <div className="item">
+          <img src="/images/teacher.png" alt="Teacher Image" />
+          <div className="text">50+ Experienced Mentor</div>
+        </div>
+      </div>
 
-
-      {/* Features Section */}
       <Card />
-
-      {/* Plan Section - Positioned Above Review Section */}
       <Plan />
-
-      {/* Review Section */}
       <ReviewSection />
-
-      {/* Mentors Section */}
       <Mentor />
-
-      {/* Footer */}
       <Footer />
     </div>
   );

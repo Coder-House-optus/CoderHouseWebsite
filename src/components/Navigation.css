@@ -122,7 +122,7 @@ body, .set-font {
   margin-right: 10px; /* Adds space from the right edge */
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
   .mobile-menu-toggle {
     display: block;
   }
