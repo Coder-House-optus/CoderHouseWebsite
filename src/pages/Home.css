@@ -29,6 +29,7 @@ html {
   background-size: cover;
   background-position: center;
   padding: 3.125rem 1.25rem 9.375rem;
+  margin-top:5%;
   min-height: 60vh;
   width: 100%;
   flex-wrap: wrap;
@@ -119,7 +120,7 @@ html {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  transform: translateX(-8rem);
+  transform: translateX(-10rem);
 }
 
 .item {

@@ -32,17 +32,18 @@ body {
 .eachdiv {
   padding: 1rem 2rem;
   border-radius: 0.8rem;
-  box-shadow: 5px 5px 20px #6d6b6b6b;
   color: white;
   height: 100%; /* Added height */
   display: flex; /* Added flex */
   flex-direction: column; /* Added flex-direction */
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 0 20px rgba(32, 30, 31, 0.7), /* Outer pink glow */
+                0 0 30px rgba(255, 255, 255, 0.5);
 }
 
 .eachdiv:hover {
-  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5), 
-              0 0 30px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7), /* Outer pink glow */
+                0 0 30px rgba(0, 0, 0, 0.5);
   transform: scale(1.05);
 }
 

@@ -13,7 +13,12 @@ body, .set-font {
   padding: 10px 20px;
   height: 80px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - 20px); /* Adjust to prevent overflow */
+  z-index: 1000;
+  margin-right: auto; /* Prevent overlapping at the right end */
 }
 
 .logo img {
@@ -114,6 +119,7 @@ body, .set-font {
   border: none;
   cursor: pointer;
   padding: 10px;
+  margin-right: 10px; /* Adds space from the right edge */
 }
 
 @media screen and (max-width: 1200px) {
