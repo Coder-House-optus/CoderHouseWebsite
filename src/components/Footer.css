@@ -127,6 +127,10 @@
 
 .footer-logo img {
   width: 100px;
+  height: 80px;
+}
+.optus{
+  height:90px;
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {

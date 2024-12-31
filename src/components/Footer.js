@@ -24,8 +24,8 @@ const Footer = () => {
         {/* Footer Links */}
         <div className="footer-links">
           <ul>
-            <li><a href="#contact">Contact Us</a></li>
-            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="mailto:coderhouseoptus@gmail.com">Contact Us</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
             <li><a href="/Terms&Conditions">Terms & Condition</a></li>
           </ul>
         </div>
@@ -51,6 +51,7 @@ const Footer = () => {
       {/* Footer Logo */}
       <div className="footer-logo">
         <img src="/images/logo1.png" alt="Coder House Logo" />
+        <img src="/images/optus.png" alt="Optus Logo"/>
       </div>
     </footer>
   );

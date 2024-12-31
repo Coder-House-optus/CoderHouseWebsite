@@ -34,6 +34,7 @@ import English from './Programs/english';
 import CriticalThinking from './Programs/CriticalThinking';
 import GDPersonalInterview from './Programs/gd-personal-interview';
 import TermsAndConditions from './pages/TermsAndConditions.js';
+import PrivacyPolicy from './pages/PrivacyPolicy.js';
 
 import './App.css';
 import ResumeBuilding from './pages/ResumeBuilding';
@@ -59,7 +60,7 @@ function App() {
           {/* <Route path="/crt-offline-batch" element={<CrtOfflineBatch />} /> */}
           <Route path="/coders-sheet" element={<CodersSheet />} />
           <Route path="/mentorship-module" element={<MentorshipModule />} />
-
+          <Route path="/privacy" element={<PrivacyPolicy/>}/>
           {/* Newly Added Routes */}
           <Route path="/marathon-classes" element={<MarathonClasses />} />
           <Route path="/internship" element={<Internship />} />
