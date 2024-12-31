@@ -1,109 +1,137 @@
-/* General Styles for Achievers Section */
+.main-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
 .achiever-section {
-  max-width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 20px;
+  padding-top: 60px; /* Add space below navbar */
+}
+
+.achiever-header {
   text-align: center;
+  margin-bottom: 10px; /* Reduced space between header and company sections */
+  position: relative;
 }
 
-.achiever-header .our-achievers-img {
-  max-width: 300px; /* Set an appropriate size for the achiever image */
+.our-achievers-img {
+  max-width: 300px;
   height: auto;
-  display: block;
-  margin: 0 auto;
+  margin-bottom: 20px; /* Space between image and first company section */
 }
 
-.company-logo {
-  max-width: 120px;
-  height: auto;
-  margin: 10px;
-  display: inline-block;
+.company-section {
+  margin-bottom: 30px;
 }
 
-.achiever-slider {
+.company-title {
+  text-align: center;
+  color: #333;
+  margin: 10px 0 20px 0; /* Adjusted margins */
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.achievers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.achiever-card {
+  width: 200px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.achiever-content {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 10px;
-}
-
-.achiever-card {
-  flex: 0 0 auto;
-  width: 220px; /* Set a balanced size for other images */
-  text-align: center;
-  scroll-snap-align: start;
+.achiever-card:hover {
+  transform: translateY(-5px);
 }
 
 .achiever-photo {
   width: 150px;
   height: 150px;
   border-radius: 30%;
-  margin: 0 auto 10px;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
 
 .achiever-name {
   font-size: 1rem;
   color: #333;
+  margin: 10px 0;
+  text-align: center;
 }
 
-.slider-nav {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.nav-arrow {
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #005bb5;
+.card-company-logo {
+  width: 60px;
+  height: auto;
+  margin-top: auto;
 }
 
 /* Responsive Styles */
-
-/* For screens up to 1024px */
 @media screen and (max-width: 1024px) {
-  .achiever-header .our-achievers-img {
+  .achiever-section {
+    padding: 20px;
+    padding-top: 50px;
+  }
+
+  .our-achievers-img {
     max-width: 250px;
+    margin-bottom: 15px;
   }
 
-  .company-logo {
-    max-width: 100px;
-  }
-
-  .achiever-card {
-    width: 200px;
-  }
-
-  .achiever-photo {
-    width: 150px;
-    height: 150px;
-  }
-
-  .achiever-name {
-    font-size: 0.9rem;
-  }
-}
-
-/* For screens up to 768px */
-@media screen and (max-width: 768px) {
-  .achiever-header .our-achievers-img {
-    max-width: 200px;
-  }
-
-  .company-logo {
-    max-width: 80px;
+  .achievers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
   }
 
   .achiever-card {
     width: 180px;
+  }
+
+  .achiever-photo {
+    width: 130px;
+    height: 130px;
+  }
+
+  .card-company-logo {
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .achiever-section {
+    padding-top: 40px;
+  }
+
+  .our-achievers-img {
+    max-width: 220px;
+    margin-bottom: 12px;
+  }
+
+  .company-title {
+    font-size: 22px;
+    margin: 8px 0 15px 0;
+  }
+
+  .achievers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+  }
+
+  .achiever-card {
+    width: 160px;
   }
 
   .achiever-photo {
@@ -112,26 +140,37 @@
   }
 
   .achiever-name {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 
-  .nav-arrow {
-    font-size: 1.25rem;
+  .card-company-logo {
+    width: 45px;
   }
 }
 
-/* For screens up to 480px */
 @media screen and (max-width: 480px) {
-  .achiever-header .our-achievers-img {
-    max-width: 150px; /* Reduce the achiever.png size for smaller screens */
+  .achiever-section {
+    padding-top: 20px;
   }
 
-  .company-logo {
-    max-width: 60px;
+  .our-achievers-img {
+    max-width: 180px;
+    margin-bottom: 10px;
+  }
+
+  .company-title {
+    font-size: 20px;
+    margin: 5px 0 12px 0;
+  }
+
+  .achievers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
   }
 
   .achiever-card {
     width: 140px;
+    padding: 10px;
   }
 
   .achiever-photo {
@@ -143,11 +182,7 @@
     font-size: 0.8rem;
   }
 
-  .slider-nav {
-    gap: 5px;
-  }
-
-  .nav-arrow {
-    font-size: 1rem;
+  .card-company-logo {
+    width: 40px;
   }
 }

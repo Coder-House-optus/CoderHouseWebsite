@@ -33,12 +33,12 @@
   font-size: 2.5rem;
   color: #222; /* Darker text color */
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 3%;
   opacity: 1;
 }
 
 .section-title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #333; /* Increased contrast */
   margin: auto 20px;
   text-align: left;
@@ -65,7 +65,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
-  max-width: 800px;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -75,6 +75,7 @@
   align-items: center;
   text-align: center;
   z-index: 1;
+  padding:2%;
 }
 
 .highlight-circle1,
@@ -102,7 +103,9 @@
   transform: translate(-50%, -50%);
   z-index: -1; /* Moved behind the text content */
 }
-
+.highlight-description{
+  margin-top: 0;
+}
 .vertical-line {
   background-color: #88C057; /* Slightly darker line */
   width: 4px;
@@ -128,7 +131,7 @@
   }
 
   .section-title {
-    font-size: 1.4rem;
+    font-size: 2rem;
     text-align: center;
   }
 
@@ -146,10 +149,15 @@
   }
 
   .section-title {
-    font-size: 1.3rem;
+    font-size: 1.75rem;
     text-align: center;
   }
-
+  .highlight-title{
+    font-size: 1.5rem;
+  }
+  .highlight-description{
+    font-size: 1.2rem;
+  }
   .highlights-grid {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
@@ -162,6 +170,15 @@
     width: 70px;
     height: 70px;
     font-size: 1.5rem;
+  }
+}
+@media screen and (min-width:781px) and (max-width:1024px)
+{
+  .highlight-description{
+    font-size: 1.5rem;
+  }
+  .highlight-title{
+    font-size: 1.75rem;
   }
 }
 
@@ -177,7 +194,7 @@
   }
 
   .section-title {
-    font-size: 1.2rem;
+    font-size: 2.25rem;
     text-align: center;
   }
 

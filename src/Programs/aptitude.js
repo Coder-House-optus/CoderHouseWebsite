@@ -89,3 +89,4 @@ const Aptitude = () => {
 };
 
 export default Aptitude;
+

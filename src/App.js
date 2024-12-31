@@ -32,8 +32,10 @@ import MachineLearning from './Programs/MachineLearning';
 import Aptitude from './Programs/aptitude';
 import Reasoning from './Programs/reasoning';
 import English from './Programs/english';
-import PersonalityDevelopment from './Programs/personality-development';
+import CriticalThinking from './Programs/CriticalThinking';
 import GDPersonalInterview from './Programs/gd-personal-interview';
+import TermsAndConditions from './pages/TermsAndConditions.js';
+import PrivacyPolicy from './pages/PrivacyPolicy.js';
 
 import './App.css';
 import ResumeBuilding from './pages/ResumeBuilding';
@@ -51,7 +53,7 @@ function App() {
           <Route path="/Achievers" element={<Achievers/>} />
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/Gform" element={<Gform />} /> {/* Route to Gform */}
-
+          <Route path="/Terms&Conditions" element={<TermsAndConditions/>} />
           
           <Route path="/collegePrograms" element={<CollegeProgram />} />
           <Route path="/CampusPrograms" element={<CampusProgram />} />
@@ -59,7 +61,7 @@ function App() {
           {/* <Route path="/crt-offline-batch" element={<CrtOfflineBatch />} /> */}
           <Route path="/coders-sheet" element={<CodersSheet />} />
           <Route path="/mentorship-module" element={<MentorshipModule />} />
-
+          <Route path="/privacy" element={<PrivacyPolicy/>}/>
           {/* Newly Added Routes */}
           <Route path="/marathon-classes" element={<MarathonClasses />} />
           <Route path="/internship" element={<Internship />} />
@@ -82,7 +84,7 @@ function App() {
           <Route path="/programs/aptitude" element={<Aptitude />} />
           <Route path="/programs/reasoning" element={<Reasoning />} />
           <Route path="/programs/english" element={<English />} />
-          <Route path="/programs/personality-development" element={<PersonalityDevelopment />} />
+          <Route path="/programs/CriticalThinking" element={<CriticalThinking />} />
           <Route path="/programs/gd-personal-interview" element={<GDPersonalInterview />} />
           
 

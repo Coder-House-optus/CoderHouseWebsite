@@ -1,7 +1,10 @@
 .review-section {
     text-align: center;
     padding: 10px 0;
+<<<<<<< HEAD
     background-image: url('/public/images/Review.png');
+=======
+>>>>>>> origin/main
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -26,7 +29,11 @@
     width: 100%;
     height: 100%;
 <<<<<<< HEAD
+<<<<<<< HEAD
     z-index: -1; /* Puts the overlay behind the content */
+=======
+    z-index: -1;
+>>>>>>> origin/main
 }
 
 .review-title {
@@ -35,6 +42,7 @@
 }
 
 .highlight {
+<<<<<<< HEAD
     color: #A8D85D; /* You can adjust the color for the highlight */
 =======
     z-index: -1;
@@ -52,6 +60,47 @@
    }
    
    .review-card {
+=======
+    color: #A8D85D;
+    font-weight: bold;
+}
+
+.review-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.review-arrow {
+    background: none;
+    border: none;
+    color: #FF7895;
+    cursor: pointer;
+    padding: 0.5rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: color 0.3s ease;
+    z-index: 2;
+}
+
+.review-arrow:hover {
+    color: #A8D85D;
+}
+
+.review-arrow.prev {
+    left: -50px;
+}
+
+.review-arrow.next {
+    right: -50px;
+}
+
+.review-card {
+>>>>>>> origin/main
     background-color: #fff;
     border: 2px solid #FF7895;
     border-radius: 10px;
@@ -62,15 +111,20 @@
     position: relative;
 <<<<<<< HEAD
     box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+<<<<<<< HEAD
     overflow: hidden; /* Ensures that overflowing content is hidden */
 =======
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     overflow: hidden;
 >>>>>>> main
+=======
+    overflow: hidden;
+>>>>>>> origin/main
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: box-shadow 0.3s ease;
+<<<<<<< HEAD
    }
    
    .review-card:hover {
@@ -79,6 +133,16 @@
    }
    
    .quote-icon {
+=======
+}
+
+.review-card:hover {
+    box-shadow: 0 0 20px rgba(255, 120, 149, 0.7),
+                0 0 30px rgba(255, 120, 149, 0.5);
+}
+
+.quote-icon {
+>>>>>>> origin/main
     position: absolute;
     top: 20px;
     left: 20px;
@@ -92,16 +156,24 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     font-family: 'Playfair Display', serif;
     z-index: 2;
+<<<<<<< HEAD
    }
    
    .double-quote {
     font-size: 3.75rem; /* 6rem * 0.625 */
+=======
+}
+
+.double-quote {
+    font-size: 6rem;
+>>>>>>> origin/main
     color: #fff;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2),
                  0 0 5px rgba(255, 255, 255, 0.7);
     line-height: 1;
     margin-top: 5px;
     margin-left: 2px;
+<<<<<<< HEAD
    }
    
    .stars {
@@ -119,6 +191,16 @@
    }
    
    .review-author {
+=======
+}
+
+.stars {
+    color: #f1c40f;
+    margin-bottom: 10px;
+}
+
+.review-author {
+>>>>>>> origin/main
     font-weight: bold;
     font-size: 1.1875rem; /* 1.9rem * 0.625 */
     margin-bottom: 10px;
@@ -137,6 +219,7 @@
     color: #555;
     margin-top: 10px;
     overflow: auto;
+<<<<<<< HEAD
    }
    
    .review-dots {
@@ -171,9 +254,18 @@
       margin-top: 31.25px; /* 50px * 0.625 */
       padding: 10px;
 >>>>>>> main
+=======
+}
+
+@media screen and (max-width: 480px) {
+    .review-section {
+        margin-top: 30px;
+        padding: .1px;
+>>>>>>> origin/main
     }
     
     .review-title {
+<<<<<<< HEAD
 <<<<<<< HEAD
         font-size: 2.5rem; /* Adjusted for better fit */
         margin-bottom: 30px; /* Reduced spacing */
@@ -237,64 +329,99 @@
       width: 8px;
       height: 8px;
       margin: 0 4px;
-    }
-<<<<<<< HEAD
-}
-/* Responsive adjustments for screens between 481px and 768px */
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    .review-section {
-        margin-top: 70px; /* Slightly reduced margin */
-        padding: 10px 20px; /* Added side padding */
+=======
+        font-size: 2.5rem;
+        margin-bottom: 30px;
     }
 
-    .review-title {
-        font-size: 2.5rem; /* Adjusted size to fit the screen */
-        margin-bottom: 70px; /* Slightly reduced spacing */
+    .review-container {
+        width: 90%;
     }
 
     .review-card {
-        width: 80%; /* Make the card width relative for better fit */
-        height: auto; /* Allow dynamic height */
-        padding: 30px; /* Adjusted padding */
-        margin: 20px auto; /* Add spacing between cards */
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .review-arrow.prev {
+        left: -25px;
+    }
+
+    .review-arrow.next {
+        right: -25px;
     }
 
     .quote-icon {
-        top: 15px;
-        left: 15px;
-        width: 90px; /* Scaled appropriately for medium screens */
+        width: 80px;
+        height: 80px;
+    }
+
+    .double-quote {
+        font-size: 5rem;
+    }
+
+    .review-author {
+        font-size: 1.2rem;
+    }
+
+    .review-text {
+        font-size: .875rem;
+>>>>>>> origin/main
+    }
+<<<<<<< HEAD
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .review-section {
+        margin-top: 70px;
+        padding: 10px 20px;
+    }
+
+    .review-title {
+        font-size: 2.5rem;
+        margin-bottom: 70px;
+    }
+
+    .review-container {
+        width: 95%;
+    }
+
+    .review-card {
+        width: 90%;
+        height: auto;
+        padding: 30px;
+    }
+
+    .review-arrow.prev {
+        left: -30px;
+    }
+
+    .review-arrow.next {
+        right: -30px;
+    }
+
+    .quote-icon {
+        width: 90px;
         height: 90px;
     }
 
     .double-quote {
-        font-size: 5.5rem; /* Adjusted size */
-    }
-
-    .stars {
-        font-size: 1rem; /* Slightly smaller font size */
-        margin-bottom: 8px;
+        font-size: 5.5rem;
     }
 
     .review-author {
-        font-size: 1.4rem; /* Adjusted for medium screens */
+        font-size: 1.4rem;
     }
 
     .review-text {
-        font-size: 0.95rem; /* Slightly reduced font size */
-        margin-top: 8px;
+        font-size: 0.95rem;
     }
-
-    .review-dots {
-        margin-top: 18px;
-    }
-
-    .dot,
-    .active-dot {
-        width: 9px;
-        height: 9px; /* Adjusted for medium screens */
-        margin: 0 4.5px;
-    }
+<<<<<<< HEAD
 }
 =======
    }
 >>>>>>> main
+=======
+}
+>>>>>>> origin/main
