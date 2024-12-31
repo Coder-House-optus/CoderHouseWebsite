@@ -10,7 +10,7 @@ body {
 .outerdiv {
   width: 100%;
   min-height: 100vh;
-  background: #ffffff;
+  background: linear-gradient(90deg, #C6E894, #ffffff, #99C05F);
   display: flex;
   align-items: center;
   justify-content: center;

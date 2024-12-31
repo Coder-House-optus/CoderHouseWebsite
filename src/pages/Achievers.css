@@ -82,7 +82,7 @@
 /* Responsive Styles */
 @media screen and (max-width: 1024px) {
   .achiever-section {
-    padding: 15px;
+    padding: 20px;
     padding-top: 50px;
   }
 
@@ -150,7 +150,7 @@
 
 @media screen and (max-width: 480px) {
   .achiever-section {
-    padding-top: 30%;
+    padding-top: 20px;
   }
 
   .our-achievers-img {

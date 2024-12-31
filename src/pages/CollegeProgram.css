@@ -43,7 +43,7 @@ p {
 
 /* Cards Section */
 .cards-section {
-  margin: 50px 0 1%;
+  margin: 90px 0 1%;
   padding: 5% 20px;
 }
 
@@ -112,7 +112,7 @@ p {
 /* Moments Section */
 .moments-section {
   text-align: center;
-  /* background: linear-gradient(90deg, #C6E894, #ffffff, #99C05F); */
+  background: linear-gradient(90deg, #C6E894, #ffffff, #99C05F);
   padding: 0.75% 0px 1.5%;
   position: relative;
 }
@@ -233,7 +233,8 @@ p {
 /* Testimonial Section */
 .testimonial-section {
   padding: 50px;
-  background-color: #ffffff;
+  
+  background: linear-gradient(90deg, #C6E894, #ffffff, #99C05F);
 }
 
 .headname {
