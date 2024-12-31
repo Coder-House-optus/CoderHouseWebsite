@@ -38,6 +38,10 @@ const achievers = [
     ],
   },
 ];
+// const aboutus=[{
+//   designation:" Mentor",
+//   logo:
+// }];
 
 const Achievers = () => {
   return (

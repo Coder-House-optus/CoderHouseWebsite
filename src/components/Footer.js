@@ -51,7 +51,7 @@ const Footer = () => {
       {/* Footer Logo */}
       <div className="footer-logo">
         <img src="/images/logo1.png" alt="Coder House Logo" />
-        <img src="/images/optus.png" alt="Optus Logo"/>
+        <img src="/images/optus.png" className='optus' alt="Optus Logo"/>
       </div>
     </footer>
   );

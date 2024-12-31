@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import './Review.css';  // Assuming you're putting CSS in this file for the review section
 const reviews = [
     {
@@ -57,11 +58,18 @@ const ReviewSection = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
-        }, 3000); // Auto slide every 3 seconds
+        }, 3000);
         return () => clearInterval(interval);
     }, []);
 
-    // Custom star icon component
+    const handleNext = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
+    };
+
+    const handlePrev = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + reviews.length) % reviews.length);
+    };
+
     const Star = ({ filled }) => (
         <svg width="20" height="20" fill={filled ? "#FFD700" : "#ccc"}>
             <polygon points="10,1.5 12.3,7.9 19.5,7.9 13.5,12.2 15.8,18.6 10,14.8 4.2,18.6 6.5,12.2 0.5,7.9 7.7,7.9" />
@@ -80,23 +88,31 @@ const ReviewSection = () => {
                 <span>Our </span><span className="highlight">Reviews</span>
             </div>
 
-            <div className="review-card">
-                <div className="quote-icon">
-                    <span className="double-quote">&ldquo;</span>
-                </div>
-                
-                <div className="stars">
-                    {stars(reviews[currentIndex].rating)}
+            <div className="review-container">
+                <button className="review-arrow prev" onClick={handlePrev}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg>
+                </button>
+
+                <div className="review-card">
+                    <div className="quote-icon">
+                        <span className="double-quote">&ldquo;</span>
+                    </div>
+                    
+                    <div className="stars">
+                        {stars(reviews[currentIndex].rating)}
+                    </div>
+
+                    <h3 className="review-author">{reviews[currentIndex].name}</h3>
+                    <p className="review-text">{reviews[currentIndex].text}</p>
                 </div>
 
-                <h3 className="review-author">{reviews[currentIndex].name}</h3>
-                <p className="review-text">{reviews[currentIndex].text}</p>
-            </div>
-
-            <div className="review-dots">
-                {reviews.map((_, index) => (
-                    <span key={index} className={index === currentIndex ? 'active-dot' : 'dot'}></span>
-                ))}
+                <button className="review-arrow next" onClick={handleNext}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg>
+                </button>
             </div>
         </section>
     );
