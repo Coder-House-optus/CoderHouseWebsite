@@ -59,7 +59,7 @@ export default function Home() {
               <option value="ai">Artificial Intelligence</option>
             </select>
             <input type="url" name="LinkedIn" placeholder="LinkedIn Profile URL" className="input-field" />
-            <button type="submit" className="callback-btn">Request Callback</button>
+            <button type="submit" className="callback-btn">Get In Touch</button>
           </form>
         </div>
       </section>

@@ -5,6 +5,7 @@ const mentorImages = [
   "/images/Our Mentors/Abhay singh.png",
   "/images/Our Mentors/Akash tiwari.png",
   "/images/Our Mentors/Avinash JHA.png",
+  //"/images/Our Mentors/Hiya.png",
   "/images/Our Mentors/Divyanshi singh.png",
   "/images/Our Mentors/Enoch S SAM.png",
   "/images/Our Mentors/Piyush.png",
@@ -37,9 +38,16 @@ const Mentor = () => {
   return (
     <section className="mentor-section">
       {/* Title */}
+<<<<<<< HEAD
       <h2 className="section-title" style={{ fontSize: 'clamp(1.7rem, 3.3vw, 5rem)' }}>
           Our <span className="highlight">Mentors</span>
       </h2>
+=======
+      <h2 className="section-title" style={{ fontSize: 'clamp(2.5rem, 3vw, 6rem)' }}>
+          Our <span className="highlight">Mentors</span>
+      </h2>
+
+>>>>>>> main
 
       {/* Container for Image and Animated Cards */}
       <div className="mentor-container">
