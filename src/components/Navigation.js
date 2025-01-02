@@ -52,7 +52,7 @@ const Navigation = () => {
         </li>
 
         <li><a href="/features">Features</a></li>
-        <li><a href="/Notes">Roadmap&Offerings</a></li>
+        <li><a href="/Notes">Roadmap</a></li>
         <li><a href="/Achievers">Optivators</a></li>
       </ul>
     </nav>
