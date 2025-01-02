@@ -164,6 +164,8 @@ p {
   top: 0;
   left: 0;
   z-index: 1;
+  border: white;
+  border-width:100px;
   box-shadow: 0 0 20px rgba(74, 68, 69, 0.7), /* Outer pink glow */
                 0 0 30px rgba(213, 202, 202, 0.5);
 }

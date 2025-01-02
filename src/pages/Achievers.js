@@ -43,41 +43,57 @@ const achievers = [
 //   logo:
 // }];
 
+const ambassadors = [
+  { name: "Ambassador 1", photo: "../images/placeholder.jpg", company: "Company A" },
+  { name: "Ambassador 2", photo: "../images/placeholder.jpg", company: "Company B" },
+  { name: "Ambassador 3", photo: "../images/placeholder.jpg", company: "Company C" },
+  { name: "Ambassador 4", photo: "../images/placeholder.jpg", company: "Company D" },
+  { name: "Ambassador 5", photo: "../images/placeholder.jpg", company: "Company E" },
+  { name: "Ambassador 6", photo: "../images/placeholder.jpg", company: "Company F" },
+  { name: "Ambassador 7", photo: "../images/placeholder.jpg", company: "Company G" },
+  { name: "Ambassador 8", photo: "../images/placeholder.jpg", company: "Company H" },
+];
+
 const Achievers = () => {
+  const allAchievers = achievers.flatMap(company => 
+    company.people.map(person => ({
+      ...person,
+      companyLogo: company.logo,
+      company: company.company
+    }))
+  );
+
   return (
     <div className="main-container">
       <Navigation />
-      <section className="achiever-section">
-        <div className="achiever-header">
-          <img
-            src="../images/Our Achievers.png"
-            alt="Our Achievers"
-            className="our-achievers-img"
-          />
+      <section className="content-section">
+        <div className="section-header left-align">
+          <h2 className="gradient-text green-blue">Our Ambassadors</h2>
         </div>
         
-        {achievers.map((companyData) => (
-          <div key={companyData.company} className="company-section">
-            <h2 className="company-title">{companyData.company}</h2>
-            <div className="achievers-grid">
-              {companyData.people.map((person) => (
-                <div key={person.name} className="achiever-card">
-                  <img
-                    src={person.photo}
-                    alt={person.name}
-                    className="achiever-photo"
-                  />
-                  <p className="achiever-name">{person.name}</p>
-                  <img
-                    src={companyData.logo}
-                    alt={`${companyData.company} Logo`}
-                    className="card-company-logo"
-                  />
-                </div>
-              ))}
+        <div className="ambassadors-grid">
+          {ambassadors.map((person, index) => (
+            <div key={index} className="achiever-card">
+              <img src={person.photo} alt={person.name} className="achiever-photo" />
+              <p className="achiever-name">{person.name}</p>
+              <p className="company-name">{person.company}</p>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
+        <div className="section-header right-align">
+          <h2 className="gradient-text blue-green">Our Achievers</h2>
+        </div>
+        
+        <div className="achievers-grid">
+          {allAchievers.map((person, index) => (
+            <div key={index} className="placed-card">
+              <img src={person.photo} alt={person.name} className="achiever-photo" />
+              <p className="achiever-name">{person.name}</p>
+              <img src={person.companyLogo} alt={person.company} className="card-company-logo" />
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   );
