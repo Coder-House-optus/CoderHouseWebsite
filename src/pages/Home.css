@@ -136,7 +136,7 @@ html {
   width: 90%;
   max-width: 67rem;
   min-height: 6rem; /* Changed from fixed height to min-height */
-  margin: -3.5rem 0 0 auto;
+  margin: -4rem 0 0 auto;
   padding: 2rem;
   background-color: white;
   border-radius: 0.875rem;
