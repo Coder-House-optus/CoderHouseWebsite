@@ -6,51 +6,19 @@
   .cardsContainer {
     display: flex;
     justify-content: center;
-<<<<<<< HEAD
-    gap: .2rem;
-    margin-top: 2.5rem;
-}
 
-.titleContainer {
-=======
     gap: 0.0625rem; /* Converted from 0.1rem */
     margin-top: 2.5rem; /* Converted from 4rem */
   }
   
   .titleContainer {
->>>>>>> main
+
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     margin: 0 auto;
-<<<<<<< HEAD
-    padding: 0.625rem;
-    margin-top: 3.75rem;
-}
 
-.subtitle {
-    margin: 0;
-    font-size: 2.5rem;
-    color: #000000;
-}
-
-.mainTitle {
-    margin: 0.625rem 0;
-    font-size: 2.5rem;
-    color: #000000;
-}
-
-.card {
-    width: 18.75rem;
-    height: 21.875rem;
-    border-radius: 0.625rem;
-    color: rgb(255, 255, 255);
-    padding: 3.75rem;
-    display: flex;
-    flex-direction: column;
-    font-size: 1rem;
-=======
     padding: 0.625rem; /* Converted from 1rem */
     margin-top: 3.75rem; /* Converted from 6rem */
   }
@@ -78,7 +46,7 @@
     display: flex;
     flex-direction: column;
     font-size: 0.875rem; /* Converted from 1.4rem */
->>>>>>> main
+
     background-size: cover;
     background-position: center;
     transition: transform 0.3s, background-image 0.3s;
@@ -86,27 +54,7 @@
   
   .card:hover {
     transform: scale(1.10);
-<<<<<<< HEAD
-}
 
-.title {
-    margin-top: 7.5rem;
-    font-size: 1rem;
-    color: rgb(67, 67, 67);
-    transition: color 0.3s;
-}
-
-.features {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.features li {
-    margin: 0;
-    position: relative;
-    padding-left: 1.25rem;
-=======
   }
   
   .title {
@@ -134,7 +82,7 @@
     margin: 0.3125rem 0; /* Converted from 0.5rem */
     position: relative;
     padding-left: 1.25rem; /* Converted from 2rem */
->>>>>>> main
+
     color: rgb(58, 58, 58);
     transition: color 0.3s;
     font-size: 0.875rem; /* Converted from 1.4rem */
@@ -149,143 +97,7 @@
     color: #A8D85D;
     position: absolute;
     left: 0;
-<<<<<<< HEAD
-}
 
-.card1 {
-    background-image: url('/public/images/features_cards/green_infrastructure_card.png');
-}
-
-.card1:hover {
-    background-image: url('/public/images/features_cards/hover_infrastructure_card.png');
-}
-
-.card2 {
-    background-image: url('/public/images/features_cards/green_mentor_card.png');
-}
-
-.card2:hover {
-    background-image: url('/public/images/features_cards/hover_mentor_card.png');
-}
-
-.card3 {
-    background-image: url('/public/images/features_cards/green_growth_card.png');
-}
-
-.card3:hover {
-    background-image: url('/public/images/features_cards/hover_growth_card.png');
-}
-
-/* Mobile devices (300px - 480px) */
-@media screen and (max-width: 480px) {
-    .cardsContainer {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        margin-top: 1.5rem;
-    }
-
-    .card {
-        width: 90%;
-        max-width: 18.75rem;
-        height: 18rem;
-        padding: 2rem;
-    }
-
-    .titleContainer {
-        margin-top: 2rem;
-        padding: 0.5rem;
-    }
-
-    .subtitle,
-    .mainTitle {
-        font-size: 1.75rem;
-    }
-
-    .title {
-        margin-top: 5rem;
-    }
-
-    .card:hover {
-        transform: scale(1.05);
-    }
-}
-
-/* Tablet devices (481px - 679px) */
-@media screen and (min-width: 481px) and (max-width: 679px) {
-    .cardsContainer {
-        flex-wrap: wrap;
-        gap: 1rem;
-        justify-content: center;
-        margin-top: 2rem;
-    }
-
-    .card {
-        width: 45%;
-        min-width: 15rem;
-        height: 20rem;
-        padding: 2.5rem;
-    }
-
-    .subtitle,
-    .mainTitle {
-        font-size: 2rem;
-    }
-
-    .title {
-        margin-top: 6rem;
-    }
-}
-
-/* Special handling for 680px - 800px */
-@media screen and (min-width: 680px) and (max-width: 800px) {
-    .cardsContainer {
-        flex-wrap: wrap;
-        gap: .2rem;
-        justify-content: center;
-    }
-
-    .card {
-        width: 16rem;
-        height: 20rem;
-        padding: 2rem;
-    }
-
-    .title {
-        margin-top: 6rem;
-    }
-}
-
-@media screen and (min-width: 801px) and (max-width: 1200px) {
-    .cardsContainer {
-        gap: .2rem;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .card {
-        width: 16rem;
-        height: 20rem;
-        padding: 2.5rem;
-    }
-
-    .title {
-        margin-top: 6rem;
-    }
-}
-/* Additional optimization for very large screens */
-/* @media screen and (min-width: 1440px) {
-    .card {
-        width: 21.875rem;
-        height: 25rem;
-    }
-
-    .subtitle,
-    .mainTitle {
-        font-size: 3rem;
-    }
-} */
-=======
   }
   
   .card1 { background-image: url('/public/images/features_cards/green_infrastructure_card.png'); }
@@ -438,4 +250,4 @@
       font-size: 1.5rem; /* Converted from 2.4rem */
     }
   }
->>>>>>> main
+

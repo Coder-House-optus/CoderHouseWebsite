@@ -97,11 +97,9 @@ export default function Home() {
             )}
 
             <input type="url" name="LinkedIn" placeholder="LinkedIn Profile URL" className="input-field" />
-<<<<<<< HEAD
-            <button type="submit" className="callback-btn">Get In Touch</button>
-=======
+
             <button type="submit" className="callback-btn">Get in Touch</button>
->>>>>>> origin/main
+
           </form>
         </div>
       </section>
