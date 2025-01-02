@@ -23,6 +23,7 @@ const reviews = [
         rating: 5
     },
     {
+
         name: "Muzzamil Khan",
         text:  "Coder House is a great place to begin. The offline classes are highly engaging, and the mentors are always available to clarify your doubts. I loved workshops and hackathons in particular; they provided hands-on experience and gave a boost to my confidence regarding problem-solving. Guidance received from experienced mentors helped me crack my first job interview with ease!",
         rating: 5
@@ -30,16 +31,20 @@ const reviews = [
     {
         name: "Shivang Tiwari",
         text: "Initially, I was skeptical about the whole offline training idea, but Coder House totally flipped the script for me. Topics that were thought to be super tough became almost easy due to the expertise of our mentors from IITs and NITs. The collaborative learning environment always kept me motivated and focused. Today, I am more than ever prepared to face real-world challenges in the tech industry.",
+
+
         rating: 5
     },
     {
         name: "Ayushi Jain",
-        text: "Best Place for technical class as well as Placement. All mentors and administration team are awesome. I loved their planning and mindset towards students.",
+        text: "Initially, I was skeptical about the whole offline training idea, but Coder House totally flipped the script for me. Topics that were thought to be super tough became almost easy due to the expertise of our mentors from IITs and NITs. The collaborative learning environment always kept me motivated and focused. Today, I am more than ever prepared to face real-world challenges in the tech industry.",
         rating: 5
     },
     {
+
         name: "Seema Sahu",
         text: "Joining Coder House was probably the best decision I ever made in college. All of this, along with mentors who care and an environment that fosters growth, makes one confident about taking that leap to pursue the dream role. Their emphasis on real-world applications, plus excellent infrastructure, makes everything quite seamless. Thanks, Coder House team!",
+
         rating: 5
     },
     {

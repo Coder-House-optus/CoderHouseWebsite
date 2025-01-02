@@ -97,7 +97,9 @@ export default function Home() {
             )}
 
             <input type="url" name="LinkedIn" placeholder="LinkedIn Profile URL" className="input-field" />
+
             <button type="submit" className="callback-btn">Get in Touch</button>
+
           </form>
         </div>
       </section>

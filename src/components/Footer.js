@@ -37,10 +37,10 @@ const Footer = () => {
   <a href="https://www.facebook.com/p/Optus-edtech-100083838727322/" className="facebook" target="_blank" rel="noreferrer">
     <i className="fab fa-facebook-f"></i>
   </a>
-  <a href="https://instagram.com" className="instagram" target="_blank" rel="noreferrer">
+  <a href="https://www.instagram.com/coder___house/" className="instagram" target="_blank" rel="noreferrer">
     <i className="fab fa-instagram"></i>
   </a>
-  <a href="https://linkedin.com" className="linkedin" target="_blank" rel="noreferrer">
+  <a href="https://www.linkedin.com/company/optus-ed-tech-solutions/" className="linkedin" target="_blank" rel="noreferrer">
     <i className="fab fa-linkedin-in"></i>
   </a>
 </div>

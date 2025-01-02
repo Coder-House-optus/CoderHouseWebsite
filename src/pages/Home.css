@@ -4,6 +4,32 @@ html {
   box-sizing: border-box;
 }
 
+/* Responsive font sizing */
+@media (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 998px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+/* Home and Text Styles */
 .home {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
@@ -29,7 +55,6 @@ html {
   background-size: cover;
   background-position: center;
   padding: 3.125rem 1.25rem 9.375rem;
-  margin-top:90px;
   min-height: 60vh;
   width: 100%;
   flex-wrap: wrap;
@@ -56,18 +81,19 @@ html {
   color: #ffffff;
   border-radius: 1.875rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 1);
+  margin-top: 4rem;
 }
 
 .hero-heading {
   text-align: center;
   font-size: clamp(1.25rem, 3vw, 1.875rem);
-  margin-bottom: 1.4rem;  
-  margin-top: -0.1rem;  
+  margin-bottom: 1.4rem;  /* Increased from 1.25rem to move heading up */
+  margin-top: -0.1rem;  /* Added negative margin to move heading up */
 }
 
 /* Form Styles */
 .form {
-  width: 95%;
+  width: 100%;
   max-width: 25rem;
   padding: 0 1.25rem 3.75rem;
   margin: 0 auto;
@@ -110,7 +136,7 @@ html {
   width: 90%;
   max-width: 67rem;
   min-height: 6rem; /* Changed from fixed height to min-height */
-  margin: -2rem 0 0 auto;
+  margin: -3.5rem 0 0 auto;
   padding: 2rem;
   background-color: white;
   border-radius: 0.875rem;
@@ -120,7 +146,7 @@ html {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  transform: translateX(-10rem);
+  transform: translateX(-7.7rem);
 }
 
 .item {
@@ -160,7 +186,37 @@ html {
   margin: 3rem auto 0; /* Increased top margin to move button down */
   display: block; /* Added to help with centering */
 }
-
+/* Responsive adjustments for the updated form styles */
+@media screen and (max-width: 480px) {
+  .hero-right {
+    padding: 1.875rem 1.25rem;
+    width: 90%;
+    margin: 0.625rem auto;
+  }
+  
+  .hero-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .hero-right input[type="text"],
+  .hero-right input[type="email"],
+  .hero-right input[type="phone"],
+  .hero-right input[type="url"],
+  .hero-right select {
+    padding: 1rem 0.9375rem; /* Adjusted for mobile while maintaining increased height */
+    font-size: 0.9rem;
+    width: 95%;
+  }
+  
+  .callback-btn {
+    padding: 0.75rem 1.5625rem;
+    font-size: 1rem;
+    min-width: 11.25rem;
+    margin: 1.5rem auto 0; /* Maintaining increased top margin on mobile */
+  }
+}
+/* Keep all existing base styles and add/modify these responsive styles */
 
 /* Medium screens (481px-768px) */
 @media screen and (max-width: 768px) {
@@ -207,15 +263,14 @@ html {
   }
 
   .hero-left {
-    width: 65%;
-    margin: 0.1rem auto;
+    width: 95%;
+    margin: 0.5rem auto;
   }
 
   .hero-right {
-    min-width: 15rem; 
-     width: 85%; 
-    margin: 0.5rem auto; 
-    transform: translateX(-0.6rem);
+    min-width: auto;
+    width: 95%;
+    margin: 0.8rem auto;
     padding: 1rem;
   }
 
@@ -224,18 +279,18 @@ html {
   .hero-right input[type="phone"],
   .hero-right input[type="url"],
   .hero-right textarea {
-    width: 96%;
+    width: 92%;
     margin: 0.6rem auto;
   }
 
   .hero-right select {
-    width: 105%;
+    width: 100%;
     margin: 0.6rem auto;
   }
 
   .White {
     width: 90%;
-    transform: translateX(-0.5rem);
+    transform: translateX(-0.6rem);
     padding: 2rem;
     margin-top: -1rem;
   }
@@ -258,8 +313,8 @@ html {
 @media screen and (max-width: 400px) {
   .hero-right {
     width: 90%;
-    padding: 0.8rem;
-    transform: translateX(-0.6rem);
+    padding: .6rem;
+    margin: 0 auto;
   }
 
   .hero-right input[type="text"],
@@ -275,8 +330,8 @@ html {
   }
 
   .White {
-    width: 90%;
-    transform: translateX(-0.4rem);
+    width: 85%;
+    transform: translateX(-1.4rem);
     border-radius: 0.5rem;
   }
 
@@ -285,84 +340,3 @@ html {
   }
 }
 
-
-
-/* Large tablet/small desktop (768px-992px) */
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .hero {
-    padding: 2.5rem 1.5rem 2rem;
-    justify-content: space-between;
-  }
-
-  .hero-left {
-    margin-left: 3rem;
-    margin-top: 1.5rem;
-    width: 45%;
-  }
-
-  .hero-right {
-    min-width: 17rem;
-    max-width: 25rem;
-    margin: 1.5rem;
-    padding: 1.5rem;
-    transform: translateX(-0.7rem);
-   
-  }
-
-  .hero-right input[type="text"],
-  .hero-right input[type="email"],
-  .hero-right input[type="phone"],
-  .hero-right input[type="url"],
-  .hero-right textarea {
-    width: 80%;
-    padding: 1rem;
-    margin: 0.9rem;
-  }
-
-  .hero-right select {
-    width: 89%;
-    padding: 1rem;
-    margin: 0.9rem;
-  }
-
-  .callback-btn {
-    margin: 2.5rem auto 0;
-    font-size: 1.2rem;
-    width: 60%;
-  }
-
-  .White {
-    width: 92%;
-    transform: translateX(-.5rem);
-    padding: 1.75rem;
-    margin-top: -1.75rem;
-    gap: 1.25rem;
-  }
-
-  .item {
-    min-width: 220px;
-    padding: 0.45rem;
-  }
-
-  .item img {
-    width: 3.5rem;
-  }
-
-  .text {
-    font-size: 1.15rem;
-  }
-
-  .text-white {
-    font-size: 1.6rem;
-  }
-
-  .text-white2, .text-green {
-    font-size: clamp(2rem, 1.8vw, 0.9rem);
-  }
-
-  .hero-heading {
-    font-size: clamp(1.2rem, 2.5vw, 1.7rem);
-    margin-bottom: 1.3rem;
-    margin-top: -0.05rem;
-  }
-}
