@@ -104,7 +104,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="White">
+      <div className="White-hike">
         <div className="item">
           <img src="/images/arrow.png" alt="Arrow Image" />
           <div className="text">147% Average Hike</div>
