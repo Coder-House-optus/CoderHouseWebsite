@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Navigation.css'; // Importing the corresponding CSS
+import './Navigation.css';
 
 const Navigation = () => {
   const [isProgramsDropdownOpen, setProgramsDropdownOpen] = useState(false);
@@ -8,10 +8,12 @@ const Navigation = () => {
 
   const toggleProgramsDropdown = () => {
     setProgramsDropdownOpen(!isProgramsDropdownOpen);
+    setInfoDropdownOpen(false); // Close other dropdown
   };
 
   const toggleInfoDropdown = () => {
     setInfoDropdownOpen(!isInfoDropdownOpen);
+    setProgramsDropdownOpen(false); // Close other dropdown
   };
 
   const toggleMobileMenu = () => {
@@ -29,28 +31,24 @@ const Navigation = () => {
       <ul className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`}>
         <li><a href="/">Home</a></li>
 
-        <li className="dropdown">
+        <li className={`dropdown ${isProgramsDropdownOpen ? 'active' : ''}`}>
           <button className="dropdown-toggle set-font" onClick={toggleProgramsDropdown}>
             Programs
           </button>
-          {isProgramsDropdownOpen && (
-            <ul className="dropdown-content">
-              <li><a href="/CollegePrograms">College Programs</a></li>
-              <li><a href="/campusPrograms">Campus Programs</a></li>
-            </ul>
-          )}
+          <ul className="dropdown-content">
+            <li><a href="/CollegePrograms">College Programs</a></li>
+            <li><a href="/campusPrograms">Campus Programs</a></li>
+          </ul>
         </li>
 
-        <li className="dropdown">
+        <li className={`dropdown ${isInfoDropdownOpen ? 'active' : ''}`}>
           <button className="dropdown-toggle set-font" onClick={toggleInfoDropdown}>
             Information
           </button>
-          {isInfoDropdownOpen && (
-            <ul className="dropdown-content">
-              <li><a href="/AboutUs">About Us</a></li>
-              <li><a href="/Gform">Contact Us</a></li>
-            </ul>
-          )}
+          <ul className="dropdown-content">
+            <li><a href="/AboutUs">About Us</a></li>
+            <li><a href="/Gform">Contact Us</a></li>
+          </ul>
         </li>
 
         <li><a href="/features">Features</a></li>

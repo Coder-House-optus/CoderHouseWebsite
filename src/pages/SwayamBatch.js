@@ -17,14 +17,61 @@ const SwayamBatch = () => {
         Back to features
       </button>
       
-      <div className="header">
-        <h2>Swayam Batch</h2>
+      <div className="header1">
+      <h1 className="swayam1">Swayam Batch Details</h1>
+        <p className="description">
+          Swayam is a comprehensive self-paced learning program designed to empower students with access to recorded lectures and study materials for a variety of in-demand courses. 
+          This program is exclusively available to members of Coder House or those who are part of the Coder House community.
+        </p>
+        <p className="description">
+          With over 1250+ hours of content spanning 15+ courses, Swayam is designed to provide flexibility and convenience, allowing students to learn at their own pace while acquiring valuable skills in technology and development.
+        </p>
         <ul className="features5">
-          <li>Curated Content Available in the form of Recorded Videos.</li>
-          <li>Subscription to Coding Library.</li>
-          <li>2000+ Practice Questions.</li>
+          <li>
+            <strong>Self-Paced Learning </strong>: Access pre-recorded lectures anytime, anywhere, enabling a personalized learning experience.
+          </li>
+          <li>
+            <strong>Expert-Led Content</strong>: Courses taught by industry experts to ensure high-quality education.
+          </li>
+          <li>
+            <strong>Wide Course Selection</strong>: Covers diverse domains, including cloud computing, software development, data analysis, and more.
+          </li>
         </ul>
       </div>
+
+      {/* What We Offer Section */}
+<div className="what-we-offer">
+  <h3>What We Offer:</h3>
+  <div className="offer-section">
+    <h4>1. Extensive Learning Resources</h4>
+    <p className="offer-text">Over 1250+ hours of content across various courses.</p>
+    <p className="offer-text">Access to high-quality recorded lectures and downloadable study materials.</p>
+  </div>
+  <div className="offer-section">
+    <h4>2. Expert-Led Content</h4>
+    <p className="offer-text">Courses designed and delivered by industry leaders and experts.</p>
+    <p className="offer-text">Practical insights and strategies to help you excel in the real world.</p>
+  </div>
+  <div className="offer-section">
+    <h4>3. Diverse Course Selection</h4>
+    <p className="offer-text">Explore courses across multiple domains, including:</p>
+    <ul>
+      <li>Cloud Computing</li>
+      <li>Software Development</li>
+      <li>Data Analysis</li>
+      <li>Artificial Intelligence</li>
+      <li>Web Development</li>
+    </ul>
+  </div>
+  <div className="offer-section">
+    <h4>4. Exclusive Access</h4>
+    <p className="offer-text">Available only to Coder House members, ensuring a focused and committed learning environment.</p>
+    <p className="offer-text">Regular updates with new courses and materials to stay relevant in the ever-evolving tech landscape.</p>
+  </div>
+</div>
+
+
+      {/* Technologies Section */}
       <div className="technologies1">
         <h3>Learn Wide Range of Technologies like</h3>
         <div className="tech-grid">

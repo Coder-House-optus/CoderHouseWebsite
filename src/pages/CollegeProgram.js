@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import './CollegeProgram.css';
 import Footer from '../components/Footer';
-import HODReview from '../components/HODreview'; // Importing the HODReview component
+import HODReview from '../components/HODreview';
 
 const CollegeProgram = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -12,13 +12,13 @@ const CollegeProgram = () => {
   const moments = [
     {
       description: 'Our first batch of graduates in 2020 marked a milestone for Coder House, showcasing immense talent and dedication.',
-      img1: '/images/moments/moment1.jpg',
-      img2: '/images/moments/moment2.jpg',
+      img1: '../images/moments/moment1.jpg',
+      img2: '../images/moments/moment2.jpg',
     },
     {
       description: 'The 2022 hackathon saw incredible teamwork and creativity as students tackled real-world challenges with innovative solutions.',
-      img1: '/images/moments/moment3.jpg',
-      img2: '/images/moments/moment4.jpg',
+      img1: '../images/moments/moment5.jpg',
+      img2: '../images/moments/moment4.jpg',
     },
   ];
 
@@ -40,6 +40,24 @@ const CollegeProgram = () => {
       image: "/path/to/image3.jpg",
     },
   ];
+
+  // Auto-timer for moments carousel
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex === moments.length - 1 ? 0 : prevIndex + 1));
+    }, 5000); // 10 seconds
+
+    return () => clearInterval(timer);
+  }, [moments.length]);
+
+  // Auto-timer for testimonials carousel
+  useEffect(() => {
+    const testimonialTimer = setInterval(() => {
+      setActiveTestimonialIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
+    }, 5000); // 10 seconds
+
+    return () => clearInterval(testimonialTimer);
+  }, [testimonials.length]);
 
   // Handlers for moments navigation
   const handlePrev = () => {
@@ -108,8 +126,8 @@ const CollegeProgram = () => {
       <section className="associations-section">
         <h2>Our <span className="highlight">Associations</span></h2>
         <div className="logos-grid">
-          {['partner1.png', 'partner2.png', 'partner3.png', 'partner4.png'].map((logo, index) => (
-            <img key={index} src={`/images/logos/${logo}`} alt={`Partner ${index + 1}`} />
+          {['partner1.webp', 'partner2.png', 'partner3.png', 'partner4.jpg'].map((logo, index) => (
+            <img key={index} src={`../images/Association/${logo}`} alt={`Partner ${index + 1}`} />
           ))}
         </div>
       </section>
@@ -120,8 +138,6 @@ const CollegeProgram = () => {
         
         {/* Inserted HODReview Component */}
         <HODReview />
-
-        
       </section>
 
       <Footer />
