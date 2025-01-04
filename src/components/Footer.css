@@ -55,21 +55,13 @@
   font-size: 18px;
 }
 
-<<<<<<< HEAD
-.location-box .white-square {
-  background-color: #fff;
-  width: 350px;
-  height: 229px;
-  position: absolute;
-=======
+
 /* White Square Box */
 .location-box .white-square {
   background-color: #fff;
   width: 350px;
   height: 200px;
   position: absolute;
-
->>>>>>> main
   top: 30px;
   right: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
@@ -131,20 +123,11 @@
   transform: scale(1.1);
 }
 
-<<<<<<< HEAD
-.footer-logo {
-  margin-top: 10px;
-}
 
-=======
->>>>>>> main
+
 .footer-logo img {
   width: 100px;
 }
-
-<<<<<<< HEAD
-@media screen and (min-width: 480px) and (max-width: 768px) {
-=======
 /* Large Screens (1200px and up) */
 @media (min-width: 1200px) {
   .location-box {
@@ -171,7 +154,7 @@
 
 /* Medium Screens (768px to 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
->>>>>>> main
+
   .footer {
     height: auto;
     min-height: 440px;
@@ -213,17 +196,11 @@
     font-size: 17px;
   }
 
-  .location-box .white-square {
-<<<<<<< HEAD
-    width: 45%;
-    height: 180px;
-    right: 15px;
-  }
 
   .footer-links ul {
     padding: 15px;
     margin-top: 80px;
-=======
+
     width: 350px;
     height: 180px;
     right: 20px;
@@ -262,7 +239,7 @@
     height: 160px;
     right: 15px;
     top: 35px;
->>>>>>> main
+
   }
 
   .footer-links li {
@@ -274,20 +251,12 @@
   }
 }
 
-<<<<<<< HEAD
-@media screen and (min-width: 400px) and (max-width: 480px) {
-  .footer {
-    height: auto;
-    min-height: 600px;
-    padding: 15px 0;
-    position: relative;
-=======
 /* Mobile Screens (480px and below) */
 @media (max-width: 480px) {
   .footer {
     min-height: 500px;
     padding: 20px 10px;
->>>>>>> main
+
   }
 
   .footer-container {
@@ -298,65 +267,17 @@
   }
 
   .location-box {
-<<<<<<< HEAD
-    width: 92%;
-    position: relative;
-    top: -60px;
-    padding: 15px;
-    margin-bottom: 20px;
-=======
+
     width: 90%;
     max-width: 400px;
     top: -80px;
     padding: 15px;
->>>>>>> main
+
   }
 
   .location-box h3 {
     font-size: 18px;
-<<<<<<< HEAD
-    gap: 8px;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-  }
 
-  .location-box h3 i.fas.fa-map-marker-alt {
-    font-size: 24px;
-  }
-
-  .location-box p {
-    font-size: 14px;
-    margin-top: 10px;
-    padding-right: 0;
-  }
-
-  .location-box .white-square {
-    position: relative;
-    width: 100%;
-    height: 120px;
-    top: 10px;
-    right: 0;
-    margin: 15px 0;
-  }
-
-  .footer-links {
-    width: 100%;
-    margin-top: -40px;
-  }
-
-  .footer-links ul {
-    padding: 10px 0;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .footer-links li {
-    display: block;
-    margin: 5px 0;
-=======
     gap: 15px;
   }
 
@@ -387,7 +308,7 @@
 
   .footer-links li {
     margin: 5px;
->>>>>>> main
+
   }
 
   .footer-links a {
@@ -403,20 +324,17 @@
 
   .footer-social h3 {
     font-size: 16px;
-<<<<<<< HEAD
-    margin-bottom: 10px;
-=======
+
     padding: 5px 10px;
->>>>>>> main
+
   }
 
   .social-icons {
     gap: 12px;
-<<<<<<< HEAD
+
     flex-wrap: wrap;
     justify-content: center;
-=======
->>>>>>> main
+
   }
 
   .social-icons a {
@@ -426,13 +344,6 @@
   }
 
   .footer-logo img {
-<<<<<<< HEAD
-    width: 70px;
-  }
-}
-
-@media screen and (min-width: 350px) and (max-width: 399px) {
-=======
     width: 85px;
     margin-top: 20px;
     
@@ -441,45 +352,13 @@
 
 /* Extra Small Screens (380px and below) */
 @media (max-width: 380px) {
->>>>>>> main
+
   .footer {
     height: auto;
     min-height: 750px; /* Increased to accommodate all content */
     padding: 10px 5px;
   }
 
-<<<<<<< HEAD
-  .footer-container {
-    height: auto;
-    min-height: 600px; /* Increased to match footer */
-    padding: 0 5px;
-    gap: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  .location-box {
-    width: 95%; /* Reduced width to create side gaps */
-    padding: 12px 15px; /* Increased horizontal padding */
-    top: -50px;
-    margin: 0 auto 10px auto; /* Added horizontal auto margins */
-    position: relative;
-    left: 50%; /* Center positioning */
-    transform: translateX(-54%); /* Center positioning */
-    box-sizing: border-box; /* Ensure padding is included in width calculation */
-  }
-
-  .location-box h3 {
-    font-size: 16px;
-    gap: 6px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .location-box h3 i.fas.fa-map-marker-alt {
-    font-size: 20px;
-=======
   .location-box {
     padding: 12px;
     top: -60px;
@@ -493,7 +372,7 @@
   .location-box .white-square {
     width: 45%;
     right: 10px;
->>>>>>> main
+
   }
 
   .location-box p {
@@ -503,28 +382,12 @@
     padding-right: 20px;
   }
 
-<<<<<<< HEAD
-  .location-box .white-square {
-    position: relative;
-    width: 100%;
-    height: 100px;
-    top: 10px;
-    right: 0;
-    margin: 10px 0;
-  }
 
-  /* Fixed footer links styling */
-  .footer-links {
-    width: 100%;
-    margin-top: 1px; /* Adjusted margin */
-    position: relative;
-    display: block;
-=======
   .social-icons a {
     width: 32px;
     height: 32px;
     font-size: 1.1em;
->>>>>>> main
+
   }
 
   .footer-links ul {
@@ -535,56 +398,6 @@
     gap: 10px;
     list-style: none;
   }
-<<<<<<< HEAD
-
-  .footer-links li {
-    display: block;
-    margin: 8px 0;
-    text-align: center;
-  }
-
-  .footer-links a {
-    font-size: 14px;
-    padding: 3px 0;
-    display: inline-block;
-    color: #ffffff;
-    text-decoration: none;
-  }
-
-  /* Fixed social media section styling */
-  .footer-social {
-    width: 100%;
-    margin: 20px 0;
-    position: relative;
-    display: block;
-  }
-
-  .footer-social h3 {
-    font-size: 15px;
-    margin-bottom: 12px;
-    color: #ffffff;
-    text-align: center;
-  }
-
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-  }
-
-  .social-icons a {
-    width: 35px;
-    height: 35px;
-    font-size: 1.1em;
-    background-color: #ffffff;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: #526E8A;
-    transition: all 0.3s ease;
-=======
 }
 /* Extra Small Tablets (481px to 550px) */
 @media (min-width: 481px) and (max-width: 550px) {
@@ -643,21 +456,12 @@
   .footer-links a {
     font-size: 16px;
     padding: 5px 8px;
->>>>>>> main
+
   }
-}
+
 .footer-container {
   gap: 20px;  /* Adjusted from 40px */
 }
-
-<<<<<<< HEAD
-  .footer-logo {
-    margin-top: 15px;
-  }
-
-  .footer-logo img {
-    width: 60px;
-=======
 .footer-social {
   margin-bottom: 20px;
 }
@@ -674,7 +478,7 @@
 .footer-logo {
   margin-top: 10px;
 }
-
+}
 @media (max-width: 480px) {
   .footer-container {
     gap: 15px;
@@ -690,6 +494,5 @@
 
   .footer-logo {
     margin-top: 5px;
->>>>>>> main
   }
 }

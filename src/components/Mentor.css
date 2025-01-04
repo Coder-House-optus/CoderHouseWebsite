@@ -143,11 +143,10 @@
     }
 
     .section-title {
-<<<<<<< HEAD
+
         font-size: 2rem;
-=======
-        font-size: 4em; /* Doubled from 2em */
->>>>>>> main
+
+
         margin: 0;
         padding: 0;
         width: auto;

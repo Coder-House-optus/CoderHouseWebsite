@@ -22,7 +22,7 @@ const reviews = [
         rating: 5
     },
     {
-<<<<<<< HEAD
+
         name: "Muzzamil Khan",
         text:  "Coder House is a great place to begin. The offline classes are highly engaging, and the mentors are always available to clarify your doubts. I loved workshops and hackathons in particular; they provided hands-on experience and gave a boost to my confidence regarding problem-solving. Guidance received from experienced mentors helped me crack my first job interview with ease!",
         rating: 5
@@ -30,15 +30,6 @@ const reviews = [
     {
         name: "Shivang Tiwari",
         text: "Initially, I was skeptical about the whole offline training idea, but Coder House totally flipped the script for me. Topics that were thought to be super tough became almost easy due to the expertise of our mentors from IITs and NITs. The collaborative learning environment always kept me motivated and focused. Today, I am more than ever prepared to face real-world challenges in the tech industry.",
-=======
-        name: "Ananya Singh",
-        text: "Coder House's placement preparation training is hands-down the best. The mentors are experts in their area and ensure that no stone remains unturned. The hackathons were quite impactful and pushed me out of my comfort zone and taught to think on my feet. I would definitely recommend it to all the students aspiring for top-tier jobs.",
-        rating: 5
-    },
-    {
-        name: "Kunal Agarwal",
-        text: "Joining Coder House was probably the best decision I ever made in college. All of this, along with mentors who care and an environment that fosters growth, makes one confident about taking that leap to pursue the dream role. Their emphasis on real-world applications, plus excellent infrastructure, makes everything quite seamless. Thanks, Coder House team!" ,
->>>>>>> main
         rating: 5
     },
     {
@@ -47,10 +38,10 @@ const reviews = [
         rating: 5
     },
     {
-<<<<<<< HEAD
+
         name: "Seema Sahu",
         text: "Joining Coder House was probably the best decision I ever made in college. All of this, along with mentors who care and an environment that fosters growth, makes one confident about taking that leap to pursue the dream role. Their emphasis on real-world applications, plus excellent infrastructure, makes everything quite seamless. Thanks, Coder House team!",
-=======
+
         name: "Rajesh Kumar",
         text: "Coder House exceeded my expectations in every way. The real-world insights shared by industry professionals are invaluable, and the regular coding competitions helped me improve my skills significantly. The mentors are approachable and dedicated, making learning both effective and enjoyable. I’m grateful for their support throughout my placement journey.",
         rating: 5
@@ -58,7 +49,7 @@ const reviews = [
     {
         name: "Ritika Sharma",
         text: "Coder House is a great place to begin. The offline classes are highly engaging, and the mentors are always available to clarify your doubts. I loved workshops and hackathons in particular; they provided hands-on experience and gave a boost to my confidence regarding problem-solving. Guidance received from experienced mentors helped me crack my first job interview with ease!",
->>>>>>> main
+
         rating: 5
     },
     {
