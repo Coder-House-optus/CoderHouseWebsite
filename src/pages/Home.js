@@ -65,9 +65,9 @@ export default function Home() {
             <input type="text" name="Phone" placeholder="Phone" className="input-field" required />
             
             {/* First dropdown for user type */}
-            <select 
+            <select
               name="UserType" 
-              className="input-field"
+              className="input-field program-selection"
               value={selectedUserType}
               onChange={handleUserTypeChange}
               required
@@ -80,9 +80,9 @@ export default function Home() {
 
             {/* Conditional second dropdown for programs */}
             {selectedUserType === "Student" && (
-              <select 
+              <select
                 name="Program" 
-                className="input-field nested-select"
+                className="input-field program-selection"
                 value={selectedProgram}
                 onChange={(e) => setSelectedProgram(e.target.value)}
                 required
@@ -104,7 +104,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="White-hike">
+      <div className="stats-section">
         <div className="item">
           <img src="/images/arrow.png" alt="Arrow Image" />
           <div className="text">147% Average Hike</div>

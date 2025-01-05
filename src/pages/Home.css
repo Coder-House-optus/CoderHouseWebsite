@@ -4,31 +4,6 @@ html {
   box-sizing: border-box;
 }
 
-/* Responsive font sizing */
-@media (max-width: 1200px) {
-  html {
-    font-size: 56.25%;
-  }
-}
-
-@media (max-width: 998px) {
-  html {
-    font-size: 55%;
-  }
-}
-
-@media (max-width: 768px) {
-  html {
-    font-size: 45%;
-  }
-}
-
-@media (max-width: 480px) {
-  html {
-    font-size: 40%;
-  }
-}
-
 /* Home and Text Styles */
 .home {
   font-family: 'Poppins', sans-serif;
@@ -54,7 +29,7 @@ html {
   justify-content: center;
   background-size: cover;
   background-position: center;
-  padding: 3.125rem 1.25rem 9.375rem;
+  padding: 3.9rem 1.25rem 9.375rem;
   min-height: 60vh;
   width: 100%;
   flex-wrap: wrap;
@@ -116,7 +91,7 @@ html {
   background-color: #4f7085;
 }
 
-.hero-right select {
+.program-selection {
   border-radius: 0.5rem;
   padding: 1.125rem; /* Increased height via padding */
   margin: 1rem auto; /* Changed from 0 to auto for horizontal centering */
@@ -129,10 +104,7 @@ html {
   color: #3C5C7B;
 }
 
-
-
-/* White Section */
-.White-hike {
+.stats-section{
   width: 90%;
   max-width: 67rem;
   min-height: 6rem; /* Changed from fixed height to min-height */
@@ -187,4 +159,183 @@ html {
   display: block; /* Added to help with centering */
 }
 
+@media (max-width: 1200px) {
+  .stats-section {
+    transform: translateX(-5rem);
+    width: 85%;
+    margin: -4rem auto 0;
+  }
+}
 
+@media (max-width: 998px) {
+  .hero-left {
+    margin-left: 4rem;
+  }
+
+  .hero-right {
+    max-width: 28rem; /* Slightly reduced for tablets */
+  }
+
+  .stats-section {
+    transform: translateX(-3rem);
+    width: 80%;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Stack items vertically */
+    padding: 5rem .3rem 5rem; /* Reduce padding */
+    min-height: auto; /* Remove fixed height */
+    gap: 2rem; /* Reduce gap between elements */
+  }
+
+  .hero-left {
+    margin: 1rem auto; /* Center the section and reduce margin */
+    width: 90%; /* Adjust width to fit smaller screens */
+    text-align: center; /* Center-align content inside */
+  }
+
+  .hero-right {
+    max-width: 75%;
+    width: 70%;
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+  .program-selection{
+    width: 89%;
+    
+  }
+  .hero-right input[type="text"],
+  .hero-right input[type="email"],
+  .hero-right input[type="phone"],
+  .hero-right input[type="url"],
+  .hero-right textarea {
+    width: 80%;
+  }
+  .stats-section {
+    width: 80%;
+    transform: translateX(-2);
+
+ 
+  }
+
+  .item {
+    min-width: 45%;
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    flex-direction: column; /* Stack items vertically */
+    padding: 2rem 1rem 5rem; /* Reduce padding */
+    min-height: auto; /* Remove fixed height */
+    gap: 1rem; /* Reduce gap between elements */
+  }
+
+  .hero-left {
+    margin: 1rem auto; /* Center the section and reduce margin */
+    width: 90%; /* Adjust width to fit smaller screens */
+    text-align: center; /* Center-align content inside */
+  }
+  .hero-right {
+    max-width: 100%;
+    width: 65%;
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .program-selection{
+    width: 89%;
+    
+  }
+  .hero-right input[type="text"],
+  .hero-right input[type="email"],
+  .hero-right input[type="phone"],
+  .hero-right input[type="url"],
+  .hero-right textarea {
+    width: 80%;
+  }
+
+  .stats-section {
+    width: 88%;
+    margin: -2rem auto 1.5rem;
+    padding: 1rem;
+    gap: 0.8rem;
+  }
+
+  .item {
+    min-width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column; /* Stack items vertically */
+    padding: 5rem .3rem 5rem; /* Reduce padding */
+    min-height: auto; /* Remove fixed height */
+    gap: 1rem; /* Reduce gap between elements */
+  }
+
+  .hero-left {
+    margin: 1rem auto; /* Center the section and reduce margin */
+    width: 90%; /* Adjust width to fit smaller screens */
+    text-align: center; /* Center-align content inside */
+  }
+  .hero-right {
+    max-width: 100%;
+    margin: -1rem 7rem 1.5rem;
+    width: 65%;
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .program-selection{
+    width: 89%;
+    
+  }
+  .hero-right input[type="text"],
+  .hero-right input[type="email"],
+  .hero-right input[type="phone"],
+  .hero-right input[type="url"],
+  .hero-right textarea {
+    width: 80%;
+  }
+
+  .stats-section {
+    width: 85%;
+    margin: -1rem 5.6rem 1.5rem;
+    padding: 1rem;
+    gap: 0.8rem;
+  }
+
+  .item {
+    min-width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-right {
+    width: 95%;
+    padding: 0.8rem;
+  }
+
+  .program-selection,
+  .hero-right input[type="text"],
+  .hero-right input[type="email"],
+  .hero-right input[type="phone"],
+  .hero-right input[type="url"],
+  .hero-right textarea {
+    width: 100%;
+  }
+
+  .stats-section {
+    width: 100%;
+    margin: -2rem auto 1rem;
+    padding: 0.8rem;
+  }
+}
