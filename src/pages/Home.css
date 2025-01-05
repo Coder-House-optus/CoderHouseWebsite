@@ -177,7 +177,7 @@ html {
   }
 
   .stats-section {
-    transform: translateX(-3rem);
+    transform: translateX(-2.5rem);
     width: 80%;
     padding: 1.5rem;
   }
