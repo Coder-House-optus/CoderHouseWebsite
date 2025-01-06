@@ -1,8 +1,18 @@
 import React from "react";
-
+import { ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import "./shared-styles.css";
 const TermsAndConditions = () => {
+  const navigate = useNavigate();
   return (
-    <div className="terms-container">
+    <div className="legal-page-container">
+      <button 
+                      className="back-button"
+                      onClick={() => navigate(-1)}
+                      aria-label="Go back"
+                  >
+                      <ArrowLeft size={24} />
+                  </button>
       <h1>Terms and Conditions for Coder House</h1>
       <p><strong>Effective Date:</strong>1/01/2025</p>
 

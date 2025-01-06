@@ -1,0 +1,95 @@
+/* shared-styles.css */
+.legal-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+  }
+  
+  .back-button {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .back-button:hover {
+    transform: translateX(-3px);
+  }
+  
+  .legal-page-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+    text-align: center;
+    padding-top: 2rem;
+  }
+  
+  .legal-page-container h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #2a2a2a;
+  }
+  
+  .legal-page-container h3 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #3a3a3a;
+  }
+  
+  .legal-page-container h4 {
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #4a4a4a;
+  }
+  
+  .legal-page-container p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  
+  .legal-page-container ul {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+  }
+  
+  .legal-page-container li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .legal-page-container strong {
+    color: #1a1a1a;
+  }
+  
+  @media (max-width: 768px) {
+    .legal-page-container {
+      padding: 1rem;
+    }
+  
+    .legal-page-container h1 {
+      font-size: 2rem;
+    }
+  
+    .legal-page-container h2 {
+      font-size: 1.5rem;
+    }
+  
+    .legal-page-container h3 {
+      font-size: 1.25rem;
+    }
+  
+    .legal-page-container h4 {
+      font-size: 1.1rem;
+    }
+  }

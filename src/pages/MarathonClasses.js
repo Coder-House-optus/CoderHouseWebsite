@@ -27,7 +27,7 @@ const MarathonClasses = () => {
       <button onClick={() => navigateTo('/Features')} className="back-button1">
         Back to Feature
       </button>
-      <h1>Marathon Classes</h1>
+      <h1 className='marathonHeader'>Marathon Classes</h1>
       <div className="marathon-buttons1">
         <button className="marathon-button1" onClick={() => navigateTo('/Amcat')}>
           <span className="tick-icon1">✔</span> AMCAT
