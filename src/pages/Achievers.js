@@ -44,18 +44,17 @@ const achievers = [
 // }];
 
 const ambassadors = [
-  { name: "Ambassador 1", photo: "../images/placeholder.jpg", company: "Company A" },
-  { name: "Ambassador 2", photo: "../images/placeholder.jpg", company: "Company B" },
-  { name: "Ambassador 3", photo: "../images/placeholder.jpg", company: "Company C" },
-  { name: "Ambassador 4", photo: "../images/placeholder.jpg", company: "Company D" },
-  { name: "Ambassador 5", photo: "../images/placeholder.jpg", company: "Company E" },
-  { name: "Ambassador 6", photo: "../images/placeholder.jpg", company: "Company F" },
-  { name: "Ambassador 7", photo: "../images/placeholder.jpg", company: "Company G" },
-  { name: "Ambassador 8", photo: "../images/placeholder.jpg", company: "Company H" },
+  { name: "Khushi Shrivastava", photo: "../images/Ambassador/image8.jpg", company: "Optus" },
+  { name: "Prakhar Pandey", photo: "../images/Ambassador/image2.png", company: "LPU" },
+  { name: "Hitesh Sharma", photo: "../images/Ambassador/image10.jpg", company: "VIT" },
+  { name: "Shruti Singour", photo: "../images/Ambassador/image6.jpg", company: "Optus" },
+  { name: "Hiya Jain", photo: "../images/Ambassador/image5.png", company: "LPU" },
+  { name: "Aastha Purey", photo: "../images/Ambassador/image13.jpg", company: "VIT" },
+  { name: "Divyanshu Singhal", photo: "../images/Ambassador/image7.jpg", company: "VIT" },
+  { name: "Aanchal Agarwal", photo: "../images/Ambassador/image14.jpg", company: "NIT" },
 ];
-
-const Achievers = () => {
-  const allAchievers = achievers.flatMap(company => 
+const Achievers = () =>{
+  const allAchievers =achievers.flatMap(company => 
     company.people.map(person => ({
       ...person,
       companyLogo: company.logo,

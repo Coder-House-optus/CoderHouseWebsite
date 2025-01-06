@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../components/Footer';
-
+import { useNavigate } from "react-router-dom";
 const English = () => {
   // Inline styles for the header
   const headerStyles = {
@@ -56,12 +56,31 @@ const English = () => {
       100% { background-position: 0% 50%; }
     }
   `;
-
+const navigate = useNavigate();
   return (
     <div>
       {/* Adding keyframes in a style tag */}
       <style>{animationStyles}</style>
-
+      <button 
+      style={{
+        position: "absolute",
+        left: "1rem",
+        top: "1rem",
+        background: "none",
+        border: "none",
+        cursor: "pointer",
+        padding: "0.5rem",
+        transition: "transform 0.2s ease",
+        zIndex:100,
+      }}
+      onClick={() => navigate(-1)}
+      aria-label="Go back"
+    >
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="19" y1="12" x2="5" y2="12"></line>
+    <polyline points="12 19 5 12 12 5"></polyline>
+  </svg>
+    </button>
       {/* Header Section */}
       <header style={headerStyles}>
         <img

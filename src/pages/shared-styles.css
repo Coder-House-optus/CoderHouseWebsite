@@ -1,4 +1,7 @@
 /* shared-styles.css */
+.shared{
+    background: linear-gradient(90deg, #C6E894, #99C05F);
+}
 .legal-page-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -7,6 +10,7 @@
     color: #333;
     line-height: 1.6;
     position: relative;
+    background: linear-gradient(90deg, #C6E894, #ffffff, #99C05F);
   }
   
   .back-button {

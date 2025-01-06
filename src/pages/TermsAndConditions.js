@@ -5,6 +5,7 @@ import "./shared-styles.css";
 const TermsAndConditions = () => {
   const navigate = useNavigate();
   return (
+  <div className="shared">
     <div className="legal-page-container">
       <button 
                       className="back-button"
@@ -14,7 +15,7 @@ const TermsAndConditions = () => {
                       <ArrowLeft size={24} />
                   </button>
       <h1>Terms and Conditions for Coder House</h1>
-      <p><strong>Effective Date:</strong>1/01/2025</p>
+      <h3><strong>Effective Date:</strong>1/01/2025</h3>
 
       <p>
         Welcome to <strong>Coder House</strong>. By using our website and services, you
@@ -122,6 +123,7 @@ const TermsAndConditions = () => {
         <li><strong>Phone:</strong>+91 99268 65740</li>
       </ul>
     </div>
+  </div>
   );
 };
 
