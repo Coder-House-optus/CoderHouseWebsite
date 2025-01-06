@@ -7,30 +7,40 @@
     margin-top: 5%;
     padding-bottom: 20%;
     position: relative;
-    padding-top:0;
+    padding-top: 40px;
     background: linear-gradient(90deg, #C6E894, #ffffff, #99C05F);
 }
 
-/* Title Styling */
 .mentor-title {
     width: 100%;
     text-align: center;
-  }
-  
-  .section-title {
-    font-size: clamp(10rem, 20vw, 16rem); /* Doubled and changed to rem units */
+    margin: 40px auto;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title {
+    font-size: clamp(4rem, 8vw, 12rem);  /* Increased base size */
     text-align: center;
-    margin-bottom: 30px;
+    margin: 2rem auto;
+    padding: 0;
+    color: #333;
+    font-weight: bold;
+    max-width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 0.3em;
-  }
-  
-  .highlight {
+    gap: 1rem;
+    white-space: nowrap;  /* Prevents wrapping */
+}
+
+.highlight {
     color: #4caf50;
-  }
-  
+    font-weight: bold;
+    font-size: inherit;  /* Ensures the highlight text matches the parent size */
+}
 
 /* Static Left-Side Mentor Image */
 .mentor-image {
@@ -89,15 +99,6 @@
     width: 100%;
 }
 
-/* Media Queries */
-@media screen and (max-width: 1200px) {
-    .right-mentor {
-        margin-left: 300px;
-    }
-    .mentor-image img {
-        margin-left: 50px;
-    }
-}
 
 @media screen and (max-width: 992px) {
     .right-mentor {
@@ -144,20 +145,7 @@
         margin-bottom: 20px;
     }
 
-    .section-title {
-
-        font-size: 4em; /* Doubled from 2em */
-
-        margin: 0;
-        padding: 0;
-        width: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0.3em;
-        flex-wrap: nowrap;
-        white-space: nowrap;
-    }
+   
 
     .mentor-image {
         max-width: 280px;

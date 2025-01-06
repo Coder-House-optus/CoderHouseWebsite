@@ -37,12 +37,11 @@ const Mentor = () => {
 
   return (
     <section className="mentor-section">
-      {/* Title */}
-
-      <h2 className="section-title" style={{ fontSize: 'clamp(2.5rem, 3vw, 6rem)' }}>
+      <div className="mentor-title">
+      <h2 className="section-title" style={{ fontSize: 'clamp(1.7rem, 3.3vw, 5rem)' }}>
           Our <span className="highlight">Mentors</span>
       </h2>
-
+      </div>
 
 
       {/* Container for Image and Animated Cards */}
