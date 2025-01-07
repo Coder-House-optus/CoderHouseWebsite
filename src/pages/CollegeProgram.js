@@ -84,7 +84,7 @@ const CollegeProgram = () => {
       {/* Program Cards Section */}
       <section className="cards-section">
         <div className="greeting-container">
-          {[120, 90, 60].map((hours) => (
+          {[300,120,90,75,60].map((hours) => (
             <div key={hours} className="greeting-card">
               <div className="hours-line">
                 <span className="hours-text">{hours} HOURS</span>

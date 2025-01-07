@@ -1,10 +1,21 @@
 import React from 'react';
-
+import { ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import "./shared-styles.css";
 const PrivacyPolicy = () => {
+    const navigate = useNavigate();
     return (
-        <div className="privacy-policy-container">
+        <div className='shared'>
+        <div className="legal-page-container">
+            <button 
+                className="back-button"
+                onClick={() => navigate(-1)}
+                aria-label="Go back"
+            >
+                <ArrowLeft size={24} />
+            </button>
             <h1>Privacy Policy</h1>
-            <p><strong>Last updated:</strong> December 31, 2024</p>
+            <h3><strong>Last updated:</strong> December 31, 2024</h3>
 
             <p>
                 This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your 
@@ -132,6 +143,7 @@ const PrivacyPolicy = () => {
             <ul>
                 <li>By email: coderhouseoptus@gmail.com</li>
             </ul>
+        </div>
         </div>
     );
 };

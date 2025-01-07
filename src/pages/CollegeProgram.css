@@ -1,5 +1,7 @@
 /* General Styles */
-
+.college-program-page{
+  background-color: #f9f9f9;
+}
 
 /* Header and Font Adjustments */
 h1, h2, h3, h4, h5, h6 {
@@ -45,6 +47,7 @@ p {
 .cards-section {
   margin: 90px 0 1%;
   padding: 5% 20px;
+  background-color: #f9f9f9
 }
 
 .greeting-container {
@@ -209,7 +212,7 @@ p {
 
 /* Associations Section */
 .associations-section {
-  padding: 50px 0;
+  padding: 0 0 50px;
   text-align: center;
   background-color: #f9f9f9;
 }
@@ -241,6 +244,7 @@ p {
 
 .headname {
   font-size: 2.3rem;
+  text-align: center;
   font-weight: bolder;
   margin-bottom: 1rem;
 }
