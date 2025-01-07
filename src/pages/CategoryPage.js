@@ -26,7 +26,7 @@ const CategoryPage = () => {
           onClick={() => navigate(-1)}
           className="back-button"
         >
-          ← Back
+          ←
         </button>
         <div className="image-container">
           <img 
