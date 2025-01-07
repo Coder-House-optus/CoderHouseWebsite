@@ -48,7 +48,7 @@ const Footer = () => {
   <a href="https://www.instagram.com/coder___house/" className="instagram" target="_blank" rel="noreferrer">
     <i className="fab fa-instagram"></i>
   </a>
-  <a href="https://www.linkedin.com/company/optus-ed-tech-solutions/" className="linkedin" target="_blank" rel="noreferrer">
+  <a href="https://www.linkedin.com/showcase/coderrhouse/posts/?feedView=all" className="linkedin" target="_blank" rel="noreferrer">
     <i className="fab fa-linkedin-in"></i>
   </a>
 </div>
