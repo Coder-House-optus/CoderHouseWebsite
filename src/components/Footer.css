@@ -255,35 +255,21 @@
     font-size: 16px;
   }
 }
-
-
-/* Mobile Screens (480px and below) */
 @media (max-width: 480px) {
   .footer {
-    min-height: 500px;
-    padding: 20px 10px;
-
-  }
-
-  .footer-container {
     height: auto;
-    min-height: 500px;
-    padding: 0 10px;
-    justify-content: flex-start;
+    padding: 20px 0;
   }
 
   .location-box {
-
-    width: 90%;
-    max-width: 400px;
-    top: -80px;
-    padding: 15px;
-
+    width: 95%;
+    max-width: 320px;
+    top: -80px; /* Adjusted to avoid overlap */
+    padding: 10px;
   }
 
   .location-box h3 {
     font-size: 18px;
-
     gap: 15px;
   }
 
@@ -292,216 +278,58 @@
   }
 
   .location-box p {
-    font-size: 15px;
-    width: 40%;
+    font-size: 12px;
   }
 
   .location-box .white-square {
-    width: 55%;
-    height: 80%;
-    min-height: 120px;
-    top: 30px;
-    right: 15px;
-  }
-
-  .footer-links ul {
-    padding: 1px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-
-  .footer-links li {
-    margin: 5px;
-
-  }
-
-  .footer-links a {
-    font-size: 15px;
-    display: inline-block;
-    padding: 5px 0;
-  }
-
-  .footer-social {
-    width: 100%;
-    margin: 15px 0;
-  }
-
-  .footer-social h3 {
-    font-size: 16px;
-
-    padding: 5px 10px;
-
-  }
-
-  .social-icons {
-    gap: 12px;
-
-  }
-
-  .social-icons a {
-    width: 32px;
-    height: 32px;
-    font-size: 1.1em;
-  }
-
-  .footer-logo img {
-
-    width: 85px;
-    margin-top: 20px;
-    
-  }
-}
-
-/* Extra Small Screens (380px and below) */
-@media (max-width: 380px) {
-
-  .footer {
-    height: auto;
-    min-height: 750px; /* Increased to accommodate all content */
-    padding: 10px 5px;
-  }
-
-
-  .location-box {
-    padding: 12px;
-    top: -60px;
-  }
-
-  .location-box p {
-    font-size: 14px;
-    max-width: 42%;
-  }
-
-  .location-box .white-square {
-    width: 45%;
+    width: 150px;
+    height: 140px;
     right: 10px;
-
+    top: 25px;
   }
 
-  .location-box p {
-    font-size: 13px;
-    margin-top: 8px;
-    line-height: 1.4;
-    padding-right: 20px;
-  }
-
-
-  .social-icons a {
-    width: 32px;
-    height: 32px;
-    font-size: 1.1em;
-
+  .footer-links {
+    text-align: center;
+    padding: 10px 0;
   }
 
   .footer-links ul {
-    padding: 5px 0;
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    list-style: none;
-  }
-
-}
-/* Extra Small Tablets (481px to 550px) */
-@media (min-width: 481px) and (max-width: 550px) {
-  .footer {
-    height: auto;
-    min-height: 500px;
-    padding: 25px 0;
-  }
-
-  .footer-container {
-    gap: 25px;
-    padding-top: 100px;
-  }
-
-  .location-box {
-    width: 90%;
-    max-width: 450px;
-    top: -100px;
-    padding: 15px;
-  }
-
-  .location-box h3 {
-    font-size: 19px;
-    gap: 15px;
-  }
-
-  .location-box h3 i.fas.fa-map-marker-alt {
-    font-size: 22px;
-  }
-
-  .location-box p {
-    font-size: 15px;
-    width: 45%;
-  }
-
-  .location-box .white-square {
-    width: 50%;
-    height: 80%;
-    min-height: 140px;
-    top: 30px;
-    right: 15px;
-  }
-
-  .footer-links ul {
-    padding: 10px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    justify-content: center; 
+
+    padding: 0;
+    /* margin: 0; */
+
   }
 
-  .footer-links li {
-    margin: 5px;
+  .footer-links li:nth-child(3) {
+    flex-basis: 50%; /* Ensures the third item starts on a new line */
+    text-align: center;
+    margin-top: 10px;
   }
 
   .footer-links a {
     font-size: 16px;
-    padding: 5px 8px;
-
+    text-decoration: none;
   }
 }
-.footer-container {
-  gap: 20px;  /* Adjusted from 40px */
+.white-square {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-
-.footer-social {
-  margin-bottom: 20px;
+.map-container {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 20px;
 }
 
-.footer-social h3 {
-  margin-bottom: 15px;
-  font-size: 20px;
-}
-
-.social-icons {
-  margin-bottom: 20px;
-}
-
-.footer-logo {
-  margin-top: 10px;
-}
-
-@media (max-width: 480px) {
-  .footer-container {
-    gap: 15px;
-  }
-
-  .footer-social {
-    margin-bottom: 15px;
-  }
-
-  .social-icons {
-    margin-bottom: 15px;
-  }
-
-  .footer-logo {
-    margin-top: 5px;
-
-  }
-}

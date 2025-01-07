@@ -1,0 +1,103 @@
+/* CategoryPage.css */
+.category-page {
+  min-height:500vh;
+  background-image:url('/public/images/bluedotedlines.png');
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  flex-wrap: wrap;
+  width: 100%;
+  background-position: center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.header {
+  background: linear-gradient(to bottom, #1a1f2c 0%, #49b249 100%);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.header-logo {
+  width: 60px;
+  align-items: center;
+  height: 60px;
+  margin: 5rem auto 1rem; 
+  display: block;
+}
+
+.header-title {
+  font-size: 3rem;
+  text-align: center;
+  margin: 0 auto; 
+  font-weight: bold;
+  color: white;
+}
+
+.category-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.image-container {
+  margin: 2rem auto;
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+}
+
+.category-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Add decorative dots background */
+.category-page::before,
+.category-page::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: radial-gradient(circle, #e0e0e0 2px, transparent 3px);
+  background-size: 30px 30px;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.category-page::before {
+  top: 50px;
+  left: 0;
+}
+
+.category-page::after {
+  bottom: 50px;
+  right: 0;
+}

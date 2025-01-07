@@ -18,7 +18,15 @@ const Footer = () => {
             Jabalpur, Madhya Pradesh.
           </p>
           {/* White Square Overlay */}
-          <div className="white-square"></div>
+          <div className="white-square">
+ <iframe 
+   className="map-container"
+   src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d229.23106539936572!2d79.9095391!3d23.1812547!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981b1d49488b069%3A0xd0324f5742a34f41!2sOptus%20EdTech%20Solutions%2F%20Coder%20House%20-%20CAT%7C%20MAT%7C%20CMAT%7C%20CAMPUS%20PLACEMENT%20(CRT)!5e0!3m2!1sen!2sin!4v1736236995503!5m2!1sen!2sin"
+   allowFullScreen=""
+   loading="lazy"
+   referrerPolicy="no-referrer-when-downgrade"
+ ></iframe>
+</div>
         </div>
 
         {/* Footer Links */}
@@ -40,7 +48,7 @@ const Footer = () => {
   <a href="https://www.instagram.com/coder___house/" className="instagram" target="_blank" rel="noreferrer">
     <i className="fab fa-instagram"></i>
   </a>
-  <a href="https://www.linkedin.com/company/optus-ed-tech-solutions/" className="linkedin" target="_blank" rel="noreferrer">
+  <a href="https://www.linkedin.com/showcase/coderrhouse/posts/?feedView=all" className="linkedin" target="_blank" rel="noreferrer">
     <i className="fab fa-linkedin-in"></i>
   </a>
 </div>
