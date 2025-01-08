@@ -33,7 +33,7 @@ const CProgramming = () => {
 
   const titleStyles = {
     fontWeight: '900',
-    fontSize: '3em',
+    fontSize: '2em',
     color: 'rgb(6, 6, 6)',
     textAlign: 'center',
     margin: '0',
@@ -97,7 +97,7 @@ const navigate = useNavigate();
       </div>
 
         <img
-          src="/images/Roadmaps/C Programming_ From Beginner to Expert-roadmap.jpg" // Replace with your logo URL
+          src="/images/LearningOfferings/C_Programming.jpg" // Replace with your logo URL
           alt="Logo"
           style={flowchart}
         />
