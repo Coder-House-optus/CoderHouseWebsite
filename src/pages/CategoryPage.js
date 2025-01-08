@@ -19,7 +19,7 @@ const CategoryPage = () => {
           alt="Coder House Logo" 
           className="header-logo"
         />
-        <h1 className="header-title">{formattedCategory}</h1>
+        <h1 className="header-subject-title">{formattedCategory}</h1>
       </header>
       <div className="category-content">
         <button 

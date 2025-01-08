@@ -59,7 +59,7 @@ body {
   justify-content: center;
 }
 
-.image-container {
+.image-containerss {
   width: 20rem;
   height: 20rem;
   background-color: #dcfce7;
@@ -358,7 +358,7 @@ body {
 }
 
 @media (max-width: 480px) {
-  .image-container {
+  .image-containerss {
     width: 16rem;
     height: 16rem;
   }
