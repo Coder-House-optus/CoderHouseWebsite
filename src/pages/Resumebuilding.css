@@ -2,19 +2,33 @@
 
 .resume-container {
   font-family: Poppins, sans-serif;
-  background-color: #fff;
   max-width: 100vw;
-  margin: 50px auto;
+  margin: 0 auto;
   border-radius: 10px;
   position: relative;
+  padding: 3%;
+  /* background: linear-gradient(90deg, #8fc7ff, #ffffff, #3C5C7B); */
+}
+
+.resume-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url('/public/images/bluedotedlines.png');
-  background-blend-mode: overlay;
-  background-color: WHITE;
-  z-index: 1;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: right;
-  background-size: 1550px 550px;
-  padding: 20px;
+  opacity: 0.25; /* Reduced opacity for better contrast */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.resume-container > * {
+  position: relative;
+  z-index: 2;
 }
 
 .back-button1 {
@@ -104,7 +118,9 @@
   width: calc(50% - 10px);
   height: 300px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(74, 68, 69, 0.7),
+              0 0 30px rgba(255, 255, 255, 0.5);
+  border: .75rem solid white;
   object-fit: cover;
 }
 

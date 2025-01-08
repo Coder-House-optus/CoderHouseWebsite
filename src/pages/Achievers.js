@@ -44,10 +44,10 @@ const achievers = [
 // }];
 
 const ambassadors = [
-  { name: "Khushi Shrivastava", photo: "../images/Ambassador/image8.jpg", company: "Optus" },
+  { name: "Khushi Shrivastava", photo: "../images/Ambassador/image8.jpg", company: "GGITS" },
   { name: "Prakhar Pandey", photo: "../images/Ambassador/image2.png", company: "LPU" },
   { name: "Hitesh Sharma", photo: "../images/Ambassador/image10.jpg", company: "VIT" },
-  { name: "Shruti Singour", photo: "../images/Ambassador/image6.jpg", company: "Optus" },
+  { name: "Shruti Singour", photo: "../images/Ambassador/image6.jpg", company: "GGITS" },
   { name: "Hiya Jain", photo: "../images/Ambassador/image5.png", company: "LPU" },
   { name: "Aastha Purey", photo: "../images/Ambassador/image13.jpg", company: "VIT" },
   { name: "Divyanshu Singhal", photo: "../images/Ambassador/image7.jpg", company: "VIT" },

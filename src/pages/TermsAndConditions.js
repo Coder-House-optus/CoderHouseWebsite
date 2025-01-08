@@ -6,14 +6,18 @@ const TermsAndConditions = () => {
   const navigate = useNavigate();
   return (
   <div className="shared">
-    <div className="legal-page-container">
-      <button 
-                      className="back-button"
-                      onClick={() => navigate(-1)}
-                      aria-label="Go back"
-                  >
-                      <ArrowLeft size={24} />
+    <button 
+     className="back-button"
+      onClick={() => navigate(-1)}
+      aria-label="Go back"
+   >
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="19" y1="12" x2="5" y2="12"></line>
+    <polyline points="12 19 5 12 12 5"></polyline>
+  </svg>
                   </button>
+    <div className="legal-page-container">
+      
       <h1>Terms and Conditions for Coder House</h1>
       <h3><strong>Effective Date:</strong>1/01/2025</h3>
 

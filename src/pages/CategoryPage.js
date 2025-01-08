@@ -14,20 +14,22 @@ const CategoryPage = () => {
     <div className="category-page">
       <Navigation />
       <header className="header">
-        <img 
-          src="/images/logo.png" 
-          alt="Coder House Logo" 
-          className="header-logo"
-        />
-        <h1 className="header-subject-title">{formattedCategory}</h1>
+        <div className="header-content">
+          <button 
+            onClick={() => navigate(-1)}
+            className="back-button"
+          >
+            ←
+          </button>
+          <img 
+            src="/images/logo.png" 
+            alt="Coder House Logo" 
+            className="header-logo"
+          />
+          <h1 className="header-subject-title">{formattedCategory}</h1>
+        </div>
       </header>
       <div className="category-content">
-        <button 
-          onClick={() => navigate(-1)}
-          className="back-button"
-        >
-          ←
-        </button>
         <div className="image-container">
           <img 
             src={imagePath} 

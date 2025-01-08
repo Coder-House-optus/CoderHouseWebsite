@@ -35,7 +35,10 @@ export default function MoonCoder() {
       </div>
       {/* Back Button */}
         <button className="back-button1" onClick={handleBackClick}>
-          Back to Home
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="19" y1="12" x2="5" y2="12"></line>
+    <polyline points="12 19 5 12 12 5"></polyline>
+  </svg>
         </button>
         
         <div className="moon-coder-card-column column-0">
@@ -81,7 +84,7 @@ export default function MoonCoder() {
               src="/images/contest2.png"
               alt="Card 4"
             />
-            <h1>Saturday Analytical Discussions* with real-time feedback</h1>
+            <h1>Saturday Analytical Discussions with real-time feedback</h1>
           </div>
         </div>
       </div>
