@@ -279,8 +279,8 @@ body {
   transform: translateY(0);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+
+ @media (max-width: 768px) {
   .cta-section {
     padding: 3rem 0;
   }
@@ -297,9 +297,9 @@ body {
     font-size: 1rem;
     padding: 0.625rem 1.75rem;
   }
-}
+} 
 
-@media (max-width: 480px) {
+ @media (max-width: 480px) {
   .cta-title {
     font-size: 1.5rem;
   }
@@ -313,7 +313,6 @@ body {
   }
 }
 
-/* Responsive Design */
 @media (min-width: 768px) {
   .team-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -328,7 +327,7 @@ body {
   .team-grid {
     grid-template-columns: repeat(5, 1fr);
   }
-}
+} 
 
 @media (max-width: 1024px) {
   .about-content {

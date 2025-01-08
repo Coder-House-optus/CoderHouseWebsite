@@ -157,7 +157,7 @@
     .search-container {
         display: flex;
         justify-content: center;
-        padding: 10px; /* Add some padding for better fit on smaller screens */
+        padding: 10px;
         width: 440px;
         border-radius: 800px;
     }
@@ -222,8 +222,8 @@
         overflow: hidden; /* To ensure the ripple stays within the card */
     }
     .title-container h1 {
-        margin: 0;
-        font-size: 20px;
+        margin-top:6rem;
+        font-size: 45px;
         font-weight: bold;
         font-family: 'Bangers', sans-serif;
         color: #3C5C7B;
