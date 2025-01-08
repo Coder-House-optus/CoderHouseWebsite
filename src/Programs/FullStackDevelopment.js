@@ -32,7 +32,7 @@ const FullStackDevelopment = () => {
 
   const titleStyles = {
     fontWeight: '900',
-    fontSize: '3em',
+    fontSize: '2em',
     color: 'rgb(6, 6, 6)',
     textAlign: 'center',
     margin: '0',
@@ -99,7 +99,7 @@ const navigate = useNavigate();
       </div>
 
       <img
-        src="/images/Roadmaps/Full Stack Web Development with HTML, CSS, JS, Tailwind, React, NestJS, MERN-roadmap.jpg" // Replace with your Full Stack Development roadmap image URL
+        src="/images/LearningOfferings/Full_Stack_Development.jpg" // Replace with your Full Stack Development roadmap image URL
         alt="Full Stack Development Roadmap"
         style={flowchart}
       />

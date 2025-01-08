@@ -595,7 +595,7 @@ input:focus, select:focus, textarea:focus {
     margin: auto auto;
     padding: 0.2rem 0;
     font-size: 2em;
-    color: #A3A3A3;
+    color: white;
   }
 
   .program-details-container {
@@ -631,7 +631,7 @@ input:focus, select:focus, textarea:focus {
         border-radius: 15px;
         padding: 15px;
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-        color: #fff;
+        color: white;
         margin-top: -50px;
         height: 230px;
   }
@@ -663,7 +663,7 @@ input:focus, select:focus, textarea:focus {
     gap: 1rem;
     background-color: #547698;
     padding: 40px;
-    height: 260px;
+    height: 360px;
     margin-bottom: 100px;
   }
   input, select, textarea {
@@ -672,7 +672,7 @@ input:focus, select:focus, textarea:focus {
     border: none;
     border-radius: 5px; /* Rounded corners for inputs */
     color: white; /* White text color */
-    font-size: 1.3rem;
+    font-size: 2.5rem;
     margin: 1px auto; /* Center the input fields within the container */
     display: block; /* Ensures inputs take full width and stay centered */
   }
@@ -721,10 +721,11 @@ input:focus, select:focus, textarea:focus {
     border: none;
     border-radius: 5px;
     color: white;
-    font-size: 1.9rem;
+    font-size: 2.3rem;
     margin: 1px auto;
     display: block;
-    font-size: 1.5em;
+    font-size: 2.4em;
+    font-family: poppins;
   }
   .select {
     width: 100%;
@@ -732,8 +733,28 @@ input:focus, select:focus, textarea:focus {
     border: none;
     border-radius: 5px;
     color: white;
-    font-size: 1.9rem;
+    font-size: 2rem;
     margin: 1px auto;
     display: block;
   }
+  .program-details p {
+    margin: 10px 0;
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+}
+.submit-btn5:hover{
+  color: #000;
+}
+.program-card {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: calc(119% - 1rem);
+  padding: 1.3rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+.program-section {
+  padding: 50px;
+}
 }
