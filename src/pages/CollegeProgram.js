@@ -7,6 +7,13 @@ import HODReview from '../components/HODreview';
 const CollegeProgram = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeTestimonialIndex, setActiveTestimonialIndex] = useState(0);
+  const programData = {
+    300: "https://docs.example.com/300-hour-program",
+    120: "https://docs.example.com/120-hour-program",
+    90: "https://docs.google.com/document/d/1R1I1N85g2fowIr7_WKHD5aB8C6Bs3NjiKnl2lr0qvgA/edit?tab=t.0",
+    75: "https://docs.example.com/75-hour-program",
+    60: "https://docs.google.com/document/d/1vbU5NcX1mynWWBnMsmbFQP1sIlS2q7dLyzMrVf6J8nA/edit?tab=t.0"
+  };
 
   // Moments Data
   const moments = [
@@ -76,34 +83,42 @@ const CollegeProgram = () => {
   const handleTestimonialNext = () => {
     setActiveTestimonialIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
   };
-
+  const handleViewProgram = (docLink) => {
+    window.open(docLink, '_blank', 'noopener,noreferrer');
+  };
   return (
     <div className="college-program-page">
       <Navigation />
 
       {/* Program Cards Section */}
       <section className="cards-section">
-        <div className="greeting-container">
-          {[300,120,90,75,60].map((hours) => (
-            <div key={hours} className="greeting-card">
-              <div className="hours-line">
-                <span className="hours-text">{hours} HOURS</span>
-                <span role="img" aria-label="clock" className="clock-emoji">🕒</span>
-              </div>
-              <span className="program-text">PROGRAM</span>
-              <div className="card-footer">
-                <div className="button-container">
-                  <button className="view-btn">View Program</button>
-                </div>
+      <div className="greeting-container">
+        {Object.entries(programData).map(([hours, docLink]) => (
+          <div key={hours} className="greeting-card">
+            <div className="hours-line">
+              <span className="hours-text">{hours} HOURS</span>
+              <span role="img" aria-label="clock" className="clock-emoji">🕒</span>
+            </div>
+            <span className="program-text">PROGRAM</span>
+            <div className="card-footer">
+              <div className="button-container">
+                <button 
+                  className="view-btn"
+                  onClick={() => handleViewProgram(docLink)}
+                  aria-label={`View ${hours} hours program details`}
+                >
+                  View Program
+                </button>
               </div>
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+        ))}
+      </div>
+    </section>
 
       {/* Our Moments Section */}
       <section className="moments-section">
-        <h2 className="section-title">
+        <h2 className="sections-title">
           Our <span className="highlight">Moments</span>
         </h2>
         <div className="moments-content">

@@ -39,15 +39,15 @@ p {
 }
 
 .view-btn:hover {
-  background-color: black;
+  background-color: rgb(105, 105, 105);
   color: white;
 }
 
 /* Cards Section */
 .cards-section {
-  margin: 90px 0 1%;
-  padding: 5% 20px;
-  background-color: #f9f9f9
+  margin: 90px 0 0;
+  padding: 5% 3%;
+  /* background: linear-gradient(90deg, #8fc7ff, #ffffff, #3C5C7B); */
 }
 
 .greeting-container {
@@ -120,9 +120,8 @@ p {
   position: relative;
 }
 
-.section-title {
-  font-size: 4.5rem;
-  padding:5%;
+.sections-title {
+  font-size: 2.3rem;
 }
 
 .moments-content {
@@ -160,6 +159,8 @@ p {
   object-fit: cover;
   border: #ffffff;
   margin-right:2%;
+  border: .75rem solid rgb(207, 207, 207);
+  box-sizing: border-box;
 }
 
 /* Position the images */
@@ -167,8 +168,6 @@ p {
   top: 0;
   left: 0;
   z-index: 1;
-  border: white;
-  border-width:100px;
   box-shadow: 0 0 20px rgba(74, 68, 69, 0.7), /* Outer pink glow */
                 0 0 30px rgba(213, 202, 202, 0.5);
 }
@@ -212,7 +211,7 @@ p {
 
 /* Associations Section */
 .associations-section {
-  padding: 0 0 50px;
+  padding: 0 0 5%;
   text-align: center;
   background-color: #f9f9f9;
 }
@@ -237,7 +236,7 @@ p {
 
 /* Testimonial Section */
 .testimonial-section {
-  padding: 50px;
+  padding: 3% 3% 8%;
   
   background: linear-gradient(90deg, #C6E894, #ffffff, #99C05F);
 }

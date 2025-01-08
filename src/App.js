@@ -18,10 +18,7 @@ import Cocubes from './pages/Cocubes'; // Adjust the path if needed
 import Amcat from './pages/Amcat';
 import Elitmus from './pages/Elitmus';
 import AboutUs from './pages/AboutUs';
-
 import Gform from './pages/Gform'; // Import the Gform component
-
-
 import CProgramming from './Programs/c-programming';
 import CPlusPlusProgramming from './Programs/CPlusPlusProgramming';
 import JavaProgramming from './Programs/JavaProgramming';
@@ -33,12 +30,13 @@ import Aptitude from './Programs/aptitude';
 import Reasoning from './Programs/reasoning';
 import English from './Programs/english';
 import CriticalThinking from './Programs/CriticalThinking';
-import GDPersonalInterview from './Programs/gd-personal-interview';
+import GDPersonalInterview from './Programs/GDPersonalInterview';
 import TermsAndConditions from './pages/TermsAndConditions.js';
 import PrivacyPolicy from './pages/PrivacyPolicy.js';
 
 import './App.css';
 import ResumeBuilding from './pages/ResumeBuilding';
+import CategoryPage from './pages/CategoryPage.js';
 
 function App() {
   return (
@@ -49,19 +47,19 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/features" element={<Features />} />
-          <Route path="/Notes" element={<Notes/>} />
-          <Route path="/Achievers" element={<Achievers/>} />
+          <Route path="/Notes" element={<Notes />} />
+          <Route path="/Achievers" element={<Achievers />} />
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/Gform" element={<Gform />} /> {/* Route to Gform */}
-          <Route path="/Terms&Conditions" element={<TermsAndConditions/>} />
-          
+          <Route path="/Terms&Conditions" element={<TermsAndConditions />} />
+
           <Route path="/collegePrograms" element={<CollegeProgram />} />
           <Route path="/CampusPrograms" element={<CampusProgram />} />
           <Route path="/swayam-batch" element={<SwayamBatch />} />
           {/* <Route path="/crt-offline-batch" element={<CrtOfflineBatch />} /> */}
           <Route path="/coders-sheet" element={<CodersSheet />} />
           <Route path="/mentorship-module" element={<MentorshipModule />} />
-          <Route path="/privacy" element={<PrivacyPolicy/>}/>
+          <Route path="/privacy" element={<PrivacyPolicy />} />
           {/* Newly Added Routes */}
           <Route path="/marathon-classes" element={<MarathonClasses />} />
           <Route path="/internship" element={<Internship />} />
@@ -71,8 +69,8 @@ function App() {
 
 
           <Route path="/Amcat" element={<Amcat />} />
-          <Route path="/Cocubes" element={<Cocubes/>} />
-          <Route path="/Elitmus" element={<Elitmus/>} />
+          <Route path="/Cocubes" element={<Cocubes />} />
+          <Route path="/Elitmus" element={<Elitmus />} />
 
           <Route path="/programs/c-programming" element={<CProgramming />} />
           <Route path="/programs/c-plus-plus-programming" element={<CPlusPlusProgramming />} />
@@ -85,8 +83,13 @@ function App() {
           <Route path="/programs/reasoning" element={<Reasoning />} />
           <Route path="/programs/english" element={<English />} />
           <Route path="/programs/CriticalThinking" element={<CriticalThinking />} />
-          <Route path="/programs/gd-personal-interview" element={<GDPersonalInterview />} />
-          
+          <Route path="/programs/GDPersonalInterview" element={<GDPersonalInterview />} />
+          <Route path="/programs/criticalthinking" element={<CriticalThinking />} />
+
+
+          <Route path="/notes" element={<Notes />} />
+    <Route path="/notes/category/:category" element={<CategoryPage />} />
+
 
         </Routes>
       </Router>

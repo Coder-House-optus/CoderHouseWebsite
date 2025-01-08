@@ -32,7 +32,7 @@ const Aptitude = () => {
 
   const titleStyles = {
     fontWeight: '900',
-    fontSize: '3em',
+    fontSize: '2em',
     color: 'rgb(6, 6, 6)',
     textAlign: 'center',
     margin: '0',
@@ -69,7 +69,9 @@ const Aptitude = () => {
         background: "none",
         border: "none",
         cursor: "pointer",
-        padding: "0.5rem",
+        padding: "0.5rem 1.5rem",
+        borderRadius:"5px",
+        backgroundColor:"#88C057",
         transition: "transform 0.2s ease",
         zIndex:100,
       }}
@@ -97,7 +99,7 @@ const Aptitude = () => {
       </div>
 
       <img
-        src="/images/Roadmaps/Aptitude for Interview-roadmap.jpg" // Replace with your roadmap image URL
+        src="/images/LearningOfferings/Aptitude.jpg" // Replace with your roadmap image URL
         alt="Aptitude Roadmap"
         style={flowchart}
       />

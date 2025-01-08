@@ -1,51 +1,41 @@
 import React from 'react';
 import "./Contest.css";
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 
 const Contest = () => {
   const navigate = useNavigate();
-  const imageUrl = "YOUR_IMAGE_URL_HERE"; // Replace with your actual image URL
 
   return (
-    <div className="container2">
-      {/* Video Background */}
-      {/* <video autoPlay muted loop className="video-background">
-        <source src="/video/code.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video> */}
-
-      {/* Back Button */}
-      <button className="back-button1" onClick={() => navigate('/Features')}>
-        Back to Features
+    <div className="contest-container">
+      <button className="nav-return-btn" onClick={() => navigate('/Features')}>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
       </button>
 
-      {/* Heading */}
-      <h1 className="heading5">Contest Journey</h1>
+      <h1 className="contest-title">Contest Journey</h1>
 
-      <div className="content-container">
-        {/* Stripes Section */}
-        <div className="stripes-section">
-          <div className="box3 shadow">
-            {/* <span className="circle"></span> */}
-            <div className="text-content">
+      <div className="main-layout">
+        <div className="cards-container">
+          <div className="info-card">
+            <div className="card-contents">
               <h3>In-house Coding Challenges</h3>
               <p>Structured programs for skill enhancement.</p>
             </div>
-            <img src="../images/contest1.png" alt="target icon"/>
+            <img src="../images/contest1.png" alt="Coding challenge icon" />
           </div>
-          <div className="box3 shadow">
-            {/* <span className="circle"></span> */}
-            <div className="text-content">
+          <div className="info-card">
+            <div className="card-contents">
               <h3>National & International Competitions</h3>
               <p>Visual guides and flowcharts for contest prep.</p>
             </div>
-            <img src="../images/contest2.png" alt="target icon"/>
+            <img src="../images/contest2.png" alt="Competition icon" />
           </div>
         </div>
 
-        {/* Image Section */}
-        <div className="image-section">
-          <img src="/images/code1.png" alt="Contest Illustration" className="long-image" />
+        <div className="visual-section">
+          <img src="/images/code1.png" alt="Contest Illustration" className="feature-image" />
         </div>
       </div>
     </div>

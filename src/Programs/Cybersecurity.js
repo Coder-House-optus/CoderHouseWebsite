@@ -32,7 +32,7 @@ const Cybersecurity = () => {
 
   const titleStyles = {
     fontWeight: '900',
-    fontSize: '3em',
+    fontSize: '2em',
     color: 'rgb(6, 6, 6)',
     textAlign: 'center',
     margin: '0',
@@ -69,7 +69,9 @@ const navigate = useNavigate();
         background: "none",
         border: "none",
         cursor: "pointer",
-        padding: "0.5rem",
+        padding: "0.5rem 1.5rem",
+        borderRadius:"5px",
+        backgroundColor:"#88C057",
         transition: "transform 0.2s ease",
         zIndex:100,
       }}
@@ -97,7 +99,7 @@ const navigate = useNavigate();
       </div>
 
       <img
-        src="/images/Roadmaps/Cybersecurity_ From Beginner to Expert-roadmap.jpg" // Replace with your Cybersecurity roadmap image URL
+        src="/images/LearningOfferings/Cybersecurity.jpg" // Replace with your Cybersecurity roadmap image URL
         alt="Cybersecurity Roadmap"
         style={flowchart}
       />
