@@ -175,7 +175,7 @@ html {
     width: 100%;
     margin: -2rem auto 0;
   }
-} */
+}  */
 @media (max-width: 1200px) {
   .stats-section {
     transform: translateX(-5rem);
