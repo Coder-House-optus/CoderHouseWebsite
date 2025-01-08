@@ -11,7 +11,7 @@ const CampusProgram = () => {
   const technicalPrograms = [
     { 
       name: "C Programming", 
-      symbol: "💻", 
+      // symbol: "💻", 
       description: "Get hands-on with the fundamentals of C programming.", 
       duration: "4 months", 
       cost: "$600", 
@@ -29,7 +29,7 @@ const CampusProgram = () => {
     // },
     { 
       name: "Java Programming", 
-      symbol: "☕", 
+      // symbol: "☕", 
       description: "Learn Java for software development, covering OOP concepts and data structures.", 
       duration: "5 months", 
       cost: "$750", 
@@ -38,7 +38,7 @@ const CampusProgram = () => {
     },
     { 
       name: "Python Programming", 
-      symbol: "🐍", 
+      // symbol: "🐍", 
       description: "Get started with Python for versatile applications in data science and web development.", 
       duration: "3 months", 
       cost: "$600", 
@@ -47,7 +47,7 @@ const CampusProgram = () => {
     },
     { 
       name: "Full Stack Development", 
-      symbol: "🌐", 
+      // symbol: "🌐", 
       description: "Learn front-end and back-end technologies for building web applications.", 
       duration: "6 months", 
       cost: "$850", 
@@ -56,7 +56,7 @@ const CampusProgram = () => {
     },
     { 
       name: "Cybersecurity", 
-      symbol: "🔐", 
+      // symbol: "🔐", 
       description: "Understand the principles of security and protect systems from cyber threats.", 
       duration: "5 months", 
       cost: "$950", 
@@ -65,7 +65,7 @@ const CampusProgram = () => {
     },
     { 
       name: "Machine Learning", 
-      symbol: "🤖", 
+      // symbol: "🤖", 
       description: "Explore machine learning concepts with hands-on projects using Python.", 
       duration: "4 months", 
       cost: "$900", 
@@ -77,7 +77,7 @@ const CampusProgram = () => {
   const cognitivePrograms = [
     { 
       name: "Aptitude", 
-      symbol: "📊", 
+      // symbol: "📊", 
       description: "Enhance your logical reasoning and mathematical skills.", 
       duration: "2 months", 
       cost: "$300", 
@@ -86,7 +86,7 @@ const CampusProgram = () => {
     },
     { 
       name: "Reasoning", 
-      symbol: "🧠", 
+      // symbol: "🧠", 
       description: "Build strong reasoning skills for analytical and critical thinking.", 
       duration: "2 months", 
       cost: "$300", 
@@ -95,7 +95,7 @@ const CampusProgram = () => {
     },
     { 
       name: "English", 
-      symbol: "📐", 
+      // symbol: "📐", 
       description: "Get a solid foundation in English and problem-solving.", 
       duration: "3 months", 
       cost: "$500", 
@@ -103,17 +103,18 @@ const CampusProgram = () => {
       link: "/programs/english"  // Add unique link for each program
     },
     { 
-      name: "Personality Development", 
-      symbol: "💼", 
+      name: "Critical Thinking and Decision Making", 
+      // symbol: "💼", 
       description: "Improve your communication, leadership, and soft skills.", 
       duration: "2 months", 
       cost: "$400", 
-      image: "/images/PD Card.png",
+      image: "/images/CT AND DM.png",
       link: "/programs/personality-development"  // Add unique link for each program
     },
     { 
+      
       name: "GD & Personal Interview", 
-      symbol: "🗣️", 
+      // symbol: "🗣️", 
       description: "Develop essential skills for group discussions and interviews.", 
       duration: "1 month", 
       cost: "$250", 
@@ -254,7 +255,7 @@ const CampusProgram = () => {
       {/* Cognitive Program Details Section */}
       {currentProgramIndex >= technicalPrograms.length && currentProgramIndex < technicalPrograms.length + cognitivePrograms.length && (
         <div className="program-details-container">
-          <div className="program-image">
+          <div className="program-image1">
             <img
               src={
                 cognitivePrograms[currentProgramIndex - technicalPrograms.length].image
@@ -262,7 +263,7 @@ const CampusProgram = () => {
               alt={
                 cognitivePrograms[currentProgramIndex - technicalPrograms.length].name
               }
-              className="program-image-left"
+              className="program-image1-left"
             />
           </div>
           <div className="program-details">

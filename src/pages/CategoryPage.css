@@ -1,39 +1,43 @@
 /* CategoryPage.css */
 .category-page {
-  min-height:500vh;
-  background-image:url('/public/images/bluedotedlines.png');
+  min-height: 400vh;
+  background: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 1) 100%), 
+    url('/public/images/bluedotedlines.png');
   justify-content: center;
   align-items: center;
-  background-size: cover;
+  background-size: contain; /* Adjusted size for better visibility */
+  background-repeat: repeat; /* Tiling for the dot pattern */
+  background-position: center;
   flex-wrap: wrap;
   width: 100%;
-  background-position: center;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 1) 100%);
 }
 
 .header {
-  background: linear-gradient(to bottom, #1a1f2c 0%, #49b249 100%);
+  background: linear-gradient(to bottom, #1a1f2c 0%, #179017 100%);
   color: white;
-  padding: 2rem 0;
+  padding: .1rem 0; /* Reduced from 2rem */
   text-align: center;
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: .1rem;
+  margin-top:-3rem;
 }
 
 .header-logo {
   width: 60px;
   align-items: center;
   height: 60px;
-  margin: 5rem auto 1rem; 
+  /* margin: 7rem auto 1rem; */
   display: block;
 }
 
-.header-title {
-  font-size: 3rem;
+.header-subject-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
   text-align: center;
-  margin: 0 auto; 
+  margin: 0 3rem;
   font-weight: bold;
   color: white;
+  margin-top: 10rem;
 }
 
 .category-content {
@@ -45,41 +49,41 @@
 
 .back-button {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 10px;
+  left: 10px;
   padding: 8px 16px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 20px;
   cursor: pointer;
-  font-size: 16px;
-  color: white;
+  font-size: 2.5rem;
+  color: rgb(46, 112, 13);
   transition: all 0.3s ease;
 }
-
 .back-button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgb(65, 146, 28);
 }
 
 .image-container {
+  max-width: 85%;
+  height: auto; /* Use auto for dynamic resizing */
   margin: 2rem auto;
-  text-align: center;
   background: white;
-  padding: 2rem;
+  padding: 0.2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  max-width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+  width: 110rem;
+  height: 250rem;
 }
 
 .category-image {
   max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 8px;
-  display: block;
   margin: 0 auto;
 }
-
-/* Add decorative dots background */
 .category-page::before,
 .category-page::after {
   content: '';
@@ -89,7 +93,7 @@
   background-image: radial-gradient(circle, #e0e0e0 2px, transparent 3px);
   background-size: 30px 30px;
   opacity: 0.3;
-  z-index: -1;
+  z-index: -2;
 }
 
 .category-page::before {
@@ -100,4 +104,193 @@
 .category-page::after {
   bottom: 50px;
   right: 0;
+}
+/* Base styles remain unchanged */
+
+/* Mobile (up to 360px) */
+@media screen and (max-width: 360px) {
+  .category-page {
+    min-height: 200vh;
+  }
+
+  .header {
+    padding: 0.5rem 0;
+    margin-top: -1.5rem;
+  }
+
+  .header-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header-subject-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin: 5rem 1rem;
+  }
+
+  .back-button {
+    font-size: 40px;
+    padding: 4px 8px;
+  }
+
+  .image-container {
+    max-width: 95%;
+    height: 150rem;
+    margin: 1rem auto;
+  }
+
+  .category-content {
+    padding: 10px;
+  }
+}
+
+
+/* Mobile (361px to 480px) */
+@media screen and (min-width: 361px) and (max-width: 480px) {
+  .category-page {
+    min-height: 250vh;
+  }
+
+  .header {
+    padding: 0.8rem 0;
+    margin-top: -2rem;
+  }
+
+  .header-logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .header-subject-title {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin: 6rem 1.5rem;
+  }
+
+  .back-button {
+    font-size: 50px;
+    padding: 6px 12px;
+  }
+
+  .image-container {
+    max-width: 90%;
+    height: 180rem;
+    margin: 1.5rem auto;
+  }
+
+  .category-content {
+    padding: 15px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .category-page {
+    min-height: 200vh;
+    background-size: contain;
+  }
+  .header {
+    padding: 0.8rem 0;
+    margin-top: -2rem;
+  }
+  .header-logo {
+    width: 50px;
+    height: 50px;
+    margin: 1rem auto;
+  }
+  .header-subject-title {
+    font-size: clamp(2.2rem, 4vw, 7.8rem) !important;
+    margin: 6rem 2rem;
+  }
+  .back-button {
+    font-size: 55px;
+    padding: 6px 12px;
+    top: 5px;
+    left: 5px;
+    display: block;
+  }
+  .image-container {
+    max-width: 92%;
+    height: auto; /* Allow dynamic height */
+    margin: 1.8rem auto;
+    padding: 0.3rem;
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+  }
+  .category-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Prevent distortion */
+    display: block;
+  }
+  .category-content {
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .category-page {
+    min-height: 200vh;
+    background-size: contain;
+  }
+  .header {
+    padding: 0.8rem 0;
+    margin-top: -2rem;
+  }
+  .header-logo {
+    width: 50px;
+    height: 50px;
+    margin: 1rem auto;
+  }
+  .header-subject-title {
+    font-size: clamp(2.2rem, 4vw, 2.8rem);
+    margin: 6rem 2rem;
+  }
+  .back-button {
+    font-size: 55px;
+    padding: 6px 12px;
+    top: 5px;
+    left: 5px;
+    display: block;
+  }
+  .image-container {
+    max-width: 92%;
+    height: auto; /* Allow dynamic height */
+    margin: 1.8rem auto;
+    padding: 0.3rem;
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+  }
+  .category-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Prevent distortion */
+    display: block;
+  }
+  .category-content {
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+  }
+}
+
+/* Desktop (1025px and above) */
+@media screen and (min-width: 1025px) {
+  .category-page {
+    min-height: 400vh;
+  }
+
+  .header-subject-title {
+    font-size: clamp(3.5rem, 5vw, 4.5rem);
+  }
+
+  .image-container {
+    max-width: 85%;
+    height: 250rem;
+  }
+
+  .category-content {
+    max-width: 1200px;
+  }
 }
