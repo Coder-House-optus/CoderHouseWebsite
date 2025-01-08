@@ -158,20 +158,19 @@ html {
   margin: 3rem auto 0; /* Increased top margin to move button down */
   display: block; /* Added to help with centering */
 }
-
-/* @media (min-width:1400px) {
+@media (min-width:1400px) {
 
   .stats-section {
     transform: translateX(2.0rem);
     width: 100%;
     margin: -2rem auto 0;
   }
-} */
+}
 @media (max-width: 1200px) {
   .stats-section {
     transform: translateX(-5rem);
     width: 85%;
-    margin: -4rem auto 0;
+    margin: -3rem auto 0;
   }
 }
 
@@ -688,3 +687,92 @@ html {
   }
 }
 
+/* @media (min-width: 128px) and (max-width: 1440px) {
+  .hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  padding: 3.9rem .1rem 9.375rem;
+  min-height: 60vh;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 1.875rem;
+  }
+
+  .hero-left {
+    margin-left: .1rem;
+    margin-top: 1.875rem;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-right {
+    max-width: 50%;
+    width: 50%;
+    padding: 1.2rem;
+    margin: 4rem 3.8rem;
+  }
+  .hero-heading {
+    text-align: center;
+    font-size: clamp(1.25rem, 3vw, 1.7rem);
+    margin-bottom: 1.4rem;  
+    margin-top: -0.1rem; 
+  }
+  .program-selection {
+    width: 75%;
+  }
+
+  .hero-right input[type="text"],
+  .hero-right input[type="email"],
+  .hero-right input[type="phone"],
+  .hero-right input[type="url"],
+  .hero-right textarea {
+    width: 65%;
+  }
+
+  .stats-section {
+    width: 77%;
+    max-width: 90rem;
+    min-height: 3rem; 
+    margin: -6.2rem 0 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 0.875rem;
+    box-shadow: 0 0 0.3125rem rgba(14, 3, 3, 1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    transform: translateX(-7.1rem);
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.5rem;
+    flex: 1;
+    min-width: 250px; 
+  }
+  
+  .item img {
+    width: 3.75rem;
+    height: auto;
+    margin-right: 0.625rem;
+    flex-shrink: 0; 
+  }
+  
+  .text {
+    width: auto;
+    font-size: 1.25rem;
+    color: #333;
+    font-weight: bold;
+    line-height: 1.2; 
+  }
+} */

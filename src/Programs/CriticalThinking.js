@@ -69,7 +69,9 @@ const navigate = useNavigate();
         background: "none",
         border: "none",
         cursor: "pointer",
-        padding: "0.5rem",
+        padding: "0.5rem 1.5rem",
+        borderRadius:"5px",
+        backgroundColor:"#88C057",
         transition: "transform 0.2s ease",
         zIndex:100,
       }}
