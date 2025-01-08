@@ -14,26 +14,26 @@ const AboutUs = () => {
   ];
 
   const mentors = [
-    { name: "Firoz Khan", role: "Centre Head (Optus)" },
-    { name: "Yashpal Puri", role: "Corporate Trainer " },
-    { name: "Aditya Raj", role: "ICPC Amritapuri Regionalist Rank 82" },
-    { name: "Hiya Jain", role: "Competitive Programmer" },
-    { name: "Sunny Kumar", role: "Specialist at Codeforces Knight" },
-    { name: "Divyanshu Kumar Singhal", role: "Infosys SP Programmer" },
+    { name: "Firoz Khan", role: "Centre Head (Optus)", image: '../images/Ambassador/image4.jpg'},
+    { name: "Yashpal Puri", role: "Corporate Trainer ", image: '../images/Ambassador/image12.jpg'},
+    { name: "Aditya Raj", role: "ICPC Amritapuri Regionalist Rank 82", image: '../images/Ambassador/image1.jpg'},
+    { name: "Hiya Jain", role: "Competitive Programmer", image: '../images/Ambassador/image5.png'},
+    { name: "Sunny Kumar", role: "Specialist at Codeforces Knight", image: '../images/Ambassador/image9.jpg'},
+    { name: "Divyanshu Kumar Singhal", role: "Infosys SP Programmer", image: '../images/Ambassador/image7.jpg'},
   ];
 
   const techTeam = [
-    { name: "Aastha Purey", role: "Full Stack Developer", image: '/public/images/Ambassador/image13.jpg'},
-    { name: "Hitesh Sharma", role: "Full Stack Developer" },
-    { name: "Ishika Raj", role: "Frontend / Backend" },
-    { name: "Prakhar Pandey", role: "Android Developer" },
-    { name: "Aanchal Agarwal", role: "Graphic Designer" },
+    { name: "Aastha Purey", role: "Full Stack Developer", image: '../images/Ambassador/image13.jpg'},
+    { name: "Hitesh Sharma", role: "Full Stack Developer", image: '../images/Ambassador/image10.jpg'},
+    { name: "Ishika Raj", role: "Frontend / Backend", image: '../images/Ambassador/image15.jpg'},
+    { name: "Prakhar Pandey", role: "Android Developer", image: '../images/Ambassador/image2.png'},
+    { name: "Aanchal Agarwal", role: "Graphic Designer", image: '../images/Ambassador/image14.jpg'},
   ];
 
   const nonTechTeam = [
-    { name: "Khushi Shrivastava", role: "Centre Growth Associate" },
-    { name: "Shruti Singour", role: "Academic Associate" },
-    { name: "Nandini Patel", role: "Academic and Career Counsellor" },
+    { name: "Khushi Shrivastava", role: "Centre Growth Associate", image: '../images/Ambassador/image8.jpg'},
+    { name: "Shruti Singour", role: "Academic Associate", image: '../images/Ambassador/image6.jpg'},
+    { name: "Nandini Patel", role: "Academic and Career Counsellor", image: '../images/Ambassador/image11.jpg'},
   ];
 
   const TeamSection = ({ title, members }) => (
@@ -44,6 +44,7 @@ const AboutUs = () => {
           <div key={index} className="team-card">
             <div className="card-header">
               <div className="profile-image" />
+              <img alt="" src={member.image} className="profile-image"></img>
             </div>
             <div className="card-content">
               <h3>{member.name}</h3>
@@ -101,7 +102,7 @@ const AboutUs = () => {
             </div>
             <div className="content-wrapper">
               <div className="text-content">
-              <p>Join us and experience real transformation in your career:</p>
+                <p>Join us and experience real transformation in your career:</p>
                 <ul className="benefits-list">
                   <li>
                     <span className="check-mark">✓</span>
@@ -133,12 +134,12 @@ const AboutUs = () => {
           <div className="section-content">
             <h2>We Give Back</h2>
             <p>
-              At Coder House, We believe in making education accessible to all. 
-              Our mission is to uplift students in Tier 2 and Tier 3 cities by providing them 
-              with high-quality coding education, empowering them to unlock new career 
-              opportunities and build a better future. For students in Tier 1 cities, we offer 
-              additional support to help them refine their skills, advance their careeers and stay 
-              ahead in the ever-evolving tech landscape. We're dedicated to creating a level playing 
+              At Coder House, We believe in making education accessible to all.
+              Our mission is to uplift students in Tier 2 and Tier 3 cities by providing them
+              with high-quality coding education, empowering them to unlock new career
+              opportunities and build a better future. For students in Tier 1 cities, we offer
+              additional support to help them refine their skills, advance their careeers and stay
+              ahead in the ever-evolving tech landscape. We're dedicated to creating a level playing
               field ensuring every student has the chance to suceed, no matter where they're from.
             </p>
           </div>
@@ -151,14 +152,24 @@ const AboutUs = () => {
       </div>
 
       <section className="cta-section">
-      <div className="cta-content">
-        <p className="cta-heading">
-          Unlock your potential and shape your future with Coder House. <br />
-          Join us today to start your learning today!
-        </p>
-        <button className="cta-button">Join Us Today!</button>
+        <div className="cta-content">
+          <p className="cta-heading">
+            Unlock your potential and shape your future with Coder House. <br />
+            Join us today to start your learning today!
+          </p>
+          <button className="cta-button">Join Us Today!</button>
+        </div>
+      </section>
+      <div className='card-section-about'>
+        <div className="contact-card">
+          <img src="./images/about-contact.jpg" alt="Contact" className="contact-image" />
+          <div className="contact-details">
+            <h3>Contact Us</h3>
+            <p>Email: coderhouseoptus@gmail.com</p>
+            <p>Phone: +1 (555) 123-4567</p>
+          </div>
+        </div>
       </div>
-    </section>
 
       <Footer />
     </>

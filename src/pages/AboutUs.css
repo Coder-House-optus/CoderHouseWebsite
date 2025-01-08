@@ -502,7 +502,6 @@
 .cta-content {
   max-width: 900px;
   margin: 0 auto;
-  margin-bottom: 200px;
 }
 
 .cta-heading {
@@ -544,4 +543,42 @@
     padding: 0.6rem 1.5rem;
     font-size: 0.9rem;
   }
+}
+
+/* Contact Card */
+.card-section-about{
+  margin-bottom: 200px;
+}
+.contact-card {
+  width: 400px;
+  margin: 0 auto 60px;
+  padding: 20px;
+  margin-bottom: 100px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow:0 4px 8px rgba(0, 0, 0, 0.2), 
+  4px 0 8px rgba(0, 0, 0, 0.2),
+  -4px 0 8px rgba(0, 0, 0, 0.2),
+  0 -4px 8px rgba(0, 0, 0, 0.2);;
+  text-align: center;
+}
+
+.contact-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.contact-details h3 {
+  font-size: 1.5rem;
+  color: #0E2031;
+  margin-bottom: 15px;
+}
+
+.contact-details p {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 8px 0;
+  line-height: 1.4;
 }
