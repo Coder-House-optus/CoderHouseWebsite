@@ -158,12 +158,19 @@ html {
   margin: 3rem auto 0; /* Increased top margin to move button down */
   display: block; /* Added to help with centering */
 }
+@media (min-width:1400px) {
 
+  .stats-section {
+    transform: translateX(2.0rem);
+    width: 100%;
+    margin: -2rem auto 0;
+  }
+}
 @media (max-width: 1200px) {
   .stats-section {
     transform: translateX(-5rem);
     width: 85%;
-    margin: -4rem auto 0;
+    margin: -3rem auto 0;
   }
 }
 

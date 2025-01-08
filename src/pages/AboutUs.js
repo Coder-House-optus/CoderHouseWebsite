@@ -75,7 +75,7 @@ const AboutUs = () => {
 
           <div className="about-content">
             <div className="about-image">
-              <div className="image-container">
+              <div className="image-containerss">
                 <img
                   src="/api/placeholder/400/400"
                   alt="Coder illustration"
