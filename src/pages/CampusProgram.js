@@ -109,7 +109,7 @@ const CampusProgram = () => {
       duration: "2 months", 
       cost: "$400", 
       image: "/images/CT AND DM.png",
-      link: "/programs/personality-development"  // Add unique link for each program
+      link: "/programs/CriticalThinking"  // Add unique link for each program
     },
     { 
       
@@ -119,7 +119,7 @@ const CampusProgram = () => {
       duration: "1 month", 
       cost: "$250", 
       image: "/images/GDPI Card.png",
-      link: "/programs/gd-pi"  // Add unique link for each program
+      link: "/programs/GDPersonalInterview"  // Add unique link for each program
     }
   ];
   

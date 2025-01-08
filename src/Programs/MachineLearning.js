@@ -32,7 +32,7 @@ const MachineLearning = () => {
 
   const titleStyles = {
     fontWeight: '900',
-    fontSize: '3em',
+    fontSize: '2em',
     color: 'rgb(6, 6, 6)',
     textAlign: 'center',
     margin: '0',
@@ -100,7 +100,7 @@ const MachineLearning = () => {
 
       {/* Image section if you want to add a flowchart or image */}
       <img
-        src="/images/Roadmaps/Machine Learning_ From Beginner to Expert-roadmap.jpg" // Replace with your roadmap image URL
+        src="/images/LearningOfferings/java.jpg" // Replace with your roadmap image URL
         alt="Machine Learning Roadmap"
         style={flowchart}
       />

@@ -32,7 +32,7 @@ const GDPersonalInterview = () => {
 
   const titleStyles = {
     fontWeight: '900',
-    fontSize: '3em',
+    fontSize: '2em',
     color: 'rgb(6, 6, 6)',
     textAlign: 'center',
     margin: '0',
@@ -100,7 +100,7 @@ const navigate = useNavigate();
 
       {/* Image section if you want to add a flowchart or image */}
       <img
-        src="/images/Roadmaps/Interview Group Discussion Preparation-roadmap.jpg" // Replace with your roadmap image URL
+        src="/images/LearningOfferings/gd.jpg" // Replace with your roadmap image URL
         alt="GD & Personal Interview Roadmap"
         style={flowchart}
       />

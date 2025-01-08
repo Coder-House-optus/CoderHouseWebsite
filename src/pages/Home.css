@@ -167,6 +167,15 @@ html {
     margin: -2rem auto 0;
   }
 }
+
+/* @media (min-width:1400px) {
+
+  .stats-section {
+    transform: translateX(2.0rem);
+    width: 100%;
+    margin: -2rem auto 0;
+  }
+} */
 @media (max-width: 1200px) {
   .stats-section {
     transform: translateX(-5rem);
@@ -688,3 +697,4 @@ html {
     line-height: 1.2; /* Added line height for better text spacing */
   }
 }
+

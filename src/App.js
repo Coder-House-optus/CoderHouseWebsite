@@ -30,7 +30,7 @@ import Aptitude from './Programs/aptitude';
 import Reasoning from './Programs/reasoning';
 import English from './Programs/english';
 import CriticalThinking from './Programs/CriticalThinking';
-import GDPersonalInterview from './Programs/gd-personal-interview';
+import GDPersonalInterview from './Programs/GDPersonalInterview';
 import TermsAndConditions from './pages/TermsAndConditions.js';
 import PrivacyPolicy from './pages/PrivacyPolicy.js';
 
@@ -83,7 +83,10 @@ function App() {
           <Route path="/programs/reasoning" element={<Reasoning />} />
           <Route path="/programs/english" element={<English />} />
           <Route path="/programs/CriticalThinking" element={<CriticalThinking />} />
-          <Route path="/programs/gd-personal-interview" element={<GDPersonalInterview />} />
+          <Route path="/programs/GDPersonalInterview" element={<GDPersonalInterview />} />
+          <Route path="/programs/criticalthinking" element={<CriticalThinking />} />
+
+
           <Route path="/notes" element={<Notes />} />
     <Route path="/notes/category/:category" element={<CategoryPage />} />
 
