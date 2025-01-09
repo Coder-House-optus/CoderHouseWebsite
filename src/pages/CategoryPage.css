@@ -37,12 +37,14 @@
 }
 
 .header-subject-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 5vw, 3rem) !important;
   text-align: center;
-  margin: 0 3rem;
+  margin: 0 3rem !important;
   font-weight: bold;
   color: white;
-  margin-top: 10rem;
+  margin-top: 7rem !important;
+  position: relative;
+  z-index: 1;
 }
 .category-content {
   max-width: 1200px;
@@ -51,12 +53,10 @@
   position: relative;
 }
 
-
 .back-button {
-  position: absolute;
-  top: 50%;
+  position: fixed;
+  top: 14%;
   left: 2rem;
-  transform: translateY(-50%);
   padding: 8px 16px;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 1);
@@ -64,9 +64,8 @@
   cursor: pointer;
   font-size: 2.5rem;
   color: rgb(46, 112, 13);
-  transition: all 0.3s ease;
   z-index: 1;
-  margin-top:90px;
+  margin-top: 9px;
 }
 .back-button:hover {
   background-color: rgb(65, 146, 28);
@@ -121,7 +120,7 @@
   bottom: 50px;
   right: 0;
 }
-/* Base styles remain unchanged */
+
 
 /* Mobile (up to 360px) */
 @media screen and (max-width: 360px) {
@@ -209,13 +208,13 @@
   }
 
   .header-subject-title {
-    font-size: clamp(2rem, 4vw, 2.5rem);
-    margin: 6rem 1.5rem;
+    font-size: clamp(3rem, 6vw, 3.5rem) !important; /* Increased font size with !important */
+    margin-top: 10rem !important;
   }
 
   .back-button {
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 2rem;
     transform: translateY(-50%);
     padding: 8px 16px;
@@ -377,21 +376,3 @@
     position: relative;
   }
 }
-/* @media screen and (min-width: 1025px) {
-  .category-page {
-    min-height: 400vh;
-  }
-
-  .header-subject-title {
-    font-size: clamp(3.5rem, 5vw, 4.5rem);
-  }
-
-  .image-container {
-    max-width: 85%;
-    height: 250rem;
-  }
-
-  .category-content {
-    max-width: 1200px;
-  }
-} */
