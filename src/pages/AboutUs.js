@@ -64,7 +64,7 @@ const AboutUs = () => {
           <div className="about-container">
             <div className="about-header">
               <h1>About Us</h1>
-              <p>
+              <p className="about-header-text">
                 Coder House is a dynamic learning platform that empowers
                 individuals to master coding through hands-on courses, expert
                 guidance and a vibrant community.
@@ -80,11 +80,11 @@ const AboutUs = () => {
 
               <div className="about-features">
                 <h2>Unlock Your Potential,<br /> Code Your Future</h2>
-                <p>Here's why Coder House is the best:</p>
+                <p className="features-intro">Here's why Coder House is the best:</p>
                 <div className="features-grid">
                   {features.map((feature, index) => (
                     <div key={index} className="feature-item">
-                      {feature}
+                    <span className="feature-text">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -105,15 +105,15 @@ const AboutUs = () => {
                 <ul className="benefits-list">
                   <li>
                     <span className="check-mark">✓</span>
-                    <span>147% Average Hike in career growth</span>
+                    <span className="feature-text">147% Average Hike in career growth</span>
                   </li>
                   <li>
                     <span className="check-mark">✓</span>
-                    <span>1000+ Careers Transformed with real-world skills</span>
+                    <span className="feature-text">1000+ Careers Transformed with real-world skills</span>
                   </li>
                   <li>
                     <span className="check-mark">✓</span>
-                    <span>50+ Experienced Mentors guiding you to success</span>
+                    <span className="feature-text">50+ Experienced Mentors guiding you to success</span>
                   </li>
                 </ul>
               </div>

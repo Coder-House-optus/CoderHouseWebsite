@@ -37,7 +37,7 @@ const Footer = () => {
         {/* Footer Links */}
         <div className="footer-links">
           <ul>
-            <li><a href="mailto:coderhouseoptus@gmail.com">Contact Us</a></li>
+            <li><a href="../AboutUs">Contact Us</a></li>
             <li><a href="/privacy">Privacy Policy</a></li>
             <li><a href="/Terms&Conditions">Terms & Condition</a></li>
           </ul>

@@ -5,7 +5,7 @@ import Navigation from "../components/Navigation";
 const achievers = [
   {
     company: "Cognizant",
-    logo: "../images/Cognizant.png",
+    logo: "../images/cognizant.png",
     people: [
       { name: "Achyut Jha", photo: "../images/Cognizant/Achyut Jha.jpg" },
       { name: "Adarsh Vishwakarma", photo: "../images/Cognizant/Adarsh Vishwakarma.jpg" },
@@ -63,7 +63,7 @@ const Achievers = () =>{
   );
 
   return (
-    <div className="main-container">
+    <div className="main-containerss">
       <Navigation />
       <section className="content-section">
         <div className="section-header left-align">
