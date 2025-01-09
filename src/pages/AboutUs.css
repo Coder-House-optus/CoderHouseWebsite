@@ -2,9 +2,7 @@
   min-height: 100vh;
   background-color: #f9fafb;
   overflow: hidden;
-  background: linear-gradient(90deg, #8fc7ff, #ffffff, #3C5C7B);
 }
-
 
 .containeerrs {
   width: 100%;
@@ -168,6 +166,20 @@ h1{
   z-index: 1;
 }
 
+.why-choose-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/public/images/blue doted lines 2.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1; /* Adjust this value between 0 and 1 to control opacity */
+  z-index: -1;
+}
+
 .why-choose-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -266,11 +278,26 @@ h1{
 
 .team-section {
   padding: 1rem 0;
-  background-image: url('/public/images/lineblend 1.png');
+  background-image: url('/public/images/blue doted lines 2.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  
+  z-index: 1;
+}
+
+.team-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/public/images/blue doted lines 2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.1; /* Adjust this value between 0 and 1 to control opacity */
+  z-index: -1;
 }
 
 .team-section h2 {
