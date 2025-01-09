@@ -75,7 +75,7 @@
   transition: transform 0.2s ease;
   
   width: 90%;  /* Set fixed width percentage */
-  min-height: 120px; /* Minimum height to maintain consistency */
+  min-height: 200px; /* Minimum height to maintain consistency */
 }
 
 .info-card:hover {
@@ -127,7 +127,7 @@
   border-radius: 8px;
   box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.2);
 }
-@media (min-width:1024px)
+@media (min-width:1025px)
 {
   .main-layout {
     flex-direction: row;
@@ -152,7 +152,7 @@
     width: 80%; /* Consistent width in tablet/desktop */
   }
 }
-@media (min-width: 768px) and (max-width:1023px){
+@media (min-width: 768px) and (max-width:1024px){
   .main-layout {
     flex-direction: row;
     align-items: flex-start;
@@ -191,7 +191,7 @@
 
   .info-card {
     padding: 15px;
-    width: 90%; /* Slightly wider on mobile */
+    width: 88%; /* Slightly wider on mobile */
   }
 
   .card-contents h3 {
