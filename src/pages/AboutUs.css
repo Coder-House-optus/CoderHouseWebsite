@@ -626,19 +626,24 @@ h1{
 
 @media (max-width: 480px) {
   .about-header-text {
-    font-size: 1.5rem !important;
-    line-height: 2rem;
+    font-size: 2rem !important;
+    line-height: 2.5rem;
     padding: 0 1rem;
   }
 
+h1{
+  font-size: 3.5rem !important;
+    line-height: 3.5rem;
+}
+
   .features-intro {
-    font-size: 1.5rem !important;
-    line-height: 2rem;
+    font-size: 2rem !important;
+    line-height: 2.5rem;
     margin-bottom: 1.5rem;
   }
 
   .feature-text {
-    font-size: 1.25rem !important;
+    font-size: 2rem !important;
   }
 
   .cta-heading {

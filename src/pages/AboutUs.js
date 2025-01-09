@@ -105,15 +105,15 @@ const AboutUs = () => {
                 <ul className="benefits-list">
                   <li>
                     <span className="check-mark">✓</span>
-                    <span>147% Average Hike in career growth</span>
+                    <span className="feature-text">147% Average Hike in career growth</span>
                   </li>
                   <li>
                     <span className="check-mark">✓</span>
-                    <span>1000+ Careers Transformed with real-world skills</span>
+                    <span className="feature-text">1000+ Careers Transformed with real-world skills</span>
                   </li>
                   <li>
                     <span className="check-mark">✓</span>
-                    <span>50+ Experienced Mentors guiding you to success</span>
+                    <span className="feature-text">50+ Experienced Mentors guiding you to success</span>
                   </li>
                 </ul>
               </div>
