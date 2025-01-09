@@ -129,7 +129,7 @@ const Contest = () => {
 </div>
 </div>
         <div>
-          <h2>Our Features</h2>
+          <h2 className="workflow-list1">Our Features</h2>
         </div>
       </div>
       
