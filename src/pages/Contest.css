@@ -181,34 +181,68 @@
     width: 80%; /* Consistent width in tablet/desktop */
   }
 }
-@media (min-width:481) and (max-width:767)
-{
+
+
+@media (max-width: 767px) {
   .info-card {
     padding: 15px;
     width: 90%; /* Slightly wider on mobile */
   }
-  
-}
-@media (max-width: 480px) {
-  .contest-title {
-    font-size: 2rem;
-  }
 
-  .info-card {
-    padding: 15px;
-    width: 88%; /* Slightly wider on mobile */
+  .contest-title {
+    font-size: 2.2rem; /* Increase the font size for mobile view */
   }
 
   .card-contents h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem; /* Increased font size for mobile */
   }
 
   .card-contents p {
-    font-size: 1rem;
+    font-size: 1.2rem; /* Fixed the typo */
   }
 
   .info-card img {
     width: 80px;
     height: 80px;
   }
+/* Increase font size for the main list */
+.workflow-list {
+  font-size: 18px;  /* Increase font size of list items */
+  line-height: 1.6;  /* Adjust line height for better spacing */
 }
+
+/* Increase font size for nested list items */
+.workflow-list .workflow-item {
+  font-size: 16px;  /* Adjust size for individual list items */
+}
+
+/* Adjust font size for the sub-items inside nested lists */
+.workflow-list .workflow-list .workflow-item {
+  font-size: 14px;  /* Adjust size for deeper nested list items */
+}
+
+/* Apply font size to the new workflow-list class */
+.workflow-list {
+  font-size: 18px;  /* Increase font size of list items */
+  line-height: 1.6;  /* Adjust line height for better spacing */
+}
+
+/* Increase font size for individual list items */
+.workflow-list .workflow-item {
+  font-size: 16px;  /* Adjust size for individual list items */
+}
+
+/* Adjust font size for deeper nested list items */
+.workflow-list .workflow-list .workflow-item {
+  font-size: 14px;  /* Adjust size for nested items */
+}
+.workflow-list1{
+  font-size: 3em;
+}
+.contest-container{
+  padding: 10%;
+  overflow: hidden;
+}
+}
+
+

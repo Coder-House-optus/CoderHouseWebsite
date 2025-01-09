@@ -284,6 +284,8 @@
 
 .extraFeatures-title{
   font-size: 3em;
+  margin-top: 60px;
+
 }
 
 
@@ -291,7 +293,7 @@
   /* Adjusting the title */
   .extraFeatures-title {
     font-size: 3.5rem; /* Increase title size */
-    margin-bottom: 10px;
+    margin-bottom: 50px;
   }
 
   /* Adjusting the content container */
@@ -311,7 +313,6 @@
     flex-direction: column; /* Stack cards vertically */
     gap: 6px; /* Smaller gap between cards */
     margin: 0px 0;
-
     width: 90%;
   }
 

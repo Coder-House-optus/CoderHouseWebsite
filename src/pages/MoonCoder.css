@@ -160,7 +160,7 @@
   margin-bottom: 0px;
   color: #000000;
   padding: 0px;
-  margin-top: 30px;
+  margin-top: 70px;
   font-size: 2em;
 }
 
@@ -220,7 +220,7 @@ img[alt="Card 2"], img[alt="Card 4"] {
     margin-left: 14px;
     }
     .column-1{
-      padding-top:10%;
+      padding-top:1%;
     margin-right: 5px;
     margin-left: 14px;
     }
@@ -304,7 +304,6 @@ img[alt="Card 2"], img[alt="Card 4"] {
   margin-left: 14px;
   }
   .column-1{
-    padding-top:10%;
   margin-right: 5px;
   margin-left: 14px;
   }
@@ -315,5 +314,10 @@ img[alt="Card 2"], img[alt="Card 4"] {
   }
   img[alt="Card 2"], img[alt="Card 4"] {
     max-width: 25%; /* Further reduce maximum width */
+  }
+  .column-1 {
+    /* padding-top: 10%; */
+    margin-right: 5px;
+    margin-left: 14px;
   }
 }

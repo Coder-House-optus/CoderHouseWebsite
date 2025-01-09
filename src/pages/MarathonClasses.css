@@ -57,11 +57,27 @@ h2 {
 }
 
 .marathon-buttons1 {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+  text-align: center; /* Center the buttons horizontally */
+  margin-top: 30px; /* Add some margin at the top */
 }
+
+.marathon-buttons1 button {
+  font-size: 18px; /* Increase font size to make buttons bigger */
+  padding: 15px 30px; /* Increase padding for larger buttons */
+  margin: 10px; /* Space out the buttons */
+  background-color: #A8D85D; /* Green color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  display: inline-block; /* Display buttons inline but centered */
+}
+
+.marathon-buttons1 button:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+}
+
+
 
 .marathon-buttons1 button:hover {
   transform: scale(1.1); /* Slightly grow when hovered */
@@ -230,7 +246,7 @@ h2 {
     
     .company-specific{
       margin-top: 50px;
-      font-size: 1.9em;
+      font-size: 3em;
     }
 
     /* Mobile View for buttons */
