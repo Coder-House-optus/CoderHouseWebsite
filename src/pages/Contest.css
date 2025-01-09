@@ -7,7 +7,7 @@
   min-height: 100vh; /* Add this to ensure container takes full viewport height */
 }
 .contest-upper{
-  margin:10% auto;
+  margin:5% auto;
 }
 .contest-upper  h3 span{
  color: #A8D85D

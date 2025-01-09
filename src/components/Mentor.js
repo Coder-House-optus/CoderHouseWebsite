@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react';
 import './Mentor.css';
 
 const mentorImages = [
+  "/images/Our Mentors/Aditya raj.png",
+  "/images/Our Mentors/Divyanshu singhal.png",
+  "/images/Our Mentors/Hiya jain.png",
+  "/images/Our Mentors/Sunny Kumar.png",
   "/images/Our Mentors/Abhay singh.png",
   "/images/Our Mentors/Akash tiwari.png",
   "/images/Our Mentors/Avinash JHA.png",
-  //"/images/Our Mentors/Hiya.png",
   "/images/Our Mentors/Divyanshi singh.png",
   "/images/Our Mentors/Enoch S SAM.png",
   "/images/Our Mentors/Piyush.png",

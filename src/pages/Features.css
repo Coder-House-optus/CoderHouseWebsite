@@ -297,7 +297,8 @@
   /* Adjusting the content container */
   .extraFeatures-content {
     padding: 10px; /* Slightly reduce padding */
-    margin-bottom: 20px;
+    margin-bottom: 200px;
+    margin-top: 60px;
   }
 
   /* Center image adjustments */
@@ -305,24 +306,24 @@
     width: 80%; /* Reduce the width */
   }
 
-
   /* Adjusting card layout */
   .extraFeatures-cards {
     flex-direction: column; /* Stack cards vertically */
     gap: 6px; /* Smaller gap between cards */
     margin: 0px 0;
-    margin-left: -20px;
+
+    width: 90%;
   }
 
   .extraFeatures-card {
     height: auto; /* Allow cards to resize dynamically */
     width: 100%; /* Full-width cards */
-    padding: 10px; /* Reduce padding */
+    padding: 1px; /* Reduce padding */
   }
 
   .extraFeatures-card-content {
     height: auto; /* Adjust height for content */
-    width: 100%;
+    width: 90%;
     padding: 30px; /* Reduce padding */
   }
 
@@ -353,7 +354,7 @@
 
 
 
-@media (max-width: 1024px) {
+@media only screen and (max-width: 1024px) and (min-width: 768px)  {
   /* Adjust the cards layout to have two rows of four cards each */
   .extraFeatures-cards {
     display: flex;

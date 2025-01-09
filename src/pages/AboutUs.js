@@ -14,28 +14,27 @@ const AboutUs = () => {
   ];
 
   const mentors = [
-    { name: "Firoz Khan", role: "Centre Head (Optus)", image: '../images/Ambassador/image4.jpg'},
-    { name: "Yashpal Puri", role: "Corporate Trainer ", image: '../images/Ambassador/image12.jpg'},
-    { name: "Aditya Raj", role: "ICPC Amritapuri Regionalist Rank 82", image: '../images/Ambassador/image1.jpg'},
-    { name: "Hiya Jain", role: "Competitive Programmer", image: '../images/Ambassador/image5.png'},
-    { name: "Sunny Kumar", role: "Specialist at Codeforces Knight", image: '../images/Ambassador/image9.jpg'},
-    { name: "Divyanshu Kumar Singhal", role: "Infosys SP Programmer", image: '../images/Ambassador/image7.jpg'},
+    { name: "Firoz Khan", role: "Centre Head (Optus)", image: '../images/Ambassador/image4.jpg' },
+    { name: "Yashpal Puri", role: "Corporate Trainer ", image: '../images/Ambassador/image12.jpg' },
+    { name: "Aditya Raj", role: "ICPC Amritapuri Regionalist Rank 82", image: '../images/Ambassador/image1.jpg' },
+    { name: "Hiya Jain", role: "Competitive Programmer", image: '../images/Ambassador/image5.png' },
+    { name: "Sunny Kumar", role: "Specialist at Codeforces Knight", image: '../images/Ambassador/image9.jpg' },
+    { name: "Divyanshu Kumar Singhal", role: "Infosys SP Programmer", image: '../images/Ambassador/image7.jpg' },
   ];
 
   const techTeam = [
-    { name: "Aastha Purey", role: "Full Stack Developer", image: '../images/Ambassador/image13.jpg'},
-    { name: "Hitesh Sharma", role: "Full Stack Developer", image: '../images/Ambassador/image10.jpg'},
-    { name: "Ishika Raj", role: "Frontend / Backend", image: '../images/Ambassador/image15.jpg'},
-    { name: "Prakhar Pandey", role: "Android Developer", image: '../images/Ambassador/image2.png'},
-    { name: "Aanchal Agarwal", role: "Graphic Designer", image: '../images/Ambassador/image14.jpg'},
+    { name: "Aastha Purey", role: "Full Stack Developer", image: '../images/Ambassador/image13.jpg' },
+    { name: "Hitesh Sharma", role: "Full Stack Developer", image: '../images/Ambassador/image10.jpg' },
+    { name: "Ishika Raj", role: "Frontend / Backend", image: '../images/Ambassador/image15.jpg' },
+    { name: "Prakhar Pandey", role: "Android Developer", image: '../images/Ambassador/image2.png' },
+    { name: "Aanchal Agarwal", role: "Graphic Designer", image: '../images/Ambassador/image14.jpg' },
   ];
 
   const nonTechTeam = [
-    { name: "Khushi Shrivastava", role: "Centre Growth Associate", image: '../images/Ambassador/image8.jpg'},
-    { name: "Shruti Singour", role: "Academic Associate", image: '../images/Ambassador/image6.jpg'},
-    { name: "Nandini Patel", role: "Academic and Career Counsellor", image: '../images/Ambassador/image11.jpg'},
+    { name: "Khushi Shrivastava", role: "Centre Growth Associate", image: '../images/Ambassador/image8.jpg' },
+    { name: "Shruti Singour", role: "Academic Associate", image: '../images/Ambassador/image6.jpg' },
+    { name: "Nandini Patel", role: "Academic and Career Counsellor", image: '../images/Ambassador/image11.jpg' },
   ];
-
   const TeamSection = ({ title, members }) => (
     <section className="team-section">
       <h2>{title}</h2>
