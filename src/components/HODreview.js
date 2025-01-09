@@ -3,7 +3,7 @@ import './HODreview.css';
 
 const HODreview = () => {
   // Array of review images for easy mapping
-  const reviewImages = Array.from({ length: 8 }, (_, i) => ({
+  const reviewImages = Array.from({ length: 9 }, (_, i) => ({
     id: i + 1,
     src: `../images/HOD/review${i + 1}.jpg`,
     alt: `Review ${i + 1}`
