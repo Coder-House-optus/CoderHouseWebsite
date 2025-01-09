@@ -122,7 +122,7 @@ const CollegeProgram = () => {
           Our <span className="highlight">Moments</span>
         </h2>
         <div className="moments-content">
-          <div className="description">
+          <div className="descriptionss">
             <h3>Interview Session</h3>
             <p>{moments[activeIndex].description}</p>
           </div>
