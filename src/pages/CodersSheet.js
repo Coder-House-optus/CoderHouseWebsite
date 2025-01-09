@@ -89,7 +89,7 @@ const CoderSheet = () => {
         <div className="image-item">
           <img
             className="image-thumbnail"
-            src="/images/arrays.jpeg"
+            src="/images/Arrays.jpeg"
             alt="Arrays"
           />
           <div className="image-action">
@@ -104,7 +104,7 @@ const CoderSheet = () => {
         <div className="image-item">
           <img
             className="image-thumbnail"
-            src="/images/trees.jpeg"
+            src="/images/Trees.jpeg"
             alt="Trees"
           />
           <div className="image-action">

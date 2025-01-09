@@ -12,20 +12,22 @@ const CollegeProgram = () => {
     120: "https://docs.example.com/120-hour-program",
     90: "https://docs.google.com/document/d/1R1I1N85g2fowIr7_WKHD5aB8C6Bs3NjiKnl2lr0qvgA/edit?tab=t.0",
     75: "https://docs.google.com/document/d/10yD5s_UdITyy-f7QBn4sYkqsajci3jXz/edit?usp=sharing&ouid=107632382243829537151&rtpof=true&sd=true",
-    60: "https://docs.google.com/document/d/1vbU5NcX1mynWWBnMsmbFQP1sIlS2q7dLyzMrVf6J8nA/edit?tab=t.0"
+    60: "https://docs.google.com/document/d/1e3L6-xJ334erc4mLGU4QltI1ukbz5QqG/edit?usp=sharing&ouid=107632382243829537151&rtpof=true&sd=true"
   };
 
   // Moments Data
   const moments = [
     {
-      description: 'Our first batch of graduates in 2020 marked a milestone for Coder House, showcasing immense talent and dedication.',
+      description: 'Through our hackathons, students have transformed ideas into impactful solutions, gaining hands-on experience, collaboration skills, and recognition, paving the way to achieve their career aspirations.',
       img1: '../images/moments/moment1.jpg',
       img2: '../images/moments/moment2.jpg',
+      title:'Hackathons',
     },
     {
-      description: 'The 2022 hackathon saw incredible teamwork and creativity as students tackled real-world challenges with innovative solutions.',
+      description: 'Our comprehensive interview sessions have empowered students to secure positions in their dream companies by enhancing their technical skills, boosting confidence, and providing real-world problem-solving experience.',
       img1: '../images/moments/moment5.jpg',
       img2: '../images/moments/moment4.jpg',
+      title:'Interview Session',
     },
   ];
 
@@ -123,7 +125,7 @@ const CollegeProgram = () => {
         </h2>
         <div className="moments-content">
           <div className="descriptionss">
-            <h3>Interview Session</h3>
+            <h3>{moments[activeIndex].title}</h3>
             <p>{moments[activeIndex].description}</p>
           </div>
           <div className="images">
@@ -139,7 +141,7 @@ const CollegeProgram = () => {
 
       {/* Associations Section */}
       <section className="associations-section">
-        <h2>Our <span className="highlight">Associations</span></h2>
+        <h2 className="highlight11">Our <span className="highlight10">Associations</span></h2>
         <div className="logos-grid">
           {['partner1.webp', 'partner2.png', 'partner3.png', 'partner4.jpg'].map((logo, index) => (
             <img key={index} src={`../images/Association/${logo}`} alt={`Partner ${index + 1}`} />

@@ -59,6 +59,12 @@ p {
   margin: 0 auto;
 }
 
+.highlight10{
+  font-size: 2em;
+}
+.highlight11{
+  font-size: 2em;
+}
 /* Default styles for greeting cards */
 .greeting-card {
   padding: 20px;

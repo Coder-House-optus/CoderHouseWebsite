@@ -428,6 +428,7 @@ html {
     min-width: 45%;
     margin: 0.5rem 0;
   }
+  
 }
 @media (min-width: 999px) and (max-width: 1154px) {
   .hero {
