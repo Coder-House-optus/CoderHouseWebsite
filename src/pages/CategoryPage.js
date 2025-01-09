@@ -15,9 +15,10 @@ const CategoryPage = () => {
       <Navigation />
       <header className="header">
         <div className="header-content">
-          <button 
-            onClick={() => navigate(-1)}
-            className="back-button"
+        <button 
+            onClick={() => navigate(-1)} 
+            className="back-button" 
+            aria-label="Go Back" /* Accessible label */
           >
             ←
           </button>

@@ -63,7 +63,7 @@ const Achievers = () =>{
   );
 
   return (
-    <div className="main-container">
+    <div className="main-containerss">
       <Navigation />
       <section className="content-section">
         <div className="section-header left-align">
