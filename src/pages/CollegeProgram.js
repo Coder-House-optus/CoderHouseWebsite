@@ -141,7 +141,7 @@ const CollegeProgram = () => {
 
       {/* Associations Section */}
       <section className="associations-section">
-        <h2>Our <span className="highlight">Associations</span></h2>
+        <h2 className="highlight11">Our <span className="highlight10">Associations</span></h2>
         <div className="logos-grid">
           {['partner1.webp', 'partner2.png', 'partner3.png', 'partner4.jpg'].map((logo, index) => (
             <img key={index} src={`../images/Association/${logo}`} alt={`Partner ${index + 1}`} />
