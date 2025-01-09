@@ -19,13 +19,18 @@ const Footer = () => {
           </p>
           {/* White Square Overlay */}
           <div className="white-square">
- <iframe 
-   className="map-container"
-   src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d229.23106539936572!2d79.9095391!3d23.1812547!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981b1d49488b069%3A0xd0324f5742a34f41!2sOptus%20EdTech%20Solutions%2F%20Coder%20House%20-%20CAT%7C%20MAT%7C%20CMAT%7C%20CAMPUS%20PLACEMENT%20(CRT)!5e0!3m2!1sen!2sin!4v1736236995503!5m2!1sen!2sin"
-   allowFullScreen=""
-   loading="lazy"
-   referrerPolicy="no-referrer-when-downgrade"
- ></iframe>
+  <a 
+    href="https://www.google.com/maps/place/Optus+EdTech+Solutions%2F+Coder+House+-+CAT%7C+MAT%7C+CMAT%7C+CAMPUS+PLACEMENT+(CRT)/@23.1811776,79.9094439,17z/data=!4m14!1m7!3m6!1s0x3981b1d49488b069:0xd0324f5742a34f41!2sOptus+EdTech+Solutions%2F+Coder+House+-+CAT%7C+MAT%7C+CMAT%7C+CAMPUS+PLACEMENT+(CRT)!8m2!3d23.1811776!4d79.9094439!16s%2Fg%2F11rzwtsxxw!3m5!1s0x3981b1d49488b069:0xd0324f5742a34f41!8m2!3d23.1811776!4d79.9094439!16s%2Fg%2F11rzwtsxxw?entry=ttu&g_ep=EgoyMDI1MDEwNi4xIKXMDSoASAFQAw%3D%3D" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    <img 
+      className="map-container" 
+      src="/images/location1.jpeg" 
+      alt="Location Map" 
+      loading="lazy" 
+    />
+  </a>
 </div>
         </div>
 
