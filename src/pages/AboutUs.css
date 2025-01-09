@@ -329,7 +329,7 @@ h1{
   width: 6rem;
   height: 6rem;
   background-color: #e5e7eb;
-  border: 9px solid white;
+  border: 5px solid white;
   border-radius: 50%;
   position: absolute;
   left: 50%;
@@ -443,22 +443,26 @@ h1{
 
 }
 
-@media (min-width: 768px) {
-  .team-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .features-grid {
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .team-section:nth-child(8) .team-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (min-width: 1024px) {
-  .team-grid {
-    grid-template-columns: repeat(5, 1fr);
+@media (max-width: 768px) {
+  .team-grid,
+  .team-section:nth-child(8) .team-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-} 
+}
 
+@media (max-width: 480px) {
+  .team-grid,
+  .team-section:nth-child(8) .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
 @media (max-width: 1024px) {
   .about-content {
     flex-direction: column;
