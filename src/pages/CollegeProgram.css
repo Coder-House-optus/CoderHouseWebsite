@@ -222,6 +222,10 @@ p {
   flex-wrap: wrap; /* Wrap items for responsiveness */
   gap: 20px;
 }
+.associations-section h2{
+  font-size: 2.3rem;
+  margin:5% auto 2%;
+}
 
 .logos-grid img {
   width: 100px;
@@ -270,6 +274,10 @@ p {
 
   h2 {
     font-size: 2rem;
+  }
+  .associations-section h2{
+    font-size: 2rem;
+    
   }
   
   .hours-text {
@@ -346,6 +354,10 @@ p {
   h2 {
     font-size: 2rem;
   }
+  .associations-section h2{
+    font-size: 2rem;
+    
+  }
 
   .logos-grid img {
     width: 90px;
@@ -410,6 +422,10 @@ p {
 
   h2 {
     font-size: 2.25rem;
+  }
+  .associations-section h2{
+    font-size: 2.25rem;
+    
   }
 
   .logos-grid img {
