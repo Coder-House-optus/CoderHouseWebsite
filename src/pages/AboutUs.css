@@ -2,6 +2,7 @@
   min-height: 100vh;
   background-color: #f9fafb;
   overflow: hidden;
+  background: linear-gradient(90deg, #8fc7ff, #ffffff, #3C5C7B);
 }
 
 .container {
