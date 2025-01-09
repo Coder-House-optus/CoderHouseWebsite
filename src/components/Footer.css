@@ -62,8 +62,6 @@
   width: 350px;
   height: 200px;
   position: absolute;
-
-
   top: 30px;
   right: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
@@ -361,6 +359,7 @@
     top: 25px;
     
   }
+  
 
   .footer-links {
     text-align: center;
