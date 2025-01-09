@@ -165,7 +165,7 @@ const AboutUs = () => {
           <div className="contact-details">
             <h3>Contact Us</h3>
             <p>Email: coderhouseoptus@gmail.com</p>
-            <p>Phone: +1 (555) 123-4567</p>
+            <p>Phone: +91 9926865740</p>
           </div>
         </div>
       </div>

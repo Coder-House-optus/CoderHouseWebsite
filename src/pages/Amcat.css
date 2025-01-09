@@ -278,7 +278,7 @@
   }
 
   /* Adjusting layout for better responsiveness */
-  .amcat-container, .amcat-tabs, .amcat-table {
+  .amcat-container1, .amcat-tabs, .amcat-table {
     width: 100%; /* Ensure they take full width available */
     box-sizing: border-box; /* Prevent overflow */
   }

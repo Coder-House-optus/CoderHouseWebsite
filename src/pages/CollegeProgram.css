@@ -47,7 +47,7 @@ p {
 .cards-section {
   margin: 90px 0 0;
   padding: 5% 3%;
-  background: linear-gradient(90deg, #8fc7ff, #ffffff, #3C5C7B);
+  /* background: linear-gradient(90deg, #8fc7ff, #ffffff, #3C5C7B); */
 }
 
 .greeting-container {
@@ -59,6 +59,12 @@ p {
   margin: 0 auto;
 }
 
+.highlight10{
+  font-size: 2em;
+}
+.highlight11{
+  font-size: 2em;
+}
 /* Default styles for greeting cards */
 .greeting-card {
   padding: 20px;
@@ -135,7 +141,7 @@ p {
   position: relative;
 }
 
-.description {
+.descriptionss {
   flex: 0 1 45%;
   text-align: left;
   font-size: 1.25rem;
@@ -222,6 +228,10 @@ p {
   flex-wrap: wrap; /* Wrap items for responsiveness */
   gap: 20px;
 }
+.associations-section h2{
+  font-size: 2.3rem;
+  margin:5% auto 2%;
+}
 
 .logos-grid img {
   width: 100px;
@@ -271,6 +281,10 @@ p {
   h2 {
     font-size: 2rem;
   }
+  .associations-section h2{
+    font-size: 2rem;
+    
+  }
   
   .hours-text {
     font-size: 2.5;
@@ -306,7 +320,7 @@ p {
     margin-bottom: 20px;
   }
 
-  .description {
+  .descriptionss {
     flex: none;
     width: 100%;
     margin-bottom: 20px;
@@ -346,6 +360,10 @@ p {
   h2 {
     font-size: 2rem;
   }
+  .associations-section h2{
+    font-size: 2rem;
+    
+  }
 
   .logos-grid img {
     width: 90px;
@@ -373,7 +391,7 @@ p {
     margin-bottom: 20px;
   }
 
-  .description {
+  .descriptionss {
     flex: none;
     width: 100%;
     margin-bottom: 20px;
@@ -410,6 +428,10 @@ p {
 
   h2 {
     font-size: 2.25rem;
+  }
+  .associations-section h2{
+    font-size: 2.25rem;
+    
   }
 
   .logos-grid img {

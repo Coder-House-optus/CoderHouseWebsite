@@ -355,6 +355,13 @@
   .join-us-button5{
     width: 200px;
   }
+  .mentorpara1{
+    padding: 10%;
+    font-size: 2em;
+  }
+  .content2{
+    font-size: 6em;
+  }
 
   /* Header Styling */
   .header h1 {

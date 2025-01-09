@@ -176,13 +176,13 @@
 /* Responsive styles for 768px */
 @media screen and (max-width: 768px) {
   .resume-container {
-    padding: 15px;
+    padding: 5px;
   }
 
   .resume-item {
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 50px;
+    margin-left: -1px;
   }
 
   .resume-title {
@@ -204,10 +204,62 @@
   .slideshow-image {
     height: 200px;
   }
+
+
+  
+  .resume-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .icon {
+    font-size: 2rem; /* Increased icon size */
+    display: none;
+  }
+  
+  .resume-heading {
+    font-size: 2rem; /* Increased heading size */
+    font-weight: bold;
+  }
+  
+  .resume-description {
+    font-size: 1.7rem; /* Increased description size */
+    margin-bottom: 10px;
+  }
+  
+  .slideshow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .arrow-button {
+    font-size: 2.5rem; /* Increased arrow button size */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .slideshow-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slideshow-image {
+    width: 100%;
+    max-width: 600px; /* Set max width for images */
+    margin: 0 10px;
+    border-radius: 10px;
+  }
+  
 }
 
 /* Responsive styles for 480px */
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
   .resume-container {
     padding: 10px;
   }
@@ -247,4 +299,4 @@
   .arrow-button {
     font-size: 1.5rem;
   }
-}
+} */

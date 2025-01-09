@@ -173,8 +173,9 @@
 }
 
 .description1 {
-  padding: 2% 20%;
+  padding: 2% 10%;
   justify-content: center;
+  font-size: 1.2em;
 }
 
 .offer-text {
@@ -255,7 +256,9 @@
     background-position: center; /* Center the background image */
     padding: 20px; /* Add some padding for better spacing */
   }
-
+  .description1{
+    font-size: 2em;
+  }
   /* Mobile View for header */
   .header h2 {
     margin-top: 100px;
@@ -305,7 +308,7 @@
     padding: 8px 15px; /* Adjust padding for smaller buttons */
     font-size: 14px; /* Smaller font size for mobile */
   }
-  .description{
+  .description1{
     padding:  4px 15px;
     font-size: 2em;
   }
@@ -393,7 +396,7 @@
     font-size: 20px;  /* Adjust the size as needed */
     font-weight: bold;  /* Optional: Makes text bold */
   }
-  .description {
+  .description1 {
     padding: 2% 10%;
     justify-content: center;
   }
