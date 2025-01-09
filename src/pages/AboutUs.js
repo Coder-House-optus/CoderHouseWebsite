@@ -64,7 +64,7 @@ const AboutUs = () => {
           <div className="about-container">
             <div className="about-header">
               <h1>About Us</h1>
-              <p>
+              <p className="about-header-text">
                 Coder House is a dynamic learning platform that empowers
                 individuals to master coding through hands-on courses, expert
                 guidance and a vibrant community.
@@ -80,11 +80,11 @@ const AboutUs = () => {
 
               <div className="about-features">
                 <h2>Unlock Your Potential,<br /> Code Your Future</h2>
-                <p>Here's why Coder House is the best:</p>
+                <p className="features-intro">Here's why Coder House is the best:</p>
                 <div className="features-grid">
                   {features.map((feature, index) => (
                     <div key={index} className="feature-item">
-                      {feature}
+                    <span className="feature-text">{feature}</span>
                     </div>
                   ))}
                 </div>

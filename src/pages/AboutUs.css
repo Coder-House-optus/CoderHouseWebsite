@@ -606,3 +606,52 @@ h1{
   margin: 8px 0;
   line-height: 1.4;
 }
+
+.about-header-text {
+  font-size: 1.25rem;
+}
+
+.features-intro {
+  font-size: 1.25rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+.feature-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1f2937;
+  z-index: 1;
+}
+
+@media (max-width: 480px) {
+  .about-header-text {
+    font-size: 1.5rem !important;
+    line-height: 2rem;
+    padding: 0 1rem;
+  }
+
+  .features-intro {
+    font-size: 1.5rem !important;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .feature-text {
+    font-size: 1.25rem !important;
+  }
+
+  .cta-heading {
+    font-size: 1.5rem !important;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-features {
+    padding: 0 1rem;
+  }
+
+  .features-grid {
+    gap: 1.5rem;
+  }
+}
