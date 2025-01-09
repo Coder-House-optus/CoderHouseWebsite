@@ -11,7 +11,7 @@ const CollegeProgram = () => {
     300: "https://docs.example.com/300-hour-program",
     120: "https://docs.example.com/120-hour-program",
     90: "https://docs.google.com/document/d/1R1I1N85g2fowIr7_WKHD5aB8C6Bs3NjiKnl2lr0qvgA/edit?tab=t.0",
-    75: "https://docs.example.com/75-hour-program",
+    75: "https://docs.google.com/document/d/10yD5s_UdITyy-f7QBn4sYkqsajci3jXz/edit?usp=sharing&ouid=107632382243829537151&rtpof=true&sd=true",
     60: "https://docs.google.com/document/d/1vbU5NcX1mynWWBnMsmbFQP1sIlS2q7dLyzMrVf6J8nA/edit?tab=t.0"
   };
 
@@ -122,7 +122,7 @@ const CollegeProgram = () => {
           Our <span className="highlight">Moments</span>
         </h2>
         <div className="moments-content">
-          <div className="description">
+          <div className="descriptionss">
             <h3>Interview Session</h3>
             <p>{moments[activeIndex].description}</p>
           </div>

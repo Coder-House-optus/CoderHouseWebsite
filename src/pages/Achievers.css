@@ -199,7 +199,15 @@
   height: auto;
   margin-top: auto;
 }
-
+@media screen and (min-width:1025px ) and (max-width:1250px) {
+  .ambassadors-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .achievers-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 @media screen and (max-width: 1024px) {
   .section-header {
     width: 80%;

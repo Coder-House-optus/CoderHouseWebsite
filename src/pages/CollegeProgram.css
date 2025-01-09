@@ -135,7 +135,7 @@ p {
   position: relative;
 }
 
-.description {
+.descriptionss {
   flex: 0 1 45%;
   text-align: left;
   font-size: 1.25rem;
@@ -314,7 +314,7 @@ p {
     margin-bottom: 20px;
   }
 
-  .description {
+  .descriptionss {
     flex: none;
     width: 100%;
     margin-bottom: 20px;
@@ -385,7 +385,7 @@ p {
     margin-bottom: 20px;
   }
 
-  .description {
+  .descriptionss {
     flex: none;
     width: 100%;
     margin-bottom: 20px;

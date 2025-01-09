@@ -176,7 +176,7 @@
 /* Responsive styles for 768px */
 @media screen and (max-width: 768px) {
   .resume-container {
-    padding: 15px;
+    padding: 5px;
   }
 
   .resume-item {
@@ -219,12 +219,12 @@
   }
   
   .resume-heading {
-    font-size: 2.4rem; /* Increased heading size */
+    font-size: 2rem; /* Increased heading size */
     font-weight: bold;
   }
   
   .resume-description {
-    font-size: 2.2rem; /* Increased description size */
+    font-size: 1.7rem; /* Increased description size */
     margin-bottom: 10px;
   }
   
