@@ -518,7 +518,7 @@ html {
     line-height: 1.2; 
   }
 }
-@media (min-width: 1155px) and (max-width: 1280px) {
+@media (min-width: 1155px) and (max-width: 1279px) {
   .hero {
   display: flex;
   align-items: center;
@@ -697,4 +697,104 @@ html {
     line-height: 1.2; /* Added line height for better text spacing */
   }
 }
+@media (width: 1280px) {
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    padding: 3.9rem 0 9.375rem;
+    min-height: 60vh;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1.875rem;
+  }
 
+  .hero-left {
+    margin-left: 0;
+    margin-top: 1.875rem;
+    width: 45%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-right {
+    width: 45%;
+    max-width: 31.25rem;
+    padding: 1.2rem;
+    margin: 4rem 2rem;
+    background-color: #3C5C7B;
+    border-radius: 1.875rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 1);
+  }
+
+  .hero-heading {
+    text-align: center;
+    font-size: 1.7rem;
+    margin-bottom: 1.4rem;
+    margin-top: -0.1rem;
+  }
+
+  .program-selection {
+    width: 104%;
+    margin: 1rem auto;
+    padding: 1.125rem;
+  }
+
+  .hero-right input[type="text"],
+  .hero-right input[type="email"],
+  .hero-right input[type="phone"],
+  .hero-right input[type="url"],
+  .hero-right textarea {
+    width: 95%;
+    margin: 0.8rem auto;
+    padding: 1.125rem;
+  }
+
+  .stats-section {
+    width: 82%;
+    max-width: 67rem;
+    min-height: 6rem;
+    margin: -4rem auto 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    transform: translateX(-6rem);
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.5rem;
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .item img {
+    width: 3.75rem;
+    height: auto;
+    margin-right: 0.625rem;
+    flex-shrink: 0;
+  }
+
+  .text {
+    width: auto;
+    font-size: 1.25rem;
+    color: #333;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+
+  .callback-btn {
+    width: 80%;
+    max-width: 15.625rem;
+    margin: 3rem auto 0;
+  }
+}

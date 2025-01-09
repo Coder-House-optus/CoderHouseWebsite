@@ -12,10 +12,10 @@ const Notes = () => {
     "C Programming", "DBMS", "Cybersecurity", "AI",
     "Deep Learning", "Full Stack Development", "Cloud Computing",
     "Android App Development", "Angular", "AWS", "Bootstrap", 
-    "C# Programming", "Deveops", "Django", "Express.js", 
+    "C# Programming", "DevOps", "Django", "Express.js", 
     "Flutter Development", "Git and Github", "IOS App Development",
-    "Kotlin", "Machine Learning", "MERN Stack Developer",
-    "MYSQL", "PHP", "PostgreSQL", "RDBMS", "Ruby on Rails", 
+    "Kotlin", "MERN Stack Developer",
+    "MySQL", "PHP", "PostgreSQL", "RDBMS", "Ruby on Rails", 
     "Spring Boot", "Swift", "Tailwind", "UI & UX",
   ];
 

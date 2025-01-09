@@ -2,6 +2,15 @@
   min-height: 100vh;
   background-color: #f9fafb;
   overflow: hidden;
+  background: linear-gradient(90deg, #8fc7ff, #ffffff, #3C5C7B);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0rem;
+  overflow-x: hidden;
 }
 
 .about-section {
@@ -10,10 +19,10 @@
 
 .about-header {
   background-color: #3C5C7B;
-  width: 100vw;
+  width: 100;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
-  padding: 3rem 0;
+  padding: 3rem 1rem;
   padding-top: 8.5%;
   color: white;
   text-align: center;
@@ -27,9 +36,6 @@
 
 .about-header h1 {
   font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  font-weight: bold;
   margin-bottom: 1rem;
 }
 
@@ -56,10 +62,11 @@
 
 .image-containerss {
   width: 100%;
-  max-width: 24rem;
+  max-width: min(100%, 24rem);
   height: auto;
   position: relative;
   z-index: 1;
+  aspect-ratio: 1;
 }
 
 .image-containerss img {
@@ -87,8 +94,8 @@
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem 1.5rem;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .feature-item {
@@ -142,7 +149,9 @@
   .features-grid {
     grid-template-columns: 1fr;
   }
-
+h1{
+  padding-top: 2rem;
+}
   .image-containerss {
     width: 16rem;
     height: 16rem;
@@ -220,7 +229,7 @@
 
 .placeholder-image {
   width: 100%;
-  height: 20rem;
+  height: 25rem;
   background-color: #f3f4f6;
   border-radius: 0.5rem;
 }
@@ -276,7 +285,7 @@
   margin: 0 auto;
   padding: 0 1rem;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
 
@@ -469,7 +478,7 @@
   }
 
   .about-header h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   .about-features h2 {
@@ -478,11 +487,6 @@
 }
 
 @media (max-width: 480px) {
-  .image-containerss {
-    width: 16rem;
-    height: 16rem;
-  }
-
   .features-grid {
     grid-template-columns: 1fr;
   }
@@ -490,6 +494,22 @@
   .about-header p,
   .about-features p {
     font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .about-content {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .contact-card {
+    width: 95%;
+    padding: 15px;
+  }
+  
+  .about-header {
+    padding: 2rem 0.75rem;
   }
 }
 
@@ -550,7 +570,7 @@
   margin-bottom: 200px;
 }
 .contact-card {
-  width: 400px;
+  width: min(90%, 400px);
   margin: 0 auto 60px;
   padding: 20px;
   margin-bottom: 100px;
