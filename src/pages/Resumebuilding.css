@@ -7,20 +7,21 @@
   border-radius: 10px;
   position: relative;
   padding: 3%;
-  background: linear-gradient(90deg, #8fc7ff, #ffffff, #3C5C7B);
+  min-height: 100vh;
+  /* background: linear-gradient(90deg, #8fc7ff, #ffffff, #3C5C7B); */
 }
 
 .resume-container::before {
   content: '';
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-image: url('/public/images/bluedotedlines.png');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   opacity: 0.25; /* Reduced opacity for better contrast */
   z-index: 1;
   pointer-events: none;

@@ -2,7 +2,7 @@
 
 .internship-container1 {
   font-family: Poppins, sans-serif;
-  background: linear-gradient(90deg, #8fc7ff, #ffffff, #3C5C7B);
+  /* background: linear-gradient(90deg, #8fc7ff, #ffffff, #3C5C7B); */
   max-width: 100vw;
   max-height: auto;
   margin: 0 auto;
@@ -11,19 +11,20 @@
   height: auto;
   padding: 20px;
   z-index: 1;
+  min-height: 100vh;
 }
 
 .internship-container1::before {
   content: '';
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-image: url('/public/images/bluedotedlines.png');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   z-index: -1; /* Moved background behind the content */
   transform: rotate(0deg);
   background-blend-mode: overlay;
