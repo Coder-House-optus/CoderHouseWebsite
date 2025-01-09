@@ -7,7 +7,7 @@ const Card = () => {
       <div className="titleContainer">
         <div className="subtitle">What We Offer</div>
         <h1 className="mainTitle">
-          Key Features Of <span className="textGreen">CODER HOUSE</span>
+          Key Features Of<br className="mobile-break" /> <span className="textGreen">CODER HOUSE</span>
         </h1>
       </div>
 

@@ -10,10 +10,10 @@ const Plan = () => {
         </div>
         <div className="container">
             <div className="btn">
-                <a href="#">College Program</a>
+                <a href="#">School Program</a>
             </div>
             <div className="btn">
-                <a href="#">School Programs</a>
+                <a href="#">College Program</a>
             </div>
             <div className="btn">
                 <a href="#">Campus Program</a>

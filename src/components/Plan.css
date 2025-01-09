@@ -131,12 +131,11 @@ html {
 .container > .btn:nth-child(5)::before,
 .container > .btn:nth-child(5)::after {
   background: #C6E894;
-  box-shadow: 0 0 0.3125rem #d7e8bd, /* Converted from 0.5rem */
-              0 0 0.9375rem #cfe8ab, /* Converted from 1.5rem */
-              0 0 1.875rem #d4ecb0, /* Converted from 3rem */
-              0 0 3.75rem #d2eda8; /* Converted from 6rem */
+  box-shadow: 0 0 0.3125rem #758b55,
+              0 0 0.9375rem #667a49,
+              0 0 1.875rem #55663b, 
+              0 0 3.75rem #607145; 
 }
-
 
 @media screen and (max-width: 480px) {
   html {
