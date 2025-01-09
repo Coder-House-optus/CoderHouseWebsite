@@ -158,6 +158,7 @@ html {
   margin: 3rem auto 0; /* Increased top margin to move button down */
   display: block; /* Added to help with centering */
 }
+
 @media (min-width:1400px) {
 
   .stats-section {
@@ -174,7 +175,7 @@ html {
     width: 100%;
     margin: -2rem auto 0;
   }
-} */
+}  */
 @media (max-width: 1200px) {
   .stats-section {
     transform: translateX(-5rem);
@@ -412,7 +413,7 @@ html {
   .hero-right textarea {
     width: clamp(65%, 68%, 70%);
     margin: 0.8rem auto;
-    margin: 0.8rem auto;
+    
   }
 
   .stats-section {
@@ -420,6 +421,7 @@ html {
     margin: -2.3rem 5rem 1rem;
     padding: 1.5rem;
     gap: 1rem;
+    
   }
 
   .item {

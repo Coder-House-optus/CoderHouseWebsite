@@ -16,11 +16,16 @@
 .header {
   background: linear-gradient(to bottom, #1a1f2c 0%, #179017 100%);
   color: white;
-  padding: .1rem 0; /* Reduced from 2rem */
-  text-align: center;
+  padding: .1rem 0;
   position: relative;
   margin-bottom: .1rem;
-  margin-top:-3rem;
+  margin-top: -3rem;
+  min-height: 15rem;
+}
+
+.header-content {
+  position: relative;
+  width: 100%;
 }
 
 .header-logo {
@@ -39,7 +44,6 @@
   color: white;
   margin-top: 10rem;
 }
-
 .category-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -47,10 +51,12 @@
   position: relative;
 }
 
+
 .back-button {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
   padding: 8px 16px;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 1);
@@ -59,6 +65,8 @@
   font-size: 2.5rem;
   color: rgb(46, 112, 13);
   transition: all 0.3s ease;
+  z-index: 1;
+  margin-top:90px;
 }
 .back-button:hover {
   background-color: rgb(65, 146, 28);
@@ -66,7 +74,6 @@
 
 .image-container {
   max-width: 85%;
-  height: auto; /* Use auto for dynamic resizing */
   margin: 2rem auto;
   background: white;
   padding: 0.2rem;
@@ -74,15 +81,24 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 1);
   width: 110rem;
   height: 250rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Changed from center to flex-start */
+  position: relative; /* Added position relative */
+  overflow: hidden; /* Added overflow hidden */
 }
 
 .category-image {
-  max-width: 100%;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto; /* Changed from 100% to auto */
+  max-height: 100%; /* Added max-height */
+  object-fit: contain;
   border-radius: 8px;
-  margin: 0 auto;
+  position: absolute; /* Added position absolute */
+  top: 0; /* Added top 0 */
+  left: 0; /* Added left 0 */
+  right: 0; /* Added right 0 */
+  margin: auto; /* Added margin auto */
 }
 .category-page::before,
 .category-page::after {
@@ -129,18 +145,49 @@
   }
 
   .back-button {
-    font-size: 40px;
-    padding: 4px 8px;
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: rgb(46, 112, 13);
+    transition: all 0.3s ease;
+    z-index: 1;
+    margin-top:90px;
   }
 
   .image-container {
-    max-width: 95%;
-    height: 150rem;
-    margin: 1rem auto;
+    max-width: 85%;
+    margin: 2rem auto;
+    background: white;
+    padding: 0.2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+    width: 110rem;
+    height: 250rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Changed from center to flex-start */
+    position: relative; /* Added position relative */
+    overflow: hidden; /* Added overflow hidden */
   }
-
-  .category-content {
-    padding: 10px;
+  
+  .category-image {
+    width: 100%;
+    height: auto; /* Changed from 100% to auto */
+    max-height: 100%; /* Added max-height */
+    object-fit: contain;
+    border-radius: 8px;
+    position: absolute; /* Added position absolute */
+    top: 0; /* Added top 0 */
+    left: 0; /* Added left 0 */
+    right: 0; /* Added right 0 */
+    margin: auto; /* Added margin auto */
   }
 }
 
@@ -167,8 +214,20 @@
   }
 
   .back-button {
-    font-size: 50px;
-    padding: 6px 12px;
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: rgb(46, 112, 13);
+    transition: all 0.3s ease;
+    z-index: 1;
+    margin-top:90px;
   }
 
   .image-container {
@@ -188,7 +247,7 @@
   }
   .header {
     padding: 0.8rem 0;
-    margin-top: -2rem;
+    margin-top:-4rem;
   }
   .header-logo {
     width: 50px;
@@ -200,26 +259,48 @@
     margin: 6rem 2rem;
   }
   .back-button {
-    font-size: 55px;
-    padding: 6px 12px;
-    top: 5px;
-    left: 5px;
-    display: block;
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: rgb(46, 112, 13);
+    transition: all 0.3s ease;
+    z-index: 1;
+    margin-top:90px;
   }
   .image-container {
-    max-width: 92%;
-    height: auto; /* Allow dynamic height */
-    margin: 1.8rem auto;
-    padding: 0.3rem;
+    max-width: 85%;
+    margin: 2rem auto;
+    background: white;
+    padding: 0.2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+    width: 110rem;
+    height: 250rem;
     display: flex;
-    justify-content: center; /* Center image horizontally */
-    align-items: center; /* Center image vertically */
+    justify-content: center;
+    align-items: flex-start; /* Changed from center to flex-start */
+    position: relative; /* Added position relative */
+    overflow: hidden; /* Added overflow hidden */
   }
+  
   .category-image {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* Prevent distortion */
-    display: block;
+    width: 100%;
+    height: auto; /* Changed from 100% to auto */
+    max-height: 100%; /* Added max-height */
+    object-fit: contain;
+    border-radius: 8px;
+    position: absolute; /* Added position absolute */
+    top: 0; /* Added top 0 */
+    left: 0; /* Added left 0 */
+    right: 0; /* Added right 0 */
+    margin: auto; /* Added margin auto */
   }
   .category-content {
     margin: 0 auto;
@@ -235,7 +316,7 @@
   }
   .header {
     padding: 0.8rem 0;
-    margin-top: -2rem;
+    margin-top: -5rem;
   }
   .header-logo {
     width: 50px;
@@ -247,26 +328,48 @@
     margin: 6rem 2rem;
   }
   .back-button {
-    font-size: 55px;
-    padding: 6px 12px;
-    top: 5px;
-    left: 5px;
-    display: block;
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: rgb(46, 112, 13);
+    transition: all 0.3s ease;
+    z-index: 1;
+    margin-top:90px;
   }
   .image-container {
-    max-width: 92%;
-    height: auto; /* Allow dynamic height */
-    margin: 1.8rem auto;
-    padding: 0.3rem;
+    max-width: 85%;
+    margin: 2rem auto;
+    background: white;
+    padding: 0.2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+    width: 110rem;
+    height: 250rem;
     display: flex;
-    justify-content: center; /* Center image horizontally */
-    align-items: center; /* Center image vertically */
+    justify-content: center;
+    align-items: flex-start; /* Changed from center to flex-start */
+    position: relative; /* Added position relative */
+    overflow: hidden; /* Added overflow hidden */
   }
+  
   .category-image {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* Prevent distortion */
-    display: block;
+    width: 100%;
+    height: auto; /* Changed from 100% to auto */
+    max-height: 100%; /* Added max-height */
+    object-fit: contain;
+    border-radius: 8px;
+    position: absolute; /* Added position absolute */
+    top: 0; /* Added top 0 */
+    left: 0; /* Added left 0 */
+    right: 0; /* Added right 0 */
+    margin: auto; /* Added margin auto */
   }
   .category-content {
     margin: 0 auto;
@@ -274,9 +377,7 @@
     position: relative;
   }
 }
-
-/* Desktop (1025px and above) */
-@media screen and (min-width: 1025px) {
+/* @media screen and (min-width: 1025px) {
   .category-page {
     min-height: 400vh;
   }
@@ -293,4 +394,4 @@
   .category-content {
     max-width: 1200px;
   }
-}
+} */

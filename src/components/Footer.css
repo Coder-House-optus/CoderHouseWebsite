@@ -205,7 +205,6 @@
   }
 
   .location-box .white-square {
-
     width: 350px;
     height: 180px;
     right: 20px;
@@ -297,10 +296,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center; 
-
     padding: 0;
-    /* margin: 0; */
-
   }
 
   .footer-links li:nth-child(3) {
@@ -332,4 +328,74 @@
   border: none;
   border-radius: 20px;
 }
+@media (max-width: 481px) and (max-width: 580px) {
+  .footer {
+    height: auto;
+    padding: 20px 0;
+  }
 
+  .location-box {
+    width: 95%;
+    max-width: 320px;
+    top: -80px; /* Adjusted to avoid overlap */
+    padding: 10px;
+  }
+
+  .location-box h3 {
+    font-size: 18px;
+    gap: 15px;
+  }
+
+  .location-box h3 i.fas.fa-map-marker-alt {
+    font-size: 20px;
+  }
+
+  .location-box p {
+    font-size: 12px;
+  }
+
+  .location-box .white-square {
+    width: 150px;
+    height: 140px;
+    right: 10px;
+    top: 25px;
+    
+  }
+
+  .footer-links {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .footer-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+
+    padding: 0;
+    /* margin: 0; */
+
+  }
+
+  .footer-links li:nth-child(3) {
+    flex-basis: 50%; /* Ensures the third item starts on a new line */
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .footer-links a {
+    font-size: 16px;
+    text-decoration: none;
+  }
+}
+.white-square {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  border-radius: 20px;
+  overflow: hidden;
+}

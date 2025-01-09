@@ -81,7 +81,6 @@ html {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-
   bottom: -0.3125rem; /* Converted from -0.5rem */
   width: 0rem;
   height: 0.625rem; /* Converted from 1rem */
@@ -95,9 +94,7 @@ html {
   bottom: 0;
   height: 40%;
   width: 80%;
-
   border-radius: 1.875rem; /* Converted from 3rem */
-
   transition-delay: 0.25s;
 }
 
@@ -112,7 +109,6 @@ html {
   height: 0.625rem; /* Converted from 1rem */
   background: #f00;
   border-radius: 0.625rem; /* Converted from 1rem */
-
   transition: 0.75s;
 }
 
@@ -120,9 +116,7 @@ html {
   top: 0;
   height: 50%;
   width: 80%;
-
   border-radius: 1.875rem; /* Converted from 3rem */
-
   transition-delay: 0.25s;
 }
 
@@ -137,7 +131,6 @@ html {
 .container > .btn:nth-child(5)::before,
 .container > .btn:nth-child(5)::after {
   background: #C6E894;
-
   box-shadow: 0 0 0.3125rem #d7e8bd, /* Converted from 0.5rem */
               0 0 0.9375rem #cfe8ab, /* Converted from 1.5rem */
               0 0 1.875rem #d4ecb0, /* Converted from 3rem */
@@ -151,8 +144,7 @@ html {
   }
 
   .review-title1 {
-
-    font-size: clamp(0.9375rem, 4vw, 2.3rem); /* Converted from 1.5rem, 2.5rem */
+    font-size: clamp(0.9375rem, 4vw, 2.3rem);
     padding: 1.25rem 0.625rem; /* Converted from 2rem 1rem */
   }
 
@@ -172,9 +164,7 @@ html {
   .container > .btn > a {
     font-size: 1rem; /* Converted from 1.6rem */
     border-radius: 1.25rem; /* Converted from 2rem */
-
   }
-
   .container > .btn::before,
   .container > .btn::after {
 
@@ -188,8 +178,7 @@ html {
   }
 
   .review-title1 {
-
-    font-size: clamp(0.9375rem, 4vw, 3.5625rem); /* Converted from 1.5rem, 2.5rem */
+    font-size: clamp(0.9375rem, 4vw, 3.5625rem); 
     padding: 1.25rem 0.625rem; /* Converted from 2rem 1rem */
   }
 
@@ -209,7 +198,6 @@ html {
   .container > .btn > a {
     font-size: 1rem; /* Converted from 1.6rem */
     border-radius: 1.25rem; /* Converted from 2rem */
-
   }
 
   .container > .btn::before,
@@ -220,7 +208,6 @@ html {
   }
 }
 
-/* Tablets (481px to 768px) */
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .container {
     padding: 4.375rem 1.25rem; /* Converted from 7rem 2rem */
@@ -228,8 +215,6 @@ html {
     gap: 0.9375rem; /* Converted from 1.5rem */
     justify-content: center;
   }
-
-
   .container > .btn {
     width: 5.9375rem; /* Converted from 9.5rem */
     height: 5.9375rem; /* Converted from 9.5rem */
@@ -253,7 +238,66 @@ html {
 
   }
 }
+@media screen and (min-width: 769px) and (max-width: 835px) {
+  .container {
+    padding: 4.375rem 1.25rem; /* Converted from 7rem 2rem */
+    flex-wrap: wrap;
+    gap: 0.9375rem; /* Converted from 1.5rem */
+    justify-content: center;
+  }
+  .container > .btn {
+    width: 5.9375rem; /* Converted from 9.5rem */
+    height: 5.9375rem; /* Converted from 9.5rem */
+    margin: 0.9375rem; /* Converted from 1.5rem */
+    padding: 0 3.125rem; /* Converted from 0 5rem */
+  }
 
+  .container > .btn > a {
+    font-size: 1.0625rem; /* Converted from 1.7rem */
+    border-radius: 1.5625rem; /* Converted from 2.5rem */
+  }
+
+  .review-title1 {
+    font-size: clamp(1.25rem, 4.5vw, 1.875rem); /* Converted from 2rem, 3rem */
+    padding: 1.5625rem 0.9375rem; /* Converted from 2.5rem 1.5rem */
+  }
+
+  .container > .btn::before,
+  .container > .btn::after {
+    height: 0.5625rem; /* Converted from 0.9rem */
+
+  }
+}
+@media screen and (min-width: 836px) and (max-width: 992px) {
+  .container {
+    padding: 4.375rem 1.25rem; /* Converted from 7rem 2rem */
+    flex-wrap: wrap;
+    gap: 0.9375rem; /* Converted from 1.5rem */
+    justify-content: center;
+  }
+  .container > .btn {
+    width: 5.9375rem; /* Converted from 9.5rem */
+    height: 5.9375rem; /* Converted from 9.5rem */
+    margin: 0.9375rem; /* Converted from 1.5rem */
+    padding: 0 3.125rem; /* Converted from 0 5rem */
+  }
+
+  .container > .btn > a {
+    font-size: 1.0625rem; /* Converted from 1.7rem */
+    border-radius: 1.5625rem; /* Converted from 2.5rem */
+  }
+
+  .review-title1 {
+    font-size: clamp(1.25rem, 4.5vw, 1.875rem); /* Converted from 2rem, 3rem */
+    padding: 1.5625rem 0.9375rem; /* Converted from 2.5rem 1.5rem */
+  }
+
+  .container > .btn::before,
+  .container > .btn::after {
+    height: 0.5625rem; /* Converted from 0.9rem */
+
+  }
+}
 
 
 
