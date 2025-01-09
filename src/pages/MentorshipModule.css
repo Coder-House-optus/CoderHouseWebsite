@@ -144,7 +144,7 @@
 
 .mentorpara{
   font-size: 1.3em;
-  padding: 0px 80px;
+  padding: 50px 80px;
 }
 
 .container10 {
@@ -208,7 +208,7 @@
 
 .green-text {
   color: #99C05F; /* Green color for "Mentorship Module" */
-  font-size: 1.3em;
+  font-size: 1.8em;
 }
 
 .black-text {
@@ -249,15 +249,15 @@
 
   .box10, .box {
     width: 80%; /* Adjust box size for mobile */
-    font-size: 1.2em; /* Adjust font size for smaller screens */
+    font-size: 1.9em; /* Adjust font size for smaller screens */
   }
 
   .heading10, .heading-mentor {
-    font-size: 2em; /* Reduce heading size for mobile */
+    font-size: 3em; /* Reduce heading size for mobile */
   }
 
   .mentorpara {
-    font-size: 1.2em;
+    font-size: 2em;
     margin-top: 20px;
   }
   .mentorship-program{
@@ -272,6 +272,9 @@
     color: #333; /* Black color for the rest of the text */
     display: block; /* Forces the text to move to the next line */
     font-size: 1em; /* Optional: Adjust size of the secondary text */
+  }
+  .key-mentor{
+    font-size: 3em;
   }
 }
 
@@ -318,9 +321,9 @@
   .heading10 {
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: bold;
-
+    padding: 60px;
   }
   
   .green-text {

@@ -1,6 +1,6 @@
 .amcat-container {
     font-family: 'Poppins', sans-serif;
-    padding: 80px;
+
     background-color: #f9f9f9;
   }
   
@@ -133,7 +133,7 @@
   .amcat-tabs {
     margin-top: 30px;  /* Adjust the margin */
     gap: 20px;  /* Reduce gap between tabs */
-    flex-direction: row;  /* Ensure tabs appear in a row */
+
     justify-content: center;  /* Center the tabs */
     margin-bottom: 50px;  /* Adjust bottom margin */
     font-size: 1em;
@@ -142,8 +142,8 @@
   /* Adjust tab styling */
   .tab {
     padding: 8px 20px;  /* Adjust padding */
-    font-size: 1.2em;  /* Reduce font size */
-    margin: 0 5px;  /* Add slight margin between tabs */
+    font-size: 2em;  /* Reduce font size */
+    margin: 10 15px;  /* Add slight margin between tabs */
   }
 
   /* Active tab adjustments */
@@ -154,7 +154,7 @@
 
   /* Adjust subtitle font size */
   .amcat-subtitle {
-    font-size: 1.5rem;  /* Reduce font size */
+    font-size: 2rem;  /* Reduce font size */
     margin-bottom: 15px;  /* Adjust bottom margin */
   }
 
