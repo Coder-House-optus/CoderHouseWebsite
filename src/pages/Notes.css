@@ -73,6 +73,7 @@
     padding: 20px;
     margin: 0 10%;
     justify-items: center;
+    gap: 30px;
 }
   
 
@@ -81,15 +82,15 @@
     color: #E5FEC0;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .6);
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s, border 0.3s, background-color 0.3s;
     text-align: center;
     border: 2px solid transparent;
-    width: 200px; 
-    height: 150px; 
+    width: 150px; 
+    height: 140px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,13 +111,13 @@
     border-radius: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease;
-    z-index: 0; /* Ensure the ripple is behind the text */
+    z-index: 0; 
 }
   
 .note-item:hover::before {
-    transform: translate(-50%, -50%) scale(1); /* Expand the circle */
-    width: 200%; /* Increase the size of the circle */
-    height: 200%; /* Increase the size of the circle */
+    transform: translate(-50%, -50%) scale(1); 
+    width: 200%; 
+    height: 200%;
 }
   
 .note-item:hover {
@@ -297,7 +298,7 @@
     }
 
     .note-item {
-        width: 93px;
+        width: 103px;
         height: 130px; 
     }
 }
@@ -308,7 +309,7 @@
         border: 2px solid #ffffff;
         border-radius: 25px;
         outline: none;
-        width: 300px; /* Adjusted between mobile and tablet sizes */
+        width: 300px; 
         transition: all 0.3s ease-in-out;
         background-color: #ffffff;
         color: #3C5C7B;
@@ -340,7 +341,7 @@
     }
 
     .title-container .tagline {
-        font-size: 18px; /* Adjusted between mobile (16px) and tablet (20px) */
+        font-size: 18px;
         font-weight: 300;
         margin: 5px 0 0;
         color: #3C5C7B;
@@ -348,25 +349,25 @@
     }
 
     .notes-list {
-        grid-template-columns: repeat(2, 1fr); /* Same as mobile for better readability */
-        gap: 18px; /* Adjusted between mobile (15px) and tablet (20px) */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 18px; 
         padding: 15px;
         margin: 0 4%;
     }
 
     .note-item {
-        width: 140px; /* Adjusted between mobile (93px) and tablet (180px) */
-        height: 135px; /* Adjusted between mobile (130px) and tablet (140px) */
+        width: 140px;
+        height: 135px; 
         font-size: 15px;
         padding: 15px;
     }
 
     .note-item .category-title {
-        font-size: 17px; /* Added based on tablet styles */
+        font-size: 17px; 
     }
 
     .note-item .category-description {
-        font-size: 14px; /* Same as tablet */
+        font-size: 14px; 
     }
 }
 
