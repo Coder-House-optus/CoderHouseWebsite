@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import "./AboutUs.css";
 
 const AboutUs = () => {
+  useEffect(() => {
+    // Check if there's a hash in the URL
+    if (window.location.hash === '#contact-section') {
+      // Small delay to ensure the page is fully loaded
+      setTimeout(() => {
+        const element = document.getElementById('contact-section');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, []);
+
   const features = [
     "Hands-on Learning",
     "Expert Mentorship",
     "Flexible Learning",
-    "Comprehensive Curriculum",
+    "Broad Curriculum",
     "Vibrant Community",
     "JobReady Skills",
   ];
@@ -84,7 +97,7 @@ const AboutUs = () => {
                 <div className="features-grid">
                   {features.map((feature, index) => (
                     <div key={index} className="feature-item">
-                    <span className="feature-text">{feature}</span>
+                      <span className="feature-text">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -160,7 +173,7 @@ const AboutUs = () => {
         </div>
       </section>
       <div className='card-section-about'>
-        <div className="contact-card">
+        <div className="contact-card" id="contact-section">
           <img src="./images/about-contact.jpg" alt="Contact" className="contact-image" />
           <div className="contact-details">
             <h3>Contact Us</h3>
