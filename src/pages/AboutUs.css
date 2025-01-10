@@ -158,7 +158,6 @@ h1{
 }
 
 .why-choose-section {
-  background-image: url('/public/images/blue doted lines 2.png');
   background-size: cover;
   background-position: center;
   padding: 3rem 0;
@@ -176,7 +175,7 @@ h1{
   background-image: url('/public/images/blue doted lines 2.png');
   background-size: cover;
   background-position: center;
-  opacity: 0.1; /* Adjust this value between 0 and 1 to control opacity */
+  opacity: 0.3; 
   z-index: -1;
 }
 
@@ -256,6 +255,19 @@ h1{
   color: #ffffff; 
 }
 
+@media (max-width: 480px) {
+  .give-back-section .section-content h2 {
+    font-size: 3rem !important; /* Increased from 2.5rem */
+    margin-bottom: 2rem;
+  }
+
+  .give-back-section .section-content p {
+    font-size: 2.2rem !important; /* Increased from 1rem */
+    line-height: 2.5rem;
+    padding: 0 1rem;
+  }
+}
+
 .section-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -278,7 +290,7 @@ h1{
 
 .team-section {
   padding: 1rem 0;
-  background-image: url('/public/images/blue doted lines 2.png');
+  position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -297,7 +309,7 @@ h1{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.1; /* Adjust this value between 0 and 1 to control opacity */
+  opacity: 0.3; 
   z-index: -1;
 }
 
