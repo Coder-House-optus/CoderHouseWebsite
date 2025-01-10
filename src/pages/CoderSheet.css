@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    background: linear-gradient(to bottom, #a9d85d4a, #ffffff);
   }
   /* Header Section */
 .header1 {

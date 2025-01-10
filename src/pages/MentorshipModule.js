@@ -61,10 +61,10 @@ const  MentorshipModule = () => {
       </div>
 
       
-      <h2>
+      {/* <h2>
         <i className="fas fa-map-marker-alt" style={{ marginRight: '10px', color: 'black' }}></i>
         Coder House, Vijay Nagar, Jabalpur
-      </h2>
+      </h2> */}
 
       <div className="image-section2">
         <img
