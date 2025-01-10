@@ -300,6 +300,7 @@
   justify-content: space-between;
   gap: 0px;
   flex-wrap: wrap;
+  
 }
 
 .image-item {
@@ -354,6 +355,7 @@
   }
   .join-us-button5{
     width: 200px;
+    font-size: 2em;
   }
   .mentorpara1{
     padding: 10%;
@@ -463,6 +465,7 @@
 
   .shadow2 {
     position: relative;
+    font-size: 0.6em;
   }
 
   .shadow2::before {
