@@ -60,10 +60,11 @@ p {
 }
 
 .highlight10{
-  font-size: 2em;
+  font-size: 1em;
+  color:#99C05F;
 }
 .highlight11{
-  font-size: 2em;
+  font-size: 3em;
 }
 /* Default styles for greeting cards */
 .greeting-card {
