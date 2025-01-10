@@ -1,10 +1,9 @@
-/* Base styles */
+
 html {
   font-size: 100%;
   box-sizing: border-box;
 }
 
-/* Home and Text Styles */
 .home {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
@@ -21,7 +20,6 @@ html {
   color: white;
 }
 
-/* Hero Section */
 .hero {
   background-image: url('/public/images/Home.png');
   display: flex;
@@ -58,15 +56,13 @@ html {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 1);
   margin-top: 4rem;
 }
-
 .hero-heading {
   text-align: center;
   font-size: clamp(1.25rem, 3vw, 1.875rem);
-  margin-bottom: 1.4rem;  /* Increased from 1.25rem to move heading up */
-  margin-top: -0.1rem;  /* Added negative margin to move heading up */
+  margin-bottom: 1.4rem; 
+  margin-top: -0.1rem;
 }
 
-/* Form Styles */
 .form {
   width: 100%;
   max-width: 25rem;
@@ -81,33 +77,32 @@ html {
 .hero-right input[type="url"],
 .hero-right textarea {
   border-radius: 0.5rem;
-  padding: 1.125rem; /* Increased height via padding */
-  margin: 0.8rem auto; /* Changed from 0 to auto for horizontal centering */
+  padding: 1.125rem; 
+  margin: 0.8rem auto;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 1);
   border: none;
-  width: 95%; /* Slightly reduced width */
+  width: 95%; 
   font-size: 1rem;
   outline: none;
   background-color: #4f7085;
 }
-
 .program-selection {
   border-radius: 0.5rem;
-  padding: 1.125rem; /* Increased height via padding */
-  margin: 1rem auto; /* Changed from 0 to auto for horizontal centering */
+  padding: 1.125rem; 
+  margin: 1rem auto;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 1);
   border: none;
-  width: 104%; /* Slightly reduced width */
+  width: 104%;
   font-size: 1rem;
   outline: none;
   background-color: #a1e739;
   color: #3C5C7B;
 }
 
-.stats-section{
+.stats-section {
   width: 74%;
   max-width: 67rem;
-  min-height: 6rem; /* Changed from fixed height to min-height */
+  min-height: 6rem; 
   margin: -4rem 0 0 auto;
   padding: 2rem;
   background-color: white;
@@ -127,7 +122,7 @@ html {
   gap: 0.625rem;
   padding: 0.5rem;
   flex: 1;
-  min-width: 250px; /* Added minimum width for better responsive behavior */
+  min-width: 250px; 
 }
 
 .item img {
@@ -142,10 +137,9 @@ html {
   font-size: 1.25rem;
   color: #333;
   font-weight: bold;
-  line-height: 1.2; /* Added line height for better text spacing */
+  line-height: 1.2; 
 }
 
-/* Button Styles */
 .callback-btn {
   background-color: #A8D85D;
   color: rgb(19, 0, 0);
@@ -155,18 +149,17 @@ html {
   border-radius: 1.5625rem;
   width: 80%;
   max-width: 15.625rem;
-  margin: 3rem auto 0; /* Increased top margin to move button down */
-  display: block; /* Added to help with centering */
+  margin: 3rem auto 0; 
+  display: block; 
 }
-
-@media (min-width:1400px) {
+ /* @media (min-width:1400px) {
 
   .stats-section {
     transform: translateX(2.0rem);
     width: 100%;
     margin: -2rem auto 0;
   }
-}
+} */
 
 /* @media (min-width:1400px) {
 
@@ -176,13 +169,13 @@ html {
     margin: -2rem auto 0;
   }
 }  */
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   .stats-section {
     transform: translateX(-5rem);
     width: 85%;
     margin: -3rem auto 0;
   }
-}
+} */
 
 @media (max-width: 998px) {
   .hero-left {
@@ -213,6 +206,13 @@ html {
     width: 90%; 
     text-align: center; 
   }
+  .hero-image {
+    width: 80%; /* Reduced from 90% */
+    height: auto;
+    max-width: 400px; /* Added max-width to prevent image from getting too large */
+    margin: 0 auto;
+    display: block;
+  }
 
   .hero-right {
     max-width: 75%;
@@ -234,8 +234,6 @@ html {
   .stats-section {
     width: 80%;
     transform: translateX(-2);
-
- 
   }
 
   .item {
@@ -247,21 +245,28 @@ html {
 @media (max-width: 480px) {
   .hero {
     flex-direction: column; 
-    padding: 2rem 1rem 5rem; 
+    padding: 2rem 1rem 17.5rem; 
     min-height: auto; 
-    gap: 1rem; 
+    gap: -1rem; 
   }
 
   .hero-left {
-    margin: 1rem auto; 
-    width: 90%; 
+    margin: 3rem auto; 
+    width: 70%; 
     text-align: center; 
+  }
+  .hero-image {
+    width: 100%;
+    height: auto;
+    max-width: 450px; 
+    margin: 6rem auto;
+    display: block;
   }
   .hero-right {
     max-width: 100%;
     width: 65%;
     padding: 1rem;
-    margin: 1rem auto;
+    margin: -4rem auto;
   }
 
   .program-selection{
@@ -278,7 +283,7 @@ html {
 
   .stats-section {
     width: 88%;
-    margin: -2rem 4.5rem 1.5rem;
+    margin: -7.5rem 4.5rem 1.5rem;
     padding: 1rem;
     gap: 0.8rem;
   }
@@ -288,26 +293,31 @@ html {
     margin: 0.5rem 0;
   }
 }
-
-
 @media (max-width: 360px) {
   .hero {
-    flex-direction: column; /* Stack items vertically */
-    padding: 2rem 1rem 5rem; /* Reduce padding */
-    min-height: auto; /* Remove fixed height */
-    gap: 1rem; /* Reduce gap between elements */
+    flex-direction: column; 
+    padding: 2rem 1rem 18.5rem; 
+    min-height: auto;
+    gap: 1rem; 
   }
 
   .hero-left {
-    margin: 1rem auto; /* Center the section and reduce margin */
-    width: 90%; /* Adjust width to fit smaller screens */
-    text-align: center; /* Center-align content inside */
+    margin: 1rem auto; 
+    width: 90%; 
+    text-align: center;
   }
   .hero-right {
     max-width: 100%;
     width: 65%;
     padding: 1rem;
-    margin: 1rem auto;
+    margin: -6rem auto;
+  }
+  .hero-image {
+    width:80%;
+    height: auto;
+    max-width: 450px; 
+    margin: 8rem auto;
+    display: block;
   }
 
   .program-selection{
@@ -324,7 +334,7 @@ html {
 
   .stats-section {
     width: 80%;
-    margin: -2rem 6rem 1.5rem;
+    margin: -7rem 6rem 1.5rem;
     padding: 1rem;
     gap: .0rem;
     transform: translateX(-2);
@@ -519,7 +529,7 @@ html {
     line-height: 1.2; 
   }
 }
-@media (min-width: 1155px) and (max-width: 1279px) {
+@media (min-width: 1155px) and (max-width: 1280px) {
   .hero {
   display: flex;
   align-items: center;
@@ -608,7 +618,64 @@ html {
     line-height: 1.2; 
   }
 }
-@media (min-width: 1281px) and (max-width: 1439px) {
+/* @media (min-width: 1281px) and (max-width: 1500px) {
+  .hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 3.9rem 0 calc(9.375rem + 6rem); 
+    min-height: 60vh;
+    gap: 1.875rem;
+  }
+
+  .hero-left {
+    margin-left: 0;
+    width: 45%;
+  }
+
+  .hero-right {
+    width: 45%;
+    margin: 4rem 2rem;
+  }
+
+  .stats-section {
+    position: absolute;
+    bottom: calc(-16rem); 
+    left: 70%;
+    transform: translateX(-72.8%);
+    width: calc(79% + 2vw);
+    max-width: 100rem;
+    min-height: min(6rem, 10vh);
+    margin: 0;
+    padding: clamp(1.5rem, 2vw, 2rem);
+    background-color: white;
+    border-radius: 0.875rem;
+    box-shadow: 0 0 0.3125rem rgba(14, 3, 3, 1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clamp(0.75rem, 1vw, 1rem);
+  }
+
+ 
+  .item {
+    flex: 1 1 calc(25% - 2rem);
+    min-width: min(250px, 25%);
+    display: flex;
+    align-items: center;
+    gap: max(0.625rem, 1vw);
+    padding: clamp(0.5rem, 1vw, 1rem);
+  }
+
+  .text {
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
+    line-height: 1.2;
+  }
+} */
+/* @media (min-width: 1281px) and (max-width: 00px) {
   .hero {
     display: flex;
     align-items: center;
@@ -658,11 +725,15 @@ html {
   
 
   .stats-section{
-    width: 76%;
-    max-width: 67rem;
-    min-height: 6rem; /* Changed from fixed height to min-height */
-    margin: -6rem 0 0 auto;
-    padding: 2rem;
+   
+  transform: translateX(2.0rem);
+  width: 100%;
+  margin: -2rem auto 0; */
+/* width: 76%; */
+    /* max-width: 67rem;
+    min-height: 6rem; */
+    /* margin: -6rem 0 0 auto; */
+    /* padding: 2rem;
     background-color: white;
     border-radius: 0.875rem;
     box-shadow: 0 0 0.3125rem rgba(14, 3, 3, 1);
@@ -670,9 +741,9 @@ html {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
-    transform: translateX(-7.3rem);
-  }
+    gap: 1rem; */
+    /* transform: translateX(-7.3rem); */
+  /* }
   
   .item {
     display: flex;
@@ -680,14 +751,13 @@ html {
     gap: 0.625rem;
     padding: 0.5rem;
     flex: 1;
-    min-width: 250px; /* Added minimum width for better responsive behavior */
   }
   
   .item img {
     width: 3.75rem;
     height: auto;
     margin-right: 0.625rem;
-    flex-shrink: 0; /* Prevent image from shrinking */
+    flex-shrink: 0; 
   }
   
   .text {
@@ -695,10 +765,10 @@ html {
     font-size: 1.25rem;
     color: #333;
     font-weight: bold;
-    line-height: 1.2; /* Added line height for better text spacing */
+    line-height: 1.2;
   }
-}
-@media (width: 1280px) {
+} */
+/* @media (width: 1280px) {
   .hero {
     display: flex;
     align-items: center;
@@ -798,4 +868,49 @@ html {
     max-width: 15.625rem;
     margin: 3rem auto 0;
   }
-}
+} */
+/* @media (min-width: 1280px) and (max-width: 1500px) {
+  .stats-section {
+    position: relative;
+    width: 76%;
+    max-width: 67rem;
+    transform: translateX(-7.8rem);
+    margin: -4rem 0 0 auto;
+    left: 0;
+    right: 0;
+  }
+  .hero {
+    position: relative;
+    overflow: visible;
+  }
+
+  .item {
+    flex: 1;
+    min-width: 250px;
+    max-width: calc(25% - 1rem);
+  }
+} */
+/* @media (min-width: 1281px) and (max-width: 1441px) {
+  .stats-section {
+    width: 75%;
+    max-width: 75rem;
+    margin: -4rem auto 0;
+    transform: translateX(-2rem);
+    position: relative;
+    left: 4rem;
+  }
+
+  .item {
+    flex: 1;
+    min-width: 250px;
+    max-width: calc(25% - 1rem);
+  }
+} */
+
+/* Smooth transition after 1441px */
+/* @media (min-width: 1442px) {
+  .stats-section {
+    width: 74%;
+    transform: translateX(-7.8rem);
+  }
+} */

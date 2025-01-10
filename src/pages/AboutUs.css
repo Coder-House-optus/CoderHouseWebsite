@@ -295,6 +295,7 @@ h1{
   background-repeat: no-repeat;
   background-position: center;
   z-index: 1;
+  
 }
 
 .team-section::before {

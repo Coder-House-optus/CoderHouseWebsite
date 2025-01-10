@@ -15,12 +15,22 @@ const CategoryPage = () => {
       <Navigation />
       <header className="header">
         <div className="header-content">
-        <button 
-            onClick={() => navigate(-1)} 
-            className="back-button" 
-            aria-label="Go Back" /* Accessible label */
+          <button 
+            className="back-button"
+            onClick={() => navigate(-1)}
+            aria-label="Go back"
           >
-            ←
+            <svg 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            >
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
           </button>
           <img 
             src="/images/logo.png" 

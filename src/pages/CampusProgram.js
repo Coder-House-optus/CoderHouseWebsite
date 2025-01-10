@@ -306,8 +306,8 @@ const CampusProgram = () => {
   
       {/* Enquiry Form Section */}
       <h2 className="programs-title">
-        <span className="text-black">Enquiry</span>
-        <span className="text-green"> Form</span>
+        <span className="text-black">Ask Us !! </span>
+        {/* <span className="text-green"> Form</span> */}
       </h2>
       <div className="enquiry-form-container5">
         <form onSubmit={handleFormSubmit} className="enquiry-form5">

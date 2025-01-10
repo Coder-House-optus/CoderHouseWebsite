@@ -20,7 +20,8 @@ const reviewsData = [
 const programOptions = {
   Student: ["Web Development", "Artificial Intelligence"],
   Developer: [],
-  Trainee: []
+  Trainee: [],
+  Other: [""]
 };
 
 // Home component
@@ -28,6 +29,7 @@ export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedUserType, setSelectedUserType] = useState("");
   const [selectedProgram, setSelectedProgram] = useState("");
+  const [otherValue, setOtherValue] = useState(""); // New state for custom input
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % reviewsData.length);
@@ -39,13 +41,13 @@ export default function Home() {
 
   const handleUserTypeChange = (e) => {
     setSelectedUserType(e.target.value);
-    setSelectedProgram(""); // Reset program selection when user type changes
+    setSelectedProgram(""); 
+    setOtherValue(""); // Reset other value when user type changes
   };
 
   return (
     <div className="home">
       <Navigation />
-
       <section className="hero">
         <div className="hero-left">
           <img
@@ -76,9 +78,10 @@ export default function Home() {
               <option value="Student">Student</option>
               <option value="Developer">Developer</option>
               <option value="Trainee">Trainee</option>
+              <option value="Other">Other</option>
             </select>
 
-            {/* Conditional second dropdown for programs */}
+            {/* Show program dropdown for Students */}
             {selectedUserType === "Student" && (
               <select
                 name="Program" 
@@ -94,6 +97,19 @@ export default function Home() {
                   </option>
                 ))}
               </select>
+            )}
+
+            {/* Show custom input field for Other */}
+            {selectedUserType === "Other" && (
+              <input
+                type="text"
+                name="OtherType"
+                placeholder="Please specify"
+                className="input-field"
+                value={otherValue}
+                onChange={(e) => setOtherValue(e.target.value)}
+                required
+              />
             )}
 
             <input type="url" name="LinkedIn" placeholder="LinkedIn Profile URL" className="input-field" />

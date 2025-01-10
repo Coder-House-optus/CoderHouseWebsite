@@ -47,9 +47,28 @@ p {
 .cards-section {
   margin: 90px 0 0;
   padding: 5% 3%;
+  position:relative;
+  z-index: 1;
   /* background: linear-gradient(90deg, #8fc7ff, #ffffff, #3C5C7B); */
 }
-
+.cards-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/public/images/bluedotedlines.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1; /* Moved background behind the content */
+  transform: rotate(0deg);
+  background-blend-mode: overlay;
+  opacity: 0.35;
+   /* Reduced opacity for better contrast */
+  
+}
 .greeting-container {
   display: flex;
   flex-direction: column; /* Default for mobile */
@@ -60,10 +79,11 @@ p {
 }
 
 .highlight10{
-  font-size: 2em;
+  font-size: 1em;
+  color:#99C05F;
 }
 .highlight11{
-  font-size: 2em;
+  font-size: 3em;
 }
 /* Default styles for greeting cards */
 .greeting-card {

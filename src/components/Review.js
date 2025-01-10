@@ -30,7 +30,7 @@ const reviews = [
     },
     {
         name: "Shivang Tiwari",
-        text: "Initially, I was skeptical about the whole offline training idea, but Coder House totally flipped the script for me. Topics that were thought to be super tough became almost easy due to the expertise of our mentors from IITs and NITs. The collaborative learning environment always kept me motivated and focused. Today, I am more than ever prepared to face real-world challenges in the tech industry.",
+        text: "At first, I was unsure about joining an offline training program, but Coder House completely changed my perspective. Complex topics were simplified thanks to the guidance of expert mentors from IITs and NITs. The collaborative and inspiring learning environment kept me driven and engaged throughout. Now, I feel confident and well-prepared to tackle real-world challenges in the tech industry.",
 
 
         rating: 5
@@ -49,7 +49,8 @@ const reviews = [
     },
     {
             name: "Vikram Joshi",
-            text: "Joining Coder House was probably the best decision I ever made in college. All of this, along with mentors who care and an environment that fosters growth, makes one confident about taking that leap to pursue the dream role. Their emphasis on real-world applications, plus excellent infrastructure, makes everything quite seamless. Thanks, Coder House team!",
+            text: 
+            "Enrolling in Coder House was truly a game-changer for me during my college years. The supportive mentors, coupled with a growth-oriented environment, gave me the confidence to chase my dream role. Their focus on practical, real-world learning and top-notch infrastructure made the entire experience smooth and enriching. A huge thanks to the Coder House team for paving the way to success!",
             rating: 5
     },
 

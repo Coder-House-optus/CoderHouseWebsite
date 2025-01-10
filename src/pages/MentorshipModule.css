@@ -11,6 +11,7 @@
   font-size: 18px;
   cursor: pointer;
   font-family: 'PT Mono', monospace;
+  
 }
 
 .back-button:hover {
@@ -202,6 +203,7 @@
   justify-content: center; /* Centers elements vertically */
   text-align: center; /* Ensures text is centered */
   box-sizing: border-box; /* Includes padding in dimensions */
+  background: linear-gradient(to bottom, #a9d85d4a, #ffffff);
 }
 
 

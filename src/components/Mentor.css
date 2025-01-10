@@ -85,15 +85,12 @@
     opacity: 0;
     transform: translateY(-20px);
 }
-
-/* Animated Mentor Image Styles */
 .mentor-image-animated {
     width: 70%;
     height: auto;
     border-radius: 8px;
 }
 
-/* Right-Side Mentor Card Custom Offset for Middle Card */
 .mentor-card.middle {
     margin-left: 150px;
     width: 100%;
@@ -145,15 +142,15 @@
         color: #333;
         font-weight: bold;
         max-width: 90%;
-        position: absolute;  /* Changed from relative to absolute */
+        position: absolute; 
         left: 50%;
         transform: translate(-50%, 0);  
         display: flex;
         justify-content: center;
-        align-items: center;  /* Added to center vertically within flex container */
+        align-items: center; 
         gap: 1rem;
         white-space: nowrap;
-        width: fit-content;  /* Added to ensure proper width */
+        width: fit-content; 
       }
 
     .mentor-title {
@@ -163,7 +160,7 @@
         margin-bottom: 20px;
     }
     .mentor-image {
-        max-width: 280px;
+        max-width: 230px;
         position: static;
         margin: 0 auto;
     }
@@ -209,23 +206,25 @@
         margin-bottom: 20px;
     }
     .mentors-heading {
-        font-size: clamp(4rem, 8vw, 12rem);  /* Increased base size */
+        font-size: clamp(2.2rem, 6vw, 2rem);
         text-align: center;
-        margin: 2rem auto;
+        margin: .1rem auto;
         padding: 0;
         color: #333;
         font-weight: bold;
         max-width: 90%;
-        position: relative;
+        position: absolute; 
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, 0);  
         display: flex;
         justify-content: center;
+        align-items: center; 
         gap: 1rem;
-        white-space: nowrap; 
-    }
+        white-space: nowrap;
+        width: fit-content; 
+      }
     .mentor-image {
-        max-width: 280px;
+        max-width: 230px;
         position: static;
         margin: 0 auto;
     }

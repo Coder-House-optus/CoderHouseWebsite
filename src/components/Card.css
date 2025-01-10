@@ -1,251 +1,258 @@
 .textGreen {
-    color: #A8D85D;
-    font-weight: bold;
-  }
-  
-  .cardsContainer {
-    display: flex;
-    justify-content: center;
+  color: #A8D85D;
+  font-weight: bold;
+}
 
-    gap: 0.0625rem; /* Converted from 0.1rem */
-    margin-top: 2.5rem; /* Converted from 4rem */
-  }
-  
-  .titleContainer {
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 0.0625rem;
+  margin-top: 2.5rem;
+}
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
-    padding: 0.625rem; /* Converted from 1rem */
-    margin-top: 3.75rem; /* Converted from 6rem */
-  }
-  
-  .subtitle {
-    margin: 0;
-    font-size: 2rem; /* Converted from 2.6rem */
-    font-weight: 600;
-    color: #000000;
-  }
-  
-  .mainTitle {
-    margin: 0.625rem 0; /* Converted from 1rem */
-    font-size: 2.5rem; /* Converted from 3.2rem */
-    font-weight: 700;
-    color: #000000;
-  }
-  
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0.625rem;
+  margin-top: 3.75rem;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.mainTitle {
+  margin: 0.625rem 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.card {
+  width: 18.75rem;
+  height: 21.875rem;
+  border-radius: 0.625rem;
+  color: rgb(255, 255, 255);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s, background-image 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.10);
+}
+
+.title {
+  margin-top: 7.5rem;
+  font-size: 1.125rem;
+  color: rgb(67, 67, 67);
+  transition: color 0.3s;
+}
+
+.card:hover .title {
+  color: rgb(237, 235, 235);
+}
+
+.card:hover .subtitle {
+  color: #fff;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features li {
+  margin: 0.3125rem 0;
+  position: relative;
+  padding-left: 1.25rem;
+  color: rgb(58, 58, 58);
+  transition: color 0.3s;
+  font-size: 0.875rem;
+}
+
+.card:hover .features li {
+  color: #fff;
+}
+
+.features li::before {
+  content: '✔';
+  color: #A8D85D;
+  position: absolute;
+  left: 0;
+}
+
+.card1 { background-image: url('/public/images/features_cards/green_infrastructure_card.png'); }
+.card1:hover { background-image: url('/public/images/features_cards/hover_infrastructure_card.png'); }
+.card2 { background-image: url('/public/images/features_cards/green_mentor_card.png'); }
+.card2:hover { background-image: url('/public/images/features_cards/hover_mentor_card.png'); }
+.card3 { background-image: url('/public/images/features_cards/green_growth_card.png'); }
+.card3:hover { background-image: url('/public/images/features_cards/hover_growth_card.png'); }
+
+
+.mobile-break {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
   .card {
-    width: 18.75rem; /* Converted from 30rem */
-    height: 21.875rem; /* Converted from 35rem */
-    border-radius: 0.625rem; /* Converted from 1rem */
-    color: rgb(255, 255, 255);
-    padding: 2.5rem; /* Converted from 4rem */
-    display: flex;
-    flex-direction: column;
-    font-size: 0.875rem; /* Converted from 1.4rem */
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.3s, background-image 0.3s;
-  }
-  
-  .card:hover {
-    transform: scale(1.10);
-
-  }
-  
-  .title {
-    margin-top: 7.5rem; /* Converted from 12rem */
-    font-size: 1.125rem; /* Converted from 1.8rem */
-    color: rgb(67, 67, 67);
-    transition: color 0.3s;
-  }
-  
-  .card:hover .title {
-    color: rgb(237, 235, 235);
-  }
-  
-  .card:hover .subtitle {
-    color: #fff;
-  }
-  
-  .features {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 3.125rem;
   }
   
   .features li {
-    margin: 0.3125rem 0; /* Converted from 0.5rem */
+    font-size: 0.9375rem;
+  }
+  
+  .title {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cardsContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+  }
+  .mobile-break {
+    display: block;
+    margin-top: 1rem; 
+  }
+  .card {
+    width: 90%;
+    max-width: 18.75rem;
+    height: 25rem;
+    padding: 1.25rem;
     position: relative;
-    padding-left: 1.25rem; /* Converted from 2rem */
+  }
 
-    color: rgb(58, 58, 58);
-    transition: color 0.3s;
-    font-size: 0.875rem; /* Converted from 1.4rem */
+  .title {
+    margin-top: 9.375rem;
+    margin-bottom: 0.625rem;
+    font-size: 1.125rem;
+    position: relative;
+    z-index: 1;
   }
-  
-  .card:hover .features li {
-    color: #fff;
+
+  .features {
+    position: relative;
+    z-index: 1;
+    margin-top: 0.3125rem;
   }
-  
-  .features li::before {
-    content: '✔';
+
+  .features li {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    font-size: 1rem;
+  }
+
+  .titleContainer {
+    margin-top: 1.875rem;
+    padding: 0.3125rem;
+  }
+
+  .mainTitle {
+    font-size: 1.625rem;
+    margin-top: .5rem; /* Adjusted to create space above */
+    margin-bottom: 1rem; /* New margin to create space below */
+  }
+
+  .textGreen {
     color: #A8D85D;
-    position: absolute;
-    left: 0;
-
-  }
-  
-  .card1 { background-image: url('/public/images/features_cards/green_infrastructure_card.png'); }
-  .card1:hover { background-image: url('/public/images/features_cards/hover_infrastructure_card.png'); }
-  .card2 { background-image: url('/public/images/features_cards/green_mentor_card.png'); }
-  .card2:hover { background-image: url('/public/images/features_cards/hover_mentor_card.png'); }
-  .card3 { background-image: url('/public/images/features_cards/green_growth_card.png'); }
-  .card3:hover { background-image: url('/public/images/features_cards/hover_growth_card.png'); }
-  
-  /* Tablet (768px) and larger screens */
-  @media screen and (min-width: 768px) {
-    .card {
-      padding: 3.125rem; /* Converted from 5rem */
-    }
-    
-    .features li {
-      font-size: 0.9375rem; /* Converted from 1.5rem */
-    }
-    
-    .title {
-      font-size: 1rem; /* Converted from 1.6rem */
-    }
-  }
-  
-  /* Mobile devices (480px and below) */
-  @media screen and (max-width: 480px) {
-    .cardsContainer {
-      flex-direction: column;
-      align-items: center;
-      gap: 1.25rem; /* Converted from 2rem */
-      margin-top: 1.25rem; /* Converted from 2rem */
-    }
-  
-    .card {
-      width: 90%;
-      max-width: 18.75rem; /* Converted from 30rem */
-      height: 25rem; /* Converted from 40rem */
-      padding: 1.25rem; /* Converted from 2rem */
-      position: relative;
-    }
-  
-    .title {
-      margin-top: 9.375rem; /* Converted from 15rem */
-      margin-bottom: 0.625rem; /* Converted from 1rem */
-      font-size: 1.125rem; /* Converted from 1.8rem */
-      position: relative;
-      z-index: 1;
-    }
-  
-    .features {
-      position: relative;
-      z-index: 1;
-      margin-top: 0.3125rem; /* Converted from 0.5rem */
-    }
-  
-    .features li {
-      margin-bottom: 0.5rem;
-      line-height: 1.4;
-      font-size: 1rem; /* Converted from 1.6rem */
-    }
-  
-    .titleContainer {
-      margin-top: 1.875rem; /* Converted from 3rem */
-      padding: 0.3125rem; /* Converted from 0.5rem */
-    }
-  
-    .mainTitle {
-      font-size: 1.625rem; /* Converted from 2.6rem */
-    }
-  
-    .subtitle {
-      font-size: 1.375rem; /* Converted from 2.2rem */
-    }
-  }
-  
-  /* Large screens (1200px and up) */
-  @media screen and (min-width: 1200px) {
-    .cardsContainer {
-      gap: 1.25rem; /* Converted from 2rem */
-    }
-  
-    .card {
-      width: 18.75rem; /* Converted from 30rem */
-      height: 21.875rem; /* Converted from 35rem */
-      padding: 3.125rem; /* Converted from 5rem */
-    }
-  }
-  
-  /* Medium-Large screens (992px to 1199px) */
-  @media screen and (min-width: 992px) and (max-width: 1199px) {
-    .cardsContainer {
-      gap: 0.9375rem; /* Converted from 1.5rem */
-    }
-  
-    .card {
-      width: 17.5rem; /* Converted from 28rem */
-      height: 21.875rem; /* Converted from 35rem */
-      padding: 2.8125rem; /* Converted from 4.5rem */
-    }
-  }
-  
-  /* Medium screens (768px to 991px) */
-  @media screen and (min-width: 768px) and (max-width: 991px) {
-    .cardsContainer {
-      gap: 0.625rem; /* Converted from 1rem */
-    }
-  
-    .card {
-      width: 15rem; /* Converted from 24rem */
-      height: 21.875rem; /* Converted from 35rem */
-      padding: 1.875rem; /* Converted from 3rem */
-    }
-  
-    .title {
-      margin-top: 6.25rem; /* Converted from 10rem */
-    }
-  }
-  
-  /* Small tablets (481px to 767px) */
-  @media screen and (min-width: 481px) and (max-width: 767px) {
-    .cardsContainer {
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5625rem; /* Converted from 2.5rem */
-      margin-top: 1.875rem; /* Converted from 3rem */
-    }
-  
-    .card {
-      width: 85%;
-      max-width: 21.875rem; /* Converted from 35rem */
-      height: 23.75rem; /* Converted from 38rem */
-      padding: 1.875rem; /* Converted from 3rem */
-    }
-  
-    .title {
-      margin-top: 9.375rem; /* Converted from 15rem */
-      font-size: 1.125rem; /* Converted from 1.8rem */
-    }
-  
-    .features li {
-      font-size: 1rem; /* Converted from 1.6rem */
-      margin-bottom: 0.5rem; /* Converted from 0.8rem */
-    }
-  
-    .mainTitle {
-      font-size: 1.75rem; /* Converted from 2.8rem */
-    }
-  
-    .subtitle {
-      font-size: 1.5rem; /* Converted from 2.4rem */
-    }
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1rem; /* Reset to remove negative margin */
   }
 
+  .subtitle {
+    font-size: 3rem;
+    margin-bottom:-.5rem;
+  }
+ 
+}
+
+@media screen and (min-width: 1200px) {
+  .cardsContainer {
+    gap: 1.25rem;
+  }
+
+  .card {
+    width: 18.75rem;
+    height: 21.875rem;
+    padding: 3.125rem;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .cardsContainer {
+    gap: 0.9375rem;
+  }
+
+  .card {
+    width: 17.5rem;
+    height: 21.875rem;
+    padding: 2.8125rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .cardsContainer {
+    gap: 0.625rem;
+  }
+
+  .card {
+    width: 15rem;
+    height: 21.875rem;
+    padding: 1.875rem;
+  }
+
+  .title {
+    margin-top: 6.25rem;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .cardsContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5625rem;
+    margin-top: 1.875rem;
+  }
+
+  .card {
+    width: 85%;
+    max-width: 21.875rem;
+    height: 23.75rem;
+    padding: 1.875rem;
+  }
+
+  .title {
+    margin-top: 9.375rem;
+    font-size: 1.125rem;
+  }
+
+  .features li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .mainTitle {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+}
