@@ -3,7 +3,7 @@
   max-width: 1500px;
   margin: 0 auto;
   /* background-color: #C6E894;  */
-  background-image: url('/public/images/bluedotedlines.png'),linear-gradient(to bottom, #a9d85db1, #ffffff);;
+  background-image: url('/public/images/bluedotedlines.png'),linear-gradient(to bottom, #a9d85db1, #ffffff);
   background-position: right bottom; /* Position the background image at the bottom-right corner */
   background-repeat: no-repeat;
   background-size: 1500px 600px; /* Adjust the size of the background image */
@@ -123,13 +123,13 @@
 }
 
 /* Moon Content (when opened) */
-.moon-content {
+/* .moon-content {
   width: 100%;
   z-index: 110;
   position: absolute;
   opacity: 0;
   pointer-events: none;
-}
+} */
 
 
 
@@ -232,6 +232,7 @@ img[alt="Card 2"], img[alt="Card 4"] {
     width: 100%;
   }
 
+
   .moon-card {
     margin: 15px auto;
     padding: 10px;
@@ -271,6 +272,9 @@ img[alt="Card 2"], img[alt="Card 4"] {
   .moon-card img {
     width: 45%;
   }
+  .moon-coder-container{
+    background-image: none;
+  }
 }
 
 /* Desktop Adjustments */
@@ -283,11 +287,6 @@ img[alt="Card 2"], img[alt="Card 4"] {
     font-size: 2 em;
     padding: 20px;
   }
-}
-
-
-/* Desktop Adjustments */
-@media screen and (min-width: 1025px) {
   .moon-coder-container {
     padding: 30px;
   }
@@ -320,3 +319,4 @@ img[alt="Card 2"], img[alt="Card 4"] {
     margin-left: 14px;
   }
 }
+
