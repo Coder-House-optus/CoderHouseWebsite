@@ -6,21 +6,18 @@ const HODreview = () => {
   const [memSlide, setMemSlide] = useState(0);
   const [imagesPerSlide, setImagesPerSlide] = useState(4);
   
-  // Review images array (9 images)
   const reviewImages = Array.from({ length: 8 }, (_, i) => ({
     id: i + 1,
     src: `../images/HOD/review${i + 1}.jpg`,
     alt: `Review ${i + 1}`
   }));
 
-  // Memory images array (15 images)
-  const memImages = Array.from({ length: 15 }, (_, i) => ({
+  const memImages = Array.from({ length: 14 }, (_, i) => ({
     id: i + 1,
     src: `../images/HOD/mem${i + 1}.jpg`,
     alt: `Memory ${i + 1}`
   }));
 
-  // Update images per slide based on window size
   useEffect(() => {
     const updateImagesPerSlide = () => {
       const width = window.innerWidth;
@@ -40,26 +37,6 @@ const HODreview = () => {
     return () => window.removeEventListener('resize', updateImagesPerSlide);
   }, []);
 
-  // Auto-slide functionality
-  useEffect(() => {
-    const reviewTimer = setInterval(() => {
-      setReviewSlide(prev => 
-        (prev + 1) % Math.ceil(reviewImages.length / imagesPerSlide)
-      );
-    }, 3000);
-
-    const memTimer = setInterval(() => {
-      setMemSlide(prev => 
-        (prev + 1) % Math.ceil(memImages.length / imagesPerSlide)
-      );
-    }, 3000);
-
-    return () => {
-      clearInterval(reviewTimer);
-      clearInterval(memTimer);
-    };
-  }, [imagesPerSlide]);
-
   const Carousel = ({ images, currentSlide, setCurrentSlide }) => {
     const totalSlides = Math.ceil(images.length / imagesPerSlide);
     
@@ -71,20 +48,21 @@ const HODreview = () => {
       setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
     };
 
+    // Add auto-advance timer
+    useEffect(() => {
+      const timer = setInterval(() => {
+        nextSlide();
+      }, 3000); // 3 seconds
+
+      return () => clearInterval(timer); // Cleanup on unmount
+    }, [currentSlide, totalSlides]); // Dependencies to ensure timer updates properly
+
     const startIdx = currentSlide * imagesPerSlide;
     const visibleImages = images.slice(startIdx, startIdx + imagesPerSlide);
 
     return (
-      <div className="reviews-container">
-        <button 
-          onClick={prevSlide}
-          className="carousel-button prev"
-          aria-label="Previous slide"
-        >
-          ←
-        </button>
-        
-        <div className="reviews-grid">
+      <div className="carousel-wrapper">
+        <div className="carousel-container">
           {visibleImages.map((image) => (
             <div key={image.id} className="review-item">
               <img 
@@ -96,20 +74,29 @@ const HODreview = () => {
           ))}
         </div>
 
-        <button 
-          onClick={nextSlide}
-          className="carousel-button next"
-          aria-label="Next slide"
-        >
-          →
-        </button>
+        <div className="navigation-buttons">
+          <button 
+            onClick={prevSlide}
+            className="carousel-button"
+            aria-label="Previous slide"
+          >
+            ←
+          </button>
+          <button 
+            onClick={nextSlide}
+            className="carousel-button"
+            aria-label="Next slide"
+          >
+            →
+          </button>
+        </div>
       </div>
     );
   };
 
   return (
-    <div className='carouselss-container'>
-      <h2> Moments of <span>Encouragement</span> </h2>
+    <div className="carouselss-container">
+      <h2>Moments of <span>Encouragement</span></h2>
       <Carousel 
         images={memImages}
         currentSlide={memSlide}
@@ -121,7 +108,6 @@ const HODreview = () => {
         currentSlide={reviewSlide}
         setCurrentSlide={setReviewSlide}
       />
-      
     </div>
   );
 };
