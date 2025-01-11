@@ -5,13 +5,15 @@
   /* background: linear-gradient(90deg, #8fc7ff, #ffffff, #3C5C7B); */
   max-width: 100vw;
   max-height: auto;
-  margin: 0 auto;
   border-radius: 10px;
   position: relative;
   height: auto;
   padding: 20px;
   z-index: 1;
   min-height: 100vh;
+}
+.highlight-title{
+  color: #74a944;
 }
 
 .internship-container1::before {
@@ -21,7 +23,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-image: url('/public/images/bluedotedlines.png');
+  background-image: url('/public/images/bluedotedlines.png'), linear-gradient(135deg, #88C057, #ffffff);;
   background-size: cover;
   background-position: center;
   background-repeat: repeat-y;
@@ -32,6 +34,8 @@
    /* Reduced opacity for better contrast */
   
 }
+
+
 
 .internship-title {
   font-size: 2.5rem;
@@ -53,17 +57,23 @@
   margin-bottom: 40px;
 }
 
-.resume-heading1 {
+.resume-heading3 {
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 2px;
-  background-color: #88C057; /* Slightly darker background for contrast */
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: #fff;
+  margin-bottom: 20px; /* Space below the card */
+  background-color: #99C05F; /* Background color */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Reduced padding */
+  border-radius: 8px; /* Rounded corners */
   opacity: 1;
-  
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.5); /* Shadow for the card */
+  width: fit-content; /* Makes the width fit content */
+  margin-left: auto; /* Centers the card horizontally */
+  margin-right: auto; /* Centers the card horizontally */
+  text-align: center; /* Centers the text inside */
 }
+
+
 
 .highlights-grid {
   display: grid;
@@ -219,5 +229,57 @@
 
   .resume-heading1 {
     font-size: 16px;
+  }
+}
+
+
+.highlight-circle1,
+.highlight-circle2,
+.highlight-circle3,
+.highlight-circle4 {
+  background-color: #eef6fa;
+  color: #005bb5; /* Darker blue for contrast */
+  font-size: 2rem;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  border: 5px solid rgb(190, 212, 172); /* White circular border */
+  box-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.8),  /* Light glow around white border */
+    0 0 0 10px #547698; /* Grey outer border */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .highlight-circle1,
+  .highlight-circle2,
+  .highlight-circle3,
+  .highlight-circle4 {
+    width: 70px;
+    height: 70px;
+    font-size: 1.5rem;
+    border: 5px solid rgb(190, 212, 172); /* Adjust white border for smaller screens */
+    box-shadow: 
+      0 0 4px rgba(255, 255, 255, 0.8), /* Light glow around white */
+      0 0 0 8px #547698; /* Adjusted grey border */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .highlight-circle1,
+  .highlight-circle2,
+  .highlight-circle3,
+  .highlight-circle4 {
+    width: 60px;
+    height: 60px;
+    font-size: 1.2rem;
+    border: 5px solid rgb(190, 212, 172);
+    box-shadow: 
+      0 0 3px rgba(255, 255, 255, 0.8), /* Subtle glow */
+      0 0 0 6px #547698; /* Adjusted grey border for smaller screens */
   }
 }

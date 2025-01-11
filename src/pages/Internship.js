@@ -25,12 +25,10 @@ const Internship = () => {
       {/* Who Can Apply Section */}
       <div className="eligibility-section">
         <h2 className="section-title">Who Can Apply</h2>
-        <p className="resume-heading1">
-          Students from{" "}
-          <span>[Relevant Streams: Engineering and Coding Lovers]</span>
+        <p className="resume-heading3">Students from Relevant Streams: Engineering and Coding Lovers
         </p>
         <br/>
-        <p className="resume-heading1">Passionate learners eager to gain real-world experience.</p>
+        <p className="resume-heading3">Passionate learners eager to gain real-world experience.</p>
       </div>
 
       {/* Internship Highlights Section */}

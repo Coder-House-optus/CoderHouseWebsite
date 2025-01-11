@@ -722,7 +722,7 @@ input:focus, select:focus, textarea:focus {
     width: 80%; /* Adjust this value to make it smaller or bigger */
     margin: 0 auto; /* Centers the container horizontally */
     box-sizing: border-box; /* Ensures padding doesn't affect the width */
-    padding: 10px;
+    padding: 0px;
   }
   .enquiry-form5 {
     display: flex;
@@ -832,7 +832,7 @@ input:focus, select:focus, textarea:focus {
 }
 .program-section {
   margin-top: 10px;
-  background: linear-gradient(to bottom, #a8e06336 10%, #ffffff 60%);
+  /* background: linear-gradient(to bottom, #a8e06336 10%, #ffffff 60%); */
 
 }
 }
