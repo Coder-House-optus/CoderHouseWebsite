@@ -49,6 +49,7 @@ p {
   padding: 5% 3%;
   position:relative;
   z-index: 1;
+  /* background: linear-gradient(to bottom, #a9d85d5e, rgba(255, 255, 255, 0.3)); */
   /* background: linear-gradient(90deg, #8fc7ff, #ffffff, #3C5C7B); */
 }
 .cards-section::before {
