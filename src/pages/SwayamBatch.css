@@ -51,15 +51,7 @@
     width: 700px;
     margin-left: -200px;
   }
-  
-  .features5 li::before {
-    content: "✔"; /* Unicode for tick mark */
-    position: absolute; /* Position relative to the list item */
-    left: 10px; /* Adjust spacing from the left */
-    color: white; /* Tick mark color */
-    font-size: 18px; /* Tick mark size */
-    font-weight: bold;
-  }
+
   
   
   .technologies1 {
@@ -150,14 +142,6 @@
   width: 80%; /* Set width percentage for responsive centering */
 }
 
-.features5 li::before {
-  content: "✔";
-  position: absolute;
-  left: 15px; /* Adjust spacing from the left */
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-}
 
 .technologies1 {
   margin: 50px auto; /* Center horizontally */
@@ -248,6 +232,15 @@
 .swayam1{
   margin-top:50px;
   font-size: 2.8em;
+}
+
+.features5 {
+  list-style: none; /* Remove bullet points or ticks */
+  padding-left: 0; /* Remove indentation */
+}
+
+.features5 li {
+  margin-bottom: 10px; /* Optional: Adjust space between list items */
 }
 
 
