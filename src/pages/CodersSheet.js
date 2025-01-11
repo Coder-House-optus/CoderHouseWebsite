@@ -27,7 +27,7 @@ const CoderSheet = () => {
 
       <div className="header1">
         <h1 className="mainTitle1">
-          <span className="textGreen">Coders Sheet: </span> Practice Questions Galore
+          <span className="textGreen">Coders Sheet: </span> Practice Galore
         </h1>
         <p className="mentorpara1">Welcome to the Mentorship Program, an initiative designed to provide one-on-one (1:1) guidance to students, fostering their personal, academic, and professional growth. This program connects students with experienced mentors who offer tailored support, ensuring that every individual achieves their fullest potential.</p>
 

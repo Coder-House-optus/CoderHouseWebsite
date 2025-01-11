@@ -61,7 +61,7 @@ export default function MoonCoder() {
               src="/images/contest1.png"
               alt="Card 2"
             />
-            <h1>Nightly Key Question Solutions</h1>
+            <h1 className="moon-card-title">Nightly Key Question Solutions</h1>
           </div>
         </div>
         <div className="moon-coder-card-column column-1">
@@ -84,7 +84,7 @@ export default function MoonCoder() {
               src="/images/contest2.png"
               alt="Card 4"
             />
-            <h1>Saturday Analytical Discussions with real-time feedback</h1>
+            <h1 className="moon-card-title">Saturday Analytical Discussions with real-time feedback</h1>
           </div>
         </div>
       </div>

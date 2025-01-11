@@ -334,7 +334,7 @@
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   /* Tablet View for .swayam-batch */
   .swayam-batch {
-    max-width: 90%; /* Adjust container width for tablets */
+    max-width: 100%; /* Adjust container width for tablets */
     background-size: cover; /* Ensure the background image scales properly */
     background-position: center; /* Center the background image */
     padding: 20px; /* Padding for better spacing */

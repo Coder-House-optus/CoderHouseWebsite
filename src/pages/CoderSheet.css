@@ -531,6 +531,10 @@
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px; /* Optional: Add rounded corners */
   }
+  .textGreen{
+    font-size: 1.4em;
+    line-height: 1em;
+  }
   
   .image-buttons {
     margin-top: 10px; /* Add space between image and button */
@@ -539,10 +543,21 @@
     justify-content: center;
     text-align: center; /* Center the text inside the container */
   }
+  .image-gallery{
+    padding-top: 30px;
+  }
 
   .content2{
     font-size: 3em;
   }
+  .image-item {
+    position: relative;
+    width: 100%; /* Adjust width as needed */
+    text-align: center;
+    display: block; /* Ensures elements stack vertically */
+    margin-bottom: 10px; /* Adds spacing between elements */
+  }
+  
 }
 
 
@@ -562,6 +577,16 @@
   .tab:hover {
     background-color: #e0e0e0; /* Slightly darker background on hover */
   }
+  /* .textGreen{
+    font-size: 2em;
+  }*/
+  .mainTitle1{
+    font-size: 3em;
+    padding: 0px 20px 0px 20px;
+
+  } 
+
+  
 
   /* Back button adjustments */
   .back-button1 {
@@ -623,7 +648,13 @@
   }
   
   .mentorpara1{
-    font-size: 2em;
+    font-size: 1.4em;
     padding: 50px;
+  }
+  .mentorship-program p{
+    /* font-size: 3em; */
+  }
+  .image-gallery{
+    padding: 20px;
   }
 }

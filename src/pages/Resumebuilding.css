@@ -18,7 +18,8 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-image: url('/public/images/bluedotedlines.png');
+  background: linear-gradient(to bottom, #94bd50, rgba(255, 255, 255, 0.2)), 
+  url('/public/images/bluedotedlines.png');
   background-size: cover;
   background-position: center;
   background-repeat: repeat-y;
@@ -176,7 +177,7 @@
 /* Responsive styles for 768px */
 @media screen and (max-width: 768px) {
   .resume-container {
-    padding: 5px;
+
   }
 
   .resume-item {

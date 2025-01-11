@@ -240,7 +240,11 @@
   .image-section2 {
     flex-direction: column; /* Stack images vertically */
     gap: 5px;
+    margin-left: -1px;
    
+  }
+  .green-text{
+    padding-bottom: 3px;
   }
 
   .rectangle-image2 {
@@ -267,13 +271,15 @@
   }
   .green-text {
     color: #99C05F; /* Green color for "Mentorship Module" */
-    font-size: 1.2em;
+    font-size: 1.3em;
+    padding-bottom: 30px;
   }
   
   .black-text {
     color: #333; /* Black color for the rest of the text */
     display: block; /* Forces the text to move to the next line */
     font-size: 1em; /* Optional: Adjust size of the secondary text */
+    margin-top: 20px;
   }
   .key-mentor{
     font-size: 3em;
