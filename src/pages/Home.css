@@ -621,6 +621,13 @@ html {
     line-height: 1.2; 
   }
 }
+@media (min-width:1470px) {
+  .stats-section{
+    transform: translateX(-8.5rem);
+    margin-top: -2.25rem;
+    max-width: 90%;
+  }
+}
 /* @media (min-width: 1281px) and (max-width: 1500px) {
   .hero {
     position: relative;

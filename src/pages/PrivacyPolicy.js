@@ -7,7 +7,7 @@ const PrivacyPolicy = () => {
     return (
         <div className='shared'>
             <button 
-                className="back-button"
+                className="back-buttons"
                 onClick={() => navigate(-1)}
                 aria-label="Go back"
             >
