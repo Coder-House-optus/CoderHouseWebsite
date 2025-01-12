@@ -1,24 +1,24 @@
 /* shared-styles.css */
 .shared {
     /* background: linear-gradient(90deg, #C6E894, #ffffff, #99C05F); */
-    background: linear-gradient(90deg, #8fc7ff, #ffffff, #3C5C7B);
+    
     position: relative;
-    z-index: 0;
+    z-index: 1;
 }
 
 .shared::before {
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-image: url('/public/images/bluedotedlines.png');
+    height: 100vh;
+    background-image: url('/public/images/bluedotedlines.png'),linear-gradient(180deg, #88C057, #ffffff);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0.25;
-    z-index: 3;
+    z-index: -1;
     pointer-events: none;
 }
 
@@ -33,7 +33,7 @@
     background: transparent;
     z-index: 2;
 }
-  .back-button {
+  .back-buttons {
     position: absolute;
     left: 1rem;
     top: 1rem;
@@ -96,8 +96,29 @@
   .legal-page-container strong {
     color: #1a1a1a;
   }
-  
+
   @media (max-width: 768px) {
+    .legal-page-container {
+      padding: 1rem;
+    }
+  
+    .legal-page-container h1 {
+      font-size: 2rem;
+    }
+  
+    .legal-page-container h2 {
+      font-size: 1.5rem;
+    }
+  
+    .legal-page-container h3 {
+      font-size: 1.25rem;
+    }
+  
+    .legal-page-container h4 {
+      font-size: 1.1rem;
+    }
+  }
+  @media (max-width: 480px) {
     .legal-page-container {
       padding: 1rem;
     }
