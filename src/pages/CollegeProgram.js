@@ -8,7 +8,7 @@ const CollegeProgram = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeTestimonialIndex, setActiveTestimonialIndex] = useState(0);
   const programData = {
-    300: "https://docs.example.com/300-hour-program",
+    300: "https://docs.google.com/document/d/1o7M2U6wZ9JBL1Yybz5MG-YZVlkmM_XbCkjuXT0tsXbc/edit?usp=sharing",
     120: "https://docs.google.com/document/d/10FDsMB2qj-jODl5WNiByZyQfFqYgOSCwX8bx541BPl0/edit?usp=sharing",
     90: "https://docs.google.com/document/d/1R1I1N85g2fowIr7_WKHD5aB8C6Bs3NjiKnl2lr0qvgA/edit?tab=t.0",
     75: "https://docs.google.com/document/d/10yD5s_UdITyy-f7QBn4sYkqsajci3jXz/edit?usp=sharing&ouid=107632382243829537151&rtpof=true&sd=true",
