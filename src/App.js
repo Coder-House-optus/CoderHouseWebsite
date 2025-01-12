@@ -5,7 +5,7 @@ import Features from './pages/Features';
 import CampusProgram from './pages/CampusProgram';
 
 
-import SubmissionViewer from './components/SubmissionViewer';
+
 
 import SwayamBatch from './pages/SwayamBatch';
 // import CrtOfflineBatch from './pages/CrtOfflineBatch';
@@ -48,7 +48,7 @@ function App() {
         <Routes>
           {/* Existing Routes */}
 
-          <Route path="/submissions" element={<SubmissionViewer />} />
+        
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/features" element={<Features />} />
