@@ -51,7 +51,7 @@ const ambassadors = [
   { name: "Hiya Jain", photo: "../images/Ambassador/image5.png", company: "LPU" },
   { name: "Aastha Purey", photo: "../images/Ambassador/image13.jpg", company: "VIT" },
   { name: "Divyanshu Singhal", photo: "../images/Ambassador/image7.jpg", company: "VIT" },
-  { name: "Aanchal Agarwal", photo: "../images/Ambassador/image14.jpg", company: "NIT" },
+  { name: "Aanchal Agarwal", photo: "../images/Ambassador/image14.jpg", company: "GMC" },
 ];
 const Achievers = () =>{
   const allAchievers =achievers.flatMap(company => 
