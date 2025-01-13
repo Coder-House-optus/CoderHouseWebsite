@@ -10,6 +10,8 @@ const MarathonClasses = () => {
     window.open(url, '_blank'); // Open document in a new tab
   };
 
+  const googleFormLink = "https://docs.google.com/forms/d/e/1FAIpQLSd12VNW9dqxsHnH13R7JFrug_guszXURRbW4dMc3HmdGHlG5w/viewform?usp=sharing";
+
   const companyDocs = [
     { name: "TCS", link: "https://docs.google.com/document/d/14wk4V0X0CbYZjSiEks2hrkmcIBRUBdwSDOQTSxfyEZI/edit?tab=t.0" },
     { name: "TCS NQT", link: "https://docs.google.com/document/d/187up3ub6fP9ePT973N8pnFpGfY0aoxuKEQk7Rwptnjw/edit?tab=t.0" },
@@ -21,14 +23,13 @@ const MarathonClasses = () => {
     { name: "Infosys", link: "https://docs.google.com/document/d/1YlIjdy1uZR1RuhIYU3oz9YXGy-oPfC8fZTox6PYJBo4/edit?tab=t.0#heading=h.hcwyy4lc8uv6" },
   ];
 
-
   return (
     <div className="marathon-container">
       <button onClick={() => navigateTo('/Features')} className="back-button1">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <line x1="19" y1="12" x2="5" y2="12"></line>
-    <polyline points="12 19 5 12 12 5"></polyline>
-  </svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
       </button>
       <h1 className='marathonHeader'>Marathon Classes</h1>
       <div className="marathon-buttons1">
@@ -46,22 +47,23 @@ const MarathonClasses = () => {
       <div className="marathon-buttons-grid">
         {companyDocs.map((doc, index) => (
           <div key={index} className="marathon-card">
-          <h3 className="marathon-doc-title">{doc.name}</h3>
-          <div className="marathon-buttons-container">
-            <button
-              className="marathon-doc-button"
-              onClick={() => openDoc(doc.link)}
-            >
-              Open Document
-            </button>
-            <button
-              className="marathon-doc-button"
-              onClick={() => openDoc(doc.link)}
-            >
-              Join Us!
-            </button>
-          </div>
-        </div>        
+            <h3 className="marathon-doc-title">{doc.name}</h3>
+            <div className="marathon-buttons-container">
+              <button
+                className="marathon-doc-button"
+                onClick={() => openDoc(doc.link)}
+              >
+                Open Document
+              </button>
+              <button
+  className="marathon-doc-button"
+  onClick={() => openDoc('https://docs.google.com/forms/d/e/1FAIpQLSd12VNW9dqxsHnH13R7JFrug_guszXURRbW4dMc3HmdGHlG5w/viewform')}
+>
+  Join Us!
+</button>
+
+            </div>
+          </div>        
         ))}
       </div>
     </div>
