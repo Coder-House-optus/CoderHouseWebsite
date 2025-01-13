@@ -106,7 +106,7 @@
 }
 
 .social-icons a {
-  color: #526E8A;
+  /* color: #526E8A; */
   font-size: 1.5em;
   display: inline-flex;
   align-items: center;
@@ -118,19 +118,50 @@
   transition: all 0.3s ease;
 }
 
-.social-icons a:hover {
+/* .social-icons a:hover {
   color: #fff !important;
   transform: scale(1.1);
+} */
+
+
+
+.footer-logo img:first-child {
+  width: 90px;
+  height: 85px;
 }
 
-
-
-.footer-logo img {
-  width: 100px;
+.footer-logo .optus {
   height: 80px;
+  width: 90px; 
 }
-.optus{
-  height:90px;
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor; /* This will inherit the color from the parent */
+}
+
+.facebook {
+  color: #0469ee; /* Facebook blue */
+}
+
+.instagram {
+  color: #f60531; /* Instagram pink */
+}
+
+.linkedin {
+  color: #0594e0; /* LinkedIn blue */
+}
+
+/* Hover effects */
+.social-icons a:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
 }
 
 
