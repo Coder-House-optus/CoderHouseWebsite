@@ -141,7 +141,7 @@
   align-items: center;
   position: relative; /* To position the ripple inside the card */
   overflow: hidden; 
-  color: #333;
+  color: black;
 }
 .placed-card::before {
   content: '';
@@ -168,7 +168,6 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   border: 2px solid #5988b6;
   box-shadow: 0 0 15px 5px #5988b6;
-  color:white;
   
 }
 .placed-card .achiever-name, 
