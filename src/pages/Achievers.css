@@ -28,7 +28,7 @@
 }
 
 .gradient-text {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-weight: bold;
   background-clip: text;
   -webkit-background-clip: text;
@@ -45,15 +45,16 @@
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   box-shadow: 0 0 15px 5px rgba(168, 255, 183, 0.7);
-  
+  padding-left: 20%;
 }
 
 .blue-green {
-  background: linear-gradient(to right , #3C5C7B, #8fc7ff);
+  background: linear-gradient( to right , #3C5C7B, #5988b6);
   color: white;
   border-top-right-radius:0;
   border-bottom-right-radius:0;
   box-shadow: 0 0 15px 5px rgba(77, 192, 231, 0.7);
+  padding-right: 20%;
 }
 
 .ambassadors-grid {
@@ -124,6 +125,7 @@
     position: relative; /* Ensure text is in the correct stacking context */
 }
 
+
 .placed-card {
   width: 200px;
   padding: 15px;
@@ -139,6 +141,7 @@
   align-items: center;
   position: relative; /* To position the ripple inside the card */
   overflow: hidden; 
+  color: black;
 }
 .placed-card::before {
   content: '';
@@ -147,7 +150,7 @@
   left: 10%;
   width: 1px;
   height: 1px;
-  background-color: #8fc7ff;
+  background-color: #5988b6;
   border-radius: 50%;
   transform: translate(-50%, -50%) scale(0);
   transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease;
@@ -163,8 +166,9 @@
 .placed-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  border: 2px solid #8fc7ff;
-  box-shadow: 0 0 15px 5px #8fc7ff;
+  border: 2px solid #5988b6;
+  box-shadow: 0 0 15px 5px #5988b6;
+  
 }
 .placed-card .achiever-name, 
 .placed-card .achiever-photo,
@@ -174,24 +178,33 @@
     position: relative; /* Ensure text is in the correct stacking context */
 }
 .achiever-photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 30%;
+  width: auto; /* Adjust width based on height */
+  height: 100%; /* Maintain height */
+  max-width: 150px; /* Limit the width */
+  max-height: 150px; /* Limit the height */
+  aspect-ratio: 3.4 / 4; /* Enforce 3:4 aspect ratio */
+  border-radius: 18%;
   object-fit: cover;
   margin-bottom: 10px;
 }
 
+
 .achiever-name {
   font-size: 1rem;
-  color: #333;
+
   margin: 10px 0;
   text-align: center;
 }
 
+
 .company-name {
   font-size: 0.9rem;
-  color: #666;
   margin-top: auto;
+  font-weight: bolder;
+  color:white;
+  background-color: #A8D85D;
+  border-radius: 25px;
+  padding:2% 5%;
 }
 
 .card-company-logo {
@@ -254,7 +267,7 @@
   }
   
   .gradient-text {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     text-align: center;
   }
 
@@ -268,5 +281,11 @@
 
   .achiever-card {
     width: 140px;
+  }
+  .blue-green{
+    padding-right: 0px;
+  }
+  .green-blue{
+    padding-left: 0px;
   }
 }

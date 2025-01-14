@@ -43,6 +43,7 @@
     padding: 0.5rem 1.5rem;
     border-radius: 5px;
     transition: transform 0.2s ease;
+    z-index: 4;
   }
   
   .back-button:hover {
@@ -80,7 +81,7 @@
   
   .legal-page-container p {
     margin-bottom: 1rem;
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   
   .legal-page-container ul {
@@ -90,7 +91,7 @@
   
   .legal-page-container li {
     margin-bottom: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   
   .legal-page-container strong {
@@ -113,7 +114,12 @@
     .legal-page-container h3 {
       font-size: 1.25rem;
     }
-  
+    .legal-page-container p {
+      font-size: 1.15rem;
+    }
+    .legal-page-container li {
+      font-size: 1.15rem;
+    }
     .legal-page-container h4 {
       font-size: 1.1rem;
     }
@@ -128,13 +134,18 @@
     }
   
     .legal-page-container h2 {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
     }
   
     .legal-page-container h3 {
-      font-size: 1.25rem;
+      font-size: 1.65rem;
     }
-  
+    .legal-page-container p {
+      font-size: 1.5rem;
+    }
+    .legal-page-container li {
+      font-size: 1.5rem;
+    }
     .legal-page-container h4 {
       font-size: 1.1rem;
     }
