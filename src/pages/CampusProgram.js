@@ -182,6 +182,10 @@ const CampusProgram = () => {
     navigate(selectedProgram.link);  
   };
 
+  const handleJoinNow = () => {
+    navigate('/Home'); // Navigates to the Home page (root route)
+  };
+
   return (
     <section className="programs">
       <Navigation />
@@ -225,12 +229,27 @@ const CampusProgram = () => {
               <strong>Duration:</strong> {technicalPrograms[currentProgramIndex].duration}
             </p>
             {/* View More Button */}
-            <button
-              onClick={() => handleViewMore(technicalPrograms[currentProgramIndex])}
-              className="view-more-button"
-            >
-              View More
-            </button>
+            
+            <div className="action-container">
+  <button
+    onClick={() => handleViewMore(technicalPrograms[currentProgramIndex])}
+    className="details-btn"
+  >
+    View More
+  </button>
+  <button
+  onClick={() => {
+    const element = document.getElementById("comehere");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }}
+  className="cenroll-btn"
+>
+  Join Now!
+</button>
+</div>
+
           </div>
         </div>
       )}
@@ -334,6 +353,7 @@ const CampusProgram = () => {
             <option value="Technical">Technical</option>
             <option value="Cognitive">Cognitive</option>
           </select>
+          
           <select
             value={mode}
             onChange={(e) => setMode(e.target.value)}
@@ -353,6 +373,8 @@ const CampusProgram = () => {
           </button>
         </form>
       </div>
+
+      
       <Footer />
     </section>
   );

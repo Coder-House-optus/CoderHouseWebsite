@@ -48,7 +48,7 @@ export default function Home() {
   return (
     <div className="home">
       <Navigation />
-      <section className="hero">
+      <section className="hero" id="comehere">
         <div className="hero-left">
           <img
             src="/images/Coder.png"
