@@ -331,7 +331,7 @@ h1{
   margin: 0 auto;
   padding: 0 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 1.5rem;
 }
 
@@ -349,7 +349,7 @@ h1{
 
 .card-header {
   height: 8rem;
-  background-color: #3C5C7B;
+  background-color: #0E2031;
   position: relative;
 }
 
@@ -635,21 +635,22 @@ h1{
   }
 }
 
-/* Contact Card */
-.card-section-about{
+/* Contact Card Section */
+.card-section-about {
   margin-bottom: 200px;
+  position: relative;
 }
+
 .contact-card {
   width: min(90%, 400px);
-  margin: 0 auto 60px;
+  margin: 0 auto;
   padding: 20px;
-  margin-bottom: 100px;
   border-radius: 8px;
   background-color: #fff;
-  box-shadow:0 4px 8px rgba(0, 0, 0, 0.2), 
-  4px 0 8px rgba(0, 0, 0, 0.2),
-  -4px 0 8px rgba(0, 0, 0, 0.2),
-  0 -4px 8px rgba(0, 0, 0, 0.2);;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 
+              4px 0 8px rgba(0, 0, 0, 0.2),
+              -4px 0 8px rgba(0, 0, 0, 0.2),
+              0 -4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 
@@ -658,19 +659,122 @@ h1{
   height: 300px;
   object-fit: cover;
   border-radius: 4px;
+  margin-bottom: 40px; /* Added space between image and ribbon */
 }
 
-.contact-details h3 {
-  font-size: 1.5rem;
-  color: #0E2031;
-  margin-bottom: 15px;
+/* Ribbon Styles */
+.ribbon-container {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 120px;
 }
 
-.contact-details p {
-  font-size: 1.1rem;
-  color: #666;
-  margin: 8px 0;
-  line-height: 1.4;
+.ribbon-banner {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 120px;
+  border: 1px solid #8a1;
+  text-align: center;
+  color: #451;
+  background: #9b2;
+  border-radius: 4px;
+  box-shadow: 0 0 30px rgba(0,0,0,.15) inset,
+              0 6px 10px rgba(0,0,0,.15);
+}
+
+.ribbon-banner::before,
+.ribbon-banner::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: -70px;
+  top: 24px;
+  display: block;
+  width: 40px;
+  height: 0px;
+  border: 45px solid #9b2;
+  border-right: 20px solid #791;
+  border-bottom-color: #94b81e;
+  border-left-color: transparent;
+  transform: rotate(-5deg);
+}
+
+.ribbon-banner::after {
+  left: auto;
+  right: -70px;
+  border-left: 20px solid #791;
+  border-right: 30px solid transparent;
+  transform: rotate(5deg);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .ribbon-banner {
+    width: 400px;
+    height: 100px;
+    font-size: clamp(20px, 3.5vw, 24px);
+    line-height: 50px;
+  }
+
+  .ribbon-container {
+    height: 100px;
+  }
+
+  .ribbon-banner::before,
+  .ribbon-banner::after {
+    left: -50px;
+    top: 20px;
+    border-width: 35px;
+    border-right-width: 15px;
+  }
+
+  .ribbon-banner::after {
+    left: auto;
+    right: -50px;
+    border-left-width: 15px;
+    border-right-width: 25px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-card {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .contact-image {
+    height: 250px;
+    margin-bottom: 30px;
+  }
+
+  .ribbon-container {
+    height: 80px;
+  }
+
+  .ribbon-banner {
+    width: 300px;
+    height: 80px;
+    font-size: clamp(16px, 3vw, 20px);
+    line-height: 40px;
+  }
+
+  .ribbon-banner::before,
+  .ribbon-banner::after {
+    left: -40px;
+    top: 15px;
+    border-width: 30px;
+    border-right-width: 12px;
+  }
+
+  .ribbon-banner::after {
+    left: auto;
+    right: -40px;
+    border-left-width: 12px;
+    border-right-width: 20px;
+  }
 }
 
 .about-header-text {

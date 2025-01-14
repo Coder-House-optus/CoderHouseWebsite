@@ -40,7 +40,7 @@ const AboutUs = () => {
     { name: "Aanchal Agarwal", role: "Graphic Designer", image: '../images/Ambassador/image14.jpg' },
   ];
 
-  const nonTechTeam = [
+  const SupportingTeam = [
     { name: "Khushi Shrivastava", role: "Centre Growth Associate", image: '../images/Ambassador/image8.jpg' },
     { name: "Shruti Singour", role: "Academic Associate", image: '../images/Ambassador/image6.jpg' },
     { name: "Nandini Patel", role: "Academic and Career Counsellor", image: '../images/Ambassador/image11.jpg' },
@@ -157,8 +157,8 @@ const AboutUs = () => {
         {/* Team Sections */}
         <TeamSection title="Mentors" members={mentors} />
         <TeamSection title="Tech Team" members={techTeam} />
-        <TeamSection title="Non-Tech Team" members={nonTechTeam} />
-      </div>
+        <TeamSection title="Supporting Team" members={SupportingTeam} centerAlign={true} />
+        </div>
 
       <section className="cta-section">
         <div className="cta-content">
@@ -170,15 +170,17 @@ const AboutUs = () => {
         </div>
       </section>
       <div className='card-section-about'>
-        <div className="contact-card" id="contact-section">
-          <img src="./images/about-contact.jpg" alt="Contact" className="contact-image" />
-          <div className="contact-details">
-            <h3>Contact Us</h3>
+      <div className="contact-card" id="contact-section">
+        <img src="./images/about-contact.jpg" alt="Contact" className="contact-image" />
+        <div className="ribbon-container">
+          <div className="ribbon-banner">
+            <p> Contact Us </p>
             <p>Email: coderhouseoptus@gmail.com</p>
             <p>Phone: +91 9926865740</p>
           </div>
         </div>
       </div>
+    </div>
 
       <Footer />
     </>
