@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
+const SchoolProgram = lazy(() => import('./pages/SchoolProgram.js'));
 const CollegeProgram = lazy(() => import('./pages/CollegeProgram'));
 const Home = lazy(() => import('./pages/Home'));
 const Features = lazy(() => import('./pages/Features'));
@@ -42,6 +42,7 @@ function App() {
       <Router>
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
+            <Route path="/SchoolProgram" element={<SchoolProgram />} />
             <Route index element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/features" element={<Features />} />

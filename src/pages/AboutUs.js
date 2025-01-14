@@ -5,9 +5,7 @@ import "./AboutUs.css";
 
 const AboutUs = () => {
   useEffect(() => {
-    // Check if there's a hash in the URL
     if (window.location.hash === '#contact-section') {
-      // Small delay to ensure the page is fully loaded
       setTimeout(() => {
         const element = document.getElementById('contact-section');
         if (element) {
