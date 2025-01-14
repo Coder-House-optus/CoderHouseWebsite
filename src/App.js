@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import CollegeProgram from './pages/CollegeProgram';
+
 import Home from './pages/Home';
 import Features from './pages/Features';
 import CampusProgram from './pages/CampusProgram';
 
-
+import SchoolProgram from './pages/SchoolProgram.js';
 import SubmissionViewer from './components/SubmissionViewer';
 
 import SwayamBatch from './pages/SwayamBatch';
@@ -47,7 +48,7 @@ function App() {
       <Router>
         <Routes>
           {/* Existing Routes */}
-
+          <Route path="/schoolProgram" element={<SchoolProgram />} />
           <Route path="/submissions" element={<SubmissionViewer />} />
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />

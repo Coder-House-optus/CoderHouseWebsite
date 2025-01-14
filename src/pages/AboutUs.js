@@ -27,7 +27,6 @@ const AboutUs = () => {
   ];
 
   const mentors = [
-    { name: "Firoz Khan", role: "Centre Head (Optus)", image: '../images/Ambassador/image4.jpg' },
     { name: "Yashpal Puri", role: "Corporate Trainer ", image: '../images/Ambassador/image12.jpg' },
     { name: "Aditya Raj", role: "ICPC Amritapuri Regionalist Rank 82", image: '../images/Ambassador/image1.jpg' },
     { name: "Hiya Jain", role: "Competitive Programmer", image: '../images/Ambassador/image5.png' },

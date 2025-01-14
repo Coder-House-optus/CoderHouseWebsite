@@ -38,6 +38,7 @@ const Navigation = () => {
           <ul className="dropdown-content">
             <li><a href="/CollegePrograms">College Programs</a></li>
             <li><a href="/campusPrograms">Campus Programs</a></li>
+            <li><a href="/SchoolProgram">School Programs</a></li>
           </ul>
         </li>
 
