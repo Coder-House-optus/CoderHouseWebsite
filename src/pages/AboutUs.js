@@ -45,10 +45,10 @@ const AboutUs = () => {
     { name: "Shruti Singour", role: "Academic Associate", image: '../images/Ambassador/image6.jpg' },
     { name: "Nandini Patel", role: "Academic and Career Counsellor", image: '../images/Ambassador/image11.jpg' },
   ];
-  const TeamSection = ({ title, members }) => (
-    <section className="team-section">
+  const TeamSection = ({ title, members, isSupporting = false }) => (
+    <section className={`team-section ${isSupporting ? 'supporting-team-section' : ''}`}>
       <h2>{title}</h2>
-      <div className="team-grid">
+      <div className={`team-grid ${isSupporting ? 'supporting-team-grid' : ''}`}>
         {members.map((member, index) => (
           <div key={index} className="team-card">
             <div className="card-header">
@@ -84,7 +84,7 @@ const AboutUs = () => {
             <div className="about-content">
               <div className="about-image">
                 <div className="image-containerss">
-                  <img src="../images/girl coding on a laptop.png" alt="Girl coding on laptop" />
+                  <img src="../images/aboutuspic.jpg" alt="Girl coding on laptop" />
                 </div>
               </div>
 
@@ -129,7 +129,7 @@ const AboutUs = () => {
               </div>
               <div className="image-content">
                 <img
-                  src="../images/why choose coder house.jpg"
+                  src="../images/image-Photoroom.png"
                   alt="Why Choose Coder House"
                   className="placeholder-image"
                 />
@@ -157,8 +157,8 @@ const AboutUs = () => {
         {/* Team Sections */}
         <TeamSection title="Mentors" members={mentors} />
         <TeamSection title="Tech Team" members={techTeam} />
-        <TeamSection title="Supporting Team" members={SupportingTeam} centerAlign={true} />
-        </div>
+        <TeamSection title="Supporting Team" members={SupportingTeam} isSupporting={true} />
+      </div>
 
       <section className="cta-section">
         <div className="cta-content">
@@ -170,17 +170,17 @@ const AboutUs = () => {
         </div>
       </section>
       <div className='card-section-about'>
-      <div className="contact-card" id="contact-section">
-        <img src="./images/about-contact.jpg" alt="Contact" className="contact-image" />
-        <div className="ribbon-container">
-          <div className="ribbon-banner">
-            <p> Contact Us </p>
-            <p>Email: coderhouseoptus@gmail.com</p>
-            <p>Phone: +91 9926865740</p>
+        <div className="contact-card" id="contact-section">
+          <img src="./images/about-contact.jpg" alt="Contact" className="contact-image" />
+          <div className="ribbon-container">
+            <div className="ribbon-banner">
+              <p>Contact Us </p>
+              <p>Email: coderhouseoptus@gmail.com</p>
+              <p>Phone: +91 9926865740</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
       <Footer />
     </>

@@ -4,16 +4,16 @@ import './SchoolProgram.css';
 const SchoolProgram = () => {
   const projects = [
     {
-      title: "Digital Whiteboard",
-      imageUrl: "/api/placeholder/400/300"
+      title: "Web Development",
+      imageUrl: "/images/Schoolweb.jpg"
     },
     {
-      title: "Soccer game",
-      imageUrl: "/api/placeholder/400/300"
+      title: "Programing",
+      imageUrl: "/images/Schoolprograming.jpg"
     },
     {
-      title: "Visit to a magic land",
-      imageUrl: "/api/placeholder/400/300"
+      title: "Game Development",
+      imageUrl: "/images/Schoolgame.jpg"
     }
   ];
 
