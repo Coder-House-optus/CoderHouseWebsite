@@ -33,7 +33,7 @@ const AboutUs = () => {
   ];
 
   const techTeam = [
-    { name: "Aastha Purey", role: "Full Stack Developer", image: '../images/Ambassador/image13.jpg' },
+    { name: "Aastha Purey", role: "Full Stack Developer", image: '../images/Ambassador/image13.png' },
     { name: "Hitesh Sharma", role: "Full Stack Developer", image: '../images/Ambassador/image10.jpg' },
     { name: "Ishika Raj", role: "Frontend / Backend", image: '../images/Ambassador/image15.jpg' },
     { name: "Prakhar Pandey", role: "Android Developer", image: '../images/Ambassador/image2.png' },
