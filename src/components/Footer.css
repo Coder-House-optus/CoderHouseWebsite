@@ -132,8 +132,9 @@
 
 .footer-logo .optus {
   height: 78px;
-  margin-bottom: 4px;;
-  width: 90px; 
+  margin-bottom: 4px;
+  width: 90px;
+  border-radius: 7%; /* For a fully circular border */
 }
 .social-icons {
   display: flex;
