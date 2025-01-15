@@ -140,3 +140,52 @@
     gap: 1rem;
   }
 }
+
+/* Back Button Styles */
+.back-button1 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 100; /* Ensures button stays above other elements */
+  background-color:transparent;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.back-button1:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-button1:active {
+  transform: scale(0.95);
+}
+
+.back-button1 svg {
+  width: 44px;
+  height: 44px;
+  color: white;
+}
+
+/* Make sure the page container has relative positioning */
+.page-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Ensure background section doesn't hide the button */
+.background-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
