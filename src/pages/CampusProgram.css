@@ -10,6 +10,87 @@
 
 
 
+/* Slideshow container */
+.slideshow-container5 {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: transparent;
+  perspective: 1000px; /* Perspective for 3D effect */
+
+}
+
+/* Overlay for all images and squares */
+.image-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Green squares in the background */
+.green-square {
+  position: absolute;
+  background-color: #CFFB8D; /* Green color */
+  z-index: -1; /* Moves squares behind images */
+  border-radius: 10px; /* Optional for rounded corners */
+
+}
+
+/* Positions for green squares */
+.green-square.square-1 { width: 200px; height: 200px; top: 9%; left: 30%; }
+.green-square.square-2 { width: 220px; height: 220px; top: 20%; right: 30%; }
+.green-square.square-3 { width: 170px; height: 170px; bottom: 15%; left: 15%; }
+.green-square.square-4 { width: 120px; height: 120px; bottom: 10%; right: 5%; }
+.green-square.square-5 { width: 60px; height: 60px; top: 40%; left: 10%; transform: translateY(-50%); }
+.green-square.square-6 { width: 90px; height: 90px; top: 75%; right: 40%; }
+.green-square.square-7 { width: 80px; height: 80px; bottom: 30%; left: 40%; }
+
+/* Shared image-box properties */
+.image-box {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 10px; /* Rounded corners */
+  z-index: 1; /* Ensure images are above green squares */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  /* transform-origin: center;
+  transform-style: preserve-3d; */
+  box-shadow: 10px 15px 5px rgba(0, 0, 0, 0.2); /* Drop shadow for 3D depth */
+  
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 3D Floating Effect on Hover */
+.image-box:hover {
+  transform: perspective(1000px) rotateX(10deg) rotateY(10deg) scale(1.05);
+  box-shadow: 15px 20px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Center Image */
+.image-box.center { width: 370px; height: 300px; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+/* Top-Left Image */
+.image-box.top-left { width: 250px; height: 250px; top: 15%; left: 20%; }
+/* Top-Right Image */
+.image-box.top-right { width: 260px; height: 200px; top: 28%; right: 18%; }
+/* Bottom-Left Image */
+.image-box.bottom-left { width: 140px; height: 140px; bottom: 28%; left: 27%; }
+/* Bottom-Right Image */
+.image-box.bottom-right { width: 300px; height: 250px; bottom: 6%; right: 15%; }
+/* Far-Left Image */
+.image-box.far-left { width: 270px; height: 200px; top: 66%; left: 7%; transform: translateY(-50%); }
+/* Far-Right Image */
+.image-box.far-right { width: 120px; height: 100px; top: 50%; right: 9%; transform: translateY(-50%); }
+
+
+
 
 .program-card:hover {
   background-color: #101902;
@@ -107,7 +188,8 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  background: linear-gradient(90deg, #C6E894, #ffffff, #99C05F);
+  /* background: linear-gradient(90deg, #C6E894, #ffffff, #99C05F); */
+  margin-bottom: 200px;
 }
 
 .slideshow-image5 {
