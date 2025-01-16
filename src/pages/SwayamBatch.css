@@ -266,7 +266,7 @@
   .features5 li {
     width: auto; /* Let the list items take the full width */
     margin-left: 3px; /* Remove left margin */
-    font-size: 1em; /* Adjust text size */
+    font-size: 2em; /* Adjust text size */
     padding: 8px 10px; /* Adjust padding for smaller screens */
   }
 
@@ -281,7 +281,7 @@
     margin-bottom: 30px;
   }
   .technologies1{
-    font-size: 1em;
+    font-size: 2em;
   }
   /* Mobile View for tech grid */
   .tech-grid {
@@ -306,10 +306,10 @@
   }
   .description1{
     padding:  4px 15px;
-    font-size: 1.2em;
+    font-size: 2em;
   }
   .offer-section{
-    font-size: 0.8em;
+    font-size: 1.3em;
   }
   .offer-section p {
     font-size: 16px;
@@ -318,9 +318,6 @@
   .tech-description {
     font-size: 20px;  /* Adjust the size as needed */
     font-weight: bold;  /* Optional: Makes text bold */
-  }
-  .swayam1{
-    font-size: 2em;
   }
   
 }

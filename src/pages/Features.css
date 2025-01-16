@@ -1,3 +1,4 @@
+
 .extraFeatures-page-container {
   position: relative;
   z-index: 2;
@@ -292,8 +293,8 @@
 @media only screen and (max-width: 768px) {
   /* Adjusting the title */
   .extraFeatures-title {
-    font-size: 2.5rem; /* Increase title size */
-    margin-bottom: 40px;
+    font-size: 3.5rem; /* Increase title size */
+    margin-bottom: 50px;
   }
 
   /* Adjusting the content container */
@@ -314,7 +315,6 @@
     gap: 6px; /* Smaller gap between cards */
     margin: 0px 0;
     width: 90%;
-    font-size: 0.5em;
   }
 
   .extraFeatures-card {
