@@ -920,3 +920,131 @@ input:focus, select:focus, textarea:focus {
 
 }
 }
+
+
+
+
+@media (max-width: 768px) {
+  .slideshow-container5 {
+    height: 650px; /* Adjust container height for smaller screens */
+  }
+
+  /* Green squares adjustments for mobile */
+  .green-square.square-1,
+  .green-square.square-2,
+  .green-square.square-3,
+  .green-square.square-4,
+  .green-square.square-5,
+  .green-square.square-6,
+  .green-square.square-7 {
+    width: 100px;
+    height: 100px;
+  }
+
+  .green-square.square-1 {
+    top: 0%;
+    left: 30%;
+  }
+
+  .green-square.square-2 {
+    top: 4%;
+    right: 25%;
+    width: 50px;
+    height: 50px;
+  }
+
+  .green-square.square-3 {
+    bottom: 10%;
+    left: 5%;
+    display: none;
+  }
+
+  .green-square.square-4 {
+    bottom: 7%;
+    right: 9%;
+    width: 60px;
+    height: 60px;
+  }
+
+  .green-square.square-5 {
+    top: 35%;
+    left: 30%;
+    width: 80px;
+    height: 80px;
+  }
+
+  .green-square.square-6 {
+    top: 70%;
+    right: 20%;
+    display: none;
+  }
+
+  .green-square.square-7 {
+    bottom: 22%;
+    left: 30%;
+    width: 150px;
+    height: 150px;
+  }
+
+  /* Center Image */
+  .image-box.center {
+    width: 180px; /* Adjust width for mobile */
+    height: 180px; /* Adjust height for mobile */
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Top-Left Image */
+  .image-box.top-left {
+    width: 180px;
+    height: 150px;
+    top: 5%;
+    left: 5%;
+  }
+
+  /* Top-Right Image */
+  .image-box.top-right {
+    width: 100px;
+    height: 100px;
+    top: 19%;
+    right: 19%;
+  }
+
+  /* Bottom-Left Image */
+  .image-box.bottom-left {
+    width: 100px;
+    height: 100px;
+    bottom: 55%;
+    left: 18%;
+  }
+
+  /* Bottom-Right Image */
+  .image-box.bottom-right {
+    width: 100px;
+    height: 100px;
+    bottom: 2%;
+    right: 10%;
+    display: none;
+  }
+
+  /* Far-Left Image */
+  .image-box.far-left {
+    width: 200px;
+    height: 170px;
+    top: 80%;
+    left: 5%;
+  }
+
+  /* Far-Right Image */
+  .image-box.far-right {
+    width: 140px;
+    height: 100px;
+    top: 73%;
+    right: 5%;
+  }
+}
+
+
+
+

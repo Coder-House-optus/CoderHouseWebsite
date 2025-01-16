@@ -36,6 +36,9 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import ResumeBuilding from './pages/ResumeBuilding';
 import CategoryPage from './pages/CategoryPage';
 
+
+
+
 function App() {
   return (
     <div className="App">
@@ -79,6 +82,8 @@ function App() {
           <Route path="/programs/criticalthinking" element={<CriticalThinking />} />
           <Route path="/notes" element={<Notes />} />
           <Route path="/notes/category/:category" element={<CategoryPage />} />
+          <Route path="/home" element={<Home />} />
+
         </Routes>
       </Router>
     </div>
