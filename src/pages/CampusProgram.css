@@ -116,10 +116,10 @@
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.8);
 }
 .arrow-button {
-  background-color: rgba(27, 35, 62, 0);
-  color: rgb(44, 43, 43);
+  background-color: grey;
+  color: white;
   border: none;
-  /* padding: 15px;  */
+  padding: 45px; /* Increased padding to make it more round */
   cursor: pointer;
   font-size: 44px;
   border-radius: 70%; /* Makes the button round */
@@ -645,6 +645,7 @@ input:focus, select:focus, textarea:focus {
   }
   .program-cards {
     padding: 0 20px;
+    gap: 0.5rem;
   }
   .program-card1{
     display: flex;
@@ -731,17 +732,17 @@ input:focus, select:focus, textarea:focus {
     gap: 1rem;
     background-color: #547698;
     padding: 40px;
-    /* height: 360px; */
+    height: 360px;
     margin-bottom: 100px;
   }
   input, select, textarea {
     width: 100%; /* Center and keep fields away from container edges */
-    padding: 0.6rem;
+    padding: 1rem;
     border: none;
     border-radius: 5px; /* Rounded corners for inputs */
     color: white; /* White text color */
-    font-size: 1rem;
-    margin: 0.5px auto; /* Center the input fields within the container */
+    font-size: 2.5rem;
+    margin: 1px auto; /* Center the input fields within the container */
     display: block; /* Ensures inputs take full width and stay centered */
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
   }
@@ -753,7 +754,6 @@ input:focus, select:focus, textarea:focus {
     .submit-btn5 {
       margin-top: 30px;
       width: 160px; /* Restore button size for larger screens */
-      font-size: 1em;
     }
     
     select{
@@ -761,11 +761,11 @@ input:focus, select:focus, textarea:focus {
       box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
     }
     .programs-title2{
-      font-size: 1.4em;
+      font-size: 2.4em;
     }
     .program-details h3{
       position: center;
-      font-size: 1.5em;
+      font-size: 3em;
     }
     .program-name-details {
     display: flex;
@@ -776,10 +776,10 @@ input:focus, select:focus, textarea:focus {
   }
   .section-title5{
     color: #0E2031;
-    font-size: 2em;
+    font-size: 3em;
   }
   .program-card h4, .program-card p{
-    font-size: 1em;
+    font-size: 2em;
   }
   .slideshow-image5{
     max-width: 70%;
@@ -796,18 +796,18 @@ input:focus, select:focus, textarea:focus {
     font-size: 2.3rem;
     margin: 1px auto;
     display: block;
-    font-size: 1em;
+    font-size: 2.4em;
     font-family: poppins;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
   }
   .select {
-    width: 80%;
+    width: 100%;
     padding: 0.2rem;
     border: none;
     border-radius: 5px;
     color: white;
-    font-size: 1rem;
+    font-size: 2rem;
     margin: 1px auto;
     display: block;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.8);
@@ -815,7 +815,7 @@ input:focus, select:focus, textarea:focus {
   .program-details p {
     margin: 10px 0;
     color: rgb(0, 0, 0);
-    font-size: 1em;
+    font-size: 2em;
 }
 .submit-btn5:hover{
   color: #000;
