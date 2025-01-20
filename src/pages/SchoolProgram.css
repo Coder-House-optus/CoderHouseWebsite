@@ -1,16 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.page-container {
+.page-containerforschool {
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
 }
 
-.background-section {
+.background-sectionforschool {
   min-height: 100vh;
   width: 100%;
   background: url('/public/images/SchoolProgram.jpeg') no-repeat center center fixed;
@@ -18,37 +12,42 @@
   position: relative;
 }
 
-.background-section::before {
+.background-sectionforschool::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(2, 14, 31, 0.667);
+  background: linear-gradient(90deg, 
+    rgba(198, 232, 148, 0.7),  
+    rgba(255, 255, 255, 0.7),  
+    rgba(153, 192, 95, 0.7)    
+  );
 }
 
-.content-wrapper {
+.content-wrapperforschool {
   position: relative;
   max-width: 1400px;
   margin: 0 auto;
   padding: 4rem 2rem;
-  min-height: 100vh;
+  min-height: 1vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4rem;
 }
 
-.main-title {
-  color: white;
+.main-titleforschool {
+  color: black;
   font-size: clamp(2rem, 5vw, 4rem);
-  font-weight: 300;
+  font-weight: 600;
   text-align: center;
   z-index: 1;
+  padding-top: 5%;
 }
 
-.projects-grid {
+.projects-gridforschool {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(1, 1fr);
@@ -56,7 +55,7 @@
   z-index: 1;
 }
 
-.project-card {
+.project-cardforschool {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 12px;
   overflow: hidden;
@@ -64,18 +63,18 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover {
+.project-cardforschool:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
-.card-image-container {
+.card-image-containerforschool {
   position: relative;
-  padding-top: 60%;
+  padding-top: 70%;
   overflow: hidden;
 }
 
-.card-image {
+.card-imageforschool {
   position: absolute;
   top: 0;
   left: 0;
@@ -85,106 +84,64 @@
   transition: transform 0.3s ease;
 }
 
-.project-card:hover .card-image {
+.project-cardforschool:hover .card-imageforschool {
   transform: scale(1.05);
 }
 
-.card-content {
+.card-contentforschool {
   padding: 1rem;
   text-align: center;
 }
 
-.card-title {
-  font-size: 1.25rem;
+.card-titleforschool {
+  font-size: 1.5rem;
   font-weight: 600;
   color: #333;
 }
 
 /* Responsive Design */
 @media (min-width: 768px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .projects-gridforschool {
+    grid-template-columns: repeat(1, 1fr);
+    padding-bottom: 15%;
   }
 }
 
 @media (min-width: 1024px) {
-  .projects-grid {
+  .projects-gridforschool {
     grid-template-columns: repeat(3, 1fr);
   }
   
-  .content-wrapper {
-    padding: 6rem 4rem;
+  .content-wrapperforschool {
+    padding: 6rem 5rem;
   }
 }
 
 /* Mobile Optimization */
 @media (max-width: 767px) {
-  .content-wrapper {
-    padding: 3rem 1.5rem;
+  .content-wrapperforschool {
+    padding: 6rem 1.5rem;
     gap: 3rem;
   }
   
-  .card-title {
+  .card-titleforschool {
     font-size: 1.125rem;
   }
 }
 
 /* Landscape Mode */
 @media (max-height: 700px) and (orientation: landscape) {
-  .content-wrapper {
+  .content-wrapperforschool {
     padding: 2rem 1rem;
     gap: 2rem;
   }
   
-  .projects-grid {
+  .projects-gridforschool {
     gap: 1rem;
   }
 }
-
-/* Back Button Styles */
-.back-button1 {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 100; /* Ensures button stays above other elements */
-  background-color:transparent;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.back-button1:hover {
-  background-color: rgba(255, 255, 255, 1);
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.back-button1:active {
-  transform: scale(0.95);
-}
-
-.back-button1 svg {
-  width: 44px;
-  height: 44px;
-  color: white;
-}
-
 /* Make sure the page container has relative positioning */
-.page-container {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-}
-
-/* Ensure background section doesn't hide the button */
-.background-section {
+.page-containerforschool {
   position: relative;
   width: 100%;
   min-height: 100vh;
