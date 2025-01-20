@@ -33,9 +33,9 @@ const AboutUs = () => {
   ];
 
   const techTeam = [
-    { name: "Aastha Purey", role: "Full Stack Developer", image: '../images/Ambassador/image13.png' },
+    { name: "Aastha Purey", role: "Full Stack Developer", image: '../images/Ambassador/AasthaPurey.jpg' },
     { name: "Hitesh Sharma", role: "Full Stack Developer", image: '../images/Ambassador/image10.jpg' },
-    { name: "Ishika Raj", role: "Frontend / Backend", image: '../images/Ambassador/image15.jpg' },
+    { name: "Ishika Raj", role: "Frontend / Backend", image: '../images/Ambassador/ishika.jpg' },
     { name: "Prakhar Pandey", role: "Android Developer", image: '../images/Ambassador/image2.png' },
     { name: "Aanchal Agarwal", role: "Graphic Designer", image: '../images/Ambassador/image14.jpg' },
   ];
@@ -44,6 +44,8 @@ const AboutUs = () => {
     { name: "Khushi Shrivastava", role: "Centre Growth Associate", image: '../images/Ambassador/image8.jpg' },
     { name: "Shruti Singour", role: "Academic Associate", image: '../images/Ambassador/image6.jpg' },
     { name: "Nandini Patel", role: "Academic and Career Counsellor", image: '../images/Ambassador/image11.jpg' },
+    { name: "Ansh Kashyup", role: "Career Development Specialist", image: '../images/Ambassador/dummy1.jpg' },
+    { name: "Harshita Thakkar", role: "Learning and Development Specialist", image: '../images/Ambassador/dummy2.jpg' },
   ];
   const TeamSection = ({ title, members, isSupporting = false }) => (
     <section className={`team-section ${isSupporting ? 'supporting-team-section' : ''}`}>
@@ -84,7 +86,7 @@ const AboutUs = () => {
             <div className="about-content">
               <div className="about-image">
                 <div className="image-containerss">
-                  <img src="../images/aboutuspic.jpg" alt="Girl coding on laptop" />
+                  <img src="../images/aboutuslaptopgirl1.jpg" alt="Girl coding on laptop" />
                 </div>
               </div>
 
@@ -111,25 +113,25 @@ const AboutUs = () => {
             </div>
             <div className="content-wrapper">
               <div className="text-content">
-                <p>Join us and experience real transformation in your career:</p>
+                <p style={{ fontSize: '25px' }}>Join us and experience real transformation in your career:</p>
                 <ul className="benefits-list">
                   <li>
                     <span className="check-mark">✓</span>
-                    <span className="feature-text">147% Average Hike in career growth</span>
+                    <span className="feature-text"><strong>147% Average Hike</strong> in career growth</span>
                   </li>
                   <li>
                     <span className="check-mark">✓</span>
-                    <span className="feature-text">1000+ Careers Transformed with real-world skills</span>
+                    <span className="feature-text"><strong>1000+ Careers Transformed</strong> with real-world skills</span>
                   </li>
                   <li>
                     <span className="check-mark">✓</span>
-                    <span className="feature-text">50+ Experienced Mentors guiding you to success</span>
+                    <span className="feature-text"><strong>50+ Experienced Mentors</strong> guiding you to success</span>
                   </li>
                 </ul>
               </div>
               <div className="image-content">
                 <img
-                  src="../images/image-Photoroom.png"
+                  src="../images/aboutuslaptopgirl2.png"
                   alt="Why Choose Coder House"
                   className="placeholder-image"
                 />
@@ -169,19 +171,22 @@ const AboutUs = () => {
           <button className="cta-button">Join Us Today!</button>
         </div>
       </section>
-      <div className='card-section-about'>
-        <div className="contact-card" id="contact-section">
-          <img src="./images/about-contact.jpg" alt="Contact" className="contact-image" />
-          <div className="ribbon-container">
-            <div className="ribbon-banner">
-              <p>Contact Us </p>
-              <p>Email: coderhouseoptus@gmail.com</p>
-              <p>Phone: +91 9926865740</p>
-            </div>
+      <div class="contact-containerofabout" id="contact-section">
+        <div class="image-sectionofabout">
+          <img src="./images/about-contact.jpg" alt="Building" />
+        </div>
+        <div class="contact-sectionofabout">
+          <h2 class="contact-headingofabout">Contact Us</h2>
+          <div class="contact-itemofabout">
+            <div class="contact-iconofabout">📞</div>
+            <a href="tel:+919926865740" class="contact-text">+91 9926865740</a>
+          </div>
+          <div class="contact-itemofabout">
+            <div class="contact-iconofabout">✉️</div>
+            <a href="mailto:coderhouseoptus@gmail.com" class="contact-text">coderhouseoptus@gmail.com</a>
           </div>
         </div>
       </div>
-
       <Footer />
     </>
   );
