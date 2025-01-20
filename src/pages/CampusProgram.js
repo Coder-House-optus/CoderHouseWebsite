@@ -7,6 +7,8 @@ import Footer from '../components/Footer';
 const CampusProgram = () => {
   const navigate = useNavigate();  // Use navigate hook
 
+
+
   // State for programs and image index
   const technicalPrograms = [
     { 
@@ -231,25 +233,25 @@ const CampusProgram = () => {
             {/* View More Button */}
             
             <div className="action-container">
-  <button
-    onClick={() => handleViewMore(technicalPrograms[currentProgramIndex])}
-    className="details-btn"
-  >
-    View More
-  </button>
-  <button
-  onClick={() => {
-    const element = document.getElementById("comehere");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  }}
-  className="cenroll-btn"
->
-  Join Now!
-</button>
-</div>
+            <button
+              onClick={() => handleViewMore(technicalPrograms[currentProgramIndex])}
+              className="details-btn"
+            >
+              View More
+            </button>
+            <button
+            onClick={() => {
+              const element = document.getElementById("comehere");
+              if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="cenroll-btn"
+          >
+            Join Now!
+          </button>
 
+          </div>
           </div>
         </div>
       )}
@@ -308,27 +310,53 @@ const CampusProgram = () => {
         </div>
       )}
   
-      {/* Image Slideshow Section */}
+    {/* Image Slideshow Section */}
       <div className="slideshow-container5">
-        <button className="arrow-button" onClick={handlePrevImage}>
-          &#10094;
-        </button>
-        <img
-          src={images[currentImageIndex]}
-          alt="Campus Program"
-          className="slideshow-image5"
-        />
-        <button className="arrow-button" onClick={handleNextImage}>
-          &#10095;
-        </button>
+        <div className="image-overlay">
+        {/* Green Squares */}
+        <div className="green-square square-1"></div>
+        <div className="green-square square-2"></div>
+        <div className="green-square square-3"></div>
+        <div className="green-square square-4"></div>
+        <div className="green-square square-5"></div>
+        <div className="green-square square-6"></div>
+        <div className="green-square square-7"></div>
+
+        {/* Center Image */}
+        <div className="image-box large center">
+        <img src={images[0]} alt="Image 1" />
+    </div>
+
+    {/* Surrounding Images */}
+        <div className="image-box medium top-left">
+          <img src={images[1]} alt="Image 2" />
+        </div>
+        <div className="image-box small top-right">
+          <img src={images[2]} alt="Image 3" />
+        </div>
+        <div className="image-box medium bottom-left">
+          <img src={images[3]} alt="Image 4" />
+        </div>
+        <div className="image-box small bottom-right">
+          <img src={images[4]} alt="Image 5" />
+        </div>
+        <div className="image-box small far-left">
+          <img src={images[5]} alt="Image 6" />
+        </div>
+        <div className="image-box small far-right">
+          <img src={images[6]} alt="Image 7" />
+        </div>
       </div>
+    </div>
+
+
   
       {/* Enquiry Form Section */}
-      <h2 className="programs-title">
+      {/* <h2 className="programs-title">
         <span className="text-black">Ask Us !! </span>
-        {/* <span className="text-green"> Form</span> */}
-      </h2>
-      <div className="enquiry-form-container5">
+        {}
+      </h2> */}
+      {/* <div className="enquiry-form-container5">
         <form onSubmit={handleFormSubmit} className="enquiry-form5">
           <input
             type="text"
@@ -372,7 +400,7 @@ const CampusProgram = () => {
             Submit
           </button>
         </form>
-      </div>
+      </div> */}
 
       
       <Footer />
