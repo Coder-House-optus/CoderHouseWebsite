@@ -10,11 +10,10 @@ const CollegeProgram = () => {
   const programData = {
     300: "https://docs.google.com/document/d/1o7M2U6wZ9JBL1Yybz5MG-YZVlkmM_XbCkjuXT0tsXbc/edit?usp=sharing",
     120: "https://docs.google.com/document/d/10FDsMB2qj-jODl5WNiByZyQfFqYgOSCwX8bx541BPl0/edit?usp=sharing",
-    90: "https://docs.google.com/document/d/1R1I1N85g2fowIr7_WKHD5aB8C6Bs3NjiKnl2lr0qvgA/edit?tab=t.0",
+    90: "https://docs.google.com/document/d/15n4uZAIgtHKp4byeqXR4wNRCyWdeRtrcCxbLw42NZZE/edit?usp=sharing",
     75: "https://docs.google.com/document/d/10yD5s_UdITyy-f7QBn4sYkqsajci3jXz/edit?usp=sharing&ouid=107632382243829537151&rtpof=true&sd=true",
     60: "https://docs.google.com/document/d/1e3L6-xJ334erc4mLGU4QltI1ukbz5QqG/edit?usp=sharing&ouid=107632382243829537151&rtpof=true&sd=true"
   };
-
   // Moments Data
   const moments = [
     {
