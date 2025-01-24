@@ -185,7 +185,7 @@ const CampusProgram = () => {
   };
 
   const handleJoinNow = () => {
-    navigate('/Home'); // Navigates to the Home page (root route)
+    navigate('./Home'); // Navigates to the Home page (root route)
   };
 
   return (
@@ -241,10 +241,7 @@ const CampusProgram = () => {
             </button>
             <button
             onClick={() => {
-              const element = document.getElementById("comehere");
-              if (element) {
-                element.scrollIntoView({ behavior: "smooth" });
-              }
+              navigate('../home')
             }}
             className="cenroll-btn"
           >
