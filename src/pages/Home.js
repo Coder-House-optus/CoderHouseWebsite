@@ -16,14 +16,6 @@ const reviewsData = [
   { text: "The mentorship I received at Coder House was life-changing!", author: "- Suresh Bansal" },
 ];
 
-// Define the options for different user types
-const programOptions = {
-  Student: ["Web Development", "Artificial Intelligence"],
-  Developer: [],
-  Trainee: [],
-  Other: [""],
-};
-
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedUserType, setSelectedUserType] = useState("");
@@ -55,19 +47,35 @@ export default function Home() {
     setOtherValue(""); // Reset other value when user type changes
   };
 
+  const programOptions = {
+    Student: ["Web Development", "Artificial Intelligence"], // Correctly define programs
+    Developer: [],
+    Trainee: [],
+    Other: [""],
+  };
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
+    // Determine the query value based on user type
+    let queryValue = "";
+    if (selectedUserType === "Student") {
+      queryValue = selectedProgram; // Use the selected program for Students
+    } else if (selectedUserType === "Other") {
+      queryValue = otherValue; // Use the other value for Other
+    }
+  
     // Prepare data for submission
     const payload = {
       ...formData,
-      role: selectedUserType === "Other" ? otherValue : selectedUserType,
-      program: selectedUserType === "Student" ? selectedProgram : "",
+      role: selectedUserType === "Other" ? "Others" : selectedUserType,
+      query: selectedUserType === "Student" ? selectedProgram : 
+            selectedUserType === "Other" ? otherValue : "",
     };
-
+  
     try {
       const response = await fetch(
-        "https://coderhouse-448820.el.r.appspot.com/Form/create", // Backend endpoint
+        "https://coderhouse-448820.el.r.appspot.com/Form/create",
         {
           method: "POST",
           headers: {
@@ -76,9 +84,10 @@ export default function Home() {
           body: JSON.stringify(payload),
         }
       );
-
+  
       if (response.ok) {
         alert("Form submitted successfully!");
+        // Reset form
         setFormData({
           name: "",
           email: "",
@@ -96,8 +105,8 @@ export default function Home() {
       console.error("Error:", error);
       alert("Something went wrong!");
     }
-  };
-
+  };    
+  
   return (
     <div className="home">
       <Navigation />
