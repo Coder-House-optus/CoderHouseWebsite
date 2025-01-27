@@ -1,19 +1,21 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import "./AboutUs.css";
 
 const AboutUs = () => {
-  useEffect(() => {
-    if (window.location.hash === '#contact-section') {
-      setTimeout(() => {
-        const element = document.getElementById('contact-section');
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-    }
-  }, []);
+  const navigate = useNavigate();
+
+  const handleJoinUsClick = () => {
+    navigate("/"); // Navigate to the Home page
+    setTimeout(() => {
+      const formSection = document.getElementById("form-section");
+      if (formSection) {
+        formSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100); // Delay to ensure the page is loaded
+  };
 
   const features = [
     "Hands-on Learning",
@@ -168,7 +170,7 @@ const AboutUs = () => {
             Unlock your potential and shape your future with Coder House. <br />
             Join us today to start your learning today!
           </p>
-          <button className="cta-button">Join Us Today!</button>
+          <button className="cta-button" onClick={handleJoinUsClick}>Join Us Today!</button>
         </div>
       </section>
       <div class="contact-containerofabout" id="contact-section">
