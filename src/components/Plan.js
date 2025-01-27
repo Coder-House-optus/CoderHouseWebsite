@@ -10,7 +10,7 @@ const Plan = () => {
       </div>
       <div className="container">
         <div className="btn">
-          <a href="#">School Program</a>
+        <Link to="/SchoolProgram">School Program</Link>
         </div>
         <div className="btn">
           <Link to="/collegePrograms">College Program</Link>
