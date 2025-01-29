@@ -197,7 +197,7 @@ export default function Home() {
             <option value="">Select For</option>
             <option value="Student">Student</option>
             <option value="Developer">Developer</option>
-            <option value="Trainee">Trainee</option>
+            <option value="Trainer">Trainer</option>
             <option value="Other">Other</option>
           </select>
 
