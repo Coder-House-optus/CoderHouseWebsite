@@ -11,7 +11,7 @@ const Contest = () => {
   useEffect(() => {
     const fetchContests = async () => {
       try {
-        const response = await fetch('https://clist.by/api/v4/contest/', {
+        const response = await fetch('https://clist.by:443/api/v4/contest/?upcoming=true', {
           headers: {
             'Authorization': 'ApiKey hitesh1376:197e92d674d015dd80fb9520fb9230c1e6596815'
           }
