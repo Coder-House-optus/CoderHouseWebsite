@@ -17,6 +17,9 @@ const AboutUs = () => {
     }, 100); // Delay to ensure the page is loaded
   };
 
+
+  
+  
   const features = [
     "Hands-on Learning",
     "Expert Mentorship",
@@ -41,6 +44,8 @@ const AboutUs = () => {
     { name: "Prakhar Pandey", role: "Android Developer", image: '../images/Ambassador/image2.png' },
     { name: "Aanchal Agarwal", role: "Graphic Designer", image: '../images/Ambassador/image14.jpg' },
   ];
+
+  
 
   const SupportingTeam = [
     { name: "Khushi Shrivastava", role: "Centre Growth Associate", image: '../images/Ambassador/image8.jpg' },
@@ -75,72 +80,73 @@ const AboutUs = () => {
       <div className="main-container">
         {/* About Section */}
         <section className="about-section">
-          <div className="about-container">
-            <div className="about-header">
-              <h1>About Us</h1>
-              <p className="about-header-text">
-                Coder House is a dynamic learning platform that empowers
-                individuals to master coding through hands-on courses, expert
-                guidance and a vibrant community.
-              </p>
-            </div>
+  <div className="about-container">
+    <div className="about-header">
+      <h1>Our Story</h1>
+      <p className="about-header-text">
+        At Coder House, we believe in empowering young women to break boundaries in tech, one code at a time. Join a community of passionate learners and experts, and shape your future with the power of coding.
+      </p>
+    </div>
 
-            <div className="about-content">
-              <div className="about-image">
-                <div className="image-containerss">
-                  <img src="../images/aboutuslaptopgirl1.jpg" alt="Girl coding on laptop" />
-                </div>
-              </div>
+    <div className="about-content">
+      <div className="about-image">
+        <img src="../images/aboutuslaptopgirl1.jpg" alt="Girl coding on laptop" />
+      </div>
 
-              <div className="about-features">
-                <h2>Unlock Your Potential,<br /> Code Your Future</h2>
-                <p className="features-intro">Here's why Coder House is the best:</p>
-                <div className="features-grid">
-                  {features.map((feature, index) => (
-                    <div key={index} className="feature-item">
-                      <span className="feature-text">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+      <div className="about-features">
+        <h2>Unlock Your Potential, Code Your Future</h2>
+        <p className="features-intro">Here’s why Coder House is the best choice for you:</p>
+        <div className="features-grid">
+          {features.map((feature, index) => (
+            <div key={index} className="feature-item">
+              <span className="feature-text">{feature}</span>
             </div>
-          </div>
-        </section>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         {/* Why Choose Section */}
         <section className="why-choose-section">
-          <div className="section-container">
-            <div className="why-choose-header">
-              <h2>Why Choose <span className="highlight">CODER HOUSE</span></h2>
-            </div>
-            <div className="content-wrapper">
-              <div className="text-content">
-                <p style={{ fontSize: '25px' }}>Join us and experience real transformation in your career:</p>
-                <ul className="benefits-list">
-                  <li>
-                    <span className="check-mark">✓</span>
-                    <span className="feature-text"><strong>147% Average Hike</strong> in career growth</span>
-                  </li>
-                  <li>
-                    <span className="check-mark">✓</span>
-                    <span className="feature-text"><strong>1000+ Careers Transformed</strong> with real-world skills</span>
-                  </li>
-                  <li>
-                    <span className="check-mark">✓</span>
-                    <span className="feature-text"><strong>50+ Experienced Mentors</strong> guiding you to success</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="image-content">
-                <img
-                  src="../images/aboutuslaptopgirl2.png"
-                  alt="Why Choose Coder House"
-                  className="placeholder-image"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+  <div className="section-container">
+    <div className="why-choose-header">
+      <h2>Why Choose <span className="highlight">CODER HOUSE</span></h2>
+      <p className="subheader-text">
+        Empowering you to build a successful career with real-world skills and mentorship.
+      </p>
+    </div>
+
+    <div className="content-wrapper">
+      <div className="text-content">
+        <p className="intro-text">
+          Join a community of passionate learners, guided by experts, and unlock your true potential:
+        </p>
+        <ul className="benefits-list">
+          <li>
+            <span className="check-mark">✓</span>
+            <span className="feature-text"><strong>147% Average Career Growth</strong> in just months!</span>
+          </li>
+          <li>
+            <span className="check-mark">✓</span>
+            <span className="feature-text"><strong>1000+ Careers Transformed</strong> with industry-focused skills</span>
+          </li>
+          <li>
+            <span className="check-mark">✓</span>
+            <span className="feature-text"><strong>50+ Experienced Mentors</strong> to guide you every step of the way</span>
+          </li>
+          <li>
+            <span className="check-mark">✓</span>
+            <span className="feature-text"><strong>Comprehensive Courses</strong> covering essential tech skills</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         {/* We Give Back Section */}
         <section className="give-back-section">
@@ -173,10 +179,11 @@ const AboutUs = () => {
           <button className="cta-button" onClick={handleJoinUsClick}>Join Us Today!</button>
         </div>
       </section>
+      
       <div class="contact-containerofabout" id="contact-section">
-        <div class="image-sectionofabout">
+        {/* <div class="image-sectionofabout">
           <img src="./images/about-contact.jpg" alt="Building" />
-        </div>
+        </div> */}
         <div class="contact-sectionofabout">
           <h2 class="contact-headingofabout">Contact Us</h2>
           <div class="contact-itemofabout">

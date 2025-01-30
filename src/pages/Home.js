@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navigation from "../components/Navigation";
 import "./Home.css";
 import Footer from "../components/Footer";
@@ -18,6 +18,7 @@ const reviewsData = [
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [showFirstImage, setShowFirstImage] = useState(true);  // Track if we should show the first image
   const [selectedUserType, setSelectedUserType] = useState("");
   const [selectedProgram, setSelectedProgram] = useState("");
   const [otherValue, setOtherValue] = useState(""); // New state for custom input
@@ -27,6 +28,33 @@ export default function Home() {
     phone: "",
     linkedin_url: "",
   });
+
+  // Image array
+  const images = [
+    "/images/Posters/Coder.png",
+    "/images/Posters/Mooncoder week1.jpg",
+    "/images/Posters/Mooncoder week2.jpg",
+    // Add more images as needed
+  ];
+
+  // Initial delay for the first image
+  useEffect(() => {
+    const firstImageTimeout = setTimeout(() => {
+      setShowFirstImage(false);  // Hide first image after 5 seconds
+    }, 5000);
+
+    // Change image every 3 seconds after the first 5 seconds
+    const imageInterval = setInterval(() => {
+      if (!showFirstImage) {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      }
+    }, 3000);
+
+    return () => {
+      clearTimeout(firstImageTimeout);  // Clean up the first image timeout
+      clearInterval(imageInterval);     // Clean up the image interval
+    };
+  }, [showFirstImage]);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % reviewsData.length);
@@ -50,7 +78,7 @@ export default function Home() {
   const programOptions = {
     Student: ["Web Development", "Artificial Intelligence"], // Correctly define programs
     Developer: [],
-    Trainee: [],
+    Trainer: [],
     Other: [""],
   };
   
@@ -105,138 +133,141 @@ export default function Home() {
       console.error("Error:", error);
       alert("Something went wrong!");
     }
-  };    
-  
+  };
+
   return (
     <div className="home">
       <Navigation />
       <section className="hero" id="form-section">
-        <div className="hero-left">
-          <img
-            src="/images/Coder.png"
-            alt="Student on laptop"
-            className="hero-image"
+      <div className="hero-left">
+        <img
+          src={images[currentIndex]} // Set dynamic image based on currentIndex
+          alt="Student on laptop"
+          className={`hero-image ${showFirstImage ? 'first-image' : ''}`} // Apply class to first image
+        />
+      </div>
+      <div className="floating-bubble">
+        What's New
+      </div>
+      <div className="hero-right">
+        <h2 className="hero-heading">
+          <span className="text-white">BE A PART OF THE</span>
+          <br />
+          <span className="text-green">CODER HOUSE </span>
+          <span className="text-white2">FAMILY!</span>
+          <br />
+        </h2>
+        <form className="form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            className="input-field"
+            required
+            value={formData.name}
+            onChange={handleInputChange}
           />
-        </div>
-        <div className="hero-right">
-          <h2 className="hero-heading">
-            <span className="text-white">BE A PART OF THE</span>
-            <br />
-            <span className="text-green">CODER HOUSE </span>
-            <span className="text-white2">FAMILY!</span>
-            <br />
-          </h2>
-          <form className="form" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              className="input-field"
-              required
-              value={formData.name}
-              onChange={handleInputChange}
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              className="input-field"
-              required
-              value={formData.email}
-              onChange={handleInputChange}
-            />
-            <input
-              type="text"
-              name="phone"
-              placeholder="Phone"
-              className="input-field"
-              required
-              value={formData.phone}
-              onChange={handleInputChange}
-            />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            className="input-field"
+            required
+            value={formData.email}
+            onChange={handleInputChange}
+          />
+          <input
+            type="text"
+            name="phone"
+            placeholder="Phone"
+            className="input-field"
+            required
+            value={formData.phone}
+            onChange={handleInputChange}
+          />
 
-            {/* First dropdown for user type */}
+          {/* First dropdown for user type */}
+          <select
+            name="UserType"
+            className="input-field program-selection"
+            value={selectedUserType}
+            onChange={handleUserTypeChange}
+            required
+          >
+            <option value="">Select For</option>
+            <option value="Student">Student</option>
+            <option value="Developer">Developer</option>
+            <option value="Trainer">Trainer</option>
+            <option value="Other">Other</option>
+          </select>
+
+          {/* Show program dropdown for Students */}
+          {selectedUserType === "Student" && (
             <select
-              name="UserType"
+              name="Program"
               className="input-field program-selection"
-              value={selectedUserType}
-              onChange={handleUserTypeChange}
+              value={selectedProgram}
+              onChange={(e) => setSelectedProgram(e.target.value)}
               required
             >
-              <option value="">Select For</option>
-              <option value="Student">Student</option>
-              <option value="Developer">Developer</option>
-              <option value="Trainee">Trainee</option>
-              <option value="Other">Other</option>
+              <option value="">Select Program</option>
+              {programOptions[selectedUserType].map((program, index) => (
+                <option key={index} value={program}>
+                  {program}
+                </option>
+              ))}
             </select>
+          )}
 
-            {/* Show program dropdown for Students */}
-            {selectedUserType === "Student" && (
-              <select
-                name="Program"
-                className="input-field program-selection"
-                value={selectedProgram}
-                onChange={(e) => setSelectedProgram(e.target.value)}
-                required
-              >
-                <option value="">Select Program</option>
-                {programOptions[selectedUserType].map((program, index) => (
-                  <option key={index} value={program}>
-                    {program}
-                  </option>
-                ))}
-              </select>
-            )}
-
-            {/* Show custom input field for Other */}
-            {selectedUserType === "Other" && (
-              <input
-                type="text"
-                name="OtherType"
-                placeholder="Please specify"
-                className="input-field"
-                value={otherValue}
-                onChange={(e) => setOtherValue(e.target.value)}
-                required
-              />
-            )}
-
+          {/* Show custom input field for Other */}
+          {selectedUserType === "Other" && (
             <input
-              type="url"
-              name="linkedin_url"
-              placeholder="LinkedIn Profile URL (optional)"
+              type="text"
+              name="OtherType"
+              placeholder="Please specify"
               className="input-field"
-              value={formData.linkedin_url}
-              onChange={handleInputChange}
+              value={otherValue}
+              onChange={(e) => setOtherValue(e.target.value)}
+              required
             />
+          )}
 
-            <button type="submit" className="callback-btn">
-              Get in Touch
-            </button>
-          </form>
-        </div>
-      </section>
+          <input
+            type="url"
+            name="linkedin_url"
+            placeholder="LinkedIn Profile URL (optional)"
+            className="input-field"
+            value={formData.linkedin_url}
+            onChange={handleInputChange}
+          />
 
-      <div className="stats-section">
-        <div className="item">
-          <img src="/images/arrow.png" alt="Arrow Image" />
-          <div className="text">147% Average Hike</div>
-        </div>
-        <div className="item">
-          <img src="/images/Career.png" alt="Career Image" />
-          <div className="text">1000+ Career Transformed</div>
-        </div>
-        <div className="item">
-          <img src="/images/teacher.png" alt="Teacher Image" />
-          <div className="text">50+ Experienced Mentor</div>
-        </div>
+          <button type="submit" className="callback-btn">
+            Get in Touch
+          </button>
+        </form>
       </div>
+    </section>
 
-      <Card />
-      <Plan />
-      <ReviewSection />
-      <Mentor />
-      <Footer />
+    <div className="stats-section">
+      <div className="item">
+        <img src="/images/arrow.png" alt="Arrow Image" />
+        <div className="text">147% Average Hike</div>
+      </div>
+      <div className="item">
+        <img src="/images/Career.png" alt="Career Image" />
+        <div className="text">1000+ Career Transformed</div>
+      </div>
+      <div className="item">
+        <img src="/images/teacher.png" alt="Teacher Image" />
+        <div className="text">50+ Experienced Mentor</div>
+      </div>
     </div>
-  );
+
+    <Card />
+    <Plan />
+    <ReviewSection />
+    <Mentor />
+    <Footer />
+  </div>
+);
 }
