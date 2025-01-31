@@ -1,9 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Contest.css";
 import { useNavigate } from 'react-router-dom';
 
 const Contest = () => {
   const navigate = useNavigate();
+  const [contests, setContests] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchContests = async () => {
+      try {
+        const response = await fetch('https://clist.by:443/api/v4/contest/?upcoming=true', {
+          headers: {
+            'Authorization': 'ApiKey hitesh1376:197e92d674d015dd80fb9520fb9230c1e6596815'
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to fetch contests');
+        }
+
+        const data = await response.json();
+        setContests(data.objects || []);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchContests();
+  }, []);
 
   return (
     <div className="contest-container">
@@ -13,124 +41,186 @@ const Contest = () => {
           <polyline points="12 19 5 12 12 5"></polyline>
         </svg>
       </button>
-      <h1 className="contest-title">Contest Journey</h1>
-      <div className='contest-upper'>
       
-        <div>
-          <h2 className="workflow-list1">Process and Workflow</h2>
-          
-          <h3>1. Contest <span>Organization</span> </h3>
-<ul className="workflow-list">
-  <li className="workflow-item"><strong>Frequency:</strong> Every two weeks (alternative weekly basis)</li>
-  <li className="workflow-item"><strong>Platform:</strong> Host the contest on a widely used platform (e.g., Codeforces, HackerRank)</li>
-  <li className="workflow-item"><strong>Contest Structure:</strong>
-    <ul className="workflow-list">
-      <li className="workflow-item">4–6 problems ranging from beginner to advanced levels</li>
-      <li className="workflow-item">Duration: 2–3 hours</li>
-      <li className="workflow-item">Focus: Real-world problem-solving, algorithms, and data structures</li>
-    </ul>
-  </li>
-</ul>
-
-<h3>2. Explanation <span>Videos</span></h3>
-<ul className="workflow-list">
-  <li className="workflow-item"><strong>Platform:</strong> YouTube channel dedicated to the contest series</li>
-  <li className="workflow-item"><strong>Content:</strong>
-    <ul className="workflow-list">
-      <li className="workflow-item">Step-by-step explanation of each problem</li>
-      <li className="workflow-item">Highlight optimal solutions, common mistakes, and alternative approaches</li>
-      <li className="workflow-item">Encourage students to learn and improve</li>
-    </ul>
-  </li>
-  <li className="workflow-item"><strong>Release Timing:</strong> Videos are uploaded within 3 days of the contest</li>
-</ul>
-
-<h3>3. Prizes and <span>Incentives</span></h3>
-<ul className="workflow-list">
-  <li className="workflow-item"><strong>Prizes:</strong>
-    <ul className="workflow-list">
-      <li className="workflow-item">Cash prizes or gift vouchers for the top 3 winners</li>
-      <li className="workflow-item">Certificates of achievement for top 10 participants</li>
-    </ul>
-  </li>
-  <li className="workflow-item"><strong>Long-Term Rewards:</strong>
-    <ul className="workflow-list">
-      <li className="workflow-item">Leaderboard maintained for consistent performers over multiple contests</li>
-      <li className="workflow-item">Grand prizes (e.g., gadgets, internships) for the best performers at the end of the semester/year</li>
-    </ul>
-  </li>
-</ul>
-
-<h3>4. Engagement and <span>Outreach</span></h3>
-<ul className="workflow-list">
-  <li className="workflow-item"><strong>Social Media Promotion:</strong> Promote contests and winners on platforms like Instagram, LinkedIn, and college forums</li>
-  <li className="workflow-item"><strong>Community Building:</strong> Create a Discord/Slack group for discussions, queries, and networking</li>
-  <li className="workflow-item"><strong>Workshops:</strong> Organize pre-contest workshops for beginners to help them participate confidently</li>
-</ul>
-</div>
-<div>
-  <h2 className="workflow-list1">Why Students Should Join the Contest</h2>
-  
-  <h3>1. Skill <span>Development</span></h3>
-  <ul className="workflow-list">
-    <li className="workflow-item"><strong>Hands-On Learning:</strong> Solve real-world problems and improve algorithmic thinking</li>
-    <li className="workflow-item"><strong>Coding Proficiency:</strong> Enhance coding skills in competitive environments</li>
-  </ul>
-
-  <h3>2. Career <span>Opportunities</span></h3>
-  <ul className="workflow-list">
-    <li className="workflow-item"><strong>Portfolio Building:</strong> Showcase achievements on platforms like LinkedIn or GitHub</li>
-    <li className="workflow-item"><strong>Recognition:</strong> Stand out during placements and internships</li>
-  </ul>
-
-  <h3>3. Networking</h3>
-  <ul className="workflow-list">
-    <li className="workflow-item"><strong>Peer Interaction:</strong> Collaborate and compete with like-minded peers</li>
-    <li className="workflow-item"><strong>Mentorship:</strong> Learn from experts through explanation videos and workshops</li>
-  </ul>
-
-  <h3>4. Exciting <span>Prizes</span></h3>
-  <ul className="workflow-list">
-    <li className="workflow-item"><strong>Immediate Rewards:</strong> Cash prizes, gift vouchers, and certificates</li>
-    <li className="workflow-item"><strong>Long-Term Incentives:</strong> Leaderboard rankings and grand prizes</li>
-  </ul>
-
-  <h3>5. Personalized <span>Feedback</span></h3>
-  <ul className="workflow-list">Learn from explanation videos to improve weak areas and gain new perspectives on problem-solving</ul>
-</div>
-
-        <div>
-          <h2 className="workflow-list1" >Why Join Our Organization?</h2>
-          
-          <div>
-  <h3>1. Expertise</h3>
-  <ul className="workflow-list">
-    <li className="workflow-item">Proven track record of organizing high-quality contests</li>
-    <li className="workflow-item">Team of experienced problem setters and mentors</li>
-  </ul>
-
-  <h3>2. Learning-Focused <span>Approach</span></h3>
-  <ul className="workflow-list">
-    <li className="workflow-item">Emphasis on learning through explanation videos and workshops</li>
-    <li className="workflow-item">Opportunities to grow from beginner to advanced levels</li>
-  </ul>
-
-  <h3>3. Inclusive <span>Community</span></h3>
-  <ul className="workflow-list">
-    <li className="workflow-item">Build a thriving community (Telegram, Discord, WhatsApp) of coders in the college</li>
-    <li className="workflow-item">Opportunities to interact with industry experts through webinars or special events</li>
-  </ul>
-
-  <h3>4. Transparent and <span>Fair</span></h3>
-  <ul className="workflow-list">
-    <li className="workflow-item">Fair evaluation process with transparent ranking and scoring</li>
-    <li className="workflow-item">Feedback loops to improve contest quality based on student inputs</li>
-  </ul>
-</div>
-</div>
-        <div>
-          <h2 className="workflow-list1">Our Features</h2>
+      <h1 className="contest-title">Contest Journey</h1>
+      
+      {loading && (
+        <div style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
+          <div style={{ 
+            width: '3rem', 
+            height: '3rem', 
+            border: '2px solid #f3f3f3',
+            borderTop: '2px solid #3498db',
+            borderRadius: '50%',
+            animation: 'spin 1s linear infinite'
+          }}></div>
         </div>
+      )}
+
+      {error && (
+        <div style={{
+          backgroundColor: '#fee2e2',
+          border: '1px solid #ef4444',
+          borderRadius: '0.375rem',
+          padding: '1rem',
+          margin: '1rem',
+          color: '#dc2626'
+        }}>
+          Error loading contests: {error}
+        </div>
+      )}
+
+      {!loading && !error && (
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+          gap: '1.5rem',
+          padding: '1.5rem'
+        }}>
+          {contests.map((contest) => (
+            <div key={contest.id} style={{
+              border: '1px solid #e5e7eb',
+              borderRadius: '0.5rem',
+              overflow: 'hidden',
+              backgroundColor: '#ffffff',
+              boxShadow: 'rgba(0, 0, 0, 0.25) 0px 0px 20px',
+              transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+              cursor: 'pointer',
+              display: 'flex',
+              flexDirection: 'column',
+              height: '100%',
+              minHeight: '300px'
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.transform = 'translateY(-5px)';
+              e.currentTarget.style.boxShadow = 'rgba(0, 0, 0, 0.35) 0px 0px 30px';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = 'rgba(0, 0, 0, 0.25) 0px 0px 20px';
+            }}>
+              <div style={{ 
+                padding: '1.5rem',
+                display: 'flex',
+                flexDirection: 'column',
+                height: '100%'
+              }}>
+                <div style={{ flex: '1' }}>
+                  <h3 style={{ 
+                    fontSize: '1.25rem',
+                    fontWeight: 'bold',
+                    marginBottom: '0.5rem',
+                    color: '#2d3748'
+                  }}>{contest.event}</h3>
+                  <div style={{ 
+                    fontSize: '0.875rem',
+                    color: '#4a5568',
+                    marginBottom: '1rem'
+                  }}>
+                    Host: {contest.host}
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                    <p style={{ fontSize: '0.875rem' }}>
+                      <strong>Duration:</strong>{' '}
+                      {Math.round(contest.duration / 3600)} hours
+                    </p>
+                    <p style={{ fontSize: '0.875rem' }}>
+                      <strong>Start:</strong>{' '}
+                      {new Date(contest.start).toLocaleString()}
+                    </p>
+                    <p style={{ fontSize: '0.875rem' }}>
+                      <strong>End:</strong>{' '}
+                      {new Date(contest.end).toLocaleString()}
+                    </p>
+                  </div>
+                </div>
+
+                <div style={{ 
+                  marginTop: 'auto',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.5rem'
+                }}>
+                  <button 
+                    onClick={() => window.open(contest.href, '_blank')}
+                    style={{
+                      padding: '0.5rem 1rem',
+                      backgroundColor: '#88C057',
+                      color: 'white',
+                      border: 'none',
+                      borderRadius: '0.375rem',
+                      fontWeight: '500',
+                      cursor: 'pointer',
+                      transition: 'background-color 0.2s ease',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.5rem',
+                      alignSelf: 'flex-start',
+                      whiteSpace: 'nowrap'
+                    }}
+                    onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#7ab04c'}
+                    onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#88C057'}
+                  >
+                    View Contest
+                    <svg 
+                      width="16" 
+                      height="16" 
+                      viewBox="0 0 24 24" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      strokeWidth="2" 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </button>
+                  {contest.url && (
+                    <button 
+                      onClick={() => window.open(contest.url, '_blank')}
+                      style={{
+                        padding: '0.75rem 1rem',
+                        backgroundColor: '#4299e1',
+                        color: 'white',
+                        border: 'none',
+                        borderRadius: '0.375rem',
+                        fontWeight: '500',
+                        cursor: 'pointer',
+                        transition: 'background-color 0.2s ease',
+                        width: '100%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '0.5rem'
+                      }}
+                      onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#3182ce'}
+                      onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#4299e1'}
+                    >
+                      View Contest 
+                      <svg 
+                        width="16" 
+                        height="16" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        strokeWidth="2" 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </button>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <div className='contest-upper'>
       </div>
       
       <div className="main-layout">
@@ -155,7 +245,6 @@ const Contest = () => {
           <img src="/images/code1.png" alt="Contest Illustration" className="feature-image" />
         </div>
       </div>
-      
     </div>
   );
 };
