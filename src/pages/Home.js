@@ -76,7 +76,7 @@ export default function Home() {
   };
 
   const programOptions = {
-    Student: ["Web Development", "Artificial Intelligence"], // Correctly define programs
+    Student: ["C Programming", "Java Programming","Python Programming","Full Stack Development","Cybersecurity","Machine Learning"], // Correctly define programs
     Developer: [],
     Trainer: [],
     Other: [""],
@@ -235,7 +235,7 @@ export default function Home() {
           <input
             type="url"
             name="linkedin_url"
-            placeholder="LinkedIn Profile URL (optional)"
+            placeholder="LinkedIn Profile"
             className="input-field"
             value={formData.linkedin_url}
             onChange={handleInputChange}
