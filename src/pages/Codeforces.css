@@ -1,0 +1,165 @@
+.cf-page {
+
+    padding: 100px;
+  }
+
+  .CFpage{
+    background: linear-gradient(to bottom, #ffffff, #e5fbc3); 
+  }
+  
+  .cf-header {
+    text-align: center;
+  }
+  
+  .cf-header h1 {
+    font-size: 2.5rem;
+    color: #0E2031; /* Dark Green */
+  }
+  
+  .cf-description {
+    font-size: 1.2rem;
+    color: #3C5C7B; /* Blueish Green */
+  }
+  
+  .cf-filters {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .cf-filter-group {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+  }
+  
+  .cf-filter-group label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #0E2031; /* Dark Green */
+    font-size: 1em;
+  }
+  
+  .cf-filter-group select {
+    padding: 5px;
+    font-size: 1rem;
+    color: #0E2031; /* Dark Green */
+    border: 1px solid #3C5C7B; /* Blueish Green */
+    border-radius: 5px;
+  }
+  
+  .cf-loading {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 30px;
+    color: #3C5C7B; /* Blueish Green */
+  }
+  
+  .cf-problem-list {
+    margin-top: 40px;
+  }
+  
+  .cf-problem-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #b1ec5e; /* Light Green */
+    border-radius: 5px;
+    /* background-color: #fff; */
+    transition: background-color 0.3s;
+  }
+  
+  .cf-problem-item:hover {
+    background-color: #D3F998; /* Light Green */
+  }
+  
+  .cf-problem-link {
+    font-size: 1.2rem;
+    color: #0E2031; /* Dark Green */
+    text-decoration: none;
+  }
+  
+  .cf-problem-link:hover {
+    text-decoration: underline;
+  }
+  
+  .cf-problem-rating {
+    font-size: 1rem;
+    color: #3C5C7B; /* Blueish Green */
+  }
+  
+  .cf-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .cf-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .cf-pagination-btn {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    background-color: #3C5C7B; /* Blueish Green */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px; /* Adds some space between the buttons */
+    transition: background-color 0.3s ease;
+  }
+  
+  .cf-pagination-btn:hover {
+    background-color: #0E2031; /* Dark Green on hover */
+  }
+  
+  .cf-pagination-btn:disabled {
+    background-color: #3C5C7B; /* Light Green */
+    cursor: not-allowed;
+  }
+  
+  .cf-page-info {
+    font-size: 1.1rem;
+    color: #3C5C7B; /* Blueish Green */
+    margin: 0 10px; /* Adjusted margin for better spacing */
+  }
+  
+
+  @media (max-width: 768px){
+    .cf-page {
+
+      padding: 10px;
+    }
+    .cf-header{
+      font-size: 2em;
+    }
+    .cf-description{
+      font-size: 1em;
+    }
+    
+    .cf-filter-group {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .cf-filter-group label {
+      font-weight: bold;
+      margin-right: 10px;
+      color: #0E2031; /* Dark Green */
+      font-size: 2em;
+    }
+
+    .cf-filters {
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+  }
