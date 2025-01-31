@@ -544,7 +544,7 @@
 /* Mobile View - Adjustments for smaller screen sizes */
 @media screen and (max-width: 768px) {
   /* General adjustments for the body or container */
-  .coder-sheet {
+  .moon-coder {
     width: 100%;
     padding: 20px;
   }

@@ -1,6 +1,6 @@
 /* Main coder sheet container */
 .coder-sheet {
-  width: 800%;
+  width: 100vw;
   max-width: 1500px;
   height: 100vh;
   display: flex;
