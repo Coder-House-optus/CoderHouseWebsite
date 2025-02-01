@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Atcoder.css"; // Import the CSS file
+import { useNavigate } from "react-router-dom";
 
 const AtCoderProblems = () => {
   const [problems, setProblems] = useState([]);
@@ -9,6 +10,8 @@ const AtCoderProblems = () => {
   const [level, setLevel] = useState("");
   const [contestType, setContestType] = useState("");
   const problemsPerPage = 30;
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchProblems = async () => {
@@ -48,6 +51,12 @@ const AtCoderProblems = () => {
 
   return (
     <div className="Atcodercover">
+      <button className="back-button1" onClick={() => navigate('/coders-sheet')}>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
       <div className="atcoder-page-container"> {/* New wrapper div */}
         {/* Header */}
         <header className="atcoder-header">

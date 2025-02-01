@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./Contest.css";
 import { useNavigate } from 'react-router-dom';
+import { div } from 'framer-motion/client';
 
 const Contest = () => {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ const Contest = () => {
   useEffect(() => {
     const fetchContests = async () => {
       try {
-        const response = await fetch('https://clist.by:443/api/v4/contest/?upcoming=true`&limit=48', {
+        const response = await fetch('https://clist.by:443/api/v4/contest/?limit=48&total_count=false&upcoming=true&order_by=start', {
           headers: {
             'Authorization': 'ApiKey hitesh1376:197e92d674d015dd80fb9520fb9230c1e6596815'
           }
@@ -40,6 +41,9 @@ const Contest = () => {
   );
 
   return (
+    <div className='all-above'>
+
+    
     <div className="contest-container">
       <button className="nav-return-btn" onClick={() => navigate('/Features')}>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -81,7 +85,7 @@ const Contest = () => {
         {!loading && !error && (
           <>
             {filteredContests.length === 0 ? (
-              <div className="no-results">No contests found matching your search.</div>
+              <div className="no-result">No contests found matching your search.</div>
             ) : (
               <div className="contests-grid">
                 {filteredContests.map((contest) => (
@@ -155,29 +159,7 @@ const Contest = () => {
           </>
         )}
       </div>
-
-      <div className="main-layout">
-        <div className="cards-container">
-          <div className="info-card">
-            <div className="card-contents">
-              <h3>In-house Coding Challenges</h3>
-              <p>Structured programs for skill enhancement.</p>
-            </div>
-            <img src="../images/contest1.png" alt="Coding challenge icon" />
-          </div>
-          <div className="info-card">
-            <div className="card-contents">
-              <h3>National & International Competitions</h3>
-              <p>Visual guides and flowcharts for contest prep.</p>
-            </div>
-            <img src="../images/contest2.png" alt="Competition icon" />
-          </div>
-        </div>
-
-        <div className="visual-section">
-          <img src="/images/code1.png" alt="Contest Illustration" className="feature-image" />
-        </div>
-      </div>
+    </div>
     </div>
   );
 };
