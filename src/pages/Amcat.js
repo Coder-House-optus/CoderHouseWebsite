@@ -21,8 +21,8 @@ const Amcat = () => {
       <h1 className="amcat-title">Marathon Classes</h1>
       <div className="amcat-tabs">
         <button className="tab active">AMCAT</button>
-        <button className="tab">CoCubes</button>
-        <button className="tab">eLitmus</button>
+        <button className="tab" onClick={() => navigate('/Cocubes')}>CoCubes</button>
+        <button className="tab" onClick={() => navigate('/Elitmus')}>eLitmus</button>
       </div>
 
       <h2 className="amcat-subtitle">AMCAT Model Paper Overview</h2>

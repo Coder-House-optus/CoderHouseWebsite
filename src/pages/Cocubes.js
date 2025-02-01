@@ -20,9 +20,9 @@ const Cocubes = () => {
 
       <h1 className="amcat-title">Marathon Classes</h1>
       <div className="amcat-tabs">
-        <button className="tab">AMCAT</button>
+        <button className="tab" onClick={() => navigate('/Amcat')}>AMCAT</button>
         <button className="tab active">CoCubes</button>
-        <button className="tab">eLitmus</button>
+        <button className="tab" onClick={() => navigate('/Elitmus')}>eLitmus</button>
       </div>
 
       <h2 className="amcat-subtitle">CoCubes Previous Papers and Pattern for Cocubes Questions</h2>

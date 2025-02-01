@@ -20,8 +20,8 @@ const Elitmus = () => {
 
       <h1 className="amcat-title">Marathon Classes</h1>
       <div className="amcat-tabs">
-        <button className="tab">AMCAT</button>
-        <button className="tab ">CoCubes</button>
+        <button className="tab" onClick={() => navigate('/Amcat')}>AMCAT</button>
+        <button className="tab " onClick={() => navigate('/Cocubes')}>CoCubes</button>
         <button className="tab active">eLitmus</button>
       </div>
 

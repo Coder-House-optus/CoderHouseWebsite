@@ -18,10 +18,11 @@ const reviewsData = [
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [showFirstImage, setShowFirstImage] = useState(true);  // Track if we should show the first image
+  const [showFirstImage, setShowFirstImage] = useState(true);
   const [selectedUserType, setSelectedUserType] = useState("");
   const [selectedProgram, setSelectedProgram] = useState("");
-  const [otherValue, setOtherValue] = useState(""); // New state for custom input
+  const [otherValue, setOtherValue] = useState("");
+  const [images, setImages] = useState([]);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -29,32 +30,54 @@ export default function Home() {
     linkedin_url: "",
   });
 
-  // Image array
-  const images = [
-    "/images/Posters/Coder.png",
-    "/images/Posters/Mooncoder week1.jpg",
-    "/images/Posters/Mooncoder week2.jpg",
-    // Add more images as needed
-  ];
-
-  // Initial delay for the first image
+  // Fetch images from API
   useEffect(() => {
-    const firstImageTimeout = setTimeout(() => {
-      setShowFirstImage(false);  // Hide first image after 5 seconds
-    }, 5000);
-
-    // Change image every 3 seconds after the first 5 seconds
-    const imageInterval = setInterval(() => {
-      if (!showFirstImage) {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    const fetchImages = async () => {
+      try {
+        const response = await fetch('https://coderhouse-448820.el.r.appspot.com/HomeBanner/');
+        if (!response.ok) {
+          throw new Error('Failed to fetch images');
+        }
+        const data = await response.json();
+        
+        if (data && data.HomeBanner && Array.isArray(data.HomeBanner)) {
+          const imageUrls = data.HomeBanner.map(item => item.image);
+          setImages(imageUrls);
+        } else {
+          throw new Error('Invalid data structure');
+        }
+      } catch (error) {
+        console.error('Error fetching images:', error);
+        // setImages([
+        //   "/images/Posters/Coder.png",
+        //   "/images/Posters/Mooncoder week1.jpg",
+        //   "/images/Posters/Mooncoder week2.jpg"
+        // ]);
       }
-    }, 3000);
-
-    return () => {
-      clearTimeout(firstImageTimeout);  // Clean up the first image timeout
-      clearInterval(imageInterval);     // Clean up the image interval
     };
-  }, [showFirstImage]);
+
+    fetchImages();
+  }, []);
+
+  // Image rotation effect
+  useEffect(() => {
+    if (images.length > 0) {
+      const firstImageTimeout = setTimeout(() => {
+        setShowFirstImage(false);
+      }, 3000);
+
+      const imageInterval = setInterval(() => {
+        if (!showFirstImage) {
+          setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }
+      }, 3000);
+
+      return () => {
+        clearTimeout(firstImageTimeout);
+        clearInterval(imageInterval);
+      };
+    }
+  }, [showFirstImage, images]);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % reviewsData.length);
@@ -72,11 +95,11 @@ export default function Home() {
   const handleUserTypeChange = (e) => {
     setSelectedUserType(e.target.value);
     setSelectedProgram("");
-    setOtherValue(""); // Reset other value when user type changes
+    setOtherValue("");
   };
 
   const programOptions = {
-    Student: ["C Programming", "Java Programming","Python Programming","Full Stack Development","Cybersecurity","Machine Learning"], // Correctly define programs
+    Student: ["C Programming", "Java Programming","Python Programming","Full Stack Development","Cybersecurity","Machine Learning"],
     Developer: [],
     Trainer: [],
     Other: [""],
@@ -85,15 +108,6 @@ export default function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault();
   
-    // Determine the query value based on user type
-    let queryValue = "";
-    if (selectedUserType === "Student") {
-      queryValue = selectedProgram; // Use the selected program for Students
-    } else if (selectedUserType === "Other") {
-      queryValue = otherValue; // Use the other value for Other
-    }
-  
-    // Prepare data for submission
     const payload = {
       ...formData,
       role: selectedUserType === "Other" ? "Others" : selectedUserType,
@@ -115,7 +129,6 @@ export default function Home() {
   
       if (response.ok) {
         alert("Form submitted successfully!");
-        // Reset form
         setFormData({
           name: "",
           email: "",
@@ -139,135 +152,134 @@ export default function Home() {
     <div className="home">
       <Navigation />
       <section className="hero" id="form-section">
-      <div className="hero-left">
-        <img
-          src={images[currentIndex]} // Set dynamic image based on currentIndex
-          alt="Student on laptop"
-          className={`hero-image ${showFirstImage ? 'first-image' : ''}`} // Apply class to first image
-        />
-      </div>
-      <div className="floating-bubble">
-        What's New
-      </div>
-      <div className="hero-right">
-        <h2 className="hero-heading">
-          <span className="text-white">BE A PART OF THE</span>
-          <br />
-          <span className="text-green">CODER HOUSE </span>
-          <span className="text-white2">FAMILY!</span>
-          <br />
-        </h2>
-        <form className="form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            className="input-field"
-            required
-            value={formData.name}
-            onChange={handleInputChange}
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            className="input-field"
-            required
-            value={formData.email}
-            onChange={handleInputChange}
-          />
-          <input
-            type="text"
-            name="phone"
-            placeholder="Phone"
-            className="input-field"
-            required
-            value={formData.phone}
-            onChange={handleInputChange}
-          />
-
-          {/* First dropdown for user type */}
-          <select
-            name="UserType"
-            className="input-field program-selection"
-            value={selectedUserType}
-            onChange={handleUserTypeChange}
-            required
-          >
-            <option value="">Select For</option>
-            <option value="Student">Student</option>
-            <option value="Developer">Developer</option>
-            <option value="Trainer">Trainer</option>
-            <option value="Other">Other</option>
-          </select>
-
-          {/* Show program dropdown for Students */}
-          {selectedUserType === "Student" && (
-            <select
-              name="Program"
-              className="input-field program-selection"
-              value={selectedProgram}
-              onChange={(e) => setSelectedProgram(e.target.value)}
-              required
-            >
-              <option value="">Select Program</option>
-              {programOptions[selectedUserType].map((program, index) => (
-                <option key={index} value={program}>
-                  {program}
-                </option>
-              ))}
-            </select>
-          )}
-
-          {/* Show custom input field for Other */}
-          {selectedUserType === "Other" && (
-            <input
-              type="text"
-              name="OtherType"
-              placeholder="Please specify"
-              className="input-field"
-              value={otherValue}
-              onChange={(e) => setOtherValue(e.target.value)}
-              required
+        <div className="hero-left">
+          {images.length > 0 && (
+            <img
+              src={images[currentIndex]}
+              alt="Student on laptop"
+              className={`hero-image ${showFirstImage ? 'first-image' : ''}`}
             />
           )}
+        </div>
+        <div className="floating-bubble">
+          What's New
+        </div>
+        <div className="hero-right">
+          <h2 className="hero-heading">
+            <span className="text-white">BE A PART OF THE</span>
+            <br />
+            <span className="text-green">CODER HOUSE </span>
+            <span className="text-white2">FAMILY!</span>
+            <br />
+          </h2>
+          <form className="form" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              className="input-field"
+              required
+              value={formData.name}
+              onChange={handleInputChange}
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              className="input-field"
+              required
+              value={formData.email}
+              onChange={handleInputChange}
+            />
+            <input
+              type="text"
+              name="phone"
+              placeholder="Phone"
+              className="input-field"
+              required
+              value={formData.phone}
+              onChange={handleInputChange}
+            />
 
-          <input
-            type="url"
-            name="linkedin_url"
-            placeholder="LinkedIn Profile"
-            className="input-field"
-            value={formData.linkedin_url}
-            onChange={handleInputChange}
-          />
+            <select
+              name="UserType"
+              className="input-field program-selection"
+              value={selectedUserType}
+              onChange={handleUserTypeChange}
+              required
+            >
+              <option value="">Select For</option>
+              <option value="Student">Student</option>
+              <option value="Developer">Developer</option>
+              <option value="Trainer">Trainer</option>
+              <option value="Other">Other</option>
+            </select>
 
-          <button type="submit" className="callback-btn">
-            Get in Touch
-          </button>
-        </form>
-      </div>
-    </section>
+            {selectedUserType === "Student" && (
+              <select
+                name="Program"
+                className="input-field program-selection"
+                value={selectedProgram}
+                onChange={(e) => setSelectedProgram(e.target.value)}
+                required
+              >
+                <option value="">Select Program</option>
+                {programOptions[selectedUserType].map((program, index) => (
+                  <option key={index} value={program}>
+                    {program}
+                  </option>
+                ))}
+              </select>
+            )}
 
-    <div className="stats-section">
-      <div className="item">
-        <img src="/images/arrow.png" alt="Arrow Image" />
-        <div className="text">147% Average Hike</div>
+            {selectedUserType === "Other" && (
+              <input
+                type="text"
+                name="OtherType"
+                placeholder="Please specify"
+                className="input-field"
+                value={otherValue}
+                onChange={(e) => setOtherValue(e.target.value)}
+                required
+              />
+            )}
+
+            <input
+              type="url"
+              name="linkedin_url"
+              placeholder="LinkedIn Profile"
+              className="input-field"
+              value={formData.linkedin_url}
+              onChange={handleInputChange}
+            />
+
+            <button type="submit" className="callback-btn">
+              Get in Touch
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <div className="stats-section">
+        <div className="item">
+          <img src="/images/arrow.png" alt="Arrow Image" />
+          <div className="text">147% Average Hike</div>
+        </div>
+        <div className="item">
+          <img src="/images/Career.png" alt="Career Image" />
+          <div className="text">1000+ Career Transformed</div>
+        </div>
+        <div className="item">
+          <img src="/images/teacher.png" alt="Teacher Image" />
+          <div className="text">50+ Experienced Mentor</div>
+        </div>
       </div>
-      <div className="item">
-        <img src="/images/Career.png" alt="Career Image" />
-        <div className="text">1000+ Career Transformed</div>
-      </div>
-      <div className="item">
-        <img src="/images/teacher.png" alt="Teacher Image" />
-        <div className="text">50+ Experienced Mentor</div>
-      </div>
+
+      <Card />
+      <Plan />
+      <ReviewSection />
+      <Mentor />
+      <Footer />
     </div>
-
-    <Card />
-    <Plan />
-    <ReviewSection />
-    <Mentor />
-    <Footer />
-  </div>
-);
+  );
 }

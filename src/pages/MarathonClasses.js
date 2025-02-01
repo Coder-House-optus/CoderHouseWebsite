@@ -1,7 +1,19 @@
 import React from 'react';
 import './MarathonClasses.css';
+import { useNavigate } from "react-router-dom";
 
 const MarathonClasses = () => {
+  const navigate = useNavigate();
+
+  const handleJoinUsClick = () => {
+    navigate("/"); // Navigate to the Home page
+    setTimeout(() => {
+      const formSection = document.getElementById("form-section");
+      if (formSection) {
+        formSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100); // Delay to ensure the page is loaded
+  };
   const navigateTo = (url) => {
     window.location.href = url; // Navigate to the given URL
   };
@@ -56,14 +68,13 @@ const MarathonClasses = () => {
                 Open Document
               </button>
               <button
-  className="marathon-doc-button"
-  onClick={() => openDoc('https://docs.google.com/forms/d/e/1FAIpQLSd12VNW9dqxsHnH13R7JFrug_guszXURRbW4dMc3HmdGHlG5w/viewform')}
->
-  Join Us!
-</button>
+                className="marathon-doc-button"
+                onClick={handleJoinUsClick}>
+                Join Us!
+              </button>
 
             </div>
-          </div>        
+          </div>
         ))}
       </div>
     </div>
