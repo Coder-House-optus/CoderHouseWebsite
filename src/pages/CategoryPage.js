@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import './CategoryPage.css';
+import Footer from '../components/Footer';
 
 const CategoryPage = () => {
   const { category } = useParams();
@@ -49,6 +50,7 @@ const CategoryPage = () => {
           />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
