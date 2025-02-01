@@ -35,9 +35,9 @@ import TermsAndConditions from './pages/TermsAndConditions';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import ResumeBuilding from './pages/ResumeBuilding';
 import CategoryPage from './pages/CategoryPage';
-
-
-
+import Codeforces from './pages/Codeforces'; 
+import Atcoder from './pages/Atcoder'; 
+import LeetCodeProblems from "./pages/Leetcode.js";
 
 function App() {
   return (
@@ -83,7 +83,9 @@ function App() {
           <Route path="/notes" element={<Notes />} />
           <Route path="/notes/category/:category" element={<CategoryPage />} />
           <Route path="/home" element={<Home />} />
-
+          <Route path="/codeforces" element={<Codeforces />} /> {/* Add route for Codeforces */}
+          <Route path="/atcoder" element={<Atcoder />} /> {/* Add route for Atcoder */}
+          <Route path="/leetcode" element={<LeetCodeProblems />} />
         </Routes>
       </Router>
     </div>

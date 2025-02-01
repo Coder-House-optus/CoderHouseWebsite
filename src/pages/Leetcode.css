@@ -1,0 +1,180 @@
+.leetcode-container {
+    padding: 100px;
+  }
+  
+  .leetcode-container{
+    background: linear-gradient(to bottom, #ffffff, #e5fbc3); 
+  }
+  
+  .lc-description {
+    font-size: 1.2rem;
+    color: #3C5C7B; /* Blueish Green */
+    text-align: center; /* Centers the text horizontally */
+    margin: 0 auto; /* Ensures the description is centered in the available space */
+    display: block;
+    position: relative; /* Optional, in case you need to adjust its position further */
+    top: 50%; /* Moves the element down 50% of the height */
+    transform: translateY(-50%); /* Adjusts the element's position to truly center it vertically */
+  }
+  
+
+  .leetcode-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0E2031; /* Dark Green */
+  }
+  
+  .leetcode-description {
+    font-size: 1.2rem;
+    color: #3C5C7B; /* Blueish Green */
+  }
+  
+  .leetcode-filters {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .filter-section {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+  }
+  
+  .filter-section label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #0E2031; /* Dark Green */
+    font-size: 1em;
+  }
+  
+  .filter-section select {
+    padding: 5px;
+    font-size: 1.2rem;
+    color: #0E2031; /* Dark Green */
+    border: 1px solid #3C5C7B; /* Blueish Green */
+    border-radius: 5px;
+  }
+  
+  .loading-text {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 30px;
+    color: #3C5C7B; /* Blueish Green */
+  }
+  
+  .questions-list {
+    margin-top: 0px;
+  }
+  
+  .question-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #b1ec5e; /* Light Green */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .question-card:hover {
+    background-color: #D3F998; /* Light Green */
+  }
+  
+  .question-link {
+    font-size: 1.2rem;
+    color: #0E2031; /* Dark Green */
+    text-decoration: none;
+  }
+  
+  .question-link:hover {
+    text-decoration: underline;
+  }
+  
+  .difficulty-badge {
+    font-size: 1rem;
+    color: #3C5C7B; /* Blueish Green */
+  }
+  
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .pagination-button {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    background-color: #3C5C7B; /* Blueish Green */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px; /* Adds some space between the buttons */
+    transition: background-color 0.3s ease;
+  }
+  
+  .pagination-button:hover {
+    background-color: #0E2031; /* Dark Green on hover */
+  }
+  
+  .pagination-button:disabled {
+    background-color: #3C5C7B; /* Light Green */
+    cursor: not-allowed;
+  }
+  
+  .pagination-info {
+    font-size: 1.1rem;
+    color: #3C5C7B; /* Blueish Green */
+    margin: 0 10px; /* Adjusted margin for better spacing */
+  }
+  
+  @media (max-width: 768px) {
+    .leetcode-container {
+      padding: 10px;
+    }
+  
+    .leetcode-title {
+      font-size: 2em;
+    }
+  
+    .loading-text,
+    .pagination-info {
+      font-size: 1rem;
+    }
+  
+    .filter-section {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+  
+    .filter-section label {
+      font-weight: bold;
+      margin-right: 10px;
+      color: #0E2031; /* Dark Green */
+      font-size: 2rem;
+    }
+  
+    .leetcode-filters {
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .lc-description {
+        font-size: 1.5em; /* Increase font size */
+        text-align: center; /* Center align the text */
+        margin: 0 auto; /* Center the text block itself */
+        max-width: 90%; /* Optional: limit width for better responsiveness */
+    }
+
+    .filter-section select {
+        padding: 5px;
+        font-size: 2rem;
+        color: #0E2031; /* Dark Green */
+        border: 1px solid #3C5C7B; /* Blueish Green */
+        border-radius: 5px;
+      }
+  }
+  

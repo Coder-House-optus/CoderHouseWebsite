@@ -19,7 +19,7 @@ const CoderSheet = () => {
     <div className="coder-sheet">
       {/* Back Button */}
       <button className="back-button1" onClick={() => navigate('/Features')}>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <line x1="19" y1="12" x2="5" y2="12"></line>
           <polyline points="12 19 5 12 12 5"></polyline>
         </svg>
@@ -29,7 +29,7 @@ const CoderSheet = () => {
         <h1 className="mainTitle1">
           <span className="textGreen">Coders Sheet: </span> Practice Galore
         </h1>
-        <p className="mentorpara1">Welcome to the Mentorship Program, an initiative designed to provide one-on-one (1:1) guidance to students, fostering their personal, academic, and professional growth. This program connects students with experienced mentors who offer tailored support, ensuring that every individual achieves their fullest potential.</p>
+        <p className="mentorpara1">Welcome to the CoderSheet Library Program...</p>
 
         {/* Join Us Button */}
         <button className="join-us-button5" onClick={handleJoinUs}>
@@ -37,85 +37,27 @@ const CoderSheet = () => {
         </button>
       </div>
 
-      <div className="mentorship-program">
-        <p className="mentorship-description">
-          <strong>1. Topic-Wise Daily Coding Practice</strong>  
-          Our structured practice sheets cover topics ranging from data structures (Arrays, Linked Lists, Trees, Graphs) to algorithms (Sorting, Searching, Dynamic Programming) and programming languages (C++, Python, Java).  
-          The practice problems are curated to:
-          <ul>
-            <li>Strengthen fundamental concepts.</li>
-            <li>Enhance problem-solving skills.</li>
-            <li>Prepare students for coding rounds in job placements.</li>
-          </ul>
-        </p>
-        <p className="mentorship-description">
-          <strong>2. Hybrid Mode Analysis Sessions</strong>  
-          We conduct analysis sessions two days a week, where expert mentors guide you through solutions—available online or offline.  
-          Here, you’ll:
-          <ul>
-            <li>Explore alternative approaches.</li>
-            <li>Get real-time answers to your doubts.</li>
-          </ul>
-        </p>
-      </div>
+      
 
-      <div className="box2 shadow2">
-        <span className="circle"></span>
-        <p className="content2">Real-Time Doubt Resolution</p>
-      </div>
-      <div className="box2 shadow2">
-        <span className="circle"></span>
-        <p className="content2">Holistic Learning</p>
-      </div>
-      <div className="box2 shadow2">
-        <span className="circle"></span>
-        <p className="content2">Flexible Learning Modes</p>
-      </div>
-      <div className="box2 shadow2">
-        <span className="circle"></span>
-        <p className="content2">Curated Content</p>
-      </div>
-      <div className="box2 shadow2">
-        <span className="circle"></span>
-        <p className="content2">Personalized Attention</p>
-      </div>
-      <div className="box2 shadow2">
-        <span className="circle"></span>
-        <p className="content2">Experience</p>
-      </div>
+      {/* Cards for Atcoder, Codeforces, and Leetcode */}
+      <div className="coding-platforms">
+  <div className="platform-card" onClick={() => handleImageButtonClick('atcoder')}>
+    <img className="platform-logo" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F566497%2F6c8a7829-0fb6-48c4-45ff-5088cf46e7c4.png?ixlib=rb-4.0.0&auto=format&gif-q=60&q=75&w=1400&fit=max&s=1fe8bf292f0493ad4ddff43972b0d178" alt="Atcoder Logo" />
+    <h3>Atcoder</h3>
+    <p>Practice coding problems on Atcoder.</p>
+  </div>
+  <div className="platform-card" onClick={() => handleImageButtonClick('codeforces')}>
+    <img className="platform-logo" src="https://camo.githubusercontent.com/b5f0879162f3fb94fa211b30508d39bfcce3a406883e58e77d27e867204bb76c/68747470733a2f2f6173736574732e636f6465666f726365732e636f6d2f75736572732f6b6775736576612f636f6d6d656e74732f63662e706e67" alt="Codeforces Logo" />
+    <h3>Codeforces</h3>
+    <p>Participate in contests and solve problems on Codeforces.</p>
+  </div>
+  <div className="platform-card" onClick={() => handleImageButtonClick('leetcode')}>
+    <img className="platform-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/LeetCode_Logo_black_with_text.svg/916px-LeetCode_Logo_black_with_text.svg.png" alt="Leetcode Logo" />
+    <h3>Leetcode</h3>
+    <p>Prepare for interviews and competitive programming on Leetcode.</p>
+  </div>
+</div>
 
-      {/* Image Section */}
-      <div className="image-gallery">
-        <div className="image-item">
-          <img
-            className="image-thumbnail"
-            src="/images/Arrays.jpeg"
-            alt="Arrays"
-          />
-          <div className="image-action">
-            <button 
-              className="action-button" 
-              onClick={() => handleImageButtonClick('Documents/ArrayQuestion.docx')}>
-              Go to Arrays
-            </button>
-          </div>
-        </div>
-
-        <div className="image-item">
-          <img
-            className="image-thumbnail"
-            src="/images/Trees.jpeg"
-            alt="Trees"
-          />
-          <div className="image-action">
-            <button 
-              className="action-button" 
-              onClick={() => handleImageButtonClick('Documents/TreeQuestion.docx')}>
-              Go to Trees
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

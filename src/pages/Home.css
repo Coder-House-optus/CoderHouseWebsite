@@ -213,8 +213,8 @@ html {
 
   .floating-bubble{
     font-size: 1.2rem;
-    top: 14%;
-    left: 17%; /* Adjust left positioning for smaller screens */
+    top: 19%;
+    left: 14%; /* Adjust left positioning for smaller screens */
   }
 }
 
@@ -437,7 +437,7 @@ html {
 
   .hero-left {
     margin: 3rem auto; 
-    width: 70%; 
+    /* width: 70%;  */
     text-align: center; 
   }
   /* .hero-image {
