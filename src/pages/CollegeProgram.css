@@ -4,24 +4,24 @@
 }
 
 /* Header and Font Adjustments */
-h1, h2, h3, h4, h5, h6 {
+.college-program-page h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-h1 {
+.college-program-page h1 {
   font-size: 3rem; /* Larger for header */
   margin-bottom: 1rem;
 }
 
-h2 {
+.college-program-page h2 {
   font-size: 2.5rem;
 }
 
-h3 {
+.college-program-page h3 {
   font-size: 2rem;
 }
 
-p {
+.college-program-page p {
   font-size: 1.5rem;
   line-height: 1.5;
 }

@@ -38,6 +38,7 @@ export default function Home() {
   const [selectedUserType, setSelectedUserType] = useState("");
   const [selectedProgram, setSelectedProgram] = useState("");
   const [otherValue, setOtherValue] = useState("");
+  const [images, setImages] = useState([]);
   const [developerValue, setDeveloperValue] = useState("");
   const [trainerValue, setTrainerValue] = useState("");
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
@@ -49,29 +50,54 @@ export default function Home() {
     linkedin_url: "",
   });
 
-  // Image array
-  const images = [
-    "/images/Posters/Coder.png",
-    "/images/Posters/Mooncoder week1.jpg",
-    "/images/Posters/Mooncoder week2.jpg",
-  ];
-
+  // Fetch images from API
   useEffect(() => {
-    const firstImageTimeout = setTimeout(() => {
-      setShowFirstImage(false);
-    }, 5000);
-
-    const imageInterval = setInterval(() => {
-      if (!showFirstImage) {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    const fetchImages = async () => {
+      try {
+        const response = await fetch('https://coderhouse-448820.el.r.appspot.com/HomeBanner/');
+        if (!response.ok) {
+          throw new Error('Failed to fetch images');
+        }
+        const data = await response.json();
+        
+        if (data && data.HomeBanner && Array.isArray(data.HomeBanner)) {
+          const imageUrls = data.HomeBanner.map(item => item.image);
+          setImages(imageUrls);
+        } else {
+          throw new Error('Invalid data structure');
+        }
+      } catch (error) {
+        console.error('Error fetching images:', error);
+        // setImages([
+        //   "/images/Posters/Coder.png",
+        //   "/images/Posters/Mooncoder week1.jpg",
+        //   "/images/Posters/Mooncoder week2.jpg"
+        // ]);
       }
-    }, 3000);
-
-    return () => {
-      clearTimeout(firstImageTimeout);
-      clearInterval(imageInterval);
     };
-  }, [showFirstImage]);
+
+    fetchImages();
+  }, []);
+
+  // Image rotation effect
+  useEffect(() => {
+    if (images.length > 0) {
+      const firstImageTimeout = setTimeout(() => {
+        setShowFirstImage(false);
+      }, 3000);
+
+      const imageInterval = setInterval(() => {
+        if (!showFirstImage) {
+          setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }
+      }, 3000);
+
+      return () => {
+        clearTimeout(firstImageTimeout);
+        clearInterval(imageInterval);
+      };
+    }
+  }, [showFirstImage, images]);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % reviewsData.length);
@@ -159,6 +185,7 @@ export default function Home() {
       );
 
       if (response.ok) {
+        alert("Form submitted successfully!");
         setShowSuccessPopup(true);
         // Reset form
         setFormData({
@@ -188,11 +215,13 @@ export default function Home() {
       <Navigation />
       <section className="hero" id="form-section">
         <div className="hero-left">
-          <img
-            src={images[currentIndex]}
-            alt="Student on laptop"
-            className={`hero-image ${showFirstImage ? 'first-image' : ''}`}
-          />
+          {images.length > 0 && (
+            <img
+              src={images[currentIndex]}
+              alt="Student on laptop"
+              className={`hero-image ${showFirstImage ? 'first-image' : ''}`}
+            />
+          )}
         </div>
         <div className="floating-bubble">
           What's New
