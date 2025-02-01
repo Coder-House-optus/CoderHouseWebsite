@@ -1,28 +1,33 @@
 import React, { useEffect, useState } from "react";
-import "./Leetcode.css"; // Import the external CSS file
+import "./Leetcode.css";
+import { useNavigate } from "react-router-dom";
 
 const Leetcode = () => {
   const [questions, setQuestions] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [difficulty, setDifficulty] = useState("all");
+  const [ratingRange, setRatingRange] = useState("all");
+  const [sortOrder, setSortOrder] = useState("asc");
   const [currentPage, setCurrentPage] = useState(1);
-  const [questionsPerPage] = useState(30); // 30 questions per page
+  const [questionsPerPage] = useState(30);
   const [totalPages, setTotalPages] = useState(1);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await fetch(
-          "https://thingproxy.freeboard.io/fetch/https://leetcode.com/api/problems/all/"
-        );
+        const response = await fetch('https://clist.by:443/api/v4/problem/?limit=500&resource=leetcode.com', {
+          headers: {
+            'Authorization': 'ApiKey hitesh1376:197e92d674d015dd80fb9520fb9230c1e6596815'
+          }
+        });
         const data = await response.json();
-
-        if (data && data.stat_status_pairs) {
-          const formattedQuestions = data.stat_status_pairs.map((q) => ({
-            id: q.stat.question_id,
-            title: q.stat.question__title,
-            slug: q.stat.question__title_slug,
-            difficulty: q.difficulty.level,
+        if (data) {
+          const formattedQuestions = data.objects.map((q) => ({
+            id: q.id,
+            title: q.name,
+            slug: q.slug,
+            rating: q.rating || 0,
           }));
 
           setQuestions(formattedQuestions);
@@ -37,28 +42,45 @@ const Leetcode = () => {
     fetchQuestions();
   }, []);
 
-  const getDifficultyLabel = (level) => {
-    if (level === 1) return "Easy";
-    if (level === 2) return "Medium";
-    if (level === 3) return "Hard";
-    return "Unknown";
+  const getRatingClass = (rating) => {
+    if (rating < 1000) return "easy";
+    if (rating < 2000) return "medium";
+    return "hard";
   };
 
-  const getDifficultyClass = (level) => {
-    if (level === 1) return "easy";
-    if (level === 2) return "medium";
-    if (level === 3) return "hard";
-    return "unknown";
+  // Sort and filter questions
+  const processQuestions = () => {
+    let processed = [...questions];
+
+    // Apply rating range filter
+    if (ratingRange !== "all") {
+      const [minRating, maxRating] = ratingRange.split("-").map(Number);
+      processed = processed.filter(q => 
+        q.rating >= minRating && q.rating <= maxRating
+      );
+    }
+
+    // Apply sorting
+    processed.sort((a, b) => {
+      if (sortOrder === "asc") {
+        return a.rating - b.rating;
+      } else {
+        return b.rating - a.rating;
+      }
+    });
+
+    return processed;
   };
 
-  // Get the questions for the current page
-  const filteredQuestions = questions.filter((q) => {
-    const matchesDifficulty = difficulty === "all" || getDifficultyLabel(q.difficulty) === difficulty;
-    return matchesDifficulty;
-  });
-
+  const filteredAndSortedQuestions = processQuestions();
   const startIndex = (currentPage - 1) * questionsPerPage;
-  const currentQuestions = filteredQuestions.slice(startIndex, startIndex + questionsPerPage);
+  const currentQuestions = filteredAndSortedQuestions.slice(startIndex, startIndex + questionsPerPage);
+
+  // Update total pages when filters/sort change
+  useEffect(() => {
+    setTotalPages(Math.ceil(filteredAndSortedQuestions.length / questionsPerPage));
+    setCurrentPage(1); // Reset to first page when filters change
+  }, [ratingRange, sortOrder, filteredAndSortedQuestions.length, questionsPerPage]);
 
   // Pagination handlers
   const goToNextPage = () => {
@@ -69,31 +91,51 @@ const Leetcode = () => {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
 
-  const goToPage = (page) => {
-    setCurrentPage(page);
-  };
-
   return (
     <div className="leetcode-container">
+      <button className="back-button1" onClick={() => navigate('/coders-sheet')}>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
       <div className="leetcode-wrapper">
         <h1 className="leetcode-title">LeetCode Questions</h1>
-        <p className="lc-description">Explore coding challenges and solve problems Easy , Medium , Hard Category</p>
-        {/* Filters Section */}
+        <p className="lc-description">Explore coding challenges sorted by rating ranges</p>
+        
+        {/* Filters and Sort Section */}
         <div className="leetcode-filters">
-          {/* Difficulty Filter */}
           <div className="filter-section">
-            <label className="filter-label">Difficulty</label>
+            <label className="filter-label">Rating Range</label>
             <select
               className="filter-select"
-              value={difficulty}
-              onChange={(e) => setDifficulty(e.target.value)}
+              value={ratingRange}
+              onChange={(e) => setRatingRange(e.target.value)}
             >
-              <option value="all">All</option>
-              <option value="Easy">Easy</option>
-              <option value="Medium">Medium</option>
-              <option value="Hard">Hard</option>
+              <option value="all">All Ratings</option>
+              <option value="0-1000">0 - 1000</option>
+              <option value="1000-2000">1000 - 2000</option>
+              <option value="2000-3000">2000 - 3000</option>
+              <option value="3000-4000">3000 - 4000</option>
             </select>
           </div>
+
+          <div className="filter-section">
+            <label className="filter-label">Sort Order</label>
+            <select
+              className="filter-select"
+              value={sortOrder}
+              onChange={(e) => setSortOrder(e.target.value)}
+            >
+              <option value="asc">Rating: Low to High</option>
+              <option value="desc">Rating: High to Low</option>
+            </select>
+          </div>
+        </div>
+
+        {/* Questions Count */}
+        <div className="questions-count">
+          Showing {filteredAndSortedQuestions.length} questions
         </div>
 
         {/* Display Questions */}
@@ -112,8 +154,8 @@ const Leetcode = () => {
                   >
                     {question.title}
                   </a>
-                  <span className={`difficulty-badge ${getDifficultyClass(question.difficulty)}`}>
-                    {getDifficultyLabel(question.difficulty)}
+                  <span className={`difficulty-badge ${getRatingClass(question.rating)}`}>
+                    Rating: {question.rating}
                   </span>
                 </div>
               ))}

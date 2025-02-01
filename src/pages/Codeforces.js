@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Codeforces.css';
+import { useNavigate } from "react-router-dom";
 
 const Codeforces = () => {
   const [problems, setProblems] = useState([]);
@@ -9,6 +10,8 @@ const Codeforces = () => {
   const [totalPages, setTotalPages] = useState(0);
   const [ratingRange, setRatingRange] = useState([800, 2000]);
   const [selectedTag, setSelectedTag] = useState('');
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchProblems = async () => {
@@ -59,6 +62,12 @@ const Codeforces = () => {
   return (
     <div className="CFpage">
     <div className="cf-page">
+    <button className="back-button1" onClick={() => navigate('/coders-sheet')}>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
       <div className="cf-header">
         <h1>Codeforces Problem Set</h1>
         <p className="cf-description">Explore coding challenges and solve problems with ratings between 800 and 2000!</p>

@@ -7,7 +7,13 @@ const CoderSheet = () => {
 
   // Function to handle Join Us button click
   const handleJoinUs = () => {
-    navigate('/join-us');
+    navigate("/"); // Navigate to the Home page
+    setTimeout(() => {
+      const formSection = document.getElementById("form-section");
+      if (formSection) {
+        formSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
   };
 
   // Function to handle navigation for buttons below images
