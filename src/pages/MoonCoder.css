@@ -336,24 +336,7 @@
 
 
 /* Main coder sheet container */
-.coder-sheet {
-  width: 100%;
-  max-width: 1500px;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  /* Optional background properties can be added if needed */
-  /* background-image: url('/public/images/bluedotedlines.png');
-  background-position: right bottom; 
-  background-repeat: no-repeat;
-  background-size: 1500px 600px;
-  padding-bottom: 450px;
-  z-index: 1;
-  background-blend-mode: overlay;
-  background-color: rgba(255, 255, 255, 0.5); */
-}
+
 
 /* Header styling */
 .header h1 {
@@ -547,7 +530,7 @@
 @media screen and (max-width: 768px) {
   /* General adjustments for the body or container */
   .moon-coder {
-    width: 100%;
+    /* width: 100%; */
     padding: 20px;
   }
   .join-us-button5{

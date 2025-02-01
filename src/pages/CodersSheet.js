@@ -33,14 +33,14 @@ const CoderSheet = () => {
 
       <div className="header1">
         <h1 className="mainTitle1">
-          <span className="textGreen">Coders Sheet: </span> Practice Galore
+          <span className="textGreen">Coders Sheet: </span> 
         </h1>
-        <p className="mentorpara1">Welcome to the CoderSheet Library Program...</p>
+        <p className="mentorpara1">Unleash the power of structured coding practice! Whether you're preparing for FAANG interviews, mastering competitive programming, or refining data structures & algorithms, CoderSheet is your ultimate guide.</p>
 
         {/* Join Us Button */}
-        <button className="join-us-button5" onClick={handleJoinUs}>
+        {/* <button className="join-us-button5" onClick={handleJoinUs}>
           Join Us Today!!
-        </button>
+        </button> */}
       </div>
 
       

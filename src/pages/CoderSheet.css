@@ -1,7 +1,7 @@
 /* Main coder sheet container */
 .coder-sheet {
   width: 100vw;
-  max-width: 1500px;
+  /* max-width: 1500px; */
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,7 @@ display: flex;
 flex-direction: column;
 align-items: center; /* Center the Join Us button */
 gap: 10px; /* Space between heading and button */
-margin-top: 20px; /* Adjust spacing from the top */
+margin-top: 100px; /* Adjust spacing from the top */
 }
 
 /* Join Us Button */
@@ -141,7 +141,6 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 /* Main coder sheet container */
 .coder-sheet {
 width: 100%;
-max-width: 1500px;
 height: 100vh;
 display: flex;
 flex-direction: column;
@@ -349,6 +348,15 @@ font-size: 3em;
 @media screen and (max-width: 768px) {
 /* General adjustments for the body or container */
 
+.coder-sheet {
+  /* max-width: 1500px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: linear-gradient(to bottom, #a9d85d4a, #ffffff);
+}
+
 .coding-platforms {
   display: flex;
   flex-direction: column; /* Stack elements vertically */
@@ -357,11 +365,20 @@ font-size: 3em;
   padding: 10px;
 }
 
+.header1 {
+  text-align: center; /* Center the text content of the header */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the Join Us button */
+  gap: 10px; /* Space between heading and button */
+  margin-top: 10px; /* Adjust spacing from the top */
+}
 
-.coder-sheet {
+
+/* .coder-sheet {
   width: 100%;
   padding: 20px;
-}
+} */
 .join-us-button5{
   width: 200px;
   font-size: 2em;
@@ -661,7 +678,7 @@ font-size: 3em;
 .coding-platforms {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: -20px;
   gap: 20px;
   padding: 30px;
 }

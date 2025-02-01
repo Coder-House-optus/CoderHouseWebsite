@@ -35,7 +35,7 @@ const CampusProgram = () => {
       description: "Learn Java for software development, covering OOP concepts and data structures.", 
       duration: "5 months", 
       cost: "$750", 
-      image: "/images/java.png",
+      image: "/images/Java.png",
       link: "/programs/java-programming"  // Add unique link for each program
     },
     { 
@@ -71,7 +71,7 @@ const CampusProgram = () => {
       description: "Explore machine learning concepts with hands-on projects using Python.", 
       duration: "4 months", 
       cost: "$900", 
-      image: "/images/MLcard.png",
+      image: "/images/MLCard.png",
       link: "/programs/machine-learning"  // Add unique link for each program
     }
   ];
