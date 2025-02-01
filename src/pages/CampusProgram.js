@@ -293,6 +293,7 @@ const CampusProgram = () => {
               {cognitivePrograms[currentProgramIndex - technicalPrograms.length].duration}
             </p>
             {/* View More Button */}
+            <div className="action-container">
             <button
               onClick={() =>
                 handleViewMore(
@@ -303,6 +304,15 @@ const CampusProgram = () => {
             >
               View More
             </button>
+            <button
+            onClick={() => {
+              navigate('../home')
+            }}
+            className="cenroll-btn"
+          >
+            Join Now!
+          </button>
+          </div>
           </div>
         </div>
       )}

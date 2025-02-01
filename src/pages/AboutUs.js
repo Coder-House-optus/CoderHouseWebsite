@@ -180,22 +180,29 @@ const AboutUs = () => {
         </div>
       </section>
       
-      <div class="contact-containerofabout" id="contact-section">
-        {/* <div class="image-sectionofabout">
-          <img src="./images/about-contact.jpg" alt="Building" />
-        </div> */}
-        <div class="contact-sectionofabout">
-          <h2 class="contact-headingofabout">Contact Us</h2>
-          <div class="contact-itemofabout">
-            <div class="contact-iconofabout">📞</div>
-            <a href="tel:+919926865740" class="contact-text">+91 9926865740</a>
-          </div>
-          <div class="contact-itemofabout">
-            <div class="contact-iconofabout">✉️</div>
-            <a href="mailto:coderhouseoptus@gmail.com" class="contact-text">coderhouseoptus@gmail.com</a>
-          </div>
-        </div>
+      <div class="contact-container" id="contact-section">
+  <h2 class="contact-heading-main"><span class="contact-heading-highlight">Contact</span> & Join Together</h2>
+  <p class="contact-subtext-info">Have questions? Get in touch with us for any inquiries or support.</p>
+  <div class="contact-cards-wrapper" >
+    <div class="contact-card-box">
+      <span class="contact-icon-style phone-icon">📞</span>
+      <div class="contact-text-block">
+        <h3 class="contact-title">Call Us</h3>
+        <p class="contact-detail"> +91 99876 54321</p>
       </div>
+    </div>
+
+    <div class="contact-card-box" >
+      <span class="contact-icon-style email-icon">✉️</span>
+      <div class="contact-text-block">
+        <h3 class="contact-title">Mail Address</h3>
+        <p class="contact-detail">coderhouseoptus@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
       <Footer />
     </>
   );

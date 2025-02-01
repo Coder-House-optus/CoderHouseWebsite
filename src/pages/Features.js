@@ -121,11 +121,12 @@ export default function ExtraFeatures() {
     { title: "Coder Sheet & Library", rotation: -10, translateX: 50, translateY: -10, color: "#88b04b" },
     { title: "Mentorship", rotation: -25, translateX: 80, translateY: 20, color: "#C7E97E" },
   
-    { title: "Moon Coder", rotation: -19, translateX: -60, translateY: 30, color: "#ffcc5c" },
-    { title: "Contest", rotation: -5, translateX: -40, translateY: 30, color: "#92a8d1" },
-    { title: "Technical Mock Interview & Resume Building", rotation: 10, translateX: -30, translateY: 40, color: "#955251" },
-    { title: "Internship", rotation: 22, translateX: -40, translateY: 40, color: "#b565a7" },
+    { title: "Moon Coder", rotation: -15, translateX: -50, translateY: -10, color: "#ffcc5c" }, // Mirrored
+    { title: "Contest", rotation: -5, translateX: -40, translateY: -10, color: "#92a8d1" }, // Mirrored
+    { title: "Technical Mock Interview & Resume Building", rotation: 12, translateX: -50, translateY: -5, color: "#955251" }, // Mirrored
+    { title: "Internship", rotation: 25, translateX: -80, translateY: 16, color: "#b565a7" }, // Mirrored
   ];
+  
   
 
   return (

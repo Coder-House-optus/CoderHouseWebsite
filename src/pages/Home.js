@@ -7,6 +7,22 @@ import Mentor from "../components/Mentor";
 import Card from "../components/Card";
 import Plan from "../components/Plan";
 
+// Success Popup Component
+const SuccessPopup = ({ show, onClose }) => {
+  if (!show) return null;
+
+  return (
+    <div className="success-popup-overlay">
+      <div className="success-popup">
+        <div className="success-icon">✓</div>
+        <h3>Success!</h3>
+        <p>Form submitted successfully!</p>
+        <button onClick={onClose}>OK</button>
+      </div>
+    </div>
+  );
+};
+
 // Sample review data
 const reviewsData = [
   { text: "Coder House has helped me develop my skills rapidly. The mentors were fantastic!", author: "- Shailesh Gupta" },
@@ -23,6 +39,10 @@ export default function Home() {
   const [selectedProgram, setSelectedProgram] = useState("");
   const [otherValue, setOtherValue] = useState("");
   const [images, setImages] = useState([]);
+  const [developerValue, setDeveloperValue] = useState("");
+  const [trainerValue, setTrainerValue] = useState("");
+  const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+  const [phoneError, setPhoneError] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -87,34 +107,71 @@ export default function Home() {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + reviewsData.length) % reviewsData.length);
   };
 
+  const validatePhone = (phone) => {
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(phone)) {
+      return "Please enter a valid 10-digit phone number";
+    }
+    return "";
+  };
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    
+    if (name === "phone") {
+      // Only allow digits and limit to 10 characters
+      const sanitizedValue = value.replace(/\D/g, '').slice(0, 10);
+      const error = validatePhone(sanitizedValue);
+      setPhoneError(error);
+      setFormData({ ...formData, [name]: sanitizedValue });
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
   };
 
   const handleUserTypeChange = (e) => {
     setSelectedUserType(e.target.value);
     setSelectedProgram("");
     setOtherValue("");
+    setDeveloperValue("");
+    setTrainerValue("");
   };
 
   const programOptions = {
-    Student: ["C Programming", "Java Programming","Python Programming","Full Stack Development","Cybersecurity","Machine Learning"],
+    Student: ["C Programming", "Java Programming", "Python Programming", "Full Stack Development", "Cybersecurity", "Machine Learning"],
     Developer: [],
     Trainer: [],
     Other: [""],
   };
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
+    // Validate phone number before submission
+    const phoneError = validatePhone(formData.phone);
+    if (phoneError) {
+      setPhoneError(phoneError);
+      return;
+    }
+
+    // Determine the query value based on user type
+    let queryValue = "";
+    if (selectedUserType === "Student") {
+      queryValue = selectedProgram;
+    } else if (selectedUserType === "Developer") {
+      queryValue = developerValue;
+    } else if (selectedUserType === "Trainer") {
+      queryValue = trainerValue;
+    } else if (selectedUserType === "Other") {
+      queryValue = otherValue;
+    }
+
     const payload = {
       ...formData,
       role: selectedUserType === "Other" ? "Others" : selectedUserType,
-      query: selectedUserType === "Student" ? selectedProgram : 
-            selectedUserType === "Other" ? otherValue : "",
+      query: queryValue,
     };
-  
+
     try {
       const response = await fetch(
         "https://coderhouse-448820.el.r.appspot.com/Form/create",
@@ -126,9 +183,11 @@ export default function Home() {
           body: JSON.stringify(payload),
         }
       );
-  
+
       if (response.ok) {
         alert("Form submitted successfully!");
+        setShowSuccessPopup(true);
+        // Reset form
         setFormData({
           name: "",
           email: "",
@@ -138,6 +197,9 @@ export default function Home() {
         setSelectedUserType("");
         setSelectedProgram("");
         setOtherValue("");
+        setDeveloperValue("");
+        setTrainerValue("");
+        setPhoneError("");
       } else {
         const errorData = await response.json();
         alert(`Error: ${errorData.error}`);
@@ -195,11 +257,12 @@ export default function Home() {
               type="text"
               name="phone"
               placeholder="Phone"
-              className="input-field"
+              className={`input-field ${phoneError ? 'error' : ''}`}
               required
               value={formData.phone}
               onChange={handleInputChange}
             />
+            {phoneError && <div className="phone-error">{phoneError}</div>}
 
             <select
               name="UserType"
@@ -232,6 +295,30 @@ export default function Home() {
               </select>
             )}
 
+            {selectedUserType === "Developer" && (
+              <input
+                type="text"
+                name="DeveloperType"
+                placeholder="Please specify your development expertise"
+                className="input-field"
+                value={developerValue}
+                onChange={(e) => setDeveloperValue(e.target.value)}
+                required
+              />
+            )}
+
+            {selectedUserType === "Trainer" && (
+              <input
+                type="text"
+                name="TrainerType"
+                placeholder="Please specify your training expertise"
+                className="input-field"
+                value={trainerValue}
+                onChange={(e) => setTrainerValue(e.target.value)}
+                required
+              />
+            )}
+
             {selectedUserType === "Other" && (
               <input
                 type="text"
@@ -253,7 +340,7 @@ export default function Home() {
               onChange={handleInputChange}
             />
 
-            <button type="submit" className="callback-btn">
+            <button type="submit" className="callback-btn cursor-pointer" style={{ cursor: "pointer" }}>
               Get in Touch
             </button>
           </form>
@@ -274,6 +361,12 @@ export default function Home() {
           <div className="text">50+ Experienced Mentor</div>
         </div>
       </div>
+
+      {/* Add the Success Popup */}
+      <SuccessPopup 
+        show={showSuccessPopup} 
+        onClose={() => setShowSuccessPopup(false)} 
+      />
 
       <Card />
       <Plan />
