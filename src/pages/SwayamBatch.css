@@ -6,7 +6,7 @@
     background-image: url('/public/images/bluedotedlines.png');
     background-position: right bottom; /* Position the background image at the bottom-right corner */
     background-repeat: no-repeat;
-    background-size: 1500px 600px; /* Adjust the size of the background image */
+    /* background-size: 1500px 600px;  */
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center horizontally */
