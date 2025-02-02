@@ -231,8 +231,10 @@
     }
     .notes-list {
         grid-template-columns: repeat(3, 1fr); /* Ensures 3 tiles in a row */
-        padding: 10px;
-        margin: 0 5%;
+        padding: 0;
+        margin: 0 8px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .note-item {

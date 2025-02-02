@@ -300,7 +300,7 @@ const CampusProgram = () => {
                   cognitivePrograms[currentProgramIndex - technicalPrograms.length]
                 )
               }
-              className="view-more-button"
+              className="details-btn"
             >
               View More
             </button>

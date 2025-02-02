@@ -1,11 +1,28 @@
 .main-containerss {
   width: 100%;
   min-height: 100vh;
-  /* background: linear-gradient(90deg, #8fc7ff, #ffffff, #3C5C7B); */
+  background: linear-gradient(to bottom, #a9d85d5e, rgba(255, 255, 255, 0.2));
+  position: relative;  /* Add this to contain the pseudo-element */
+  overflow-x: hidden; /* Add this to prevent horizontal scrolling */
 }
 
-
-
+/* Add this new pseudo-element */
+.main-containerss::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/public/images/bluedotedlines.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat-y;
+  z-index: -1;
+  transform: rotate(0deg);
+  background-blend-mode: overlay;
+  opacity: 0.13;
+}
 
 .content-section {
   margin: 90px 0px;

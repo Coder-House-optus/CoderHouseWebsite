@@ -5,7 +5,7 @@
   padding: 40px 0px;
   text-align: center;
   position: relative;
-  height: 440px;
+  height: 500px;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -16,14 +16,14 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  height: 350px;
+  height: 400px;
   position: relative;
   z-index: 0;
 }
 
 .location-box {
   background-color: #E1FFB4;
-  padding: 20px;
+  padding: 15px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   width: 700px;
@@ -47,7 +47,7 @@
   font-size: 28px;
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
   color: #333;
   margin-bottom: 15px;
   border-bottom: 2px solid rgba(44, 62, 80, 0.1);
@@ -66,11 +66,15 @@
   color: #526E8A;
 }
 
-.location-box p {
-  line-height: 1.6;
+.location-box .footerkaaddress {
+  line-height: 1.4;
   position: relative;
   z-index: 2;
   font-size: 20px;
+  display: inline-block; 
+  text-align: left; 
+  font-weight: bold;
+  padding-left: 50px;
 }
 
 .white-square {
@@ -245,8 +249,10 @@
     font-size: 26px;
   }
 
-  .location-box p {
+  .location-box .footerkaaddress {
     font-size: 18px;
+    padding-left: 15px;
+    font-weight: bold;
   }
 
   .white-square {
@@ -283,7 +289,7 @@
   }
 
   .location-box {
-    width: 90%;
+    width: 80%;
     max-width: 700px;
     top: -150px;
     padding: 15px;
@@ -295,7 +301,7 @@
     flex-wrap: wrap;
   }
 
-  .location-box p {
+  .location-box .footerkaaddress {
     font-size: 16px;
   }
 
@@ -307,8 +313,9 @@
     font-size: 26px;
   }
 
-  .location-box p {
-    font-size: 17px;
+  .location-box .footerkaaddress {
+    font-size: 15px;
+    padding-left: 15px;
   }
 
   .location-box .white-square {
@@ -341,7 +348,7 @@
     font-size: 24px;
   }
 
-  .location-box p {
+  .location-box .footerkaaddress {
     font-size: 13px;
   }
 
@@ -383,7 +390,7 @@
     font-size: 20px;
   }
 
-  .location-box p {
+  .location-box .footerkaaddress {
     font-size: 12px;
   }
 
@@ -431,7 +438,7 @@
 
 .map-container {
   width: 100%;
-  height: 100%;
+  height: 80%;
   border: none;
   border-radius: 20px;
 }
@@ -444,21 +451,23 @@
   .location-box {
     width: 95%;
     max-width: 320px;
-    top: -80px; /* Adjusted to avoid overlap */
+    top: -130px; /* Adjusted to avoid overlap */
     padding: 10px;
+    padding-right: 30px;
   }
 
   .location-box h3 {
-    font-size: 18px;
+    font-size: 10px;
     gap: 15px;
   }
 
   .location-box h3 i.fas.fa-map-marker-alt {
-    font-size: 20px;
+    font-size: 30px;
   }
 
-  .location-box p {
-    font-size: 12px;
+  .location-box .footerkaaddress {
+    font-size: 10px;
+    padding-left: 5px;
   }
 
   .location-box .white-square {
@@ -469,7 +478,6 @@
     
   }
   
-
   .footer-links {
     text-align: center;
     padding: 10px 0;
@@ -501,7 +509,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 30px;
+  top: 35px;
   right: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
   border-radius: 20px;

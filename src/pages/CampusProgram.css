@@ -381,7 +381,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 
-.location-box .white-square{
+.white-square{
   margin-top: -11px;
 }
 
@@ -474,20 +474,21 @@ input:focus, select:focus, textarea:focus {
 }
 
 
-.view-more-button,
-.submit-btn {
+.details-btn,
+.cenroll-btn{
   background-color: #4CAF50;
   color: white;
   border: none;
   padding: 10px 20px;
+  margin-right: 10px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
   border-radius: 5px; /* Add border radius for better button styling */
 }
 
-.view-more-button:hover,
-.submit-btn:hover {
+.details-btn:hover,
+.cenroll-btn:hover {
   background-color: #45a049;
 }
 
@@ -513,7 +514,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .program-name-details {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #fff; /* Make text color more readable on dark background */
 }
