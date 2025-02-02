@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import './SchoolProgram.css';
@@ -6,10 +6,12 @@ import { useNavigate } from 'react-router-dom';
 
 const SchoolProgram = () => {
   const navigate = useNavigate();
-  // Function to handle navigation for buttons below images
-  const handleImageButtonClick = (page) => {
-    navigate(`/${page}`);
-  };
+
+  // Scroll smoothly to top when component mounts
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   const projects = [
     {
       title: "Web Development",
