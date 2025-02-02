@@ -12,8 +12,13 @@ const CustomAlert = ({ message, onClose }) => (
 
 const CoderSheet = () => {
   const navigate = useNavigate();
-  const [showForm, setShowForm] = useState(true);
   const [showAlert, setShowAlert] = useState(false);
+  
+  // Initialize form visibility based on session storage
+  const [showForm, setShowForm] = useState(() => {
+    return sessionStorage.getItem('hasFilledCoderSheetForm') !== 'true';
+  });
+
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -21,6 +26,7 @@ const CoderSheet = () => {
     role: 'student',
     query: ''
   });
+  
   const [errors, setErrors] = useState({});
 
   const validateEmail = (email) => {
@@ -67,7 +73,6 @@ const CoderSheet = () => {
     if (errors[name]) {
       setErrors({ ...errors, [name]: '' });
     }
-    
   };
 
   const handleSubmit = async (e) => {
@@ -78,8 +83,6 @@ const CoderSheet = () => {
     }
 
     try {
-      const payload= JSON.stringify(formData);
-      console.log(payload);
       const response = await fetch('https://coderhouse-448820.el.r.appspot.com/Form/create', {
         method: 'POST',
         headers: {
@@ -89,6 +92,8 @@ const CoderSheet = () => {
       });
 
       if (response.ok) {
+        // Mark form as submitted in session storage
+        sessionStorage.setItem('hasFilledCoderSheetForm', 'true');
         setShowForm(false);
         setShowAlert(true);
         setTimeout(() => setShowAlert(false), 5000);
