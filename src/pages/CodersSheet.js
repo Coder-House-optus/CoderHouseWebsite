@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './CoderSheet.css';
 import { useNavigate } from 'react-router-dom';
+import { div } from 'framer-motion/client';
 
 const CustomAlert = ({ message, onClose }) => (
   <div className="custom-alert">
@@ -108,6 +109,14 @@ const CoderSheet = () => {
 
   if (showForm) {
     return (
+      <div>
+        <button className="back-button1" onClick={() => navigate('/Features')}>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      
       <div className="popup-form-overlay">
         <div className="popup-form">
           <h2>Fill the Form to Continue</h2>
@@ -173,6 +182,7 @@ const CoderSheet = () => {
             <button type="submit">Submit</button>
           </form>
         </div>
+      </div>
       </div>
     );
   }
