@@ -628,7 +628,7 @@ font-size: 3em;
 .back-button1 {
   font-size: 16px; /* Increased font size */
   padding: 8px 20px; /* Increased padding for better interaction */
-  background-color: #007bff; /* Background color */
+  background-color: #88C057; /* Background color */
   color: white; /* Text color */
   border: none; /* Remove border */
   border-radius: 5px; /* Rounded corners */
@@ -745,7 +745,6 @@ font-size: 3em;
 
 
 .popup-form-overlay {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -758,11 +757,13 @@ font-size: 3em;
 }
 
 .popup-form {
+  position: absolute;
+  top:10%;
   background: rgba(255, 255, 255, 0.9); /* Semi-transparent form */
   padding: 25px;
   border-radius: 10px;
   width:60%;
-  
+  height: auto;
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2); /* Increased shadow for form */
 }
 
@@ -776,8 +777,8 @@ font-size: 3em;
 .popup-form input,
 .popup-form select,
 .popup-form textarea {
-  width: 100%; /* Same width for all fields */
-  margin:12px auto;
+  width: auto; /* Same width for all fields */
+  margin:0 0;
   padding: 12px;
   font-size: 16px;
   color: black;
@@ -789,6 +790,7 @@ font-size: 3em;
    /* Center align text inside input */
 }
 
+
 .popup-form input::placeholder,
 .popup-form textarea::placeholder {
   color: black; /* Black placeholder text */
@@ -799,7 +801,7 @@ font-size: 3em;
   color: white;
   border: none;
   padding: 12px;
-  width: 100%;
+  width: auto;
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
@@ -811,7 +813,7 @@ font-size: 3em;
 /* Form validation styles */
 .form-group {
   position: relative;
-  margin-bottom: 20px;
+  margin:20px 0 20px;
 }
 .back-button1{
   z-index: 1000;
@@ -878,7 +880,8 @@ font-size: 3em;
 /* Mobile responsiveness for form elements */
 @media screen and (max-width: 768px) {
   .popup-form {
-    width: 90%;
+    width: 80%;
+    height: auto;
     padding: 20px;
   }
 
@@ -890,6 +893,34 @@ font-size: 3em;
 
   .error-message {
     font-size: 11px;
+  }
+
+  .custom-alert {
+    width: 90%;
+    right: 50%;
+    transform: translateX(50%);
+    top: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .popup-form {
+    top:13%;
+    width: 80%;
+    height:auto;
+    padding: 2%;
+  }
+  .form-group{
+    
+    margin:3% 0;
+  }
+  .form-input,
+  .form-input.error {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+
+  .error-message {
+    font-size: 1.5rem;
   }
 
   .custom-alert {
