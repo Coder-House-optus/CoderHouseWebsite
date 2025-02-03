@@ -204,7 +204,6 @@ export default function Home() {
       );
 
       if (response.ok) {
-        alert("Form submitted successfully!");
         setShowSuccessPopup(true);
         // Reset form
         setFormData({
