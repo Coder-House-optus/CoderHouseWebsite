@@ -17,9 +17,15 @@ const Footer = () => {
       }
     } else {
       // Navigate to AboutUs with a hash in the URL
-      navigate('/AboutUs#contact-section');
+      navigate('/AboutUs');
+      setTimeout(() => {
+        const element = document.getElementById('contact-section');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 0); 
     }
-
+    
   };
 
   return (
