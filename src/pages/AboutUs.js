@@ -188,7 +188,7 @@ const AboutUs = () => {
       <span class="contact-icon-style phone-icon">📞</span>
       <div class="contact-text-block">
         <h3 class="contact-title">Call Us</h3>
-        <p class="contact-detail"> +91 99876 54321</p>
+        <p class="contact-detail"> +91 9926865740</p>
       </div>
     </div>
 
