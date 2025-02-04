@@ -194,7 +194,8 @@
   margin-bottom: 40px;
   position: relative;
   z-index: 3; /* Ensure it stays above the background animation */
-  color: #3C5C7B;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
 }
 
 /* Additional container adjustments for centering */
@@ -279,7 +280,7 @@
 
 
 .highlight-feature {
-  color: #ffffff; /* White color for the word Feature */
+  color: #3C5C7B; /* White color for the word Feature */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
 }
 

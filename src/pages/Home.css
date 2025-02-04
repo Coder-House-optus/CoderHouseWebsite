@@ -62,11 +62,16 @@ html {
   margin-top: 4rem;
 }
 
-.email-error {
+.email-error{
   color: red;
   font-size: 14px;
-  margin-top: 5px;
-  /* Match the style of your phone-error if you want consistency */
+  margin-top: 5px;  
+}
+
+.phone-error{
+  color: red !important;
+  font-size: 14px;
+  margin-top: 5px;  
 }
 
 .hero-heading {

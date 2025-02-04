@@ -87,9 +87,6 @@
 //   );
 // }
 
-
-
-
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Navigation from "../components/Navigation";
@@ -126,16 +123,13 @@ export default function ExtraFeatures() {
     { title: "Technical Mock Interview & Resume Building", rotation: 12, translateX: -50, translateY: -5, color: "#955251" }, // Mirrored
     { title: "Internship", rotation: 25, translateX: -80, translateY: 16, color: "#b565a7" }, // Mirrored
   ];
-  
-  
-
   return (
     <div className="area">
       <div className="extraFeatures-page-container">
         <Navigation />
         <div className="extraFeatures-content">
         <h1 class="extraFeatures-title">
-          Explore our <span class="highlight-feature">Features</span>
+          Explore <span class="highlight-feature">Our Features</span>
         </h1>
           
           <div className="extraFeatures-cards">
