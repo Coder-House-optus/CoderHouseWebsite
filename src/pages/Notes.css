@@ -147,6 +147,15 @@
     margin-top: 0;
 }
 
+.category-logo {
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    object-fit: contain;
+}
+  
+
 @media (max-width: 768px) {
     .search-container {
         display: flex;
@@ -251,6 +260,14 @@
     .note-item .category-description {
         font-size: 12px;
     }
+
+    .category-logo {
+        width: 60px;
+        height: 60px;
+        margin-bottom: -24px;
+        object-fit: contain;
+    }
+      
 }
 
 @media (max-width: 480px) {
@@ -300,7 +317,7 @@
     }
 
     .note-item {
-        width: 140px;
+        width: 130px;
         height: 150px; 
     }
 
@@ -516,13 +533,7 @@
 
 
 
-.category-logo {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
-    object-fit: contain;
-}
-  
+
  /* Notes Container */
 .notes-container {
 background-color: #f0f1f3; /* Soft background */
@@ -534,7 +545,7 @@ background-color: #f0f1f3; /* Soft background */
   .note-item {
     background: #f0f1f3;
     border-radius: 20px;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     cursor: pointer;
     box-shadow: 6px 6px 10px #bebebe, -6px -6px 10px #ffffff;
