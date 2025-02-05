@@ -124,12 +124,12 @@ const Achievers = () => {
         
         <div 
           className="achievers-section"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+          
         >
           <div className={`achievers-grid ${isTransitioning ? 'fade-out' : 'fade-in'}`}>
             {currentCompany.people.map((person, index) => (
-              <div key={index} className="placed-card">
+              <div key={index} className="placed-card" onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}>
                 <img src={person.photo} alt={person.name} className="achiever-photo" />
                 <p className="achiever-name">{person.name}</p>
                 <img src={currentCompany.logo} alt={currentCompany.company} className="card-company-logo" />

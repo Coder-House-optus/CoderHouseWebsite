@@ -125,14 +125,14 @@ const CollegeProgram = () => {
         </h2>
         <div 
           className="moments-content"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
+          
         >
           <div className="descriptionss">
             <h3 className='collegekah'>{moments[activeIndex].title}</h3>
             <p>{moments[activeIndex].description}</p>
           </div>
-          <div className="images">
+          <div className="images" onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}>
             <img src={moments[activeIndex].img1} alt={`Moment ${activeIndex + 1} part 1`} className="moment-image" />
             <img src={moments[activeIndex].img2} alt={`Moment ${activeIndex + 1} part 2`} className="moment-image" />
           </div>
