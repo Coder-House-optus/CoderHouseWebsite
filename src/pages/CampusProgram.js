@@ -6,7 +6,16 @@ import Footer from '../components/Footer';
 
 const CampusProgram = () => {
   const navigate = useNavigate();  // Use navigate hook
+  const [isMorningBatch, setIsMorningBatch] = useState(true);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsMorningBatch((prev) => !prev);
+    }, 3000); // Switch every 3 seconds
+  
+    return () => clearInterval(interval);
+  }, []);
+  
 
 
   // State for programs and image index
@@ -18,7 +27,11 @@ const CampusProgram = () => {
       duration: "4 months", 
       cost: "$600", 
       image: "/images/c.png",
-      link: "/programs/c-programming"  // Add unique link for each program
+      link: "/programs/c-programming" ,
+      batches: {
+        morning: { date: "2025-03-01", time: "09:00 AM - 11:00 AM" },
+        evening: { date: "2025-03-02", time: "06:00 PM - 08:00 PM" }
+      }
     },
     // { 
     //   name: "C++ Programming", 
@@ -36,7 +49,11 @@ const CampusProgram = () => {
       duration: "5 months", 
       cost: "$750", 
       image: "/images/Java.png",
-      link: "/programs/java-programming"  // Add unique link for each program
+      link: "/programs/java-programming"  ,
+      batches: {
+        morning: { date: "2025-03-05", time: "08:30 AM - 10:30 AM" },
+        evening: { date: "2025-03-06", time: "07:00 PM - 09:00 PM" }
+      }
     },
     { 
       name: "Python Programming", 
@@ -45,7 +62,11 @@ const CampusProgram = () => {
       duration: "3 months", 
       cost: "$600", 
       image: "/images/Pythoncard.png",
-      link: "/programs/python-programming"  // Add unique link for each program
+      link: "/programs/python-programming" ,
+      batches: {
+        morning: { date: "2025-03-15", time: "09:00 AM - 10:30 AM" },
+        evening: { date: "2025-03-16", time: "06:00 PM - 07:30 PM" }
+      }
     },
     { 
       name: "Full Stack Development", 
@@ -54,7 +75,11 @@ const CampusProgram = () => {
       duration: "6 months", 
       cost: "$850", 
       image: "/images/Fullstackcard.png",
-      link: "/programs/full-stack-development"  // Add unique link for each program
+      link: "/programs/full-stack-development"  ,
+      batches: {
+        morning: { date: "2025-03-10", time: "10:00 AM - 12:00 PM" },
+        evening: { date: "2025-03-11", time: "05:30 PM - 07:30 PM" }
+      }
     },
     { 
       name: "Cybersecurity", 
@@ -63,7 +88,11 @@ const CampusProgram = () => {
       duration: "5 months", 
       cost: "$950", 
       image: "/images/Cybersecuritycard.png",
-      link: "/programs/cybersecurity"  // Add unique link for each program
+      link: "/programs/cybersecurity" ,
+      batches: {
+        morning: { date: "2025-03-10", time: "10:00 AM - 12:00 PM" },
+        evening: { date: "2025-03-11", time: "05:30 PM - 07:30 PM" }
+      }
     },
     { 
       name: "Machine Learning", 
@@ -72,7 +101,11 @@ const CampusProgram = () => {
       duration: "4 months", 
       cost: "$900", 
       image: "/images/MLCard.png",
-      link: "/programs/machine-learning"  // Add unique link for each program
+      link: "/programs/machine-learning"  ,
+      batches: {
+        morning: { date: "2025-03-20", time: "08:00 AM - 09:30 AM" },
+        evening: { date: "2025-03-21", time: "07:00 PM - 08:30 PM" }
+      }
     }
   ];
   
@@ -84,7 +117,11 @@ const CampusProgram = () => {
       duration: "2 months", 
       cost: "$300", 
       image: "/images/Aptitude card.png",
-      link: "/programs/aptitude"  // Add unique link for each program
+      link: "/programs/aptitude"  ,
+      batches: {
+        morning: { date: "2025-03-15", time: "09:00 AM - 10:30 AM" },
+        evening: { date: "2025-03-16", time: "06:00 PM - 07:30 PM" }
+      }
     },
     { 
       name: "Reasoning", 
@@ -93,7 +130,11 @@ const CampusProgram = () => {
       duration: "2 months", 
       cost: "$300", 
       image: "/images/Reasoning card.png",
-      link: "/programs/reasoning"  // Add unique link for each program
+      link: "/programs/reasoning" ,
+      batches: {
+        morning: { date: "2025-03-15", time: "09:00 AM - 10:30 AM" },
+        evening: { date: "2025-03-16", time: "06:00 PM - 07:30 PM" }
+      }
     },
     { 
       name: "English", 
@@ -102,16 +143,24 @@ const CampusProgram = () => {
       duration: "3 months", 
       cost: "$500", 
       image: "/images/english card.png",
-      link: "/programs/english"  // Add unique link for each program
+      link: "/programs/english"  ,
+      batches: {
+        morning: { date: "2025-03-20", time: "08:00 AM - 09:30 AM" },
+        evening: { date: "2025-03-21", time: "07:00 PM - 08:30 PM" }
+      }
     },
     { 
-      name: "Critical Thinking and Decision Making", 
+      name: "CT & Decison Making ", 
       // symbol: "💼", 
       description: "Improve your communication, leadership, and soft skills.", 
       duration: "2 months", 
       cost: "$400", 
       image: "/images/CT AND DM.png",
-      link: "/programs/CriticalThinking"  // Add unique link for each program
+      link: "/programs/CriticalThinking"  ,
+      batches: {
+        morning: { date: "2025-03-05", time: "08:30 AM - 10:30 AM" },
+        evening: { date: "2025-03-06", time: "07:00 PM - 09:00 PM" }
+      }
     },
     { 
       
@@ -121,7 +170,11 @@ const CampusProgram = () => {
       duration: "1 month", 
       cost: "$250", 
       image: "/images/GDPI Card.png",
-      link: "/programs/GDPersonalInterview"  // Add unique link for each program
+      link: "/programs/GDPersonalInterview"  ,
+      batches: {
+        morning: { date: "2025-03-10", time: "10:00 AM - 12:00 PM" },
+        evening: { date: "2025-03-11", time: "05:30 PM - 07:30 PM" }
+      }
     }
   ];
   
@@ -215,42 +268,49 @@ const CampusProgram = () => {
   
       {/* Technical Program Details Section */}
       {currentProgramIndex < technicalPrograms.length && (
-        <div className="program-details-container">
-          <div className="program-image">
-            <img
-              src={technicalPrograms[currentProgramIndex].image}
-              alt={technicalPrograms[currentProgramIndex].name}
-              className="program-image-left"
-            />
-          </div>
-          <div className="program-details">
-            <h3 className="program-name-details">
-              {technicalPrograms[currentProgramIndex].name}
-            </h3>
-            <p>
-              <strong>Duration:</strong> {technicalPrograms[currentProgramIndex].duration}
-            </p>
-            {/* View More Button */}
-            
-            <div className="action-container">
-            <button
-              onClick={() => handleViewMore(technicalPrograms[currentProgramIndex])}
-              className="details-btn"
-            >
-              View More
-            </button>
-            <button
-            onClick={() => {
-              navigate('../home')
-            }}
-            className="cenroll-btn"
-          >
-            Join Now!
-          </button>
+  <div className="program-details-container">
+    <div className="program-image">
+      <img
+        src={technicalPrograms[currentProgramIndex].image}
+        alt={technicalPrograms[currentProgramIndex].name}
+        className="program-image-left"
+      />
+    </div>
+    <div className="program-details">
+      <h3 className="program-name-details">
+        {technicalPrograms[currentProgramIndex].name}
+      </h3>
+      <p>
+        <strong>Duration:</strong> {technicalPrograms[currentProgramIndex].duration}
+      </p>
+      <p>
+        <strong>Cost:</strong> {technicalPrograms[currentProgramIndex].cost}
+      </p>
+      <div className="batch-time">
+        <strong></strong> {isMorningBatch ? "Morning" : "Evening"} : {" "}
+        {isMorningBatch
+          ? technicalPrograms[currentProgramIndex].batches.morning.time
+          : technicalPrograms[currentProgramIndex].batches.evening.time}
+      </div>
 
-          </div>
-          </div>
-        </div>
+      <div className="action-container">
+        <button
+          onClick={() => handleViewMore(technicalPrograms[currentProgramIndex])}
+          className="details-btn"
+        >
+          View More
+        </button>
+        <button
+          onClick={() => {
+            navigate("../home");
+          }}
+          className="cenroll-btn"
+        >
+          Join Now!
+        </button>
+      </div>
+    </div>
+  </div>
       )}
   
       {/* Cognitive Programs Section */}
@@ -272,52 +332,57 @@ const CampusProgram = () => {
   
       {/* Cognitive Program Details Section */}
       {currentProgramIndex >= technicalPrograms.length && currentProgramIndex < technicalPrograms.length + cognitivePrograms.length && (
-        <div className="program-details-container">
-          <div className="program-image1">
-            <img
-              src={
-                cognitivePrograms[currentProgramIndex - technicalPrograms.length].image
-              }
-              alt={
-                cognitivePrograms[currentProgramIndex - technicalPrograms.length].name
-              }
-              className="program-image1-left"
-            />
-          </div>
-          <div className="program-details">
-            <h3 className="program-name-details">
-              {cognitivePrograms[currentProgramIndex - technicalPrograms.length].name}
-            </h3>
-            <p>
-              <strong>Duration:</strong>{" "}
-              {cognitivePrograms[currentProgramIndex - technicalPrograms.length].duration}
-            </p>
-            {/* View More Button */}
-            <div className="action-container">
-            <button
-              onClick={() =>
-                handleViewMore(
-                  cognitivePrograms[currentProgramIndex - technicalPrograms.length]
-                )
-              }
-              className="details-btn"
-            >
-              View More
-            </button>
-            <button
-            onClick={() => {
-              navigate('../home')
-            }}
-            className="cenroll-btn"
-          >
-            Join Now!
-          </button>
-          </div>
-          </div>
-        </div>
-      )}
-  
-    {/* Image Slideshow Section */}
+  <div className="program-details-container">
+    <div className="program-image1">
+      <img
+        src={cognitivePrograms[currentProgramIndex - technicalPrograms.length].image}
+        alt={cognitivePrograms[currentProgramIndex - technicalPrograms.length].name}
+        className="program-image-left"
+      />
+    </div>
+    <div className="program-details">
+      <h3 className="program-name-details">
+        {cognitivePrograms[currentProgramIndex - technicalPrograms.length].name}
+      </h3>
+      <p>
+        <strong>Duration:</strong> {cognitivePrograms[currentProgramIndex - technicalPrograms.length].duration}
+      </p>
+      <p>
+        <strong>Cost:</strong> {cognitivePrograms[currentProgramIndex - technicalPrograms.length].cost}
+      </p>
+      <div className="batch-time">
+        <strong></strong> {isMorningBatch ? "Morning" : "Evening"} :{" "}
+        {isMorningBatch
+          ? cognitivePrograms[currentProgramIndex - technicalPrograms.length].batches.morning.time
+          : cognitivePrograms[currentProgramIndex - technicalPrograms.length].batches.evening.time}
+      </div>
+
+      <div className="action-container">
+        <button
+          onClick={() =>
+            handleViewMore(
+              cognitivePrograms[currentProgramIndex - technicalPrograms.length]
+            )
+          }
+          className="details-btn"
+        >
+          View More
+        </button>
+        <button
+          onClick={() => {
+            navigate("../home");
+          }}
+          className="cenroll-btn"
+        >
+          Join Now!
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+
+
+      {/* Image Slideshow Section */}
       <div className="slideshow-container5">
         <div className="image-overlay">
         {/* Green Squares */}
@@ -356,60 +421,8 @@ const CampusProgram = () => {
       </div>
     </div>
 
-
   
-      {/* Enquiry Form Section */}
-      {/* <h2 className="programs-title">
-        <span className="text-black">Ask Us !! </span>
-        {}
-      </h2> */}
-      {/* <div className="enquiry-form-container5">
-        <form onSubmit={handleFormSubmit} className="enquiry-form5">
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="Name"
-            required
-          />
-          <input
-            type="text"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            placeholder="Phone Number"
-            required
-          />
-          <select
-            value={course}
-            onChange={(e) => setCourse(e.target.value)}
-            required
-          >
-            <option value="">Select Course</option>
-            <option value="Technical">Technical</option>
-            <option value="Cognitive">Cognitive</option>
-          </select>
-          
-          <select
-            value={mode}
-            onChange={(e) => setMode(e.target.value)}
-            required
-          >
-            <option value="">Select Mode</option>
-            <option value="Offline">Offline</option>
-            <option value="Online">Online</option>
-          </select>
-          <textarea
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Your Query"
-          />
-          <button type="submit" className="submit-btn5">
-            Submit
-          </button>
-        </form>
-      </div> */}
-
-      
+ 
       <Footer />
     </section>
   );
