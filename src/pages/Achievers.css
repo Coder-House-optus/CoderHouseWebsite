@@ -1,7 +1,7 @@
 .main-containerss {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #a9d85d5e, rgba(255, 255, 255, 0.2));
+  background: linear-gradient(to bottom,rgba(255, 255, 255, 0.2), #b0f63f5e );
   position: relative;  /* Add this to contain the pseudo-element */
   overflow-x: hidden; /* Add this to prevent horizontal scrolling */
 }
@@ -22,6 +22,14 @@
   transform: rotate(0deg);
   background-blend-mode: overlay;
   opacity: 0.13;
+}
+.brouch{
+  position: absolute;
+  top:0;
+  right:-6px;
+  width:70px;
+  height:80px;
+  z-index:100;
 }
 
 .content-section {
@@ -61,7 +69,7 @@
   color: white;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  box-shadow: 0 0 15px 5px rgba(168, 255, 183, 0.7);
+  box-shadow: 0 0 15px 5px rgba(243, 249, 244, 0.7);
   padding-left: 20%;
 }
 
@@ -90,6 +98,16 @@
   justify-items: center;
   
   margin:5% 2% 10%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
 }
 
 .achiever-card {
@@ -125,14 +143,15 @@
 .achiever-card:hover::before {
   transform: translate(-50%, -50%) scale(1); /* Expand the circle */
   width: 200%; /* Increase the size of the circle */
-  height: 200%; /* Increase the size of the circle */
+  height: 200%; 
+  /* Increase the size of the circle */
 }
 
 .achiever-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   border: 2px solid #E5FEC0;
-  box-shadow: 0 0 15px 5px #E5FEC0;
+  /* box-shadow: 0 0 15px 5px #E5FEC0; */
 }
 .achiever-card .achiever-name, 
 .achiever-card .achiever-photo,

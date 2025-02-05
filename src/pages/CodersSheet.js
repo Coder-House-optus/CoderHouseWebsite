@@ -15,7 +15,6 @@ const CoderSheet = () => {
   const navigate = useNavigate();
   const [showAlert, setShowAlert] = useState(false);
   
-  // Initialize form visibility based on session storage
   const [showForm, setShowForm] = useState(() => {
     return sessionStorage.getItem('hasFilledCoderSheetForm') !== 'true';
   });
@@ -93,7 +92,6 @@ const CoderSheet = () => {
       });
 
       if (response.ok) {
-        // Mark form as submitted in session storage
         sessionStorage.setItem('hasFilledCoderSheetForm', 'true');
         setShowForm(false);
         setShowAlert(true);
@@ -119,7 +117,7 @@ const CoderSheet = () => {
       
       <div className="popup-form-overlay">
         <div className="popup-form">
-          <h2>Fill the Form to Continue</h2>
+          <h2>Fill the Form for Coding Resources</h2>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <input
@@ -142,7 +140,7 @@ const CoderSheet = () => {
                 onChange={handleChange}
                 className={errors.phone ? 'form-input error' : 'form-input'}
               />
-              {errors.number && <span className="error-message">{errors.number}</span>}
+              {errors.phone && <span className="error-message">{errors.phone}</span>}
             </div>
 
             <div className="form-group">

@@ -7,6 +7,8 @@ import HODReview from '../components/HODreview';
 const CollegeProgram = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeTestimonialIndex, setActiveTestimonialIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  
   const programData = {
     300: "https://docs.google.com/document/d/1o7M2U6wZ9JBL1Yybz5MG-YZVlkmM_XbCkjuXT0tsXbc/edit?tab=t.0",
     120: "https://docs.google.com/document/d/10FDsMB2qj-jODl5WNiByZyQfFqYgOSCwX8bx541BPl0/edit?tab=t.0",
@@ -14,23 +16,22 @@ const CollegeProgram = () => {
     75: "https://docs.google.com/document/d/10yD5s_UdITyy-f7QBn4sYkqsajci3jXz/edit",
     60: "https://docs.google.com/document/d/1e3L6-xJ334erc4mLGU4QltI1ukbz5QqG/edit"
   };
-  // Moments Data
+
   const moments = [
     {
-      description: 'Through our hackathons, students have transformed ideas into impactful solutions, gaining hands-on experience, collaboration skills, and recognition, paving the way to achieve their career aspirations.',
+      description: 'Through our hackathons, students have transformed ideas into impactful solutions, gaining hands-on experience, collaboration skills, and recognition, paving the way to achieve their career aspirations.',
       img1: '../images/moments/moment1.jpg',
       img2: '../images/moments/moment2.jpg',
       title:'Hackathons',
     },
     {
-      description: 'Our comprehensive interview sessions have empowered students to secure positions in their dream companies by enhancing their technical skills, boosting confidence, and providing real-world problem-solving experience.',
+      description: 'Our comprehensive interview sessions have empowered students to secure positions in their dream companies by enhancing their technical skills, boosting confidence, and providing real-world problem-solving experience.',
       img1: '../images/moments/moment5.jpg',
       img2: '../images/moments/moment4.jpg',
       title:'Interview Session',
     },
   ];
 
-  // Testimonials Data
   const testimonials = [
     {
       name: "Shailesh Gupta",
@@ -49,25 +50,26 @@ const CollegeProgram = () => {
     },
   ];
 
-  // Auto-timer for moments carousel
+  // Modified moments carousel timer with pause functionality
   useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex === moments.length - 1 ? 0 : prevIndex + 1));
-    }, 5000); // 10 seconds
-
+    let timer;
+    if (!isPaused) {
+      timer = setInterval(() => {
+        setActiveIndex((prevIndex) => (prevIndex === moments.length - 1 ? 0 : prevIndex + 1));
+      }, 5000);
+    }
     return () => clearInterval(timer);
-  }, [moments.length]);
+  }, [moments.length, isPaused]);
 
-  // Auto-timer for testimonials carousel
+  // Testimonials carousel timer
   useEffect(() => {
     const testimonialTimer = setInterval(() => {
       setActiveTestimonialIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
-    }, 5000); // 10 seconds
+    }, 5000);
 
     return () => clearInterval(testimonialTimer);
   }, [testimonials.length]);
 
-  // Handlers for moments navigation
   const handlePrev = () => {
     setActiveIndex((prevIndex) => (prevIndex === 0 ? moments.length - 1 : prevIndex - 1));
   };
@@ -76,7 +78,6 @@ const CollegeProgram = () => {
     setActiveIndex((prevIndex) => (prevIndex === moments.length - 1 ? 0 : prevIndex + 1));
   };
 
-  // Handlers for testimonial navigation
   const handleTestimonialPrev = () => {
     setActiveTestimonialIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1));
   };
@@ -84,45 +85,49 @@ const CollegeProgram = () => {
   const handleTestimonialNext = () => {
     setActiveTestimonialIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
   };
+
   const handleViewProgram = (docLink) => {
     window.open(docLink, '_blank', 'noopener,noreferrer');
   };
+
   return (
     <div className="college-program-page">
       <Navigation />
 
-      {/* Program Cards Section */}
       <section className="cards-section">
-      <div className="greeting-container">
-        {Object.entries(programData).map(([hours, docLink]) => (
-          <div key={hours} className="greeting-card">
-            <div className="hours-line">
-              <span className="hours-text">{hours} HOURS</span>
-              <span role="img" aria-label="clock" className="clock-emoji">🕒</span>
-            </div>
-            <span className="program-text">PROGRAM</span>
-            <div className="card-footer">
-              <div className="button-container">
-                <button 
-                  className="view-btn"
-                  onClick={() => handleViewProgram(docLink)}
-                  aria-label={`View ${hours} hours program details`}
-                >
-                  View Program
-                </button>
+        <div className="greeting-container">
+          {Object.entries(programData).map(([hours, docLink]) => (
+            <div key={hours} className="greeting-card">
+              <div className="hours-line">
+                <span className="hours-text">{hours} HOURS</span>
+                <span role="img" aria-label="clock" className="clock-emoji">🕒</span>
+              </div>
+              <span className="program-text">PROGRAM</span>
+              <div className="card-footer">
+                <div className="button-container">
+                  <button 
+                    className="view-btn"
+                    onClick={() => handleViewProgram(docLink)}
+                    aria-label={`View ${hours} hours program details`}
+                  >
+                    View Program
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </section>
+          ))}
+        </div>
+      </section>
 
-      {/* Our Moments Section */}
       <section className="moments-section">
         <h2 className="sections-title">
           Our <span className="highlight">Moments</span>
         </h2>
-        <div className="moments-content">
+        <div 
+          className="moments-content"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
           <div className="descriptionss">
             <h3 className='collegekah'>{moments[activeIndex].title}</h3>
             <p>{moments[activeIndex].description}</p>
@@ -138,7 +143,6 @@ const CollegeProgram = () => {
         </div>
       </section>
 
-      {/* Associations Section */}
       <section className="associations-section">
         <h2 className="highlight11">Our <span className="highlight10">Associations</span></h2>
         <div className="logos-grid">
@@ -148,11 +152,8 @@ const CollegeProgram = () => {
         </div>
       </section>
 
-      {/* Testimonial Section */}
       <section className="testimonial-section">
         <div className="headname">Words of <span className="highlight">HOD</span></div>
-        
-        {/* Inserted HODReview Component */}
         <HODReview />
       </section>
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from 'react';
 import "./Achievers.css";
 import Navigation from "../components/Navigation";
 
@@ -38,10 +38,6 @@ const achievers = [
     ],
   },
 ];
-// const aboutus=[{
-//   designation:" Mentor",
-//   logo:
-// }];
 
 const ambassadors = [
   { name: "Khushi Shrivastava", photo: "../images/Ambassador/image8.jpg", company: "GGITS" },
@@ -53,14 +49,55 @@ const ambassadors = [
   { name: "Divyanshu Singhal", photo: "../images/Ambassador/image7.jpg", company: "VIT" },
   { name: "Aanchal Agarwal", photo: "../images/Ambassador/image14.jpg", company: "GMC" },
 ];
-const Achievers = () =>{
-  const allAchievers =achievers.flatMap(company => 
-    company.people.map(person => ({
-      ...person,
-      companyLogo: company.logo,
-      company: company.company
-    }))
-  );
+
+const Achievers = () => {
+  const [currentCompanyIndex, setCurrentCompanyIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const timerRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const startTimer = () => {
+    timerRef.current = setInterval(() => {
+      if (!isPaused) {
+        handleTransition();
+      }
+    }, 5000); // Increased to 5 seconds to account for transition time
+  };
+
+  const handleTransition = () => {
+    setIsTransitioning(true);
+    
+    // Wait for fade out, then change content
+    setTimeout(() => {
+      setCurrentCompanyIndex((prevIndex) => 
+        prevIndex === achievers.length - 1 ? 0 : prevIndex + 1
+      );
+      
+      // Start fade in
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 50);
+    }, 500); // Half of the transition time
+  };
+
+  useEffect(() => {
+    startTimer();
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+    };
+  }, [isPaused]);
+
+  const handleMouseEnter = () => {
+    setIsPaused(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsPaused(false);
+  };
+
+  const currentCompany = achievers[currentCompanyIndex];
 
   return (
     <div className="main-containerss">
@@ -73,6 +110,7 @@ const Achievers = () =>{
         <div className="ambassadors-grid">
           {ambassadors.map((person, index) => (
             <div key={index} className="achiever-card">
+              <img className="brouch" alt="bhaiya ambassador hai hum" src="../images/Ambassador/brouchM.png"/>
               <img src={person.photo} alt={person.name} className="achiever-photo" />
               <p className="achiever-name">{person.name}</p>
               <p className="company-name">{person.company}</p>
@@ -84,14 +122,20 @@ const Achievers = () =>{
           <h2 className="gradient-text blue-green">Our Achievers</h2>
         </div>
         
-        <div className="achievers-grid">
-          {allAchievers.map((person, index) => (
-            <div key={index} className="placed-card">
-              <img src={person.photo} alt={person.name} className="achiever-photo" />
-              <p className="achiever-name">{person.name}</p>
-              <img src={person.companyLogo} alt={person.company} className="card-company-logo" />
-            </div>
-          ))}
+        <div 
+          className="achievers-section"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <div className={`achievers-grid ${isTransitioning ? 'fade-out' : 'fade-in'}`}>
+            {currentCompany.people.map((person, index) => (
+              <div key={index} className="placed-card">
+                <img src={person.photo} alt={person.name} className="achiever-photo" />
+                <p className="achiever-name">{person.name}</p>
+                <img src={currentCompany.logo} alt={currentCompany.company} className="card-company-logo" />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>

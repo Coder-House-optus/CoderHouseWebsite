@@ -37,7 +37,8 @@ const HODreview = () => {
     return () => window.removeEventListener('resize', updateImagesPerSlide);
   }, []);
 
-  const Carousel = ({ images, currentSlide, setCurrentSlide }) => {
+  const Carousel = ({ images, currentSlide, setCurrentSlide, id }) => {
+    const [isPaused, setIsPaused] = useState(false);
     const totalSlides = Math.ceil(images.length / imagesPerSlide);
     
     const nextSlide = () => {
@@ -48,23 +49,32 @@ const HODreview = () => {
       setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
     };
 
-    // Add auto-advance timer
+    // Separate timer for each carousel
     useEffect(() => {
-      const timer = setInterval(() => {
-        nextSlide();
-      }, 3000); // 3 seconds
-
-      return () => clearInterval(timer); // Cleanup on unmount
-    }, [currentSlide, totalSlides]); // Dependencies to ensure timer updates properly
+      let timer;
+      if (!isPaused) {
+        timer = setInterval(() => {
+          nextSlide();
+        }, 3000);
+      }
+      return () => clearInterval(timer);
+    }, [currentSlide, totalSlides, isPaused]);
 
     const startIdx = currentSlide * imagesPerSlide;
     const visibleImages = images.slice(startIdx, startIdx + imagesPerSlide);
 
     return (
       <div className="carousel-wrapper">
-        <div className="carousel-container">
+        <div 
+          className="carousel-container"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
           {visibleImages.map((image) => (
-            <div key={image.id} className="review-item">
+            <div 
+              key={image.id} 
+              className="review-item"
+            >
               <img 
                 src={image.src} 
                 alt={image.alt} 
@@ -101,12 +111,14 @@ const HODreview = () => {
         images={memImages}
         currentSlide={memSlide}
         setCurrentSlide={setMemSlide}
+        id="memories"
       />
       <h2>Words of <span>Encouragement</span></h2>
       <Carousel 
         images={reviewImages}
         currentSlide={reviewSlide}
         setCurrentSlide={setReviewSlide}
+        id="reviews"
       />
     </div>
   );
