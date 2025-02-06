@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding:0;
 }
 
 .all-above {
@@ -12,8 +13,8 @@
   width: 100vw;
   background: linear-gradient(to bottom, #a9d85d5e, rgba(255, 255, 255, 0.2));
   overflow-x: hidden;
-  padding:0 1.5%;
-  min-height: 100vh;
+  padding:0 1%;
+  
 }
 
 .all-above::before {
@@ -61,19 +62,19 @@
   margin-bottom: 40px;
 }
 
-.search-container {
+.search-containers {
   width: 100%;
   max-width: 800px;
   margin: 0 auto 30px;
   padding: 0 15px;
 }
 
-.search-wrapper {
+.search-wrappers {
   position: relative;
   width: 100%;
 }
 
-.search-input {
+.search-inputs {
   width: 90%;
   padding: 12px 40px;
   border-radius: 8px;
@@ -85,7 +86,7 @@
   color:black;
 }
 
-.search-input:focus {
+.search-inputs:focus {
   border-color: #88C057;
   box-shadow: 0 0 0 3px rgba(136, 192, 87, 0.2);
 }
@@ -284,18 +285,24 @@
     margin-bottom: 25px;
   }
   
-  .search-container {
-    padding: 0 10px;
+  .search-containers {
+    padding: 0;
   }
-  .search-input{
+  .search-inputs{
     width:85%;
+    margin:0;
+  }
+  .search-wrappers{
+    margin:0 auto;
   }
   .contest-details p {
     font-size: 1.3rem;
     line-height: 1.4;
   }
 }
-
+.search-inputs::placeholder{
+  color:black;
+}
 @media (max-width: 480px) {
   .contests-grid {
     grid-template-columns: 1fr;
@@ -313,7 +320,7 @@
   
   .contest-title {
     font-size: 2.5rem;
-    margin-top: 30px;
+    margin-top: 57px;
     margin-bottom: 20px;
   }
   
@@ -330,10 +337,16 @@
     line-height: 1.4;
   }
   
-  .search-input {
+  .search-inputs {
     font-size: 14px;
-    width: 100%;
+    width: 74.75%;
+    margin:0;
+   
   }
+  .search-wrappers{
+    margin:0 auto;
+  }
+  
   
   .contest-actions {
     gap: 10px;

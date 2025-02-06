@@ -81,7 +81,7 @@
     background-color: #ffffff;
     color: #E5FEC0;
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 85px 0px 15px 0px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, .6);
     font-size: 18px;
     font-weight: bold;
@@ -90,7 +90,7 @@
     text-align: center;
     border: 2px solid transparent;
     width: 190px; 
-    height: 190px; 
+    height: 180px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -114,7 +114,7 @@
     z-index: 0; 
 }
   
-.note-item:hover::before {
+/* .note-item:hover::before {
     transform: translate(-50%, -50%) scale(1); 
     width: 200%; 
     height: 200%;
@@ -125,7 +125,7 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border: 2px solid #E5FEC0;
     box-shadow: 0 0 15px 5px #E5FEC0;
-}
+} */
 
 .note-item .category-title, 
 .note-item .category-description {
@@ -146,6 +146,15 @@
     color: #3C5C7B;
     margin-top: 0;
 }
+
+.category-logo {
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    object-fit: contain;
+}
+  
 
 @media (max-width: 768px) {
     .search-container {
@@ -251,6 +260,14 @@
     .note-item .category-description {
         font-size: 12px;
     }
+
+    .category-logo {
+        width: 60px;
+        height: 60px;
+        margin-bottom: -24px;
+        object-fit: contain;
+    }
+      
 }
 
 @media (max-width: 480px) {
@@ -300,9 +317,17 @@
     }
 
     .note-item {
-        width: 140px;
+        width: 130px;
         height: 150px; 
     }
+
+    .category-logo {
+        width: 60px;
+        height: 60px;
+        margin-bottom: -22px;
+        object-fit: contain;
+    }
+      
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
     .search-bar {
@@ -371,6 +396,13 @@
     .note-item .category-description {
         font-size: 14px; 
     }
+    .category-logo {
+        width: 60px;
+        height: 60px;
+        margin-bottom: -22px;
+        object-fit: contain;
+    }
+      
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -481,4 +513,77 @@
     .search-bar::placeholder {
         font-size: 13px;
     }
+
+    .category-logo {
+        width: 31px;
+        height: 30;
+        margin-bottom: -23px;
+
+    }
+
+    .category-logo {
+        width: 60px;
+        height: 60px;
+        margin-bottom: -22px;
+        object-fit: contain;
+    }
+      
+      
 }
+
+
+
+
+ /* Notes Container */
+.notes-container {
+background-color: #f0f1f3; /* Soft background */
+
+}
+  
+  
+  /* Individual Card - Neumorphic Design */
+  .note-item {
+    background: #f0f1f3;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 6px 6px 10px #bebebe, -6px -6px 10px #ffffff;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Hover Effect - Push Down */
+  .note-item:hover {
+    box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff;
+    transform: scale(0.98);
+  }
+  
+  /* Category Titles */
+  .category-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  /* Category Description */
+  .category-description {
+    font-size: 18px;
+    color: rgb(11, 11, 11);
+  }
+  
+  /* No Results Styling */
+  .no-results {
+    font-size: 18px;
+    color: #888;
+    text-align: center;
+    padding: 20px;
+  }
+  
+
+
+
+
+
+
+

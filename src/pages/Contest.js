@@ -54,14 +54,14 @@ const Contest = () => {
 
       <h1 className="contest-title">Contest Journey</h1>
 
-      <div className="search-container">
-        <div className="search-wrapper">
+      <div className="search-containers">
+        <div className="search-wrappers ">
           <input
             type="text"
             placeholder="Search contests by name or host..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="search-input"
+            className="search-inputs"
           />
           <svg
             className="search-icon"

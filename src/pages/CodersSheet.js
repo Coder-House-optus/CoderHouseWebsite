@@ -15,7 +15,6 @@ const CoderSheet = () => {
   const navigate = useNavigate();
   const [showAlert, setShowAlert] = useState(false);
   
-  // Initialize form visibility based on session storage
   const [showForm, setShowForm] = useState(() => {
     return sessionStorage.getItem('hasFilledCoderSheetForm') !== 'true';
   });
@@ -29,6 +28,11 @@ const CoderSheet = () => {
   });
   
   const [errors, setErrors] = useState({});
+
+  const validateName = (name) => {
+    const nameRegex = /^[A-Za-z\s]+$/;
+    return nameRegex.test(name);
+  };
 
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -45,6 +49,8 @@ const CoderSheet = () => {
 
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required';
+    } else if (!validateName(formData.name)) {
+      newErrors.name = 'Name can only contain alphabets and spaces';
     }
 
     if (!validateEmail(formData.email)) {
@@ -69,7 +75,17 @@ const CoderSheet = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    
+    // Special handling for name field to prevent input of numbers and special characters
+    if (name === 'name') {
+      // Only update if the new value contains only letters and spaces
+      if (value === '' || validateName(value)) {
+        setFormData({ ...formData, [name]: value });
+      }
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
+    
     // Clear error when user starts typing
     if (errors[name]) {
       setErrors({ ...errors, [name]: '' });
@@ -93,7 +109,6 @@ const CoderSheet = () => {
       });
 
       if (response.ok) {
-        // Mark form as submitted in session storage
         sessionStorage.setItem('hasFilledCoderSheetForm', 'true');
         setShowForm(false);
         setShowAlert(true);
@@ -111,78 +126,78 @@ const CoderSheet = () => {
     return (
       <div>
         <button className="back-button1" onClick={() => navigate('/Features')}>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <line x1="19" y1="12" x2="5" y2="12"></line>
-          <polyline points="12 19 5 12 12 5"></polyline>
-        </svg>
-      </button>
-      
-      <div className="popup-form-overlay">
-        <div className="popup-form">
-          <h2>Fill the Form to Continue</h2>
-          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                value={formData.name}
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </button>
+        
+        <div className="popup-form-overlay">
+          <div className="popup-form">
+            <h2>Fill the Form for Coding Resources</h2>
+            <form onSubmit={handleSubmit}>
+              <div className="form-group">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className={errors.name ? 'form-input error' : 'form-input'}
+                />
+                {errors.name && <span className="error-message">{errors.name}</span>}
+              </div>
+
+              <div className="form-group">
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className={errors.phone ? 'form-input error' : 'form-input'}
+                />
+                {errors.phone && <span className="error-message">{errors.phone}</span>}
+              </div>
+
+              <div className="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className={errors.email ? 'form-input error' : 'form-input'}
+                />
+                {errors.email && <span className="error-message">{errors.email}</span>}
+              </div>
+
+              <select 
+                name="role" 
+                value={formData.role} 
                 onChange={handleChange}
-                className={errors.name ? 'form-input error' : 'form-input'}
-              />
-              {errors.name && <span className="error-message">{errors.name}</span>}
-            </div>
+                className="form-input"
+              >
+                <option value="student">Student</option>
+                <option value="developer">Developer</option>
+                <option value="other">Other</option>
+              </select>
 
-            <div className="form-group">
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
-                value={formData.phone}
-                onChange={handleChange}
-                className={errors.phone ? 'form-input error' : 'form-input'}
-              />
-              {errors.number && <span className="error-message">{errors.number}</span>}
-            </div>
+              <div className="form-group">
+                <textarea
+                  name="query"
+                  placeholder="Your Query"
+                  value={formData.query}
+                  onChange={handleChange}
+                  className={errors.query ? 'form-input error' : 'form-input'}
+                />
+                {errors.query && <span className="error-message">{errors.query}</span>}
+              </div>
 
-            <div className="form-group">
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={formData.email}
-                onChange={handleChange}
-                className={errors.email ? 'form-input error' : 'form-input'}
-              />
-              {errors.email && <span className="error-message">{errors.email}</span>}
-            </div>
-
-            <select 
-              name="role" 
-              value={formData.role} 
-              onChange={handleChange}
-              className="form-input"
-            >
-              <option value="student">Student</option>
-              <option value="developer">Developer</option>
-              <option value="other">Other</option>
-            </select>
-
-            <div className="form-group">
-              <textarea
-                name="query"
-                placeholder="Your Query"
-                value={formData.query}
-                onChange={handleChange}
-                className={errors.query ? 'form-input error' : 'form-input'}
-              />
-              {errors.query && <span className="error-message">{errors.query}</span>}
-            </div>
-
-            <button type="submit">Submit</button>
-          </form>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
         </div>
-      </div>
       </div>
     );
   }
