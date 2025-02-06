@@ -247,7 +247,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap; /* Wrap items for responsiveness */
-  gap: 50px;
+  gap: 12%;
 }
 .associations-section h2{
   font-size: 2.3rem;

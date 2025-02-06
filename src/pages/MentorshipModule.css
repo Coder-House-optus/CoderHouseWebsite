@@ -1,354 +1,495 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Mono');
+/* MentorshipModule.css */
 
-/* Back Button */
-.back-button {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background-color: transparent;
-  border: none;
-  color: darkslategray;
-  font-size: 18px;
-  cursor: pointer;
-  font-family: 'PT Mono', monospace;
-  
-}
-
-.back-button:hover {
-  text-decoration: underline;
-}
-
-.box10 {
-  width: 60%;
-  min-width: 200px;
-  height: 40px;
-  position: relative;
-  border-radius: 5px;
-  background: linear-gradient(to right, #A8D85D 35%, #99C05F 100%);
-  margin-bottom: 10px;
-  padding: 10px 10px 0 0px;
-  color: rgb(0, 0, 0);
-  box-shadow: 1px 2px 1px -1px rgb(154, 153, 153);
-  transition: background 200ms ease-in-out;
-  display: flex;
-  align-items: center;
-  margin-top: 1px;
-  font-size: 1.7em;
-}
-
-.shadow {
-  position: relative;
-}
-
-.shadow::before {
-  z-index: -1;
-  position: absolute;
-  content: "";
-  bottom: 13px;
-  right: 7px;
-  width: 25%;
-  top: 0;
-  box-shadow: 0 15px 10px #777;
-  transform: rotate(4deg);
-  transition: all 150ms ease-in-out;
-}
-
-.box:hover {
-  background: linear-gradient(to right, #abbd73 0%, #abbd73 100%);
-}
-
-.shadow:hover::before {
-  transform: rotate(0deg);
-  bottom: 20px;
-  z-index: -10;
-}
-
-.content1 {
-  margin-left: 40px;
-  color: #000000;
-}
-
-.back-button1 {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  background-color: #E1FFB4;
-  color: #000000;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: Poppins;
-  z-index: 200;
-}
-
-.back-button1:hover {
-  background-color: #c0c7a8;
-  font-family: poppins;
-}
-
-.heading10 {
-  margin-top: 100px;
-  font-family: 'poppins';
-  color: #333;
-  font-size: 1.8em;
-  font-weight: bold;
-  text-align: center;
-
-}
-
-.heading-mentor {
-  font-family: 'poppins';
-  color: #333;
-  font-size: 2em;
-  font-weight: bold;
-  margin-bottom: -10px;
-  text-align: center;
-  color: #99C05F;
-}
-
-.box {
-  background-color: #f4f4f4;
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(31, 54, 34, 0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.content1 {
-  font: 'poppins';
-  font-size: 1em;
-  color: rgb(255, 255, 255);
-  text-align: left;
-  color: #000000;
-}
-
-.image-section2 {
-  margin-top: 100px;
-  margin-left: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.rectangle-image2 {
-  width: 400px;
-  height: 300px;
+/* General Styles */
+.mentorship_main_container {
+  font-family: Poppins, sans-serif;
+  max-width: 100vw;
+  height: auto;
   border-radius: 10px;
+  position: relative;
+  padding: 20px;
+  z-index: 1;
+  min-height: 100vh;
+  overflow-x: hidden; /* Remove horizontal scroll */
+  overflow: hidden;
+}
+
+.mentorship_main_container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('/public/images/bluedotedlines.png'), linear-gradient(135deg, #88C057, #ffffff);
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat-y;
+  z-index: -1;
+  transform: rotate(0deg);
+  background-blend-mode: overlay;
+  opacity: 0.35;
+}
+
+.mentorship_content_wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem;
+  align-items: start;
+}
+
+.mentorship_heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+/* Back Button Styles */
+.back-button1 {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/* Carousel Styles */
+.carousels-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.carousel-container {
+  position: relative;
+  height: 460px;
+  width: 100%;
+  perspective: 2000px;
+  overflow: hidden;
+}
+
+.second-carousel {
+  height: 460px; /* Ensure both carousels are the same size */
+}
+
+.carousel-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  backface-visibility: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-image {
+  width: 70%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 4rem;
+}
+
+.title-overlay {
+  position: absolute;
+  bottom: 0;
+  top: 55%;
+  left: 0;
+  right: 5;
+  padding: 2rem 1rem 1rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+  transform: translateY(100%);
+  animation: slideUp 1.5s ease-out forwards;
+  will-change: transform;
+}
+
+.title-text {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease-out 1s forwards;
+  will-change: opacity, transform;
+}
+
+/* Keyframes */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.carousel-card.active {
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 3;
+  opacity: 1;
+}
+
+.carousel-card.next {
+  transform: translate(-50%, -50%) translateX(10%) scale(0.9);
+  z-index: 2;
+  opacity: 0.7;
+}
+
+.carousel-card.prev {
+  transform: translate(-50%, -50%) translateX(-5%) scale(0.9);
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.carousel-card.hidden {
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form Styles */
+.mentorship_form_container {
+  background: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+}
+
+.mentorship_form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mentorship_input,
+.mentorship_select,
+.mentorship_textarea {
+  width: 100%;
+  padding: 0.75rem 0;
+  border: none;
+  border-bottom: 1px solid #e2e8f0;
+  border-radius: 0;
+  background-color: white;
+  font-size: 1.1rem;
+  color: #000000;
+  transition: all 0.2s ease;
+  outline: none; /* Removes focus shadow */
+  box-shadow: none !important; /* Ensures no shadow appears */
+}
+
+/* Optional: Add focus effect for better UI */
+.mentorship_input:focus,
+.mentorship_select:focus,
+.mentorship_textarea:focus {
+  border-bottom: 1px solid #88C057; /* Highlight on focus */
+}
+
+.mentorship_input::placeholder,
+.mentorship_textarea::placeholder {
+  color: #000000;
+}
+
+.mentorship_select {
+  color: #4a5568;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%234a5568' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 1.5rem;
+  padding-right: 2rem;
+}
+
+.mentorship_select option:first-child {
+  color: #a0aec0;
+}
+
+.mentorship_input:focus,
+.mentorship_select:focus,
+.mentorship_textarea:focus {
+  outline: none;
+  border-bottom-color:#88C057;
+  box-shadow: none;
+}
+
+.mentorship_textarea {
+  min-height: 100px;
+  resize: vertical;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+}
+
+.mentorship_submit_btn {
+  background:#4CAF50;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.mentorship_submit_btn:hover {
+  background: #88C057;
+  transform: translateY(-2px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.mentorpara{
-  font-size: 1.3em;
-  padding: 50px 80px;
+/* Features Styles */
+.mentorship_features_container {
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  padding: 0 2rem;
 }
 
-.container10 {
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
-  justify-content: center; /* Center items vertically */
-  width: 100%; /* Full width */
-  padding: 10px;
-  box-sizing: border-box; /* Include padding in the height/width */
-  font-size: 1em;
+.mentorship_images_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
-.box10 {
-  width: 60%; /* Set a consistent width for the boxes */
-  min-width: 200px;
-  height: auto; /* Adjust height based on content */
-  border-radius: 5px;
-  background: linear-gradient(to right, #A8D85D 35%, #99C05F 100%);
-  padding: 5px 10px;
-  color: rgb(0, 0, 0);
-  box-shadow: 1px 2px 1px -1px rgb(154, 153, 153);
-  transition: background 200ms ease-in-out;
-  display: flex;
-  align-items: center;
-  font-size: 1em; /* Adjust font size for readability */
-  text-align: center; /* Center the text within the box */
+.mentorship_feature_image {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-
-.mentorship-program {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: left;
-  margin-top: 20px;
+.mentorship_feature_image:hover {
+  transform: translateY(-5px);
 }
 
-.mentorship-program p {
-  width: 80%; /* Set equal width for all paragraphs */
-  margin: 10px 0;
-  font-size: 16px; /* Adjust the font size of the paragraph */
+.mentorship_features_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 
-.mentorship-program p strong {
-  font-size: 18px; /* Larger size for bold words */
+.mentorshipfeature {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  padding: 1rem;
+  border-left: 4px solid #3C5C7B;
+  background-color: #ffffff;
+  border-radius: 50px;
+}
+
+.mentorshipfeature strong {
   color: #3C5C7B;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
 }
 
-.container2 {
-  display: flex; /* Enables Flexbox */
-  flex-direction: column; /* Stacks elements vertically */
-  align-items: center; /* Centers elements horizontally */
-  justify-content: center; /* Centers elements vertically */
-  text-align: center; /* Ensures text is centered */
-  box-sizing: border-box; /* Includes padding in dimensions */
-  background: linear-gradient(to bottom, #a9d85d4a, #ffffff);
+/* .mentorshipfeature::before {
+  content: "★";
+  color: #3C5C7B;
+  font-size: 2rem;
+  margin-right: 0.5rem;
+} */
+
+.mentorshipfeature p {
+  margin-left: 1.5rem;
+  color: #333;
 }
 
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .mentorship_content_wrapper {
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    gap: 2rem;
+  }
 
+  .carousel-container {
+    height: 450px;
+  }
 
-.green-text {
-  color: #99C05F; /* Green color for "Mentorship Module" */
-  font-size: 1.8em;
-}
-
-.black-text {
-  color: #333; /* Black color for the rest of the text */
-  display: block; /* Forces the text to move to the next line */
-  font-size: 1em; /* Optional: Adjust size of the secondary text */
+  .second-carousel {
+    height: 450px;
+  }
 }
 
 @media (max-width: 768px) {
-
-  .mentorpara{
-    font-size: 1.3em;
-    padding: 0px 20px;
-  }
-  .heading-mentor{
-    padding: 0px 30px;
-  }
-  .container2 {
-    display: flex; /* Enables Flexbox */
-    flex-direction: column; /* Stacks elements vertically */
-    align-items: center; /* Centers elements horizontally */
-    justify-content: center; /* Centers elements vertically */
-    text-align: center; /* Ensures text is centered */
-    box-sizing: border-box; /* Includes padding in dimensions */
+  .mentorship_heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
 
-  .image-section2 {
-    flex-direction: column; /* Stack images vertically */
-    gap: 5px;
-    margin-left: -1px;
-   
-  }
-  .green-text{
-    padding-bottom: 3px;
+  .mentorship_form_container {
+    padding: 1rem;
+    margin: -1rem;
   }
 
-  .rectangle-image2 {
-    width: 100%; /* Full width for images on mobile */
-    height: auto; /* Maintain aspect ratio */
+  .mentorship_content_wrapper {
+    padding: 1rem;
+  }
+
+  .carousel-container {
+    height: 400px;
+  }
+
+  .second-carousel {
+    height: 400px;
+  }
+
+  .mentorship_images_container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .mentorship_features_grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .carousel-card.active {
+    transform: translate(-45%, -50%) translateX(15%) scale(1);
+    z-index: 3;
+    opacity: 1;
+  }
+
+  .carousel-card.next {
+    transform: translate(-45%, -50%) translateX(20%) scale(1);
+    z-index: 2;
+    opacity: 0.7;
+  }
+
+  .carousel-card.prev {
+    transform: translate(-45%, -50%) translateX(25%) scale(1);
+    z-index: 1;
+    opacity: 0.7;
+  }
+
+  .carousel-card.hidden {
+    transform: translate(-45%, -50%) scale(0.8);
+    opacity: 0;
+  }
+
+  .carousel-image {
     width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4rem;
   }
 
-  .box10, .box {
-    width: 80%; /* Adjust box size for mobile */
-    font-size: 1.9em; /* Adjust font size for smaller screens */
-  }
-
-  .heading10, .heading-mentor {
-    font-size: 3em; /* Reduce heading size for mobile */
-  }
-
-  .mentorpara {
-    font-size: 2em;
-    margin-top: 20px;
-  }
-  .mentorship-program{
-    font-size: 1.1em;
-  }
-  .green-text {
-    color: #99C05F; /* Green color for "Mentorship Module" */
-    font-size: 1.3em;
-    padding-bottom: 30px;
-  }
-  
-  .black-text {
-    color: #333; /* Black color for the rest of the text */
-    display: block; /* Forces the text to move to the next line */
-    font-size: 1em; /* Optional: Adjust size of the secondary text */
-    margin-top: 20px;
-  }
-  .key-mentor{
-    font-size: 3em;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  /* Box */
-  .box10 {
-    width: 90%; /* Increase width for laptop view */
-    height: 54px; /* Adjust the height for laptop */
-    font-size: 16px; /* Slightly larger font size for laptop */
-    margin-top: 20px;
-  }
-
-  /* Image section */
-  .image-section2 {
-    flex-direction: row; /* Keep images in a row */
-    margin-left: 1px; /* Add some margin to the left */
-    gap: 10px; /* Slightly larger gap between images */
-  }
-
-  .rectangle-image2 {
-    width: 30%; /* Make images slightly smaller */
-    height: auto; /* Adjust image height for better display on laptop */
-  }
-
-  /* Back Button */
-  .back-button1 {
-    font-size: 18px; /* Adjust font size */
-    padding: 10px 20px; /* Increase button padding for better touch targets */
-  }
-
-  .heading2 {
-    font-size: 1.4em;
-  }
-
-  /* Adjust text content */
-  .content1 {
-    font-size: 16px; /* Increase font size for better readability */
-    margin-left: 30px; /* Adjust left margin */
-    color: #000000;
-  }
-  .key-mentor{
-    color: #333;
-  }
-  .heading10 {
-    font-family: 'Poppins', sans-serif;
+  .title-text {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 600;
     text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-    padding: 60px;
+    opacity: 0;
+    transform: translateY(1px);
+    animation: fadeIn 0.5s ease-out 1s forwards;
+    will-change: opacity, transform;
   }
-  
-  .green-text {
-    color: #99C05F; /* Green color for "Mentorship Module" */
-    font-size: 1.6em;
-  }
-  
-  .black-text {
-    color: #333; /* Black color for the rest of the text */
-    display: block; /* Forces the text to move to the next line */
-    font-size: 1.3em; /* Optional: Adjust size of the secondary text */
-  }
-  .box10 {
-    width: 90%;
-    height: 54px;
-    font-size: 16px;
-    /* margin-top: 20px; */
-  }
-  
 }
+
+@media (max-width: 480px) {
+  .mentorship_heading {
+    font-size: 1.75rem;
+  }
+
+  .mentorship_content_wrapper {
+    padding: 0.5rem;
+  }
+
+  .carousel-container {
+    height: 250px;
+    width: 350px;
+  }
+
+  .second-carousel {
+    height: 250px;
+    width: 350px;
+  }
+
+  .mentorship_form_container {
+    padding: 1rem;
+    margin: 1%; 
+    max-width: 100%; 
+    box-sizing: border-box; 
+    width: 90%;
+  }
+  
+  .mentorship_input,
+  .mentorship_select,
+  .mentorship_textarea {
+    font-size: 0.9rem;
+  }
+
+  .mentorship_submit_btn {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .carousel-card.active {
+    transform: translate(-45%, -50%)  translateX(10%) scale(1);
+    z-index: 3;
+    opacity: 1;
+  }
+
+  .carousel-card.next {
+    transform: translate(-45%, -50%) translateX(15%) scale(1);
+    z-index: 2;
+    opacity: 0.7;
+  }
+
+  .carousel-card.prev {
+    transform: translate(-45%, -50%) translateX(20%) scale(1);
+    z-index: 1;
+    opacity: 0.7;
+  }
+
+  .carousel-card.hidden {
+    transform: translate(-45%, -50%) scale(0.8);
+    opacity: 0;
+  }
+}
+
