@@ -110,7 +110,7 @@ const Achievers = () => {
         <div className="ambassadors-grid">
           {ambassadors.map((person, index) => (
             <div key={index} className="achiever-card">
-              <img className="brouch" alt="bhaiya ambassador hai hum" src="../images/Ambassador/brouchM.png"/>
+              {/* <img className="brouch" alt="bhaiya ambassador hai hum" src="../images/Ambassador/brouchM.png"/> */}
               <img src={person.photo} alt={person.name} className="achiever-photo" />
               <p className="achiever-name">{person.name}</p>
               <p className="company-name">{person.company}</p>
