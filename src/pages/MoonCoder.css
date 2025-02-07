@@ -7,6 +7,10 @@
   margin: 0 auto;
 }
 
+.moon-coderofmoon-coder{
+  margin-bottom: 2rem;
+}
+
 .back-button1 {
   background: none;
   border: none;
@@ -22,7 +26,7 @@
 }
 
 .mainTitle1ofmoon-coder {
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-weight: bold;
   margin-bottom: 10px;
   color: darkslategray;
@@ -63,13 +67,13 @@
 }
 
 .box2ofmoon-coder {
-  min-height: 50px;
+  min-height: 60px;
   position: relative;
   border-radius: 20px;
   background: linear-gradient(to right, #9bc655 35%, #8caf57 100%);
   padding: 0.8rem 1rem;
   color: #0E2031;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 8px 10px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   transition: transform 0.3s ease;
@@ -111,6 +115,12 @@
   border-left: 4px solid #3C5C7B; /* Adds a colored left border */
   background-color: #f9f9f9; /* Light background to distinguish */
   border-radius: 8px;
+  box-shadow: 8px 10px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.moon-coder-descriptionofmoon-coder:hover { 
+transform: scale(1.05);
 }
 
 .moon-coder-descriptionofmoon-coder strong {
@@ -152,7 +162,7 @@
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -183,7 +193,7 @@
   }
 
   .mainTitle1ofmoon-coder {
-    font-size: 2.2rem;
+    font-size: 3.5rem;
   }
 
   .box2ofmoon-coder {
@@ -198,6 +208,7 @@
 @media (max-width: 768px) {
   .moon-coderofmoon-coder {
     padding: 1rem;
+    margin-bottom: 3rem;
   }
 
   .content-containerofmoon-coder {
@@ -214,7 +225,7 @@
   }
 
   .mainTitle1ofmoon-coder {
-    font-size: 2rem;
+    font-size: 3.5rem;
   }
 
   .mentorpara3ofmoon-coder {
@@ -245,7 +256,7 @@
 
 @media (max-width: 480px) {
   .mainTitle1ofmoon-coder {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
 
   .mentorpara3ofmoon-coder {
@@ -284,7 +295,7 @@
   }
 
   .mainTitle1ofmoon-coder {
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
   }
 
