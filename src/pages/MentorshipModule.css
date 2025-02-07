@@ -593,13 +593,25 @@
   position: relative;
   max-width: 100%;
   overflow: hidden;
-  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgb(0, 0, 0) 10%,
+    rgb(0, 0, 0) 90%,
+    transparent 100%
+  );
+  mask: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgb(0, 0, 0) 10%,
+    rgb(0, 0, 0) 90%,
+    transparent 100%
+  );
 }
 
 .alice-carousel__stage {
   gap: 1rem;
-  animation: smoothScroll 20s linear infinite;
+  animation: smoothScroll 35s linear infinite;
 }
 
 @keyframes smoothScroll {

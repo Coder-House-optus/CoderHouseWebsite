@@ -440,8 +440,8 @@ const MentorshipModule = () => {
           responsive={responsive}
           controlsStrategy="alternate"
           autoPlay
-          autoPlayInterval={0}  // Use 0 for continuous scroll
-          animationDuration={2000}  // Match the animation duration
+          autoPlayInterval={0}  
+          animationDuration={2000} 
           infinite
           disableDotsControls
           disableButtonsControls
