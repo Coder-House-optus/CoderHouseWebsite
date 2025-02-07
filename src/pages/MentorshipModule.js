@@ -227,17 +227,46 @@ const MentorshipModule = () => {
     {
       image: '../images/Ambassador/image14.jpg',
       title: 'UI & UX Expert',
-      description: 'Creative UI/UX Designer'
+      description: 'Creative Designer'
     },
     {
       image: '../images/Ambassador/image8.jpg',
       title: 'Cyber Expert',
       description: 'Cybersecurity Specialist'
-    }
+    },
+    {
+      image: '../images/Ambassador/AasthaPurey.jpg',
+      title: 'Frontend Expert',
+      description: 'Expert in React Js'
+    },
+    {
+      image: '../images/Ambassador/image10.jpg',
+      title: 'DSA Expert',
+      description: 'Master in Data Structures'
+    },
+    {
+      image: '../images/Ambassador/ishika.jpg',
+      title: 'Backend Expert',
+      description: 'Specialist in Node.js'
+    },
+    {
+      image: '../images/Ambassador/image2.png',
+      title: 'Full Stack Expert',
+      description: 'Full Stack Development'
+    },
+    {
+      image: '../images/Ambassador/image14.jpg',
+      title: 'UI & UX Expert',
+      description: 'Creative Designer'
+    },
+    {
+      image: '../images/Ambassador/image8.jpg',
+      title: 'Cyber Expert',
+      description: 'Cybersecurity Specialist'
+    },
   ];
-
   const responsive = {
-    0: { items: 1 },
+    0: { items: 2},
     568: { items: 2 },
     1024: { items: 4, itemsFit: "contain" },
   };
@@ -411,14 +440,15 @@ const MentorshipModule = () => {
           responsive={responsive}
           controlsStrategy="alternate"
           autoPlay
-          autoPlayInterval={200}
-          animationDuration={900} // Smooth transition
+          autoPlayInterval={0}  // Use 0 for continuous scroll
+          animationDuration={2000}  // Match the animation duration
           infinite
           disableDotsControls
+          disableButtonsControls
         />
       </div>
 
-      <button 
+      <button
         className="book-session-btn"
         onClick={() => setShowForm(true)}
       >
@@ -441,17 +471,17 @@ const MentorshipModule = () => {
         <Features features={featuresData} />
       </div>
 
-      <FormModal 
-            isOpen={showForm}
-            onClose={() => setShowForm(false)}
-            handleSubmit={handleSubmit}
-            formState={formState}
-            handleInputChange={handleInputChange}
-        />
+      <FormModal
+        isOpen={showForm}
+        onClose={() => setShowForm(false)}
+        handleSubmit={handleSubmit}
+        formState={formState}
+        handleInputChange={handleInputChange}
+      />
 
-        {showSuccessPopup && (
-            <SuccessPopup onClose={() => setShowSuccessPopup(false)} />
-        )}
+      {showSuccessPopup && (
+        <SuccessPopup onClose={() => setShowSuccessPopup(false)} />
+      )}
     </div>
   );
 };
