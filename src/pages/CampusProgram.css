@@ -103,7 +103,7 @@
 }
 
 /* Center Image */
-.image-box.center { width: 370px; height: 300px; top: 30%; left: 38%; transform: translate(-50%, -50%); }
+.image-box.center { width: 370px; height: 300px; top: 50%; left: 50.5%; transform: translate(-50%, -50%); }
 /* Top-Left Image */
 .image-box.top-left { width: 250px; height: 250px; top: 15%; left: 20%; }
 /* Top-Right Image */
@@ -119,13 +119,13 @@
 
 
 
-.image-box {
+/* .image-box {
   position: absolute;
   transition: transform 20.5s ease-in-out;
   animation: shrink-grow 10s infinite;
-}
+} */
 
-@keyframes shrink-grow {
+/* @keyframes shrink-grow {
   0% {
     transform: scale(1);
   }
@@ -135,7 +135,7 @@
   100% {
     transform: scale(1);
   }
-}
+} */
 
 
 
@@ -1057,8 +1057,8 @@ input:focus, select:focus, textarea:focus {
   .image-box.center {
     width: 180px; /* Adjust width for mobile */
     height: 180px; /* Adjust height for mobile */
-    top: 36%;
-    left: 40%;
+    top: 43%;
+    left: 63%;
     transform: translate(-50%, -50%);
   }
 
@@ -1074,8 +1074,8 @@ input:focus, select:focus, textarea:focus {
   .image-box.top-right {
     width: 100px;
     height: 100px;
-    top: 19%;
-    right: 19%;
+    top: 13%;
+    right: 21%;
   }
 
   /* Bottom-Left Image */
@@ -1090,16 +1090,16 @@ input:focus, select:focus, textarea:focus {
   .image-box.bottom-right {
     width: 100px;
     height: 100px;
-    bottom: 2%;
-    right: 10%;
-    display: none;
+    bottom: 11%;
+    right: 19%;
+
   }
 
   /* Far-Left Image */
   .image-box.far-left {
     width: 200px;
     height: 170px;
-    top: 70%;
+    top: 71%;
     left: 3%;
   }
 
@@ -1108,7 +1108,7 @@ input:focus, select:focus, textarea:focus {
     width: 140px;
     height: 100px;
     top: 65%;
-    right: 5%;
+    right: 9%;
   }
 }
 
