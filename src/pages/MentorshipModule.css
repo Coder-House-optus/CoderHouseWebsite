@@ -622,3 +622,8 @@
     transform: translateX(-300%);
   }
 }
+
+.mentorship_feature_image {
+  max-width: 100%;
+  height: auto;
+}
