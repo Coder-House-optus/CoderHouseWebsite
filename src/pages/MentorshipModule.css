@@ -461,7 +461,7 @@
 .mentorship_form {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1rem;
 }
 
 .input-group {
@@ -496,14 +496,14 @@
 }
 
 .mentorship_textarea {
-  min-height: 100px;
+  min-height: 60px;
   resize: vertical;
 }
 
-.error-message {
+.error-message-Of-Mentorship {
   color: #dc2626;
-  font-size: 0.875rem;
-  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
 }
 
 .mentorship_input.error,

@@ -41,15 +41,15 @@ const FormModal = memo(({ isOpen, onClose, handleSubmit, formState, handleInputC
           <div className="input-group">
             <input
               type="text"
-              name="fullName"
+              name="name"
               placeholder="Full Name"
-              className={`mentorship_input ${formState.errors.fullName ? 'error' : ''}`}
+              className={`mentorship_input ${formState.errors.name ? 'error' : ''}`}
               onChange={handleInputChange}
-              value={formState.data.fullName}
+              value={formState.data.name}
               required
             />
-            {formState.errors.fullName && (
-              <div className="error-message">{formState.errors.fullName}</div>
+            {formState.errors.name && (
+              <div className="error-message-Of-Mentorship">{formState.errors.name}</div>
             )}
           </div>
 
@@ -64,7 +64,7 @@ const FormModal = memo(({ isOpen, onClose, handleSubmit, formState, handleInputC
               required
             />
             {formState.errors.email && (
-              <div className="error-message">{formState.errors.email}</div>
+              <div className="error-message-Of-Mentorship">{formState.errors.email}</div>
             )}
           </div>
 
@@ -79,31 +79,31 @@ const FormModal = memo(({ isOpen, onClose, handleSubmit, formState, handleInputC
               required
             />
             {formState.errors.phone && (
-              <div className="error-message">{formState.errors.phone}</div>
+              <div className="error-message-Of-Mentorship">{formState.errors.phone}</div>
             )}
           </div>
 
           <div className="input-group">
             <input
               type="text"
-              name="course"
+              name="branch_course"  // changed from course
               placeholder="Course / Branch"
-              className={`mentorship_input ${formState.errors.course ? 'error' : ''}`}
+              className={`mentorship_input ${formState.errors.branch_course ? 'error' : ''}`}
               onChange={handleInputChange}
-              value={formState.data.course}
+              value={formState.data.branch_course}
               required
             />
-            {formState.errors.course && (
-              <div className="error-message">{formState.errors.course}</div>
+            {formState.errors.branch_course && (
+              <div className="error-message-Of-Mentorship">{formState.errors.branch_course}</div>
             )}
           </div>
 
           <div className="input-group">
             <select
-              name="year"
-              className={`mentorship_select ${formState.errors.year ? 'error' : ''}`}
+              name="study_year"
+              className={`mentorship_select ${formState.errors.study_year ? 'error' : ''}`}
               onChange={handleInputChange}
-              value={formState.data.year}
+              value={formState.data.study_year}
               required
             >
               <option value="">Select Year of Study</option>
@@ -112,17 +112,17 @@ const FormModal = memo(({ isOpen, onClose, handleSubmit, formState, handleInputC
               <option value="3">Third Year</option>
               <option value="4">Fourth Year</option>
             </select>
-            {formState.errors.year && (
-              <div className="error-message">{formState.errors.year}</div>
+            {formState.errors.study_year && (
+              <div className="error-message-Of-Mentorship">{formState.errors.study_year}</div>
             )}
           </div>
 
           <div className="input-group">
             <select
-              name="domain"
-              className={`mentorship_select ${formState.errors.domain ? 'error' : ''}`}
+              name="mentor_domain"  // changed from domain
+              className={`mentorship_select ${formState.errors.mentor_domain ? 'error' : ''}`}
               onChange={handleInputChange}
-              value={formState.data.domain}
+              value={formState.data.mentor_domain}
               required
             >
               <option value="">Select Mentor Domain</option>
@@ -133,23 +133,31 @@ const FormModal = memo(({ isOpen, onClose, handleSubmit, formState, handleInputC
               <option value="aiml">AI/ML Expert</option>
               <option value="cyber">Cybersecurity</option>
             </select>
-            {formState.errors.domain && (
-              <div className="error-message">{formState.errors.domain}</div>
+            {formState.errors.mentor_domain && (
+              <div className="error-message-Of-Mentorship">{formState.errors.mentor_domain}</div>
             )}
           </div>
 
           <div className="input-group">
             <input
-              type="datetime-local"
-              name="dateTime"
-              className={`mentorship_input ${formState.errors.dateTime ? 'error' : ''}`}
+              type="date"
+              name="appointment_date"
+              className={`mentorship_input ${formState.errors.appointment_date ? 'error' : ''}`}
               onChange={handleInputChange}
-              value={formState.data.dateTime}
+              value={formState.data.appointment_date}
               required
             />
-            {formState.errors.dateTime && (
-              <div className="error-message">{formState.errors.dateTime}</div>
-            )}
+          </div>
+
+          <div className="input-group">
+            <input
+              type="time"
+              name="appointment_time"
+              className={`mentorship_input ${formState.errors.appointment_time ? 'error' : ''}`}
+              onChange={handleInputChange}
+              value={formState.data.appointment_time}
+              required
+            />
           </div>
 
           <div className="input-group">
@@ -162,7 +170,7 @@ const FormModal = memo(({ isOpen, onClose, handleSubmit, formState, handleInputC
               required
             />
             {formState.errors.query && (
-              <div className="error-message">{formState.errors.query}</div>
+              <div className="error-message-Of-Mentorship">{formState.errors.query}</div>
             )}
           </div>
 
@@ -182,23 +190,25 @@ const MentorshipModule = () => {
 
   const [formState, setFormState] = useState({
     data: {
-      fullName: '',
+      name: '',
       email: '',
       phone: '',
-      course: '',
-      year: '',
-      domain: '',
-      dateTime: '',
+      branch_course: '',  // changed from course
+      study_year: '',     // changed from year
+      mentor_domain: '',  // changed from domain
+      appointment_date: '',
+      appointment_time: '',
       query: ''
     },
     errors: {
-      fullName: '',
+      name: '',
       email: '',
       phone: '',
-      course: '',
-      year: '',
-      domain: '',
-      dateTime: '',
+      branch_course: '',  // changed from course
+      study_year: '',     // changed from year
+      mentor_domain: '',  // changed from domain
+      appointment_date: '',
+      appointment_time: '',
       query: ''
     }
   });
@@ -266,7 +276,7 @@ const MentorshipModule = () => {
     },
   ];
   const responsive = {
-    0: { items: 2},
+    0: { items: 2 },
     568: { items: 2 },
     1024: { items: 4, itemsFit: "contain" },
   };
@@ -292,7 +302,7 @@ const MentorshipModule = () => {
 
   const validateField = useCallback((name, value) => {
     switch (name) {
-      case 'fullName':
+      case 'name':
         if (!value) return "Name is required";
         if (!/^[a-zA-Z\s]+$/.test(value)) return "Name can only contain letters and spaces";
         if (value.trim().length < 2) return "Name must be at least 2 characters long";
@@ -309,17 +319,17 @@ const MentorshipModule = () => {
         if (!/^\d{10}$/.test(value)) return "Please enter a valid 10-digit phone number";
         return "";
 
-      case 'course':
+        case 'branch_course':  // changed from course
         if (!value) return "Course is required";
         if (value.trim().length < 2) return "Course must be at least 2 characters long";
         if (value.length > 100) return "Course name is too long";
         return "";
-
-      case 'year':
+  
+      case 'study_year':    // changed from year
         if (!value) return "Year of study is required";
         return "";
-
-      case 'domain':
+  
+      case 'mentor_domain': // changed from domain
         if (!value) return "Mentor domain is required";
         return "";
 
@@ -346,7 +356,7 @@ const MentorshipModule = () => {
     let sanitizedValue = value;
 
     switch (name) {
-      case 'fullName':
+      case 'name':
         sanitizedValue = value.replace(/[^a-zA-Z\s]/g, '').slice(0, 50);
         break;
       case 'phone':
@@ -374,53 +384,73 @@ const MentorshipModule = () => {
 
   const handleSubmit = useCallback(async (e) => {
     e.preventDefault();
-
-    const newErrors = {};
-    Object.entries(formState.data).forEach(([name, value]) => {
-      newErrors[name] = validateField(name, value);
-    });
-
-    setFormState(prev => ({
-      ...prev,
-      errors: newErrors
-    }));
-
-    if (Object.values(newErrors).some(error => error !== "")) {
-      return;
-    }
-
+  
     try {
-      console.log('Form submitted:', formState.data);
-      setShowSuccessPopup(true);
-      setShowForm(false);
-
-      setFormState({
-        data: {
-          fullName: '',
-          email: '',
-          phone: '',
-          course: '',
-          year: '',
-          domain: '',
-          dateTime: '',
-          query: ''
+      // Validate that both date and time are present
+      if (!formState.data.appointment_date || !formState.data.appointment_time) {
+        throw new Error('Both date and time are required');
+      }
+  
+      // Format the date and time to match API expectations
+      const appointmentDate = new Date(`${formState.data.appointment_date}T${formState.data.appointment_time}`);
+      const formattedDate = appointmentDate.toISOString();
+  
+      const requestBody = {
+        name: formState.data.name,
+        email: formState.data.email,
+        phone: formState.data.phone,
+        branch_course: formState.data.branch_course,
+        study_year: formState.data.study_year,
+        mentor_domain: formState.data.mentor_domain,
+        appointment_date: formattedDate,
+        appointment_time: formState.data.appointment_time, // Add this line
+        query: formState.data.query
+      };
+  
+      const response = await fetch('https://coderhouse-448820.el.r.appspot.com/Appointment/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTAwMjgzMzM0NjQ4NzU0OSIsIm1hdCI6MTcyOTEyNicyNywlZXhwIjoxNzM1MTMwfQ._fMLMenLRBuWcRwa97AyuwHSg9ZaDS-snqOlJ7vQrtU'
         },
-        errors: {
-          fullName: '',
-          email: '',
-          phone: '',
-          course: '',
-          year: '',
-          domain: '',
-          dateTime: '',
-          query: ''
-        }
+        body: JSON.stringify(requestBody)
       });
+  
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Failed to submit appointment');
+      }
+  
+      const data = await response.json();
+      
+      if (data && data.message === "created successfully") {
+        setShowSuccessPopup(true);
+        setShowForm(false);
+  
+        // Reset form
+        setFormState({
+          data: {
+            name: '',
+            email: '',
+            phone: '',
+            branch_course: '',
+            study_year: '',
+            mentor_domain: '',
+            appointment_date: '',
+            appointment_time: '',
+            query: ''
+          },
+          errors: {}
+        });
+      } else {
+        throw new Error('Unexpected response from server');
+      }
+  
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('Error submitting form. Please try again.');
+      alert('Error submitting form. Please try again. ' + error.message);
     }
-  }, [formState.data, validateField]);
+  }, [formState.data]);
 
   return (
     <div className="mentorship_main_container">
@@ -440,8 +470,8 @@ const MentorshipModule = () => {
           responsive={responsive}
           controlsStrategy="alternate"
           autoPlay
-          autoPlayInterval={0}  
-          animationDuration={2000} 
+          autoPlayInterval={0}
+          animationDuration={2000}
           infinite
           disableDotsControls
           disableButtonsControls
