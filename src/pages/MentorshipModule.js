@@ -411,22 +411,23 @@ const MentorshipModule = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTAwMjgzMzM0NjQ4NzU0OSIsIm1hdCI6MTcyOTEyNicyNywlZXhwIjoxNzM1MTMwfQ._fMLMenLRBuWcRwa97AyuwHSg9ZaDS-snqOlJ7vQrtU'
         },
         body: JSON.stringify(requestBody)
       });
   
       if (!response.ok) {
+        console.log(requestBody)
         const errorData = await response.json();
         throw new Error(errorData.message || 'Failed to submit appointment');
       }
   
       const data = await response.json();
       
-      if (data && data.message === "created successfully") {
+      if (data && data.message === "created succesffuly") {
         setShowSuccessPopup(true);
         setShowForm(false);
-  
+        console.log(formState)
+        console.log(data)
         // Reset form
         setFormState({
           data: {
@@ -442,8 +443,10 @@ const MentorshipModule = () => {
           },
           errors: {}
         });
+        
       } else {
         throw new Error('Unexpected response from server');
+        
       }
   
     } catch (error) {
