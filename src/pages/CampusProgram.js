@@ -24,7 +24,7 @@ const CampusProgram = () => {
   useEffect(() => {
     const fetchPrograms = async () => {
       try {
-        const response = await axios.get("https://coderhouse-448820.el.r.appspot.com/CampusProgramDescription/");
+        const response = await axios.get("https://coderhouse-x1yv.onrender.com/CampusProgramDescription/");
         console.log("fetched")
         const programs = response.data;
         // Filter based on the type field

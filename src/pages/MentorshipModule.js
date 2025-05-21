@@ -407,7 +407,7 @@ const MentorshipModule = () => {
         query: formState.data.query
       };
   
-      const response = await fetch('https://coderhouse-448820.el.r.appspot.com/Appointment/', {
+      const response = await fetch('https://coderhouse-x1yv.onrender.com/Appointment/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
