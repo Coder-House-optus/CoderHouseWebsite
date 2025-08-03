@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# 🏠 Optus CoderHouse
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to **Optus CoderHouse**, an initiative by **Optus** that empowers students and tech enthusiasts with practical learning, innovation opportunities, and career growth.
 
-## Available Scripts
+We are building a collaborative community where students can learn by doing, connect with mentors, and become industry-ready.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 What We Offer
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 💻 **Workshops & Bootcamps**  
+  Hands-on training on real-world technologies and tools.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- ⚡ **Hackathons & Events**  
+  Compete, collaborate, and innovate with like-minded peers.
 
-### `npm test`
+- 👨‍🏫 **Internships & Mentorships**  
+  Get industry exposure through curated projects and expert guidance.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 🌐 **Open Source Contributions**  
+  Learn to collaborate, contribute, and grow in the developer ecosystem.
 
-### `npm run build`
+- 🎯 **Career Support**  
+  Resume reviews, mock interviews, and placement preparation resources.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 💡 Our Vision
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To foster a vibrant student tech ecosystem by providing opportunities to explore, build, and grow through experiential learning.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Technologies We Explore
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Web Development  
+- Cloud Computing  
+- DevOps & CI/CD  
+- Data Structures & Algorithms  
+- AI/ML  
+- Product Design & Thinking  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🌐 Connect With Us
 
-## Learn More
+- 🔗 Website: [coderhouse.in](https://www.coderhouse.in/)
+- 📸 Instagram: [@optuscoderhouse](https://www.instagram.com/optuscoderhouse)
+- 💼 LinkedIn: [Optus CoderHouse](https://www.linkedin.com/company/optus-coderhouse)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🤝 Join the Community
 
-### Code Splitting
+We welcome:
+- Students with a passion for tech
+- Mentors looking to give back
+- Collaborations with institutes or tech communities
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Let’s build, learn, and grow together!
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📬 Contact
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For any queries or partnerships, visit our [Contact Page](https://www.coderhouse.in/#contact) or DM us on our social handles.
