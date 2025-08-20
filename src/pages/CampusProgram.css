@@ -503,9 +503,9 @@ input:focus, select:focus, textarea:focus {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-
-  box-shadow: 0px 6px 15px #0E2031(0, 0%, 0%, 0.15); /* Enhanced shadow for a modern feel */
-  transition: all 0.3s ease-in-out; /* Smooth effect */
+  box-shadow: 0px 6px 15px #0E2031(0, 0%, 0%, 0.15);
+  transition: all 0.3s ease-in-out;
+  min-height: 400px;  
 }
 
 .program-card {
@@ -637,14 +637,11 @@ input:focus, select:focus, textarea:focus {
   max-width: 400px; /* Set a larger maximum width */
   backdrop-filter: blur(10px);
   border-radius: 15px;
-  padding: 15px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
   margin-top:50px;
   height: 260px;
-
-
   background-color: #fff;  /* White background to contrast the border */
-  padding: 20px;
+  padding: 55px;
   border-radius: 10px;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);  /* Inward shadow effect */
   border: 2px solid #ccc;  /* Light grey border */
@@ -819,7 +816,7 @@ input:focus, select:focus, textarea:focus {
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    height: 200px;
+    height: 350px;
   }
   .program-image {
     display: none;
@@ -845,7 +842,7 @@ input:focus, select:focus, textarea:focus {
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         color: white;
         margin-top: -50px;
-        height: 260px;
+        height: 360px;
 
         background-color: #fff;  /* White background to contrast the border */
         padding: 20px;

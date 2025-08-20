@@ -145,13 +145,21 @@ const CampusProgram = () => {
             <p>
               <strong>Cost:</strong> {technicalPrograms[currentProgramIndex].cost}
             </p>
+            <p>
+              <strong>Start Date:</strong>{" "}
+              {new Date(technicalPrograms[currentProgramIndex].startDate).toLocaleDateString()}
+            </p>
+            <p>
+              <strong>End Date:</strong>{" "}
+              {new Date(technicalPrograms[currentProgramIndex].endDate).toLocaleDateString()}
+            </p>
             <div className="batch-time">
               <strong></strong> {isMorningBatch ? "Morning" : "Evening"} :{" "}
               {isMorningBatch
                 ? technicalPrograms[currentProgramIndex].batches.morning.time
                 : technicalPrograms[currentProgramIndex].batches.evening.time}
             </div>
-  
+
             <div className="action-container">
               <button
                 onClick={() => handleViewMore(technicalPrograms[currentProgramIndex])}
@@ -171,6 +179,7 @@ const CampusProgram = () => {
           </div>
         </div>
       )}
+
   
       {/* Cognitive Programs Section */}
       <div className="program-section">
@@ -190,55 +199,81 @@ const CampusProgram = () => {
       </div>
   
       {/* Cognitive Program Details Section */}
-      {currentProgramIndex >= technicalPrograms.length && cognitivePrograms.length > 0 && (
-        <div className="program-details-container">
-          <div className="program-image1">
-            <img
-              src={cognitivePrograms[currentProgramIndex - technicalPrograms.length].image}
-              alt={cognitivePrograms[currentProgramIndex - technicalPrograms.length].name}
-              className="program-image-left"
-            />
-          </div>
-          <div className="program-details">
-            <h3 className="program-name-details">
-              {cognitivePrograms[currentProgramIndex - technicalPrograms.length].name}
-            </h3>
-            <p>
-              <strong>Duration:</strong> {cognitivePrograms[currentProgramIndex - technicalPrograms.length].duration}
-            </p>
-            <p>
-              <strong>Cost:</strong> {cognitivePrograms[currentProgramIndex - technicalPrograms.length].cost}
-            </p>
-            <div className="batch-time">
-              <strong></strong> {isMorningBatch ? "Morning" : "Evening"} :{" "}
-              {isMorningBatch
-                ? cognitivePrograms[currentProgramIndex - technicalPrograms.length].batches.morning.time
-                : cognitivePrograms[currentProgramIndex - technicalPrograms.length].batches.evening.time}
-            </div>
-  
-            <div className="action-container">
-              <button
-                onClick={() =>
-                  handleViewMore(
-                    cognitivePrograms[currentProgramIndex - technicalPrograms.length]
-                  )
+        {currentProgramIndex >= technicalPrograms.length && cognitivePrograms.length > 0 && (
+          <div className="program-details-container">
+            <div className="program-image1">
+              <img
+                src={
+                  cognitivePrograms[currentProgramIndex - technicalPrograms.length].image
                 }
-                className="details-btn"
-              >
-                View More
-              </button>
-              <button
-                onClick={() => {
-                  navigate("../home");
-                }}
-                className="cenroll-btn"
-              >
-                Join Now!
-              </button>
+                alt={
+                  cognitivePrograms[currentProgramIndex - technicalPrograms.length].name
+                }
+                className="program-image-left"
+              />
+            </div>
+            <div className="program-details">
+              <h3 className="program-name-details">
+                {cognitivePrograms[currentProgramIndex - technicalPrograms.length].name}
+              </h3>
+              <p>
+                <strong>Duration:</strong>{" "}
+                {cognitivePrograms[currentProgramIndex - technicalPrograms.length]
+                  .duration}
+              </p>
+              <p>
+                <strong>Cost:</strong>{" "}
+                {cognitivePrograms[currentProgramIndex - technicalPrograms.length].cost}
+              </p>
+              <p>
+                <strong>Start Date:</strong>{" "}
+                {new Date(
+                  cognitivePrograms[currentProgramIndex - technicalPrograms.length]
+                    .startDate
+                ).toLocaleDateString()}
+              </p>
+              <p>
+                <strong>End Date:</strong>{" "}
+                {new Date(
+                  cognitivePrograms[currentProgramIndex - technicalPrograms.length]
+                    .endDate
+                ).toLocaleDateString()}
+              </p>
+              <div className="batch-time">
+                <strong></strong> {isMorningBatch ? "Morning" : "Evening"} :{" "}
+                {isMorningBatch
+                  ? cognitivePrograms[currentProgramIndex - technicalPrograms.length]
+                      .batches.morning.time
+                  : cognitivePrograms[currentProgramIndex - technicalPrograms.length]
+                      .batches.evening.time}
+              </div>
+
+              <div className="action-container">
+                <button
+                  onClick={() =>
+                    handleViewMore(
+                      cognitivePrograms[
+                        currentProgramIndex - technicalPrograms.length
+                      ]
+                    )
+                  }
+                  className="details-btn"
+                >
+                  View More
+                </button>
+                <button
+                  onClick={() => {
+                    navigate("../home");
+                  }}
+                  className="cenroll-btn"
+                >
+                  Join Now!
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+
   
       {/* Image Slideshow Section */}
       <div className="slideshow-container5">
