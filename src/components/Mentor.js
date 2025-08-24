@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './Mentor.css';
 
 const mentorImages = [
@@ -20,63 +20,24 @@ const mentorImages = [
 ];
 
 const Mentor = () => {
-  const [visibleMentors, setVisibleMentors] = useState([0, 1, 2]);
-  const totalMentors = mentorImages.length;
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setVisibleMentors((prev) => {
-        const next = [
-          (prev[0] + 1) % totalMentors,
-          (prev[1] + 1) % totalMentors,
-          (prev[2] + 1) % totalMentors
-        ];
-        return next;
-      });
-    }, 3000); // Change mentors every 3 seconds
-
-    return () => clearInterval(interval);
-  }, [totalMentors]);
-
   return (
     <section className="mentor-section">
       <div className="mentor-title">
-      <h2 className="mentors-heading" >
-          Our <span className="highlight">Mentors</span>
-      </h2>
+        <h2 className="mentors-heading fancy-title">
+          Our <span className="highlight-title">Mentors</span>
+        </h2>
       </div>
 
 
-      {/* Container for Image and Animated Cards */}
-      <div className="mentor-container">
-        {/* Static Left-Side Mentor Image */}
-        <div className="mentor-image">
-          <img 
-            src="/images/Mentor.png" // Replace with the correct path to your image
-            alt="Student on laptop"
-            className="hero-image"
-          />
-        </div>
-
-        {/* Right Side - Rotating Mentor Images */}
-        <div className="right-mentor">
-          {visibleMentors.map((index, position) => (
-            <div 
-              key={index} 
-              className={`mentor-card ${position === 1 ? 'middle' : ''} ${position === 0 ? 'exit' : 'enter'}`}
-            >
-              <img
-                src={mentorImages[index]}
-                alt={`Mentor ${index + 1}`}
-                className="mentor-image-animated"
-              />
+      <div className="scroll-wrapper">
+        <div className="scrolling-track">
+          {mentorImages.concat(mentorImages).map((image, idx) => (
+            <div className="mentor-scroll-card" key={idx}>
+              <img src={image} alt={`mentor${idx}`} />
             </div>
           ))}
         </div>
       </div>
-
-     
- 
     </section>
   );
 };

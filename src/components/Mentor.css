@@ -3,257 +3,138 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 40px;
     margin-top: 5%;
-    padding-bottom: 20%;
-    position: relative;
-    padding-top: 40px;
     background: linear-gradient(90deg, #C6E894, #ffffff, #99C05F);
 }
 
-.mentor-title {
-    width: 100%;
-    text-align: center;
-    margin: 40px auto;
+/* Your existing highlight style */
+.highlight {
+    color: #4caf50;
+    font-weight: bold;
+  }
+  
+  /* Fancy underline animation */
+  .highlight-fancy {
     position: relative;
-    z-index: 1;
+    padding-bottom: 6px;
+  }
+  
+  .highlight-fancy::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: #4caf50;
+    transition: width 0.5s ease;
+    border-radius: 2px;
+  }
+  
+  /* on hover of heading – underline grows */
+  .fancy-title:hover .highlight-fancy::after {
+    width: 100%;
+  }
+  
+
+
+.mentor-title {
+    text-align: center;
 }
 
 .mentors-heading {
-    font-size: clamp(3.3rem, 6vw, 2rem);  /* Increased base size */
-    text-align: center;
-    margin: 2rem auto;
-    padding: 0;
+    font-size: clamp(3rem, 5vw, 4rem);
     color: #333;
     font-weight: bold;
-    max-width: 90%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    white-space: nowrap;  /* Prevents wrapping */
+    gap: .5rem;
 }
 
 .highlight {
     color: #4caf50;
     font-weight: bold;
-    font-size: inherit;  /* Ensures the highlight text matches the parent size */
 }
 
-/* Static Left-Side Mentor Image */
-.mentor-image {
-    position: absolute;
-    left: 0;
-    top: 0;
-    max-width: 400px;
-    margin-right: 100px;
-}
-
-.mentor-image img {
+/* Infinity scroll container */
+.scroll-wrapper {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 250px;
-    margin-left: 150px;
+    position: relative;
+    padding: 20px 0;
+    margin-bottom: 250px;
 }
 
-/* Right Side - Animated Mentor Images */
-.right-mentor {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    max-width: 800px;
+.scrolling-track {
+    display: inline-flex;
+    width: max-content;
+    animation: scrollMentors 60s linear infinite;
+}
+
+/* Mentor Cards */
+.mentor-scroll-card {
+    flex-shrink: 0;
+    margin: 0 20px;
+    width: 360px;
+    height: 200px;
+    border-radius: 16px;
     overflow: hidden;
-    margin-left: 400px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
 }
 
-/* Mentor Card Styles */
-.mentor-card {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1.5s ease-in-out, transform 2s ease-in-out;
+/* Make image smaller inside the box */
+.mentor-scroll-card img {
+    width: 95%;
+    height: 70%;
+    object-fit: contain; /* Do not crop image */
 }
 
-.mentor-card.enter {
-    opacity: 1;
-    transform: translateY(0);
+@keyframes scrollMentors {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
-.mentor-card.exit {
-    opacity: 0;
-    transform: translateY(-20px);
-}
-.mentor-image-animated {
-    width: 70%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.mentor-card.middle {
-    margin-left: 150px;
-    width: 100%;
-}
-
-
-@media screen and (max-width: 992px) {
-    .right-mentor {
-        margin-left: 200px;
+/* Responsive */
+@media (max-width:768px) {
+    .mentor-scroll-card {
+        width: 260px;
+        height: 200px;
     }
-    .mentor-card.middle {
-        margin-left: 100px;
+    .mentor-scroll-card img {
+        width: 75%;
+        height: 75%;
     }
-}
 
-@media screen and (max-width: 768px) {
-    .mentor-section {
-        padding-bottom: 200px;
-    }
-    .mentor-image {
+    .scroll-wrapper {
+        width: 100%;
         position: relative;
-        margin: 0 auto;
-        margin-bottom: 50px;
+        padding: 20px 0;
+        margin-bottom: 100px;
     }
-    .mentor-image img {
-        margin: 20px auto;
-        margin-top: 50px;
-    }
-    .right-mentor {
-        margin-left: 0;
-        align-items: center;
-    }
-    .mentor-card.middle {
-        margin-left: 0;
-    }
+
 }
 
-@media screen and (max-width: 480px) {
-    .mentor-section {
-        padding: 10px;
-        padding-bottom: 100px;
-        margin-top: 50px;
+@media (max-width:480px) {
+    .mentor-scroll-card {
+        width: 200px;
+        height: 150px;
+        margin: 0 12px;
+    }
+    .mentor-scroll-card img {
+        width: 80%;
+        height: 80%;
     }
     .mentors-heading {
-        font-size: clamp(2.2rem, 6vw, 2rem);
-        text-align: center;
-        margin: .1rem auto;
-        padding: 0;
-        color: #333;
-        font-weight: bold;
-        max-width: 90%;
-        position: absolute; 
-        left: 50%;
-        transform: translate(-50%, 0);  
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        gap: 1rem;
-        white-space: nowrap;
-        width: fit-content; 
-      }
-
-    .mentor-title {
+        font-size: clamp(2.2rem, 6vw, 2.8rem);
+    }
+    .scroll-wrapper {
         width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-    }
-    .mentor-image {
-        max-width: 230px;
-        position: static;
-        margin: 0 auto;
-    }
-
-    .mentor-image img {
-        margin: 20px auto;
-        width: 100%;
-    }
-
-    .right-mentor {
-        width: 100%;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .mentor-image-animated {
-        width: 85%;
-        max-width: 280px;
-    }
-
-    .mentor-card {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .mentor-card.middle {
-        width: 100%;
-        margin-left: 0;
+        position: relative;
+        padding: 20px 0;
+        margin-bottom: 100px;
     }
 }
-@media screen and (max-width: 360px) {
-    .mentor-section {
-        padding: 10px;
-        padding-bottom: 100px;
-        margin-top: 50px;
-    }
-
-    .mentor-title {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-    }
-    .mentors-heading {
-        font-size: clamp(2.2rem, 6vw, 2rem);
-        text-align: center;
-        margin: .1rem auto;
-        padding: 0;
-        color: #333;
-        font-weight: bold;
-        max-width: 90%;
-        position: absolute; 
-        left: 50%;
-        transform: translate(-50%, 0);  
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        gap: 1rem;
-        white-space: nowrap;
-        width: fit-content; 
-      }
-    .mentor-image {
-        max-width: 230px;
-        position: static;
-        margin: 0 auto;
-    }
-
-    .mentor-image img {
-        margin: 20px auto;
-        width: 100%;
-    }
-
-    .right-mentor {
-        width: 100%;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .mentor-image-animated {
-        width: 85%;
-        max-width: 280px;
-    }
-
-    .mentor-card {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .mentor-card.middle {
-        width: 100%;
-        margin-left: 0;
-    }
-}
-

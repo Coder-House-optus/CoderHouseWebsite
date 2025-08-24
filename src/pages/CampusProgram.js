@@ -154,11 +154,25 @@ const CampusProgram = () => {
               {new Date(technicalPrograms[currentProgramIndex].endDate).toLocaleDateString()}
             </p>
             <div className="batch-time">
-              <strong></strong> {isMorningBatch ? "Morning" : "Evening"} :{" "}
-              {isMorningBatch
-                ? technicalPrograms[currentProgramIndex].batches.morning.time
-                : technicalPrograms[currentProgramIndex].batches.evening.time}
+              {isMorningBatch ? (
+                <>
+                  <strong>Morning : </strong>{" "}
+                  {new Date(
+                    technicalPrograms[currentProgramIndex].batches.morning.date
+                  ).toLocaleDateString()}{" "}
+                  — {technicalPrograms[currentProgramIndex].batches.morning.time}
+                </>
+              ) : (
+                <>
+                  <strong>Evening :  </strong>{" "}
+                  {new Date(
+                    technicalPrograms[currentProgramIndex].batches.evening.date
+                  ).toLocaleDateString()}{" "}
+                  — {technicalPrograms[currentProgramIndex].batches.evening.time}
+                </>
+              )}
             </div>
+
 
             <div className="action-container">
               <button
@@ -240,12 +254,23 @@ const CampusProgram = () => {
                 ).toLocaleDateString()}
               </p>
               <div className="batch-time">
-                <strong></strong> {isMorningBatch ? "Morning" : "Evening"} :{" "}
-                {isMorningBatch
-                  ? cognitivePrograms[currentProgramIndex - technicalPrograms.length]
-                      .batches.morning.time
-                  : cognitivePrograms[currentProgramIndex - technicalPrograms.length]
-                      .batches.evening.time}
+                {isMorningBatch ? (
+                  <>
+                    <strong>Morning  :  </strong>{" "}
+                    {new Date(
+                      cognitivePrograms[currentProgramIndex - technicalPrograms.length].batches.morning.date
+                    ).toLocaleDateString()}{" "}
+                    — {cognitivePrograms[currentProgramIndex - technicalPrograms.length].batches.morning.time}
+                  </>
+                ) : (
+                  <>
+                    <strong>Evening  :  </strong>{" "}
+                    {new Date(
+                      cognitivePrograms[currentProgramIndex - technicalPrograms.length].batches.evening.date
+                    ).toLocaleDateString()}{" "}
+                    — {cognitivePrograms[currentProgramIndex - technicalPrograms.length].batches.evening.time}
+                  </>
+                )}
               </div>
 
               <div className="action-container">
